@@ -1,0 +1,70 @@
+{
+  "output": "output/ppo_study_runs/20260917T155023.471518Z",
+  "rollouts": 2000,
+  "batch_size": 1024,
+  "ppo_epochs": 4,
+  "evaluate_every": 100,
+  "widths": [
+    32,
+    128
+  ],
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "pilot": false,
+  "validation_seed": 7100001,
+  "calibration_seed": 7100003,
+  "final_seed": 7200001,
+  "validation_size": 8192,
+  "calibration_size": 8192,
+  "test_size": 32768,
+  "domains": [
+    "in_distribution",
+    "weaker_sensor",
+    "stronger_sensor",
+    "extreme_prior",
+    "reversed_sensor",
+    "held_out_combination"
+  ],
+  "expanded_components": [
+    "in_distribution",
+    "weak_or_reversed",
+    "stronger_sensor",
+    "extreme_prior"
+  ],
+  "expanded_ablation_width": 128,
+  "value_target": "one-step terminal reward",
+  "clip": 0.2,
+  "target_divergence": 0.03,
+  "entropy_bonus": 0,
+  "interpretation": "experience-matched recipes; PPO reuses rollouts and trains a separate critic, so compute is not matched",
+  "checkpoint_selection": "own objective on the same narrow validation sample for every regime; observed outcomes only",
+  "report_grid": [
+    0.0,
+    0.05000000074505806,
+    0.10000000149011612,
+    0.15000000596046448,
+    0.20000000298023224,
+    0.25,
+    0.30000001192092896,
+    0.3499999940395355,
+    0.4000000059604645,
+    0.44999998807907104,
+    0.5,
+    0.550000011920929,
+    0.6000000238418579,
+    0.6499999761581421,
+    0.699999988079071,
+    0.75,
+    0.800000011920929,
+    0.8500000238418579,
+    0.8999999761581421,
+    0.949999988079071,
+    1.0
+  ],
+  "final_test_policy": "all checkpoints and temperatures fixed before generating fresh final test"
+}

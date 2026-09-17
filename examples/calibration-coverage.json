@@ -1,0 +1,11 @@
+{
+  "note": "Authored demonstrations, not benchmark examples. Text descriptions are for the reader; the models consume only prior, reliability, and signal.",
+  "cases": {
+    "ordinary": {"description": "An ordinary positive reading from a useful sensor.", "prior": 0.5, "reliability": 0.8, "signal": 1},
+    "weak": {"description": "A positive reading from a sensor only slightly better than a coin flip.", "prior": 0.6, "reliability": 0.55, "signal": 1},
+    "reversed": {"description": "The sensor is usually wrong. Its positive reading is evidence against the event.", "prior": 0.5, "reliability": 0.2, "signal": 1},
+    "rare": {"description": "A reliable positive reading about an event that was initially rare.", "prior": 0.05, "reliability": 0.8, "signal": 1},
+    "combined": {"description": "A rare event and a reversed sensor occur together. This combination is absent from both training mixtures.", "prior": 0.05, "reliability": 0.2, "signal": 1},
+    "ambiguous": {"description": "The prior and sensor reading exactly balance; the event probability is one half.", "prior": 0.25, "reliability": 0.75, "signal": 1}
+  }
+}

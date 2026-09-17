@@ -174,6 +174,70 @@ queries cost real computation. On the stronger-sensor shift, integration
 actually worsened the Brier score, from **0.0657 to 0.0855**. A sound principle
 does not guarantee that a small trained model extrapolates correctly.
 
+## I also tried a larger model and Proximal Policy Optimization
+
+A fair objection was that the first result might depend on a particularly small
+model or a simple training method. So I froze another experiment: **75 policy
+runs**, five seeds, two sizes, and supervised learning versus simple policy
+gradients versus [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347).
+The latter reuses sampled experience through a clipped update objective and
+trains a separate network to estimate rewards.
+
+The two widths give roughly 1,200–1,900 policy parameters and 17,000–20,000.
+Every training stage still receives 2,048,000 episodes. Proximal Policy
+Optimization does more updates and trains that additional value network, so
+experience is matched but computation is not. These are comparisons of complete
+training recipes, not a clean test of clipping alone.
+
+On fresh ordinary conditions, the small forecast policy's average Brier score
+improved from **0.1683 to 0.1657** with Proximal Policy Optimization. Results
+varied across seeds, and supervised learning still scored **0.1562**. Increasing
+width did not reliably help the reward-trained forecasts.
+
+The original distinction also survived. After correctness-reward training,
+both sizes and both reward methods made the right hard choice about **77.5%**
+of the time. Reading their action probabilities as event forecasts still more
+than doubled the example inspection program's cost compared with the supervised
+continuation. A different optimizer does not change what a correctness reward
+asks a policy to do.
+
+The most useful additional result came from changing the data.
+
+## Better coverage, with the same number of examples
+
+Instead of only showing ordinary conditions, I divided the same training
+budget among ordinary, weak or reversed, strong-sensor, and extreme-prior
+conditions. A reversed sensor accurately announces that it is usually wrong;
+its reading needs to be interpreted in the opposite direction.
+
+I held out one combination entirely: **an extreme prior together with a reversed
+sensor**. The broader training data contained both ingredients, but never in
+the same episode. That tests whether the model can combine what it learned.
+
+At the same width and budget, the supervised model's probability error on
+reversed sensors fell from **21.4 to 2.7 percentage points**. On the unseen
+combination, it fell from **13.5 to 4.4**. These errors are root mean squared
+differences from the simulator's exact probability, averaged over five seeds.
+Ordinary-condition error increased slightly, from 1.3 to 1.8 points, while the
+broader mixture supplied fewer ordinary examples.
+
+![Changing the training-data mixture improves forecasts across several shifted conditions, while supervised learning remains substantially better than the tested reward methods.](assets/ppo-data/data-coverage.png)
+
+Both reward methods benefited from broader coverage too, but their probability
+errors remained much larger. We published the failures as well as the gains.
+This is a small controlled example of a practical data problem: **which situations
+are missing from training?** Scraping another million unrelated documents would
+not answer that question for this environment.
+
+The environments run locally. They generate an observation, accept an action,
+and return its score. No hosted game or external model service is needed. The
+next useful extension would let the model pay to gather another observation
+before committing to an answer. That sequence is not implemented here yet.
+
+[The full comparison](ppo-data-results.md) includes the frozen protocol, every
+seed and test domain, saved weights, reproducible verification, and examples
+you can run. It also explains the [data needed for that next step](data-environments.md).
+
 ## What this tells us about Jev—and what remains unknown
 
 TypeSafe's claim about calibrated decisions is a meaningful training goal.

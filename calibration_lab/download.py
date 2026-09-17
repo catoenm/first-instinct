@@ -1,4 +1,4 @@
-"""Download and hash-check the public calibration laboratory evidence bundle."""
+"""Download and hash-check a public numeric experiment evidence bundle."""
 import argparse
 import json
 from pathlib import Path, PurePosixPath
@@ -12,7 +12,7 @@ from .train import ROOT, digest
 
 
 def verify(directory, manifests):
-    for experiment in ('main', 'thresholds'):
+    for experiment in manifests:
         root = directory/experiment
         path = root/'artifacts_sha256.json'
         if digest(path) != manifests[experiment]:
@@ -45,9 +45,12 @@ def unpack(archive, destination, release):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--destination',type=Path,default=ROOT/'output/pretrained/first-instinct-calibration-v1')
+    parser.add_argument('--version',choices=['calibration-v1','ppo-data-v1'],default='calibration-v1')
+    parser.add_argument('--destination',type=Path)
     args = parser.parse_args()
-    release = json.loads((ROOT/'releases/calibration-v1.json').read_text())
+    release = json.loads((ROOT/f'releases/{args.version}.json').read_text())
+    if args.destination is None:
+        args.destination = ROOT/'output/pretrained'/release['directory_name']
     if args.destination.exists():
         verify(args.destination,release['artifact_manifest_sha256'])
         print('Existing bundle verified:',args.destination)

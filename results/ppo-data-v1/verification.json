@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "hashed_artifacts": 1087,
+  "trained_policies": 75,
+  "auxiliary_value_networks": 25,
+  "policy_updates": 300000,
+  "value_updates": 200000,
+  "distinct_episode_streams_rebuilt": 15,
+  "unique_generated_training_episodes": 30720000,
+  "ppo_initial_updates_replayed": 25,
+  "ppo_rollouts_with_clipped_samples": 29205,
+  "model_domain_evaluations_rebuilt": 570,
+  "maximum_reloaded_prediction_difference": 0.0,
+  "checks": [
+    "every artifact checksum",
+    "frozen source",
+    "cold and warm initial weights",
+    "all selected validation objectives",
+    "every training stream regenerated and matched across methods/sizes",
+    "scalar rollout rewards",
+    "all PPO first updates independently replayed",
+    "update and critic counts",
+    "temperature refitting",
+    "fresh final states regenerated",
+    "independent Bayes formula",
+    "all predictions reloaded",
+    "all recorded metrics recomputed",
+    "independent Brier identity and every downstream expected cost"
+  ]
+}

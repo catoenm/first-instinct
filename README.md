@@ -19,8 +19,16 @@ First Instinct takes some text, a question, and a list of described answers.
 One shared network scores the answers. It can choose a tool, identify an emotion,
 or judge how two sentences relate—without generating a stream of text.
 
-**New: [a calibration laboratory](docs/calibrated-decisions-post.md).** Two tiny
-models both made the right yes/no choice 77.43% of the time, but substituting one
+**Latest: [75 tiny policies, two sizes, and a data-coverage experiment](docs/ppo-data-results.md).**
+We compared supervised learning, simple policy gradients, and Proximal Policy
+Optimization on a Mac. Broader data reduced the supervised model's probability
+error on reversed sensors from **21.4 to 2.7 percentage points**, at the same
+model size and episode budget. Increasing the reward-trained models' size did
+not reliably help. All five seeds, six test domains, weights, and runnable
+examples are public.
+
+The [calibration laboratory post](docs/calibrated-decisions-post.md) starts with two tiny
+models that both made the right yes/no choice 77.43% of the time, but substituting one
 model's action probabilities for event forecasts more than doubled a program's
 cost in a tested inspection setting. We trained reward policies, compared
 supervised and temperature-scaling baselines, and tried recovering probabilities
@@ -68,7 +76,7 @@ completed six passes in about **10 minutes on an Apple M5 Max with 128 GB of
 unified memory**. This is supervised fine-tuning of Microsoft's DeBERTa-v3-small;
 the released text model has not undergone reinforcement learning or probability
 calibration. The separate numeric calibration laboratory above includes reward
-training with networks of 1,217–1,877 parameters.
+training with policy networks of 1,217–19,733 parameters.
 
 [Read the experiment, every seed, and wording sensitivity →](docs/multitask-experiment.md)
 
@@ -217,6 +225,8 @@ use the [original reproduction commands](docs/experiment.md#verification-and-rep
 | [calibration_lab](calibration_lab) | Numeric reward environments, policies, verification, and runnable demo |
 | [docs/calibrated-decisions-post.md](docs/calibrated-decisions-post.md) | Post draft explaining what action probabilities mean |
 | [results/calibration-v1](results/calibration-v1) | Five-seed summaries, frozen protocols, and evidence verification |
+| [docs/ppo-data-results.md](docs/ppo-data-results.md) | Learning method, model size, broader data, and runnable saved policies |
+| [docs/data-environments.md](docs/data-environments.md) | What decision-training data contains, and how to extend the environment |
 
 The earlier document-deduplication exercises (`pipeline.py`, `minhash.py`,
 `lsh.py`) remain as small learning examples. The dataset builder also reuses
@@ -237,9 +247,9 @@ require no model download. GitHub Actions runs them on macOS and Linux.
 
 The text experiment demonstrates a shared model learning several kinds of
 decisions, including answers that depend on the question. The calibration
-laboratory now tests reward learning and probability semantics in a synthetic
-numeric environment. Extending those lessons to verified text decisions and
-learned information acquisition is the next useful step.
+laboratory now tests reward learning, model capacity, data coverage, and probability
+semantics in a synthetic numeric environment. Extending those lessons to verified
+text decisions and learned information acquisition is the next useful step.
 
 1. Execute safe local tools in a repeatable environment and score whether the requested task succeeds.
 2. Hold out task families and question styles, then compare outcome rewards before and after training.

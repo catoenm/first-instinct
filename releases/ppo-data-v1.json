@@ -1,0 +1,13 @@
+{
+  "tag": "ppo-data-v1",
+  "directory_name": "first-instinct-ppo-data-v1",
+  "archive_name": "first-instinct-ppo-data-v1.zip",
+  "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip",
+  "archive_bytes": 154968132,
+  "archive_sha256": "07a20f8c9ac7014a2da207a1535b7cc2e84d1ec288bc8a4402c01b0f65aab67c",
+  "artifact_manifest_sha256": {
+    ".": "15812b255fdf853120724aaabb77cf87e5d931bc025804ac9817118280477c3a"
+  },
+  "policies_trained": 75,
+  "note": "Synthetic numeric experiments; independent of the released text checkpoint and of Jev."
+}
