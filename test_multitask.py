@@ -90,6 +90,20 @@ class MultitaskTests(unittest.TestCase):
         self.assertEqual(sorted(i for batch in batches for i in batch), list(range(29)))
         self.assertTrue(all(len(batch) <= 4 for batch in batches))
 
+    def test_gradient_accumulation_handles_unequal_microbatches(self):
+        torch.manual_seed(13)
+        values = torch.randn(3, 2, 4)
+        mask = torch.ones((3, 2), dtype=torch.bool)
+        targets = torch.tensor([1, 0, 1])
+        weights = torch.tensor([2., .5, 1.5])
+        whole, accumulated = OptionScorer(4), OptionScorer(4)
+        whole_loss = (F.cross_entropy(whole(values, mask), targets, reduction="none") * weights).mean()
+        whole_loss.backward()
+        for start, end in ((0, 2), (2, 3)):
+            losses = F.cross_entropy(accumulated(values[start:end], mask[start:end]), targets[start:end], reduction="none")
+            ((losses * weights[start:end]).sum() / len(values)).backward()
+        torch.testing.assert_close(whole.score.weight.grad, accumulated.score.weight.grad)
+
     def test_identical_model_inputs_cannot_pass_an_opposite_answer_pair(self):
         rows = self.examples()[1:]
         for row in rows:

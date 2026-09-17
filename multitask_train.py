@@ -163,7 +163,7 @@ def train_one(args, root, mode, seed, cache, train, validation, weights):
                 encoder.save_pretrained(run / "encoder")
                 tokenizer.save_pretrained(run / "encoder")
 
-    initial = evaluate(encoder, tokenizer, scorer, validation, device, args.batch_size, None if full else cache)
+    initial = evaluate(encoder, tokenizer, scorer, validation, device, args.microbatch_size, None if full else cache)
     select(0, initial)
     history.append({"epoch": 0, "validation": compact(initial)})
     with (run / "training_trace.jsonl").open("w") as trace:
@@ -185,29 +185,38 @@ def train_one(args, root, mode, seed, cache, train, validation, weights):
                                                         for key, values in record["tokens"].items()},
                                   "target": permutation.index(record["target"])})
                 optimizer.zero_grad(set_to_none=True)
-                vectors = (encode_batch(encoder, tokenizer, batch, device) if full else
-                           [cache[record["row"]["id"]][order] for record, order in zip(batch, permutations)])
-                features, mask = pack_features(vectors)
-                scores = scorer(features, mask)
-                targets = torch.tensor([record["target"] for record in batch], device=head_device)
-                losses = F.cross_entropy(scores, targets, reduction="none")
-                task_weights = torch.tensor([weights[record["row"]["task"]] for record in batch], device=head_device)
-                loss = (losses * task_weights).mean()
-                if not torch.isfinite(loss).item():
-                    raise FloatingPointError("Non-finite training loss")
-                loss.backward()
+                batch_loss, weighted_loss = 0.0, 0.0
+                micro_size = args.microbatch_size if full else len(batch)
+                for start in range(0, len(batch), micro_size):
+                    micro = batch[start:start + micro_size]
+                    orders = permutations[start:start + micro_size]
+                    vectors = (encode_batch(encoder, tokenizer, micro, device) if full else
+                               [cache[record["row"]["id"]][order] for record, order in zip(micro, orders)])
+                    features, mask = pack_features(vectors)
+                    scores = scorer(features, mask)
+                    targets = torch.tensor([record["target"] for record in micro], device=head_device)
+                    losses = F.cross_entropy(scores, targets, reduction="none")
+                    task_weights = torch.tensor([weights[record["row"]["task"]] for record in micro], device=head_device)
+                    # Normalize by the WHOLE update batch, including a partial final batch.
+                    loss = (losses * task_weights).sum() / len(batch)
+                    if not torch.isfinite(loss).item():
+                        raise FloatingPointError("Non-finite training loss")
+                    loss.backward()
+                    batch_loss += losses.detach().sum().item()
+                    weighted_loss += loss.item()
+                    del vectors, features, mask, scores, targets, losses, task_weights, loss
                 norm = torch.nn.utils.clip_grad_norm_(parameters, 1, error_if_nonfinite=True).item()
                 probe_gradient = probe.grad.norm().item() if full else 0.0
                 optimizer.step()
-                running += losses.detach().sum().item()
+                running += batch_loss
                 seen += len(batch)
                 trace.write(json.dumps({"epoch": epoch, "step": step, "ids": [r["row"]["id"] for r in batch],
-                                        "weighted_loss": loss.item(), "mean_loss": losses.mean().item(),
+                                        "weighted_loss": weighted_loss, "mean_loss": batch_loss / len(batch),
                                         "gradient_norm_before_clipping": norm,
                                         "encoder_probe_gradient_norm": probe_gradient}) + "\n")
                 if step % 100 == 0:
                     print(f"{mode}/{seed}: epoch {epoch}/{args.epochs}, step {step}/{len(batches)}, mean loss {running / seen:.4f}, elapsed {time.perf_counter() - started:.0f}s", flush=True)
-            result = evaluate(encoder, tokenizer, scorer, validation, device, args.batch_size, None if full else cache)
+            result = evaluate(encoder, tokenizer, scorer, validation, device, args.microbatch_size, None if full else cache)
             select(epoch, result)
             history.append({"epoch": epoch, "online_mean_loss": running / seen, "validation": compact(result)})
             print(f"{mode}/{seed}: epoch {epoch}, validation macro accuracy {result['macro_accuracy']:.3f}, macro loss {result['macro_loss']:.4f}, paired {result['contrast_pairs']['accuracy']:.3f}; selected {best_epoch}", flush=True)
@@ -220,7 +229,7 @@ def train_one(args, root, mode, seed, cache, train, validation, weights):
         "initial_release": "first-instinct-v0.1.0", "initial_manifest_sha256": checksum(args.init_run / "manifest.json"),
         "encoder_frozen": not full, "encoder_checkpoint": "encoder" if full else "../initial_encoder",
         "trainable_parameters": sum(p.numel() for p in parameters), "max_tokens": 512,
-        "epochs": args.epochs, "batch_size": args.batch_size, "optimizer": "AdamW",
+        "epochs": args.epochs, "batch_size": args.batch_size, "microbatch_size": args.microbatch_size, "optimizer": "AdamW",
         "encoder_learning_rate": args.encoder_learning_rate if full else 0,
         "head_learning_rate": args.head_learning_rate, "weight_decay": .01, "gradient_clip_norm": 1,
         "task_loss_weights": weights, "selected_epoch": best_epoch,
@@ -236,7 +245,7 @@ def train_one(args, root, mode, seed, cache, train, validation, weights):
         "limitations": "Three known task families; public human labels and synthetic tool labels; correlated questions per state; uncalibrated probabilities; pretraining contamination unmeasured.",
     }
     save_json(run / "manifest.json", manifest)
-    del optimizer, encoder, scorer, cache, parameters, groups, vectors, features, scores, loss
+    del optimizer, encoder, scorer, cache, parameters, groups
     gc.collect()
     if device == "mps":
         torch.mps.empty_cache()
@@ -250,12 +259,13 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--epochs", type=int, default=6)
     parser.add_argument("--batch-size", type=int, default=32)
+    parser.add_argument("--microbatch-size", type=int, default=8, help="Questions per forward/backward pass; gradients accumulate into batch-size")
     parser.add_argument("--seeds", nargs="+", type=int, default=[7, 17, 29])
     parser.add_argument("--encoder-learning-rate", type=float, default=2e-5)
     parser.add_argument("--head-learning-rate", type=float, default=1e-3)
     parser.add_argument("--device", choices=["auto", "cpu", "mps"], default="auto")
     args = parser.parse_args()
-    if args.epochs < 1 or args.batch_size < 1 or len(set(args.seeds)) != len(args.seeds):
+    if args.epochs < 1 or args.batch_size < 1 or args.microbatch_size < 1 or len(set(args.seeds)) != len(args.seeds):
         parser.error("Positive epochs/batch-size and distinct seeds required")
     release = json.loads((ROOT / "releases/v0.1.0.json").read_text())
     if checksum(args.init_run / "manifest.json") != release["model_manifest_sha256"]:
@@ -274,7 +284,7 @@ def main():
     save_json(root / "protocol.json", {
         "dataset_manifest_sha256": checksum(args.data / "manifest.json"),
         "initial_model_manifest_sha256": release["model_manifest_sha256"],
-        "epochs": args.epochs, "batch_size": args.batch_size, "seeds": args.seeds,
+        "epochs": args.epochs, "batch_size": args.batch_size, "microbatch_size": args.microbatch_size, "seeds": args.seeds,
         "encoder_learning_rate": args.encoder_learning_rate, "head_learning_rate": args.head_learning_rate,
         "task_loss_weights": weights,
         "checkpoint_selection": "lowest macro validation log loss for each run, including initial checkpoint",
@@ -295,7 +305,7 @@ def main():
     cache = {}
     with torch.no_grad():
         all_records = train + validation
-        batches = batch_order(all_records, args.batch_size)
+        batches = batch_order(all_records, args.microbatch_size)
         for step, indices in enumerate(batches, 1):
             batch = [all_records[i] for i in indices]
             for record, vector in zip(batch, encode_batch(encoder, tokenizer, batch, device)):
@@ -319,7 +329,7 @@ def main():
     for name, run in [("initial-v0.1.0", args.init_run)] + [(run.name, run) for run in runs]:
         tokenizer, encoder, scorer, _ = load_run(run, device)
         if name != "initial-v0.1.0":
-            reloaded = evaluate(encoder, tokenizer, scorer, validation, device, args.batch_size)
+            reloaded = evaluate(encoder, tokenizer, scorer, validation, device, args.microbatch_size)
             expected = json.loads((run / "selected_validation.json").read_text())
             prior = {p["id"]: p["probabilities"] for p in expected["predictions"]}
             difference = max(abs(value - prior[p["id"]][key]) for p in reloaded["predictions"] for key, value in p["probabilities"].items())
@@ -330,7 +340,7 @@ def main():
         destination = root / name
         destination.mkdir(exist_ok=True)
         for variant in ("canonical", "paraphrase", "no_question"):
-            result = evaluate(encoder, tokenizer, scorer, records_for(test_rows, tokenizer, variant), device, args.batch_size)
+            result = evaluate(encoder, tokenizer, scorer, records_for(test_rows, tokenizer, variant), device, args.microbatch_size)
             save_json(destination / f"test_{variant}.json", result)
             summaries[name][variant] = compact(result)
             print(f"TEST {name}/{variant}: macro accuracy {result['macro_accuracy']:.3f}, paired {result['contrast_pairs']['both_correct']}/{result['contrast_pairs']['count']}", flush=True)

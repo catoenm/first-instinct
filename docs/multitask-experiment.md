@@ -83,7 +83,7 @@ all 141,305,088 parameters. Frozen features are cached once; every full-model
 update recomputes its encoder representations.
 
 - Three training seeds: **7, 17, 29**. They change shuffling, option ordering, and full-model dropout. The data split remains fixed.
-- Six passes over the training questions; batches of 32 questions. Nearby lengths are grouped to limit padding.
+- Six passes over the training questions; effective batches of 32 questions. Full training processes eight-question microbatches and accumulates gradients before each update. Nearby lengths are grouped to limit padding.
 - AdamW; encoder learning rate 0.00002, scoring-layer learning rate 0.001, weight decay 0.01, gradient norm clipped at 1.
 - Each task receives equal expected weight in the loss, using inverse task-frequency weights.
 - Select the checkpoint with the lowest mean validation log loss across the five tasks, including the initial checkpoint.
@@ -100,7 +100,12 @@ balanced all-alternatives schedule above. The exploratory training run was
 stopped before any final test predictions. The source states and sample counts
 stay the same; the negative questions change. Training-batch profiling, using
 training examples only, led to the larger batch and six-pass budget. All
-checkpoints in the reported comparison use this corrected recipe.
+checkpoints in the reported comparison use this corrected recipe. A subsequent
+32-question execution preflight fit, but sustained training suffered a severe
+memory-related slowdown and was stopped before final testing. Processing eight
+questions at a time with gradient accumulation keeps the effective batch at 32
+while reducing memory use. Gradients are divided by the whole update-batch size,
+including a shorter final batch; a numerical test checks this accounting.
 
 ## Three final evaluations
 
@@ -133,8 +138,9 @@ available, or the central processor otherwise. Training on other machines can
 produce numerically different results.
 
 The training preset targets the measured M5 Max with 128 GB of unified memory.
-The largest-batch preflight fit on that machine. Smaller-memory systems can use
-`--batch-size 8` or less; this changes the optimization trajectory and runtime.
+Smaller-memory systems can reduce `--microbatch-size`; `--batch-size` controls
+the number of questions contributing to each optimizer update. Dropout and
+floating point execution can still make runs differ when microbatch size changes.
 
 Every run records a protocol, the exact source snapshot, update traces, task
 weights, validation histories, selected model hashes, and complete final test
