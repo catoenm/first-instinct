@@ -1,0 +1,24 @@
+{
+  "test_examples": 34,
+  "lexical_correct": 24,
+  "uniform_expected_accuracy": 0.37058823529411766,
+  "models": {
+    "frozen": {
+      "count": 34,
+      "correct": 18,
+      "accuracy": 0.5294117647058824,
+      "loss": 0.9350394098197713,
+      "brier": 0.5709453360999331,
+      "checkpoint_reload_max_probability_difference": 0.0
+    },
+    "full": {
+      "count": 34,
+      "correct": 29,
+      "accuracy": 0.8529411764705882,
+      "loss": 0.2493926444270377,
+      "brier": 0.17669870905563875,
+      "checkpoint_reload_max_probability_difference": 2.3543834686279297e-06
+    }
+  },
+  "limitations": "Synthetic reference labels; one question family; single training seed. Exact normalized schema separation does not guarantee semantic-family separation or absence from pretraining. calibration.jsonl now contains previously inspected development examples and is not an untouched calibration set."
+}

@@ -1,0 +1,18 @@
+{
+  "state": "What's the weather forecast for Toronto tomorrow?",
+  "question": "Which available tool should be called first to begin fulfilling the user's request?",
+  "options": [
+    {
+      "id": "weather",
+      "description": "Get the weather forecast for a city and date, including temperature and chance of rain."
+    },
+    {
+      "id": "calendar",
+      "description": "Read upcoming appointments and meetings from the user's calendar."
+    },
+    {
+      "id": "calculator",
+      "description": "Evaluate an arithmetic expression and return its numerical result."
+    }
+  ]
+}

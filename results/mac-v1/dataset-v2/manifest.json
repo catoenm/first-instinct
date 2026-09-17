@@ -1,0 +1,59 @@
+{
+  "source_dataset": "Team-ACE/ToolACE",
+  "source_url": "https://huggingface.co/datasets/Team-ACE/ToolACE/resolve/6bda777c88d21e5a204703c1ee45597a8fa4f734/data.json",
+  "upstream_revision": "6bda777c88d21e5a204703c1ee45597a8fa4f734",
+  "source_sha256": "ba12c083fca7e8da48c67ad5b895e495447da7c66e39a2e19742c082e6cb537e",
+  "source_license": "Apache-2.0 (as declared by the dataset authors)",
+  "source_rows": 11300,
+  "sampled_source_rows": 5000,
+  "excluded_prior_source_rows": [
+    0,
+    99
+  ],
+  "seed": 7,
+  "included_rows": 266,
+  "max_tokens": 512,
+  "excluded_by_reason": {
+    "first_turn_not_a_tool_call": 3066,
+    "unknown_tool_list_format": 244,
+    "fewer_than_two_candidates": 1400,
+    "too_long": 17,
+    "not_a_single_tool_result": 4,
+    "unsupported_call_syntax": 1
+  },
+  "counts": {
+    "train": 166,
+    "validation": 44,
+    "calibration": 22,
+    "test": 34
+  },
+  "groups": 241,
+  "largest_group": 4,
+  "split_method": "Connected groups: exact normalized requests, request word-trigram Jaccard >= 0.8, or exact normalized option descriptions including schema. All options, including distractors. Group hash assigns 70/10/10/10 percent expected train/validation/calibration/test.",
+  "model_id": "microsoft/deberta-v3-small",
+  "model_revision": "a36c739020e01763fe789b4b85e2df55d6180012",
+  "limitations": "Synthetic reference labels; one question family; single training seed. Exact normalized schema separation does not guarantee semantic-family separation or absence from pretraining. calibration.jsonl now contains previously inspected development examples and is not an untouched calibration set.",
+  "code_sha256": {
+    "decision_dataset.py": "75fd625e82b474e68db027b9d00e88350b61748134e87efd8973e153ae0bef92",
+    "decision_data.py": "991dc6848fa4b8e2816da50bc6519ab4b99c4b7fb8881ba534218a40cc46edea",
+    "decision_model.py": "1f1576eb575fcecbf8db66db4ad5da76ebe8fb907829bc4bb7a81515966a822b",
+    "pipeline.py": "9791c1cfe0a4a0530de69703e3c271836d34b58982c2471c630572f4347d6aba"
+  },
+  "outputs": {
+    "calibration.jsonl": "c3990193670e13e40b069e5a61cdbebae3c01e86c31cc2629017059d8a93553b",
+    "decisions.jsonl": "e5b59563e5a9834c521efacc98ee26f483acb8239e1d642ac91edf1d936e1cd3",
+    "test.jsonl": "721042c52c4afb6a8feabc67468e1e1b55e1e48e4b2820d162efe5a1220b9833",
+    "train.jsonl": "b54a3ff36d378c450ec4e699dccef6eccdd94a88095a30df621b7fc47d548637",
+    "validation.jsonl": "be2d34f5aea93aed1437ce155cb523f0020259b74c047d3f7080dcbe1413fcbf"
+  },
+  "task": "choose the first tool call, including requests that need several calls",
+  "previous_dataset_manifest_sha256": "bf80362df816d7f23b07724f41ac5bad94ff48bf38ed867cda342337b4947361",
+  "split_mapping_from_previous": {
+    "train": "train",
+    "validation": "validation",
+    "calibration": "test",
+    "test": "calibration"
+  },
+  "revision_reason": "First exploratory test exposed mismatch between whole-request wording and first-call labels. Wording corrected before retraining. Previously unused calibration cases become a fresh test; the old test becomes development data in calibration.jsonl and is not used in this comparison.",
+  "revision_exclusions": 2
+}

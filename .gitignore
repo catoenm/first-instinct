@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+output/*
+!output/.gitkeep
+data/decisions/raw/*
+!data/decisions/raw/8657de928d9509729defe15832a1e804c6342c9b3c68837839e49c3f391d5cf5.json
+*.safetensors
+*.bin
+*.zip
+.env
+.env.*
+.local/
+
+# Local learning notes, outside the published project.
+PROJECT_PLAN.md
+DECISION_MODEL_PLAN.md
+FIRST_TRAINING_RUN.md
+FINE_TUNING_RUN.md

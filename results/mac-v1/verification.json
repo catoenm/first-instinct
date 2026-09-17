@@ -1,0 +1,11 @@
+{
+  "offline_tests_passed": 10,
+  "dataset_reproduction": "all four splits in both revisions matched byte for byte",
+  "full_checkpoint_cli_prediction": "passed",
+  "legacy_checkpoint_cli_prediction": "passed on cpu",
+  "training_trace_membership": "498 updates per model; only training row IDs",
+  "artifact_hashes": "all training artifacts matched model manifests",
+  "dataset_identity": "model manifests matched exact v2 dataset manifest",
+  "encoder_updates": "nonzero gradients and changed encoder weights verified",
+  "checkpoint_reload_max_probability_difference": 2.3543834686279297e-06
+}

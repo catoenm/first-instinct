@@ -1,0 +1,26 @@
+{
+  "options": [
+    {
+      "description": "Global Geocoder. Returns a list of matching locations for a given search query.\nTool schema: {\"parameters\": {\"properties\": {\"countrycodes\": {\"description\": \"A comma-separated list of country codes to limit the search to.\", \"type\": \"string\"}, \"language\": {\"default\": \"de\", \"description\": \"The language for the search query. Default is 'de'.\", \"type\": \"string\"}, \"limit\": {\"default\": 10, \"description\": \"The maximum number of results to return. Default is 10.\", \"type\": \"float\"}, \"polygon\": {\"default\": \"\", \"description\": \"Whether to include available polygons in the response data. Default is 0.\", \"type\": \"string\"}, \"q\": {\"description\": \"The search query.\", \"type\": \"string\"}, \"viewbox\": {\"description\": \"A preferred area to search in. Format is '{minLng},{minLat},{maxLng},{maxLat}'.\", \"type\": \"string\"}}, \"required\": [\"q\"], \"type\": \"dict\"}, \"required\": null}",
+      "id": "Search"
+    },
+    {
+      "description": "Retrieves categories of establishments near a given coordinate.\nTool schema: {\"parameters\": {\"properties\": {\"latitude\": {\"description\": \"The latitude of the coordinate.\", \"type\": \"float\"}, \"longitude\": {\"description\": \"The longitude of the coordinate.\", \"type\": \"float\"}, \"radius\": {\"description\": \"The radius (in meters) to search for establishments.\", \"type\": \"float\"}}, \"required\": [\"latitude\", \"longitude\"], \"type\": \"dict\"}, \"required\": null}",
+      "id": "Get Categories Near a Coordinate"
+    },
+    {
+      "description": "Calculates the coefficient of how similar are 2 strings containing the name (and type) of the route. With a value of 0.9 and higher, it is possible to do auto-matching, at 0.2-0.9 - visual matching.\nTool schema: {\"parameters\": {\"properties\": {\"str1\": {\"description\": \"The first route name to compare\", \"type\": \"string\"}, \"str2\": {\"description\": \"The second route name to compare\", \"type\": \"string\"}}, \"required\": [\"str1\", \"str2\"], \"type\": \"dict\"}, \"required\": null}",
+      "id": "Compare Route Names"
+    },
+    {
+      "description": "Retrieve information related to a specific FSA (Forward Sortation Area) code.\nTool schema: {\"parameters\": {\"properties\": {\"postal-fsa\": {\"description\": \"The FSA code to query, example: 'A0A'\", \"type\": \"string\"}}, \"required\": [\"postal-fsa\"], \"type\": \"dict\"}, \"required\": null}",
+      "id": "Query by FSA Code"
+    },
+    {
+      "description": "Retrieve detailed information about a specific zip code in Mexico, including its location, city, state, and other relevant details.\nTool schema: {\"parameters\": {\"properties\": {\"zipcode\": {\"description\": \"The zip code for which you want to retrieve information\", \"type\": \"string\"}}, \"required\": [\"zipcode\"], \"type\": \"dict\"}, \"required\": null}",
+      "id": "Get Zip Code Information in Mexico"
+    }
+  ],
+  "question": "Which available tool should be called first to begin fulfilling the user's request?",
+  "state": "I'm interested in visiting a place called Potsdamer Platz in Berlin. Can you help me find more details about it?"
+}

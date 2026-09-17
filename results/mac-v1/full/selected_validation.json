@@ -1,0 +1,564 @@
+{
+  "count": 44,
+  "correct": 37,
+  "accuracy": 0.8409090909090909,
+  "loss": 0.7855875440681627,
+  "brier": 0.28051949741315174,
+  "predictions": [
+    {
+      "id": "toolace-00117",
+      "target": "Search",
+      "choice": "Get Zip Code Information in Mexico",
+      "loss": 4.329013347625732,
+      "brier": 1.4649291038513184,
+      "probabilities": {
+        "Search": 0.013180545531213284,
+        "Get Categories Near a Coordinate": 0.44669821858406067,
+        "Compare Route Names": 3.106223722681989e-09,
+        "Query by FSA Code": 0.00014239290612749755,
+        "Get Zip Code Information in Mexico": 0.5399788618087769
+      }
+    },
+    {
+      "id": "toolace-00128",
+      "target": "Get Server Key Details",
+      "choice": "Get Server Key Details",
+      "loss": 0.0049263290129601955,
+      "brier": 3.724630732904188e-05,
+      "probabilities": {
+        "Get Server Key Details": 0.9950857758522034,
+        "Get Item History": 0.0017421686789020896,
+        "Get Valuable Items": 0.0031719959806650877,
+        "Cards": 3.8199402752070455e-08
+      }
+    },
+    {
+      "id": "toolace-00159",
+      "target": "Get Wallet Prostring by Chain",
+      "choice": "Get Wallet Prostring by Chain",
+      "loss": 1.0728830375228426e-06,
+      "brier": 2.3374683265353635e-12,
+      "probabilities": {
+        "Get Wallet Prostring by Chain": 0.999998927116394,
+        "GetMarketData": 1.0891643569266307e-06,
+        "Get Exchange Records": 7.925047285084474e-09,
+        "Get Major Indices": 6.8829062449538014e-09
+      }
+    },
+    {
+      "id": "toolace-00167",
+      "target": "LiveMatches",
+      "choice": "LiveMatches",
+      "loss": 2.3841855067985307e-07,
+      "brier": 1.3289681312887713e-13,
+      "probabilities": {
+        "LiveMatches": 0.9999997615814209,
+        "Get Taboo Words From Word": 1.6192633012224178e-08,
+        "GetFeat": 5.47177458898318e-09,
+        "Heroes List API": 3.0440801879194623e-08,
+        "Get Server Details": 2.735591522196046e-07,
+        "Cards": 8.563168923947373e-11
+      }
+    },
+    {
+      "id": "toolace-00173",
+      "target": "Get Languages",
+      "choice": "Get Languages",
+      "loss": 0.0002300474588992074,
+      "brier": 1.0581528187003642e-07,
+      "probabilities": {
+        "Get Languages": 0.9997699856758118,
+        "Detect Language": 0.00023001889348961413
+      }
+    },
+    {
+      "id": "toolace-00177",
+      "target": "Enrichment API",
+      "choice": "Enrichment API",
+      "loss": 0.000895933189895004,
+      "brier": 1.6009679484341177e-06,
+      "probabilities": {
+        "Enrichment API": 0.9991044402122498,
+        "GetVerseOfaChapter": 1.6748083453421714e-06,
+        "Domain Information": 0.0008938332321122289
+      }
+    },
+    {
+      "id": "toolace-00213",
+      "target": "Search Anime Jokes",
+      "choice": "Search Anime Jokes",
+      "loss": 0.00630639074370265,
+      "brier": 7.899504998931661e-05,
+      "probabilities": {
+        "Search Anime Jokes": 0.9937134385108948,
+        "Produce Mixy Words List": 0.00628284877166152,
+        "Video Details API": 8.974292313723709e-07,
+        "Embed YouTube Video Link": 9.61890123107878e-08,
+        "Get User Feed": 2.6433472157805227e-06
+      }
+    },
+    {
+      "id": "toolace-00224",
+      "target": "Verify SMS Code",
+      "choice": "Verify SMS Code",
+      "loss": 2.3841855067985307e-07,
+      "brier": 7.462438869967891e-14,
+      "probabilities": {
+        "Verify SMS Code": 0.9999997615814209,
+        "Get Specified Users Activity": 7.478519137293915e-08,
+        "Get Challenge Posts": 4.424439037364891e-09,
+        "Get Original TikTok Video": 1.1027393043150369e-07,
+        "Get Instagram Post Likes": 2.8698594611853423e-09
+      }
+    },
+    {
+      "id": "toolace-00226",
+      "target": "Currency Symbols",
+      "choice": "Currency Symbols",
+      "loss": 9.894321920000948e-06,
+      "brier": 1.6109276412823448e-10,
+      "probabilities": {
+        "Symbol Search": 1.1547084568519494e-06,
+        "Currency Symbols": 0.9999901056289673,
+        "South Korea Scheduled Flights Growth API": 5.156680344953202e-07,
+        "exchange_listed_tickers_retrieve": 7.845295840525068e-06,
+        "Balance": 7.041033001087271e-08,
+        "Australia Scheduled Flights Growth API": 2.0322035254594084e-07
+      }
+    },
+    {
+      "id": "toolace-00270",
+      "target": "Get Property Details",
+      "choice": "Get Property Details",
+      "loss": 0.00033623288618400693,
+      "brier": 2.0245843757038529e-07,
+      "probabilities": {
+        "Get Language Details": 3.947558070649393e-05,
+        "Get Property Details": 0.9996638298034668,
+        "List Text Messages": 5.796386703948997e-10,
+        "Abuse IP Check Endpoint": 2.3882964228505443e-07,
+        "Get Domain Details": 0.00029646189068444073
+      }
+    },
+    {
+      "id": "toolace-00271",
+      "target": "Get Commodities",
+      "choice": "Get Commodities",
+      "loss": 0.3853919208049774,
+      "brier": 0.16378389298915863,
+      "probabilities": {
+        "Get Commodities": 0.680184006690979,
+        "Get Bank Sector Groups": 0.0009787514572963119,
+        "Get Amazon Search Results": 0.03474155813455582,
+        "Get BCAA Products": 0.03928280994296074,
+        "Get Product Detail": 0.24237285554409027,
+        "Get All Consumer Goods with Categories": 0.0024400660768151283
+      }
+    },
+    {
+      "id": "toolace-00294",
+      "target": "Forex Quotes API",
+      "choice": "forex_retrieve",
+      "loss": 10.696083068847656,
+      "brier": 1.9998834133148193,
+      "probabilities": {
+        "forex_retrieve": 0.9999643564224243,
+        "Get Social Feed": 2.5849480778106226e-08,
+        "Exchanges": 1.2967646398465149e-05,
+        "Forex Quotes API": 2.2633408661931753e-05
+      }
+    },
+    {
+      "id": "toolace-00297",
+      "target": "567 Live App 2022",
+      "choice": "567 Live App 2022",
+      "loss": 0.00032205163734033704,
+      "brier": 1.714235224881122e-07,
+      "probabilities": {
+        "567 Live App 2022": 0.9996780157089233,
+        "Get Property Details": 0.0002501742565073073,
+        "Get All Scenarios": 2.1462189803145293e-09,
+        "GetAnswersFormsCount": 2.0957210966621176e-10,
+        "Check EU VAT Number": 7.185043796198443e-05
+      }
+    },
+    {
+      "id": "toolace-00302",
+      "target": "Get Products in Category",
+      "choice": "Get Products in Category",
+      "loss": 0.005988393910229206,
+      "brier": 5.754934682045132e-05,
+      "probabilities": {
+        "Get Products in Category": 0.9940295219421387,
+        "Check Social Media Availability": 0.00441343616694212,
+        "Tumblr Username Checker": 0.001557023380883038
+      }
+    },
+    {
+      "id": "toolace-00316",
+      "target": "Market Movers - Forex",
+      "choice": "Market Movers - Forex",
+      "loss": 0.0009533389820717275,
+      "brier": 1.798579546630208e-06,
+      "probabilities": {
+        "Moving Average (MA)": 0.0009436563705094159,
+        "Market Movers - Forex": 0.9990471005439758,
+        "GetFuturesPerformance": 7.01187218510313e-07,
+        "Query Mark Price Kline": 8.623249414085876e-06
+      }
+    },
+    {
+      "id": "toolace-00319",
+      "target": "supported_languages",
+      "choice": "supported_languages",
+      "loss": 0.5583147406578064,
+      "brier": 0.3659748435020447,
+      "probabilities": {
+        "supported_languages": 0.5721725225448608,
+        "Get Translation Options": 0.4277130663394928,
+        "Translate": 0.00011440791422501206
+      }
+    },
+    {
+      "id": "toolace-00341",
+      "target": "Get Sports Seasons",
+      "choice": "Get Sports Seasons",
+      "loss": 3.576278118089249e-07,
+      "brier": 2.811526510736184e-13,
+      "probabilities": {
+        "Get Sports Seasons": 0.9999996423721313,
+        "VIP Football Prediction Scores": 8.296993314615975e-09,
+        "Event Result": 3.9138998886301124e-07
+      }
+    },
+    {
+      "id": "toolace-00343",
+      "target": "Get Challenge Videos",
+      "choice": "Get Challenge Videos",
+      "loss": 3.576278118089249e-07,
+      "brier": 1.9853904761543695e-13,
+      "probabilities": {
+        "Get Challenge Videos": 0.9999996423721313,
+        "Search Followers by PK and Query": 1.7839069244018901e-07,
+        "Search User": 1.970231409131884e-07
+      }
+    },
+    {
+      "id": "toolace-00349",
+      "target": "Get TikTok User Information",
+      "choice": "Get TikTok User Information",
+      "loss": 0.045553747564554214,
+      "brier": 0.0039286199025809765,
+      "probabilities": {
+        "Get TikTok User Information": 0.9554682374000549,
+        "Region List API": 0.044106561690568924,
+        "get_quotes_by_keyword": 3.436193583183922e-05,
+        "Hashtag Search": 1.2429998150764732e-06,
+        "Get Hashtag by Name": 0.0003894205729011446,
+        "Get All Zodiac Signs": 1.0073085121575787e-07
+      }
+    },
+    {
+      "id": "toolace-00376",
+      "target": "Valistring WhatsApp Number",
+      "choice": "Valistring WhatsApp Number",
+      "loss": -0.0,
+      "brier": 2.038552374359577e-17,
+      "probabilities": {
+        "Valistring WhatsApp Number": 1.0,
+        "Keyword Research API": 4.179637969059513e-09,
+        "countryList": 1.3515442098821495e-09,
+        "YouTube Download API": 1.0437810615826493e-09
+      }
+    },
+    {
+      "id": "toolace-00386",
+      "target": "Dino Test API",
+      "choice": "Get Application Details",
+      "loss": 8.57956600189209,
+      "brier": 1.9937787055969238,
+      "probabilities": {
+        "Dino Test API": 0.00018790655303746462,
+        "Get Cat Breeds by Type": 0.0015402621356770396,
+        "Get Application Details": 0.9970710277557373,
+        "Get Country Codes": 0.0012007224140688777
+      }
+    },
+    {
+      "id": "toolace-00420",
+      "target": "Career Aptitude Personality Test Questionnaire",
+      "choice": "Career Aptitude Personality Test Questionnaire",
+      "loss": -0.0,
+      "brier": 1.864364118485344e-16,
+      "probabilities": {
+        "Language Segmenter": 1.3650711672141824e-08,
+        "Chat": 2.620612615800155e-10,
+        "Get Supported Languages": 1.60644011981681e-10,
+        "Career Aptitude Personality Test Questionnaire": 1.0
+      }
+    },
+    {
+      "id": "toolace-00437",
+      "target": "GetMarketData",
+      "choice": "GetMarketData",
+      "loss": 0.1091172844171524,
+      "brier": 0.02137266844511032,
+      "probabilities": {
+        "Earnings Per Share (EPS) Trend": 2.1843277187016952e-10,
+        "GetMarketData": 0.896625280380249,
+        "Get Latest Market Commentaries": 0.10337474197149277
+      }
+    },
+    {
+      "id": "toolace-00442",
+      "target": "Newly Registered Domains Whois Lookup",
+      "choice": "Newly Registered Domains Whois Lookup",
+      "loss": 1.1920928244535389e-07,
+      "brier": 3.719194277638366e-14,
+      "probabilities": {
+        "Newly Registered Domains Whois Lookup": 0.9999998807907104,
+        "patient_monitoring": 6.041793176869703e-10,
+        "Send Email Notification": 4.76152939299368e-09,
+        "countries/list": 1.4861067043625553e-08,
+        "checkDisposableEmail": 1.5078857984462957e-07
+      }
+    },
+    {
+      "id": "toolace-00453",
+      "target": "webtoonOriginalsGenresList",
+      "choice": "webtoonOriginalsGenresList",
+      "loss": 0.5503300428390503,
+      "brier": 0.3582651615142822,
+      "probabilities": {
+        "Get Webtoon Titles": 0.4232405424118042,
+        "webtoonOriginalsGenresList": 0.576759397983551,
+        "GetSingleAnimeEpisodeInfo": 4.974501166543632e-08,
+        "Get 4D Draw Dates": 1.8534229706546057e-11,
+        "Get All Joke Categories": 3.442118465257771e-11
+      }
+    },
+    {
+      "id": "toolace-00454",
+      "target": "Get Latest Stock Prices",
+      "choice": "Get Latest Stock Prices",
+      "loss": -0.0,
+      "brier": 5.536429689402761e-17,
+      "probabilities": {
+        "Get Latest Stock Prices": 1.0,
+        "Moving Average Convergence Divergence (MACD)": 1.3967067502562713e-09,
+        "Get Coin Supply": 1.0992902144124628e-09,
+        "Supported Metals Symbols": 7.225307463443187e-09
+      }
+    },
+    {
+      "id": "toolace-00459",
+      "target": "Latest Exchange Rates",
+      "choice": "Latest Exchange Rates",
+      "loss": -0.0,
+      "brier": 2.6947328307029388e-15,
+      "probabilities": {
+        "Latest Exchange Rates": 1.0,
+        "Get Coin Prostring by Slug": 5.179607853733614e-08,
+        "Options Expirations": 2.327907866472856e-09,
+        "Get Metal Prices": 2.5455879626434808e-09
+      }
+    },
+    {
+      "id": "toolace-00492",
+      "target": "getUserByName",
+      "choice": "getUserByName",
+      "loss": 0.0821598619222641,
+      "brier": 0.012418199330568314,
+      "probabilities": {
+        "getUserByName": 0.9211246967315674,
+        "Phone Validator API": 0.07872021943330765,
+        "Get All Forms": 0.00010763308091554791,
+        "Rotating Proxy API": 2.9984667548887955e-07,
+        "Track Order": 2.9957600418129005e-05,
+        "GetAnswersFormsCount": 1.7210324585903436e-05
+      }
+    },
+    {
+      "id": "toolace-00506",
+      "target": "databasePrivilegeFetcher.fetchPrivileges",
+      "choice": "databasePrivilegeFetcher.fetchPrivileges",
+      "loss": 0.4492211937904358,
+      "brier": 0.2619071304798126,
+      "probabilities": {
+        "databasePrivilegeFetcher.fetchPrivileges": 0.638124942779541,
+        "privilegeInspector.inspectPrivileges": 0.36187508702278137
+      }
+    },
+    {
+      "id": "toolace-00511",
+      "target": "Language Segmenter",
+      "choice": "Language Segmenter",
+      "loss": 0.5645825862884521,
+      "brier": 0.37207889556884766,
+      "probabilities": {
+        "Language Segmenter": 0.5685974359512329,
+        "/v1/profanityfilter": 0.00014291182742454112,
+        "Classify": 0.4312432110309601,
+        "Questionnaire Generator": 1.639007132325787e-05
+      }
+    },
+    {
+      "id": "toolace-00514",
+      "target": "leadership.evaluate_impact",
+      "choice": "leadership.evaluate_impact",
+      "loss": 8.415821503149346e-05,
+      "brier": 1.4161111394628279e-08,
+      "probabilities": {
+        "leadership.schedule_meetings": 8.413031173404306e-05,
+        "leadership.evaluate_impact": 0.9999158382415771
+      }
+    },
+    {
+      "id": "toolace-00543",
+      "target": "ReservoirCapacityEstimator.estimateCapacity",
+      "choice": "ReservoirCapacityEstimator.estimateCapacity",
+      "loss": 0.00015639036428183317,
+      "brier": 4.893321658983041e-08,
+      "probabilities": {
+        "ReservoirCapacityEstimator.estimateCapacity": 0.9998435974121094,
+        "HydroPowerCalculator.calculatePower": 0.0001564335252624005
+      }
+    },
+    {
+      "id": "toolace-00615",
+      "target": "getPsychomotorSkills",
+      "choice": "getPsychomotorSkills",
+      "loss": 0.08595339208841324,
+      "brier": 0.013567333109676838,
+      "probabilities": {
+        "getPsychomotorSkills": 0.9176369905471802,
+        "getPsychomotorDevelopmentSkills": 0.08236302435398102
+      }
+    },
+    {
+      "id": "toolace-00636",
+      "target": "music.get_artist_genre",
+      "choice": "music.get_genre_popularity",
+      "loss": 0.7719013094902039,
+      "brier": 0.5786006450653076,
+      "probabilities": {
+        "music.get_artist_genre": 0.462133526802063,
+        "music.get_genre_popularity": 0.5378664135932922
+      }
+    },
+    {
+      "id": "toolace-00638",
+      "target": "mixer.get_blade_replacement_time",
+      "choice": "mixer.get_blade_replacement_time",
+      "loss": 0.2818978428840637,
+      "brier": 0.12068714946508408,
+      "probabilities": {
+        "mixer.get_blade_replacement_cost": 0.2456493079662323,
+        "mixer.get_blade_replacement_time": 0.7543507218360901
+      }
+    },
+    {
+      "id": "toolace-00651",
+      "target": "drama.track_performance_dates",
+      "choice": "drama.track_performance_dates",
+      "loss": 0.04541671648621559,
+      "brier": 0.003942415118217468,
+      "probabilities": {
+        "drama.track_performance_dates": 0.9555991888046265,
+        "drama.get_playwrights": 0.044395752251148224,
+        "drama.analyze_script": 5.0261555770703126e-06
+      }
+    },
+    {
+      "id": "toolace-00671",
+      "target": "machining.optimize_tool_path",
+      "choice": "machining.calculate_tool_life",
+      "loss": 1.534822940826416,
+      "brier": 0.9904771447181702,
+      "probabilities": {
+        "machining.simulate_tool_path": 0.20881065726280212,
+        "machining.calculate_tool_life": 0.5756955146789551,
+        "machining.optimize_tool_path": 0.215493842959404
+      }
+    },
+    {
+      "id": "toolace-00700",
+      "target": "festival_schedule_finder",
+      "choice": "festival_schedule_finder",
+      "loss": 0.25311052799224854,
+      "brier": 0.10000839829444885,
+      "probabilities": {
+        "festival_schedule_finder": 0.7763820886611938,
+        "ethnic_food_stalls": 0.22361445426940918,
+        "cultural_parade_participants": 3.5568871226132615e-06
+      }
+    },
+    {
+      "id": "toolace-00721",
+      "target": "getArtisticPublishingDetails",
+      "choice": "getArtisticPublishingInfo",
+      "loss": 2.657045364379883,
+      "brier": 1.7292226552963257,
+      "probabilities": {
+        "getArtisticPublishingInfo": 0.9298447966575623,
+        "getArtisticPublishingDetails": 0.07015520334243774
+      }
+    },
+    {
+      "id": "toolace-00745",
+      "target": "getBirdSpecies",
+      "choice": "getBirdSpecies",
+      "loss": 0.5825855731964111,
+      "brier": 0.38992825150489807,
+      "probabilities": {
+        "getAvianSpecies": 0.4415474534034729,
+        "getBirdSpecies": 0.5584526062011719
+      }
+    },
+    {
+      "id": "toolace-00748",
+      "target": "getForestLoss",
+      "choice": "getForestLoss",
+      "loss": 0.2770741283893585,
+      "brier": 0.08809095621109009,
+      "probabilities": {
+        "getForestLoss": 0.7579982876777649,
+        "getVegetationIndex": 0.13203948736190796,
+        "getNDVI": 0.10996226221323013
+      }
+    },
+    {
+      "id": "toolace-00757",
+      "target": "CalculateCarbonFootprint",
+      "choice": "CalculateCarbonFootprint",
+      "loss": 1.1920928244535389e-07,
+      "brier": 1.889420491265649e-14,
+      "probabilities": {
+        "TreeEquivalent": 6.843500699460492e-08,
+        "CalculateCarbonFootprint": 0.9999998807907104
+      }
+    },
+    {
+      "id": "toolace-00775",
+      "target": "getPolicyAnalysis",
+      "choice": "getPolicyAnalysis",
+      "loss": 0.6716626286506653,
+      "brier": 0.4785188138484955,
+      "probabilities": {
+        "analyzeInsurancePolicy": 0.48914146423339844,
+        "getPolicyAnalysis": 0.5108584761619568
+      }
+    },
+    {
+      "id": "toolace-00785",
+      "target": "agriculture.get_crop_yield",
+      "choice": "agriculture.get_weather_impact",
+      "loss": 1.0348360538482666,
+      "brier": 0.8313157558441162,
+      "probabilities": {
+        "agriculture.get_weather_impact": 0.6447153687477112,
+        "agriculture.get_crop_yield": 0.3552846610546112
+      }
+    }
+  ]
+}

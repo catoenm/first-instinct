@@ -1,0 +1,8 @@
+{
+  "dataset_manifest_sha256": "be39532aa61bf1811366a83174f62d299fccc24cfc9fc0b52445f07c5acbc8a6",
+  "epochs": 3,
+  "seed": 7,
+  "checkpoint_selection": "lowest validation loss, including initial uniform model",
+  "test_policy": "evaluate each selected model once after both training runs finish",
+  "calibration_policy": "reserved split is not used"
+}

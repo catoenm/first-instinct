@@ -1,0 +1,426 @@
+{
+  "count": 34,
+  "correct": 18,
+  "accuracy": 0.5294117647058824,
+  "loss": 0.9350394098197713,
+  "brier": 0.5709453360999331,
+  "predictions": [
+    {
+      "id": "toolace-00102",
+      "target": "Search Nearby",
+      "choice": "AI BOT",
+      "loss": 2.1255204677581787,
+      "brier": 1.183058738708496,
+      "probabilities": {
+        "Search Nearby": 0.11937081813812256,
+        "Get DNS Records": 0.34082305431365967,
+        "AI BOT": 0.5398061275482178
+      }
+    },
+    {
+      "id": "toolace-00123",
+      "target": "Get UFC Fight Details",
+      "choice": "Daily Match List-Live",
+      "loss": 1.7701375484466553,
+      "brier": 0.8341284394264221,
+      "probabilities": {
+        "Get UFC Fight Details": 0.17030955851078033,
+        "Daily Match List-Live": 0.22020553052425385,
+        "Get News by Sport": 0.1734844595193863,
+        "MatchSchedules": 0.09958944469690323,
+        "Get Player Positions": 0.15016818046569824,
+        "Get Formula 1 Drivers": 0.18624283373355865
+      }
+    },
+    {
+      "id": "toolace-00140",
+      "target": "IP Geolocation",
+      "choice": "IP Geolocation",
+      "loss": 1.052530288696289,
+      "brier": 0.5634673237800598,
+      "probabilities": {
+        "reverse": 0.08654620498418808,
+        "Facilities Lookup": 0.07868774235248566,
+        "Get Postal Codes": 0.3064778447151184,
+        "Get Restaurant Ratings": 0.1792348474264145,
+        "IP Geolocation": 0.34905341267585754
+      }
+    },
+    {
+      "id": "toolace-00149",
+      "target": "Get Available OCR Algorithms",
+      "choice": "Get OCR Version",
+      "loss": 1.4265443086624146,
+      "brier": 0.7256661653518677,
+      "probabilities": {
+        "Get Available OCR Algorithms": 0.24013733863830566,
+        "Get Brand Recognition Service Version": 0.16875633597373962,
+        "GetFileVersions": 0.1758737862110138,
+        "Get Service Version": 0.1711776852607727,
+        "Get OCR Version": 0.2440548986196518
+      }
+    },
+    {
+      "id": "toolace-00157",
+      "target": "Country Details",
+      "choice": "Country Details",
+      "loss": 0.8999168276786804,
+      "brier": 0.47349607944488525,
+      "probabilities": {
+        "SearchCountries": 0.04117051884531975,
+        "Measure Distance": 0.03745193034410477,
+        "Get Canadian Postal Codes": 0.08942057192325592,
+        "Get Municipality by Postal Code": 0.31222614645957947,
+        "Country Details": 0.40660348534584045,
+        "Countries All (min)": 0.11312730610370636
+      }
+    },
+    {
+      "id": "toolace-00190",
+      "target": "Get Computer Vision Models",
+      "choice": "Get Computer Vision Models",
+      "loss": 0.7343258857727051,
+      "brier": 0.36459675431251526,
+      "probabilities": {
+        "Get Computer Vision Models": 0.479828804731369,
+        "User-Generated Photo Scoring": 0.13052651286125183,
+        "Language-Specific Text Recognition": 0.21795307099819183,
+        "Get Brand Recognition Service Version": 0.17169161140918732
+      }
+    },
+    {
+      "id": "toolace-00200",
+      "target": "Wilaya_Informations",
+      "choice": "Wilaya_Informations",
+      "loss": 0.8759484887123108,
+      "brier": 0.5215129852294922,
+      "probabilities": {
+        "Wilaya_Informations": 0.4164668321609497,
+        "Countries": 0.020259112119674683,
+        "URL Lookup": 0.17686885595321655,
+        "Get Municipality by Postal Code": 0.38640522956848145
+      }
+    },
+    {
+      "id": "toolace-00201",
+      "target": "Get Movies by Quality",
+      "choice": "URL to Blurhash Conversion API",
+      "loss": 1.4913203716278076,
+      "brier": 0.7622784376144409,
+      "probabilities": {
+        "search": 0.24743112921714783,
+        "Get Movies by Quality": 0.22507524490356445,
+        "Get SVG Pattern": 0.015369055792689323,
+        "URL to Blurhash Conversion API": 0.25404179096221924,
+        "charcoal_image_charcoal__get": 0.16419179737567902,
+        "/image/stable/prompter": 0.09389093518257141
+      }
+    },
+    {
+      "id": "toolace-00211",
+      "target": "Get Phishing Domains",
+      "choice": "Get Scala Versions",
+      "loss": 1.262655258178711,
+      "brier": 0.7204949855804443,
+      "probabilities": {
+        "Get Phishing Domains": 0.2829018533229828,
+        "Extract Text from PDF": 0.1756024956703186,
+        "Valistring Email Address": 0.15070559084415436,
+        "Get Scala Versions": 0.39079010486602783
+      }
+    },
+    {
+      "id": "toolace-00306",
+      "target": "User-Generated Photo Scoring",
+      "choice": "User-Generated Photo Scoring",
+      "loss": 0.904061496257782,
+      "brier": 0.5364567041397095,
+      "probabilities": {
+        "User-Generated Photo Scoring": 0.4049217402935028,
+        "Get Computer Vision Models": 0.3489176034927368,
+        "OCR": 0.24616067111492157
+      }
+    },
+    {
+      "id": "toolace-00345",
+      "target": "DAX Point Changes for Each Month (January-August, 2022)",
+      "choice": "Get Bank SWIFT Code",
+      "loss": 1.5276927947998047,
+      "brier": 0.7462788820266724,
+      "probabilities": {
+        "DAX Point Changes for Each Month (January-August, 2022)": 0.21703581511974335,
+        "Get 1Inch Balance From Specific Network": 0.14371344447135925,
+        "Currency Converter": 0.1344190388917923,
+        "Get Bank SWIFT Code": 0.23681695759296417,
+        "web_chain_details": 0.1695447415113449,
+        "Available Symbols Endpoint": 0.09846992790699005
+      }
+    },
+    {
+      "id": "toolace-00359",
+      "target": "Get Cities",
+      "choice": "Get Cities",
+      "loss": 1.1209228038787842,
+      "brier": 0.6008703112602234,
+      "probabilities": {
+        "Get Distance in Km": 0.060018569231033325,
+        "Locations": 0.2573859989643097,
+        "Search Restaurant Location": 0.2593279480934143,
+        "Get Cities": 0.3259788453578949,
+        "Get Areas": 0.0972885861992836
+      }
+    },
+    {
+      "id": "toolace-00379",
+      "target": "Plants in Europe",
+      "choice": "Plants in Europe",
+      "loss": 0.792734682559967,
+      "brier": 0.36354830861091614,
+      "probabilities": {
+        "Get Sunrise and Sunset Times": 0.06142452359199524,
+        "Plants in Europe": 0.45260536670684814,
+        "Cluster Data Estimation": 0.14547252655029297,
+        "M4.5+ Earthquakes, Past Hour": 0.11985806375741959,
+        "Earthquakes in the Past 7 Days": 0.12183801829814911,
+        "M1.0+ Earthquakes, Past Day": 0.09880140423774719
+      }
+    },
+    {
+      "id": "toolace-00469",
+      "target": "GET /categories/{categoryId}/v1",
+      "choice": "GET /categories/{categoryId}/v1",
+      "loss": 0.6614832878112793,
+      "brier": 0.36437129974365234,
+      "probabilities": {
+        "GET /categories/{categoryId}/v1": 0.5160852670669556,
+        "Get Maisons Categories": 0.160990908741951,
+        "StorageExists": 0.3229237496852875
+      }
+    },
+    {
+      "id": "toolace-00498",
+      "target": "Get IP Location",
+      "choice": "Get IP Location",
+      "loss": 0.9032244086265564,
+      "brier": 0.48588478565216064,
+      "probabilities": {
+        "IP Lookup": 0.2764146029949188,
+        "Get Canadian Postal Codes": 0.10866594314575195,
+        "Get Restaurant Ratings": 0.2096586525440216,
+        "Get IP Location": 0.40526083111763
+      }
+    },
+    {
+      "id": "toolace-00501",
+      "target": "mixer.speed_adjustment",
+      "choice": "mixer.speed_adjustment",
+      "loss": 0.44782203435897827,
+      "brier": 0.2606154680252075,
+      "probabilities": {
+        "mixer.speed_adjustment": 0.6390184164047241,
+        "mixer.schedule_speed_adjustment": 0.36098164319992065
+      }
+    },
+    {
+      "id": "toolace-00505",
+      "target": "youth_development.evaluate_digital_skills",
+      "choice": "youth_development.evaluate_digital_skills",
+      "loss": 0.5410425662994385,
+      "brier": 0.3492122292518616,
+      "probabilities": {
+        "youth_development.create_digital_workshop": 0.41785895824432373,
+        "youth_development.evaluate_digital_skills": 0.5821410417556763
+      }
+    },
+    {
+      "id": "toolace-00512",
+      "target": "mealprep.get_recipes",
+      "choice": "mealprep.get_grocery_list",
+      "loss": 0.937976598739624,
+      "brier": 0.7407416105270386,
+      "probabilities": {
+        "mealprep.get_grocery_list": 0.608581006526947,
+        "mealprep.get_recipes": 0.39141902327537537
+      }
+    },
+    {
+      "id": "toolace-00519",
+      "target": "debounceHandler",
+      "choice": "debounceHandler",
+      "loss": 0.571095883846283,
+      "brier": 0.37861353158950806,
+      "probabilities": {
+        "debounceHandler": 0.5649060010910034,
+        "throttleHandler": 0.4350939393043518
+      }
+    },
+    {
+      "id": "toolace-00532",
+      "target": "curriculum_progress_tracker",
+      "choice": "curriculum_progress_tracker",
+      "loss": 0.6396892666816711,
+      "brier": 0.44659507274627686,
+      "probabilities": {
+        "generate_math_quiz": 0.4725436568260193,
+        "curriculum_progress_tracker": 0.5274562835693359
+      }
+    },
+    {
+      "id": "toolace-00550",
+      "target": "campaign.createEvent",
+      "choice": "petAdoption.matchPets",
+      "loss": 0.9229076504707336,
+      "brier": 0.7263451218605042,
+      "probabilities": {
+        "campaign.createEvent": 0.39736196398735046,
+        "petAdoption.matchPets": 0.6026380062103271
+      }
+    },
+    {
+      "id": "toolace-00553",
+      "target": "checkDNSRecord",
+      "choice": "sendHTTPRequest",
+      "loss": 0.7971960306167603,
+      "brier": 0.6037012934684753,
+      "probabilities": {
+        "sendHTTPRequest": 0.5494093298912048,
+        "checkDNSRecord": 0.4505906403064728
+      }
+    },
+    {
+      "id": "toolace-00557",
+      "target": "JavaGCTuner.optimize",
+      "choice": "JavaGCMonitor.startMonitoring",
+      "loss": 0.7457927465438843,
+      "brier": 0.552598774433136,
+      "probabilities": {
+        "JavaGCTuner.optimize": 0.47435814142227173,
+        "JavaGCMonitor.startMonitoring": 0.525641918182373
+      }
+    },
+    {
+      "id": "toolace-00567",
+      "target": "robot.configure_movement",
+      "choice": "robot.update_software",
+      "loss": 1.1178489923477173,
+      "brier": 0.679792046546936,
+      "probabilities": {
+        "robot.configure_movement": 0.32698240876197815,
+        "robot.monitor_health": 0.3230377733707428,
+        "robot.update_software": 0.34997987747192383
+      }
+    },
+    {
+      "id": "toolace-00597",
+      "target": "getOralPathologyReport",
+      "choice": "diagnoseOralPathology",
+      "loss": 0.7762073278427124,
+      "brier": 0.5828806757926941,
+      "probabilities": {
+        "diagnoseOralPathology": 0.5398521423339844,
+        "getOralPathologyReport": 0.460147887468338
+      }
+    },
+    {
+      "id": "toolace-00628",
+      "target": "furnace.calculate_energy_consumption",
+      "choice": "furnace.calculate_energy_consumption",
+      "loss": 0.6893110871315002,
+      "brier": 0.49616390466690063,
+      "probabilities": {
+        "furnace.calculate_energy_consumption": 0.5019217133522034,
+        "furnace.monitor_temperature_profile": 0.49807822704315186
+      }
+    },
+    {
+      "id": "toolace-00639",
+      "target": "public_speaking_assessment",
+      "choice": "public_speaking_assessment",
+      "loss": 0.6821757555007935,
+      "brier": 0.4890289902687073,
+      "probabilities": {
+        "public_speaking_improvement_suggestion": 0.4944840669631958,
+        "public_speaking_assessment": 0.5055159330368042
+      }
+    },
+    {
+      "id": "toolace-00658",
+      "target": "checkGrammar",
+      "choice": "checkGrammar",
+      "loss": 0.871177613735199,
+      "brier": 0.5101709961891174,
+      "probabilities": {
+        "proofreadCopy": 0.3287521302700043,
+        "checkGrammar": 0.418458491563797,
+        "wordCount": 0.25278937816619873
+      }
+    },
+    {
+      "id": "toolace-00703",
+      "target": "createMagazine",
+      "choice": "getMagazineInfo",
+      "loss": 1.2146532535552979,
+      "brier": 0.9889442324638367,
+      "probabilities": {
+        "createMagazine": 0.29681289196014404,
+        "getMagazineInfo": 0.703187108039856
+      }
+    },
+    {
+      "id": "toolace-00708",
+      "target": "checkGrammar",
+      "choice": "checkGrammar",
+      "loss": 0.2506835460662842,
+      "brier": 0.09832961857318878,
+      "probabilities": {
+        "checkGrammar": 0.7782686352729797,
+        "editText": 0.22173140943050385
+      }
+    },
+    {
+      "id": "toolace-00715",
+      "target": "leadership.changeImpactAnalysis",
+      "choice": "leadership.teamDynamicsEvaluation",
+      "loss": 0.7435425519943237,
+      "brier": 0.5503543019294739,
+      "probabilities": {
+        "leadership.teamDynamicsEvaluation": 0.5245733261108398,
+        "leadership.changeImpactAnalysis": 0.47542673349380493
+      }
+    },
+    {
+      "id": "toolace-00744",
+      "target": "getAppLogs",
+      "choice": "scaleApp",
+      "loss": 0.838912308216095,
+      "brier": 0.6448383927345276,
+      "probabilities": {
+        "scaleApp": 0.5678196549415588,
+        "getAppLogs": 0.4321802854537964
+      }
+    },
+    {
+      "id": "toolace-00764",
+      "target": "JavaTestInjector.generateDependencyGraph",
+      "choice": "injectorUtils.traceInjectionPaths",
+      "loss": 0.84928297996521,
+      "brier": 0.6550053358078003,
+      "probabilities": {
+        "JavaTestInjector.generateDependencyGraph": 0.4277215301990509,
+        "injectorUtils.traceInjectionPaths": 0.5722784996032715
+      }
+    },
+    {
+      "id": "toolace-00791",
+      "target": "taxFiling.calculateTaxDue",
+      "choice": "taxFiling.calculateTaxDue",
+      "loss": 0.6050028204917908,
+      "brier": 0.4120996296405792,
+      "probabilities": {
+        "taxFiling.calculateTaxDue": 0.5460729002952576,
+        "taxFiling.submitAnnualTax": 0.45392709970474243
+      }
+    }
+  ],
+  "checkpoint_reload_max_probability_difference": 0.0
+}
