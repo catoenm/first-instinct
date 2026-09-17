@@ -5,6 +5,9 @@ parameters to the described-option interface. The released v0.2.0 model remains
 the 141-million-parameter DeBERTa experiment. There is no claim of Jev parity or
 knowledge of its private training method.
 
+See the [architecture roadmap](architecture-roadmap.md) for the distinction
+between the running supervised model and proposed outcome/value predictors.
+
 ## What changes
 
 The default starting point is `Qwen/Qwen3.5-4B`, pinned to revision
@@ -69,6 +72,15 @@ training data. Exact source/state separation is checked independently.
 Semantic near-duplicate leakage and base-model pretraining contamination remain
 possible. Public final sets are regression checks, not newly blind benchmarks.
 
+The new ToolACE split is not a clean evaluation of the previously released small
+model: 24 validation rows and 26 test rows occur in that older model's training
+IDs. This does not overlap the new larger model's own training partition, but
+it invalidates an unqualified small-versus-large comparison on those rows. The
+pilot's small-model reference excludes all 17 such rows it could process, leaving
+120 questions from six tasks; three other tool questions exceeded its input
+limit. The primary comparison for the larger experiment is its own pretrained
+checkpoint versus the selected adapter on identical held-out examples.
+
 The execution task runs only twelve known local arithmetic functions; source
 code from the internet is never executed. Incorrect actions, coincidentally
 correct alternatives and no-suitable-action cases are retained. Three operations
@@ -105,11 +117,32 @@ gradient norm, example visits, processed input tokens, package versions,
 code hashes, time and peak graphics memory. `best` and `latest` contain adapters,
 which require the pinned original weights for inference.
 
+For larger batches, `--length-bucket-size 2048` groups nearby input lengths
+inside shuffled pools, then shuffles whole batches. Every row is visited once
+per epoch, including a possible partial batch; target labels do not determine
+the order. The bucket size must be a multiple of the effective batch size.
+On the 153,031-question build, 64-example batches process 29,486,235 padded token
+positions with this grouping versus 50,611,409 with ordinary random ordering.
+Both contain the same 26,716,480 real input tokens. This is a padding count,
+not a measured speedup. Runs record real and padded token counts separately.
+
 `scale_lab.bundle` packages an explicit allowlist of code, dependencies and
 prepared data for transfer. Credentials and arbitrary workspace contents are
 excluded. The bundle's companion manifest lists every file hash.
 
+After checkpoint selection, `scale_lab.order_audit --raw <raw-data-directory>
+--data <prepared-directory> --run <run-directory> --output <new-directory>`
+checks a deterministic sample from the test split with the options reversed.
+It reproduces original tokens before comparing choice agreement, accuracy,
+probability changes, and switches between correct and incorrect answers.
+Switching between two acceptable actions is counted separately. This is one
+order perturbation of the same cases, not an independent new test set or a
+guarantee of order invariance.
+
 ## Rental and interpretation
+
+The [Runpod walkthrough](runpod.md) records the image, installation fixes and
+storage layout used by the first rental.
 
 The first cloud target is one H100 with 80 gigabytes of graphics memory.
 Measure actual throughput and memory in a short pilot before scheduling a full

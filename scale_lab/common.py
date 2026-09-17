@@ -75,6 +75,27 @@ def shuffled_input(item, seed):
     return result
 
 
+def epoch_batches(rows, batch_size, seed, bucket_size=0):
+    """Visit each row once; optionally group similar lengths to reduce padding.
+
+    Shuffle before local length sorting, then shuffle whole batches. Targets
+    and task labels never participate in ordering. A partial batch stays intact.
+    """
+    if batch_size <= 0 or bucket_size < 0 or (bucket_size and bucket_size % batch_size):
+        raise ValueError("Length bucket must be zero or a positive multiple of the effective batch size")
+    rng = random.Random(seed)
+    indices = list(range(len(rows)))
+    rng.shuffle(indices)
+    if not bucket_size:
+        return [indices[i:i + batch_size] for i in range(0, len(indices), batch_size)]
+    batches = []
+    for start in range(0, len(indices), bucket_size):
+        pool = sorted(indices[start:start + bucket_size], key=lambda i: len(rows[i]["input_ids"]))
+        batches.extend(pool[i:i + batch_size] for i in range(0, len(pool), batch_size))
+    rng.shuffle(batches)
+    return batches
+
+
 def messages(item):
     """Explicit allowlist: outcomes, targets, source ids and receipts never enter prompts."""
     validate_input(item)

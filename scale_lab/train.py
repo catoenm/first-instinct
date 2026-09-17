@@ -16,7 +16,7 @@ import time
 import torch
 from transformers import AutoTokenizer
 
-from scale_lab.common import ROOT, file_hash, metrics, read_rows, write_json, write_rows
+from scale_lab.common import ROOT, epoch_batches, file_hash, metrics, read_rows, write_json, write_rows
 from scale_lab.model import batch, device_name, evaluate, load_model, loss_for, score
 
 
@@ -82,19 +82,17 @@ def train(args):
     effective_batch = args.batch_size * args.accumulation
     batches_per_epoch = math.ceil(len(rows) / effective_batch)
     total_steps = min(args.max_steps, batches_per_epoch * args.epochs)
-    step, visits, seen_tokens = 0, 0, 0
+    step, visits, seen_tokens, padded_tokens = 0, 0, 0, 0
     receipt["status"] = "training"
     write_json(args.output / "run.json", receipt)
     deadline = started + args.max_hours * 3600
     trace = (args.output / "training.jsonl").open("w")
     try:
         for epoch in range(args.epochs):
-            indices = list(range(len(rows)))
-            random.Random(args.seed + epoch).shuffle(indices)
-            for start in range(0, len(indices), effective_batch):
+            for indices in epoch_batches(rows, effective_batch, args.seed + epoch, args.length_bucket_size):
                 if stop[0] or time.monotonic() >= deadline or step >= total_steps:
                     break
-                selected = [rows[i] for i in indices[start:start + effective_batch]]
+                selected = [rows[i] for i in indices]
                 optimizer.zero_grad(set_to_none=True)
                 model.train()
                 total_loss = 0.
@@ -108,6 +106,7 @@ def train(args):
                     total_loss += loss.item() * len(chunk) / len(selected)
                     visits += len(chunk)
                     seen_tokens += sum(len(r["input_ids"]) for r in chunk)
+                    padded_tokens += len(chunk) * max(len(r["input_ids"]) for r in chunk)
                 grad_norm = torch.nn.utils.clip_grad_norm_([p for p in model.parameters() if p.requires_grad], 1., error_if_nonfinite=True)
                 # Linear warmup followed by cosine decay over the declared step budget.
                 warmup = max(1, round(total_steps * .05))
@@ -117,7 +116,7 @@ def train(args):
                 optimizer.step()
                 step += 1
                 event = {"step": step, "epoch": epoch, "loss": total_loss, "grad_norm": float(grad_norm),
-                         "visits": visits, "tokens": seen_tokens, "seconds": time.monotonic() - started,
+                         "visits": visits, "tokens": seen_tokens, "padded_tokens": padded_tokens, "seconds": time.monotonic() - started,
                          "learning_rate": optimizer.param_groups[0]["lr"]}
                 if step % args.eval_every == 0 or step == total_steps:
                     predictions = evaluate(model, validation, labels, pad_id, device, args.batch_size)
@@ -135,7 +134,7 @@ def train(args):
                 break
         model.save_pretrained(args.output / "latest")
         receipt.update(status="complete" if step >= total_steps else "bounded_stop", steps=step, visits=visits,
-                       tokens=seen_tokens, seconds=time.monotonic() - started, best_step=best_step,
+                       tokens=seen_tokens, padded_tokens=padded_tokens, seconds=time.monotonic() - started, best_step=best_step,
                        best_validation_loss=best_loss, baseline=initial_metrics,
                        peak_cuda_memory_bytes=torch.cuda.max_memory_allocated() if device == "cuda" else None)
         write_json(args.output / "run.json", receipt)
@@ -156,6 +155,8 @@ def main():
     p.add_argument("--model-alias")
     p.add_argument("--batch-size", type=int, default=2)
     p.add_argument("--accumulation", type=int, default=16)
+    p.add_argument("--length-bucket-size", type=int, default=0,
+                   help="Zero disables bucketing; otherwise use a multiple of batch-size times accumulation")
     p.add_argument("--epochs", type=int, default=1)
     p.add_argument("--max-steps", type=int, default=100)
     p.add_argument("--max-hours", type=float, default=2.)
@@ -167,6 +168,8 @@ def main():
     args = p.parse_args()
     if any(getattr(args, k) <= 0 for k in ("batch_size", "accumulation", "epochs", "max_steps", "max_hours", "learning_rate", "eval_every", "validation_per_task")) or (args.limit is not None and args.limit <= 0):
         p.error("Training limits must be positive")
+    if args.length_bucket_size < 0 or args.length_bucket_size % (args.batch_size * args.accumulation):
+        p.error("Length bucket must be zero or a positive multiple of the effective batch size")
     print(json.dumps(train(args), indent=2))
 
 

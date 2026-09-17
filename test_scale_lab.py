@@ -7,7 +7,7 @@ import unittest
 import torch
 from transformers import Qwen3Config, Qwen3ForCausalLM
 
-from scale_lab.common import messages, targets, metrics, shuffled_input
+from scale_lab.common import epoch_batches, messages, targets, metrics, shuffled_input
 from scale_lab.data import connected_tool_groups, verify
 from scale_lab.environment import generate, execute
 from scale_lab.glaive import convert
@@ -20,6 +20,19 @@ def example():
 
 
 class DataTests(unittest.TestCase):
+    def test_length_bucketing_preserves_epoch_and_reduces_padding(self):
+        rows = [{"input_ids": [1] * (i * 7 + 1)} for i in range(103)]
+        plain = epoch_batches(rows, 8, 41)
+        grouped = epoch_batches(rows, 8, 41, 64)
+        self.assertEqual(grouped, epoch_batches(rows, 8, 41, 64))
+        self.assertEqual(sorted(i for batch in grouped for i in batch), list(range(len(rows))))
+        self.assertEqual(sorted(map(len, grouped)), [7] + [8] * 12)
+        padded = lambda groups: sum(len(g) * max(len(rows[i]["input_ids"]) for i in g) for g in groups)
+        self.assertLess(padded(grouped), padded(plain) * .75)
+        self.assertNotEqual(grouped, epoch_batches(rows, 8, 42, 64))
+        with self.assertRaises(ValueError):
+            epoch_batches(rows, 8, 41, 9)
+
     def test_prompt_excludes_labels_and_receipts(self):
         item = example()
         before = messages(item)
