@@ -38,16 +38,28 @@ outcomes for uncertain events are legitimate; the same observation need not
 always have the same label. Training and final evaluation use separate random
 streams, and held-out combinations are excluded by construction and tested.
 
-## What would make the next data project more realistic?
+## Learning which information to acquire
 
-The next useful extension is a small **information-gathering environment**. For
-example, an agent could read records from simulated sources, pay for another
-observation, or commit to an answer. Some sources could repeat the same evidence;
-others could provide independent evidence. The environment would record what
-the agent actually observed before each choice and score the eventual outcome.
-This would introduce a learned sequence of decisions and partial information.
-The current study still uses one-step episodes and fixed downstream inspection
-code; it has not implemented that extension.
+The [learned-inspection experiment](learned-inspection-protocol.md) implements
+that next step. An agent can stop with a report or pay for one additional
+observation and then report. Some offered sources supply independent evidence;
+others explicitly copy the original reading. A hidden event determines the
+outcome reward, and the eventual reward credits the earlier purchase decision.
+
+The two-step policies learn when to inspect. This is separate from the earlier
+one-step study, which retains its fixed downstream inspection code. The new
+experiment also varies data collection itself: one forecast learner receives
+an initial phase with a fixed 50% chance of inspecting, while another learns
+acquisition from the start. Both have the same number of root episodes; their
+observations, transitions and reward feedback differ.
+
+That gives us a concrete way to study selective feedback: a model that stops
+looking gets fewer chances to learn how useful an additional observation is.
+It still uses tiny numeric networks, honestly announced source quality and
+synthetic events. It is not yet an agent reading real documents or making
+arbitrarily long sequences of decisions.
+
+## Bringing in language and external data
 
 To bring back the text encoder, we could express verified underlying records in
 different forms: requests, tool results, short documents, and candidate-action

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "evaluations_reconstructed": 60,
+  "sampled_trajectory_batches_replayed": 18,
+  "unique_training_world_batches_regenerated": 12000,
+  "unique_training_root_worlds": 6144000,
+  "maximum_metric_difference": 0.0,
+  "selected_models": 12
+}

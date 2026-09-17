@@ -230,13 +230,38 @@ are missing from training?** Scraping another million unrelated documents would
 not answer that question for this environment.
 
 The environments run locally. They generate an observation, accept an action,
-and return its score. No hosted game or external model service is needed. The
-next useful extension would let the model pay to gather another observation
-before committing to an answer. That sequence is not implemented here yet.
+and return its score. No hosted game or external model service is needed.
 
 [The full comparison](ppo-data-results.md) includes the frozen protocol, every
 seed and test domain, saved weights, reproducible verification, and examples
-you can run. It also explains the [data needed for that next step](data-environments.md).
+you can run. The follow-up below adds a learned sequence of decisions.
+
+## Learning to pay for evidence
+
+I then built a two-step environment: stop with a report, or buy one additional
+observation before reporting. Some sources provide independent evidence;
+others explicitly copy the first reading. The eventual outcome reward credits
+the earlier purchase decision.
+
+The forecast learner initially stopped buying observations before it learned
+to use them. An initial phase with a fixed 50% chance of inspecting helped.
+Across three fresh training seeds, that data-collection change reduced lost
+reward against the exact planner by **63%** under familiar conditions, at the
+same root-episode budget. The model learned to inspect useful sources and paid
+for copies in only **0.03% of copy cases**.
+
+That did not make its reports generally reliable. On a common audit, forcing
+it to see a copy still shifted its mean probability report by **11 percentage
+points**, although the true event probability had not changed. It had learned
+a useful acquisition policy while leaving substantial errors in forecasts on
+states it rarely chose to visit. Direct-label training produced much better
+forecasts, and unfamiliar reversed sensors exposed larger failures.
+
+That is a useful distinction for a decision interface: good choices do not establish
+that every number obtainable from the model is a calibrated belief. The
+[complete follow-up](learned-inspection.md) includes all 12 models, the failed
+no-exploration condition, four test domains, exact reconstruction, and a runnable
+environment. It is still a small numeric simulation, not a language agent.
 
 ## What this tells us about Jev—and what remains unknown
 

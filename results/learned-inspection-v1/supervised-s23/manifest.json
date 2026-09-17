@@ -1,0 +1,26 @@
+{
+  "recipe": "supervised",
+  "objective": "supervised",
+  "seed": 23,
+  "width": 64,
+  "rollouts": 4000,
+  "batch_size": 512,
+  "root_episodes": 2048000,
+  "transitions_or_labeled_states": 3071771,
+  "policy_updates": 4000,
+  "value_updates": 0,
+  "parameters": 4801,
+  "critic_parameters": 0,
+  "exploration_rollouts": 0,
+  "training_world_seed": 8100023,
+  "selected_rollout": 3600,
+  "selection_loss": 0.44559871093234316,
+  "validation_world_sha256": "4558e88f917c4e4ff2aa994587c5a5f1fb2af5f9466a531b34c2d195a354b081",
+  "seconds": 2.7167400420003105,
+  "files": {
+    "history.json": "b7f2d0335d9411ee856a4d63e50bf1bbe70f25558e4b6666e04d1224919313a0",
+    "initial.safetensors": "f0ac0bbf1fd7884c4c73cc1906c241be268c30f4d318d56f887392610cb3f4f6",
+    "model.safetensors": "1ed73878699d44c6dff9b1c1c290c5b2b0732feb22e955c1b420c2989fccd796",
+    "trace.jsonl": "f9413a71721e340457ee0cfb41d2e1b6d3fc1a9dfe3586a17c297da7b51f3d1d"
+  }
+}

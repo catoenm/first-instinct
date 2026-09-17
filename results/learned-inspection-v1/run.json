@@ -1,0 +1,20 @@
+{
+  "pilot": false,
+  "rollouts": 4000,
+  "batch_size": 512,
+  "evaluate_every": 200,
+  "threads": 1,
+  "torch": "2.14.0",
+  "exploration_fraction": 0.25,
+  "numpy": "2.5.3",
+  "python": "3.14.6",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "source_sha256": {
+    "inspection_environment.py": "cafc96a0d36c412fb2f79f4d8d77a9366b15c60b4f6cc2b63bd6ddc863f1a115",
+    "inspection_evaluate.py": "eba666b3dbda87e0dbaa12e47b584769c8e9e7e8af812e8f350377177eee1aba",
+    "inspection_train.py": "600f6c5e212a6fd60a12952ed10ce2e329ba285a237299098d0f9ed7378cda3c",
+    "protocol.md": "4414f3a1db54915350f9048602a97a6d527aa7c8077df6033db64600699b0c8e",
+    "requirements-calibration.txt": "a507960a4ebafafc58ec8d0883a3a35e9d618da0a95c49513ee5744869f80b27",
+    "test_inspection.py": "b05527cb3ec77761746f29d33c956d4953598b6b82e0fa55bd6e01f4536780db"
+  }
+}

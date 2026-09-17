@@ -1,0 +1,467 @@
+{
+  "development_only": true,
+  "used_to_design_experiment": true,
+  "configuration": {
+    "pilot": true,
+    "rollouts": 4000,
+    "batch_size": 512,
+    "evaluate_every": 200,
+    "threads": 1,
+    "torch": "2.14.0",
+    "exploration_fraction": 0.25,
+    "numpy": "2.5.3",
+    "python": "3.14.6",
+    "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "source_sha256": {
+      "inspection_environment.py": "cafc96a0d36c412fb2f79f4d8d77a9366b15c60b4f6cc2b63bd6ddc863f1a115",
+      "inspection_evaluate.py": "ab3e6f05daf771bb73770920d4317b0f7bc0eafaf5ac54e46b3796bffcb8f297",
+      "inspection_train.py": "91bfa6862bd888412cfefbf7eeb758c61dfa0223059f43ea2311972ec4a0bd30",
+      "protocol.md": "28f3dc5576fe1674b8dfc841b52eb0538f790eafed1d46c82671a52e9ad8bfa1",
+      "requirements-calibration.txt": "a507960a4ebafafc58ec8d0883a3a35e9d618da0a95c49513ee5744869f80b27",
+      "test_inspection.py": "ba0ee0742d798a50530c7d814bd5b96ff727b3ae4cb7991a50d6f911040c58b3"
+    }
+  },
+  "models": [
+    {
+      "recipe": "supervised",
+      "seed": 101,
+      "width": 64,
+      "rollouts": 4000,
+      "batch_size": 512,
+      "root_episodes": 2048000,
+      "transitions_or_labeled_states": 3071653,
+      "policy_updates": 4000,
+      "value_updates": 0,
+      "parameters": 4801,
+      "critic_parameters": 0,
+      "exploration_rollouts": 0,
+      "training_world_seed": 8100101,
+      "selected_rollout": 4000,
+      "selection_loss": 0.4457911002063594,
+      "validation_world_sha256": "4558e88f917c4e4ff2aa994587c5a5f1fb2af5f9466a531b34c2d195a354b081",
+      "seconds": 2.7516273750006803,
+      "files": {
+        "history.json": "fc7ff60d74f96daab463f0a77f521deb62e11d87548ef668a6e52a5e5992fc60",
+        "initial.safetensors": "0bb7d0b38b59e0fd595009e7c0f2808944b02b0e760d5019b775c8e396be8d3c",
+        "model.safetensors": "5411df0a63675483d9509702548ba01d88ab463109849ecba0b95a57b903ba38",
+        "trace.jsonl": "f5f1acb464158d193889355763797fdafd64de79ca3ac0fe7078e35ab0e711e8"
+      }
+    },
+    {
+      "recipe": "accuracy",
+      "seed": 101,
+      "width": 64,
+      "rollouts": 4000,
+      "batch_size": 512,
+      "root_episodes": 2048000,
+      "transitions_or_labeled_states": 2778702,
+      "policy_updates": 16000,
+      "value_updates": 16000,
+      "parameters": 4931,
+      "critic_parameters": 4801,
+      "exploration_rollouts": 1000,
+      "training_world_seed": 8100101,
+      "selected_rollout": 4000,
+      "selection_loss": 0.2043319029167479,
+      "validation_world_sha256": "4558e88f917c4e4ff2aa994587c5a5f1fb2af5f9466a531b34c2d195a354b081",
+      "seconds": 25.42589266700088,
+      "files": {
+        "critic.safetensors": "1f098d7515a35ecdd00c2a9db08b753736eadbbdad04b05d75c45bb49693abe4",
+        "history.json": "f32a5b3579668cfb7ac3e3293059f87c80d5e7f5316ab0eca9fc962c2a71529f",
+        "initial.safetensors": "58e891dbd3788c4b3f1c90dc65859725ab157c2ecc6a8c46f685311442e289af",
+        "initial_critic.safetensors": "b4f164c1d046e107d7f342d867356acaa7913126edd87ccc00f74900d069fad5",
+        "model.safetensors": "4b76734797a752105eb1a38f89e16d18088b64b87e791a984bcf657aaa72372c",
+        "rollout-1.npz": "f76a4122639b551a0faf669e9303920f454cf3b445f2084701b4bec0a90a6941",
+        "rollout-4000.npz": "da19883e58ae738978e719c2cb249d573ca4806c0acccbeb23415fee49fb6256",
+        "trace.jsonl": "a062e052caad758e0299d080c901f87d11c47ee2883e426c899b3aaf5bd7e4ca"
+      }
+    },
+    {
+      "recipe": "forecast",
+      "seed": 101,
+      "width": 64,
+      "rollouts": 4000,
+      "batch_size": 512,
+      "root_episodes": 2048000,
+      "transitions_or_labeled_states": 2640403,
+      "policy_updates": 16000,
+      "value_updates": 16000,
+      "parameters": 6166,
+      "critic_parameters": 4801,
+      "exploration_rollouts": 1000,
+      "training_world_seed": 8100101,
+      "selected_rollout": 3600,
+      "selection_loss": 0.15689339057347307,
+      "validation_world_sha256": "4558e88f917c4e4ff2aa994587c5a5f1fb2af5f9466a531b34c2d195a354b081",
+      "seconds": 29.72903404200042,
+      "files": {
+        "critic.safetensors": "71431d5496bdb17af74753ffa9e8bb6d7e5f17b81eb53d483f929dfaf120012a",
+        "history.json": "7e1e149b756b1f6dedf9991644adbf94fea1a9841ed115402847b23df499b7a1",
+        "initial.safetensors": "be675d7ad34c332027948a5b01d751531f91e571f4c41204c984eb4924e949ec",
+        "initial_critic.safetensors": "b4f164c1d046e107d7f342d867356acaa7913126edd87ccc00f74900d069fad5",
+        "model.safetensors": "b31a3f28da23b48220ac9d953ce0d680454eaccc983242a3316dfca8bd2a5ee1",
+        "rollout-1.npz": "3d9a8649a04209afab4c7f8e38fab4b1a907b2e547d3f1c949a57a91f3d09013",
+        "rollout-4000.npz": "42aa8cdd33c0fa4d70ecf5be84c686de6717a8db42c5a5b77ec24355c0c7aaf5",
+        "trace.jsonl": "847f9973f6bc3c1d9893252a459d5ad05daf36759f1280f67c4006734e51123c"
+      }
+    }
+  ],
+  "results": [
+    {
+      "model": "supervised-s101",
+      "recipe": "supervised",
+      "objective": "accuracy",
+      "seed": 101,
+      "domain": "in_distribution",
+      "world_seed": 8250101,
+      "world_sha256": "4694f35a212a250bd62aab1697bc2137dc12baac4f60dc5d37b24d1abb3161d7",
+      "net_return": 0.7960352056745514,
+      "oracle_return": 0.7980274471243242,
+      "oracle_regret": 0.001992241449772774,
+      "minimum_example_regret": -5.551115123125783e-17,
+      "inspection_rate": 0.28515625,
+      "oracle_inspection_rate": 0.28955078125,
+      "duplicate_inspection_rate": 0.0,
+      "independent_inspection_rate": 0.38008460787504067,
+      "inspection_cost": 0.014663531878426284,
+      "terminal_brier": 0.13753316154983194,
+      "terminal_probability_rmse": 0.029162869930543095,
+      "audit_brier": 0.14713372837059524,
+      "audit_probability_rmse": 0.029886422212460392,
+      "duplicate_probability_change": 0.014416939299462594,
+      "sampled_report_variance": 0.0,
+      "never_inspect_same_report_head_return": 0.7570862262880058,
+      "always_inspect_same_report_head_return": 0.754633910228246,
+      "oracle_never_inspect_return": 0.7583497074946894,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.14082451575248553,
+          "forecast": 0.06445683002301389,
+          "event_probability": 0.050838796183766445
+        },
+        {
+          "bin": 1,
+          "mass": 0.14253546562716818,
+          "forecast": 0.14451692417864498,
+          "event_probability": 0.13204813001291005
+        },
+        {
+          "bin": 2,
+          "mass": 0.09302945789666302,
+          "forecast": 0.24763535495251257,
+          "event_probability": 0.22900641457404405
+        },
+        {
+          "bin": 3,
+          "mass": 0.06061500883296988,
+          "forecast": 0.34742909403612454,
+          "event_probability": 0.32120265211373417
+        },
+        {
+          "bin": 4,
+          "mass": 0.03990554779350558,
+          "forecast": 0.44762309366879005,
+          "event_probability": 0.41375253514507526
+        },
+        {
+          "bin": 5,
+          "mass": 0.04534673103165048,
+          "forecast": 0.5546066103119538,
+          "event_probability": 0.5269566598160732
+        },
+        {
+          "bin": 6,
+          "mass": 0.06841843304634615,
+          "forecast": 0.6521264751556382,
+          "event_probability": 0.6323597080373727
+        },
+        {
+          "bin": 7,
+          "mass": 0.09336198450849466,
+          "forecast": 0.7531093835265431,
+          "event_probability": 0.7357480030687756
+        },
+        {
+          "bin": 8,
+          "mass": 0.1494947836221747,
+          "forecast": 0.8542900242596988,
+          "event_probability": 0.8398059481458972
+        },
+        {
+          "bin": 9,
+          "mass": 0.16646807188854185,
+          "forecast": 0.9365529533631788,
+          "event_probability": 0.9350524203687988
+        }
+      ]
+    },
+    {
+      "model": "supervised-s101",
+      "recipe": "supervised",
+      "objective": "forecast",
+      "seed": 101,
+      "domain": "in_distribution",
+      "world_seed": 8250101,
+      "world_sha256": "4694f35a212a250bd62aab1697bc2137dc12baac4f60dc5d37b24d1abb3161d7",
+      "net_return": 0.8494709659075921,
+      "oracle_return": 0.8506114352828795,
+      "oracle_regret": 0.0011404693752873937,
+      "minimum_example_regret": -1.1102230246251565e-16,
+      "inspection_rate": 0.2506103515625,
+      "oracle_inspection_rate": 0.2652587890625,
+      "duplicate_inspection_rate": 0.0,
+      "independent_inspection_rate": 0.3340383989586723,
+      "inspection_cost": 0.010506691624414088,
+      "terminal_brier": 0.1398193894690905,
+      "terminal_probability_rmse": 0.029341098061906063,
+      "audit_brier": 0.14713372837059524,
+      "audit_probability_rmse": 0.029886422212460392,
+      "duplicate_probability_change": 0.014416939299462594,
+      "sampled_report_variance": 0.0,
+      "never_inspect_same_report_head_return": 0.8344138368776054,
+      "always_inspect_same_report_head_return": 0.8098876329358486,
+      "oracle_never_inspect_return": 0.8351539988966125,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.14068942687274022,
+          "forecast": 0.06294247281386549,
+          "event_probability": 0.04942157224013801
+        },
+        {
+          "bin": 1,
+          "mass": 0.13411297941424358,
+          "forecast": 0.1448124678409197,
+          "event_probability": 0.1313854736163172
+        },
+        {
+          "bin": 2,
+          "mass": 0.0847538022299796,
+          "forecast": 0.24792103584241076,
+          "event_probability": 0.22746170895541312
+        },
+        {
+          "bin": 3,
+          "mass": 0.06031451630270461,
+          "forecast": 0.3482150944540277,
+          "event_probability": 0.32167633431934173
+        },
+        {
+          "bin": 4,
+          "mass": 0.05596762245589007,
+          "forecast": 0.45122896251086086,
+          "event_probability": 0.41958803118044324
+        },
+        {
+          "bin": 5,
+          "mass": 0.06208144942769163,
+          "forecast": 0.551264238182215,
+          "event_probability": 0.5211517152318685
+        },
+        {
+          "bin": 6,
+          "mass": 0.06760607572375166,
+          "forecast": 0.6509476064722888,
+          "event_probability": 0.6274610366656416
+        },
+        {
+          "bin": 7,
+          "mass": 0.08568916011051914,
+          "forecast": 0.7530430193182,
+          "event_probability": 0.7343563778833077
+        },
+        {
+          "bin": 8,
+          "mass": 0.13908472089546567,
+          "forecast": 0.8543282668182802,
+          "event_probability": 0.8403340533549536
+        },
+        {
+          "bin": 9,
+          "mass": 0.16970024656701385,
+          "forecast": 0.9382748796217169,
+          "event_probability": 0.9369796747892951
+        }
+      ]
+    },
+    {
+      "model": "accuracy-s101",
+      "recipe": "accuracy",
+      "objective": "accuracy",
+      "seed": 101,
+      "domain": "in_distribution",
+      "world_seed": 8250101,
+      "world_sha256": "4694f35a212a250bd62aab1697bc2137dc12baac4f60dc5d37b24d1abb3161d7",
+      "net_return": 0.7931144507950668,
+      "oracle_return": 0.7980274471243242,
+      "oracle_regret": 0.004912996329257328,
+      "minimum_example_regret": 1.5484127591225416e-08,
+      "inspection_rate": 0.2969587720380312,
+      "oracle_inspection_rate": 0.28955078125,
+      "duplicate_inspection_rate": 0.003522779716749512,
+      "independent_inspection_rate": 0.394643451551429,
+      "inspection_cost": 0.015984564201788933,
+      "terminal_brier": 0.18686451358276512,
+      "terminal_probability_rmse": 0.22639808629771602,
+      "audit_brier": 0.21947739437106573,
+      "audit_probability_rmse": 0.270623103657341,
+      "duplicate_probability_change": 0.13727810486027076,
+      "sampled_report_variance": 0.004036471420379134,
+      "never_inspect_same_report_head_return": 0.7485357078000134,
+      "always_inspect_same_report_head_return": 0.7294142180688473,
+      "oracle_never_inspect_return": 0.7583497074946894,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.48408494693510706,
+          "forecast": 0.0005781454973444063,
+          "event_probability": 0.18150220635739778
+        },
+        {
+          "bin": 1,
+          "mass": 0.002225158703612012,
+          "forecast": 0.14946253566999249,
+          "event_probability": 0.4423489791739482
+        },
+        {
+          "bin": 2,
+          "mass": 0.001554347594864619,
+          "forecast": 0.2397635224405889,
+          "event_probability": 0.4640903660598329
+        },
+        {
+          "bin": 3,
+          "mass": 0.0026305644102182788,
+          "forecast": 0.34690428907510834,
+          "event_probability": 0.4713091280681497
+        },
+        {
+          "bin": 4,
+          "mass": 0.0009671600492703738,
+          "forecast": 0.4523678586804842,
+          "event_probability": 0.4746611383058734
+        },
+        {
+          "bin": 5,
+          "mass": 0.0015325986553540233,
+          "forecast": 0.5614839828991292,
+          "event_probability": 0.4600937979948904
+        },
+        {
+          "bin": 6,
+          "mass": 0.0024648090412861165,
+          "forecast": 0.6459101839123823,
+          "event_probability": 0.4807737578032561
+        },
+        {
+          "bin": 7,
+          "mass": 0.0014993709485386156,
+          "forecast": 0.751053074241995,
+          "event_probability": 0.5066976985988445
+        },
+        {
+          "bin": 8,
+          "mass": 0.004113419181863821,
+          "forecast": 0.8511254622773312,
+          "event_probability": 0.5061450449259799
+        },
+        {
+          "bin": 9,
+          "mass": 0.49892762447988515,
+          "forecast": 0.9986547322618796,
+          "event_probability": 0.8103815916116924
+        }
+      ]
+    },
+    {
+      "model": "forecast-s101",
+      "recipe": "forecast",
+      "objective": "forecast",
+      "seed": 101,
+      "domain": "in_distribution",
+      "world_seed": 8250101,
+      "world_sha256": "4694f35a212a250bd62aab1697bc2137dc12baac4f60dc5d37b24d1abb3161d7",
+      "net_return": 0.8418109309658905,
+      "oracle_return": 0.8506114352828795,
+      "oracle_regret": 0.00880050431698896,
+      "minimum_example_regret": 2.2539408136040828e-05,
+      "inspection_rate": 0.24298082793378256,
+      "oracle_inspection_rate": 0.2652587890625,
+      "duplicate_inspection_rate": 0.0011387590502805493,
+      "independent_inspection_rate": 0.32348991887677725,
+      "inspection_cost": 0.01181572286780877,
+      "terminal_brier": 0.14495983595446454,
+      "terminal_probability_rmse": 0.08140986419131453,
+      "audit_brier": 0.16382995564587027,
+      "audit_probability_rmse": 0.13262513150959157,
+      "duplicate_probability_change": 0.12596878262995975,
+      "sampled_report_variance": 0.0014135102118361604,
+      "never_inspect_same_report_head_return": 0.8259414403042369,
+      "always_inspect_same_report_head_return": 0.7810248664717198,
+      "oracle_never_inspect_return": 0.8351539988966125,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 1,
+          "mass": 0.28124922845416245,
+          "forecast": 0.15405903391510514,
+          "event_probability": 0.09736098795154739
+        },
+        {
+          "bin": 2,
+          "mass": 0.15224333552711228,
+          "forecast": 0.25197164583477777,
+          "event_probability": 0.27680857082677135
+        },
+        {
+          "bin": 3,
+          "mass": 0.031526347575015996,
+          "forecast": 0.3464449555055925,
+          "event_probability": 0.41556204537270286
+        },
+        {
+          "bin": 4,
+          "mass": 0.042198758294030234,
+          "forecast": 0.46725697271252553,
+          "event_probability": 0.48562478881233345
+        },
+        {
+          "bin": 5,
+          "mass": 0.04079870425885331,
+          "forecast": 0.5332297094500466,
+          "event_probability": 0.5654903350306504
+        },
+        {
+          "bin": 6,
+          "mass": 0.08808563675809247,
+          "forecast": 0.6822849539175002,
+          "event_probability": 0.659513944077185
+        },
+        {
+          "bin": 7,
+          "mass": 0.06967435650159659,
+          "forecast": 0.7369348137705792,
+          "event_probability": 0.7553725428436721
+        },
+        {
+          "bin": 8,
+          "mass": 0.29422363263113666,
+          "forecast": 0.8468579181387345,
+          "event_probability": 0.8952601733325686
+        },
+        {
+          "bin": 9,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        }
+      ]
+    }
+  ]
+}

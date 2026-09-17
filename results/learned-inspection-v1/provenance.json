@@ -1,0 +1,8 @@
+{
+  "training_source_commit": "8b4b82282df37bb4f81161d5c1feec74039a5d4b",
+  "local_run_name": "inspection-final-v1",
+  "final_checkpoint_seal": "2026-09-17T17:13:20.022785+00:00",
+  "published_traces": "gzip; decompressed hashes match original model manifests",
+  "final_arrays": "Reconstruct with inspection_evaluate; original arrays retained in the local run",
+  "development": "Three single-seed pilot summaries included; not final evidence"
+}

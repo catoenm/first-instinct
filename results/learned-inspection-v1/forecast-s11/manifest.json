@@ -1,0 +1,30 @@
+{
+  "recipe": "forecast",
+  "objective": "forecast",
+  "seed": 11,
+  "width": 64,
+  "rollouts": 4000,
+  "batch_size": 512,
+  "root_episodes": 2048000,
+  "transitions_or_labeled_states": 2648970,
+  "policy_updates": 16000,
+  "value_updates": 16000,
+  "parameters": 6166,
+  "critic_parameters": 4801,
+  "exploration_rollouts": 1000,
+  "training_world_seed": 8100011,
+  "selected_rollout": 3800,
+  "selection_loss": 0.15854172610976552,
+  "validation_world_sha256": "4558e88f917c4e4ff2aa994587c5a5f1fb2af5f9466a531b34c2d195a354b081",
+  "seconds": 28.4340366250035,
+  "files": {
+    "critic.safetensors": "6575570a5581a6e5cc5157eb3ae3d7eb6091a126b345dfc2940fa18d3e6a2e10",
+    "history.json": "13e566792cc24fab9226f5c57da7816fe24b8ab7e47164be642cd23d57929ba3",
+    "initial.safetensors": "0f112e5d4df4ba0281a1ada6d2e6fa734e0e14a3bcba9d7dfd5dbcd9bcbca514",
+    "initial_critic.safetensors": "53d217c96664f150df309ef25e21fff805babc797c642962716c3b7b11fb7eda",
+    "model.safetensors": "ad9d890c754d9cb41a98a8aa5b7011e44ea7229302bd4df19b3efb33d5729d13",
+    "rollout-1.npz": "2fc55b418241c8c826e5458abfd70f436aa6bbe011c39a0ea66c5862720b999c",
+    "rollout-4000.npz": "0360c5c5807afb16b362973ea859f36916c2c9c8712424d4b29f00ad67619f79",
+    "trace.jsonl": "77d43bb0b0488848cc038822982d3b780fb9b053136d0d2dda7acebf1b534a7e"
+  }
+}

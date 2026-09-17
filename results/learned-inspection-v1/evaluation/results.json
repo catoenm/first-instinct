@@ -1,0 +1,5342 @@
+[
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.7988228921274885,
+    "oracle_return": 0.7995540270015637,
+    "oracle_regret": 0.0007311348740752833,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.29241943359375,
+    "oracle_inspection_rate": 0.291259765625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.3862775135047972,
+    "inspection_cost": 0.015647483927367034,
+    "terminal_brier": 0.13616443517479915,
+    "terminal_probability_rmse": 0.0254382178827057,
+    "audit_brier": 0.146036638716406,
+    "audit_probability_rmse": 0.0257660212230867,
+    "duplicate_probability_change": 0.017645251398910322,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7596464397507818,
+    "always_inspect_same_report_head_return": 0.7571034090597502,
+    "oracle_never_inspect_return": 0.759918815847991,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.161243482163523,
+        "forecast": 0.06516701435333522,
+        "event_probability": 0.06217776799710343
+      },
+      {
+        "bin": 1,
+        "mass": 0.153082702014699,
+        "forecast": 0.1432482872054721,
+        "event_probability": 0.15268201995453765
+      },
+      {
+        "bin": 2,
+        "mass": 0.0910641682663848,
+        "forecast": 0.2463604202599674,
+        "event_probability": 0.2509086691095481
+      },
+      {
+        "bin": 3,
+        "mass": 0.060155522405703564,
+        "forecast": 0.34537936434860245,
+        "event_probability": 0.34608342835563854
+      },
+      {
+        "bin": 4,
+        "mass": 0.03537527793454384,
+        "forecast": 0.4456730094135975,
+        "event_probability": 0.439881315457711
+      },
+      {
+        "bin": 5,
+        "mass": 0.03343927492483201,
+        "forecast": 0.5566649119275696,
+        "event_probability": 0.5495310862467685
+      },
+      {
+        "bin": 6,
+        "mass": 0.05997865676708636,
+        "forecast": 0.6525725016646083,
+        "event_probability": 0.64037911869741
+      },
+      {
+        "bin": 7,
+        "mass": 0.09025669309471004,
+        "forecast": 0.7543380954736502,
+        "event_probability": 0.7418661952651174
+      },
+      {
+        "bin": 8,
+        "mass": 0.15018388768288213,
+        "forecast": 0.8564597222251453,
+        "event_probability": 0.8467291720229501
+      },
+      {
+        "bin": 9,
+        "mass": 0.16522033474563524,
+        "forecast": 0.9376870161998131,
+        "event_probability": 0.9397634569380015
+      }
+    ]
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.850202894378377,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.0009232424651729993,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.2657470703125,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.35104410223333066,
+    "inspection_cost": 0.011559236834230546,
+    "terminal_brier": 0.13802517266338965,
+    "terminal_probability_rmse": 0.025205168215826815,
+    "audit_brier": 0.146036638716406,
+    "audit_probability_rmse": 0.0257660212230867,
+    "duplicate_probability_change": 0.017645251398910322,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8353829224441961,
+    "always_inspect_same_report_head_return": 0.8110226703496578,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.16486933742765852,
+        "forecast": 0.0630444940744345,
+        "event_probability": 0.06043398937531772
+      },
+      {
+        "bin": 1,
+        "mass": 0.14202518375310752,
+        "forecast": 0.14322295074752375,
+        "event_probability": 0.1522916083200664
+      },
+      {
+        "bin": 2,
+        "mass": 0.08310623325932491,
+        "forecast": 0.24622660786473424,
+        "event_probability": 0.2496745739416328
+      },
+      {
+        "bin": 3,
+        "mass": 0.05700420359007047,
+        "forecast": 0.3470083950946361,
+        "event_probability": 0.3462383125430433
+      },
+      {
+        "bin": 4,
+        "mass": 0.05194120714142894,
+        "forecast": 0.45004549172650116,
+        "event_probability": 0.4454682766760464
+      },
+      {
+        "bin": 5,
+        "mass": 0.05089228339260729,
+        "forecast": 0.5507362243934336,
+        "event_probability": 0.5447397793255625
+      },
+      {
+        "bin": 6,
+        "mass": 0.06024028790156512,
+        "forecast": 0.6506822759579414,
+        "event_probability": 0.6410429570191978
+      },
+      {
+        "bin": 7,
+        "mass": 0.08456169785129143,
+        "forecast": 0.7537603858620656,
+        "event_probability": 0.7425005150390637
+      },
+      {
+        "bin": 8,
+        "mass": 0.13836251412174205,
+        "forecast": 0.8565261333480573,
+        "event_probability": 0.8474098346975436
+      },
+      {
+        "bin": 9,
+        "mass": 0.16699705156120376,
+        "forecast": 0.9396242819933798,
+        "event_probability": 0.9413914059611157
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s11",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.7938215543020714,
+    "oracle_return": 0.7995540270015637,
+    "oracle_regret": 0.005732472699492451,
+    "minimum_example_regret": 3.1304041470114896e-08,
+    "inspection_rate": 0.25673602852143584,
+    "oracle_inspection_rate": 0.291259765625,
+    "duplicate_inspection_rate": 7.66539141595632e-05,
+    "independent_inspection_rate": 0.33911617609150485,
+    "inspection_cost": 0.014308434955894858,
+    "terminal_brier": 0.18594178409528736,
+    "terminal_probability_rmse": 0.22220097929251978,
+    "audit_brier": 0.21311855502629512,
+    "audit_probability_rmse": 0.26028024158502244,
+    "duplicate_probability_change": 0.14029745381366251,
+    "sampled_report_variance": 0.005928226646746428,
+    "never_inspect_same_report_head_return": 0.7538103830703683,
+    "always_inspect_same_report_head_return": 0.7360860028196535,
+    "oracle_never_inspect_return": 0.759918815847991,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.4851215241253015,
+        "forecast": 0.0014093413291837898,
+        "event_probability": 0.18120172677433405
+      },
+      {
+        "bin": 1,
+        "mass": 0.004623227669062592,
+        "forecast": 0.14343997127481423,
+        "event_probability": 0.47629492869358947
+      },
+      {
+        "bin": 2,
+        "mass": 0.0026638784096525685,
+        "forecast": 0.25111492323111695,
+        "event_probability": 0.49312455851422826
+      },
+      {
+        "bin": 3,
+        "mass": 0.0028845168763899955,
+        "forecast": 0.3507681928105122,
+        "event_probability": 0.482417636837872
+      },
+      {
+        "bin": 4,
+        "mass": 0.002088950469216083,
+        "forecast": 0.4481103052393745,
+        "event_probability": 0.5117877403433782
+      },
+      {
+        "bin": 5,
+        "mass": 0.0028483215581696954,
+        "forecast": 0.5452348744706763,
+        "event_probability": 0.49126836753592856
+      },
+      {
+        "bin": 6,
+        "mass": 0.002432032273517428,
+        "forecast": 0.6527119418497964,
+        "event_probability": 0.5205625778216062
+      },
+      {
+        "bin": 7,
+        "mass": 0.0034693711361103675,
+        "forecast": 0.7555590521302045,
+        "event_probability": 0.5281558408005891
+      },
+      {
+        "bin": 8,
+        "mass": 0.004270795810523781,
+        "forecast": 0.858786971580064,
+        "event_probability": 0.5398206587207842
+      },
+      {
+        "bin": 9,
+        "mass": 0.489597381672056,
+        "forecast": 0.9986227314967866,
+        "event_probability": 0.8131569014280292
+      }
+    ]
+  },
+  {
+    "model": "forecast-s11",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.8401883415249343,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.010937795318615755,
+    "minimum_example_regret": 3.0863232878625135e-05,
+    "inspection_rate": 0.18451532975336812,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 3.3887034300309245e-05,
+    "independent_inspection_rate": 0.2437284736269962,
+    "inspection_cost": 0.009169402276579145,
+    "terminal_brier": 0.14939129247657565,
+    "terminal_probability_rmse": 0.0898013603986222,
+    "audit_brier": 0.1650220915365186,
+    "audit_probability_rmse": 0.1401761059160267,
+    "duplicate_probability_change": 0.10485680843007472,
+    "sampled_report_variance": 0.001250963721910982,
+    "never_inspect_same_report_head_return": 0.8265514616739369,
+    "always_inspect_same_report_head_return": 0.7789829174328387,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.3848769910006722,
+        "forecast": 0.21246834013382956,
+        "event_probability": 0.14423367915844307
+      },
+      {
+        "bin": 3,
+        "mass": 0.056761021164756904,
+        "forecast": 0.33553044881982264,
+        "event_probability": 0.3405757662543798
+      },
+      {
+        "bin": 4,
+        "mass": 0.051180188009401,
+        "forecast": 0.4566718902687277,
+        "event_probability": 0.4296474455290419
+      },
+      {
+        "bin": 5,
+        "mass": 0.08382538314038987,
+        "forecast": 0.5586819877617903,
+        "event_probability": 0.5657458904545448
+      },
+      {
+        "bin": 6,
+        "mass": 0.04962379929621593,
+        "forecast": 0.6385499929232097,
+        "event_probability": 0.673937627865077
+      },
+      {
+        "bin": 7,
+        "mass": 0.04315428052289186,
+        "forecast": 0.7464151573980763,
+        "event_probability": 0.7066384603817796
+      },
+      {
+        "bin": 8,
+        "mass": 0.33057833686567223,
+        "forecast": 0.8469644451735054,
+        "event_probability": 0.8790927054127696
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s11",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.820310482836532,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.03081565400701805,
+    "minimum_example_regret": 1.60156932021982e-06,
+    "inspection_rate": 7.202147845636331e-05,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 8.968673846126509e-05,
+    "independent_inspection_rate": 6.635144700594696e-05,
+    "inspection_cost": 3.950976578092244e-06,
+    "terminal_brier": 0.17886192645587412,
+    "terminal_probability_rmse": 0.12167098321808853,
+    "audit_brier": 0.17667445084765507,
+    "audit_probability_rmse": 0.176922864494439,
+    "duplicate_probability_change": 0.03534244168226936,
+    "sampled_report_variance": 0.0008236397310158355,
+    "never_inspect_same_report_head_return": 0.8203143552237591,
+    "always_inspect_same_report_head_return": 0.763192967142863,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 1.5969822703742124e-06,
+        "forecast": 0.29999083648138447,
+        "event_probability": 0.489117019832552
+      },
+      {
+        "bin": 3,
+        "mass": 0.4398806398897376,
+        "forecast": 0.30359173988273686,
+        "event_probability": 0.21017516673248773
+      },
+      {
+        "bin": 4,
+        "mass": 0.05914295643570967,
+        "forecast": 0.4609362610440542,
+        "event_probability": 0.45491539094743294
+      },
+      {
+        "bin": 5,
+        "mass": 0.0786125424098969,
+        "forecast": 0.5435681110833596,
+        "event_probability": 0.5453816658879548
+      },
+      {
+        "bin": 6,
+        "mass": 0.05370777405470712,
+        "forecast": 0.6487266568243697,
+        "event_probability": 0.6357379765587992
+      },
+      {
+        "bin": 7,
+        "mass": 0.36865449022767843,
+        "forecast": 0.7476252330411587,
+        "event_probability": 0.8203563721583307
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.7985595509611052,
+    "oracle_return": 0.7995540270015637,
+    "oracle_regret": 0.0009944760404585178,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.30291748046875,
+    "oracle_inspection_rate": 0.291259765625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.4001451261791502,
+    "inspection_cost": 0.016466018348211264,
+    "terminal_brier": 0.13542697025727948,
+    "terminal_probability_rmse": 0.02797400535342222,
+    "audit_brier": 0.14614850519813088,
+    "audit_probability_rmse": 0.027852366710809772,
+    "duplicate_probability_change": 0.01415440877040961,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7590087093622448,
+    "always_inspect_same_report_head_return": 0.7569715715055207,
+    "oracle_never_inspect_return": 0.759918815847991,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.16186072462041237,
+        "forecast": 0.06226794399801232,
+        "event_probability": 0.05942635771442025
+      },
+      {
+        "bin": 1,
+        "mass": 0.15451201676664816,
+        "forecast": 0.14368274138071357,
+        "event_probability": 0.14979972927231855
+      },
+      {
+        "bin": 2,
+        "mass": 0.09131247720719429,
+        "forecast": 0.24591011972470184,
+        "event_probability": 0.2540947494146209
+      },
+      {
+        "bin": 3,
+        "mass": 0.06141053310720514,
+        "forecast": 0.3456200563023094,
+        "event_probability": 0.3564960751276824
+      },
+      {
+        "bin": 4,
+        "mass": 0.03550224384000685,
+        "forecast": 0.44347003301346904,
+        "event_probability": 0.4599375931589279
+      },
+      {
+        "bin": 5,
+        "mass": 0.03675301571849553,
+        "forecast": 0.5570745327601032,
+        "event_probability": 0.568838042588033
+      },
+      {
+        "bin": 6,
+        "mass": 0.05892385667539803,
+        "forecast": 0.6529600404780239,
+        "event_probability": 0.651091907223285
+      },
+      {
+        "bin": 7,
+        "mass": 0.09282383366028524,
+        "forecast": 0.7531555390991319,
+        "event_probability": 0.751459844340343
+      },
+      {
+        "bin": 8,
+        "mass": 0.14807543379367422,
+        "forecast": 0.8562763537347333,
+        "event_probability": 0.851579007630177
+      },
+      {
+        "bin": 9,
+        "mass": 0.15882586461068016,
+        "forecast": 0.9375190377650126,
+        "event_probability": 0.9412384000331206
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.8501489496209444,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.0009771872226054664,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.27410888671875,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.36208981697976295,
+    "inspection_cost": 0.012249982029587159,
+    "terminal_brier": 0.13739900840578895,
+    "terminal_probability_rmse": 0.027959549884632045,
+    "audit_brier": 0.14614850519813088,
+    "audit_probability_rmse": 0.027852366710809772,
+    "duplicate_probability_change": 0.01415440877040961,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8351595214272091,
+    "always_inspect_same_report_head_return": 0.8110363720338312,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.16542885814692276,
+        "forecast": 0.06074409584075881,
+        "event_probability": 0.05830677167850523
+      },
+      {
+        "bin": 1,
+        "mass": 0.14297089516726863,
+        "forecast": 0.14350487627689593,
+        "event_probability": 0.14958593640669518
+      },
+      {
+        "bin": 2,
+        "mass": 0.08313235532916416,
+        "forecast": 0.2454994214679202,
+        "event_probability": 0.2529736664148463
+      },
+      {
+        "bin": 3,
+        "mass": 0.059071679929176314,
+        "forecast": 0.3467422595735116,
+        "event_probability": 0.3556694621704065
+      },
+      {
+        "bin": 4,
+        "mass": 0.05234348851066256,
+        "forecast": 0.4486380151582286,
+        "event_probability": 0.4557459818395665
+      },
+      {
+        "bin": 5,
+        "mass": 0.05374827611959547,
+        "forecast": 0.5519703245891557,
+        "event_probability": 0.5570925836971625
+      },
+      {
+        "bin": 6,
+        "mass": 0.060071788894079964,
+        "forecast": 0.6510772555341741,
+        "event_probability": 0.6531118624702583
+      },
+      {
+        "bin": 7,
+        "mass": 0.08587686732175559,
+        "forecast": 0.7527861516696561,
+        "event_probability": 0.7533109014018082
+      },
+      {
+        "bin": 8,
+        "mass": 0.1362692466545235,
+        "forecast": 0.8565276323204597,
+        "event_probability": 0.8521248453187416
+      },
+      {
+        "bin": 9,
+        "mass": 0.16108654392685107,
+        "forecast": 0.9395461491905894,
+        "event_probability": 0.9429052216447027
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s23",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.795313184692273,
+    "oracle_return": 0.7995540270015637,
+    "oracle_regret": 0.00424084230929079,
+    "minimum_example_regret": 1.4784618307395192e-08,
+    "inspection_rate": 0.2798071324101812,
+    "oracle_inspection_rate": 0.291259765625,
+    "duplicate_inspection_rate": 0.003209695907241571,
+    "independent_inspection_rate": 0.3685868143192517,
+    "inspection_cost": 0.015729377006362906,
+    "terminal_brier": 0.18446103222370308,
+    "terminal_probability_rmse": 0.22215452786136428,
+    "audit_brier": 0.21585286351503397,
+    "audit_probability_rmse": 0.26548090825574727,
+    "duplicate_probability_change": 0.09311612747548256,
+    "sampled_report_variance": 0.004496406077661004,
+    "never_inspect_same_report_head_return": 0.7455473412716005,
+    "always_inspect_same_report_head_return": 0.7416634208813608,
+    "oracle_never_inspect_return": 0.759918815847991,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.490444495741334,
+        "forecast": 0.0008753475079349796,
+        "event_probability": 0.18171216481495084
+      },
+      {
+        "bin": 1,
+        "mass": 0.0029514033835593145,
+        "forecast": 0.1420911363057612,
+        "event_probability": 0.4779536664303834
+      },
+      {
+        "bin": 2,
+        "mass": 0.002554096133813257,
+        "forecast": 0.25271929207495664,
+        "event_probability": 0.48944854706098256
+      },
+      {
+        "bin": 3,
+        "mass": 0.0015928485891523116,
+        "forecast": 0.3570468215431211,
+        "event_probability": 0.49471883517185056
+      },
+      {
+        "bin": 4,
+        "mass": 0.0022778016532962898,
+        "forecast": 0.444196883576651,
+        "event_probability": 0.4953650203510992
+      },
+      {
+        "bin": 5,
+        "mass": 0.0015268783630304197,
+        "forecast": 0.5508894045214313,
+        "event_probability": 0.5058320708208548
+      },
+      {
+        "bin": 6,
+        "mass": 0.0016437477670542145,
+        "forecast": 0.652595101104176,
+        "event_probability": 0.5023686543357654
+      },
+      {
+        "bin": 7,
+        "mass": 0.0029238610619599396,
+        "forecast": 0.7547377234609053,
+        "event_probability": 0.5140599071256755
+      },
+      {
+        "bin": 8,
+        "mass": 0.003807975582441007,
+        "forecast": 0.8534674925786102,
+        "event_probability": 0.5124803933191185
+      },
+      {
+        "bin": 9,
+        "mass": 0.4902768917243593,
+        "forecast": 0.9987863660427142,
+        "event_probability": 0.8159762448264566
+      }
+    ]
+  },
+  {
+    "model": "forecast-s23",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.8411192606987147,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.010006876144835272,
+    "minimum_example_regret": 9.681721412080346e-06,
+    "inspection_rate": 0.21171485528581444,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 0.0003613072519798164,
+    "independent_inspection_rate": 0.2795531584965454,
+    "inspection_cost": 0.010386582138844436,
+    "terminal_brier": 0.146913816759978,
+    "terminal_probability_rmse": 0.08546887789357303,
+    "audit_brier": 0.16483413606129915,
+    "audit_probability_rmse": 0.1395040687383765,
+    "duplicate_probability_change": 0.12282749626825755,
+    "sampled_report_variance": 0.0015803404024628508,
+    "never_inspect_same_report_head_return": 0.8279788432084086,
+    "always_inspect_same_report_head_return": 0.7778767097899608,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.3750356511022015,
+        "forecast": 0.20543317617387785,
+        "event_probability": 0.1396491779387668
+      },
+      {
+        "bin": 3,
+        "mass": 0.06292221576273527,
+        "forecast": 0.3688944271069186,
+        "event_probability": 0.3287265351660555
+      },
+      {
+        "bin": 4,
+        "mass": 0.06750834114169241,
+        "forecast": 0.4324235635389606,
+        "event_probability": 0.4321345808589241
+      },
+      {
+        "bin": 5,
+        "mass": 0.06491343175001636,
+        "forecast": 0.5472374789562274,
+        "event_probability": 0.5543626215750065
+      },
+      {
+        "bin": 6,
+        "mass": 0.05457994926395349,
+        "forecast": 0.6663976729941531,
+        "event_probability": 0.6754222262378397
+      },
+      {
+        "bin": 7,
+        "mass": 0.09404245037972243,
+        "forecast": 0.7660314662913443,
+        "event_probability": 0.7484068838221722
+      },
+      {
+        "bin": 8,
+        "mass": 0.2809979605996786,
+        "forecast": 0.8795858192556002,
+        "event_probability": 0.9015772226579847
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s23",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.8185462676755786,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.032579869167971356,
+    "minimum_example_regret": 3.945041864933385e-06,
+    "inspection_rate": 8.904861249549041e-05,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 0.00023576709706208475,
+    "independent_inspection_rate": 4.1956272976050594e-05,
+    "inspection_cost": 3.412917003307844e-06,
+    "terminal_brier": 0.18064161086736902,
+    "terminal_probability_rmse": 0.1287725492791901,
+    "audit_brier": 0.18066455376127738,
+    "audit_probability_rmse": 0.18786112661894674,
+    "duplicate_probability_change": 0.056736673700303414,
+    "sampled_report_variance": 0.0008087085400490664,
+    "never_inspect_same_report_head_return": 0.8185498221705619,
+    "always_inspect_same_report_head_return": 0.7559724649288991,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 3,
+        "mass": 0.43524109328738114,
+        "forecast": 0.3519961582960436,
+        "event_probability": 0.20836191777866492
+      },
+      {
+        "bin": 4,
+        "mass": 0.06744356669422077,
+        "forecast": 0.4628606946281615,
+        "event_probability": 0.46019195851694894
+      },
+      {
+        "bin": 5,
+        "mass": 0.07757563195814214,
+        "forecast": 0.544884146360266,
+        "event_probability": 0.5510516953076203
+      },
+      {
+        "bin": 6,
+        "mass": 0.1463012558064957,
+        "forecast": 0.6512000480209238,
+        "event_probability": 0.6787213382224269
+      },
+      {
+        "bin": 7,
+        "mass": 0.04815662755968194,
+        "forecast": 0.7427729363417871,
+        "event_probability": 0.7515809403347321
+      },
+      {
+        "bin": 8,
+        "mass": 0.22528182469407826,
+        "forecast": 0.846797929336072,
+        "event_probability": 0.8826258109915064
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.7986161923906747,
+    "oracle_return": 0.7995540270015637,
+    "oracle_regret": 0.000937834610889111,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.30224609375,
+    "oracle_inspection_rate": 0.291259765625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.3992582439732323,
+    "inspection_cost": 0.01623032510413225,
+    "terminal_brier": 0.13567753883721229,
+    "terminal_probability_rmse": 0.0258946080128576,
+    "audit_brier": 0.14604696236589645,
+    "audit_probability_rmse": 0.02596558297360198,
+    "duplicate_probability_change": 0.015564729574449217,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7593370302022875,
+    "always_inspect_same_report_head_return": 0.7572281259322293,
+    "oracle_never_inspect_return": 0.759918815847991,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.13536299748778216,
+        "forecast": 0.06779260304766362,
+        "event_probability": 0.0533030923878285
+      },
+      {
+        "bin": 1,
+        "mass": 0.16256456035440514,
+        "forecast": 0.14381379332984165,
+        "event_probability": 0.135270261003547
+      },
+      {
+        "bin": 2,
+        "mass": 0.09711384570749142,
+        "forecast": 0.24651870372292523,
+        "event_probability": 0.23628855695063966
+      },
+      {
+        "bin": 3,
+        "mass": 0.0632853321006398,
+        "forecast": 0.3461494389308913,
+        "event_probability": 0.33718472521492293
+      },
+      {
+        "bin": 4,
+        "mass": 0.037551385747194015,
+        "forecast": 0.44489563250675895,
+        "event_probability": 0.437441577348634
+      },
+      {
+        "bin": 5,
+        "mass": 0.03678991656405161,
+        "forecast": 0.5550987281956764,
+        "event_probability": 0.547997654590961
+      },
+      {
+        "bin": 6,
+        "mass": 0.06114020052521395,
+        "forecast": 0.653215410618889,
+        "event_probability": 0.6396642772066431
+      },
+      {
+        "bin": 7,
+        "mass": 0.0967924403835219,
+        "forecast": 0.7542404902056009,
+        "event_probability": 0.7460055182240227
+      },
+      {
+        "bin": 8,
+        "mass": 0.15516586009861144,
+        "forecast": 0.8558544272990931,
+        "event_probability": 0.8517004729436002
+      },
+      {
+        "bin": 9,
+        "mass": 0.15423346103108856,
+        "forecast": 0.9344864119733742,
+        "event_probability": 0.9417772637644073
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.8501764247890546,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.0009497120544952921,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.27142333984375,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.3585422881560913,
+    "inspection_cost": 0.011644672420985103,
+    "terminal_brier": 0.13796849844751724,
+    "terminal_probability_rmse": 0.025677388535601687,
+    "audit_brier": 0.14604696236589645,
+    "audit_probability_rmse": 0.02596558297360198,
+    "duplicate_probability_change": 0.015564729574449217,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8353300394445599,
+    "always_inspect_same_report_head_return": 0.8110540032777815,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.1393183469279153,
+        "forecast": 0.06579328617277444,
+        "event_probability": 0.05179633653486911
+      },
+      {
+        "bin": 1,
+        "mass": 0.14946749442513943,
+        "forecast": 0.14363167184608314,
+        "event_probability": 0.13484659321608466
+      },
+      {
+        "bin": 2,
+        "mass": 0.08843617669455883,
+        "forecast": 0.24629571622707677,
+        "event_probability": 0.23522009412356437
+      },
+      {
+        "bin": 3,
+        "mass": 0.06190400664333792,
+        "forecast": 0.34745106709653595,
+        "event_probability": 0.33453637224284793
+      },
+      {
+        "bin": 4,
+        "mass": 0.05476262667372478,
+        "forecast": 0.4495438132570049,
+        "event_probability": 0.4377523521617428
+      },
+      {
+        "bin": 5,
+        "mass": 0.05539324633907661,
+        "forecast": 0.5507347682170299,
+        "event_probability": 0.541042613236727
+      },
+      {
+        "bin": 6,
+        "mass": 0.06290132019817314,
+        "forecast": 0.6511477893692267,
+        "event_probability": 0.6417737867668991
+      },
+      {
+        "bin": 7,
+        "mass": 0.08930512354676741,
+        "forecast": 0.7539098335123229,
+        "event_probability": 0.7485322355281075
+      },
+      {
+        "bin": 8,
+        "mass": 0.14156317073416974,
+        "forecast": 0.8560279519630546,
+        "event_probability": 0.8528645999718281
+      },
+      {
+        "bin": 9,
+        "mass": 0.15694848781713683,
+        "forecast": 0.9365105934258062,
+        "event_probability": 0.9431650961219638
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s37",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.7963035274104332,
+    "oracle_return": 0.7995540270015637,
+    "oracle_regret": 0.003250499591130566,
+    "minimum_example_regret": 1.9150693086888992e-08,
+    "inspection_rate": 0.3019832097943118,
+    "oracle_inspection_rate": 0.291259765625,
+    "duplicate_inspection_rate": 0.0015796391744569867,
+    "independent_inspection_rate": 0.39840396401809974,
+    "inspection_cost": 0.017229114469820662,
+    "terminal_brier": 0.18287404541583782,
+    "terminal_probability_rmse": 0.2196419848129093,
+    "audit_brier": 0.21544598997894265,
+    "audit_probability_rmse": 0.26471350383424946,
+    "duplicate_probability_change": 0.12235387204631806,
+    "sampled_report_variance": 0.0035933127039082706,
+    "never_inspect_same_report_head_return": 0.7533156768251197,
+    "always_inspect_same_report_head_return": 0.7340787975712105,
+    "oracle_never_inspect_return": 0.759918815847991,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.4939241402208893,
+        "forecast": 0.0008386829973926334,
+        "event_probability": 0.18141363191663615
+      },
+      {
+        "bin": 1,
+        "mass": 0.0025787557916173588,
+        "forecast": 0.14567947293868866,
+        "event_probability": 0.4851448615914204
+      },
+      {
+        "bin": 2,
+        "mass": 0.0024916906043380245,
+        "forecast": 0.23629533684732928,
+        "event_probability": 0.4929643315318797
+      },
+      {
+        "bin": 3,
+        "mass": 0.001477455129950238,
+        "forecast": 0.3499833799985945,
+        "event_probability": 0.49984876322886596
+      },
+      {
+        "bin": 4,
+        "mass": 0.0011729636391972086,
+        "forecast": 0.4582033127088946,
+        "event_probability": 0.49072482214860963
+      },
+      {
+        "bin": 5,
+        "mass": 0.0013207553550604746,
+        "forecast": 0.5492871284896306,
+        "event_probability": 0.5005749076549169
+      },
+      {
+        "bin": 6,
+        "mass": 0.0016354616984465555,
+        "forecast": 0.6471847532214203,
+        "event_probability": 0.5063634315384251
+      },
+      {
+        "bin": 7,
+        "mass": 0.002095768549734703,
+        "forecast": 0.7556828069881121,
+        "event_probability": 0.508981730348829
+      },
+      {
+        "bin": 8,
+        "mass": 0.00270981417955609,
+        "forecast": 0.8608181601153645,
+        "event_probability": 0.5211928026353783
+      },
+      {
+        "bin": 9,
+        "mass": 0.49059319483121,
+        "forecast": 0.9991362560336499,
+        "event_probability": 0.8182693982148966
+      }
+    ]
+  },
+  {
+    "model": "forecast-s37",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.8400372743737764,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.011088862469773558,
+    "minimum_example_regret": 9.802043117429493e-06,
+    "inspection_rate": 0.18337904703160823,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 0.0004727342943179433,
+    "independent_inspection_rate": 0.24208662028059258,
+    "inspection_cost": 0.008864862789336653,
+    "terminal_brier": 0.1499142882623009,
+    "terminal_probability_rmse": 0.09221047438019174,
+    "audit_brier": 0.16625662268813185,
+    "audit_probability_rmse": 0.1445125317105559,
+    "duplicate_probability_change": 0.10231565712340301,
+    "sampled_report_variance": 0.0011835745745860068,
+    "never_inspect_same_report_head_return": 0.8282121138987284,
+    "always_inspect_same_report_head_return": 0.7752241963683496,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.3792720000418113,
+        "forecast": 0.2126915647673622,
+        "event_probability": 0.138666992819174
+      },
+      {
+        "bin": 3,
+        "mass": 0.06364253582179623,
+        "forecast": 0.33467087657931055,
+        "event_probability": 0.3346913600890997
+      },
+      {
+        "bin": 4,
+        "mass": 0.05632095263976339,
+        "forecast": 0.4648195257667548,
+        "event_probability": 0.440110748546813
+      },
+      {
+        "bin": 5,
+        "mass": 0.05788834295521874,
+        "forecast": 0.5368410200473126,
+        "event_probability": 0.548659515617342
+      },
+      {
+        "bin": 6,
+        "mass": 0.09259175494867955,
+        "forecast": 0.6481265636755734,
+        "event_probability": 0.680801031678893
+      },
+      {
+        "bin": 7,
+        "mass": 0.35028441359273077,
+        "forecast": 0.7945944026608815,
+        "event_probability": 0.8716507062929959
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s37",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "in_distribution",
+    "world_seed": 8300001,
+    "world_sha256": "5adb4037ca6eb448ff6b01865aa7014a8d39a0204a248275358f91ac097b033f",
+    "net_return": 0.8271012050457548,
+    "oracle_return": 0.85112613684355,
+    "oracle_regret": 0.024024931797795163,
+    "minimum_example_regret": 3.3502204001834013e-06,
+    "inspection_rate": 4.2056044609826634e-05,
+    "oracle_inspection_rate": 0.27191162109375,
+    "duplicate_inspection_rate": 5.051867391711903e-05,
+    "independent_inspection_rate": 3.9339788278912255e-05,
+    "inspection_cost": 2.2303446833973923e-06,
+    "terminal_brier": 0.1716774215951284,
+    "terminal_probability_rmse": 0.08728179960457574,
+    "audit_brier": 0.1762395668926059,
+    "audit_probability_rmse": 0.17568954444094967,
+    "duplicate_probability_change": 0.08736846781471691,
+    "sampled_report_variance": 0.0012191430144333959,
+    "never_inspect_same_report_head_return": 0.8271034376714771,
+    "always_inspect_same_report_head_return": 0.7556058619976205,
+    "oracle_never_inspect_return": 0.8357347012919542,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 2.7403779858097972e-05,
+        "forecast": 0.19998516302106326,
+        "event_probability": 0.11307228964497049
+      },
+      {
+        "bin": 2,
+        "mass": 0.32596222505968037,
+        "forecast": 0.20676860514714696,
+        "event_probability": 0.15598906400186624
+      },
+      {
+        "bin": 3,
+        "mass": 0.09301697902311604,
+        "forecast": 0.35571831164346907,
+        "event_probability": 0.34620071320389423
+      },
+      {
+        "bin": 4,
+        "mass": 0.06689444232965575,
+        "forecast": 0.45258227327067757,
+        "event_probability": 0.4429829628910744
+      },
+      {
+        "bin": 5,
+        "mass": 0.12390122680371266,
+        "forecast": 0.561280256817334,
+        "event_probability": 0.5577227828310064
+      },
+      {
+        "bin": 6,
+        "mass": 0.06079090348709762,
+        "forecast": 0.634676902894337,
+        "event_probability": 0.6619698837510506
+      },
+      {
+        "bin": 7,
+        "mass": 0.3294068195168795,
+        "forecast": 0.7474351123809799,
+        "event_probability": 0.8402200432935064
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.7602472990965196,
+    "oracle_return": 0.7686996382948322,
+    "oracle_regret": 0.008452339198312675,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.07208251953125,
+    "oracle_inspection_rate": 0.10308837890625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.09632167033684039,
+    "inspection_cost": 0.014205800653144252,
+    "terminal_brier": 0.15825103288272352,
+    "terminal_probability_rmse": 0.06676263858266553,
+    "audit_brier": 0.15239088170593568,
+    "audit_probability_rmse": 0.0809387456778214,
+    "duplicate_probability_change": 0.04444828333855832,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7518445148649435,
+    "always_inspect_same_report_head_return": 0.5791679159100547,
+    "oracle_never_inspect_return": 0.7594340528221422,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.04269792627131778,
+        "forecast": 0.07864049748499632,
+        "event_probability": 0.05083612802176911
+      },
+      {
+        "bin": 1,
+        "mass": 0.13716748054586567,
+        "forecast": 0.15192324200492738,
+        "event_probability": 0.10532720441028981
+      },
+      {
+        "bin": 2,
+        "mass": 0.12858518480846673,
+        "forecast": 0.24666993445402194,
+        "event_probability": 0.19902034590583442
+      },
+      {
+        "bin": 3,
+        "mass": 0.0948004918850222,
+        "forecast": 0.34683826135232515,
+        "event_probability": 0.30892395028847836
+      },
+      {
+        "bin": 4,
+        "mass": 0.06988525390625,
+        "forecast": 0.44690072838395967,
+        "event_probability": 0.40914769746838797
+      },
+      {
+        "bin": 5,
+        "mass": 0.0723876953125,
+        "forecast": 0.5533696123058036,
+        "event_probability": 0.5244880754989026
+      },
+      {
+        "bin": 6,
+        "mass": 0.09326171875,
+        "forecast": 0.6530473235780032,
+        "event_probability": 0.6304718381234747
+      },
+      {
+        "bin": 7,
+        "mass": 0.12514241960938302,
+        "forecast": 0.7520962446788294,
+        "event_probability": 0.7471467099718297
+      },
+      {
+        "bin": 8,
+        "mass": 0.16246093990841723,
+        "forecast": 0.8520450225585829,
+        "event_probability": 0.870522406914445
+      },
+      {
+        "bin": 9,
+        "mass": 0.07361088900277737,
+        "forecast": 0.9244754505105676,
+        "event_probability": 0.9470667061696936
+      }
+    ]
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.8313430187071353,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.0045284828532558535,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.00079345703125,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.0010602724084495556,
+    "inspection_cost": 0.00012437968416634249,
+    "terminal_brier": 0.16832082227951356,
+    "terminal_probability_rmse": 0.06552025860932276,
+    "audit_brier": 0.15239088170593568,
+    "audit_probability_rmse": 0.0809387456778214,
+    "duplicate_probability_change": 0.04444828333855832,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8313033421990281,
+    "always_inspect_same_report_head_return": 0.6384120748882907,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0383078761558219,
+        "forecast": 0.0784762070487787,
+        "event_probability": 0.05303746737425447
+      },
+      {
+        "bin": 1,
+        "mass": 0.12174591436382937,
+        "forecast": 0.1517539944257442,
+        "event_probability": 0.1088946512162776
+      },
+      {
+        "bin": 2,
+        "mass": 0.1160888671875,
+        "forecast": 0.2471072119900606,
+        "event_probability": 0.2060656519302907
+      },
+      {
+        "bin": 3,
+        "mass": 0.1015625,
+        "forecast": 0.34888080434085655,
+        "event_probability": 0.3143266454819775
+      },
+      {
+        "bin": 4,
+        "mass": 0.09564208984375,
+        "forecast": 0.4488078840766352,
+        "event_probability": 0.4202503507601045
+      },
+      {
+        "bin": 5,
+        "mass": 0.09686279296875,
+        "forecast": 0.5506097266864837,
+        "event_probability": 0.5267868029724347
+      },
+      {
+        "bin": 6,
+        "mass": 0.102783203125,
+        "forecast": 0.6513258264424399,
+        "event_probability": 0.6318749814607189
+      },
+      {
+        "bin": 7,
+        "mass": 0.123046875,
+        "forecast": 0.7513961289669313,
+        "event_probability": 0.7472757737853448
+      },
+      {
+        "bin": 8,
+        "mass": 0.14275307402812148,
+        "forecast": 0.8512825156086908,
+        "event_probability": 0.8709034108739213
+      },
+      {
+        "bin": 9,
+        "mass": 0.061206807327227226,
+        "forecast": 0.923742083657599,
+        "event_probability": 0.9462876967875801
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s11",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.7496940291854722,
+    "oracle_return": 0.7686996382948322,
+    "oracle_regret": 0.01900560910936002,
+    "minimum_example_regret": 7.027830983830086e-09,
+    "inspection_rate": 0.08175280210715617,
+    "oracle_inspection_rate": 0.10308837890625,
+    "duplicate_inspection_rate": 1.0984136580954891e-05,
+    "independent_inspection_rate": 0.10924008010182885,
+    "inspection_cost": 0.016775307717860857,
+    "terminal_brier": 0.22165647793165755,
+    "terminal_probability_rmse": 0.26378434428015457,
+    "audit_brier": 0.21682466881142246,
+    "audit_probability_rmse": 0.2664298550414083,
+    "duplicate_probability_change": 0.1452004089101904,
+    "sampled_report_variance": 0.011874185165009373,
+    "never_inspect_same_report_head_return": 0.7411104702962803,
+    "always_inspect_same_report_head_return": 0.574459938651148,
+    "oracle_never_inspect_return": 0.7594340528221422,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.4031358081039894,
+        "forecast": 0.003342978149772218,
+        "event_probability": 0.17657516960814312
+      },
+      {
+        "bin": 1,
+        "mass": 0.010285466014030306,
+        "forecast": 0.1483938073664937,
+        "event_probability": 0.38810249220776616
+      },
+      {
+        "bin": 2,
+        "mass": 0.005261668250889909,
+        "forecast": 0.24859008935283256,
+        "event_probability": 0.41124615150448485
+      },
+      {
+        "bin": 3,
+        "mass": 0.004982448758880124,
+        "forecast": 0.34708235965380263,
+        "event_probability": 0.41407968688024577
+      },
+      {
+        "bin": 4,
+        "mass": 0.005231972085721702,
+        "forecast": 0.44551855574195487,
+        "event_probability": 0.42429869810798504
+      },
+      {
+        "bin": 5,
+        "mass": 0.00452806472211897,
+        "forecast": 0.5463390368084263,
+        "event_probability": 0.42120133232487217
+      },
+      {
+        "bin": 6,
+        "mass": 0.005252522340810731,
+        "forecast": 0.6536296593337421,
+        "event_probability": 0.45734212348045994
+      },
+      {
+        "bin": 7,
+        "mass": 0.006771256610566151,
+        "forecast": 0.7511072439651877,
+        "event_probability": 0.429627598734459
+      },
+      {
+        "bin": 8,
+        "mass": 0.009635468460630603,
+        "forecast": 0.8519276114751234,
+        "event_probability": 0.46008836192300506
+      },
+      {
+        "bin": 9,
+        "mass": 0.544915324652362,
+        "forecast": 0.9977956536245676,
+        "event_probability": 0.7491437359640032
+      }
+    ]
+  },
+  {
+    "model": "forecast-s11",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.8207461255268191,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.015125376033571971,
+    "minimum_example_regret": 4.484165559706654e-05,
+    "inspection_rate": 0.012074070011070123,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 3.632015203906501e-06,
+    "independent_inspection_rate": 0.016132989826497614,
+    "inspection_cost": 0.0021537505785016254,
+    "terminal_brier": 0.1750568286603571,
+    "terminal_probability_rmse": 0.11409481041646861,
+    "audit_brier": 0.16722201301330772,
+    "audit_probability_rmse": 0.14622657713039414,
+    "duplicate_probability_change": 0.11928606956018975,
+    "sampled_report_variance": 0.002043295234322142,
+    "never_inspect_same_report_head_return": 0.8208090401235539,
+    "always_inspect_same_report_head_return": 0.6163153318932852,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.1757726851537593,
+        "forecast": 0.2429702152810269,
+        "event_probability": 0.1015577659863742
+      },
+      {
+        "bin": 3,
+        "mass": 0.12492628847038717,
+        "forecast": 0.32947617596918083,
+        "event_probability": 0.21693549252651126
+      },
+      {
+        "bin": 4,
+        "mass": 0.11368813931017673,
+        "forecast": 0.45750189714817796,
+        "event_probability": 0.334012834833043
+      },
+      {
+        "bin": 5,
+        "mass": 0.1492678283271464,
+        "forecast": 0.5580021989693982,
+        "event_probability": 0.4954947887547806
+      },
+      {
+        "bin": 6,
+        "mass": 0.09561955089950323,
+        "forecast": 0.6372321816115356,
+        "event_probability": 0.6422269937602509
+      },
+      {
+        "bin": 7,
+        "mass": 0.060535054741125395,
+        "forecast": 0.7451541859262234,
+        "event_probability": 0.700519493067612
+      },
+      {
+        "bin": 8,
+        "mass": 0.28019045309790175,
+        "forecast": 0.8450658057361985,
+        "event_probability": 0.8593865081720206
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s11",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.8174336580901104,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.018437843470280796,
+    "minimum_example_regret": 1.636352956246867e-06,
+    "inspection_rate": 2.7969390202144118e-05,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 3.188833614917252e-05,
+    "independent_inspection_rate": 2.66515683165232e-05,
+    "inspection_cost": 5.994928501007121e-06,
+    "terminal_brier": 0.18150444540488625,
+    "terminal_probability_rmse": 0.13157102663169912,
+    "audit_brier": 0.17870892915351755,
+    "audit_probability_rmse": 0.18129845007467915,
+    "duplicate_probability_change": 0.03068120728815871,
+    "sampled_report_variance": 0.0010559015765023985,
+    "never_inspect_same_report_head_return": 0.8174396093372591,
+    "always_inspect_same_report_head_return": 0.5977693874199187,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 2.195669866603128e-07,
+        "forecast": 0.2999987850259891,
+        "event_probability": 0.4420160706964309
+      },
+      {
+        "bin": 3,
+        "mass": 0.4974367470547812,
+        "forecast": 0.3039322855192046,
+        "event_probability": 0.24621276551890975
+      },
+      {
+        "bin": 4,
+        "mass": 0.04980460120377036,
+        "forecast": 0.4605543974347103,
+        "event_probability": 0.5124937698420273
+      },
+      {
+        "bin": 5,
+        "mass": 0.08300741685359411,
+        "forecast": 0.5439459165300727,
+        "event_probability": 0.5928812196560698
+      },
+      {
+        "bin": 6,
+        "mass": 0.048521839217228344,
+        "forecast": 0.6507987366674197,
+        "event_probability": 0.6784913499735807
+      },
+      {
+        "bin": 7,
+        "mass": 0.3212291761036393,
+        "forecast": 0.7472468780914914,
+        "event_probability": 0.8447519870660293
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.7640230796300513,
+    "oracle_return": 0.7686996382948322,
+    "oracle_regret": 0.004676558664780876,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.07647705078125,
+    "oracle_inspection_rate": 0.10308837890625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.10219394829133023,
+    "inspection_cost": 0.0153764403266905,
+    "terminal_brier": 0.15579947129169272,
+    "terminal_probability_rmse": 0.05496789960674343,
+    "audit_brier": 0.1487327698165957,
+    "audit_probability_rmse": 0.05378632412202104,
+    "duplicate_probability_change": 0.030710190610488932,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7554552848051227,
+    "always_inspect_same_report_head_return": 0.5903475333203506,
+    "oracle_never_inspect_return": 0.7594340528221422,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.06439571182339204,
+        "forecast": 0.07608440806094281,
+        "event_probability": 0.0545285556989134
+      },
+      {
+        "bin": 1,
+        "mass": 0.1546275424714876,
+        "forecast": 0.15013139671998985,
+        "event_probability": 0.1210501825636741
+      },
+      {
+        "bin": 2,
+        "mass": 0.12270249633692328,
+        "forecast": 0.24746182019066199,
+        "event_probability": 0.22731911592380655
+      },
+      {
+        "bin": 3,
+        "mass": 0.09354995136481939,
+        "forecast": 0.34672436407238577,
+        "event_probability": 0.3407740574519915
+      },
+      {
+        "bin": 4,
+        "mass": 0.07318115234375,
+        "forecast": 0.4478166381998595,
+        "event_probability": 0.4546880724098827
+      },
+      {
+        "bin": 5,
+        "mass": 0.0716552734375,
+        "forecast": 0.5528231213405551,
+        "event_probability": 0.574119411093452
+      },
+      {
+        "bin": 6,
+        "mass": 0.09510015840411583,
+        "forecast": 0.652034734207364,
+        "event_probability": 0.682842934609508
+      },
+      {
+        "bin": 7,
+        "mass": 0.11686467471616489,
+        "forecast": 0.7517164488071736,
+        "event_probability": 0.7881498090526603
+      },
+      {
+        "bin": 8,
+        "mass": 0.14637940816941747,
+        "forecast": 0.8522884354626907,
+        "event_probability": 0.8861712035698875
+      },
+      {
+        "bin": 9,
+        "mass": 0.06154363093242952,
+        "forecast": 0.9230096023519965,
+        "event_probability": 0.9475738871940979
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.832935042686104,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.002936458874287103,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.00152587890625,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.0020389854008645296,
+    "inspection_cost": 0.00023826573942642426,
+    "terminal_brier": 0.166631701420195,
+    "terminal_probability_rmse": 0.05250540950386226,
+    "audit_brier": 0.1487327698165957,
+    "audit_probability_rmse": 0.05378632412202104,
+    "duplicate_probability_change": 0.030710190610488932,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8328590126569659,
+    "always_inspect_same_report_head_return": 0.6442103842395405,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.05348781102635705,
+        "forecast": 0.07650589575021526,
+        "event_probability": 0.05724788586683406
+      },
+      {
+        "bin": 1,
+        "mass": 0.13407080206112862,
+        "forecast": 0.15056733805911618,
+        "event_probability": 0.12240208641537763
+      },
+      {
+        "bin": 2,
+        "mass": 0.11798095703125,
+        "forecast": 0.2482444403073483,
+        "event_probability": 0.2277009989259227
+      },
+      {
+        "bin": 3,
+        "mass": 0.1025390625,
+        "forecast": 0.3480786159811985,
+        "event_probability": 0.3412282708202361
+      },
+      {
+        "bin": 4,
+        "mass": 0.0992431640625,
+        "forecast": 0.45052949627827016,
+        "event_probability": 0.4538614082855498
+      },
+      {
+        "bin": 5,
+        "mass": 0.0992431640625,
+        "forecast": 0.5500358377215607,
+        "event_probability": 0.5668440229168858
+      },
+      {
+        "bin": 6,
+        "mass": 0.104248046875,
+        "forecast": 0.6506217058564796,
+        "event_probability": 0.6794695620683283
+      },
+      {
+        "bin": 7,
+        "mass": 0.105712890625,
+        "forecast": 0.7500393356585888,
+        "event_probability": 0.7824089937224412
+      },
+      {
+        "bin": 8,
+        "mass": 0.12794880758189686,
+        "forecast": 0.8525862710227615,
+        "event_probability": 0.8816539820914424
+      },
+      {
+        "bin": 9,
+        "mass": 0.055525294174367454,
+        "forecast": 0.9229562769668487,
+        "event_probability": 0.9458603003919523
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s23",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.7626107025504628,
+    "oracle_return": 0.7686996382948322,
+    "oracle_regret": 0.00608893574436946,
+    "minimum_example_regret": 2.8143451957785004e-08,
+    "inspection_rate": 0.11824254790179455,
+    "oracle_inspection_rate": 0.10308837890625,
+    "duplicate_inspection_rate": 5.652325649165251e-05,
+    "independent_inspection_rate": 0.15798490004375557,
+    "inspection_cost": 0.025363727075629203,
+    "terminal_brier": 0.20344765226704464,
+    "terminal_probability_rmse": 0.2367610529754166,
+    "audit_brier": 0.21179390209703514,
+    "audit_probability_rmse": 0.2568153051182864,
+    "duplicate_probability_change": 0.10203512546264236,
+    "sampled_report_variance": 0.008577918106863387,
+    "never_inspect_same_report_head_return": 0.7523329516619308,
+    "always_inspect_same_report_head_return": 0.5778878873953084,
+    "oracle_never_inspect_return": 0.7594340528221422,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.4708574236725777,
+        "forecast": 0.0016572805993681926,
+        "event_probability": 0.19610879757007996
+      },
+      {
+        "bin": 1,
+        "mass": 0.006645572064886628,
+        "forecast": 0.14233265941519865,
+        "event_probability": 0.4575771632057545
+      },
+      {
+        "bin": 2,
+        "mass": 0.004270733513398131,
+        "forecast": 0.24560662216695028,
+        "event_probability": 0.4831717890224395
+      },
+      {
+        "bin": 3,
+        "mass": 0.0039326415607209095,
+        "forecast": 0.35454823117103457,
+        "event_probability": 0.5003643169779661
+      },
+      {
+        "bin": 4,
+        "mass": 0.0037570524969284024,
+        "forecast": 0.44696830630696643,
+        "event_probability": 0.5029017821600374
+      },
+      {
+        "bin": 5,
+        "mass": 0.003345147329144888,
+        "forecast": 0.5505685720636155,
+        "event_probability": 0.49091165598705505
+      },
+      {
+        "bin": 6,
+        "mass": 0.003532622505868344,
+        "forecast": 0.653919162083339,
+        "event_probability": 0.5048471835477133
+      },
+      {
+        "bin": 7,
+        "mass": 0.004994123334697859,
+        "forecast": 0.7534055366520322,
+        "event_probability": 0.5073764702028795
+      },
+      {
+        "bin": 8,
+        "mass": 0.00739840560648013,
+        "forecast": 0.8524145819596476,
+        "event_probability": 0.535727301638392
+      },
+      {
+        "bin": 9,
+        "mass": 0.4912662779152969,
+        "forecast": 0.9979627456769536,
+        "event_probability": 0.7944169001804944
+      }
+    ]
+  },
+  {
+    "model": "forecast-s23",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.8269600693992593,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.008911432161131886,
+    "minimum_example_regret": 1.573560799353335e-05,
+    "inspection_rate": 0.011277083562987672,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 4.305714265234824e-06,
+    "independent_inspection_rate": 0.015067774621651943,
+    "inspection_cost": 0.0020052583770719563,
+    "terminal_brier": 0.16849836035209362,
+    "terminal_probability_rmse": 0.079535650261638,
+    "audit_brier": 0.16461755985901444,
+    "audit_probability_rmse": 0.1370319623481246,
+    "duplicate_probability_change": 0.13282658679809728,
+    "sampled_report_variance": 0.002536311871575188,
+    "never_inspect_same_report_head_return": 0.8269617692523945,
+    "always_inspect_same_report_head_return": 0.6146396690552873,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.29049459905516817,
+        "forecast": 0.20879673679930433,
+        "event_probability": 0.14649191160849204
+      },
+      {
+        "bin": 3,
+        "mass": 0.08015971844704134,
+        "forecast": 0.3664315278952556,
+        "event_probability": 0.3011686425553341
+      },
+      {
+        "bin": 4,
+        "mass": 0.10813787691102138,
+        "forecast": 0.44163858872341577,
+        "event_probability": 0.4108415273961265
+      },
+      {
+        "bin": 5,
+        "mass": 0.10481813758510246,
+        "forecast": 0.5438819365582841,
+        "event_probability": 0.54323792327115
+      },
+      {
+        "bin": 6,
+        "mass": 0.09259205872620067,
+        "forecast": 0.6661655702860024,
+        "event_probability": 0.6607044261036219
+      },
+      {
+        "bin": 7,
+        "mass": 0.13224766204995833,
+        "forecast": 0.7576412934921786,
+        "event_probability": 0.7572566445817567
+      },
+      {
+        "bin": 8,
+        "mass": 0.1915499472255077,
+        "forecast": 0.8639253548808193,
+        "event_probability": 0.8984981287000204
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s23",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.8165463002895689,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.019325201270822233,
+    "minimum_example_regret": 9.048864019978176e-06,
+    "inspection_rate": 1.2550617471059696e-05,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 2.1447899514416515e-05,
+    "independent_inspection_rate": 9.558733133341715e-06,
+    "inspection_cost": 2.6742422782289555e-06,
+    "terminal_brier": 0.18243895307993863,
+    "terminal_probability_rmse": 0.13507385269981365,
+    "audit_brier": 0.1798271613440056,
+    "audit_probability_rmse": 0.1843566114625916,
+    "duplicate_probability_change": 0.0764129659792997,
+    "sampled_report_variance": 0.0010120723882142684,
+    "never_inspect_same_report_head_return": 0.8165489900305455,
+    "always_inspect_same_report_head_return": 0.5964390077241792,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 3,
+        "mass": 0.4004516942341858,
+        "forecast": 0.352670909389665,
+        "event_probability": 0.19449542190759603
+      },
+      {
+        "bin": 4,
+        "mass": 0.09869363467584384,
+        "forecast": 0.4634085044432942,
+        "event_probability": 0.44470695546919575
+      },
+      {
+        "bin": 5,
+        "mass": 0.08300779596811733,
+        "forecast": 0.5446809495179744,
+        "event_probability": 0.5535063518770832
+      },
+      {
+        "bin": 6,
+        "mass": 0.21264647761166205,
+        "forecast": 0.65669250676476,
+        "event_probability": 0.7081495728973277
+      },
+      {
+        "bin": 7,
+        "mass": 0.08660888190859302,
+        "forecast": 0.7390285916489829,
+        "event_probability": 0.8507533856799291
+      },
+      {
+        "bin": 8,
+        "mass": 0.118591515601598,
+        "forecast": 0.8410799087226724,
+        "event_probability": 0.9233769539149616
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.7591988194868675,
+    "oracle_return": 0.7686996382948322,
+    "oracle_regret": 0.009500818807964714,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.078125,
+    "oracle_inspection_rate": 0.10308837890625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.10439605252426393,
+    "inspection_cost": 0.015672471131438215,
+    "terminal_brier": 0.15850054951966364,
+    "terminal_probability_rmse": 0.07189605605704105,
+    "audit_brier": 0.15111577401759382,
+    "audit_probability_rmse": 0.07263589239182805,
+    "duplicate_probability_change": 0.020740723231522283,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7505930628958621,
+    "always_inspect_same_report_head_return": 0.5864829533509159,
+    "oracle_never_inspect_return": 0.7594340528221422,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.09299414795119923,
+        "forecast": 0.07532164262200271,
+        "event_probability": 0.06362687366149729
+      },
+      {
+        "bin": 1,
+        "mass": 0.16461211911896803,
+        "forecast": 0.14673673892139852,
+        "event_probability": 0.1492163364816683
+      },
+      {
+        "bin": 2,
+        "mass": 0.12775432074328122,
+        "forecast": 0.2484797803427753,
+        "event_probability": 0.2708348383256125
+      },
+      {
+        "bin": 3,
+        "mass": 0.09802443987166772,
+        "forecast": 0.3477952114846758,
+        "event_probability": 0.3979270778095514
+      },
+      {
+        "bin": 4,
+        "mass": 0.07196044921875,
+        "forecast": 0.4469040523301352,
+        "event_probability": 0.5127468820386578
+      },
+      {
+        "bin": 5,
+        "mass": 0.07403564453125,
+        "forecast": 0.5513500927011532,
+        "event_probability": 0.6284833773313578
+      },
+      {
+        "bin": 6,
+        "mass": 0.0924510088311945,
+        "forecast": 0.6528759217599945,
+        "event_probability": 0.7371095278673916
+      },
+      {
+        "bin": 7,
+        "mass": 0.11694788966944417,
+        "forecast": 0.7525757312245591,
+        "event_probability": 0.8312742964269515
+      },
+      {
+        "bin": 8,
+        "mass": 0.12616615404248632,
+        "forecast": 0.8473419252589345,
+        "event_probability": 0.9118881246694581
+      },
+      {
+        "bin": 9,
+        "mass": 0.03505382602175883,
+        "forecast": 0.9205041955411173,
+        "event_probability": 0.9576150100267383
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.8302374052939419,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.005634096266449326,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.00042724609375,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.0005709159122420683,
+    "inspection_cost": 6.628928986174287e-05,
+    "terminal_brier": 0.16949955151012486,
+    "terminal_probability_rmse": 0.07343742300129981,
+    "audit_brier": 0.15111577401759382,
+    "audit_probability_rmse": 0.07263589239182805,
+    "duplicate_probability_change": 0.020740723231522283,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8302157273882329,
+    "always_inspect_same_report_head_return": 0.642087386601481,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0871748785271729,
+        "forecast": 0.07506627587233707,
+        "event_probability": 0.06487771552219665
+      },
+      {
+        "bin": 1,
+        "mass": 0.14537844609832573,
+        "forecast": 0.14636428720085584,
+        "event_probability": 0.15191034180015603
+      },
+      {
+        "bin": 2,
+        "mass": 0.1197509765625,
+        "forecast": 0.24963535244645937,
+        "event_probability": 0.273216987146612
+      },
+      {
+        "bin": 3,
+        "mass": 0.106689453125,
+        "forecast": 0.34935724397682216,
+        "event_probability": 0.3998805678189773
+      },
+      {
+        "bin": 4,
+        "mass": 0.10009765625,
+        "forecast": 0.44967739418512437,
+        "event_probability": 0.5173277372011467
+      },
+      {
+        "bin": 5,
+        "mass": 0.1026611328125,
+        "forecast": 0.5489688830341652,
+        "event_probability": 0.6264893127123833
+      },
+      {
+        "bin": 6,
+        "mass": 0.10211181640625,
+        "forecast": 0.6513737594019633,
+        "event_probability": 0.7338954186575876
+      },
+      {
+        "bin": 7,
+        "mass": 0.1063232421875,
+        "forecast": 0.7508169353076702,
+        "event_probability": 0.8303528397009187
+      },
+      {
+        "bin": 8,
+        "mass": 0.10223873146897312,
+        "forecast": 0.8470789187663625,
+        "event_probability": 0.907145633307469
+      },
+      {
+        "bin": 9,
+        "mass": 0.027573666561778256,
+        "forecast": 0.9200420164914487,
+        "event_probability": 0.9539116363504762
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s37",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.7573782862356643,
+    "oracle_return": 0.7686996382948322,
+    "oracle_regret": 0.011321352059167952,
+    "minimum_example_regret": 3.356455863245955e-09,
+    "inspection_rate": 0.14876504375633715,
+    "oracle_inspection_rate": 0.10308837890625,
+    "duplicate_inspection_rate": 4.2690331560351744e-05,
+    "independent_inspection_rate": 0.19877583106327415,
+    "inspection_cost": 0.031965109910714384,
+    "terminal_brier": 0.20340698855444905,
+    "terminal_probability_rmse": 0.24195769134881456,
+    "audit_brier": 0.21691925357110295,
+    "audit_probability_rmse": 0.2666073000070822,
+    "duplicate_probability_change": 0.15519529105843385,
+    "sampled_report_variance": 0.007249615299172278,
+    "never_inspect_same_report_head_return": 0.7491818476387813,
+    "always_inspect_same_report_head_return": 0.5708942894984715,
+    "oracle_never_inspect_return": 0.7594340528221422,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.5337401645782334,
+        "forecast": 0.0014223123972995333,
+        "event_probability": 0.22817777359505168
+      },
+      {
+        "bin": 1,
+        "mass": 0.00522671772291476,
+        "forecast": 0.14022507081895505,
+        "event_probability": 0.5652867951234403
+      },
+      {
+        "bin": 2,
+        "mass": 0.003637822838745136,
+        "forecast": 0.2458877463562021,
+        "event_probability": 0.5569132299854451
+      },
+      {
+        "bin": 3,
+        "mass": 0.002883758871772828,
+        "forecast": 0.34632088156321916,
+        "event_probability": 0.5606429264703097
+      },
+      {
+        "bin": 4,
+        "mass": 0.0036344411751869756,
+        "forecast": 0.4416020957383071,
+        "event_probability": 0.5696643156308561
+      },
+      {
+        "bin": 5,
+        "mass": 0.002858856441821943,
+        "forecast": 0.547972708139381,
+        "event_probability": 0.6016565391902678
+      },
+      {
+        "bin": 6,
+        "mass": 0.0026451670263370366,
+        "forecast": 0.6475865260078312,
+        "event_probability": 0.581239898998365
+      },
+      {
+        "bin": 7,
+        "mass": 0.004665234262150756,
+        "forecast": 0.7535621757316859,
+        "event_probability": 0.5823671347944
+      },
+      {
+        "bin": 8,
+        "mass": 0.005953999102754112,
+        "forecast": 0.8543919342833397,
+        "event_probability": 0.5976558301000848
+      },
+      {
+        "bin": 9,
+        "mass": 0.43475383798008305,
+        "forecast": 0.998102332478088,
+        "event_probability": 0.8315185635500497
+      }
+    ]
+  },
+  {
+    "model": "forecast-s37",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.824701758851837,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.01116974270855403,
+    "minimum_example_regret": 9.696304810399847e-05,
+    "inspection_rate": 0.004039351641108123,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 1.8646241600871363e-06,
+    "independent_inspection_rate": 0.005397035269758049,
+    "inspection_cost": 0.0006714029745334254,
+    "terminal_brier": 0.17247573694692248,
+    "terminal_probability_rmse": 0.0951615940632391,
+    "audit_brier": 0.16529847951804985,
+    "audit_probability_rmse": 0.13949436678236593,
+    "duplicate_probability_change": 0.11946119658292974,
+    "sampled_report_variance": 0.002151101226706976,
+    "never_inspect_same_report_head_return": 0.8246742657569459,
+    "always_inspect_same_report_head_return": 0.6164501147790544,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.3583169354940717,
+        "forecast": 0.22149252822941948,
+        "event_probability": 0.17199033889975973
+      },
+      {
+        "bin": 3,
+        "mass": 0.08209109078282383,
+        "forecast": 0.33836655578159597,
+        "event_probability": 0.3834845560276985
+      },
+      {
+        "bin": 4,
+        "mass": 0.0736843365579405,
+        "forecast": 0.4606784466583352,
+        "event_probability": 0.4774460094162
+      },
+      {
+        "bin": 5,
+        "mass": 0.10497800296908942,
+        "forecast": 0.5445992951390018,
+        "event_probability": 0.5839103844447511
+      },
+      {
+        "bin": 6,
+        "mass": 0.20855122417542807,
+        "forecast": 0.6451344759721669,
+        "event_probability": 0.7480452256566877
+      },
+      {
+        "bin": 7,
+        "mass": 0.1723784100206466,
+        "forecast": 0.7855219394727483,
+        "event_probability": 0.9044206338794528
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s37",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "expensive_inspection",
+    "world_seed": 8300101,
+    "world_sha256": "8b00012102264c56f40738a40ab91d313ed8e3113df2864847d0b4361c323efd",
+    "net_return": 0.8263145730991877,
+    "oracle_return": 0.8358715015603911,
+    "oracle_regret": 0.009556928461203436,
+    "minimum_example_regret": 2.4554761309136808e-05,
+    "inspection_rate": 1.2760333566403347e-05,
+    "oracle_inspection_rate": 0.01104736328125,
+    "duplicate_inspection_rate": 1.450963355958683e-05,
+    "independent_inspection_rate": 1.2172097380782638e-05,
+    "inspection_cost": 2.696185123160499e-06,
+    "terminal_brier": 0.17224527651052934,
+    "terminal_probability_rmse": 0.08972871505123799,
+    "audit_brier": 0.1756156178459182,
+    "audit_probability_rmse": 0.17255670572852738,
+    "duplicate_probability_change": 0.09756236104689955,
+    "sampled_report_variance": 0.0014374542051598122,
+    "never_inspect_same_report_head_return": 0.8263172685183022,
+    "always_inspect_same_report_head_return": 0.5939256701696844,
+    "oracle_never_inspect_return": 0.8355981623077402,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 2.9415293939062816e-06,
+        "forecast": 0.1999625726278233,
+        "event_probability": 0.23230991451597696
+      },
+      {
+        "bin": 2,
+        "mass": 0.28277338813640646,
+        "forecast": 0.21003258571939673,
+        "event_probability": 0.13970597386598038
+      },
+      {
+        "bin": 3,
+        "mass": 0.10443082119255488,
+        "forecast": 0.35340630194763106,
+        "event_probability": 0.3114287535126889
+      },
+      {
+        "bin": 4,
+        "mass": 0.06579584816326735,
+        "forecast": 0.45705341537250754,
+        "event_probability": 0.4076357443283684
+      },
+      {
+        "bin": 5,
+        "mass": 0.13775628766132877,
+        "forecast": 0.5593720055742895,
+        "event_probability": 0.5306533302381152
+      },
+      {
+        "bin": 6,
+        "mass": 0.07208248374791507,
+        "forecast": 0.6346110185648726,
+        "event_probability": 0.6486796629098049
+      },
+      {
+        "bin": 7,
+        "mass": 0.3371582295691336,
+        "forecast": 0.7468662365016261,
+        "event_probability": 0.8387323214948572
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.7685623885315996,
+    "oracle_return": 0.7690305081113218,
+    "oracle_regret": 0.0004681195797221738,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.07720947265625,
+    "oracle_inspection_rate": 0.07525634765625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.3910355486862442,
+    "inspection_cost": 0.003977031562982347,
+    "terminal_brier": 0.15764075655179213,
+    "terminal_probability_rmse": 0.019834868733125004,
+    "audit_brier": 0.16033257466874323,
+    "audit_probability_rmse": 0.02309587107284789,
+    "duplicate_probability_change": 0.017910130087112563,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7581951457183564,
+    "always_inspect_same_report_head_return": 0.7115088060918517,
+    "oracle_never_inspect_return": 0.7585581358976546,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.12471622691282641,
+        "forecast": 0.06791105725232095,
+        "event_probability": 0.06817758162655228
+      },
+      {
+        "bin": 1,
+        "mass": 0.13171561679730268,
+        "forecast": 0.14527416170320018,
+        "event_probability": 0.1578425244630511
+      },
+      {
+        "bin": 2,
+        "mass": 0.09109892561493241,
+        "forecast": 0.2484779053904724,
+        "event_probability": 0.2525033242879744
+      },
+      {
+        "bin": 3,
+        "mass": 0.08207906423153397,
+        "forecast": 0.34973363654056017,
+        "event_probability": 0.3500795627702122
+      },
+      {
+        "bin": 4,
+        "mass": 0.07036474935104615,
+        "forecast": 0.44886143771653125,
+        "event_probability": 0.44453246198700247
+      },
+      {
+        "bin": 5,
+        "mass": 0.0714133716086712,
+        "forecast": 0.550406225602358,
+        "event_probability": 0.5441548000394665
+      },
+      {
+        "bin": 6,
+        "mass": 0.0816924514405021,
+        "forecast": 0.6515074743246714,
+        "event_probability": 0.6426408918850239
+      },
+      {
+        "bin": 7,
+        "mass": 0.09464514829658942,
+        "forecast": 0.7516884067792098,
+        "event_probability": 0.7403710772748454
+      },
+      {
+        "bin": 8,
+        "mass": 0.13754316285197535,
+        "forecast": 0.8543200118935352,
+        "event_probability": 0.8446270500112195
+      },
+      {
+        "bin": 9,
+        "mass": 0.11473128289462035,
+        "forecast": 0.9331583772494734,
+        "event_probability": 0.9349705270903581
+      }
+    ]
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.83875041229866,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.0004493132954414342,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.07220458984375,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.3656877897990726,
+    "inspection_cost": 0.0030090378690914577,
+    "terminal_brier": 0.15803844637664088,
+    "terminal_probability_rmse": 0.019753314912038595,
+    "audit_brier": 0.16033257466874323,
+    "audit_probability_rmse": 0.02309587107284789,
+    "duplicate_probability_change": 0.017910130087112563,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8349174531485646,
+    "always_inspect_same_report_head_return": 0.7829974599898182,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.12591767452074015,
+        "forecast": 0.0669965657727867,
+        "event_probability": 0.06739192727266188
+      },
+      {
+        "bin": 1,
+        "mass": 0.12776783972659644,
+        "forecast": 0.1449898903948325,
+        "event_probability": 0.1573060583901304
+      },
+      {
+        "bin": 2,
+        "mass": 0.08907603917029981,
+        "forecast": 0.24848550340833697,
+        "event_probability": 0.25233509234819473
+      },
+      {
+        "bin": 3,
+        "mass": 0.08267980277827197,
+        "forecast": 0.35007453457232246,
+        "event_probability": 0.3506850967640664
+      },
+      {
+        "bin": 4,
+        "mass": 0.07518943163431048,
+        "forecast": 0.4493877855634935,
+        "event_probability": 0.44530353214568946
+      },
+      {
+        "bin": 5,
+        "mass": 0.07557318430769798,
+        "forecast": 0.5497663932020488,
+        "event_probability": 0.5438328848492829
+      },
+      {
+        "bin": 6,
+        "mass": 0.0810044416321439,
+        "forecast": 0.6513241338790692,
+        "event_probability": 0.6427410313931281
+      },
+      {
+        "bin": 7,
+        "mass": 0.0923830591778349,
+        "forecast": 0.7514767757068908,
+        "event_probability": 0.7405924729645107
+      },
+      {
+        "bin": 8,
+        "mass": 0.1347250360162336,
+        "forecast": 0.85434934878182,
+        "event_probability": 0.8448465397263186
+      },
+      {
+        "bin": 9,
+        "mass": 0.11568349103587079,
+        "forecast": 0.934081114596666,
+        "event_probability": 0.9356698475278057
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s11",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.7645668451441011,
+    "oracle_return": 0.7690305081113218,
+    "oracle_regret": 0.004463662967220683,
+    "minimum_example_regret": 1.240270430802326e-08,
+    "inspection_rate": 0.06620330284253906,
+    "oracle_inspection_rate": 0.07525634765625,
+    "duplicate_inspection_rate": 7.812751713535653e-05,
+    "independent_inspection_rate": 0.33497607884060193,
+    "inspection_cost": 0.0036299705935282553,
+    "terminal_brier": 0.220802457442657,
+    "terminal_probability_rmse": 0.2514329273318562,
+    "audit_brier": 0.23969355314126994,
+    "audit_probability_rmse": 0.2826559706306242,
+    "duplicate_probability_change": 0.14073043560336518,
+    "sampled_report_variance": 0.011000726819713584,
+    "never_inspect_same_report_head_return": 0.7539226070311518,
+    "always_inspect_same_report_head_return": 0.6849552517394507,
+    "oracle_never_inspect_return": 0.7585581358976546,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.48211227636405773,
+        "forecast": 0.00232292571822275,
+        "event_probability": 0.21887977518377477
+      },
+      {
+        "bin": 1,
+        "mass": 0.00882950987215382,
+        "forecast": 0.147850082308586,
+        "event_probability": 0.4779812657522096
+      },
+      {
+        "bin": 2,
+        "mass": 0.005854065482117011,
+        "forecast": 0.24763883647547735,
+        "event_probability": 0.4943556666022999
+      },
+      {
+        "bin": 3,
+        "mass": 0.004709643008177874,
+        "forecast": 0.343779211426831,
+        "event_probability": 0.4860178825827286
+      },
+      {
+        "bin": 4,
+        "mass": 0.004368370697701032,
+        "forecast": 0.44900474242663735,
+        "event_probability": 0.5045641730780418
+      },
+      {
+        "bin": 5,
+        "mass": 0.004077860360694071,
+        "forecast": 0.545825894025773,
+        "event_probability": 0.519325475060302
+      },
+      {
+        "bin": 6,
+        "mass": 0.0053289783471795645,
+        "forecast": 0.6561551034144025,
+        "event_probability": 0.5255115602134106
+      },
+      {
+        "bin": 7,
+        "mass": 0.005218120729616408,
+        "forecast": 0.7529432710789296,
+        "event_probability": 0.5169426380612666
+      },
+      {
+        "bin": 8,
+        "mass": 0.00953696054782181,
+        "forecast": 0.8535503989045689,
+        "event_probability": 0.5287714239232314
+      },
+      {
+        "bin": 9,
+        "mass": 0.46996421459048054,
+        "forecast": 0.9971834525411117,
+        "event_probability": 0.7817476488540334
+      }
+    ]
+  },
+  {
+    "model": "forecast-s11",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.8309125525045606,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.00828717308954067,
+    "minimum_example_regret": 1.0299228251298143e-05,
+    "inspection_rate": 0.04747280288376876,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 3.4982291216319944e-05,
+    "independent_inspection_rate": 0.24028884707896878,
+    "inspection_cost": 0.002281717915321385,
+    "terminal_brier": 0.16516569998136255,
+    "terminal_probability_rmse": 0.07980662539630537,
+    "audit_brier": 0.17929678572378693,
+    "audit_probability_rmse": 0.1396339153488767,
+    "duplicate_probability_change": 0.10522481517058668,
+    "sampled_report_variance": 0.0016400295987553477,
+    "never_inspect_same_report_head_return": 0.8273947775046309,
+    "always_inspect_same_report_head_return": 0.7502468048497261,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.34071122057772935,
+        "forecast": 0.2175208490854617,
+        "event_probability": 0.15621252176676614
+      },
+      {
+        "bin": 3,
+        "mass": 0.08735711211363394,
+        "forecast": 0.3330615943429745,
+        "event_probability": 0.35090383430953487
+      },
+      {
+        "bin": 4,
+        "mass": 0.07226733302673838,
+        "forecast": 0.45581439604818835,
+        "event_probability": 0.4415347106233887
+      },
+      {
+        "bin": 5,
+        "mass": 0.13437571076457583,
+        "forecast": 0.5620901798184759,
+        "event_probability": 0.5884191049410386
+      },
+      {
+        "bin": 6,
+        "mass": 0.059060842361610695,
+        "forecast": 0.6318668662564727,
+        "event_probability": 0.6793258678347529
+      },
+      {
+        "bin": 7,
+        "mass": 0.04130457509122056,
+        "forecast": 0.7478703396103474,
+        "event_probability": 0.729137146643751
+      },
+      {
+        "bin": 8,
+        "mass": 0.26492320606449127,
+        "forecast": 0.8455976334099817,
+        "event_probability": 0.8760676670401562
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s11",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.8198297057354298,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.019370019858671567,
+    "minimum_example_regret": 1.5691107312920671e-06,
+    "inspection_rate": 7.596488104660154e-05,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 8.053645535900742e-05,
+    "independent_inspection_rate": 5.7383233246346516e-05,
+    "inspection_cost": 4.056369284483247e-06,
+    "terminal_brier": 0.17931494655561153,
+    "terminal_probability_rmse": 0.12145059780761934,
+    "audit_brier": 0.18126495839534168,
+    "audit_probability_rmse": 0.14651212573439792,
+    "duplicate_probability_change": 0.03541646310880398,
+    "sampled_report_variance": 0.0008512913396741907,
+    "never_inspect_same_report_head_return": 0.8198339309164491,
+    "always_inspect_same_report_head_return": 0.7545878809160256,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 3.5058710668451784e-06,
+        "forecast": 0.29999795307319044,
+        "event_probability": 0.3867173076540887
+      },
+      {
+        "bin": 3,
+        "mass": 0.4437241861294458,
+        "forecast": 0.3040534297558865,
+        "event_probability": 0.2125156067095941
+      },
+      {
+        "bin": 4,
+        "mass": 0.05822761750862749,
+        "forecast": 0.46170293217266684,
+        "event_probability": 0.452489526604473
+      },
+      {
+        "bin": 5,
+        "mass": 0.07733085949230702,
+        "forecast": 0.5435853275457022,
+        "event_probability": 0.5391376568669634
+      },
+      {
+        "bin": 6,
+        "mass": 0.05181674361568068,
+        "forecast": 0.6485153215952555,
+        "event_probability": 0.631413553717823
+      },
+      {
+        "bin": 7,
+        "mass": 0.3688970873828722,
+        "forecast": 0.7477561505352808,
+        "event_probability": 0.8190012046972843
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.7673263132437753,
+    "oracle_return": 0.7690305081113218,
+    "oracle_regret": 0.0017041948675464672,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.07965087890625,
+    "oracle_inspection_rate": 0.07525634765625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.4034003091190108,
+    "inspection_cost": 0.004188242446772961,
+    "terminal_brier": 0.15810503384721492,
+    "terminal_probability_rmse": 0.0326961219921182,
+    "audit_brier": 0.16087960095258033,
+    "audit_probability_rmse": 0.03287013149427126,
+    "duplicate_probability_change": 0.014045340270177975,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7568243212894552,
+    "always_inspect_same_report_head_return": 0.7106578678416783,
+    "oracle_never_inspect_return": 0.7585581358976546,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.1402391300700023,
+        "forecast": 0.06628979368915018,
+        "event_probability": 0.07261371185718506
+      },
+      {
+        "bin": 1,
+        "mass": 0.1314512975163116,
+        "forecast": 0.1453132014366761,
+        "event_probability": 0.16843607593517174
+      },
+      {
+        "bin": 2,
+        "mass": 0.09939415319042386,
+        "forecast": 0.24869114551120933,
+        "event_probability": 0.2749121942188119
+      },
+      {
+        "bin": 3,
+        "mass": 0.08602705978528032,
+        "forecast": 0.34799686053853135,
+        "event_probability": 0.38104135959247193
+      },
+      {
+        "bin": 4,
+        "mass": 0.07268393511672092,
+        "forecast": 0.4496062844263525,
+        "event_probability": 0.4857132102014208
+      },
+      {
+        "bin": 5,
+        "mass": 0.0734603409860306,
+        "forecast": 0.5505341590602487,
+        "event_probability": 0.5855283974148265
+      },
+      {
+        "bin": 6,
+        "mass": 0.08043885981107446,
+        "forecast": 0.6516005056020249,
+        "event_probability": 0.6790720774255469
+      },
+      {
+        "bin": 7,
+        "mass": 0.09196669415929754,
+        "forecast": 0.7518394015573995,
+        "event_probability": 0.7705271677957761
+      },
+      {
+        "bin": 8,
+        "mass": 0.12555999568939333,
+        "forecast": 0.8542075912739215,
+        "event_probability": 0.8610913141284605
+      },
+      {
+        "bin": 9,
+        "mass": 0.09877853367546509,
+        "forecast": 0.9327266850131886,
+        "event_probability": 0.9398107428087339
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.838093994198449,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.0011057313956523709,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.074462890625,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.37712519319938176,
+    "inspection_cost": 0.003181163842086221,
+    "terminal_brier": 0.1585280237896571,
+    "terminal_probability_rmse": 0.03269969199595773,
+    "audit_brier": 0.16087960095258033,
+    "audit_probability_rmse": 0.03287013149427126,
+    "duplicate_probability_change": 0.014045340270177975,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.834223203180096,
+    "always_inspect_same_report_head_return": 0.7826149096410544,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.1411022509412061,
+        "forecast": 0.06575301214597307,
+        "event_probability": 0.07214875841268568
+      },
+      {
+        "bin": 1,
+        "mass": 0.12827413867591128,
+        "forecast": 0.14526667093371784,
+        "event_probability": 0.16870677253616403
+      },
+      {
+        "bin": 2,
+        "mass": 0.09703831131943383,
+        "forecast": 0.24880264388437245,
+        "event_probability": 0.2753172379306195
+      },
+      {
+        "bin": 3,
+        "mass": 0.08652527309170073,
+        "forecast": 0.3484129034569597,
+        "event_probability": 0.381191364685825
+      },
+      {
+        "bin": 4,
+        "mass": 0.07746301497967169,
+        "forecast": 0.45022700793116444,
+        "event_probability": 0.4833144071085671
+      },
+      {
+        "bin": 5,
+        "mass": 0.07778424435042937,
+        "forecast": 0.5494205152223316,
+        "event_probability": 0.5820302950743447
+      },
+      {
+        "bin": 6,
+        "mass": 0.07975750648634469,
+        "forecast": 0.6511656286093191,
+        "event_probability": 0.6795382792241941
+      },
+      {
+        "bin": 7,
+        "mass": 0.08958132731774843,
+        "forecast": 0.7516912090052605,
+        "event_probability": 0.7714954155503709
+      },
+      {
+        "bin": 8,
+        "mass": 0.12207391510375608,
+        "forecast": 0.854385562736003,
+        "event_probability": 0.8617279523187656
+      },
+      {
+        "bin": 9,
+        "mass": 0.10040001773379782,
+        "forecast": 0.9338747406389071,
+        "event_probability": 0.9407146680806893
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s23",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.7666820565902767,
+    "oracle_return": 0.7690305081113218,
+    "oracle_regret": 0.002348451521045166,
+    "minimum_example_regret": 1.74769193839186e-08,
+    "inspection_rate": 0.0737515951708531,
+    "oracle_inspection_rate": 0.07525634765625,
+    "duplicate_inspection_rate": 0.0034437277281669306,
+    "independent_inspection_rate": 0.3595253661148655,
+    "inspection_cost": 0.003992185487893364,
+    "terminal_brier": 0.22055432088943416,
+    "terminal_probability_rmse": 0.25160804994410524,
+    "audit_brier": 0.2351133496901017,
+    "audit_probability_rmse": 0.27443431688105635,
+    "duplicate_probability_change": 0.08831893004785903,
+    "sampled_report_variance": 0.008771437032395817,
+    "never_inspect_same_report_head_return": 0.7543589526307565,
+    "always_inspect_same_report_head_return": 0.695606202539782,
+    "oracle_never_inspect_return": 0.7585581358976546,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.4880889902744354,
+        "forecast": 0.0017898178068334973,
+        "event_probability": 0.21975730994140738
+      },
+      {
+        "bin": 1,
+        "mass": 0.005287593043232553,
+        "forecast": 0.14531288835868458,
+        "event_probability": 0.480531452328809
+      },
+      {
+        "bin": 2,
+        "mass": 0.004684169086488889,
+        "forecast": 0.24937193402230803,
+        "event_probability": 0.4888616204299218
+      },
+      {
+        "bin": 3,
+        "mass": 0.0031091103841017877,
+        "forecast": 0.34776604797654515,
+        "event_probability": 0.49872448625478205
+      },
+      {
+        "bin": 4,
+        "mass": 0.0033226652777728245,
+        "forecast": 0.44903534968179076,
+        "event_probability": 0.49932794279435844
+      },
+      {
+        "bin": 5,
+        "mass": 0.0037654325316865806,
+        "forecast": 0.5461814719776182,
+        "event_probability": 0.5044413111126421
+      },
+      {
+        "bin": 6,
+        "mass": 0.004534671661121762,
+        "forecast": 0.648810062286358,
+        "event_probability": 0.510125887309431
+      },
+      {
+        "bin": 7,
+        "mass": 0.005550923925614738,
+        "forecast": 0.7543688059818665,
+        "event_probability": 0.5218459624340168
+      },
+      {
+        "bin": 8,
+        "mass": 0.0076180859445043065,
+        "forecast": 0.8561602681277446,
+        "event_probability": 0.5301992144513249
+      },
+      {
+        "bin": 9,
+        "mass": 0.47403835787104115,
+        "forecast": 0.997832290382658,
+        "event_probability": 0.7820757149986153
+      }
+    ]
+  },
+  {
+    "model": "forecast-s23",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.83104330879463,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.008156416799471412,
+    "minimum_example_regret": 7.93544894495124e-06,
+    "inspection_rate": 0.05451998520205811,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 0.0005059125941975034,
+    "independent_inspection_rate": 0.27406590196272557,
+    "inspection_cost": 0.0025093325190699927,
+    "terminal_brier": 0.164470230183629,
+    "terminal_probability_rmse": 0.077517532390918,
+    "audit_brier": 0.18237987483886703,
+    "audit_probability_rmse": 0.15026882388152696,
+    "duplicate_probability_change": 0.1247953360051617,
+    "sampled_report_variance": 0.0019771285026710475,
+    "never_inspect_same_report_head_return": 0.8276940143626885,
+    "always_inspect_same_report_head_return": 0.7433121902863457,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.34689031209787663,
+        "forecast": 0.20683060970518055,
+        "event_probability": 0.1590245410596456
+      },
+      {
+        "bin": 3,
+        "mass": 0.06969131144407778,
+        "forecast": 0.3679763529562802,
+        "event_probability": 0.3485251803115475
+      },
+      {
+        "bin": 4,
+        "mass": 0.08247186982305436,
+        "forecast": 0.4392866455516339,
+        "event_probability": 0.4377560803921459
+      },
+      {
+        "bin": 5,
+        "mass": 0.08696843883293036,
+        "forecast": 0.5469984556354113,
+        "event_probability": 0.5452901198414655
+      },
+      {
+        "bin": 6,
+        "mass": 0.06311443877238669,
+        "forecast": 0.662674908607845,
+        "event_probability": 0.657653806472213
+      },
+      {
+        "bin": 7,
+        "mass": 0.11013757991407161,
+        "forecast": 0.7632533492367835,
+        "event_probability": 0.7208185659620109
+      },
+      {
+        "bin": 8,
+        "mass": 0.24072604911560253,
+        "forecast": 0.8737648109400135,
+        "event_probability": 0.8861046990022511
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s23",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.8180729829311545,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.021126742662946854,
+    "minimum_example_regret": 2.739915814509164e-06,
+    "inspection_rate": 0.0002027889912816714,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 0.00024190775351888772,
+    "independent_inspection_rate": 4.378664053757331e-05,
+    "inspection_cost": 7.23227427783563e-06,
+    "terminal_brier": 0.18111439260882378,
+    "terminal_probability_rmse": 0.12864476815797532,
+    "audit_brier": 0.18668492424905941,
+    "audit_probability_rmse": 0.16396880447490544,
+    "duplicate_probability_change": 0.057637018013820054,
+    "sampled_report_variance": 0.000805392185743849,
+    "never_inspect_same_report_head_return": 0.8180806761168788,
+    "always_inspect_same_report_head_return": 0.7435269370938763,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 3,
+        "mass": 0.4517810866858491,
+        "forecast": 0.3519890875149764,
+        "event_probability": 0.2169532402475301
+      },
+      {
+        "bin": 4,
+        "mass": 0.06115680340807668,
+        "forecast": 0.46259192461564164,
+        "event_probability": 0.470029027669823
+      },
+      {
+        "bin": 5,
+        "mass": 0.07275377648250944,
+        "forecast": 0.5451847035148631,
+        "event_probability": 0.5521026781456186
+      },
+      {
+        "bin": 6,
+        "mass": 0.13470447835025506,
+        "forecast": 0.6496430298063648,
+        "event_probability": 0.6734487851324423
+      },
+      {
+        "bin": 7,
+        "mass": 0.04205310150696049,
+        "forecast": 0.7469164370945011,
+        "event_probability": 0.7432938360082253
+      },
+      {
+        "bin": 8,
+        "mass": 0.23755075356634922,
+        "forecast": 0.8467038756443952,
+        "event_probability": 0.8767861570795903
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.7683632140446266,
+    "oracle_return": 0.7690305081113218,
+    "oracle_regret": 0.0006672940666952615,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.07952880859375,
+    "oracle_inspection_rate": 0.07525634765625,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.40278207109737246,
+    "inspection_cost": 0.004127882552694473,
+    "terminal_brier": 0.15757579470636782,
+    "terminal_probability_rmse": 0.021606556060055054,
+    "audit_brier": 0.16035060783011212,
+    "audit_probability_rmse": 0.023483024123448697,
+    "duplicate_probability_change": 0.01548976041175438,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7579503308289518,
+    "always_inspect_same_report_head_return": 0.7116339844743572,
+    "oracle_never_inspect_return": 0.7585581358976546,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.10354430524888904,
+        "forecast": 0.07063120228104697,
+        "event_probability": 0.06092591721575723
+      },
+      {
+        "bin": 1,
+        "mass": 0.14125735186949723,
+        "forecast": 0.1451291935009822,
+        "event_probability": 0.14357672467158666
+      },
+      {
+        "bin": 2,
+        "mass": 0.09557589928751643,
+        "forecast": 0.2476586418787339,
+        "event_probability": 0.24503413904285523
+      },
+      {
+        "bin": 3,
+        "mass": 0.08596805690360165,
+        "forecast": 0.3494120278022854,
+        "event_probability": 0.3449636488932299
+      },
+      {
+        "bin": 4,
+        "mass": 0.07403416285206825,
+        "forecast": 0.44945470705176677,
+        "event_probability": 0.4440020738823116
+      },
+      {
+        "bin": 5,
+        "mass": 0.074321720219586,
+        "forecast": 0.5517724315094518,
+        "event_probability": 0.5472144270342479
+      },
+      {
+        "bin": 6,
+        "mass": 0.08209385342830008,
+        "forecast": 0.6515888669218627,
+        "event_probability": 0.6467530997337871
+      },
+      {
+        "bin": 7,
+        "mass": 0.09667486021376234,
+        "forecast": 0.751592000939465,
+        "event_probability": 0.7462588684801927
+      },
+      {
+        "bin": 8,
+        "mass": 0.13556647387115378,
+        "forecast": 0.8539853055180099,
+        "event_probability": 0.8476034240204192
+      },
+      {
+        "bin": 9,
+        "mass": 0.11096331610562521,
+        "forecast": 0.9309686004620206,
+        "event_probability": 0.9357345062763771
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.8386777418716829,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.0005219837224184514,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.0732421875,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.37094281298299847,
+    "inspection_cost": 0.0030113895235643895,
+    "terminal_brier": 0.15810721739368366,
+    "terminal_probability_rmse": 0.02152866788615106,
+    "audit_brier": 0.16035060783011212,
+    "audit_probability_rmse": 0.023483024123448697,
+    "duplicate_probability_change": 0.01548976041175438,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8348348343972205,
+    "always_inspect_same_report_head_return": 0.7830347224295463,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.10445652534658742,
+        "forecast": 0.06989048417960392,
+        "event_probability": 0.060286359677171206
+      },
+      {
+        "bin": 1,
+        "mass": 0.1376173677698439,
+        "forecast": 0.14483062566629265,
+        "event_probability": 0.1433190103520886
+      },
+      {
+        "bin": 2,
+        "mass": 0.09332030014414319,
+        "forecast": 0.2478954112162237,
+        "event_probability": 0.24524221993952078
+      },
+      {
+        "bin": 3,
+        "mass": 0.08623454572903709,
+        "forecast": 0.34985262322696165,
+        "event_probability": 0.34509513153426974
+      },
+      {
+        "bin": 4,
+        "mass": 0.07940629404455739,
+        "forecast": 0.45003107752200433,
+        "event_probability": 0.44337482465188865
+      },
+      {
+        "bin": 5,
+        "mass": 0.07912730437191405,
+        "forecast": 0.5509950102463255,
+        "event_probability": 0.5461547763193946
+      },
+      {
+        "bin": 6,
+        "mass": 0.08129093678064925,
+        "forecast": 0.6514691470127469,
+        "event_probability": 0.6472186214879636
+      },
+      {
+        "bin": 7,
+        "mass": 0.09456598734060724,
+        "forecast": 0.7516298577516528,
+        "event_probability": 0.7469437630758072
+      },
+      {
+        "bin": 8,
+        "mass": 0.13142347986066769,
+        "forecast": 0.8542200250723065,
+        "event_probability": 0.8481068154944812
+      },
+      {
+        "bin": 9,
+        "mass": 0.11255725861199278,
+        "forecast": 0.9317453020117348,
+        "event_probability": 0.936289350917073
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s37",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.7672082383655502,
+    "oracle_return": 0.7690305081113218,
+    "oracle_regret": 0.0018222697457716218,
+    "minimum_example_regret": 3.459930947302681e-08,
+    "inspection_rate": 0.07926458696789354,
+    "oracle_inspection_rate": 0.07525634765625,
+    "duplicate_inspection_rate": 0.0021125355160959754,
+    "independent_inspection_rate": 0.39285726843302066,
+    "inspection_cost": 0.004393347248665414,
+    "terminal_brier": 0.2212069016759583,
+    "terminal_probability_rmse": 0.25321837632361655,
+    "audit_brier": 0.23886547038865655,
+    "audit_probability_rmse": 0.2811873307610549,
+    "duplicate_probability_change": 0.11759484247036696,
+    "sampled_report_variance": 0.007191512709826081,
+    "never_inspect_same_report_head_return": 0.7562049985534616,
+    "always_inspect_same_report_head_return": 0.6888082198814395,
+    "oracle_never_inspect_return": 0.7585581358976546,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.49811118439755114,
+        "forecast": 0.0015266594179713401,
+        "event_probability": 0.22425723832012248
+      },
+      {
+        "bin": 1,
+        "mass": 0.005750790613010903,
+        "forecast": 0.14385652678654334,
+        "event_probability": 0.4937296900269789
+      },
+      {
+        "bin": 2,
+        "mass": 0.0036072141874668607,
+        "forecast": 0.24509455178583417,
+        "event_probability": 0.495994884702663
+      },
+      {
+        "bin": 3,
+        "mass": 0.0029037389696295354,
+        "forecast": 0.348001729309012,
+        "event_probability": 0.5111936658303852
+      },
+      {
+        "bin": 4,
+        "mass": 0.0027080907785425722,
+        "forecast": 0.44488616720759666,
+        "event_probability": 0.5090816013955116
+      },
+      {
+        "bin": 5,
+        "mass": 0.003067410536945909,
+        "forecast": 0.5505207880112641,
+        "event_probability": 0.5178386172181386
+      },
+      {
+        "bin": 6,
+        "mass": 0.002842264452815718,
+        "forecast": 0.6490169211210464,
+        "event_probability": 0.5193286861618955
+      },
+      {
+        "bin": 7,
+        "mass": 0.0033349943054541563,
+        "forecast": 0.7572719056398795,
+        "event_probability": 0.5280715588625323
+      },
+      {
+        "bin": 8,
+        "mass": 0.007535495533792637,
+        "forecast": 0.8535114899676483,
+        "event_probability": 0.5279268006003113
+      },
+      {
+        "bin": 9,
+        "mass": 0.4701388162247906,
+        "forecast": 0.9981307311132392,
+        "event_probability": 0.785265183301251
+      }
+    ]
+  },
+  {
+    "model": "forecast-s37",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.8309076505258914,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.008292075068209939,
+    "minimum_example_regret": 1.9586423553208387e-05,
+    "inspection_rate": 0.047549208686904085,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 0.0006931391360416743,
+    "independent_inspection_rate": 0.238000664181275,
+    "inspection_cost": 0.0021963382365688486,
+    "terminal_brier": 0.1653853038113105,
+    "terminal_probability_rmse": 0.0808777954163674,
+    "audit_brier": 0.17770319745116964,
+    "audit_probability_rmse": 0.1338059865739944,
+    "duplicate_probability_change": 0.10350285191591796,
+    "sampled_report_variance": 0.0015107074262291987,
+    "never_inspect_same_report_head_return": 0.8278574090685479,
+    "always_inspect_same_report_head_return": 0.7531395869519036,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.3154935205312035,
+        "forecast": 0.2189370051667125,
+        "event_probability": 0.141163760375691
+      },
+      {
+        "bin": 3,
+        "mass": 0.10190632513263263,
+        "forecast": 0.3358931532769734,
+        "event_probability": 0.32943412938029165
+      },
+      {
+        "bin": 4,
+        "mass": 0.08840250743276912,
+        "forecast": 0.46427261254414454,
+        "event_probability": 0.4427588341159857
+      },
+      {
+        "bin": 5,
+        "mass": 0.08236233759967919,
+        "forecast": 0.5350186178476907,
+        "event_probability": 0.5554401484500866
+      },
+      {
+        "bin": 6,
+        "mass": 0.13181757328268945,
+        "forecast": 0.6461925591245868,
+        "event_probability": 0.6895357191998334
+      },
+      {
+        "bin": 7,
+        "mass": 0.28001773602102614,
+        "forecast": 0.7934052412479554,
+        "event_probability": 0.8688558588008759
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s37",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "more_duplicates",
+    "world_seed": 8300201,
+    "world_sha256": "9c4f5229678c502259334afa5e81511116534a00cee9bf5996aa8286738370f9",
+    "net_return": 0.8265039705348535,
+    "oracle_return": 0.8391997255941014,
+    "oracle_regret": 0.01269575505924793,
+    "minimum_example_regret": 3.3369956921047716e-06,
+    "inspection_rate": 4.821493106855687e-05,
+    "oracle_inspection_rate": 0.07196044921875,
+    "duplicate_inspection_rate": 5.04526270475835e-05,
+    "independent_inspection_rate": 3.9119578849632265e-05,
+    "inspection_cost": 2.6404620457669708e-06,
+    "terminal_brier": 0.17224779951159258,
+    "terminal_probability_rmse": 0.08765187608374478,
+    "audit_brier": 0.1823891515202145,
+    "audit_probability_rmse": 0.1502996876646284,
+    "duplicate_probability_change": 0.08993531481599942,
+    "sampled_report_variance": 0.0012455894915081932,
+    "never_inspect_same_report_head_return": 0.8265066606037288,
+    "always_inspect_same_report_head_return": 0.7438269537417116,
+    "oracle_never_inspect_return": 0.8352262523406847,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 2.632967971961297e-05,
+        "forecast": 0.1999929232633205,
+        "event_probability": 0.08666002735317499
+      },
+      {
+        "bin": 2,
+        "mass": 0.3312734785335199,
+        "forecast": 0.20661812901106172,
+        "event_probability": 0.15875460589769158
+      },
+      {
+        "bin": 3,
+        "mass": 0.09051459093969876,
+        "forecast": 0.35721193533515416,
+        "event_probability": 0.35313971239003844
+      },
+      {
+        "bin": 4,
+        "mass": 0.0664061815555376,
+        "forecast": 0.45140469296336094,
+        "event_probability": 0.44032513862869854
+      },
+      {
+        "bin": 5,
+        "mass": 0.13384994238780332,
+        "forecast": 0.563328457808533,
+        "event_probability": 0.5588160561306343
+      },
+      {
+        "bin": 6,
+        "mass": 0.06561268688092396,
+        "forecast": 0.6311981713642283,
+        "event_probability": 0.6728534240648398
+      },
+      {
+        "bin": 7,
+        "mass": 0.3123167900227969,
+        "forecast": 0.7473388432631036,
+        "event_probability": 0.8467066120466211
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.7635498288014915,
+    "oracle_return": 0.7891524681642963,
+    "oracle_regret": 0.025602639362804883,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.20465087890625,
+    "oracle_inspection_rate": 0.25482177734375,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.27306783940060264,
+    "inspection_cost": 0.008943496450612543,
+    "terminal_brier": 0.15901070590777122,
+    "terminal_probability_rmse": 0.07855581795847538,
+    "audit_brier": 0.15632780772885013,
+    "audit_probability_rmse": 0.08193756256117281,
+    "duplicate_probability_change": 0.017711898653646623,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7500328470662041,
+    "always_inspect_same_report_head_return": 0.7336599207290024,
+    "oracle_never_inspect_return": 0.7595715278287921,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.05813151074262779,
+        "forecast": 0.07627881242058865,
+        "event_probability": 0.05024543820850911
+      },
+      {
+        "bin": 1,
+        "mass": 0.14988685619955558,
+        "forecast": 0.14813884065968008,
+        "event_probability": 0.10160817203493255
+      },
+      {
+        "bin": 2,
+        "mass": 0.11504183999251627,
+        "forecast": 0.24764188267581072,
+        "event_probability": 0.1929284617242595
+      },
+      {
+        "bin": 3,
+        "mass": 0.07740017813995184,
+        "forecast": 0.34636476240220937,
+        "event_probability": 0.3179864398357998
+      },
+      {
+        "bin": 4,
+        "mass": 0.05048297843811508,
+        "forecast": 0.44771319438768126,
+        "event_probability": 0.4687159838947438
+      },
+      {
+        "bin": 5,
+        "mass": 0.06460437587666812,
+        "forecast": 0.5558391492758088,
+        "event_probability": 0.5681184969484179
+      },
+      {
+        "bin": 6,
+        "mass": 0.1019458927986935,
+        "forecast": 0.6526170636986863,
+        "event_probability": 0.6009901404460788
+      },
+      {
+        "bin": 7,
+        "mass": 0.1227440827143881,
+        "forecast": 0.7512900857760522,
+        "event_probability": 0.6983234692654041
+      },
+      {
+        "bin": 8,
+        "mass": 0.14556550775373372,
+        "forecast": 0.8536197742984071,
+        "event_probability": 0.8271984375239183
+      },
+      {
+        "bin": 9,
+        "mass": 0.11419677734375,
+        "forecast": 0.9282299367773666,
+        "event_probability": 0.9288503277868081
+      }
+    ]
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.832418575621364,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.011788421336055342,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.07647705078125,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.1020441404023129,
+    "inspection_cost": 0.001344595325690534,
+    "terminal_brier": 0.16605068008043106,
+    "terminal_probability_rmse": 0.07538800450350003,
+    "audit_brier": 0.15632780772885013,
+    "audit_probability_rmse": 0.08193756256117281,
+    "duplicate_probability_change": 0.017711898653646623,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8307614902265201,
+    "always_inspect_same_report_head_return": 0.7946965063430915,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.05381797362227966,
+        "forecast": 0.07566104175843855,
+        "event_probability": 0.05248232892404227
+      },
+      {
+        "bin": 1,
+        "mass": 0.13173600900579757,
+        "forecast": 0.14716361468189976,
+        "event_probability": 0.10645731308483324
+      },
+      {
+        "bin": 2,
+        "mass": 0.09357039206148798,
+        "forecast": 0.24790076106134543,
+        "event_probability": 0.1993155726197637
+      },
+      {
+        "bin": 3,
+        "mass": 0.07784660654985597,
+        "forecast": 0.34851261043650517,
+        "event_probability": 0.30149593781336703
+      },
+      {
+        "bin": 4,
+        "mass": 0.07790962161181966,
+        "forecast": 0.4502488805863547,
+        "event_probability": 0.395714392625345
+      },
+      {
+        "bin": 5,
+        "mass": 0.0876659680110363,
+        "forecast": 0.5509292898038584,
+        "event_probability": 0.48422298854137535
+      },
+      {
+        "bin": 6,
+        "mass": 0.09822707890491009,
+        "forecast": 0.651614184598726,
+        "event_probability": 0.5800096545965511
+      },
+      {
+        "bin": 7,
+        "mass": 0.11897664938970329,
+        "forecast": 0.7517242286190258,
+        "event_probability": 0.6945247567674244
+      },
+      {
+        "bin": 8,
+        "mass": 0.14605292349935944,
+        "forecast": 0.8535535470016942,
+        "event_probability": 0.8275350357924481
+      },
+      {
+        "bin": 9,
+        "mass": 0.11419677734375,
+        "forecast": 0.9282299367773666,
+        "event_probability": 0.9288503277868081
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s11",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 11,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.7497364527884545,
+    "oracle_return": 0.7891524681642963,
+    "oracle_regret": 0.03941601537584197,
+    "minimum_example_regret": 1.2218638351102484e-08,
+    "inspection_rate": 2.893416671884688e-05,
+    "oracle_inspection_rate": 0.25482177734375,
+    "duplicate_inspection_rate": 7.703425595598196e-05,
+    "independent_inspection_rate": 1.285379646732481e-05,
+    "inspection_cost": 1.3970588409062536e-06,
+    "terminal_brier": 0.2260718609893799,
+    "terminal_probability_rmse": 0.24929864100446558,
+    "audit_brier": 0.3012296114787943,
+    "audit_probability_rmse": 0.3893784379089452,
+    "duplicate_probability_change": 0.13972441755757392,
+    "sampled_report_variance": 0.024190289163324788,
+    "never_inspect_same_report_head_return": 0.7497381832132697,
+    "always_inspect_same_report_head_return": 0.5446338399539008,
+    "oracle_never_inspect_return": 0.7595715278287921,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.4583135671599411,
+        "forecast": 0.005584581260794057,
+        "event_probability": 0.22602442519443797
+      },
+      {
+        "bin": 1,
+        "mass": 0.0192261118851795,
+        "forecast": 0.1437044543150628,
+        "event_probability": 0.4590011519051828
+      },
+      {
+        "bin": 2,
+        "mass": 0.014160185264611956,
+        "forecast": 0.24433331106197828,
+        "event_probability": 0.47531853318132283
+      },
+      {
+        "bin": 3,
+        "mass": 0.011901867737806078,
+        "forecast": 0.3482934333083324,
+        "event_probability": 0.488472454549364
+      },
+      {
+        "bin": 4,
+        "mass": 0.008911159265192327,
+        "forecast": 0.44905756982897366,
+        "event_probability": 0.5219983764080368
+      },
+      {
+        "bin": 5,
+        "mass": 0.010192880958634336,
+        "forecast": 0.5488693508234957,
+        "event_probability": 0.5164078371791639
+      },
+      {
+        "bin": 6,
+        "mass": 0.011962924169934918,
+        "forecast": 0.6488239979029906,
+        "event_probability": 0.5380924520243485
+      },
+      {
+        "bin": 7,
+        "mass": 0.012146044781255054,
+        "forecast": 0.7508061566470413,
+        "event_probability": 0.5582497978390154
+      },
+      {
+        "bin": 8,
+        "mass": 0.01733403134535119,
+        "forecast": 0.8559961853695857,
+        "event_probability": 0.5669101671632831
+      },
+      {
+        "bin": 9,
+        "mass": 0.4358512274320936,
+        "forecast": 0.9944075502396965,
+        "event_probability": 0.7820800491614552
+      }
+    ]
+  },
+  {
+    "model": "forecast-s11",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.8216200941697811,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.022586902787638308,
+    "minimum_example_regret": 8.858877022460687e-05,
+    "inspection_rate": 9.54475835188849e-06,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 3.4614471613040644e-05,
+    "independent_inspection_rate": 1.163687178582066e-06,
+    "inspection_cost": 3.917666340559463e-07,
+    "terminal_brier": 0.17600280472587876,
+    "terminal_probability_rmse": 0.1099122618124177,
+    "audit_brier": 0.23006768762146168,
+    "audit_probability_rmse": 0.2836435157924074,
+    "duplicate_probability_change": 0.10419836118000579,
+    "sampled_report_variance": 0.0023767093377061077,
+    "never_inspect_same_report_head_return": 0.8216205682646965,
+    "always_inspect_same_report_head_return": 0.6521815829673363,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.23400859528757018,
+        "forecast": 0.24320672382582526,
+        "event_probability": 0.13162585360288284
+      },
+      {
+        "bin": 3,
+        "mass": 0.1380615704767189,
+        "forecast": 0.33281665624759,
+        "event_probability": 0.27104914915518924
+      },
+      {
+        "bin": 4,
+        "mass": 0.08386215288927859,
+        "forecast": 0.4552483954089049,
+        "event_probability": 0.4025409688711742
+      },
+      {
+        "bin": 5,
+        "mass": 0.23748739437820743,
+        "forecast": 0.5744286478835834,
+        "event_probability": 0.5812402397137157
+      },
+      {
+        "bin": 6,
+        "mass": 0.09301742142128458,
+        "forecast": 0.6302405785520693,
+        "event_probability": 0.7569475835774028
+      },
+      {
+        "bin": 7,
+        "mass": 0.057311659563565924,
+        "forecast": 0.7523177422671631,
+        "event_probability": 0.8275661475215905
+      },
+      {
+        "bin": 8,
+        "mass": 0.1562512059833744,
+        "forecast": 0.8398858587038676,
+        "event_probability": 0.9019631715485404
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s11",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 11,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.8196386121744371,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.024568384782982268,
+    "minimum_example_regret": 1.7057985654267416e-06,
+    "inspection_rate": 0.00011649122536456016,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 7.66821619019281e-05,
+    "independent_inspection_rate": 0.0001297998177185063,
+    "inspection_cost": 6.432997250865895e-06,
+    "terminal_brier": 0.17951438252352664,
+    "terminal_probability_rmse": 0.12488477807993742,
+    "audit_brier": 0.19248272072382994,
+    "audit_probability_rmse": 0.20704752390078443,
+    "duplicate_probability_change": 0.035503975228473414,
+    "sampled_report_variance": 0.0008405723047853344,
+    "never_inspect_same_report_head_return": 0.8196458700422851,
+    "always_inspect_same_report_head_return": 0.7313803793749394,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 3.439002815910907e-06,
+        "forecast": 0.29995938062209626,
+        "event_probability": 0.23409004001832098
+      },
+      {
+        "bin": 3,
+        "mass": 0.42535344316825113,
+        "forecast": 0.3038074260111239,
+        "event_probability": 0.20743201272004821
+      },
+      {
+        "bin": 4,
+        "mass": 0.059570069546791525,
+        "forecast": 0.4615205115020558,
+        "event_probability": 0.4283893820755534
+      },
+      {
+        "bin": 5,
+        "mass": 0.09319908571953012,
+        "forecast": 0.5462559095045227,
+        "event_probability": 0.5316270755056571
+      },
+      {
+        "bin": 6,
+        "mass": 0.06322672764886655,
+        "forecast": 0.6482454681632605,
+        "event_probability": 0.6186739798620837
+      },
+      {
+        "bin": 7,
+        "mass": 0.35864723491374473,
+        "forecast": 0.7474217059783415,
+        "event_probability": 0.826365690317623
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.7488430452050754,
+    "oracle_return": 0.7891524681642963,
+    "oracle_regret": 0.04030942295922094,
+    "minimum_example_regret": -5.551115123125783e-17,
+    "inspection_rate": 0.2301025390625,
+    "oracle_inspection_rate": 0.25482177734375,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.30702825963026303,
+    "inspection_cost": 0.011603896796984259,
+    "terminal_brier": 0.16567355530911926,
+    "terminal_probability_rmse": 0.10446809061672883,
+    "audit_brier": 0.16282874103885897,
+    "audit_probability_rmse": 0.11495519765750019,
+    "duplicate_probability_change": 0.013908742439913836,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7308003666130763,
+    "always_inspect_same_report_head_return": 0.7307849030190448,
+    "oracle_never_inspect_return": 0.7595715278287921,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.07201822118321849,
+        "forecast": 0.07302576677343958,
+        "event_probability": 0.045264266454941325
+      },
+      {
+        "bin": 1,
+        "mass": 0.12151743138204366,
+        "forecast": 0.1476154642918996,
+        "event_probability": 0.09589156387461205
+      },
+      {
+        "bin": 2,
+        "mass": 0.09484661390398387,
+        "forecast": 0.24770263726721692,
+        "event_probability": 0.17857144781841436
+      },
+      {
+        "bin": 3,
+        "mass": 0.07268974618779203,
+        "forecast": 0.3475395971029305,
+        "event_probability": 0.28644200180915663
+      },
+      {
+        "bin": 4,
+        "mass": 0.04827393440358635,
+        "forecast": 0.44628419493809524,
+        "event_probability": 0.4386144514699938
+      },
+      {
+        "bin": 5,
+        "mass": 0.0561781051065284,
+        "forecast": 0.557346592804934,
+        "event_probability": 0.5368620805307813
+      },
+      {
+        "bin": 6,
+        "mass": 0.10487204025744844,
+        "forecast": 0.6537895046213467,
+        "event_probability": 0.5482946361360566
+      },
+      {
+        "bin": 7,
+        "mass": 0.12343082939037918,
+        "forecast": 0.7502705252019918,
+        "event_probability": 0.6367518830342884
+      },
+      {
+        "bin": 8,
+        "mass": 0.15191139515024266,
+        "forecast": 0.8526330387568355,
+        "event_probability": 0.7796871792986396
+      },
+      {
+        "bin": 9,
+        "mass": 0.15426168303477691,
+        "forecast": 0.9367454210453685,
+        "event_probability": 0.90914624898258
+      }
+    ]
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.8223069644683754,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.021900032489044048,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.1048583984375,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.1399136737519342,
+    "inspection_cost": 0.002746127152775557,
+    "terminal_brier": 0.17474057381530836,
+    "terminal_probability_rmse": 0.11981906018607164,
+    "audit_brier": 0.16282874103885897,
+    "audit_probability_rmse": 0.11495519765750019,
+    "duplicate_probability_change": 0.013908742439913836,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8196127417945507,
+    "always_inspect_same_report_head_return": 0.7928304095261081,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0607223167110352,
+        "forecast": 0.07161998710560093,
+        "event_probability": 0.04918409966334417
+      },
+      {
+        "bin": 1,
+        "mass": 0.09544528135132657,
+        "forecast": 0.14814687545566216,
+        "event_probability": 0.10304855296942762
+      },
+      {
+        "bin": 2,
+        "mass": 0.08270791886098153,
+        "forecast": 0.24832037565160892,
+        "event_probability": 0.1825860946919145
+      },
+      {
+        "bin": 3,
+        "mass": 0.07579651175000114,
+        "forecast": 0.34884827726750395,
+        "event_probability": 0.2659337505509638
+      },
+      {
+        "bin": 4,
+        "mass": 0.07213614126869235,
+        "forecast": 0.45012359210451336,
+        "event_probability": 0.3592371926098966
+      },
+      {
+        "bin": 5,
+        "mass": 0.0864925554135835,
+        "forecast": 0.5524765045140378,
+        "event_probability": 0.4351025198098228
+      },
+      {
+        "bin": 6,
+        "mass": 0.09964882271730466,
+        "forecast": 0.6524722780619259,
+        "event_probability": 0.5189509330547275
+      },
+      {
+        "bin": 7,
+        "mass": 0.12083303176813709,
+        "forecast": 0.750959053278134,
+        "event_probability": 0.6344083370723438
+      },
+      {
+        "bin": 8,
+        "mass": 0.15191325467927064,
+        "forecast": 0.8526617646589645,
+        "event_probability": 0.780083328273661
+      },
+      {
+        "bin": 9,
+        "mass": 0.15430416547966735,
+        "forecast": 0.9367361066361982,
+        "event_probability": 0.9091581471021148
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s23",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 23,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.7415602639722998,
+    "oracle_return": 0.7891524681642963,
+    "oracle_regret": 0.04759220419199655,
+    "minimum_example_regret": 1.9211352370041013e-09,
+    "inspection_rate": 0.0007639264413929897,
+    "oracle_inspection_rate": 0.25482177734375,
+    "duplicate_inspection_rate": 0.0029878984350038824,
+    "independent_inspection_rate": 2.042900399802966e-05,
+    "inspection_cost": 2.2144216221562407e-05,
+    "terminal_brier": 0.23186900420443837,
+    "terminal_probability_rmse": 0.26066641928054024,
+    "audit_brier": 0.32453317966693673,
+    "audit_probability_rmse": 0.41823335124850186,
+    "duplicate_probability_change": 0.08100603962652242,
+    "sampled_report_variance": 0.026548587607040236,
+    "never_inspect_same_report_head_return": 0.7415825752459375,
+    "always_inspect_same_report_head_return": 0.49985035909454045,
+    "oracle_never_inspect_return": 0.7595715278287921,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.3801968470728788,
+        "forecast": 0.005441023302175736,
+        "event_probability": 0.1965559196163773
+      },
+      {
+        "bin": 1,
+        "mass": 0.02251748388305069,
+        "forecast": 0.14195726973740827,
+        "event_probability": 0.35568911903960715
+      },
+      {
+        "bin": 2,
+        "mass": 0.012694937621486024,
+        "forecast": 0.25234513527841496,
+        "event_probability": 0.3722138794954424
+      },
+      {
+        "bin": 3,
+        "mass": 0.010497486483664088,
+        "forecast": 0.3523592879374721,
+        "event_probability": 0.3808994776473248
+      },
+      {
+        "bin": 4,
+        "mass": 0.01031323507535396,
+        "forecast": 0.44809870601536284,
+        "event_probability": 0.40464272659831274
+      },
+      {
+        "bin": 5,
+        "mass": 0.010315559022487682,
+        "forecast": 0.5509682542880588,
+        "event_probability": 0.41389978772952785
+      },
+      {
+        "bin": 6,
+        "mass": 0.012999849797611547,
+        "forecast": 0.6529359737208348,
+        "event_probability": 0.4297701066485283
+      },
+      {
+        "bin": 7,
+        "mass": 0.01721054279477887,
+        "forecast": 0.7545674439824889,
+        "event_probability": 0.44416732555180294
+      },
+      {
+        "bin": 8,
+        "mass": 0.024474779597588613,
+        "forecast": 0.8546443271730609,
+        "event_probability": 0.46991880979320755
+      },
+      {
+        "bin": 9,
+        "mass": 0.4987792786510996,
+        "forecast": 0.9939072709043,
+        "event_probability": 0.7501342807776199
+      }
+    ]
+  },
+  {
+    "model": "forecast-s23",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.823397246258703,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.020809750698716364,
+    "minimum_example_regret": 9.830860279502751e-06,
+    "inspection_rate": 0.0001332415113595494,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 0.0005244447064990573,
+    "independent_inspection_rate": 2.458131927374174e-06,
+    "inspection_cost": 2.2712165673297436e-06,
+    "terminal_brier": 0.17388674531075343,
+    "terminal_probability_rmse": 0.09982319288454883,
+    "audit_brier": 0.2352697784988095,
+    "audit_probability_rmse": 0.29267001029901496,
+    "duplicate_probability_change": 0.12211851566195052,
+    "sampled_report_variance": 0.002713737213976183,
+    "never_inspect_same_report_head_return": 0.823405137473042,
+    "always_inspect_same_report_head_return": 0.6391711350186374,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.25701875223633625,
+        "forecast": 0.2103586120298154,
+        "event_probability": 0.13621460106687738
+      },
+      {
+        "bin": 3,
+        "mass": 0.0887409478983468,
+        "forecast": 0.3688669260653542,
+        "event_probability": 0.27642342036202583
+      },
+      {
+        "bin": 4,
+        "mass": 0.16435824653005573,
+        "forecast": 0.4404118854742669,
+        "event_probability": 0.41368250372714305
+      },
+      {
+        "bin": 5,
+        "mass": 0.14843217908319575,
+        "forecast": 0.5423803232877823,
+        "event_probability": 0.5964205283604967
+      },
+      {
+        "bin": 6,
+        "mass": 0.08768783968326198,
+        "forecast": 0.6583335322229923,
+        "event_probability": 0.7269305798872869
+      },
+      {
+        "bin": 7,
+        "mass": 0.1537319451476807,
+        "forecast": 0.7560049554445553,
+        "event_probability": 0.8337263865979442
+      },
+      {
+        "bin": 8,
+        "mass": 0.10003008942112278,
+        "forecast": 0.8538634917183273,
+        "event_probability": 0.9078898770493532
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s23",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 23,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.8183912057579121,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.02581579119950733,
+    "minimum_example_regret": 3.3786051854833854e-06,
+    "inspection_rate": 8.173245736846585e-05,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 0.00024982333795364866,
+    "independent_inspection_rate": 2.553789227341124e-05,
+    "inspection_cost": 3.101298900062577e-06,
+    "terminal_brier": 0.18077818247085714,
+    "terminal_probability_rmse": 0.12983218107298033,
+    "audit_brier": 0.20028406911162047,
+    "audit_probability_rmse": 0.22510003452073582,
+    "duplicate_probability_change": 0.06005550805892201,
+    "sampled_report_variance": 0.0008275104723307108,
+    "never_inspect_same_report_head_return": 0.8183947040315214,
+    "always_inspect_same_report_head_return": 0.7162825916424531,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 3,
+        "mass": 0.4229117513695603,
+        "forecast": 0.3523061385208652,
+        "event_probability": 0.20353617181662378
+      },
+      {
+        "bin": 4,
+        "mass": 0.07226540142767902,
+        "forecast": 0.46374676823641914,
+        "event_probability": 0.4492199553717215
+      },
+      {
+        "bin": 5,
+        "mass": 0.08239752409319068,
+        "forecast": 0.5438163436203076,
+        "event_probability": 0.5442474709339189
+      },
+      {
+        "bin": 6,
+        "mass": 0.16174315565561825,
+        "forecast": 0.6539015414692912,
+        "event_probability": 0.6752286563070502
+      },
+      {
+        "bin": 7,
+        "mass": 0.048095737117989416,
+        "forecast": 0.742046246114476,
+        "event_probability": 0.7711307597084753
+      },
+      {
+        "bin": 8,
+        "mass": 0.21258643033596236,
+        "forecast": 0.8465729480573434,
+        "event_probability": 0.8895314247842624
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.7739704159939658,
+    "oracle_return": 0.7891524681642963,
+    "oracle_regret": 0.01518205217033057,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.28515625,
+    "oracle_inspection_rate": 0.25482177734375,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.3804870103428618,
+    "inspection_cost": 0.014316724580737628,
+    "terminal_brier": 0.15113392123873376,
+    "terminal_probability_rmse": 0.06037535264221484,
+    "audit_brier": 0.1535566444727715,
+    "audit_probability_rmse": 0.06279013379813334,
+    "duplicate_probability_change": 0.015310039360362052,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.7512127979894079,
+    "always_inspect_same_report_head_return": 0.7405147866835265,
+    "oracle_never_inspect_return": 0.7595715278287921,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.10146678721852445,
+        "forecast": 0.07492030774206765,
+        "event_probability": 0.06617738346119402
+      },
+      {
+        "bin": 1,
+        "mass": 0.17475527151759648,
+        "forecast": 0.14707370523050223,
+        "event_probability": 0.16432136707794734
+      },
+      {
+        "bin": 2,
+        "mass": 0.13233435786589617,
+        "forecast": 0.24710314003073813,
+        "event_probability": 0.28131874250871475
+      },
+      {
+        "bin": 3,
+        "mass": 0.084798994168157,
+        "forecast": 0.34549867748499113,
+        "event_probability": 0.37694944579028483
+      },
+      {
+        "bin": 4,
+        "mass": 0.04312194980315873,
+        "forecast": 0.4456787538045357,
+        "event_probability": 0.4375032738384077
+      },
+      {
+        "bin": 5,
+        "mass": 0.03927286631866695,
+        "forecast": 0.5539721014717635,
+        "event_probability": 0.5282945854024141
+      },
+      {
+        "bin": 6,
+        "mass": 0.07050259080104485,
+        "forecast": 0.6541266947523924,
+        "event_probability": 0.6616483188909031
+      },
+      {
+        "bin": 7,
+        "mass": 0.10732610952906552,
+        "forecast": 0.7517708001867738,
+        "event_probability": 0.7751533517860503
+      },
+      {
+        "bin": 8,
+        "mass": 0.1466974855955212,
+        "forecast": 0.8538324075090832,
+        "event_probability": 0.8850797235971696
+      },
+      {
+        "bin": 9,
+        "mass": 0.09972358718236866,
+        "forecast": 0.9270028079669368,
+        "event_probability": 0.9513391029424803
+      }
+    ]
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.836423277510372,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.007783719447047404,
+    "minimum_example_regret": -1.1102230246251565e-16,
+    "inspection_rate": 0.1810302734375,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 0.0,
+    "independent_inspection_rate": 0.24155061487091783,
+    "inspection_cost": 0.004794181467019598,
+    "terminal_brier": 0.1585762829066484,
+    "terminal_probability_rmse": 0.06654265764684729,
+    "audit_brier": 0.1535566444727715,
+    "audit_probability_rmse": 0.06279013379813334,
+    "duplicate_probability_change": 0.015310039360362052,
+    "sampled_report_variance": 0.0,
+    "never_inspect_same_report_head_return": 0.8311531783176932,
+    "always_inspect_same_report_head_return": 0.7998197551705881,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.10899069960747589,
+        "forecast": 0.07380043902663612,
+        "event_probability": 0.06471560356676363
+      },
+      {
+        "bin": 1,
+        "mass": 0.1634125303824113,
+        "forecast": 0.1459175754994553,
+        "event_probability": 0.1649198205927482
+      },
+      {
+        "bin": 2,
+        "mass": 0.11467990263233571,
+        "forecast": 0.24764705434987927,
+        "event_probability": 0.29112458534014374
+      },
+      {
+        "bin": 3,
+        "mass": 0.09027543184064783,
+        "forecast": 0.34800475446734,
+        "event_probability": 0.40511417760567764
+      },
+      {
+        "bin": 4,
+        "mass": 0.07585289278348191,
+        "forecast": 0.44935967991419506,
+        "event_probability": 0.49902836917574345
+      },
+      {
+        "bin": 5,
+        "mass": 0.07001258797708723,
+        "forecast": 0.5495290976821328,
+        "event_probability": 0.589851488034191
+      },
+      {
+        "bin": 6,
+        "mass": 0.07260992611131539,
+        "forecast": 0.6502278054408848,
+        "event_probability": 0.684093202460052
+      },
+      {
+        "bin": 7,
+        "mass": 0.08837010238704303,
+        "forecast": 0.7511085311806915,
+        "event_probability": 0.7821615473600029
+      },
+      {
+        "bin": 8,
+        "mass": 0.12565334333595934,
+        "forecast": 0.8543623364741855,
+        "event_probability": 0.8850460218035309
+      },
+      {
+        "bin": 9,
+        "mass": 0.09014258294224234,
+        "forecast": 0.9267752126003304,
+        "event_probability": 0.9504696578316534
+      }
+    ]
+  },
+  {
+    "model": "accuracy-s37",
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "seed": 37,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.7479869258490814,
+    "oracle_return": 0.7891524681642963,
+    "oracle_regret": 0.04116554231521492,
+    "minimum_example_regret": 7.466387091925597e-10,
+    "inspection_rate": 0.00042173943642253935,
+    "oracle_inspection_rate": 0.25482177734375,
+    "duplicate_inspection_rate": 0.0016401833606426257,
+    "independent_inspection_rate": 1.4400702899984168e-05,
+    "inspection_cost": 1.1642537961117355e-05,
+    "terminal_brier": 0.23655069343894886,
+    "terminal_probability_rmse": 0.26949705079492065,
+    "audit_brier": 0.3177156533659566,
+    "audit_probability_rmse": 0.4100019631606324,
+    "duplicate_probability_change": 0.10948757079706807,
+    "sampled_report_variance": 0.01545073817400857,
+    "never_inspect_same_report_head_return": 0.7479976434315816,
+    "always_inspect_same_report_head_return": 0.5246228851480956,
+    "oracle_never_inspect_return": 0.7595715278287921,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.5158583654942646,
+        "forecast": 0.003169155755002497,
+        "event_probability": 0.25495939835478465
+      },
+      {
+        "bin": 1,
+        "mass": 0.011653075230718074,
+        "forecast": 0.14525623905264648,
+        "event_probability": 0.5240867624075014
+      },
+      {
+        "bin": 2,
+        "mass": 0.008411436069970796,
+        "forecast": 0.24449968930742708,
+        "event_probability": 0.541790565703067
+      },
+      {
+        "bin": 3,
+        "mass": 0.006892305464291283,
+        "forecast": 0.34973152005009606,
+        "event_probability": 0.537165249228366
+      },
+      {
+        "bin": 4,
+        "mass": 0.0064020297055689835,
+        "forecast": 0.4478102321207673,
+        "event_probability": 0.5669204351322853
+      },
+      {
+        "bin": 5,
+        "mass": 0.006225109198854937,
+        "forecast": 0.5513738026042101,
+        "event_probability": 0.5708819013132815
+      },
+      {
+        "bin": 6,
+        "mass": 0.006768438093025376,
+        "forecast": 0.6511304917238758,
+        "event_probability": 0.5723054033070265
+      },
+      {
+        "bin": 7,
+        "mass": 0.008846031266407163,
+        "forecast": 0.7559717009495539,
+        "event_probability": 0.5808246936256988
+      },
+      {
+        "bin": 8,
+        "mass": 0.012804348698648617,
+        "forecast": 0.8544999392046484,
+        "event_probability": 0.5864214094899972
+      },
+      {
+        "bin": 9,
+        "mass": 0.4161388607782501,
+        "forecast": 0.9961901564135608,
+        "event_probability": 0.791073127367361
+      }
+    ]
+  },
+  {
+    "model": "forecast-s37",
+    "recipe": "forecast",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.82603897441344,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.018168022543979444,
+    "minimum_example_regret": 4.460807532841171e-05,
+    "inspection_rate": 0.00016367291944725874,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 0.0006505082641847104,
+    "independent_inspection_rate": 9.186975930980127e-07,
+    "inspection_cost": 3.1559812651240154e-06,
+    "terminal_brier": 0.17166707810808599,
+    "terminal_probability_rmse": 0.08800556385826051,
+    "audit_brier": 0.22997388656014545,
+    "audit_probability_rmse": 0.2834781173031905,
+    "duplicate_probability_change": 0.10285944745180522,
+    "sampled_report_variance": 0.002290791497208929,
+    "never_inspect_same_report_head_return": 0.8260435980584637,
+    "always_inspect_same_report_head_return": 0.64811303483223,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 2,
+        "mass": 0.26520794126664765,
+        "forecast": 0.2304716553991894,
+        "event_probability": 0.1307347257821472
+      },
+      {
+        "bin": 3,
+        "mass": 0.13109869274332508,
+        "forecast": 0.33831878700333595,
+        "event_probability": 0.3079731523583045
+      },
+      {
+        "bin": 4,
+        "mass": 0.09941224282244823,
+        "forecast": 0.455760312007099,
+        "event_probability": 0.4351644586529773
+      },
+      {
+        "bin": 5,
+        "mass": 0.09353846293652185,
+        "forecast": 0.5454579066807667,
+        "event_probability": 0.5487582669996509
+      },
+      {
+        "bin": 6,
+        "mass": 0.19057648673400238,
+        "forecast": 0.6442100716186889,
+        "event_probability": 0.70448300191212
+      },
+      {
+        "bin": 7,
+        "mass": 0.22016617349705483,
+        "forecast": 0.7893524703998419,
+        "event_probability": 0.8852142282236565
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  },
+  {
+    "model": "forecast_no_exploration-s37",
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "seed": 37,
+    "domain": "reversed_new_source",
+    "world_seed": 8300301,
+    "world_sha256": "37849ab7812c703bf008360ad0005210621d667a6d687913e2ec663a7bc3559e",
+    "net_return": 0.8266806151771455,
+    "oracle_return": 0.8442069969574194,
+    "oracle_regret": 0.01752638178027395,
+    "minimum_example_regret": 4.2966581267345205e-06,
+    "inspection_rate": 3.745730312701163e-05,
+    "oracle_inspection_rate": 0.22296142578125,
+    "duplicate_inspection_rate": 5.078672355147301e-05,
+    "independent_inspection_rate": 3.300113643245882e-05,
+    "inspection_cost": 2.008331916105593e-06,
+    "terminal_brier": 0.1720440634830158,
+    "terminal_probability_rmse": 0.09012391255607866,
+    "audit_brier": 0.18433339540914834,
+    "audit_probability_rmse": 0.18633129591875958,
+    "duplicate_probability_change": 0.08995941684248968,
+    "sampled_report_variance": 0.0012733130079226542,
+    "never_inspect_same_report_head_return": 0.8266826905388495,
+    "always_inspect_same_report_head_return": 0.7390077528535133,
+    "oracle_never_inspect_return": 0.8358707118175364,
+    "calibration_bins_expected": [
+      {
+        "bin": 0,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 1,
+        "mass": 2.7055410857238738e-05,
+        "forecast": 0.19997661487926477,
+        "event_probability": 0.07402500570567948
+      },
+      {
+        "bin": 2,
+        "mass": 0.30124339585982746,
+        "forecast": 0.2073929447245156,
+        "event_probability": 0.14508016781549357
+      },
+      {
+        "bin": 3,
+        "mass": 0.09863216298193168,
+        "forecast": 0.3574185078158157,
+        "event_probability": 0.3285573009323703
+      },
+      {
+        "bin": 4,
+        "mass": 0.07263177501533999,
+        "forecast": 0.45389338135975327,
+        "event_probability": 0.4202927805123976
+      },
+      {
+        "bin": 5,
+        "mass": 0.14056383082088028,
+        "forecast": 0.5613332517178884,
+        "event_probability": 0.5535082046544275
+      },
+      {
+        "bin": 6,
+        "mass": 0.06384268223263333,
+        "forecast": 0.6341547771417386,
+        "event_probability": 0.6593655089506525
+      },
+      {
+        "bin": 7,
+        "mass": 0.3230590976785301,
+        "forecast": 0.7472681113833028,
+        "event_probability": 0.8427290924414814
+      },
+      {
+        "bin": 8,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      },
+      {
+        "bin": 9,
+        "mass": 0.0,
+        "forecast": null,
+        "event_probability": null
+      }
+    ]
+  }
+]

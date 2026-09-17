@@ -19,7 +19,17 @@ First Instinct takes some text, a question, and a list of described answers.
 One shared network scores the answers. It can choose a tool, identify an emotion,
 or judge how two sentences relate—without generating a stream of text.
 
-**Latest: [75 tiny policies, two sizes, and a data-coverage experiment](docs/ppo-data-results.md).**
+**Latest: [Learning when to buy evidence—and where the forecasts still fail](docs/learned-inspection.md).**
+Twelve tiny models learn to stop or buy another observation before reporting an
+answer. An initial exploration phase cut the forecast policy's lost reward by
+**63%** under familiar conditions. It almost never bought duplicate evidence,
+yet showing it a duplicate still moved its probability report by **11 percentage
+points**. Direct-label training produced much better forecasts, and unfamiliar
+sensors exposed large failures. All seeds, weights, traces, and a runnable
+two-step environment are included. [Try it →](docs/learned-inspection.md#reproduce-it)
+
+The earlier [75-policy size and data-coverage experiment](docs/ppo-data-results.md)
+compared the training method, model size and data coverage.
 We compared supervised learning, simple policy gradients, and Proximal Policy
 Optimization on a Mac. Broader data reduced the supervised model's probability
 error on reversed sensors from **21.4 to 2.7 percentage points**, at the same

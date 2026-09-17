@@ -1,0 +1,2402 @@
+[
+  {
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "domain": "expensive_inspection",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7565610059905331,
+        "min": 0.7496940291854722,
+        "max": 0.7626107025504628,
+        "standard_deviation": 0.006497004921790927
+      },
+      "oracle_return": {
+        "mean": 0.7686996382948322,
+        "min": 0.7686996382948322,
+        "max": 0.7686996382948322,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.012138632304299143,
+        "min": 0.00608893574436946,
+        "max": 0.01900560910936002,
+        "standard_deviation": 0.006497004921790919
+      },
+      "minimum_example_regret": {
+        "mean": 1.2842579601620349e-08,
+        "min": 3.356455863245955e-09,
+        "max": 2.8143451957785004e-08,
+        "standard_deviation": 1.3377491168516757e-08
+      },
+      "inspection_rate": {
+        "mean": 0.11625346458842929,
+        "min": 0.08175280210715617,
+        "max": 0.14876504375633715,
+        "standard_deviation": 0.03355037215937682
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.10308837890625,
+        "min": 0.10308837890625,
+        "max": 0.10308837890625,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 3.673257487765304e-05,
+        "min": 1.0984136580954891e-05,
+        "max": 5.652325649165251e-05,
+        "standard_deviation": 2.3346820106342208e-05
+      },
+      "independent_inspection_rate": {
+        "mean": 0.1553336037362862,
+        "min": 0.10924008010182885,
+        "max": 0.19877583106327415,
+        "standard_deviation": 0.044826718641229904
+      },
+      "inspection_cost": {
+        "mean": 0.024701381568068146,
+        "min": 0.016775307717860857,
+        "max": 0.031965109910714384,
+        "standard_deviation": 0.007616531286815815
+      },
+      "terminal_brier": {
+        "mean": 0.20950370625105041,
+        "min": 0.20340698855444905,
+        "max": 0.22165647793165755,
+        "standard_deviation": 0.010524628640721987
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.24750102953479525,
+        "min": 0.2367610529754166,
+        "max": 0.26378434428015457,
+        "standard_deviation": 0.014339142823694005
+      },
+      "audit_brier": {
+        "mean": 0.2151792748265202,
+        "min": 0.21179390209703514,
+        "max": 0.21691925357110295,
+        "standard_deviation": 0.0029322001905304346
+      },
+      "audit_probability_rmse": {
+        "mean": 0.26328415338892563,
+        "min": 0.2568153051182864,
+        "max": 0.2666073000070822,
+        "standard_deviation": 0.0056028894456677586
+      },
+      "duplicate_probability_change": {
+        "mean": 0.13414360847708887,
+        "min": 0.10203512546264236,
+        "max": 0.15519529105843385,
+        "standard_deviation": 0.028252264128845832
+      },
+      "sampled_report_variance": {
+        "mean": 0.009233906190348347,
+        "min": 0.007249615299172278,
+        "max": 0.011874185165009373,
+        "standard_deviation": 0.002381050584355115
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.7475417565323307,
+        "min": 0.7411104702962803,
+        "max": 0.7523329516619308,
+        "standard_deviation": 0.005788216143915733
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.574414038514976,
+        "min": 0.5708942894984715,
+        "max": 0.5778878873953084,
+        "standard_deviation": 0.0034970248787413055
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7594340528221423,
+        "min": 0.7594340528221422,
+        "max": 0.7594340528221422,
+        "standard_deviation": 1.3597399555105182e-16
+      }
+    }
+  },
+  {
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "domain": "in_distribution",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7951460888015925,
+        "min": 0.7938215543020714,
+        "max": 0.7963035274104332,
+        "standard_deviation": 0.0012493952157622355
+      },
+      "oracle_return": {
+        "mean": 0.7995540270015637,
+        "min": 0.7995540270015637,
+        "max": 0.7995540270015637,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.004407938199971269,
+        "min": 0.003250499591130566,
+        "max": 0.005732472699492451,
+        "standard_deviation": 0.0012493952157622567
+      },
+      "minimum_example_regret": {
+        "mean": 2.1746450954799695e-08,
+        "min": 1.4784618307395192e-08,
+        "max": 3.1304041470114896e-08,
+        "standard_deviation": 8.56015797686382e-09
+      },
+      "inspection_rate": {
+        "mean": 0.2795087902419763,
+        "min": 0.25673602852143584,
+        "max": 0.3019832097943118,
+        "standard_deviation": 0.02262506595177396
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.291259765625,
+        "min": 0.291259765625,
+        "max": 0.291259765625,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.001621996331952707,
+        "min": 7.66539141595632e-05,
+        "max": 0.003209695907241571,
+        "standard_deviation": 0.0015669504233373685
+      },
+      "independent_inspection_rate": {
+        "mean": 0.3687023181429521,
+        "min": 0.33911617609150485,
+        "max": 0.39840396401809974,
+        "standard_deviation": 0.029644062730286986
+      },
+      "inspection_cost": {
+        "mean": 0.015755642144026142,
+        "min": 0.014308434955894858,
+        "max": 0.017229114469820662,
+        "standard_deviation": 0.001460516894410612
+      },
+      "terminal_brier": {
+        "mean": 0.18442562057827608,
+        "min": 0.18287404541583782,
+        "max": 0.18594178409528736,
+        "standard_deviation": 0.0015341758829487528
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.22133249732226445,
+        "min": 0.2196419848129093,
+        "max": 0.22220097929251978,
+        "standard_deviation": 0.00146421099643418
+      },
+      "audit_brier": {
+        "mean": 0.21480580284009057,
+        "min": 0.21311855502629512,
+        "max": 0.21585286351503397,
+        "standard_deviation": 0.0014752933292945614
+      },
+      "audit_probability_rmse": {
+        "mean": 0.2634915512250064,
+        "min": 0.26028024158502244,
+        "max": 0.26548090825574727,
+        "standard_deviation": 0.00280742045113018
+      },
+      "duplicate_probability_change": {
+        "mean": 0.11858915111182104,
+        "min": 0.09311612747548256,
+        "max": 0.14029745381366251,
+        "standard_deviation": 0.023814895161294293
+      },
+      "sampled_report_variance": {
+        "mean": 0.004672648476105234,
+        "min": 0.0035933127039082706,
+        "max": 0.005928226646746428,
+        "standard_deviation": 0.001177391955710603
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.7508911337223628,
+        "min": 0.7455473412716005,
+        "max": 0.7538103830703683,
+        "standard_deviation": 0.004634465652574238
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7372760737574083,
+        "min": 0.7340787975712105,
+        "max": 0.7416634208813608,
+        "standard_deviation": 0.003929863778413348
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7599188158479911,
+        "min": 0.759918815847991,
+        "max": 0.759918815847991,
+        "standard_deviation": 1.3597399555105182e-16
+      }
+    }
+  },
+  {
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "domain": "more_duplicates",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7661523800333093,
+        "min": 0.7645668451441011,
+        "max": 0.7672082383655502,
+        "standard_deviation": 0.001398090654725172
+      },
+      "oracle_return": {
+        "mean": 0.7690305081113218,
+        "min": 0.7690305081113218,
+        "max": 0.7690305081113218,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.00287812807801249,
+        "min": 0.0018222697457716218,
+        "max": 0.004463662967220683,
+        "standard_deviation": 0.001398090654725162
+      },
+      "minimum_example_regret": {
+        "mean": 2.149297772165622e-08,
+        "min": 1.240270430802326e-08,
+        "max": 3.459930947302681e-08,
+        "standard_deviation": 1.1630514332644513e-08
+      },
+      "inspection_rate": {
+        "mean": 0.07307316166042857,
+        "min": 0.06620330284253906,
+        "max": 0.07926458696789354,
+        "standard_deviation": 0.0065570183598842756
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.07525634765625,
+        "min": 0.07525634765625,
+        "max": 0.07525634765625,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.001878130253799421,
+        "min": 7.812751713535653e-05,
+        "max": 0.0034437277281669306,
+        "standard_deviation": 0.0016950001667752664
+      },
+      "independent_inspection_rate": {
+        "mean": 0.36245290446282935,
+        "min": 0.33497607884060193,
+        "max": 0.39285726843302066,
+        "standard_deviation": 0.02905143520968421
+      },
+      "inspection_cost": {
+        "mean": 0.004005167776695678,
+        "min": 0.0036299705935282553,
+        "max": 0.004393347248665414,
+        "standard_deviation": 0.0003818538781641602
+      },
+      "terminal_brier": {
+        "mean": 0.22085456000268314,
+        "min": 0.22055432088943416,
+        "max": 0.2212069016759583,
+        "standard_deviation": 0.0003293955499184447
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.25208645119985934,
+        "min": 0.2514329273318562,
+        "max": 0.25321837632361655,
+        "standard_deviation": 0.0009841787676407357
+      },
+      "audit_brier": {
+        "mean": 0.23789079107334274,
+        "min": 0.2351133496901017,
+        "max": 0.23969355314126994,
+        "standard_deviation": 0.002440710089154146
+      },
+      "audit_probability_rmse": {
+        "mean": 0.27942587275757846,
+        "min": 0.27443431688105635,
+        "max": 0.2826559706306242,
+        "standard_deviation": 0.004384740393450233
+      },
+      "duplicate_probability_change": {
+        "mean": 0.11554806937386371,
+        "min": 0.08831893004785903,
+        "max": 0.14073043560336518,
+        "standard_deviation": 0.026265632273565015
+      },
+      "sampled_report_variance": {
+        "mean": 0.008987892187311827,
+        "min": 0.007191512709826081,
+        "max": 0.011000726819713584,
+        "standard_deviation": 0.0019138097239038148
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.7548288527384566,
+        "min": 0.7539226070311518,
+        "max": 0.7562049985534616,
+        "standard_deviation": 0.0012115825802190949
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.6897898913868907,
+        "min": 0.6849552517394507,
+        "max": 0.695606202539782,
+        "standard_deviation": 0.005392907142370491
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7585581358976546,
+        "min": 0.7585581358976546,
+        "max": 0.7585581358976546,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "accuracy",
+    "objective": "accuracy",
+    "domain": "reversed_new_source",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7464278808699453,
+        "min": 0.7415602639722998,
+        "max": 0.7497364527884545,
+        "standard_deviation": 0.004305285336023682
+      },
+      "oracle_return": {
+        "mean": 0.7891524681642963,
+        "min": 0.7891524681642963,
+        "max": 0.7891524681642963,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.042724587294351156,
+        "min": 0.03941601537584197,
+        "max": 0.04759220419199655,
+        "standard_deviation": 0.004305285336023644
+      },
+      "minimum_example_regret": {
+        "mean": 4.962137432433049e-09,
+        "min": 7.466387091925597e-10,
+        "max": 1.2218638351102484e-08,
+        "standard_deviation": 6.311692697719695e-09
+      },
+      "inspection_rate": {
+        "mean": 0.00040486668151145863,
+        "min": 2.893416671884688e-05,
+        "max": 0.0007639264413929897,
+        "standard_deviation": 0.00036778652551634446
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.25482177734375,
+        "min": 0.25482177734375,
+        "max": 0.25482177734375,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0015683720172008301,
+        "min": 7.703425595598196e-05,
+        "max": 0.0029878984350038824,
+        "standard_deviation": 0.0014567601789591993
+      },
+      "independent_inspection_rate": {
+        "mean": 1.5894501121779547e-05,
+        "min": 1.285379646732481e-05,
+        "max": 2.042900399802966e-05,
+        "standard_deviation": 4.002438897583715e-06
+      },
+      "inspection_cost": {
+        "mean": 1.1727937674528671e-05,
+        "min": 1.3970588409062536e-06,
+        "max": 2.2144216221562407e-05,
+        "standard_deviation": 1.0373842329518838e-05
+      },
+      "terminal_brier": {
+        "mean": 0.23149718621092238,
+        "min": 0.2260718609893799,
+        "max": 0.23655069343894886,
+        "standard_deviation": 0.005249301748019592
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.25982070369330884,
+        "min": 0.24929864100446558,
+        "max": 0.26949705079492065,
+        "standard_deviation": 0.010125727907496447
+      },
+      "audit_brier": {
+        "mean": 0.31449281483722924,
+        "min": 0.3012296114787943,
+        "max": 0.32453317966693673,
+        "standard_deviation": 0.011981405957212966
+      },
+      "audit_probability_rmse": {
+        "mean": 0.40587125077269315,
+        "min": 0.3893784379089452,
+        "max": 0.41823335124850186,
+        "standard_deviation": 0.014864339695467037
+      },
+      "duplicate_probability_change": {
+        "mean": 0.11007267599372146,
+        "min": 0.08100603962652242,
+        "max": 0.13972441755757392,
+        "standard_deviation": 0.02936356139472547
+      },
+      "sampled_report_variance": {
+        "mean": 0.022063204981457862,
+        "min": 0.01545073817400857,
+        "max": 0.026548587607040236,
+        "standard_deviation": 0.005846702561882354
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.7464394672969297,
+        "min": 0.7415825752459375,
+        "max": 0.7497381832132697,
+        "standard_deviation": 0.004295278801096881
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.5230356947321789,
+        "min": 0.49985035909454045,
+        "max": 0.5446338399539008,
+        "standard_deviation": 0.022433889977720247
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7595715278287921,
+        "min": 0.7595715278287921,
+        "max": 0.7595715278287921,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast",
+    "objective": "forecast",
+    "domain": "expensive_inspection",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8241359845926385,
+        "min": 0.8207461255268191,
+        "max": 0.8269600693992593,
+        "standard_deviation": 0.0031453696121024944
+      },
+      "oracle_return": {
+        "mean": 0.8358715015603911,
+        "min": 0.8358715015603911,
+        "max": 0.8358715015603911,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.01173551696775263,
+        "min": 0.008911432161131886,
+        "max": 0.015125376033571971,
+        "standard_deviation": 0.003145369612102481
+      },
+      "minimum_example_regret": {
+        "mean": 5.251343723153279e-05,
+        "min": 1.573560799353335e-05,
+        "max": 9.696304810399847e-05,
+        "standard_deviation": 4.115357131294925e-05
+      },
+      "inspection_rate": {
+        "mean": 0.009130168405055305,
+        "min": 0.004039351641108123,
+        "max": 0.012074070011070123,
+        "standard_deviation": 0.0044267491845225455
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.01104736328125,
+        "min": 0.01104736328125,
+        "max": 0.01104736328125,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 3.2674512097428204e-06,
+        "min": 1.8646241600871363e-06,
+        "max": 4.305714265234824e-06,
+        "standard_deviation": 1.2607182098878876e-06
+      },
+      "independent_inspection_rate": {
+        "mean": 0.01219926657263587,
+        "min": 0.005397035269758049,
+        "max": 0.016132989826497614,
+        "standard_deviation": 0.005914933125703684
+      },
+      "inspection_cost": {
+        "mean": 0.001610137310035669,
+        "min": 0.0006714029745334254,
+        "max": 0.0021537505785016254,
+        "standard_deviation": 0.0008163510874369474
+      },
+      "terminal_brier": {
+        "mean": 0.1720103086531244,
+        "min": 0.16849836035209362,
+        "max": 0.1750568286603571,
+        "standard_deviation": 0.003303913476488898
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.09626401824711524,
+        "min": 0.079535650261638,
+        "max": 0.11409481041646861,
+        "standard_deviation": 0.017305935165795122
+      },
+      "audit_brier": {
+        "mean": 0.165712684130124,
+        "min": 0.16461755985901444,
+        "max": 0.16722201301330772,
+        "standard_deviation": 0.0013507287491294013
+      },
+      "audit_probability_rmse": {
+        "mean": 0.1409176354202949,
+        "min": 0.1370319623481246,
+        "max": 0.14622657713039414,
+        "standard_deviation": 0.004759674932216119
+      },
+      "duplicate_probability_change": {
+        "mean": 0.1238579509804056,
+        "min": 0.11928606956018975,
+        "max": 0.13282658679809728,
+        "standard_deviation": 0.007767560021738497
+      },
+      "sampled_report_variance": {
+        "mean": 0.0022435694442014356,
+        "min": 0.002043295234322142,
+        "max": 0.002536311871575188,
+        "standard_deviation": 0.0002591893701273789
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8241483583776313,
+        "min": 0.8208090401235539,
+        "max": 0.8269617692523945,
+        "standard_deviation": 0.003109895956769916
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.6158017052425423,
+        "min": 0.6146396690552873,
+        "max": 0.6164501147790544,
+        "standard_deviation": 0.0010086068024466603
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8355981623077402,
+        "min": 0.8355981623077402,
+        "max": 0.8355981623077402,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast",
+    "objective": "forecast",
+    "domain": "in_distribution",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8404482921991417,
+        "min": 0.8400372743737764,
+        "max": 0.8411192606987147,
+        "standard_deviation": 0.0005859644755478489
+      },
+      "oracle_return": {
+        "mean": 0.85112613684355,
+        "min": 0.85112613684355,
+        "max": 0.85112613684355,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.010677844644408194,
+        "min": 0.010006876144835272,
+        "max": 0.011088862469773558,
+        "standard_deviation": 0.0005859644755478686
+      },
+      "minimum_example_regret": {
+        "mean": 1.6782332469378325e-05,
+        "min": 9.681721412080346e-06,
+        "max": 3.0863232878625135e-05,
+        "standard_deviation": 1.2194565862692273e-05
+      },
+      "inspection_rate": {
+        "mean": 0.1932030773569303,
+        "min": 0.18337904703160823,
+        "max": 0.21171485528581444,
+        "standard_deviation": 0.016041733889208636
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.27191162109375,
+        "min": 0.27191162109375,
+        "max": 0.27191162109375,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.000289309526866023,
+        "min": 3.3887034300309245e-05,
+        "max": 0.0004727342943179433,
+        "standard_deviation": 0.0002281106830519282
+      },
+      "independent_inspection_rate": {
+        "mean": 0.2551227508013781,
+        "min": 0.24208662028059258,
+        "max": 0.2795531584965454,
+        "standard_deviation": 0.02117327409062761
+      },
+      "inspection_cost": {
+        "mean": 0.009473615734920079,
+        "min": 0.008864862789336653,
+        "max": 0.010386582138844436,
+        "standard_deviation": 0.0008051812316760809
+      },
+      "terminal_brier": {
+        "mean": 0.14873979916628485,
+        "min": 0.146913816759978,
+        "max": 0.1499142882623009,
+        "standard_deviation": 0.0016028224976828282
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.08916023755746233,
+        "min": 0.08546887789357303,
+        "max": 0.09221047438019174,
+        "standard_deviation": 0.0034162200851511463
+      },
+      "audit_brier": {
+        "mean": 0.16537095009531652,
+        "min": 0.16483413606129915,
+        "max": 0.16625662268813185,
+        "standard_deviation": 0.0007727507822153265
+      },
+      "audit_probability_rmse": {
+        "mean": 0.1413975687883197,
+        "min": 0.1395040687383765,
+        "max": 0.1445125317105559,
+        "standard_deviation": 0.002718483768061839
+      },
+      "duplicate_probability_change": {
+        "mean": 0.10999998727391176,
+        "min": 0.10231565712340301,
+        "max": 0.12282749626825755,
+        "standard_deviation": 0.01118137302574538
+      },
+      "sampled_report_variance": {
+        "mean": 0.00133829289965328,
+        "min": 0.0011835745745860068,
+        "max": 0.0015803404024628508,
+        "standard_deviation": 0.00021231007867399685
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8275808062603579,
+        "min": 0.8265514616739369,
+        "max": 0.8282121138987284,
+        "standard_deviation": 0.0008990364352663126
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.777361274530383,
+        "min": 0.7752241963683496,
+        "max": 0.7789829174328387,
+        "standard_deviation": 0.0019316446723635372
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8357347012919542,
+        "min": 0.8357347012919542,
+        "max": 0.8357347012919542,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast",
+    "objective": "forecast",
+    "domain": "more_duplicates",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8309545039416939,
+        "min": 0.8309076505258914,
+        "max": 0.83104330879463,
+        "standard_deviation": 7.694630450807265e-05
+      },
+      "oracle_return": {
+        "mean": 0.8391997255941014,
+        "min": 0.8391997255941014,
+        "max": 0.8391997255941014,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.00824522165240734,
+        "min": 0.008156416799471412,
+        "max": 0.008292075068209939,
+        "standard_deviation": 7.694630450806169e-05
+      },
+      "minimum_example_regret": {
+        "mean": 1.260703358315259e-05,
+        "min": 7.93544894495124e-06,
+        "max": 1.9586423553208387e-05,
+        "standard_deviation": 6.1587966696315815e-06
+      },
+      "inspection_rate": {
+        "mean": 0.04984733225757698,
+        "min": 0.04747280288376876,
+        "max": 0.05451998520205811,
+        "standard_deviation": 0.0040468164792048945
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.07196044921875,
+        "min": 0.07196044921875,
+        "max": 0.07196044921875,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0004113446738184992,
+        "min": 3.4982291216319944e-05,
+        "max": 0.0006931391360416743,
+        "standard_deviation": 0.0003391163911863059
+      },
+      "independent_inspection_rate": {
+        "mean": 0.25078513774098976,
+        "min": 0.238000664181275,
+        "max": 0.27406590196272557,
+        "standard_deviation": 0.02019416827463722
+      },
+      "inspection_cost": {
+        "mean": 0.002329129556986742,
+        "min": 0.0021963382365688486,
+        "max": 0.0025093325190699927,
+        "standard_deviation": 0.0001617938597217294
+      },
+      "terminal_brier": {
+        "mean": 0.16500707799210068,
+        "min": 0.164470230183629,
+        "max": 0.1653853038113105,
+        "standard_deviation": 0.0004777139705174963
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.07940065106786359,
+        "min": 0.077517532390918,
+        "max": 0.0808777954163674,
+        "standard_deviation": 0.0017165235991870005
+      },
+      "audit_brier": {
+        "mean": 0.17979328600460787,
+        "min": 0.17770319745116964,
+        "max": 0.18237987483886703,
+        "standard_deviation": 0.0023775433211177194
+      },
+      "audit_probability_rmse": {
+        "mean": 0.14123624193479936,
+        "min": 0.1338059865739944,
+        "max": 0.15026882388152696,
+        "standard_deviation": 0.008347564969470882
+      },
+      "duplicate_probability_change": {
+        "mean": 0.11117433436388878,
+        "min": 0.10350285191591796,
+        "max": 0.1247953360051617,
+        "standard_deviation": 0.011827512572230772
+      },
+      "sampled_report_variance": {
+        "mean": 0.001709288509218531,
+        "min": 0.0015107074262291987,
+        "max": 0.0019771285026710475,
+        "standard_deviation": 0.00024080023389981103
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.827648733645289,
+        "min": 0.8273947775046309,
+        "max": 0.8278574090685479,
+        "standard_deviation": 0.00023461617273587838
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7488995273626585,
+        "min": 0.7433121902863457,
+        "max": 0.7531395869519036,
+        "standard_deviation": 0.005050326600916465
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8352262523406847,
+        "min": 0.8352262523406847,
+        "max": 0.8352262523406847,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast",
+    "objective": "forecast",
+    "domain": "reversed_new_source",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8236854382806413,
+        "min": 0.8216200941697811,
+        "max": 0.82603897441344,
+        "standard_deviation": 0.002223491990784177
+      },
+      "oracle_return": {
+        "mean": 0.8442069969574194,
+        "min": 0.8442069969574194,
+        "max": 0.8442069969574194,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.02052155867677804,
+        "min": 0.018168022543979444,
+        "max": 0.022586902787638308,
+        "standard_deviation": 0.0022234919907841654
+      },
+      "minimum_example_regret": {
+        "mean": 4.767590194417378e-05,
+        "min": 9.830860279502751e-06,
+        "max": 8.858877022460687e-05,
+        "standard_deviation": 3.946847811657508e-05
+      },
+      "inspection_rate": {
+        "mean": 0.00010215306305289889,
+        "min": 9.54475835188849e-06,
+        "max": 0.00016367291944725874,
+        "standard_deviation": 8.163174152403318e-05
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.22296142578125,
+        "min": 0.22296142578125,
+        "max": 0.22296142578125,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0004031891474322695,
+        "min": 3.4614471613040644e-05,
+        "max": 0.0006505082641847104,
+        "standard_deviation": 0.0003253589923231387
+      },
+      "independent_inspection_rate": {
+        "mean": 1.5135055663514177e-06,
+        "min": 9.186975930980127e-07,
+        "max": 2.458131927374174e-06,
+        "standard_deviation": 8.271905437704382e-07
+      },
+      "inspection_cost": {
+        "mean": 1.9396548221699017e-06,
+        "min": 3.917666340559463e-07,
+        "max": 3.1559812651240154e-06,
+        "standard_deviation": 1.4116198230376248e-06
+      },
+      "terminal_brier": {
+        "mean": 0.17385220938157273,
+        "min": 0.17166707810808599,
+        "max": 0.17600280472587876,
+        "standard_deviation": 0.0021680696192379226
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.09924700618507569,
+        "min": 0.08800556385826051,
+        "max": 0.1099122618124177,
+        "standard_deviation": 0.01096470916842558
+      },
+      "audit_brier": {
+        "mean": 0.23177045089347223,
+        "min": 0.22997388656014545,
+        "max": 0.2352697784988095,
+        "standard_deviation": 0.003030869500140636
+      },
+      "audit_probability_rmse": {
+        "mean": 0.2865972144648709,
+        "min": 0.2834781173031905,
+        "max": 0.29267001029901496,
+        "standard_deviation": 0.00525984563437526
+      },
+      "duplicate_probability_change": {
+        "mean": 0.10972544143125385,
+        "min": 0.10285944745180522,
+        "max": 0.12211851566195052,
+        "standard_deviation": 0.010753575645270715
+      },
+      "sampled_report_variance": {
+        "mean": 0.0024604126829637397,
+        "min": 0.002290791497208929,
+        "max": 0.002713737213976183,
+        "standard_deviation": 0.00022355191195431626
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8236897679320675,
+        "min": 0.8216205682646965,
+        "max": 0.8260435980584637,
+        "standard_deviation": 0.0022252098806161665
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.6464885842727345,
+        "min": 0.6391711350186374,
+        "max": 0.6521815829673363,
+        "standard_deviation": 0.006655604305518359
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8358707118175364,
+        "min": 0.8358707118175364,
+        "max": 0.8358707118175364,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "domain": "expensive_inspection",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8200981771596223,
+        "min": 0.8165463002895689,
+        "max": 0.8263145730991877,
+        "standard_deviation": 0.005401808477225839
+      },
+      "oracle_return": {
+        "mean": 0.8358715015603911,
+        "min": 0.8358715015603911,
+        "max": 0.8358715015603911,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.015773324400768823,
+        "min": 0.009556928461203436,
+        "max": 0.019325201270822233,
+        "standard_deviation": 0.005401808477225863
+      },
+      "minimum_example_regret": {
+        "mean": 1.174665942845395e-05,
+        "min": 1.636352956246867e-06,
+        "max": 2.4554761309136808e-05,
+        "standard_deviation": 1.1694953416194037e-05
+      },
+      "inspection_rate": {
+        "mean": 1.776011374653572e-05,
+        "min": 1.2550617471059696e-05,
+        "max": 2.7969390202144118e-05,
+        "standard_deviation": 8.842114538980001e-06
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.01104736328125,
+        "min": 0.01104736328125,
+        "max": 0.01104736328125,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 2.261528974105862e-05,
+        "min": 1.450963355958683e-05,
+        "max": 3.188833614917252e-05,
+        "standard_deviation": 8.747966956971358e-06
+      },
+      "independent_inspection_rate": {
+        "mean": 1.612746627688252e-05,
+        "min": 9.558733133341715e-06,
+        "max": 2.66515683165232e-05,
+        "standard_deviation": 9.207331914188142e-06
+      },
+      "inspection_cost": {
+        "mean": 3.7884519674655252e-06,
+        "min": 2.6742422782289555e-06,
+        "max": 5.994928501007121e-06,
+        "standard_deviation": 1.910896227405671e-06
+      },
+      "terminal_brier": {
+        "mean": 0.17872955833178472,
+        "min": 0.17224527651052934,
+        "max": 0.18243895307993863,
+        "standard_deviation": 0.0056349586690392275
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.11879119812758358,
+        "min": 0.08972871505123799,
+        "max": 0.13507385269981365,
+        "standard_deviation": 0.025229712434707244
+      },
+      "audit_brier": {
+        "mean": 0.17805056944781375,
+        "min": 0.1756156178459182,
+        "max": 0.1798271613440056,
+        "standard_deviation": 0.0021815940927774136
+      },
+      "audit_probability_rmse": {
+        "mean": 0.17940392242193273,
+        "min": 0.17255670572852738,
+        "max": 0.1843566114625916,
+        "standard_deviation": 0.006123836224415717
+      },
+      "duplicate_probability_change": {
+        "mean": 0.06821884477145265,
+        "min": 0.03068120728815871,
+        "max": 0.09756236104689955,
+        "standard_deviation": 0.03418522924892782
+      },
+      "sampled_report_variance": {
+        "mean": 0.001168476056625493,
+        "min": 0.0010120723882142684,
+        "max": 0.0014374542051598122,
+        "standard_deviation": 0.00023397047405220129
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8201019559620356,
+        "min": 0.8165489900305455,
+        "max": 0.8263172685183022,
+        "standard_deviation": 0.0054010076204757266
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.5960446884379275,
+        "min": 0.5939256701696844,
+        "max": 0.5977693874199187,
+        "standard_deviation": 0.0019519621793389497
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8355981623077402,
+        "min": 0.8355981623077402,
+        "max": 0.8355981623077402,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "domain": "in_distribution",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8219859851859551,
+        "min": 0.8185462676755786,
+        "max": 0.8271012050457548,
+        "standard_deviation": 0.00451688160616384
+      },
+      "oracle_return": {
+        "mean": 0.85112613684355,
+        "min": 0.85112613684355,
+        "max": 0.85112613684355,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.029140151657594857,
+        "min": 0.024024931797795163,
+        "max": 0.032579869167971356,
+        "standard_deviation": 0.004516881606163845
+      },
+      "minimum_example_regret": {
+        "mean": 2.9656105284455356e-06,
+        "min": 1.60156932021982e-06,
+        "max": 3.945041864933385e-06,
+        "standard_deviation": 1.2181582233171647e-06
+      },
+      "inspection_rate": {
+        "mean": 6.770871185389345e-05,
+        "min": 4.2056044609826634e-05,
+        "max": 8.904861249549041e-05,
+        "standard_deviation": 2.379128676527846e-05
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.27191162109375,
+        "min": 0.27191162109375,
+        "max": 0.27191162109375,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.00012532416981348964,
+        "min": 5.051867391711903e-05,
+        "max": 0.00023576709706208475,
+        "standard_deviation": 9.763075567905052e-05
+      },
+      "independent_inspection_rate": {
+        "mean": 4.921583608696994e-05,
+        "min": 3.9339788278912255e-05,
+        "max": 6.635144700594696e-05,
+        "standard_deviation": 1.4897428275293467e-05
+      },
+      "inspection_cost": {
+        "mean": 3.19807942159916e-06,
+        "min": 2.2303446833973923e-06,
+        "max": 3.950976578092244e-06,
+        "standard_deviation": 8.802044757589712e-07
+      },
+      "terminal_brier": {
+        "mean": 0.1770603196394572,
+        "min": 0.1716774215951284,
+        "max": 0.18064161086736902,
+        "standard_deviation": 0.004745894295900247
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.11257511070061814,
+        "min": 0.08728179960457574,
+        "max": 0.1287725492791901,
+        "standard_deviation": 0.022190577950583733
+      },
+      "audit_brier": {
+        "mean": 0.1778595238338461,
+        "min": 0.1762395668926059,
+        "max": 0.18066455376127738,
+        "standard_deviation": 0.0024389394588485783
+      },
+      "audit_probability_rmse": {
+        "mean": 0.18015784518477848,
+        "min": 0.17568954444094967,
+        "max": 0.18786112661894674,
+        "standard_deviation": 0.006699677472019524
+      },
+      "duplicate_probability_change": {
+        "mean": 0.059815861065763226,
+        "min": 0.03534244168226936,
+        "max": 0.08736846781471691,
+        "standard_deviation": 0.02614933832637519
+      },
+      "sampled_report_variance": {
+        "mean": 0.0009504970951660993,
+        "min": 0.0008087085400490664,
+        "max": 0.0012191430144333959,
+        "standard_deviation": 0.0002327739409172549
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8219892050219326,
+        "min": 0.8185498221705619,
+        "max": 0.8271034376714771,
+        "standard_deviation": 0.004516074171136443
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7582570980231275,
+        "min": 0.7556058619976205,
+        "max": 0.763192967142863,
+        "standard_deviation": 0.004278516378684804
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8357347012919542,
+        "min": 0.8357347012919542,
+        "max": 0.8357347012919542,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "domain": "more_duplicates",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8214688864004792,
+        "min": 0.8180729829311545,
+        "max": 0.8265039705348535,
+        "standard_deviation": 0.004448097675741334
+      },
+      "oracle_return": {
+        "mean": 0.8391997255941014,
+        "min": 0.8391997255941014,
+        "max": 0.8391997255941014,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.017730839193622117,
+        "min": 0.01269575505924793,
+        "max": 0.021126742662946854,
+        "standard_deviation": 0.004448097675741305
+      },
+      "minimum_example_regret": {
+        "mean": 2.548674079302001e-06,
+        "min": 1.5691107312920671e-06,
+        "max": 3.3369956921047716e-06,
+        "standard_deviation": 8.993243906570751e-07
+      },
+      "inspection_rate": {
+        "mean": 0.0001089896011322766,
+        "min": 4.821493106855687e-05,
+        "max": 0.0002027889912816714,
+        "standard_deviation": 8.240909613170613e-05
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.07196044921875,
+        "min": 0.07196044921875,
+        "max": 0.07196044921875,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.00012429894530849287,
+        "min": 5.04526270475835e-05,
+        "max": 0.00024190775351888772,
+        "standard_deviation": 0.00010295694735164736
+      },
+      "independent_inspection_rate": {
+        "mean": 4.67631508778507e-05,
+        "min": 3.9119578849632265e-05,
+        "max": 5.7383233246346516e-05,
+        "standard_deviation": 9.48867632154183e-06
+      },
+      "inspection_cost": {
+        "mean": 4.6430352026952835e-06,
+        "min": 2.6404620457669708e-06,
+        "max": 7.23227427783563e-06,
+        "standard_deviation": 2.351450099053246e-06
+      },
+      "terminal_brier": {
+        "mean": 0.1775590462253426,
+        "min": 0.17224779951159258,
+        "max": 0.18111439260882378,
+        "standard_deviation": 0.004686844115750578
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.11258241401644649,
+        "min": 0.08765187608374478,
+        "max": 0.12864476815797532,
+        "standard_deviation": 0.021888074674760546
+      },
+      "audit_brier": {
+        "mean": 0.18344634472153853,
+        "min": 0.18126495839534168,
+        "max": 0.18668492424905941,
+        "standard_deviation": 0.002860463347529707
+      },
+      "audit_probability_rmse": {
+        "mean": 0.1535935392913106,
+        "min": 0.14651212573439792,
+        "max": 0.16396880447490544,
+        "standard_deviation": 0.009182646789802464
+      },
+      "duplicate_probability_change": {
+        "mean": 0.06099626531287449,
+        "min": 0.03541646310880398,
+        "max": 0.08993531481599942,
+        "standard_deviation": 0.02741422449532259
+      },
+      "sampled_report_variance": {
+        "mean": 0.0009674243389754109,
+        "min": 0.000805392185743849,
+        "max": 0.0012455894915081932,
+        "standard_deviation": 0.0002419887851648704
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8214737558790189,
+        "min": 0.8180806761168788,
+        "max": 0.8265066606037288,
+        "standard_deviation": 0.004445905202999649
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7473139239172045,
+        "min": 0.7435269370938763,
+        "max": 0.7545878809160256,
+        "standard_deviation": 0.006301217367522589
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8352262523406847,
+        "min": 0.8352262523406847,
+        "max": 0.8352262523406847,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "forecast_no_exploration",
+    "objective": "forecast",
+    "domain": "reversed_new_source",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8215701443698317,
+        "min": 0.8183912057579121,
+        "max": 0.8266806151771455,
+        "standard_deviation": 0.004469529012804692
+      },
+      "oracle_return": {
+        "mean": 0.8442069969574194,
+        "min": 0.8442069969574194,
+        "max": 0.8442069969574194,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.02263685258758785,
+        "min": 0.01752638178027395,
+        "max": 0.02581579119950733,
+        "standard_deviation": 0.004469529012804666
+      },
+      "minimum_example_regret": {
+        "mean": 3.127020625881549e-06,
+        "min": 1.7057985654267416e-06,
+        "max": 4.2966581267345205e-06,
+        "standard_deviation": 1.313624531431079e-06
+      },
+      "inspection_rate": {
+        "mean": 7.856032862001254e-05,
+        "min": 3.745730312701163e-05,
+        "max": 0.00011649122536456016,
+        "standard_deviation": 3.961233414809446e-05
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.22296142578125,
+        "min": 0.22296142578125,
+        "max": 0.22296142578125,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0001257640744690166,
+        "min": 5.078672355147301e-05,
+        "max": 0.00024982333795364866,
+        "standard_deviation": 0.0001082158448384643
+      },
+      "independent_inspection_rate": {
+        "mean": 6.277961547479212e-05,
+        "min": 2.553789227341124e-05,
+        "max": 0.0001297998177185063,
+        "standard_deviation": 5.816103192805001e-05
+      },
+      "inspection_cost": {
+        "mean": 3.847542689011355e-06,
+        "min": 2.008331916105593e-06,
+        "max": 6.432997250865895e-06,
+        "standard_deviation": 2.304794063591332e-06
+      },
+      "terminal_brier": {
+        "mean": 0.17744554282579986,
+        "min": 0.1720440634830158,
+        "max": 0.18077818247085714,
+        "standard_deviation": 0.004720305275573856
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.11494695723633214,
+        "min": 0.09012391255607866,
+        "max": 0.12983218107298033,
+        "standard_deviation": 0.021639243505545382
+      },
+      "audit_brier": {
+        "mean": 0.19236672841486624,
+        "min": 0.18433339540914834,
+        "max": 0.20028406911162047,
+        "standard_deviation": 0.007975969442800547
+      },
+      "audit_probability_rmse": {
+        "mean": 0.20615961811342662,
+        "min": 0.18633129591875958,
+        "max": 0.22510003452073582,
+        "standard_deviation": 0.01939961483412772
+      },
+      "duplicate_probability_change": {
+        "mean": 0.061839633376628365,
+        "min": 0.035503975228473414,
+        "max": 0.08995941684248968,
+        "standard_deviation": 0.027271525584505612
+      },
+      "sampled_report_variance": {
+        "mean": 0.0009804652616795665,
+        "min": 0.0008275104723307108,
+        "max": 0.0012733130079226542,
+        "standard_deviation": 0.0002536976640146891
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.821574421537552,
+        "min": 0.8183947040315214,
+        "max": 0.8266826905388495,
+        "standard_deviation": 0.004467903673853689
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7288902412903019,
+        "min": 0.7162825916424531,
+        "max": 0.7390077528535133,
+        "standard_deviation": 0.01156541520126233
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8358707118175364,
+        "min": 0.8358707118175364,
+        "max": 0.8358707118175364,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "domain": "expensive_inspection",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7611563994044795,
+        "min": 0.7591988194868675,
+        "max": 0.7640230796300513,
+        "standard_deviation": 0.002537364579584023
+      },
+      "oracle_return": {
+        "mean": 0.7686996382948322,
+        "min": 0.7686996382948322,
+        "max": 0.7686996382948322,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.007543238890352755,
+        "min": 0.004676558664780876,
+        "max": 0.009500818807964714,
+        "standard_deviation": 0.0025373645795840317
+      },
+      "minimum_example_regret": {
+        "mean": -5.551115123125783e-17,
+        "min": -5.551115123125783e-17,
+        "max": -5.551115123125783e-17,
+        "standard_deviation": 0.0
+      },
+      "inspection_rate": {
+        "mean": 0.0755615234375,
+        "min": 0.07208251953125,
+        "max": 0.078125,
+        "standard_deviation": 0.0031235453080869107
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.10308837890625,
+        "min": 0.10308837890625,
+        "max": 0.10308837890625,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.10097055705081152,
+        "min": 0.09632167033684039,
+        "max": 0.10439605252426393,
+        "standard_deviation": 0.0041738982405754785
+      },
+      "inspection_cost": {
+        "mean": 0.015084904037090988,
+        "min": 0.014205800653144252,
+        "max": 0.015672471131438215,
+        "standard_deviation": 0.0007755808333693194
+      },
+      "terminal_brier": {
+        "mean": 0.15751701789802663,
+        "min": 0.15579947129169272,
+        "max": 0.15850054951966364,
+        "standard_deviation": 0.001492661849423476
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.06454219808215,
+        "min": 0.05496789960674343,
+        "max": 0.07189605605704105,
+        "standard_deviation": 0.008679768845636702
+      },
+      "audit_brier": {
+        "mean": 0.15074647518004172,
+        "min": 0.1487327698165957,
+        "max": 0.15239088170593568,
+        "standard_deviation": 0.0018568069022641069
+      },
+      "audit_probability_rmse": {
+        "mean": 0.06912032073055684,
+        "min": 0.05378632412202104,
+        "max": 0.0809387456778214,
+        "standard_deviation": 0.013913408359029896
+      },
+      "duplicate_probability_change": {
+        "mean": 0.03196639906018984,
+        "min": 0.020740723231522283,
+        "max": 0.04444828333855832,
+        "standard_deviation": 0.011903598040466866
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.7526309541886428,
+        "min": 0.7505930628958621,
+        "max": 0.7554552848051227,
+        "standard_deviation": 0.00252471098962213
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.5853328008604405,
+        "min": 0.5791679159100547,
+        "max": 0.5903475333203506,
+        "standard_deviation": 0.00567786046179882
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7594340528221423,
+        "min": 0.7594340528221422,
+        "max": 0.7594340528221422,
+        "standard_deviation": 1.3597399555105182e-16
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "domain": "in_distribution",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7986662118264228,
+        "min": 0.7985595509611052,
+        "max": 0.7988228921274885,
+        "standard_deviation": 0.00013861313228710428
+      },
+      "oracle_return": {
+        "mean": 0.7995540270015637,
+        "min": 0.7995540270015637,
+        "max": 0.7995540270015637,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.0008878151751409708,
+        "min": 0.0007311348740752833,
+        "max": 0.0009944760404585178,
+        "standard_deviation": 0.00013861313228710458
+      },
+      "minimum_example_regret": {
+        "mean": -1.1102230246251565e-16,
+        "min": -1.1102230246251565e-16,
+        "max": -1.1102230246251565e-16,
+        "standard_deviation": 0.0
+      },
+      "inspection_rate": {
+        "mean": 0.2991943359375,
+        "min": 0.29241943359375,
+        "max": 0.30291748046875,
+        "standard_deviation": 0.005876833021027601
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.291259765625,
+        "min": 0.291259765625,
+        "max": 0.291259765625,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.3952269612190599,
+        "min": 0.3862775135047972,
+        "max": 0.4001451261791502,
+        "standard_deviation": 0.007763124422842562
+      },
+      "inspection_cost": {
+        "mean": 0.016114609126570183,
+        "min": 0.015647483927367034,
+        "max": 0.016466018348211264,
+        "standard_deviation": 0.0004213576748132853
+      },
+      "terminal_brier": {
+        "mean": 0.1357563147564303,
+        "min": 0.13542697025727948,
+        "max": 0.13616443517479915,
+        "standard_deviation": 0.00037499048018523675
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.026435610416328508,
+        "min": 0.0254382178827057,
+        "max": 0.02797400535342222,
+        "standard_deviation": 0.0013516905062112752
+      },
+      "audit_brier": {
+        "mean": 0.14607736876014443,
+        "min": 0.146036638716406,
+        "max": 0.14614850519813088,
+        "standard_deviation": 6.182183305070935e-05
+      },
+      "audit_probability_rmse": {
+        "mean": 0.026527990302499485,
+        "min": 0.0257660212230867,
+        "max": 0.027852366710809772,
+        "standard_deviation": 0.001151275760291089
+      },
+      "duplicate_probability_change": {
+        "mean": 0.015788129914589718,
+        "min": 0.01415440877040961,
+        "max": 0.017645251398910322,
+        "standard_deviation": 0.0017561111434703125
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.759330726438438,
+        "min": 0.7590087093622448,
+        "max": 0.7596464397507818,
+        "standard_deviation": 0.00031891192388320167
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7571010354991667,
+        "min": 0.7569715715055207,
+        "max": 0.7572281259322293,
+        "standard_deviation": 0.00012829368187219524
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7599188158479911,
+        "min": 0.759918815847991,
+        "max": 0.759918815847991,
+        "standard_deviation": 1.3597399555105182e-16
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "domain": "more_duplicates",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7680839719400007,
+        "min": 0.7673263132437753,
+        "max": 0.7685623885315996,
+        "standard_deviation": 0.0006636660636491048
+      },
+      "oracle_return": {
+        "mean": 0.7690305081113218,
+        "min": 0.7690305081113218,
+        "max": 0.7690305081113218,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.0009465361713213009,
+        "min": 0.0004681195797221738,
+        "max": 0.0017041948675464672,
+        "standard_deviation": 0.0006636660636490782
+      },
+      "minimum_example_regret": {
+        "mean": -5.551115123125783e-17,
+        "min": -5.551115123125783e-17,
+        "max": -5.551115123125783e-17,
+        "standard_deviation": 0.0
+      },
+      "inspection_rate": {
+        "mean": 0.07879638671875,
+        "min": 0.07720947265625,
+        "max": 0.07965087890625,
+        "standard_deviation": 0.0013756625573223442
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.07525634765625,
+        "min": 0.07525634765625,
+        "max": 0.07525634765625,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.39907264296754247,
+        "min": 0.3910355486862442,
+        "max": 0.4034003091190108,
+        "standard_deviation": 0.006967188667440278
+      },
+      "inspection_cost": {
+        "mean": 0.004097718854149927,
+        "min": 0.003977031562982347,
+        "max": 0.004188242446772961,
+        "standard_deviation": 0.00010878830769121143
+      },
+      "terminal_brier": {
+        "mean": 0.15777386170179164,
+        "min": 0.15757579470636782,
+        "max": 0.15810503384721492,
+        "standard_deviation": 0.0002886368874008199
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.02471251559509942,
+        "min": 0.019834868733125004,
+        "max": 0.0326961219921182,
+        "standard_deviation": 0.0069705234611893065
+      },
+      "audit_brier": {
+        "mean": 0.16052092781714522,
+        "min": 0.16033257466874323,
+        "max": 0.16087960095258033,
+        "standard_deviation": 0.0003107508846155944
+      },
+      "audit_probability_rmse": {
+        "mean": 0.02648300889685595,
+        "min": 0.02309587107284789,
+        "max": 0.03287013149427126,
+        "standard_deviation": 0.005534796579546294
+      },
+      "duplicate_probability_change": {
+        "mean": 0.01581507692301497,
+        "min": 0.014045340270177975,
+        "max": 0.017910130087112563,
+        "standard_deviation": 0.0019528244177714478
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.7576565992789212,
+        "min": 0.7568243212894552,
+        "max": 0.7581951457183564,
+        "standard_deviation": 0.0007310940919817777
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7112668861359625,
+        "min": 0.7106578678416783,
+        "max": 0.7116339844743572,
+        "standard_deviation": 0.000531126038658657
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7585581358976546,
+        "min": 0.7585581358976546,
+        "max": 0.7585581358976546,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "accuracy",
+    "domain": "reversed_new_source",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.7621210966668442,
+        "min": 0.7488430452050754,
+        "max": 0.7739704159939658,
+        "standard_deviation": 0.012624466219410059
+      },
+      "oracle_return": {
+        "mean": 0.7891524681642963,
+        "min": 0.7891524681642963,
+        "max": 0.7891524681642963,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.027031371497452134,
+        "min": 0.01518205217033057,
+        "max": 0.04030942295922094,
+        "standard_deviation": 0.012624466219410052
+      },
+      "minimum_example_regret": {
+        "mean": -7.401486830834377e-17,
+        "min": -1.1102230246251565e-16,
+        "max": -5.551115123125783e-17,
+        "standard_deviation": 3.204937810639273e-17
+      },
+      "inspection_rate": {
+        "mean": 0.23996988932291666,
+        "min": 0.20465087890625,
+        "max": 0.28515625,
+        "standard_deviation": 0.041149752667627396
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.25482177734375,
+        "min": 0.25482177734375,
+        "max": 0.25482177734375,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.3201943697912425,
+        "min": 0.27306783940060264,
+        "max": 0.3804870103428618,
+        "standard_deviation": 0.05490655164967892
+      },
+      "inspection_cost": {
+        "mean": 0.01162137260944481,
+        "min": 0.008943496450612543,
+        "max": 0.014316724580737628,
+        "standard_deviation": 0.00268665669329145
+      },
+      "terminal_brier": {
+        "mean": 0.15860606081854142,
+        "min": 0.15113392123873376,
+        "max": 0.16567355530911926,
+        "standard_deviation": 0.007278258236786947
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.08113308707247302,
+        "min": 0.06037535264221484,
+        "max": 0.10446809061672883,
+        "standard_deviation": 0.022159064118025422
+      },
+      "audit_brier": {
+        "mean": 0.15757106441349353,
+        "min": 0.1535566444727715,
+        "max": 0.16282874103885897,
+        "standard_deviation": 0.004759433692220705
+      },
+      "audit_probability_rmse": {
+        "mean": 0.08656096467226877,
+        "min": 0.06279013379813334,
+        "max": 0.11495519765750019,
+        "standard_deviation": 0.026388072251940276
+      },
+      "duplicate_probability_change": {
+        "mean": 0.015643560151307502,
+        "min": 0.013908742439913836,
+        "max": 0.017711898653646623,
+        "standard_deviation": 0.0019233892962705799
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.7440153372228963,
+        "min": 0.7308003666130763,
+        "max": 0.7512127979894079,
+        "standard_deviation": 0.011459697081908074
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7349865368105246,
+        "min": 0.7307849030190448,
+        "max": 0.7405147866835265,
+        "standard_deviation": 0.004998759016186148
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.7595715278287921,
+        "min": 0.7595715278287921,
+        "max": 0.7595715278287921,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "forecast",
+    "domain": "expensive_inspection",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8315051555623937,
+        "min": 0.8302374052939419,
+        "max": 0.832935042686104,
+        "standard_deviation": 0.0013561077187202375
+      },
+      "oracle_return": {
+        "mean": 0.8358715015603911,
+        "min": 0.8358715015603911,
+        "max": 0.8358715015603911,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.0043663459979974275,
+        "min": 0.002936458874287103,
+        "max": 0.005634096266449326,
+        "standard_deviation": 0.001356107718720297
+      },
+      "minimum_example_regret": {
+        "mean": -1.1102230246251565e-16,
+        "min": -1.1102230246251565e-16,
+        "max": -1.1102230246251565e-16,
+        "standard_deviation": 0.0
+      },
+      "inspection_rate": {
+        "mean": 0.00091552734375,
+        "min": 0.00042724609375,
+        "max": 0.00152587890625,
+        "standard_deviation": 0.000559396447138164
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.01104736328125,
+        "min": 0.01104736328125,
+        "max": 0.01104736328125,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.001223391240518718,
+        "min": 0.0005709159122420683,
+        "max": 0.0020389854008645296,
+        "standard_deviation": 0.0007475043952297266
+      },
+      "inspection_cost": {
+        "mean": 0.00014297823781816987,
+        "min": 6.628928986174287e-05,
+        "max": 0.00023826573942642426,
+        "standard_deviation": 8.748373820129817e-05
+      },
+      "terminal_brier": {
+        "mean": 0.16815069173661112,
+        "min": 0.166631701420195,
+        "max": 0.16949955151012486,
+        "standard_deviation": 0.0014414747086920604
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.06382103037149495,
+        "min": 0.05250540950386226,
+        "max": 0.07343742300129981,
+        "standard_deviation": 0.01056895594263693
+      },
+      "audit_brier": {
+        "mean": 0.15074647518004172,
+        "min": 0.1487327698165957,
+        "max": 0.15239088170593568,
+        "standard_deviation": 0.0018568069022641069
+      },
+      "audit_probability_rmse": {
+        "mean": 0.06912032073055684,
+        "min": 0.05378632412202104,
+        "max": 0.0809387456778214,
+        "standard_deviation": 0.013913408359029896
+      },
+      "duplicate_probability_change": {
+        "mean": 0.03196639906018984,
+        "min": 0.020740723231522283,
+        "max": 0.04444828333855832,
+        "standard_deviation": 0.011903598040466866
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8314593607480756,
+        "min": 0.8302157273882329,
+        "max": 0.8328590126569659,
+        "standard_deviation": 0.0013285313672286533
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.6415699485764375,
+        "min": 0.6384120748882907,
+        "max": 0.6442103842395405,
+        "standard_deviation": 0.002933582181483678
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8355981623077402,
+        "min": 0.8355981623077402,
+        "max": 0.8355981623077402,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "forecast",
+    "domain": "in_distribution",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8501760895961255,
+        "min": 0.8501489496209444,
+        "max": 0.850202894378377,
+        "standard_deviation": 2.6973940745469332e-05
+      },
+      "oracle_return": {
+        "mean": 0.85112613684355,
+        "min": 0.85112613684355,
+        "max": 0.85112613684355,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.0009500472474245859,
+        "min": 0.0009232424651729993,
+        "max": 0.0009771872226054664,
+        "standard_deviation": 2.6973940745408623e-05
+      },
+      "minimum_example_regret": {
+        "mean": -1.1102230246251565e-16,
+        "min": -1.1102230246251565e-16,
+        "max": -1.1102230246251565e-16,
+        "standard_deviation": 0.0
+      },
+      "inspection_rate": {
+        "mean": 0.2704264322916667,
+        "min": 0.2657470703125,
+        "max": 0.27410888671875,
+        "standard_deviation": 0.004269117227660597
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.27191162109375,
+        "min": 0.27191162109375,
+        "max": 0.27191162109375,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.357225402456395,
+        "min": 0.35104410223333066,
+        "max": 0.36208981697976295,
+        "standard_deviation": 0.005639378913004201
+      },
+      "inspection_cost": {
+        "mean": 0.011817963761600936,
+        "min": 0.011559236834230546,
+        "max": 0.012249982029587159,
+        "standard_deviation": 0.00037656957893115274
+      },
+      "terminal_brier": {
+        "mean": 0.1377975598388986,
+        "min": 0.13739900840578895,
+        "max": 0.13802517266338965,
+        "standard_deviation": 0.00034631694343695377
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.026280702212020182,
+        "min": 0.025205168215826815,
+        "max": 0.027959549884632045,
+        "standard_deviation": 0.0014729715334919993
+      },
+      "audit_brier": {
+        "mean": 0.14607736876014443,
+        "min": 0.146036638716406,
+        "max": 0.14614850519813088,
+        "standard_deviation": 6.182183305070935e-05
+      },
+      "audit_probability_rmse": {
+        "mean": 0.026527990302499485,
+        "min": 0.0257660212230867,
+        "max": 0.027852366710809772,
+        "standard_deviation": 0.001151275760291089
+      },
+      "duplicate_probability_change": {
+        "mean": 0.015788129914589718,
+        "min": 0.01415440877040961,
+        "max": 0.017645251398910322,
+        "standard_deviation": 0.0017561111434703125
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8352908277719884,
+        "min": 0.8351595214272091,
+        "max": 0.8353829224441961,
+        "standard_deviation": 0.00011674831924744085
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.8110376818870901,
+        "min": 0.8110226703496578,
+        "max": 0.8110540032777815,
+        "standard_deviation": 1.5707478565064242e-05
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8357347012919542,
+        "min": 0.8357347012919542,
+        "max": 0.8357347012919542,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "forecast",
+    "domain": "more_duplicates",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8385073827895972,
+        "min": 0.838093994198449,
+        "max": 0.83875041229866,
+        "standard_deviation": 0.00035984419296125516
+      },
+      "oracle_return": {
+        "mean": 0.8391997255941014,
+        "min": 0.8391997255941014,
+        "max": 0.8391997255941014,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.0006923428045040855,
+        "min": 0.0004493132954414342,
+        "max": 0.0011057313956523709,
+        "standard_deviation": 0.00035984419296124356
+      },
+      "minimum_example_regret": {
+        "mean": -1.1102230246251565e-16,
+        "min": -1.1102230246251565e-16,
+        "max": -1.1102230246251565e-16,
+        "standard_deviation": 0.0
+      },
+      "inspection_rate": {
+        "mean": 0.07330322265625,
+        "min": 0.07220458984375,
+        "max": 0.074462890625,
+        "standard_deviation": 0.0011303869126862876
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.07196044921875,
+        "min": 0.07196044921875,
+        "max": 0.07196044921875,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.3712519319938177,
+        "min": 0.3656877897990726,
+        "max": 0.37712519319938176,
+        "standard_deviation": 0.00572496419704858
+      },
+      "inspection_cost": {
+        "mean": 0.003067197078247356,
+        "min": 0.0030090378690914577,
+        "max": 0.003181163842086221,
+        "standard_deviation": 9.870511645612764e-05
+      },
+      "terminal_brier": {
+        "mean": 0.1582245625199939,
+        "min": 0.15803844637664088,
+        "max": 0.1585280237896571,
+        "standard_deviation": 0.00026504512792255937
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.024660558264715794,
+        "min": 0.019753314912038595,
+        "max": 0.03269969199595773,
+        "standard_deviation": 0.007018455877703185
+      },
+      "audit_brier": {
+        "mean": 0.16052092781714522,
+        "min": 0.16033257466874323,
+        "max": 0.16087960095258033,
+        "standard_deviation": 0.0003107508846155944
+      },
+      "audit_probability_rmse": {
+        "mean": 0.02648300889685595,
+        "min": 0.02309587107284789,
+        "max": 0.03287013149427126,
+        "standard_deviation": 0.005534796579546294
+      },
+      "duplicate_probability_change": {
+        "mean": 0.01581507692301497,
+        "min": 0.014045340270177975,
+        "max": 0.017910130087112563,
+        "standard_deviation": 0.0019528244177714478
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8346584969086269,
+        "min": 0.834223203180096,
+        "max": 0.8349174531485646,
+        "standard_deviation": 0.0003792320359519213
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7828823640201397,
+        "min": 0.7826149096410544,
+        "max": 0.7830347224295463,
+        "standard_deviation": 0.00023237040694228055
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8352262523406847,
+        "min": 0.8352262523406847,
+        "max": 0.8352262523406847,
+        "standard_deviation": 0.0
+      }
+    }
+  },
+  {
+    "recipe": "supervised",
+    "objective": "forecast",
+    "domain": "reversed_new_source",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "metrics": {
+      "net_return": {
+        "mean": 0.8303829392000371,
+        "min": 0.8223069644683754,
+        "max": 0.836423277510372,
+        "standard_deviation": 0.00727498695564368
+      },
+      "oracle_return": {
+        "mean": 0.8442069969574194,
+        "min": 0.8442069969574194,
+        "max": 0.8442069969574194,
+        "standard_deviation": 0.0
+      },
+      "oracle_regret": {
+        "mean": 0.013824057757382264,
+        "min": 0.007783719447047404,
+        "max": 0.021900032489044048,
+        "standard_deviation": 0.007274986955643677
+      },
+      "minimum_example_regret": {
+        "mean": -1.1102230246251565e-16,
+        "min": -1.1102230246251565e-16,
+        "max": -1.1102230246251565e-16,
+        "standard_deviation": 0.0
+      },
+      "inspection_rate": {
+        "mean": 0.12078857421875,
+        "min": 0.07647705078125,
+        "max": 0.1810302734375,
+        "standard_deviation": 0.05406636632203046
+      },
+      "oracle_inspection_rate": {
+        "mean": 0.22296142578125,
+        "min": 0.22296142578125,
+        "max": 0.22296142578125,
+        "standard_deviation": 0.0
+      },
+      "duplicate_inspection_rate": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "independent_inspection_rate": {
+        "mean": 0.16116947634172166,
+        "min": 0.1020441404023129,
+        "max": 0.24155061487091783,
+        "standard_deviation": 0.07214132631485846
+      },
+      "inspection_cost": {
+        "mean": 0.0029616346484952296,
+        "min": 0.001344595325690534,
+        "max": 0.004794181467019598,
+        "standard_deviation": 0.001734861304873075
+      },
+      "terminal_brier": {
+        "mean": 0.16645584560079593,
+        "min": 0.1585762829066484,
+        "max": 0.17474057381530836,
+        "standard_deviation": 0.008089758616245363
+      },
+      "terminal_probability_rmse": {
+        "mean": 0.087249907445473,
+        "min": 0.06654265764684729,
+        "max": 0.11981906018607164,
+        "standard_deviation": 0.028550347159604864
+      },
+      "audit_brier": {
+        "mean": 0.15757106441349353,
+        "min": 0.1535566444727715,
+        "max": 0.16282874103885897,
+        "standard_deviation": 0.004759433692220705
+      },
+      "audit_probability_rmse": {
+        "mean": 0.08656096467226877,
+        "min": 0.06279013379813334,
+        "max": 0.11495519765750019,
+        "standard_deviation": 0.026388072251940276
+      },
+      "duplicate_probability_change": {
+        "mean": 0.015643560151307502,
+        "min": 0.013908742439913836,
+        "max": 0.017711898653646623,
+        "standard_deviation": 0.0019233892962705799
+      },
+      "sampled_report_variance": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "standard_deviation": 0.0
+      },
+      "never_inspect_same_report_head_return": {
+        "mean": 0.8271758034462547,
+        "min": 0.8196127417945507,
+        "max": 0.8311531783176932,
+        "standard_deviation": 0.0065527308086627736
+      },
+      "always_inspect_same_report_head_return": {
+        "mean": 0.7957822236799292,
+        "min": 0.7928304095261081,
+        "max": 0.7998197551705881,
+        "standard_deviation": 0.0036189535415829224
+      },
+      "oracle_never_inspect_return": {
+        "mean": 0.8358707118175364,
+        "min": 0.8358707118175364,
+        "max": 0.8358707118175364,
+        "standard_deviation": 0.0
+      }
+    }
+  }
+]
