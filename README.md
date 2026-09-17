@@ -27,6 +27,11 @@ trained scoring layer over a frozen encoder. Training the full model took about
 This is a working learning project, with a deliberately small evaluation. It is
 not evidence of broad decision-making ability or production readiness.
 
+The next experiment tests **three task families and question-dependent answers**
+using a larger dataset and three training seeds. Its
+[protocol and reproduction commands](docs/multitask-experiment.md) are available;
+the table below records the completed original tool-selection experiment.
+
 ## The result, with the denominator attached
 
 | Method | Reference matches | Match rate | Log loss ↓ |
@@ -59,7 +64,7 @@ git clone https://github.com/catoenm/first-instinct.git
 cd first-instinct
 python3.14 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-decision-lock.txt
+python -m pip install -r requirements-multitask.txt
 
 python download_checkpoint.py
 python decision_model.py \

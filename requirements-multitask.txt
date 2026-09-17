@@ -1,0 +1,2 @@
+-r requirements-decision-lock.txt
+pyarrow==25.0.1

@@ -31,3 +31,25 @@ does not imply that the authors of this project independently verified them.
 The release contains a model trained on this derived data. It includes these
 notices and both upstream license texts. Dependencies retain their own licenses;
 they are installed separately, not bundled in the checkpoint.
+
+## Additional multi-task training data
+
+The [Stanford Natural Language Inference corpus](https://nlp.stanford.edu/projects/snli/)
+was created by Samuel R. Bowman, Gabor Angeli, Christopher Potts, and
+Christopher D. Manning (2015), and incorporates caption material from earlier
+datasets acknowledged on the corpus page. It is licensed under Creative Commons
+Attribution-ShareAlike 4.0. The license is preserved in
+[licenses/CC-BY-SA-4.0.txt](licenses/CC-BY-SA-4.0.txt). Downloaded source material
+and our adapted question data retain those terms; they are not relicensed as MIT.
+
+[GoEmotions](https://huggingface.co/datasets/google-research-datasets/go_emotions)
+is Google's human-annotated emotion dataset. Its source card declares Apache-2.0.
+The dataset and research are credited to the GoEmotions authors; see the
+[original project](https://github.com/google-research/google-research/tree/master/goemotions)
+for attribution and annotation details.
+
+Exact versions and checksums are listed in
+[data/multitask/sources.json](data/multitask/sources.json). Changes to the data
+include sampling, filtering, grouped partition isolation, and adaptation into
+categorical and yes/no questions. These modifications and assumptions are
+documented in [the multi-task report](docs/multitask-experiment.md).

@@ -12,6 +12,7 @@ data/decisions/raw/*
 .env
 .env.*
 .local/
+data/multitask/raw/
 
 # Local learning notes, outside the published project.
 PROJECT_PLAN.md

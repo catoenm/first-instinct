@@ -1,0 +1,48 @@
+{
+  "snli": {
+    "dataset": "stanfordnlp/snli",
+    "revision": "cdb5c3d5eed6ead6e5a341c8e56e669bb666725b",
+    "license": "CC-BY-SA-4.0",
+    "config": "plain_text",
+    "files": {
+      "train": {
+        "url": "https://huggingface.co/datasets/stanfordnlp/snli/resolve/cdb5c3d5eed6ead6e5a341c8e56e669bb666725b/plain_text/train-00000-of-00001.parquet",
+        "sha256": "ef9a7b25d97390a62aeda7abe26aec8640600f50b818eaeb9107097d60ac6620",
+        "bytes": 19614612
+      },
+      "validation": {
+        "url": "https://huggingface.co/datasets/stanfordnlp/snli/resolve/cdb5c3d5eed6ead6e5a341c8e56e669bb666725b/plain_text/validation-00000-of-00001.parquet",
+        "sha256": "00f5ed8deaed007fef3022f0215b287efbab815b1bb31ac3f3ff4f4129d41ffe",
+        "bytes": 413157
+      },
+      "test": {
+        "url": "https://huggingface.co/datasets/stanfordnlp/snli/resolve/cdb5c3d5eed6ead6e5a341c8e56e669bb666725b/plain_text/test-00000-of-00001.parquet",
+        "sha256": "4696deda851c4d2385f26b58f2e13f9ed9f08ea7b42a3f4c2b97a9d08448878c",
+        "bytes": 411531
+      }
+    }
+  },
+  "go_emotions": {
+    "dataset": "google-research-datasets/go_emotions",
+    "revision": "add492243ff905527e67aeb8b80c082af02207c3",
+    "license": "Apache-2.0",
+    "config": "simplified",
+    "files": {
+      "train": {
+        "url": "https://huggingface.co/datasets/google-research-datasets/go_emotions/resolve/add492243ff905527e67aeb8b80c082af02207c3/simplified/train-00000-of-00001.parquet",
+        "sha256": "b7d74279616ae7c9b8374ab62ea9f9d6504d36a577bb17f745d720dc2b0d4e76",
+        "bytes": 2767678
+      },
+      "validation": {
+        "url": "https://huggingface.co/datasets/google-research-datasets/go_emotions/resolve/add492243ff905527e67aeb8b80c082af02207c3/simplified/validation-00000-of-00001.parquet",
+        "sha256": "d46ad5633c4fa41829d22d549743a7bf858d94129536a02af7280c281db5e63a",
+        "bytes": 350063
+      },
+      "test": {
+        "url": "https://huggingface.co/datasets/google-research-datasets/go_emotions/resolve/add492243ff905527e67aeb8b80c082af02207c3/simplified/test-00000-of-00001.parquet",
+        "sha256": "fd0953e535ba2569edc6a1daaa1133f8e4b9071691d540c9bab812fda132bc26",
+        "bytes": 346630
+      }
+    }
+  }
+}

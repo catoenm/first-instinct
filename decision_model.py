@@ -111,7 +111,10 @@ def choose_device(requested: str) -> str:
 
 def load_run(run: Path, device: str):
     manifest = json.loads((run / "manifest.json").read_text())
-    checkpoint = None if manifest.get("encoder_frozen", True) else run / "encoder"
+    if "encoder_checkpoint" in manifest:
+        checkpoint = run / manifest["encoder_checkpoint"]
+    else:
+        checkpoint = None if manifest.get("encoder_frozen", True) else run / "encoder"
     tokenizer, encoder = load_encoder(device, manifest["model_id"], manifest["model_revision"], checkpoint)
     scorer = OptionScorer(encoder.config.hidden_size)
     scorer.load_state_dict(load_file(run / "scorer.safetensors"))
