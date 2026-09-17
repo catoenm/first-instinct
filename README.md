@@ -19,6 +19,11 @@ First Instinct takes some text, a question, and a list of described answers.
 One shared network scores the answers. It can choose a tool, identify an emotion,
 or judge how two sentences relate—without generating a stream of text.
 
+**In progress: [a four-billion-parameter decision model](docs/larger-model.md).**
+The separate `scale_lab` pipeline adds pinned pretrained models, adapter training,
+larger public datasets and executable outcome records. The existing released
+model and results below remain the completed experiments.
+
 **Latest: [Executable evidence: auditing the data before reinforcement learning](docs/executable-evidence.md).**
 We built 24 authored Python tasks and compared random, coverage and adaptive
 data collection at **100 verified programs per run**. Coverage modestly improved

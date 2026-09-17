@@ -53,3 +53,23 @@ Exact versions and checksums are listed in
 include sampling, filtering, grouped partition isolation, and adaptation into
 categorical and yes/no questions. These modifications and assumptions are
 documented in [the multi-task report](docs/multitask-experiment.md).
+
+## Larger decision-model experiments
+
+The optional `scale_lab` pipeline uses [Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-4B)
+and [Qwen3](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) checkpoints published
+by the Qwen team under Apache-2.0. Exact revisions are pinned in
+`scale_lab/common.py`. These are separate from the released DeBERTa model.
+
+[Glaive function calling v2](https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2)
+is synthetic data published by Glaive AI under Apache-2.0. Revision
+`e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac` and the original file checksum are
+recorded in `scale_lab/glaive.py`. Our conversion extracts the first visible user
+request and the first assistant action from single-function conversations,
+groups connected function names and repeated requests, and derives described
+options for calling a tool, asking a follow-up question, or responding.
+Question-mark detection supplies the follow-up label; it is not a human audit.
+Synthetic reference actions are not independently verified optimal actions.
+
+All source licenses continue to apply to adapted data. Original authored
+execution tasks are project code under MIT. Data manifests distinguish the two.
