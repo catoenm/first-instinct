@@ -1,0 +1,28 @@
+{
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "steps": 2000,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "validation_seed": 199001,
+  "validation_cost_seed": 199101,
+  "test_seed": 199003,
+  "validation_size": 8192,
+  "test_size_per_domain": 32768,
+  "domains": [
+    "in_distribution",
+    "weaker_sensor",
+    "stronger_sensor",
+    "extreme_prior"
+  ],
+  "report": "mean positive-action probability over 129 uniformly spaced threshold midpoints",
+  "pilot": false,
+  "reference_run_name": "20260917T071256.505747Z",
+  "reference_artifact_manifest_sha256": "d09bd72188740f19de3eb799d25dce9d5d91d34252b48e8284c370252cc1847f",
+  "status": "follow-up motivated by first experiment; new validation and final evaluation seeds"
+}

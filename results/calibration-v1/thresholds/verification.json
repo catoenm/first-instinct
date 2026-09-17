@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "trained_models": 5,
+  "updates_checked": 10000,
+  "training_episodes_regenerated": 10240000,
+  "forecast_domain_evaluations_reconstructed": 200,
+  "maximum_reloaded_prediction_difference": 0.0,
+  "checks": [
+    "both run artifact manifests",
+    "random initial weights",
+    "checkpoint selection and selected validation cost",
+    "all threshold-policy training streams",
+    "sampled rollout rewards",
+    "fresh final episodes",
+    "every cost curve and integrated forecast",
+    "raw versus integrated metrics and workflows",
+    "all fixed reference forecasts on the new test",
+    "independent Brier identity"
+  ]
+}

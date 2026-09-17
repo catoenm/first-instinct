@@ -1,0 +1,14 @@
+{
+  "tag": "calibration-v1",
+  "directory_name": "first-instinct-calibration-v1",
+  "archive_name": "first-instinct-calibration-v1.zip",
+  "download_url": "https://github.com/catoenm/first-instinct/releases/download/calibration-v1/first-instinct-calibration-v1.zip",
+  "archive_bytes": 345052568,
+  "archive_sha256": "52ee024efc5570173d9fb55c192fb24b0f03e550ffd178c86cb4817cfe9607e2",
+  "artifact_manifest_sha256": {
+    "main": "d09bd72188740f19de3eb799d25dce9d5d91d34252b48e8284c370252cc1847f",
+    "thresholds": "6661d491c407519ec1423c802cff6e68c29e064f8cbca05eea0e2a69e616c73b"
+  },
+  "models_trained": 35,
+  "note": "Synthetic numeric experiments; independent of the released text checkpoint and of Jev."
+}

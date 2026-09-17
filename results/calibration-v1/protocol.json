@@ -1,0 +1,63 @@
+{
+  "output": "output/calibration_runs/20260917T071256.505747Z",
+  "steps": 2000,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "evaluate_every": 100,
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "pilot": false,
+  "validation_seed": 99001,
+  "calibration_seed": 99002,
+  "test_seed": 99003,
+  "validation_size": 8192,
+  "calibration_size": 8192,
+  "test_size_per_domain": 32768,
+  "methods": [
+    "supervised_log",
+    "supervised_brier",
+    "reward_accuracy",
+    "reward_forecast"
+  ],
+  "domains": [
+    "in_distribution",
+    "weaker_sensor",
+    "stronger_sensor",
+    "extreme_prior"
+  ],
+  "report_grid": [
+    0.0,
+    0.05000000074505806,
+    0.10000000149011612,
+    0.15000000596046448,
+    0.20000000298023224,
+    0.25,
+    0.30000001192092896,
+    0.3499999940395355,
+    0.4000000059604645,
+    0.45000001788139343,
+    0.5,
+    0.550000011920929,
+    0.6000000238418579,
+    0.6499999761581421,
+    0.699999988079071,
+    0.75,
+    0.800000011920929,
+    0.8500000238418579,
+    0.8999999761581421,
+    0.949999988079071,
+    1.0
+  ],
+  "continuations": {
+    "supervised_continue": "supervised_log",
+    "accuracy_continue": "reward_accuracy"
+  },
+  "continuation_start": "same selected supervised_log checkpoint for each seed; equal additional episode budget and fresh matched stream",
+  "forecast_policy_return": "mean report; modal report and sampled-policy score also reported",
+  "test_policy": "All model checkpoints and temperatures fixed before generating final test episodes"
+}

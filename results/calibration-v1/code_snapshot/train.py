@@ -149,7 +149,7 @@ def train_one(args, root, method, seed, validation, run_label=None, initial_stat
                             'reward_sha256': hashlib.sha256(rewards.numpy().tobytes()).hexdigest()})
             trace.write(json.dumps(row) + '\n')
             if step in (1, args.steps):
-                for i in range(min(16, len(batch.outcomes))):
+                for i in range(16):
                     item = {'step': step, 'index_in_batch': i, 'observation': batch.observations[i].tolist(),
                             'outcome': float(batch.outcomes[i])}
                     if rewards is not None:

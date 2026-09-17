@@ -19,7 +19,15 @@ First Instinct takes some text, a question, and a list of described answers.
 One shared network scores the answers. It can choose a tool, identify an emotion,
 or judge how two sentences relate—without generating a stream of text.
 
-The latest experiment trains **five tasks from three families** on your own Mac.
+**New: [a calibration laboratory](docs/calibrated-decisions-post.md).** Two tiny
+models both made the right yes/no choice 77.43% of the time, but substituting one
+model's action probabilities for event forecasts more than doubled a program's
+cost in a tested inspection setting. We trained reward policies, compared
+supervised and temperature-scaling baselines, and tried recovering probabilities
+from decisions across different mistake costs. [Run the experiments, inspect
+every seed, and read the limits →](docs/calibration-results.md)
+
+The text-model experiment trains **five tasks from three families** on your own Mac.
 Across three training seeds, full fine-tuning reached **79.5% average accuracy
 across tasks**, versus **57.5%** when training only a scoring layer over the same
 fixed encoder.
@@ -58,7 +66,9 @@ This tests new examples within known task families, not arbitrary new tasks.
 The model has **141,305,088 parameters**, including embeddings. Each full run
 completed six passes in about **10 minutes on an Apple M5 Max with 128 GB of
 unified memory**. This is supervised fine-tuning of Microsoft's DeBERTa-v3-small;
-no reinforcement learning or probability calibration has been done.
+the released text model has not undergone reinforcement learning or probability
+calibration. The separate numeric calibration laboratory above includes reward
+training with networks of 1,217–1,877 parameters.
 
 [Read the experiment, every seed, and wording sensitivity →](docs/multitask-experiment.md)
 
@@ -204,6 +214,9 @@ use the [original reproduction commands](docs/experiment.md#verification-and-rep
 | [train_decisions.py](train_decisions.py) | Optional eight-example exercise with each weight update exposed |
 | [results/multitask-v1](results/multitask-v1) | Recorded predictions, traces, hashes, and exact source snapshots |
 | [docs/model-card-v0.2.md](docs/model-card-v0.2.md) | Model purpose, provenance, constraints, and release details |
+| [calibration_lab](calibration_lab) | Numeric reward environments, policies, verification, and runnable demo |
+| [docs/calibrated-decisions-post.md](docs/calibrated-decisions-post.md) | Post draft explaining what action probabilities mean |
+| [results/calibration-v1](results/calibration-v1) | Five-seed summaries, frozen protocols, and evidence verification |
 
 The earlier document-deduplication exercises (`pipeline.py`, `minhash.py`,
 `lsh.py`) remain as small learning examples. The dataset builder also reuses
@@ -222,10 +235,11 @@ require no model download. GitHub Actions runs them on macOS and Linux.
 
 ## What would make it more convincing?
 
-The current experiment demonstrates a shared model learning several kinds of
-decisions, including answers that depend on the question. The next useful
-milestone is a small environment where decisions produce observable outcomes.
-That would let us compare this supervised model with reinforcement learning.
+The text experiment demonstrates a shared model learning several kinds of
+decisions, including answers that depend on the question. The calibration
+laboratory now tests reward learning and probability semantics in a synthetic
+numeric environment. Extending those lessons to verified text decisions and
+learned information acquisition is the next useful step.
 
 1. Execute safe local tools in a repeatable environment and score whether the requested task succeeds.
 2. Hold out task families and question styles, then compare outcome rewards before and after training.

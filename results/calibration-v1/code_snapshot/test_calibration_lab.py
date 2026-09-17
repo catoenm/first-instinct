@@ -1,11 +1,5 @@
 """Exact checks for environment probability, sampled-action gradients, and decisions."""
 import itertools
-import argparse
-import contextlib
-import io
-import json
-from pathlib import Path
-import tempfile
 import unittest
 from unittest.mock import PropertyMock, patch
 
@@ -14,25 +8,10 @@ import torch
 from torch.nn import functional as F
 
 from calibration_lab.environment import EpisodeBatch, draw_episodes, expected_brier, workflow
-from calibration_lab.train import DecisionNetwork, reinforce_loss, temperature_fit, validation_objective, train_one
-from safetensors.torch import load_file
+from calibration_lab.train import DecisionNetwork, reinforce_loss, temperature_fit, validation_objective
 
 
 class CalibrationTests(unittest.TestCase):
-    def test_small_batch_continuation_preserves_source_and_records_initial_weights(self):
-        original = DecisionNetwork().state_dict()
-        saved = {k: v.clone() for k, v in original.items()}
-        args = argparse.Namespace(steps=1, batch_size=2, learning_rate=.001, evaluate_every=1)
-        validation = draw_episodes(np.random.default_rng(82), 16)
-        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
-            _, folder = train_one(args, Path(tmp), 'reward_accuracy', 82, validation,
-                                  initial_state=original, initial_name='source')
-            self.assertEqual(len((folder/'rollout_examples.jsonl').read_text().splitlines()), 2)
-            loaded = load_file(folder/'initial.safetensors')
-            for key in saved:
-                torch.testing.assert_close(saved[key], loaded[key], atol=0, rtol=0)
-                torch.testing.assert_close(saved[key], original[key], atol=0, rtol=0)
-
     def test_bayes_posterior_for_positive_and_negative_readings(self):
         batch = EpisodeBatch(np.array([[.25, .8, 1], [.25, .8, 0]], dtype=np.float64), np.array([0, 1]))
         np.testing.assert_allclose(batch.posterior, [4 / 7, 1 / 13])

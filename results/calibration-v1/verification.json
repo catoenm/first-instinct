@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "hashed_artifacts": 353,
+  "trained_models": 30,
+  "model_domain_evaluations_reconstructed": 160,
+  "updates_checked": 60000,
+  "episodes_across_training_recipes": 61440000,
+  "distinct_training_streams_rebuilt": 10,
+  "maximum_reloaded_prediction_difference": 0.0,
+  "checks": [
+    "all sealed artifact hashes",
+    "frozen source hashes",
+    "checkpoint selection from own validation objective",
+    "identical warm-start weights",
+    "all matched environment streams regenerated",
+    "rollout rewards",
+    "temperatures refitted without test data",
+    "all test episodes regenerated",
+    "independent posterior formula",
+    "all checkpoint predictions reproduced",
+    "Brier, posterior error, accuracy and all workflow costs reconstructed"
+  ]
+}
