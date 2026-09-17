@@ -1,0 +1,11 @@
+{
+  "version": "v0.2.0",
+  "directory": "first-instinct-v0.2.0",
+  "asset": "first-instinct-v0.2.0.zip",
+  "url": "https://github.com/catoenm/first-instinct/releases/download/v0.2.0/first-instinct-v0.2.0.zip",
+  "bytes": 411715475,
+  "sha256": "b7c82743a6206dd883f456584c5d5521ecc64a852f70a2fb7f46ab51e1fd1061",
+  "source_run": "20260917T041711.272063Z/full-seed-17",
+  "selected_epoch": 5,
+  "model_manifest_sha256": "7e82d0185ff551ef93a886c213bfddcf8745996eb6e002296d9e4d88f3233e10"
+}

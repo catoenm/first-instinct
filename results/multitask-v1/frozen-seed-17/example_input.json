@@ -1,0 +1,14 @@
+{
+  "options": [
+    {
+      "description": "No, the answer to the question is no.",
+      "id": "no"
+    },
+    {
+      "description": "Yes, the answer to the question is yes.",
+      "id": "yes"
+    }
+  ],
+  "question": "Does this message express anger?",
+  "state": "Message: I've never been this sad in my life!"
+}

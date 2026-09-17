@@ -1,0 +1,4 @@
+{
+  "primary_run": "full-seed-17",
+  "basis": "lowest validation macro loss; selected before reading final test"
+}

@@ -10,6 +10,90 @@ The experiment asks whether this small model can use the question to decide
 which judgment to make about the same text. It does not test arbitrary new task
 families, general agent behavior, or equivalence to Jev.
 
+## Measured results
+
+Across three seeds, updating the full network reached **79.5% mean accuracy
+across the five tasks**, compared with **57.5%** when only the scoring layer was
+trained. The average improvement was **22.0 percentage points**. Both methods
+continue the same released v0.1.0 model on the same data and six-pass budget.
+
+| Model | Mean task accuracy | Both answers correct, 360 pairs |
+| :--- | ---: | ---: |
+| Original v0.1.0, no additional training | 50.3% | 3.3% |
+| Fixed encoder, trained scorer; three-seed mean | 57.5% | 20.7% |
+| **Full fine-tuning; three-seed mean** | **79.5%** | **61.8%** |
+
+Full-model task accuracy ranged from **78.6% to 81.1%** across seeds. The 95%
+source-resampling interval for the mean improvement over the fixed encoder is
+**18.9 to 25.1 percentage points**. These intervals use 2,000 bootstrap resamples
+of whole source examples, stratified by source family, with identical resamples
+for all models. They describe this benchmark's sampled examples, not uncertainty
+over arbitrary tasks or every possible training seed.
+
+### Accuracy by task
+
+The following are means over the same three seeds. The first-tool test contains
+only 64 examples, so its high accuracy has a small denominator.
+
+| Task | Test questions | Fixed encoder | Full fine-tuning |
+| :--- | ---: | ---: | ---: |
+| First tool to call | 64 | 92.2% | 94.3% |
+| Sentence relationship, three choices | 180 | 32.2% | 70.0% |
+| Sentence relationship, yes/no | 360 | 50.4% | 72.8% |
+| Emotion, six choices | 180 | 54.8% | 76.5% |
+| Emotion, yes/no | 360 | 58.1% | 84.1% |
+
+Every task improved on average, although the sentence-relationship tasks remain
+the weakest. This is agreement with source annotations, not verified execution
+of tools or independent adjudication of every human label.
+
+### Wording sensitivity
+
+| Evaluation, full-model three-seed mean | Mean task accuracy | Both paired answers correct |
+| :--- | ---: | ---: |
+| Training question templates, new examples | 79.5% | 61.8% |
+| Predeclared unseen question wording | 76.0% | 46.0% |
+| Question replaced with a generic instruction | 68.6% | 0.0% |
+
+Paraphrases reduce mean accuracy by **3.5 percentage points** and paired accuracy
+by **15.7 points**. The model learned useful question-dependent behavior, but its
+interpretation is still sensitive to wording. The removed-question condition's
+zero paired score follows from identical inputs having opposite reference
+answers; it is a structural check, not additional evidence of broad reasoning.
+Categorical option descriptions still reveal which categorical task to perform,
+which helps explain that condition's much higher ordinary accuracy.
+
+### Every seed and checkpoint
+
+| Condition | Seed | Selected pass | Mean task accuracy | Both paired answers correct | Run seconds |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| frozen | 7 | 6 | 57.3% | 80 / 360 | 0.8 |
+| frozen | 17 | 6 | 57.4% | 70 / 360 | 0.8 |
+| frozen | 29 | 6 | 57.9% | 74 / 360 | 0.9 |
+| full | 7 | 5 | 78.6% | 224 / 360 | 580.1 |
+| full | 17 | 5 | 81.1% | 230 / 360 | 624.4 |
+| full | 29 | 4 | 78.9% | 213 / 360 | 632.1 |
+
+Full training took about **10 minutes per seed** on the Apple M5 Max, including
+validation and checkpoint writes. Frozen scoring-layer times exclude the
+one-time shared encoder feature cache, so they are not end-to-end comparisons.
+Downloads, initial shared setup, and final test evaluations are outside the
+per-run timings. Every run completed six passes even when an earlier checkpoint
+was selected.
+
+The released model is **seed 17, pass 5**, selected by validation loss before
+final testing. Its 81.1% test accuracy is listed for reproducibility; the headline
+comparison uses the three-seed mean. For example, seed 29 performs best on tools,
+while seed 17 performs best on sentence relationships. There is no single seed
+that wins on every measure.
+
+[Complete predictions, traces, manifests, and checks](../results/multitask-v1)
+include all 21 model/wording evaluations. Every run visited each training question
+exactly once per pass, with 672 updates and 21,402 question visits. Checkpoint
+hashes matched; reloaded validation probabilities differed by less than 0.000006.
+The source splits reproduced byte for byte. The 25 offline code checks pass on
+macOS and Linux.
+
 ## What changed from the first experiment
 
 The first comparison trained on 166 tool-selection examples and tested 34.

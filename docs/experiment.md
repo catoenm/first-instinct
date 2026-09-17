@@ -90,7 +90,7 @@ calibration was fitted. The run's original `protocol.json` calls this a reserved
 split; that means it was unused by this comparison, not that it was never inspected.
 
 This history matters: we cannot treat the original exploratory test as untouched
-validation of the corrected task. The results in the README use only the new
+validation of the corrected task. The results in this report use only the new
 34-case test. Further iteration should reserve another new final test.
 
 ## Data boundaries
@@ -114,8 +114,22 @@ single synthetic reference label cannot capture that ambiguity.
 
 ## Verification and reproduction
 
-The [README commands](../README.md#reproduce-the-experiment) rebuild every split
-in both revisions byte for byte. Original source snapshots and hashes are
+These commands rebuild every split in both revisions byte for byte:
+
+```bash
+python decision_dataset.py \
+  --task legacy-whole-request --output output/decision_dataset_v1
+python decision_dataset.py \
+  --revise-from output/decision_dataset_v1 --output output/decision_dataset_v2
+python finetune_decisions.py --data output/decision_dataset_v2
+```
+
+The first build downloads the pinned 37 MB ToolACE source; training downloads
+the pinned base encoder if it is not cached. Existing output directories are
+never overwritten. A direct build with the corrected default question is useful
+for a new experiment, but differs from this historical revision's membership.
+
+Original source snapshots and hashes are
 preserved alongside the results. Dataset manifests change when current source
 code changes; split-file hashes are the stable data-identity check.
 

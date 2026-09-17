@@ -1,0 +1,52 @@
+{
+  "experiment": "multitask_continuation",
+  "mode": "frozen",
+  "seed": 7,
+  "model_id": "microsoft/deberta-v3-small",
+  "model_revision": "a36c739020e01763fe789b4b85e2df55d6180012",
+  "initial_release": "first-instinct-v0.1.0",
+  "initial_manifest_sha256": "afe9ae0ce48c6647f15073bb0840ccb1b5c35f1b06cb0d42731509f64366c017",
+  "encoder_frozen": true,
+  "encoder_checkpoint": "../initial_encoder",
+  "trainable_parameters": 768,
+  "max_tokens": 512,
+  "epochs": 6,
+  "batch_size": 32,
+  "microbatch_size": 8,
+  "optimizer": "AdamW",
+  "encoder_learning_rate": 0,
+  "head_learning_rate": 0.001,
+  "weight_decay": 0.01,
+  "gradient_clip_norm": 1,
+  "task_loss_weights": {
+    "tool_first": 2.181651376146789,
+    "inference_choice": 1.189,
+    "inference_check": 0.5945,
+    "emotion_choice": 1.48625,
+    "emotion_check": 0.743125
+  },
+  "selected_epoch": 6,
+  "selection_metric": "lowest mean validation log loss across the five tasks, including epoch zero",
+  "selected_encoder_probe_max_change": 0.0,
+  "training_examples": 3567,
+  "validation_examples": 637,
+  "elapsed_seconds": 0.7781825419997404,
+  "device": "mps",
+  "dataset_manifest_sha256": "10759aed9aced31b37ac8434cceadd9e8707336b85d9188fc452adef535849bb",
+  "requirements_sha256": "6bb08188d39297ab4ef3bf8bd783805bbf86f6c7e0e7d0548ab3b9caba0da19b",
+  "base_requirements_sha256": "a9640547035c9e16d539c0c5d06a8db77d3f02baf1c552d002fab082783b272e",
+  "code_sha256": {
+    "multitask_train.py": "66870585854048502931a3427ce6e7e71dc7022cdaf53402f60ae652d0c31b54",
+    "multitask_data.py": "6ac971eee156d5e17ba55075b44d781546041374cf7f523690240f2b9fedb4b5",
+    "decision_model.py": "e5eeaac81769ad9c95d01c4368fd64c3a2aa02bf71e89abb99def563abc1cc61",
+    "finetune_decisions.py": "56aff6db10148777ae7cc4e0d0e5ac89b24f2828a0c5dc798f55471b3777003b"
+  },
+  "artifacts_sha256": {
+    "example_input.json": "609aecac2d1992f6c161f628f9d511df040a4f7dcafdefa77ff6c3d43c4411aa",
+    "history.json": "4a9ca99dec666c2b291290fc972b19769e0fc200c3f963370a4168d1dbcd2bcd",
+    "scorer.safetensors": "cad49536101a7177f1ac0f90873e5aa212ed4f357416bc3852ead945fb52d0ed",
+    "selected_validation.json": "f4eb08dbf8054fd631238e0f35262e6d3f7839652cda666eb41604794808789a",
+    "training_trace.jsonl": "20cf2342bfe6375eac9cea42a1c9e6f3ec41c9b363fa6044bb2bcef7d4011aea"
+  },
+  "limitations": "Three known task families; public human labels and synthetic tool labels; correlated questions per state; uncalibrated probabilities; pretraining contamination unmeasured."
+}

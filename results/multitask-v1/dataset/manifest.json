@@ -1,0 +1,125 @@
+{
+  "experiment": "three_families_with_contrastive_questions",
+  "seed": 20260917,
+  "max_tokens": 512,
+  "sources": {
+    "snli": {
+      "dataset": "stanfordnlp/snli",
+      "revision": "cdb5c3d5eed6ead6e5a341c8e56e669bb666725b",
+      "license": "CC-BY-SA-4.0",
+      "config": "plain_text",
+      "files": {
+        "train": {
+          "url": "https://huggingface.co/datasets/stanfordnlp/snli/resolve/cdb5c3d5eed6ead6e5a341c8e56e669bb666725b/plain_text/train-00000-of-00001.parquet",
+          "sha256": "ef9a7b25d97390a62aeda7abe26aec8640600f50b818eaeb9107097d60ac6620",
+          "bytes": 19614612
+        },
+        "validation": {
+          "url": "https://huggingface.co/datasets/stanfordnlp/snli/resolve/cdb5c3d5eed6ead6e5a341c8e56e669bb666725b/plain_text/validation-00000-of-00001.parquet",
+          "sha256": "00f5ed8deaed007fef3022f0215b287efbab815b1bb31ac3f3ff4f4129d41ffe",
+          "bytes": 413157
+        },
+        "test": {
+          "url": "https://huggingface.co/datasets/stanfordnlp/snli/resolve/cdb5c3d5eed6ead6e5a341c8e56e669bb666725b/plain_text/test-00000-of-00001.parquet",
+          "sha256": "4696deda851c4d2385f26b58f2e13f9ed9f08ea7b42a3f4c2b97a9d08448878c",
+          "bytes": 411531
+        }
+      }
+    },
+    "go_emotions": {
+      "dataset": "google-research-datasets/go_emotions",
+      "revision": "add492243ff905527e67aeb8b80c082af02207c3",
+      "license": "Apache-2.0",
+      "config": "simplified",
+      "files": {
+        "train": {
+          "url": "https://huggingface.co/datasets/google-research-datasets/go_emotions/resolve/add492243ff905527e67aeb8b80c082af02207c3/simplified/train-00000-of-00001.parquet",
+          "sha256": "b7d74279616ae7c9b8374ab62ea9f9d6504d36a577bb17f745d720dc2b0d4e76",
+          "bytes": 2767678
+        },
+        "validation": {
+          "url": "https://huggingface.co/datasets/google-research-datasets/go_emotions/resolve/add492243ff905527e67aeb8b80c082af02207c3/simplified/validation-00000-of-00001.parquet",
+          "sha256": "d46ad5633c4fa41829d22d549743a7bf858d94129536a02af7280c281db5e63a",
+          "bytes": 350063
+        },
+        "test": {
+          "url": "https://huggingface.co/datasets/google-research-datasets/go_emotions/resolve/add492243ff905527e67aeb8b80c082af02207c3/simplified/test-00000-of-00001.parquet",
+          "sha256": "fd0953e535ba2569edc6a1daaa1133f8e4b9071691d540c9bab812fda132bc26",
+          "bytes": 346630
+        }
+      }
+    }
+  },
+  "toolace_sha256": "ba12c083fca7e8da48c67ad5b895e495447da7c66e39a2e19742c082e6cb537e",
+  "counts": {
+    "train": 3567,
+    "validation": 637,
+    "test": 1144
+  },
+  "source_states": {
+    "train": 1407,
+    "validation": 277,
+    "test": 424
+  },
+  "tasks": {
+    "train": {
+      "emotion_check": 960,
+      "emotion_choice": 480,
+      "inference_check": 1200,
+      "inference_choice": 600,
+      "tool_first": 327
+    },
+    "validation": {
+      "emotion_check": 180,
+      "emotion_choice": 90,
+      "inference_check": 180,
+      "inference_choice": 90,
+      "tool_first": 97
+    },
+    "test": {
+      "emotion_check": 360,
+      "emotion_choice": 180,
+      "inference_check": 360,
+      "inference_choice": 180,
+      "tool_first": 64
+    }
+  },
+  "filter_audit": {
+    "snli": {
+      "repeated_or_reserved_source_group": 3
+    },
+    "go_emotions": {
+      "repeated_or_reserved_source_group": 6
+    },
+    "toolace": {
+      "unsupported_or_overlong": 10614,
+      "retired_or_mixed_prior_partition": 98
+    }
+  },
+  "quotas_per_class": {
+    "snli": {
+      "train": 200,
+      "validation": 30,
+      "test": 60
+    },
+    "go_emotions": {
+      "train": 80,
+      "validation": 15,
+      "test": 30
+    }
+  },
+  "split_policy": "Official human splits; all official validation/test source groups excluded from training; one selected row per premise or normalized emotion text; no selected same-family state word-trigram Jaccard >= 0.8. All derived questions stay together. Tools preserve prior train/validation boundaries; old test/development groups retired; new connected groups assigned by fixed hash.",
+  "paired_policy": "Each human state yields one categorical decision and a yes/no pair: its annotated class and a different class. A balanced offset schedule covers EVERY other class equally for each reference class and split. Every binary question has balanced yes/no labels. Pairs share state and options, with opposite targets.",
+  "limitations": "Known task families, not unseen-family generalization. Public human labels and synthetic tool references can be wrong; binary negatives derive from the selected single label. Pretraining contamination not measured. Decisions sharing a source state are correlated. No probability calibration.",
+  "code_sha256": {
+    "multitask_data.py": "6ac971eee156d5e17ba55075b44d781546041374cf7f523690240f2b9fedb4b5",
+    "decision_data.py": "991dc6848fa4b8e2816da50bc6519ab4b99c4b7fb8881ba534218a40cc46edea",
+    "decision_dataset.py": "4fe91e79ab09620acc40d5e59eb0464f3c7f5b85fc5f04019cec6d3251003399",
+    "decision_model.py": "e5eeaac81769ad9c95d01c4368fd64c3a2aa02bf71e89abb99def563abc1cc61"
+  },
+  "outputs": {
+    "test.jsonl": "dc2e5add8635e485a138766be6279b941d121455bae9cce13ffc384f848f4e69",
+    "train.jsonl": "b5ae788884dc89a58d4a0c09edef302063f14115fca1c26fe730448557d7a917",
+    "validation.jsonl": "eb41bab71d7dcceb527576c537e7d707ee45bd3596c0d26e50a01c58c4c8bf2e"
+  }
+}

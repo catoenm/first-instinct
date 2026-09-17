@@ -1,0 +1,34 @@
+{
+  "dataset_manifest_sha256": "10759aed9aced31b37ac8434cceadd9e8707336b85d9188fc452adef535849bb",
+  "initial_model_manifest_sha256": "afe9ae0ce48c6647f15073bb0840ccb1b5c35f1b06cb0d42731509f64366c017",
+  "epochs": 6,
+  "batch_size": 32,
+  "microbatch_size": 8,
+  "seeds": [
+    7,
+    17,
+    29
+  ],
+  "encoder_learning_rate": 2e-05,
+  "head_learning_rate": 0.001,
+  "task_loss_weights": {
+    "tool_first": 2.181651376146789,
+    "inference_choice": 1.189,
+    "inference_check": 0.5945,
+    "emotion_choice": 1.48625,
+    "emotion_check": 0.743125
+  },
+  "checkpoint_selection": "lowest macro validation log loss for each run, including initial checkpoint",
+  "test_policy": "No test predictions until all frozen and full runs have completed and checkpoints have been selected. Report every seed. Primary full checkpoint is selected by validation macro loss only.",
+  "test_variants": [
+    "canonical questions",
+    "predeclared unseen paraphrases",
+    "question removed control"
+  ],
+  "primary_metrics": [
+    "accuracy by task",
+    "macro accuracy across tasks",
+    "both answers correct per opposite-answer pair"
+  ],
+  "independence": "Questions derived from one source state are correlated; report source-state and pair counts, not just question counts."
+}

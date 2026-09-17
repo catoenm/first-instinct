@@ -1,0 +1,386 @@
+[
+  {
+    "epoch": 0,
+    "validation": {
+      "count": 637,
+      "correct": 334,
+      "accuracy": 0.5243328100470958,
+      "loss": 0.9233640169939429,
+      "brier": 0.535954282787628,
+      "by_task": {
+        "emotion_check": {
+          "count": 180,
+          "correct": 90,
+          "accuracy": 0.5,
+          "loss": 0.7131081501642863,
+          "brier": 0.5192667206956281
+        },
+        "emotion_choice": {
+          "count": 90,
+          "correct": 36,
+          "accuracy": 0.4,
+          "loss": 1.8827436308686931,
+          "brier": 0.7425106258323972
+        },
+        "inference_check": {
+          "count": 180,
+          "correct": 93,
+          "accuracy": 0.5166666666666667,
+          "loss": 0.6993415012955666,
+          "brier": 0.5060986363225513
+        },
+        "inference_choice": {
+          "count": 90,
+          "correct": 30,
+          "accuracy": 0.3333333333333333,
+          "loss": 1.2239492502477434,
+          "brier": 0.7470240804884168
+        },
+        "tool_first": {
+          "count": 97,
+          "correct": 85,
+          "accuracy": 0.8762886597938144,
+          "loss": 0.5602018789885442,
+          "brier": 0.2348349515832321
+        }
+      },
+      "macro_accuracy": 0.5252577319587629,
+      "macro_loss": 1.0158688823129667,
+      "contrast_pairs": {
+        "count": 180,
+        "both_correct": 5,
+        "accuracy": 0.027777777777777776
+      }
+    }
+  },
+  {
+    "epoch": 1,
+    "online_mean_loss": 0.8549565881248412,
+    "validation": {
+      "count": 637,
+      "correct": 331,
+      "accuracy": 0.5196232339089482,
+      "loss": 0.8209796896873546,
+      "brier": 0.5013115800556848,
+      "by_task": {
+        "emotion_check": {
+          "count": 180,
+          "correct": 90,
+          "accuracy": 0.5,
+          "loss": 0.6773698288533423,
+          "brier": 0.48480049437946743
+        },
+        "emotion_choice": {
+          "count": 90,
+          "correct": 38,
+          "accuracy": 0.4222222222222222,
+          "loss": 1.4333170081178348,
+          "brier": 0.6577372670173645
+        },
+        "inference_check": {
+          "count": 180,
+          "correct": 88,
+          "accuracy": 0.4888888888888889,
+          "loss": 0.694887207614051,
+          "brier": 0.5017417538497183
+        },
+        "inference_choice": {
+          "count": 90,
+          "correct": 32,
+          "accuracy": 0.35555555555555557,
+          "loss": 1.1036496533287896,
+          "brier": 0.6694088776906332
+        },
+        "tool_first": {
+          "count": 97,
+          "correct": 83,
+          "accuracy": 0.8556701030927835,
+          "loss": 0.4910391364589472,
+          "brier": 0.23004864732472152
+        }
+      },
+      "macro_accuracy": 0.52446735395189,
+      "macro_loss": 0.880052566874593,
+      "contrast_pairs": {
+        "count": 180,
+        "both_correct": 2,
+        "accuracy": 0.011111111111111112
+      }
+    }
+  },
+  {
+    "epoch": 2,
+    "online_mean_loss": 0.8292834068300479,
+    "validation": {
+      "count": 637,
+      "correct": 340,
+      "accuracy": 0.533751962323391,
+      "loss": 0.8162216678198898,
+      "brier": 0.4957375376231893,
+      "by_task": {
+        "emotion_check": {
+          "count": 180,
+          "correct": 94,
+          "accuracy": 0.5222222222222223,
+          "loss": 0.6740462298194567,
+          "brier": 0.48150844871997833
+        },
+        "emotion_choice": {
+          "count": 90,
+          "correct": 39,
+          "accuracy": 0.43333333333333335,
+          "loss": 1.3608553260978726,
+          "brier": 0.6261620937872471
+        },
+        "inference_check": {
+          "count": 180,
+          "correct": 89,
+          "accuracy": 0.49444444444444446,
+          "loss": 0.6945084992382261,
+          "brier": 0.501361080010732
+        },
+        "inference_choice": {
+          "count": 90,
+          "correct": 35,
+          "accuracy": 0.3888888888888889,
+          "loss": 1.1010946836736468,
+          "brier": 0.6674694054656558
+        },
+        "tool_first": {
+          "count": 97,
+          "correct": 83,
+          "accuracy": 0.8556701030927835,
+          "loss": 0.5362664978500012,
+          "brier": 0.23135527176992193
+        }
+      },
+      "macro_accuracy": 0.5389117983963345,
+      "macro_loss": 0.8733542473358407,
+      "contrast_pairs": {
+        "count": 180,
+        "both_correct": 12,
+        "accuracy": 0.06666666666666667
+      }
+    }
+  },
+  {
+    "epoch": 3,
+    "online_mean_loss": 0.8207462576547189,
+    "validation": {
+      "count": 637,
+      "correct": 344,
+      "accuracy": 0.5400313971742543,
+      "loss": 0.8116256615133823,
+      "brier": 0.49134313260384505,
+      "by_task": {
+        "emotion_check": {
+          "count": 180,
+          "correct": 100,
+          "accuracy": 0.5555555555555556,
+          "loss": 0.6691609929005305,
+          "brier": 0.47655606526467537
+        },
+        "emotion_choice": {
+          "count": 90,
+          "correct": 44,
+          "accuracy": 0.4888888888888889,
+          "loss": 1.3018828494681252,
+          "brier": 0.6059110082194417
+        },
+        "inference_check": {
+          "count": 180,
+          "correct": 86,
+          "accuracy": 0.4777777777777778,
+          "loss": 0.6935083988640044,
+          "brier": 0.5003635654846827
+        },
+        "inference_choice": {
+          "count": 90,
+          "correct": 31,
+          "accuracy": 0.34444444444444444,
+          "loss": 1.0997574985027314,
+          "brier": 0.6670783966779709
+        },
+        "tool_first": {
+          "count": 97,
+          "correct": 83,
+          "accuracy": 0.8556701030927835,
+          "loss": 0.5729631396807342,
+          "brier": 0.23269067518554332
+        }
+      },
+      "macro_accuracy": 0.54446735395189,
+      "macro_loss": 0.8674545758832252,
+      "contrast_pairs": {
+        "count": 180,
+        "both_correct": 23,
+        "accuracy": 0.12777777777777777
+      }
+    }
+  },
+  {
+    "epoch": 4,
+    "online_mean_loss": 0.8134325811901044,
+    "validation": {
+      "count": 637,
+      "correct": 366,
+      "accuracy": 0.5745682888540031,
+      "loss": 0.8010318978063331,
+      "brier": 0.4886180523282132,
+      "by_task": {
+        "emotion_check": {
+          "count": 180,
+          "correct": 111,
+          "accuracy": 0.6166666666666667,
+          "loss": 0.6689149849944644,
+          "brier": 0.4760874400536219
+        },
+        "emotion_choice": {
+          "count": 90,
+          "correct": 50,
+          "accuracy": 0.5555555555555556,
+          "loss": 1.2800412053863208,
+          "brier": 0.5984395152682231
+        },
+        "inference_check": {
+          "count": 180,
+          "correct": 87,
+          "accuracy": 0.48333333333333334,
+          "loss": 0.6928548398945067,
+          "brier": 0.4997102568546931
+        },
+        "inference_choice": {
+          "count": 90,
+          "correct": 35,
+          "accuracy": 0.3888888888888889,
+          "loss": 1.0887842979696063,
+          "brier": 0.6593616280290816
+        },
+        "tool_first": {
+          "count": 97,
+          "correct": 83,
+          "accuracy": 0.8556701030927835,
+          "loss": 0.5355098466039786,
+          "brier": 0.23096918549296613
+        }
+      },
+      "macro_accuracy": 0.5800229095074456,
+      "macro_loss": 0.8532210349697754,
+      "contrast_pairs": {
+        "count": 180,
+        "both_correct": 36,
+        "accuracy": 0.2
+      }
+    }
+  },
+  {
+    "epoch": 5,
+    "online_mean_loss": 0.8098606325629581,
+    "validation": {
+      "count": 637,
+      "correct": 365,
+      "accuracy": 0.5729984301412873,
+      "loss": 0.7976000839782866,
+      "brier": 0.4864941388289895,
+      "by_task": {
+        "emotion_check": {
+          "count": 180,
+          "correct": 110,
+          "accuracy": 0.6111111111111112,
+          "loss": 0.6686477795243263,
+          "brier": 0.475807466937436
+        },
+        "emotion_choice": {
+          "count": 90,
+          "correct": 49,
+          "accuracy": 0.5444444444444444,
+          "loss": 1.2487184391874406,
+          "brier": 0.5851714185167415
+        },
+        "inference_check": {
+          "count": 180,
+          "correct": 84,
+          "accuracy": 0.4666666666666667,
+          "loss": 0.6929067823621962,
+          "brier": 0.4997588525215785
+        },
+        "inference_choice": {
+          "count": 90,
+          "correct": 38,
+          "accuracy": 0.4222222222222222,
+          "loss": 1.0869800554381477,
+          "brier": 0.6579840259419547
+        },
+        "tool_first": {
+          "count": 97,
+          "correct": 84,
+          "accuracy": 0.865979381443299,
+          "loss": 0.5441089467865107,
+          "brier": 0.2310395765995986
+        }
+      },
+      "macro_accuracy": 0.5820847651775487,
+      "macro_loss": 0.8482724006597243,
+      "contrast_pairs": {
+        "count": 180,
+        "both_correct": 36,
+        "accuracy": 0.2
+      }
+    }
+  },
+  {
+    "epoch": 6,
+    "online_mean_loss": 0.8061587920802495,
+    "validation": {
+      "count": 637,
+      "correct": 368,
+      "accuracy": 0.5777080062794349,
+      "loss": 0.7970780152316845,
+      "brier": 0.48475385012180255,
+      "by_task": {
+        "emotion_check": {
+          "count": 180,
+          "correct": 111,
+          "accuracy": 0.6166666666666667,
+          "loss": 0.6676271003153589,
+          "brier": 0.4747160003830989
+        },
+        "emotion_choice": {
+          "count": 90,
+          "correct": 48,
+          "accuracy": 0.5333333333333333,
+          "loss": 1.2269518670832946,
+          "brier": 0.5763189184804408
+        },
+        "inference_check": {
+          "count": 180,
+          "correct": 87,
+          "accuracy": 0.48333333333333334,
+          "loss": 0.6928787940078311,
+          "brier": 0.49972586532433827
+        },
+        "inference_choice": {
+          "count": 90,
+          "correct": 38,
+          "accuracy": 0.4222222222222222,
+          "loss": 1.0848903556664784,
+          "brier": 0.656476895345582
+        },
+        "tool_first": {
+          "count": 97,
+          "correct": 84,
+          "accuracy": 0.865979381443299,
+          "loss": 0.5647611822363847,
+          "brier": 0.2313097263495618
+        }
+      },
+      "macro_accuracy": 0.5843069873997709,
+      "macro_loss": 0.8474218598618696,
+      "contrast_pairs": {
+        "count": 180,
+        "both_correct": 41,
+        "accuracy": 0.22777777777777777
+      }
+    }
+  }
+]

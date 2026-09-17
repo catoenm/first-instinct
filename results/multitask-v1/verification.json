@@ -1,0 +1,79 @@
+{
+  "run": "20260917T041711.272063Z",
+  "dataset_manifest_sha256": "10759aed9aced31b37ac8434cceadd9e8707336b85d9188fc452adef535849bb",
+  "split_hashes_match_independent_rebuild": true,
+  "data_and_training_code_hashes_match_snapshots": true,
+  "shared_initial_encoder_hashes_match": true,
+  "all_test_predictions_and_metrics_checked": true,
+  "primary_selection_matches_validation_only_rule": true,
+  "selection_file_precedes_test_files_on_original_filesystem": true,
+  "offline_test_count": 25,
+  "runs": {
+    "frozen-seed-7": {
+      "updates": 672,
+      "question_visits": 21402,
+      "every_training_id_once_per_epoch": true,
+      "no_validation_or_test_id_in_updates": true,
+      "selected_epoch": 6,
+      "all_checkpoint_artifact_hashes_match": true,
+      "encoder_probe_max_change": 0.0,
+      "max_encoder_probe_gradient_norm": 0.0,
+      "reload_max_probability_difference": 3.516674041748047e-06
+    },
+    "frozen-seed-17": {
+      "updates": 672,
+      "question_visits": 21402,
+      "every_training_id_once_per_epoch": true,
+      "no_validation_or_test_id_in_updates": true,
+      "selected_epoch": 6,
+      "all_checkpoint_artifact_hashes_match": true,
+      "encoder_probe_max_change": 0.0,
+      "max_encoder_probe_gradient_norm": 0.0,
+      "reload_max_probability_difference": 3.933906555175781e-06
+    },
+    "frozen-seed-29": {
+      "updates": 672,
+      "question_visits": 21402,
+      "every_training_id_once_per_epoch": true,
+      "no_validation_or_test_id_in_updates": true,
+      "selected_epoch": 6,
+      "all_checkpoint_artifact_hashes_match": true,
+      "encoder_probe_max_change": 0.0,
+      "max_encoder_probe_gradient_norm": 0.0,
+      "reload_max_probability_difference": 3.5762786865234375e-06
+    },
+    "full-seed-7": {
+      "updates": 672,
+      "question_visits": 21402,
+      "every_training_id_once_per_epoch": true,
+      "no_validation_or_test_id_in_updates": true,
+      "selected_epoch": 5,
+      "all_checkpoint_artifact_hashes_match": true,
+      "encoder_probe_max_change": 0.0034265071153640747,
+      "max_encoder_probe_gradient_norm": 0.08750050514936447,
+      "reload_max_probability_difference": 4.559755325317383e-06
+    },
+    "full-seed-17": {
+      "updates": 672,
+      "question_visits": 21402,
+      "every_training_id_once_per_epoch": true,
+      "no_validation_or_test_id_in_updates": true,
+      "selected_epoch": 5,
+      "all_checkpoint_artifact_hashes_match": true,
+      "encoder_probe_max_change": 0.0034787289332598448,
+      "max_encoder_probe_gradient_norm": 0.05558091402053833,
+      "reload_max_probability_difference": 2.4437904357910156e-06
+    },
+    "full-seed-29": {
+      "updates": 672,
+      "question_visits": 21402,
+      "every_training_id_once_per_epoch": true,
+      "no_validation_or_test_id_in_updates": true,
+      "selected_epoch": 4,
+      "all_checkpoint_artifact_hashes_match": true,
+      "encoder_probe_max_change": 0.002272890880703926,
+      "max_encoder_probe_gradient_norm": 0.07057967036962509,
+      "reload_max_probability_difference": 5.0067901611328125e-06
+    }
+  }
+}

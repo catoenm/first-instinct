@@ -22,7 +22,8 @@ both texts are processed together. Each token ends up represented by 768 numbers
 We average the real token vectors, excluding padding, then normalize the result.
 
 The encoder already learned useful language representations during Microsoft's
-pretraining. Our small training set adapts those representations to this task.
+pretraining. Our training examples adapt those representations to the decisions
+we want it to make.
 
 ## 3. Turn each representation into a score
 
@@ -50,8 +51,8 @@ an optimizer updates the weights to reduce it.
 
 The frozen experiment changes only the 768 scoring weights. Full fine-tuning
 also changes the encoder's 141 million weights. That is the main experimental
-comparison. The starting encoder already knows language; the experiment teaches
-it a particular selection task.
+comparison. The starting encoder already represents language; the experiment
+teaches it which described answer fits a particular question and text.
 
 The reference tells us which answer to reinforce. It does not prove that answer
 is uniquely correct. This is why data definition and label inspection matter as
@@ -65,9 +66,17 @@ positions for “weather,” “calendar,” and “calculator.” Here, one sco
 reads each supplied description. This supports changing candidate lists without
 creating a new output layer for every tool.
 
-That interface does not make arbitrary questions work automatically. All our
-training examples ask one kind of question: which tool should be called first?
-Learning more question types requires appropriate data and evaluation.
+That interface does not make arbitrary questions work automatically. Version
+0.1 learned one question type: which tool should be called first? The
+[multi-task experiment](multitask-experiment.md) adds sentence relationships,
+emotion categories, and yes/no questions. It tests new examples and new wording
+within those known tasks; arbitrary new task types remain untested.
+
+For example, the same sentence can be paired with “Does this express joy?” and
+“Does this express sadness?” The correct choice can change even though the text
+and the available answers, yes and no, stay the same. Both the question and the
+text must influence the decision. One shared network handles all these examples;
+there is no separate output head for each task.
 
 No text is generated during selection, and no reinforcement learning is used.
 Returning probabilities also does not make them calibrated. Calibration asks
@@ -82,8 +91,9 @@ Run these from the repository root after installing the dependencies:
 2. `python lsh.py` — explore locality-sensitive hashing as a way to find similar documents without comparing every pair.
 3. `python decision_data.py` — turn the bundled public inspection sample into explicit inputs and separate labels.
 4. `python train_decisions.py` — memorize eight examples while recording the first weight update and every loss. This has no held-out evaluation.
-5. Follow the [reproduction commands](../README.md#reproduce-the-experiment) — build isolated partitions and compare frozen versus fully fine-tuned encoders.
-6. Inspect [the recorded errors](../results/mac-v1/full/test_results.json) and [experimental history](experiment.md) before deciding what data to collect next.
+5. Follow the [original experiment](experiment.md) — build isolated partitions and compare frozen versus fully fine-tuned encoders on first-tool selection.
+6. Continue with [several kinds of decisions](multitask-experiment.md) — vary the question for the same text, compare three seeds, and inspect per-task results.
+7. Inspect the recorded predictions and limitations before deciding what data to collect next.
 
 The useful milestone is understanding what each number measures and what it
 cannot tell you. A small working model makes that easier to inspect.

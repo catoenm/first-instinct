@@ -4,53 +4,67 @@
 
 **Small model. Described options. One decision.**
 
-An inspectable experiment in teaching a language encoder to choose a tool.
+An inspectable experiment in teaching a small language encoder to make decisions.
 <br>Train it on a Mac. Read every update. Try the saved model.
 
 [![Tests](https://github.com/catoenm/first-instinct/actions/workflows/tests.yml/badge.svg)](https://github.com/catoenm/first-instinct/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Parameters](https://img.shields.io/badge/parameters-141M-7267EF.svg)](docs/model-card.md)
+[![Parameters](https://img.shields.io/badge/parameters-141M-7267EF.svg)](docs/model-card-v0.2.md)
 
-[Try it](#try-the-model) · [Reproduce](#reproduce-the-experiment) · [Results](docs/experiment.md) · [How it works](docs/how-it-works.md)
+[Try it](#try-the-model) · [Reproduce](#reproduce-the-experiment) · [Results](docs/multitask-experiment.md) · [How it works](docs/how-it-works.md)
 
 </div>
 
-First Instinct takes a request, a question, and a list of described options. It
-returns an option and a probability for each choice. The experiment asks:
-**can a small, pretrained encoder learn which tool to call first?**
+First Instinct takes some text, a question, and a list of described answers.
+One shared network scores the answers. It can choose a tool, identify an emotion,
+or judge how two sentences relate—without generating a stream of text.
 
-Yes, on this small test: full fine-tuning matched **29 of 34 held-out synthetic
-reference answers**, compared with **24** for word overlap and **18** for a
-trained scoring layer over a frozen encoder. Training the full model took about
-**144 seconds on an Apple M5 Max**, including validation and checkpoint writes.
+The latest experiment trains **five tasks from three families** on your own Mac.
+Across three training seeds, full fine-tuning reached **79.5% average accuracy
+across tasks**, versus **57.5%** when training only a scoring layer over the same
+fixed encoder.
 
-This is a working learning project, with a deliberately small evaluation. It is
-not evidence of broad decision-making ability or production readiness.
-
-The next experiment tests **three task families and question-dependent answers**
-using a larger dataset and three training seeds. Its
-[protocol and reproduction commands](docs/multitask-experiment.md) are available;
-the table below records the completed original tool-selection experiment.
+The more revealing test asks **two different questions about the same text**,
+with identical yes/no options but opposite correct answers. Full fine-tuning
+answered both correctly on **61.8% of pairs**, versus **20.7%** for the fixed
+encoder. Rewording those questions reduced paired accuracy to **46.0%**: useful
+learned behavior, with visible limits.
 
 ## The result, with the denominator attached
 
-| Method | Reference matches | Match rate | Log loss ↓ |
+**3,567 training questions from 1,407 source examples.**
+**1,144 test questions from 424 source examples, including 360 question pairs.**
+Questions derived from one source are correlated; they are not independent samples.
+
+| Method | Average of five task accuracies | Both paired answers correct |
+| :--- | ---: | ---: |
+| Original tool-only model, no additional training | 50.3% | 3.3% |
+| Fixed encoder + trained scorer, three-seed mean | 57.5% | 20.7% |
+| **Fine-tuned encoder + scorer, three-seed mean** | **79.5%** | **61.8%** |
+
+| Task | Test questions | Fixed encoder | Full fine-tuning |
 | :--- | ---: | ---: | ---: |
-| Uniform random choice, expected | — | 37.1% | — |
-| Word overlap | 24 / 34 | 70.6% | — |
-| Frozen encoder + trained scorer | 18 / 34 | 52.9% | 0.9350 |
-| **Fine-tuned encoder + scorer** | **29 / 34** | **85.3%** | **0.2494** |
+| First tool to call | 64 | 92.2% | 94.3% |
+| Sentence relationship, three choices | 180 | 32.2% | 70.0% |
+| Sentence relationship, yes/no | 360 | 50.4% | 72.8% |
+| Emotion, six choices | 180 | 54.8% | 76.5% |
+| Emotion, yes/no | 360 | 58.1% | 84.1% |
 
-One training seed. One question family. Synthetic labels, not independently
-verified tool executions. There are **166 training examples**, **44 validation
-examples**, and **34 test examples**. Every example offers at least two tools.
-The same data and three-pass training budget are used for both learned models.
+These are three-seed means on source annotations. Full-model average accuracy
+ranged from **78.6% to 81.1%** across seeds; the source-resampling interval for
+its improvement over the fixed encoder is **18.9–25.1 percentage points**.
+This tests new examples within known task families, not arbitrary new tasks.
 
-The full model has **141,305,088 trainable parameters**, including its embedding
-matrix. It starts from Microsoft's DeBERTa-v3-small; this is supervised
-fine-tuning, not pretraining from scratch or reinforcement learning.
+The model has **141,305,088 parameters**, including embeddings. Each full run
+completed six passes in about **10 minutes on an Apple M5 Max with 128 GB of
+unified memory**. This is supervised fine-tuning of Microsoft's DeBERTa-v3-small;
+no reinforcement learning or probability calibration has been done.
 
-[Read the experiment and its limitations →](docs/experiment.md)
+[Read the experiment, every seed, and wording sensitivity →](docs/multitask-experiment.md)
+
+The original 166-example tool-only experiment remains available with its
+[report](docs/experiment.md), [artifacts](results/mac-v1), and
+[v0.1.0 checkpoint](https://github.com/catoenm/first-instinct/releases/tag/v0.1.0).
 
 ## Try the model
 
@@ -66,13 +80,13 @@ python3.14 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-multitask.txt
 
-python download_checkpoint.py
+python download_checkpoint.py --version v0.2.0
 python decision_model.py \
-  --run output/pretrained/first-instinct-v0.1.0 \
+  --run output/pretrained/first-instinct-v0.2.0 \
   --input examples/weather.json
 ```
 
-The checkpoint download is approximately 422 MB. It includes the encoder,
+The checkpoint download is approximately 412 MB. It includes the encoder,
 scoring layer, and tokenizer; subsequent inference runs locally. The downloader
 checks the release checksum and model artifact hashes. No account or service
 key is required. On Linux, install the processor-only PyTorch build before the
@@ -100,8 +114,23 @@ uses the complete first-tool question and fuller descriptions:
 The output contains `choice`, `probabilities`, and a reminder that probabilities
 are **uncalibrated**. A score of 0.9 has not been shown to mean 90% reliability.
 The model chooses an option; it does not execute tools, supply their arguments,
-or generate an answer. Changing the question is supported by the input format,
-but general understanding of new question types has not been demonstrated.
+or generate an answer. Question dependence is tested on known tasks; general
+understanding of arbitrary new task types has not been demonstrated.
+
+Try changing only the question while keeping the same text and yes/no options:
+
+```bash
+python decision_model.py \
+  --run output/pretrained/first-instinct-v0.2.0 \
+  --input examples/statement-supported.json
+python decision_model.py \
+  --run output/pretrained/first-instinct-v0.2.0 \
+  --input examples/statement-contradicted.json
+```
+
+The [emotion example](examples/emotion.json) offers six described categories.
+These small authored examples demonstrate the interface; the held-out benchmark
+above measures performance.
 
 ## How it works
 
@@ -126,46 +155,40 @@ weight updates. There is no hidden trainer framework.
 
 ## Reproduce the experiment
 
-The commands below reconstruct the **reported** experiment, including an early
-question-wording correction. The 37 MB public source is downloaded at a pinned
-revision and verified by checksum. The pretrained encoder is downloaded from a
-pinned revision on the first training run.
+The multi-task comparison starts from the **released v0.1.0 model**, so every
+condition shares the same initial weights. Dataset downloads are pinned to
+specific revisions and checked by checksum.
 
 ```bash
-python decision_dataset.py \
-  --task legacy-whole-request --output output/decision_dataset_v1
-
-python decision_dataset.py \
-  --revise-from output/decision_dataset_v1 --output output/decision_dataset_v2
-
-python finetune_decisions.py --data output/decision_dataset_v2
+python download_checkpoint.py --version v0.1.0
+python multitask_data.py
+python multitask_train.py \
+  --init-run output/pretrained/first-instinct-v0.1.0
 ```
 
-Each comparison writes a new directory under `output/decision_comparisons/`:
-selected checkpoints, every training update, validation history, test
-predictions, and checksummed manifests. Existing dataset directories are never
-overwritten; choose another output path to rebuild them.
+Skip the first command if that verified checkpoint already exists. The default
+training recipe uses three seeds, six passes, effective batches of 32 questions,
+and eight-question microbatches to limit memory use. `--microbatch-size` can be
+reduced for smaller machines; minimum memory requirements have not been measured.
 
-Why two dataset versions? The original wording asked which tool best fulfilled a
-request, while the label identified its **first call**. After diagnosing this on
-an exploratory test, we corrected the question and used a previously untouched
-partition for the reported test. The old test is development data. The
-[experiment report](docs/experiment.md#the-question-wording-mistake) records the
-whole change, including the misleading legacy `calibration.jsonl` filename.
-
-The reconstructed split files match the recorded files byte for byte. Floating
-point training results can vary by hardware and software. Source snapshots and
-original manifests are preserved in [results/mac-v1](results/mac-v1).
-
-To start a **new** experiment directly with the corrected question:
+Training writes a new directory under `output/multitask_runs/`, including the
+exact source snapshot, every update, validation histories, selected checkpoint
+hashes, and every test prediction. It selects all checkpoints by validation loss
+before opening the final test. Run the source-level uncertainty analysis with:
 
 ```bash
-python decision_dataset.py --output output/my_dataset
-python finetune_decisions.py --data output/my_dataset
+python summarize_multitask.py --run output/multitask_runs/<run-directory>
 ```
 
-This direct build has different partition membership from the historical
-revision process; do not expect it to reproduce the table above.
+The data builder independently reproduced the recorded split files byte for
+byte. Floating point training can differ across hardware or runtime versions.
+[The full protocol](docs/multitask-experiment.md) explains grouping, label
+adaptations, controls, and two exploratory runs stopped before final testing.
+[Recorded evidence](results/multitask-v1) includes all three seeds, rather than
+only the released model.
+
+For the earlier single-task experiment and its question-wording correction,
+use the [original reproduction commands](docs/experiment.md#verification-and-reproduction).
 
 ## Read the project
 
@@ -174,10 +197,13 @@ revision process; do not expect it to reproduce the table above.
 | [decision_data.py](decision_data.py) | Strict source conversion; keep inputs and labels separate |
 | [decision_dataset.py](decision_dataset.py) | Pinned download, filtering, grouping, split checks |
 | [decision_model.py](decision_model.py) | Encoder, scorer, and saved-model inference |
-| [finetune_decisions.py](finetune_decisions.py) | Frozen baseline, full fine-tuning, checkpoint selection, evaluation |
+| [multitask_data.py](multitask_data.py) | Pinned sources, grouped partitions, balanced questions about the same text |
+| [multitask_train.py](multitask_train.py) | Shared-model training, three seeds, validation selection, question controls |
+| [summarize_multitask.py](summarize_multitask.py) | Whole-source resampling and results across all seeds |
+| [finetune_decisions.py](finetune_decisions.py) | Original tool-only comparison |
 | [train_decisions.py](train_decisions.py) | Optional eight-example exercise with each weight update exposed |
-| [results/mac-v1](results/mac-v1) | Recorded predictions, traces, hashes, and exact source snapshots |
-| [docs/model-card.md](docs/model-card.md) | Model purpose, provenance, constraints, and release details |
+| [results/multitask-v1](results/multitask-v1) | Recorded predictions, traces, hashes, and exact source snapshots |
+| [docs/model-card-v0.2.md](docs/model-card-v0.2.md) | Model purpose, provenance, constraints, and release details |
 
 The earlier document-deduplication exercises (`pipeline.py`, `minhash.py`,
 `lsh.py`) remain as small learning examples. The dataset builder also reuses
@@ -196,15 +222,18 @@ require no model download. GitHub Actions runs them on macOS and Linux.
 
 ## What would make it more convincing?
 
-The next milestone is a **larger, independently audited evaluation**, followed by
-one useful routing workflow. That would test whether the improvement survives
-outside this tiny synthetic sample.
+The current experiment demonstrates a shared model learning several kinds of
+decisions, including answers that depend on the question. The next useful
+milestone is a small environment where decisions produce observable outcomes.
+That would let us compare this supervised model with reinforcement learning.
 
-1. Hold out semantic tool families and test multiple training seeds and stronger baselines.
-2. Vary the question for the same state so different questions require different choices.
-3. Reserve new data for probability calibration and “none of these / ask for help” decisions.
+1. Execute safe local tools in a repeatable environment and score whether the requested task succeeds.
+2. Hold out task families and question styles, then compare outcome rewards before and after training.
+3. Reserve fresh data for probability calibration and “none of these / ask for help” decisions.
 4. Measure decision quality, latency, memory, and cost in one realistic workflow.
-5. Add reinforcement learning only when an environment can score completed outcomes.
+
+More passes over this benchmark cannot establish those missing capabilities.
+The current final test is now observed; future experiments need fresh evaluation.
 
 This project was inspired by interest in decision-oriented models such as
 [TypeSafe's Jev](https://docs.typesafe.ai/primitives). It is an independent
@@ -215,6 +244,9 @@ educational implementation of a conventional described-option classifier,
 
 Code: [MIT](LICENSE). Pretrained encoder:
 [Microsoft DeBERTa-v3-small](https://huggingface.co/microsoft/deberta-v3-small), MIT.
-Data: [Team-ACE/ToolACE](https://huggingface.co/datasets/Team-ACE/ToolACE), declared
-Apache-2.0. See [third-party notices](THIRD_PARTY_NOTICES.md) for provenance and
+Data: [ToolACE](https://huggingface.co/datasets/Team-ACE/ToolACE) and
+[GoEmotions](https://huggingface.co/datasets/google-research-datasets/go_emotions),
+declared Apache-2.0; [Stanford Natural Language Inference](https://nlp.stanford.edu/projects/snli/),
+Creative Commons Attribution-ShareAlike 4.0. Source and adapted data retain their
+upstream terms. See [third-party notices](THIRD_PARTY_NOTICES.md) for provenance and
 included license texts.

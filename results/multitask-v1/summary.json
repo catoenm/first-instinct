@@ -1,0 +1,275 @@
+{
+  "models": {
+    "initial-v0.1.0": {
+      "macro_accuracy": 0.503125,
+      "macro_accuracy_interval": [
+        0.47777604166666665,
+        0.5267361111111111
+      ],
+      "paired_accuracy": 0.03333333333333333,
+      "paired_accuracy_interval": [
+        0.016666666666666666,
+        0.05277777777777778
+      ]
+    },
+    "frozen-seed-7": {
+      "macro_accuracy": 0.5732638888888889,
+      "macro_accuracy_interval": [
+        0.5435416666666667,
+        0.6031961805555555
+      ],
+      "paired_accuracy": 0.2222222222222222,
+      "paired_accuracy_interval": [
+        0.18055555555555555,
+        0.26666666666666666
+      ]
+    },
+    "frozen-seed-17": {
+      "macro_accuracy": 0.5738194444444444,
+      "macro_accuracy_interval": [
+        0.5455538194444445,
+        0.6030555555555556
+      ],
+      "paired_accuracy": 0.19444444444444445,
+      "paired_accuracy_interval": [
+        0.15270833333333336,
+        0.2388888888888889
+      ]
+    },
+    "frozen-seed-29": {
+      "macro_accuracy": 0.579375,
+      "macro_accuracy_interval": [
+        0.5508315972222222,
+        0.6082673611111111
+      ],
+      "paired_accuracy": 0.20555555555555555,
+      "paired_accuracy_interval": [
+        0.1638888888888889,
+        0.25
+      ]
+    },
+    "full-seed-7": {
+      "macro_accuracy": 0.7860416666666667,
+      "macro_accuracy_interval": [
+        0.7557621527777778,
+        0.8150052083333331
+      ],
+      "paired_accuracy": 0.6222222222222222,
+      "paired_accuracy_interval": [
+        0.5722222222222222,
+        0.6722222222222223
+      ]
+    },
+    "full-seed-17": {
+      "macro_accuracy": 0.8108333333333334,
+      "macro_accuracy_interval": [
+        0.7827760416666667,
+        0.8395225694444444
+      ],
+      "paired_accuracy": 0.6388888888888888,
+      "paired_accuracy_interval": [
+        0.5916666666666667,
+        0.6861111111111111
+      ]
+    },
+    "full-seed-29": {
+      "macro_accuracy": 0.7887500000000001,
+      "macro_accuracy_interval": [
+        0.7624947916666667,
+        0.8149999999999998
+      ],
+      "paired_accuracy": 0.5916666666666667,
+      "paired_accuracy_interval": [
+        0.5416666666666666,
+        0.6416666666666667
+      ]
+    }
+  },
+  "seed_means": {
+    "full": {
+      "macro_accuracy": 0.7952083333333334,
+      "macro_accuracy_seed_range": [
+        0.7860416666666667,
+        0.8108333333333334
+      ],
+      "macro_accuracy_interval": [
+        0.7704380787037038,
+        0.8186614583333333
+      ],
+      "paired_accuracy": 0.6175925925925926,
+      "paired_accuracy_interval": [
+        0.5777777777777778,
+        0.6555555555555556
+      ]
+    },
+    "frozen": {
+      "macro_accuracy": 0.575486111111111,
+      "macro_accuracy_seed_range": [
+        0.5732638888888889,
+        0.579375
+      ],
+      "macro_accuracy_interval": [
+        0.5477065972222223,
+        0.6048616898148148
+      ],
+      "paired_accuracy": 0.2074074074074074,
+      "paired_accuracy_interval": [
+        0.16666666666666666,
+        0.25092592592592594
+      ]
+    },
+    "full_minus_frozen": {
+      "macro_accuracy_difference": 0.21972222222222237,
+      "macro_accuracy_difference_interval": [
+        0.1894907407407408,
+        0.2507442129629629
+      ],
+      "paired_accuracy_difference": 0.4101851851851852,
+      "paired_accuracy_difference_interval": [
+        0.3592592592592593,
+        0.4638888888888889
+      ]
+    }
+  },
+  "source_states": 424,
+  "resampling": {
+    "samples": 2000,
+    "seed": 20260917,
+    "unit": "whole source state, stratified by dataset family",
+    "interval": "95% percentile; paired resamples shared across models",
+    "scope": "Variation across the sampled source states; not uncertainty over new task families or all possible training seeds."
+  },
+  "primary_run": "full-seed-17",
+  "by_task": {
+    "initial-v0.1.0": {
+      "emotion_check": 0.5027777777777778,
+      "emotion_choice": 0.3055555555555556,
+      "inference_check": 0.49444444444444446,
+      "inference_choice": 0.32222222222222224,
+      "tool_first": 0.890625
+    },
+    "frozen-seed-7": {
+      "emotion_check": 0.5888888888888889,
+      "emotion_choice": 0.5333333333333333,
+      "inference_check": 0.5,
+      "inference_choice": 0.32222222222222224,
+      "tool_first": 0.921875
+    },
+    "frozen-seed-17": {
+      "emotion_check": 0.5777777777777777,
+      "emotion_choice": 0.55,
+      "inference_check": 0.5027777777777778,
+      "inference_choice": 0.31666666666666665,
+      "tool_first": 0.921875
+    },
+    "frozen-seed-29": {
+      "emotion_check": 0.5777777777777777,
+      "emotion_choice": 0.5611111111111111,
+      "inference_check": 0.5083333333333333,
+      "inference_choice": 0.3277777777777778,
+      "tool_first": 0.921875
+    },
+    "full-seed-7": {
+      "emotion_check": 0.8361111111111111,
+      "emotion_choice": 0.7666666666666667,
+      "inference_check": 0.7277777777777777,
+      "inference_choice": 0.6777777777777778,
+      "tool_first": 0.921875
+    },
+    "full-seed-17": {
+      "emotion_check": 0.8472222222222222,
+      "emotion_choice": 0.7666666666666667,
+      "inference_check": 0.7527777777777778,
+      "inference_choice": 0.75,
+      "tool_first": 0.9375
+    },
+    "full-seed-29": {
+      "emotion_check": 0.8388888888888889,
+      "emotion_choice": 0.7611111111111111,
+      "inference_check": 0.7027777777777777,
+      "inference_choice": 0.6722222222222223,
+      "tool_first": 0.96875
+    }
+  },
+  "variant_macro_accuracy": {
+    "initial-v0.1.0": {
+      "canonical": 0.503125,
+      "paraphrase": 0.5192361111111111,
+      "no_question": 0.5303472222222222
+    },
+    "frozen-seed-7": {
+      "canonical": 0.5732638888888889,
+      "paraphrase": 0.5727083333333334,
+      "no_question": 0.5414583333333334
+    },
+    "frozen-seed-17": {
+      "canonical": 0.5738194444444444,
+      "paraphrase": 0.5732638888888889,
+      "no_question": 0.538125
+    },
+    "frozen-seed-29": {
+      "canonical": 0.579375,
+      "paraphrase": 0.5727083333333334,
+      "no_question": 0.538125
+    },
+    "full-seed-7": {
+      "canonical": 0.7860416666666666,
+      "paraphrase": 0.7440277777777777,
+      "no_question": 0.6799305555555556
+    },
+    "full-seed-17": {
+      "canonical": 0.8108333333333333,
+      "paraphrase": 0.7769444444444444,
+      "no_question": 0.6930555555555555
+    },
+    "full-seed-29": {
+      "canonical": 0.78875,
+      "paraphrase": 0.7589583333333333,
+      "no_question": 0.68375
+    }
+  },
+  "variant_paired_accuracy": {
+    "initial-v0.1.0": {
+      "canonical": 0.03333333333333333,
+      "paraphrase": 0.06944444444444445,
+      "no_question": 0.0
+    },
+    "frozen-seed-7": {
+      "canonical": 0.2222222222222222,
+      "paraphrase": 0.30833333333333335,
+      "no_question": 0.0
+    },
+    "frozen-seed-17": {
+      "canonical": 0.19444444444444445,
+      "paraphrase": 0.3138888888888889,
+      "no_question": 0.0
+    },
+    "frozen-seed-29": {
+      "canonical": 0.20555555555555555,
+      "paraphrase": 0.31666666666666665,
+      "no_question": 0.0
+    },
+    "full-seed-7": {
+      "canonical": 0.6222222222222222,
+      "paraphrase": 0.4583333333333333,
+      "no_question": 0.0
+    },
+    "full-seed-17": {
+      "canonical": 0.6388888888888888,
+      "paraphrase": 0.4888888888888889,
+      "no_question": 0.0
+    },
+    "full-seed-29": {
+      "canonical": 0.5916666666666667,
+      "paraphrase": 0.43333333333333335,
+      "no_question": 0.0
+    }
+  },
+  "uniform_expected_accuracy_by_task": {
+    "emotion_check": 0.5,
+    "emotion_choice": 0.16666666666666666,
+    "inference_check": 0.5,
+    "inference_choice": 0.3333333333333333,
+    "tool_first": 0.3299479166666667
+  }
+}
