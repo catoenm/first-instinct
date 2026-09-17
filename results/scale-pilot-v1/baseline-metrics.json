@@ -1,0 +1,36 @@
+{
+  "acceptable_set_log_loss": 0.534575904831031,
+  "accuracy": 0.7928571428571428,
+  "by_task": {
+    "emotion_check": {
+      "accuracy": 0.85,
+      "n": 20
+    },
+    "emotion_choice": {
+      "accuracy": 0.8,
+      "n": 20
+    },
+    "execute_choice": {
+      "accuracy": 0.9,
+      "n": 20
+    },
+    "inference_check": {
+      "accuracy": 0.55,
+      "n": 20
+    },
+    "inference_choice": {
+      "accuracy": 0.6,
+      "n": 20
+    },
+    "tool_first": {
+      "accuracy": 1.0,
+      "n": 20
+    },
+    "tool_or_conversation": {
+      "accuracy": 0.85,
+      "n": 20
+    }
+  },
+  "n": 140,
+  "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+}

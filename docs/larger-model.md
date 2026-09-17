@@ -154,6 +154,13 @@ Local verification has exercised the real four-billion-parameter model's
 forward pass, two adapter optimizer updates and checkpoint save. That small
 smoke test establishes compatibility, not a performance improvement.
 
+The [first cloud pilot](../results/scale-pilot-v1/README.md) subsequently completed
+100 updates over 3,200 training questions. The selected checkpoint improved
+140-question validation accuracy from 78.57% to 94.29% and log loss from 0.5378
+to 0.2000. Selection used log loss; a different checkpoint reached 95% accuracy.
+The final test split remains unevaluated. The larger data run is paused while
+the project revisits environment-backed data and reinforcement learning.
+
 This new text pipeline is supervised learning. Later reinforcement learning
 should compare action/inspection policies under observed outcomes and costs
 against a supervised learner receiving the same information. Calibrated success

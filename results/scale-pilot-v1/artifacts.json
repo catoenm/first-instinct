@@ -1,0 +1,15 @@
+{
+  "training_code_commit": "85132154ca98729728e6a043d4156a8d96805a3f",
+  "prepared_data": "output/scale-pilot-qwen35-v4",
+  "test_evaluation": "not run; experiment paused after pilot",
+  "copied_files": {
+    "validation-step-75.jsonl": "e2a8454cba4cb8611840432705563d104d5a66b76dabefb4a5329c039f363858",
+    "baseline-predictions.jsonl": "b4439eda92ae037bba65f8f548f0837702af97ed8e16cf20c7eb2c306b12c3e8",
+    "validation-step-50.jsonl": "b7686581554b16ad244605bb4890dafcb49538850475e95d5ae1c677203df382",
+    "training.jsonl": "dfff82422e2fbd0f47627810edb4debbc0141f6e3b20e46e60e396c849a83263",
+    "validation-step-100.jsonl": "ec68206cfd811ce0b426d10e561058de4ea563a9d15d16480ce993267201a6a7",
+    "validation-step-25.jsonl": "bd6a8397d15041f7207ef4eb4ba37936423ecfc4d4d6978ceb7bdfffcec76b89",
+    "run.json": "fe2e723166fc83b05be7562e770a793e0069c44d43a808c7a368b4cd50966f56",
+    "baseline-metrics.json": "da1f81a64fd7cd1e4faf22b0c561e6364ba79ad4c5c59c4b8c5fca11bec5e2c9"
+  }
+}
