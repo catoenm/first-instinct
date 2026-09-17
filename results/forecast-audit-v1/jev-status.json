@@ -1,0 +1,6 @@
+{
+  "executed": false,
+  "network_requests": 0,
+  "reason": "Jev access was not configured for this run.",
+  "runner_checks": "Offline mock tests and a zero-network preview; these are not Jev measurements."
+}

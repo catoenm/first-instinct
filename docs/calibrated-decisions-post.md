@@ -263,6 +263,41 @@ that every number obtainable from the model is a calibrated belief. The
 no-exploration condition, four test domains, exact reconstruction, and a runnable
 environment. It is still a small numeric simulation, not a language agent.
 
+## Keeping forecasts in practice
+
+I then changed the training data again. Alongside its normal decisions, the
+model received exercises asking for a probability before and after an additional
+observation, including copies. It had to practice forecasts even where its
+own policy would usually choose a different action. The same outcome-based
+reward scored each report.
+
+I compared giving all these exercises early with spreading the **same examples,
+in the same order**, throughout training. Across three fresh seeds, continued
+practice reduced ordinary-condition probability error from **13.87 to 8.63
+percentage points**, compared with 10.82 for early practice. Workflow return
+improved in all three seeds versus chosen-path rewards alone. The network still
+had 6,166 parameters. Direct-label learning on those exercise states remained
+better, at 4.13 points, with a different output and training objective.
+
+![The same extra exercises help more when spread throughout training; direct-label training remains the stronger forecast reference.](assets/forecast-audit/forecast-practice.png)
+
+This did not solve calibration. A price increase that supplied no new evidence
+still moved the continued-practice model's forecast by **5.07 percentage points**
+on a separate paired test. On unfamiliar reversed sources, its probability error
+improved but workflow reward declined in all three seeds. One decline exceeded
+the meaningful-loss threshold fixed in advance. The early-practice models also
+largely retained their initial gains, so this is not evidence that stopping
+practice inevitably causes forgetting.
+
+The practical question is about data coverage: **does training exercise all
+the forecasts the calling program can ask for, or only the reports the policy
+usually chooses to make?** Continued exercises helped here, but broader conditions
+and stronger reference methods still matter. The
+[full study](forecast-audit.md) preserves every model and failure. Its
+[paired benchmark](probability-benchmark.md) also expresses 3,072 numeric cases
+as 6,144 text requests, with exact answers kept separate. A Jev runner is ready;
+no live Jev results have been collected.
+
 ## What this tells us about Jev—and what remains unknown
 
 TypeSafe's claim about calibrated decisions is a meaningful training goal.

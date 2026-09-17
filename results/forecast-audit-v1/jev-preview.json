@@ -1,0 +1,18 @@
+{
+  "mode": "preview_only",
+  "network_calls": 0,
+  "pending_requests_in_limit": 24,
+  "completed_requests": 0,
+  "total_benchmark_requests": 6144,
+  "request_characters": 27068,
+  "example_request": {
+    "model": "jev-latest",
+    "state": "The hidden switch has one fixed binary state: on=1, off=0. Its state is drawn first. Each stated sensor reliability is the probability that its reading equals the hidden state, both when the state is 0 and when it is 1. The reading process and prices do not change the switch. Before any readings, the probability of on is 0.60530597. The initial sensor reliability is 0.715223372, and its observed reading is 1. The offered source reliability is 0.715223372. The offered source is an exact copy of the initial sensor reading; it has no independent measurement or additional information. The offered source has not been inspected. Its reading is unknown. Inspecting it costs 0.00999999978 reward units. This price does not provide evidence about the switch.",
+    "questions": {
+      "event": {
+        "type": "noul",
+        "instructions": "Given the stated data-generating mechanism and only the revealed readings, is the hidden switch on? Return the probability of yes, not the probability that taking an action is worthwhile. The offered reading is unknown unless explicitly revealed."
+      }
+    }
+  }
+}

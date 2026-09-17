@@ -1,0 +1,614 @@
+[
+  {
+    "model": "terminal_only-s11",
+    "recipe": "terminal_only",
+    "seed": 11,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.12118863728317142,
+        "copy_change": 0.09235092019662261,
+        "price_change": 0.034442364471033216,
+        "unseen_source_change": 0.047894498507957906,
+        "independent_update_absolute_error": 0.11190892319210062,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.4375
+      },
+      "reversed": {
+        "probability_rmse": 0.21853591492375618,
+        "copy_change": 0.09147472470067441,
+        "price_change": 0.030784660310018808,
+        "unseen_source_change": 0.014170906972140074,
+        "independent_update_absolute_error": 0.31325765642858233,
+        "wrong_direction_rate": 1.0,
+        "price_inspection_increase_rate": 0.55859375
+      }
+    }
+  },
+  {
+    "model": "terminal_only-s11",
+    "recipe": "terminal_only",
+    "seed": 11,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.15318251337226038,
+        "copy_change": 0.15611029794672504,
+        "price_change": 0.036133271700236946,
+        "unseen_source_change": 0.020459279417991638,
+        "independent_update_absolute_error": 0.14514083712524536,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.2677005884994177,
+        "copy_change": 0.1369975492125377,
+        "price_change": 0.04400047328090295,
+        "unseen_source_change": 0.02802538953255862,
+        "independent_update_absolute_error": 0.37373858860981773,
+        "wrong_direction_rate": 0.96875,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "audit_early-s11",
+    "recipe": "audit_early",
+    "seed": 11,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.12411459674337735,
+        "copy_change": 0.022101340000517666,
+        "price_change": 0.055850685457699,
+        "unseen_source_change": 0.023676973185501993,
+        "independent_update_absolute_error": 0.11042652465309138,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.81640625
+      },
+      "reversed": {
+        "probability_rmse": 0.18816974339006132,
+        "copy_change": 0.018337034271098673,
+        "price_change": 0.04332210402935743,
+        "unseen_source_change": 0.04723216139245778,
+        "independent_update_absolute_error": 0.24283339341226157,
+        "wrong_direction_rate": 0.765625,
+        "price_inspection_increase_rate": 0.8046875
+      }
+    }
+  },
+  {
+    "model": "audit_early-s11",
+    "recipe": "audit_early",
+    "seed": 11,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.12538267509130147,
+        "copy_change": 0.04239279986359179,
+        "price_change": 0.03258505999110639,
+        "unseen_source_change": 0.024154833634383976,
+        "independent_update_absolute_error": 0.10637894772514225,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.21386619752973202,
+        "copy_change": 0.03799637430347502,
+        "price_change": 0.04777206073049456,
+        "unseen_source_change": 0.0773809771053493,
+        "independent_update_absolute_error": 0.2822614840307192,
+        "wrong_direction_rate": 0.95703125,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "audit_continuous-s11",
+    "recipe": "audit_continuous",
+    "seed": 11,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.12352787227655193,
+        "copy_change": 0.07223406567936763,
+        "price_change": 0.03703548130579293,
+        "unseen_source_change": 0.019611916039139032,
+        "independent_update_absolute_error": 0.11547597881679475,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.42578125
+      },
+      "reversed": {
+        "probability_rmse": 0.21748294216789113,
+        "copy_change": 0.06201339600374922,
+        "price_change": 0.04502526129363105,
+        "unseen_source_change": 0.02304086257936433,
+        "independent_update_absolute_error": 0.310536088935883,
+        "wrong_direction_rate": 1.0,
+        "price_inspection_increase_rate": 0.52734375
+      }
+    }
+  },
+  {
+    "model": "audit_continuous-s11",
+    "recipe": "audit_continuous",
+    "seed": 11,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.08390109806727351,
+        "copy_change": 0.03882163448724896,
+        "price_change": 0.05310672125779092,
+        "unseen_source_change": 0.019287364673800766,
+        "independent_update_absolute_error": 0.07490887853316278,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.17995880534818715,
+        "copy_change": 0.03266749740578234,
+        "price_change": 0.052342761016916484,
+        "unseen_source_change": 0.07392349187284708,
+        "independent_update_absolute_error": 0.23631875102463298,
+        "wrong_direction_rate": 0.93359375,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "seed": 11,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.042503973359206394,
+        "copy_change": 0.02807767497142777,
+        "price_change": 0.021864570982870646,
+        "unseen_source_change": 0.03506754053523764,
+        "independent_update_absolute_error": 0.03264603010419875,
+        "wrong_direction_rate": 0.00390625
+      },
+      "reversed": {
+        "probability_rmse": 0.11375270357303736,
+        "copy_change": 0.025894096339470707,
+        "price_change": 0.022162726760143414,
+        "unseen_source_change": 0.051114535657688975,
+        "independent_update_absolute_error": 0.14343564724385793,
+        "wrong_direction_rate": 0.423828125
+      }
+    }
+  },
+  {
+    "model": "supervised-s11",
+    "recipe": "supervised",
+    "seed": 11,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.04593582670453999,
+        "copy_change": 0.014402421074919403,
+        "price_change": 0.07944079152366612,
+        "unseen_source_change": 0.02029140711238142,
+        "independent_update_absolute_error": 0.023228760462376596,
+        "wrong_direction_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.10667880285477503,
+        "copy_change": 0.014284746517660096,
+        "price_change": 0.08317413878830848,
+        "unseen_source_change": 0.0717262038087938,
+        "independent_update_absolute_error": 0.14051700514334148,
+        "wrong_direction_rate": 0.337890625
+      }
+    }
+  },
+  {
+    "model": "terminal_only-s23",
+    "recipe": "terminal_only",
+    "seed": 23,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.13209319649580947,
+        "copy_change": 0.08075967011973262,
+        "price_change": 0.08450333040673286,
+        "unseen_source_change": 0.02950212685391307,
+        "independent_update_absolute_error": 0.11236665321473074,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.80859375
+      },
+      "reversed": {
+        "probability_rmse": 0.22026009023279786,
+        "copy_change": 0.0747020955896005,
+        "price_change": 0.07821790903108194,
+        "unseen_source_change": 0.016902401635888964,
+        "independent_update_absolute_error": 0.3028551474172541,
+        "wrong_direction_rate": 1.0,
+        "price_inspection_increase_rate": 0.9140625
+      }
+    }
+  },
+  {
+    "model": "terminal_only-s23",
+    "recipe": "terminal_only",
+    "seed": 23,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.14887986422286392,
+        "copy_change": 0.1269868459785357,
+        "price_change": 0.046050957462284714,
+        "unseen_source_change": 0.020767357316799462,
+        "independent_update_absolute_error": 0.13945192098212905,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.26873891571684555,
+        "copy_change": 0.11392993095796555,
+        "price_change": 0.037054224929306656,
+        "unseen_source_change": 0.05293321033241227,
+        "independent_update_absolute_error": 0.3814251139602543,
+        "wrong_direction_rate": 1.0,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "audit_early-s23",
+    "recipe": "audit_early",
+    "seed": 23,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.1040783262093863,
+        "copy_change": 0.07957927297684364,
+        "price_change": 0.04082408675458282,
+        "unseen_source_change": 0.032574801312875934,
+        "independent_update_absolute_error": 0.09656429254947169,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.8828125
+      },
+      "reversed": {
+        "probability_rmse": 0.20828795121805463,
+        "copy_change": 0.08041545083688106,
+        "price_change": 0.03095675633812789,
+        "unseen_source_change": 0.08919140140642412,
+        "independent_update_absolute_error": 0.30027578734469484,
+        "wrong_direction_rate": 0.974609375,
+        "price_inspection_increase_rate": 1.0
+      }
+    }
+  },
+  {
+    "model": "audit_early-s23",
+    "recipe": "audit_early",
+    "seed": 23,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.11480932647017246,
+        "copy_change": 0.0601737691758899,
+        "price_change": 0.14360441744793206,
+        "unseen_source_change": 0.02846685325494036,
+        "independent_update_absolute_error": 0.12809063677890106,
+        "wrong_direction_rate": 0.037109375,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.21485260007792825,
+        "copy_change": 0.05410370192839764,
+        "price_change": 0.08426357257121708,
+        "unseen_source_change": 0.12732417647202965,
+        "independent_update_absolute_error": 0.28354885486358894,
+        "wrong_direction_rate": 0.703125,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "audit_continuous-s23",
+    "recipe": "audit_continuous",
+    "seed": 23,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.1266188709116262,
+        "copy_change": 0.07421184901613742,
+        "price_change": 0.049833364551886916,
+        "unseen_source_change": 0.03851212316658348,
+        "independent_update_absolute_error": 0.12142034526491541,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.19921875
+      },
+      "reversed": {
+        "probability_rmse": 0.21830640749886665,
+        "copy_change": 0.06260353018296883,
+        "price_change": 0.04974153218790889,
+        "unseen_source_change": 0.011044077866245061,
+        "independent_update_absolute_error": 0.31013212337446516,
+        "wrong_direction_rate": 0.990234375,
+        "price_inspection_increase_rate": 0.30859375
+      }
+    }
+  },
+  {
+    "model": "audit_continuous-s23",
+    "recipe": "audit_continuous",
+    "seed": 23,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.09599543537197049,
+        "copy_change": 0.0439730339567177,
+        "price_change": 0.06224518350791186,
+        "unseen_source_change": 0.03462831646902487,
+        "independent_update_absolute_error": 0.09080009427146332,
+        "wrong_direction_rate": 0.01953125,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.18216008243312332,
+        "copy_change": 0.0413435521768406,
+        "price_change": 0.04418071388499811,
+        "unseen_source_change": 0.07783788931556046,
+        "independent_update_absolute_error": 0.2411192129266833,
+        "wrong_direction_rate": 0.89453125,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "seed": 23,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.06203570602165063,
+        "copy_change": 0.04590131775330519,
+        "price_change": 0.034357345328317024,
+        "unseen_source_change": 0.028847305628005415,
+        "independent_update_absolute_error": 0.05938900977469178,
+        "wrong_direction_rate": 0.001953125
+      },
+      "reversed": {
+        "probability_rmse": 0.13998647073078183,
+        "copy_change": 0.04218770577426767,
+        "price_change": 0.046924924638005905,
+        "unseen_source_change": 0.06115927084465511,
+        "independent_update_absolute_error": 0.181000239149605,
+        "wrong_direction_rate": 0.509765625
+      }
+    }
+  },
+  {
+    "model": "supervised-s23",
+    "recipe": "supervised",
+    "seed": 23,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.0596628703312444,
+        "copy_change": 0.019550081859051716,
+        "price_change": 0.07968485662422609,
+        "unseen_source_change": 0.020249301989679225,
+        "independent_update_absolute_error": 0.03523761271520938,
+        "wrong_direction_rate": 0.00390625
+      },
+      "reversed": {
+        "probability_rmse": 0.12582168411930936,
+        "copy_change": 0.02064419455564348,
+        "price_change": 0.0666477911581751,
+        "unseen_source_change": 0.05044608423486352,
+        "independent_update_absolute_error": 0.1639832336484992,
+        "wrong_direction_rate": 0.482421875
+      }
+    }
+  },
+  {
+    "model": "terminal_only-s37",
+    "recipe": "terminal_only",
+    "seed": 37,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.12753799431724258,
+        "copy_change": 0.060354135814122856,
+        "price_change": 0.06165519519709051,
+        "unseen_source_change": 0.036143212928436697,
+        "independent_update_absolute_error": 0.12329787735648823,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.65234375
+      },
+      "reversed": {
+        "probability_rmse": 0.20814700201496258,
+        "copy_change": 0.05101483885664493,
+        "price_change": 0.04886837227968499,
+        "unseen_source_change": 0.013998815848026425,
+        "independent_update_absolute_error": 0.28839693933431176,
+        "wrong_direction_rate": 0.986328125,
+        "price_inspection_increase_rate": 0.671875
+      }
+    }
+  },
+  {
+    "model": "terminal_only-s37",
+    "recipe": "terminal_only",
+    "seed": 37,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.14667707771058122,
+        "copy_change": 0.11934886657400057,
+        "price_change": 0.04110904177650809,
+        "unseen_source_change": 0.015488233999349177,
+        "independent_update_absolute_error": 0.1330951908200354,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.26133221378506927,
+        "copy_change": 0.1040773763670586,
+        "price_change": 0.030696418543811888,
+        "unseen_source_change": 0.0376882468117401,
+        "independent_update_absolute_error": 0.37907088919481385,
+        "wrong_direction_rate": 0.984375,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "audit_early-s37",
+    "recipe": "audit_early",
+    "seed": 37,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.10303892359417992,
+        "copy_change": 0.019965654239058495,
+        "price_change": 0.017112785833887756,
+        "unseen_source_change": 0.03107177815400064,
+        "independent_update_absolute_error": 0.09538407811849742,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.8984375
+      },
+      "reversed": {
+        "probability_rmse": 0.1538377101631732,
+        "copy_change": 0.019914014264941216,
+        "price_change": 0.014132472628261894,
+        "unseen_source_change": 0.027908199466764927,
+        "independent_update_absolute_error": 0.1974476032383659,
+        "wrong_direction_rate": 0.583984375,
+        "price_inspection_increase_rate": 0.87109375
+      }
+    }
+  },
+  {
+    "model": "audit_early-s37",
+    "recipe": "audit_early",
+    "seed": 37,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.10436919355786717,
+        "copy_change": 0.034429842547979206,
+        "price_change": 0.02809972409158945,
+        "unseen_source_change": 0.034723538148682564,
+        "independent_update_absolute_error": 0.1240194614504674,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.17191572571330993,
+        "copy_change": 0.02847493498120457,
+        "price_change": 0.017339662415906787,
+        "unseen_source_change": 0.04889287834521383,
+        "independent_update_absolute_error": 0.22768223031479057,
+        "wrong_direction_rate": 0.791015625,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "audit_continuous-s37",
+    "recipe": "audit_continuous",
+    "seed": 37,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.12613636792371163,
+        "copy_change": 0.09270466084126383,
+        "price_change": 0.034650387708097696,
+        "unseen_source_change": 0.026609490625560284,
+        "independent_update_absolute_error": 0.11706965486190024,
+        "wrong_direction_rate": 0.0,
+        "price_inspection_increase_rate": 1.0
+      },
+      "reversed": {
+        "probability_rmse": 0.22055501515889378,
+        "copy_change": 0.0852986728423275,
+        "price_change": 0.03334091731812805,
+        "unseen_source_change": 0.018616474408190697,
+        "independent_update_absolute_error": 0.3108987497299363,
+        "wrong_direction_rate": 0.982421875,
+        "price_inspection_increase_rate": 1.0
+      }
+    }
+  },
+  {
+    "model": "audit_continuous-s37",
+    "recipe": "audit_continuous",
+    "seed": 37,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.08472871710947574,
+        "copy_change": 0.029315923107787967,
+        "price_change": 0.03659846406662837,
+        "unseen_source_change": 0.020044157630763948,
+        "independent_update_absolute_error": 0.07668514879051128,
+        "wrong_direction_rate": 0.005859375,
+        "price_inspection_increase_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.15776163167246535,
+        "copy_change": 0.029450654285028577,
+        "price_change": 0.049805943795945495,
+        "unseen_source_change": 0.07427922677015886,
+        "independent_update_absolute_error": 0.2159875434782275,
+        "wrong_direction_rate": 0.720703125,
+        "price_inspection_increase_rate": 0.0
+      }
+    }
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "seed": 37,
+    "stage": "quarter",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.06069562204186151,
+        "copy_change": 0.015553030636510812,
+        "price_change": 0.10499282188538928,
+        "unseen_source_change": 0.021131371962837875,
+        "independent_update_absolute_error": 0.03279527397150786,
+        "wrong_direction_rate": 0.0
+      },
+      "reversed": {
+        "probability_rmse": 0.10481402952868261,
+        "copy_change": 0.015091547218617052,
+        "price_change": 0.0947843597678002,
+        "unseen_source_change": 0.040974094983539544,
+        "independent_update_absolute_error": 0.12730635098352683,
+        "wrong_direction_rate": 0.224609375
+      }
+    }
+  },
+  {
+    "model": "supervised-s37",
+    "recipe": "supervised",
+    "seed": 37,
+    "stage": "final",
+    "metrics": {
+      "ordinary": {
+        "probability_rmse": 0.05580860902300248,
+        "copy_change": 0.016383143491111696,
+        "price_change": 0.027609754586592317,
+        "unseen_source_change": 0.03522865223203553,
+        "independent_update_absolute_error": 0.037730424465044585,
+        "wrong_direction_rate": 0.001953125
+      },
+      "reversed": {
+        "probability_rmse": 0.11251227538257653,
+        "copy_change": 0.01543778753693914,
+        "price_change": 0.06303030641720397,
+        "unseen_source_change": 0.06494684663630323,
+        "independent_update_absolute_error": 0.13044897757895338,
+        "wrong_direction_rate": 0.265625
+      }
+    }
+  }
+]

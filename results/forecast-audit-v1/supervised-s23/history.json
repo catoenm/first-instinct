@@ -1,0 +1,107 @@
+[
+  {
+    "rollout": 0,
+    "observed_audit_brier": 0.24382854502777504,
+    "selection_loss_diagnostic_only": 0.6807669003733785
+  },
+  {
+    "rollout": 200,
+    "observed_audit_brier": 0.15716190993400214,
+    "selection_loss_diagnostic_only": 0.47933752842895916
+  },
+  {
+    "rollout": 400,
+    "observed_audit_brier": 0.1524001273722971,
+    "selection_loss_diagnostic_only": 0.466763881566317
+  },
+  {
+    "rollout": 600,
+    "observed_audit_brier": 0.148101718700805,
+    "selection_loss_diagnostic_only": 0.45566952340416333
+  },
+  {
+    "rollout": 800,
+    "observed_audit_brier": 0.14761114854925822,
+    "selection_loss_diagnostic_only": 0.454332272341234
+  },
+  {
+    "rollout": 1000,
+    "observed_audit_brier": 0.14738768417516607,
+    "selection_loss_diagnostic_only": 0.4542181536696337
+  },
+  {
+    "rollout": 1200,
+    "observed_audit_brier": 0.14599710135453922,
+    "selection_loss_diagnostic_only": 0.44989666530716427
+  },
+  {
+    "rollout": 1400,
+    "observed_audit_brier": 0.14622221209253633,
+    "selection_loss_diagnostic_only": 0.4492131071984564
+  },
+  {
+    "rollout": 1600,
+    "observed_audit_brier": 0.14637969046978566,
+    "selection_loss_diagnostic_only": 0.45054491902851757
+  },
+  {
+    "rollout": 1800,
+    "observed_audit_brier": 0.1449806281628468,
+    "selection_loss_diagnostic_only": 0.44708287303897204
+  },
+  {
+    "rollout": 2000,
+    "observed_audit_brier": 0.14527110573756907,
+    "selection_loss_diagnostic_only": 0.4481693653793555
+  },
+  {
+    "rollout": 2200,
+    "observed_audit_brier": 0.14464485679668565,
+    "selection_loss_diagnostic_only": 0.44573355293082334
+  },
+  {
+    "rollout": 2400,
+    "observed_audit_brier": 0.14603232482489298,
+    "selection_loss_diagnostic_only": 0.4486635370102364
+  },
+  {
+    "rollout": 2600,
+    "observed_audit_brier": 0.14497791191323972,
+    "selection_loss_diagnostic_only": 0.446358309168278
+  },
+  {
+    "rollout": 2800,
+    "observed_audit_brier": 0.14707970376464846,
+    "selection_loss_diagnostic_only": 0.45196127623159976
+  },
+  {
+    "rollout": 3000,
+    "observed_audit_brier": 0.1465288961826433,
+    "selection_loss_diagnostic_only": 0.45035150151141845
+  },
+  {
+    "rollout": 3200,
+    "observed_audit_brier": 0.1449435008965944,
+    "selection_loss_diagnostic_only": 0.4461965928851524
+  },
+  {
+    "rollout": 3400,
+    "observed_audit_brier": 0.14657734244087514,
+    "selection_loss_diagnostic_only": 0.45180725897427465
+  },
+  {
+    "rollout": 3600,
+    "observed_audit_brier": 0.14533757625392807,
+    "selection_loss_diagnostic_only": 0.4466979914918634
+  },
+  {
+    "rollout": 3800,
+    "observed_audit_brier": 0.14684877937279994,
+    "selection_loss_diagnostic_only": 0.45137803819464956
+  },
+  {
+    "rollout": 4000,
+    "observed_audit_brier": 0.1455956602006661,
+    "selection_loss_diagnostic_only": 0.4479943229797271
+  }
+]

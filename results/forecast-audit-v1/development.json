@@ -1,0 +1,1099 @@
+{
+  "development_only": true,
+  "configuration": {
+    "pilot": true,
+    "rollouts": 4000,
+    "batch_size": 512,
+    "audit_worlds_per_block": 128,
+    "threads": 1,
+    "torch": "2.14.0",
+    "numpy": "2.5.3",
+    "python": "3.14.6",
+    "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "source_sha256": {
+      "forecast_audit.py": "1eff4caca15d4a6134fb69b2e0c5b6a1181c80f1d0e1811b6abda28d77166280",
+      "forecast_audit_evaluate.py": "d5144f3a529c1e925d63df6664e261d30d146e3d3b2e3d79ed6de942b83e356c",
+      "inspection_environment.py": "cafc96a0d36c412fb2f79f4d8d77a9366b15c60b4f6cc2b63bd6ddc863f1a115",
+      "inspection_evaluate.py": "eba666b3dbda87e0dbaa12e47b584769c8e9e7e8af812e8f350377177eee1aba",
+      "inspection_train.py": "600f6c5e212a6fd60a12952ed10ce2e329ba285a237299098d0f9ed7378cda3c",
+      "probability_benchmark.py": "8e146a759ec87984dbeff5580a8277d71af47a1fbcf23a6be1fbeaf6dcd6683b",
+      "protocol.md": "ff54ec89a2bfb2ad0c7ecc0fbc8a3cb2436a640a41677e5fe2cc8d2a1a80a3f4",
+      "requirements-calibration.txt": "a507960a4ebafafc58ec8d0883a3a35e9d618da0a95c49513ee5744869f80b27",
+      "test_forecast_audit.py": "ad1894f22d56c9b04682a65e65e5c3ffa243960c08a29aea64c9b18b99a12d13"
+    }
+  },
+  "models": [
+    {
+      "recipe": "terminal_only",
+      "seed": 101,
+      "objective": "forecast",
+      "width": 64,
+      "rollouts": 4000,
+      "batch_size": 512,
+      "audit_worlds_per_block": 128,
+      "audit_blocks": 0,
+      "selected_rollout": 4000,
+      "selection_rule": "fixed_final_step",
+      "parameters": 6166,
+      "seconds": 34.427881499999785,
+      "counts": {
+        "root_episodes": 2048000,
+        "interaction_transitions": 2630526,
+        "audit_states": 0,
+        "interaction_policy_updates": 16000,
+        "interaction_value_updates": 16000,
+        "audit_policy_updates": 0,
+        "audit_value_updates": 0
+      },
+      "training_world_seed": 9100101,
+      "audit_world_seed": 9400101,
+      "validation_world_sha256": "5dea872e38ba5075bb026109aac902c1567cda68097292952c7b65eed34d2261",
+      "files": {
+        "after_first_quarter.safetensors": "06948fd111a8c951f2a5320eb8003962a177e9696f29ac24a88ed2d4e43ca967",
+        "audits.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "critic.safetensors": "7f00df8e472fd9e6b4177d70917bcf0f5eeb212363ba76ad64def0f0c13fea9a",
+        "history.json": "553337d60efb390bcf81ae8bd279f834dbad2fac90f3ad6b5fdad57c21732cf5",
+        "initial.safetensors": "be675d7ad34c332027948a5b01d751531f91e571f4c41204c984eb4924e949ec",
+        "initial_critic.safetensors": "b4f164c1d046e107d7f342d867356acaa7913126edd87ccc00f74900d069fad5",
+        "interaction.jsonl": "afe0fa0fe4aaff5689edc25ff98d5ce0659f057c55920a6602cdf703b58b0981",
+        "model.safetensors": "172437ed99c3fb20412f9941c1c5a46a742d04e92884050390975884d1aff112",
+        "rollout-1.npz": "fa3c347cf5887c65b1b73f7adc8c04cd05ffb7a8c0c2a3b598e407b8d8514644",
+        "rollout-4000.npz": "fd6185fe569c49a249554c1a443869058488321d076c1762f088f2acee6c09c9"
+      }
+    },
+    {
+      "recipe": "audit_early",
+      "seed": 101,
+      "objective": "forecast",
+      "width": 64,
+      "rollouts": 4000,
+      "batch_size": 512,
+      "audit_worlds_per_block": 128,
+      "audit_blocks": 4000,
+      "selected_rollout": 4000,
+      "selection_rule": "fixed_final_step",
+      "parameters": 6166,
+      "seconds": 52.544105499997386,
+      "counts": {
+        "root_episodes": 2048000,
+        "interaction_transitions": 2651392,
+        "audit_states": 1024000,
+        "interaction_policy_updates": 16000,
+        "interaction_value_updates": 16000,
+        "audit_policy_updates": 16000,
+        "audit_value_updates": 16000
+      },
+      "training_world_seed": 9100101,
+      "audit_world_seed": 9400101,
+      "validation_world_sha256": "5dea872e38ba5075bb026109aac902c1567cda68097292952c7b65eed34d2261",
+      "files": {
+        "after_first_quarter.safetensors": "75d2dbeba6ead83ae2a251d2ee5c9f6351a7aeb010eb7ed747d08074724034bf",
+        "audit_critic.safetensors": "1e02eb81129d84f4edbb30c6af5228461a6916f02bbc9553de02ec9434d9c114",
+        "audits.jsonl": "0dc370fa636eac16a9723e01bee28db3315cf13d0e3ce0d1970eff5e6f8aaa1a",
+        "critic.safetensors": "ce5f7250295b806cb2038fcaceaab239da65b5be30f196a2e1d06fe947c51753",
+        "history.json": "c1f63ffbe083592cb168d2d3ee99c64864890d84cb3fab41ed6fdd564f42fb81",
+        "initial.safetensors": "be675d7ad34c332027948a5b01d751531f91e571f4c41204c984eb4924e949ec",
+        "initial_audit_critic.safetensors": "d1a634967c4acde0b9022be0cb1bd92438e699fda3b70dfacf864e7891a3158c",
+        "initial_critic.safetensors": "b4f164c1d046e107d7f342d867356acaa7913126edd87ccc00f74900d069fad5",
+        "interaction.jsonl": "386ac9969d14fef216281291ee794fe5ed10f95a3c5ac80f7788263d685d1ed8",
+        "model.safetensors": "d3262cc31bbcf2a792ac1adc336bf3d3af2b9e9080a41a80a80c2f659b564af9",
+        "rollout-1.npz": "fa3c347cf5887c65b1b73f7adc8c04cd05ffb7a8c0c2a3b598e407b8d8514644",
+        "rollout-4000.npz": "bffef4de54964836aca547af0b181b7fcaacf251a14e4d332202d2552a18a9b2"
+      }
+    },
+    {
+      "recipe": "audit_continuous",
+      "seed": 101,
+      "objective": "forecast",
+      "width": 64,
+      "rollouts": 4000,
+      "batch_size": 512,
+      "audit_worlds_per_block": 128,
+      "audit_blocks": 4000,
+      "selected_rollout": 4000,
+      "selection_rule": "fixed_final_step",
+      "parameters": 6166,
+      "seconds": 52.40552279200347,
+      "counts": {
+        "root_episodes": 2048000,
+        "interaction_transitions": 2667289,
+        "audit_states": 1024000,
+        "interaction_policy_updates": 16000,
+        "interaction_value_updates": 16000,
+        "audit_policy_updates": 16000,
+        "audit_value_updates": 16000
+      },
+      "training_world_seed": 9100101,
+      "audit_world_seed": 9400101,
+      "validation_world_sha256": "5dea872e38ba5075bb026109aac902c1567cda68097292952c7b65eed34d2261",
+      "files": {
+        "after_first_quarter.safetensors": "fd507ec96628b5b1843f9adc425ce5575efb68087eb4b7dfbbab0c04c835d4f8",
+        "audit_critic.safetensors": "bb2a9d7bfe788636964d5714af49e5f9d88746cbef169b86f45191a71449be7c",
+        "audits.jsonl": "31d66bac97da2db682f8e5abe68a49c3824ebecb6887f9649f93cc55ac8725cf",
+        "critic.safetensors": "76370e7498ea02b6074eacc0eda56a6ca3965a08b8ad720bca6dae84d66cd4e7",
+        "history.json": "108bb283185af7ec6791c432646ab842863bbc799f118029d47800217e70b5c5",
+        "initial.safetensors": "be675d7ad34c332027948a5b01d751531f91e571f4c41204c984eb4924e949ec",
+        "initial_audit_critic.safetensors": "d1a634967c4acde0b9022be0cb1bd92438e699fda3b70dfacf864e7891a3158c",
+        "initial_critic.safetensors": "b4f164c1d046e107d7f342d867356acaa7913126edd87ccc00f74900d069fad5",
+        "interaction.jsonl": "7e30146eb869842dd63fe9c6feefdf88fbdbaf03e87ca017996a5d7ce801b129",
+        "model.safetensors": "41b7eb92b1195b5b15d2ebfe648f57846f0b3e9140a58a58fb09ea9b5b679a43",
+        "rollout-1.npz": "fa3c347cf5887c65b1b73f7adc8c04cd05ffb7a8c0c2a3b598e407b8d8514644",
+        "rollout-4000.npz": "27cc87dc23cdc67ebcaa873cb9750ac8903ea44ab6ac5b828a93b57df43a1076"
+      }
+    },
+    {
+      "recipe": "supervised",
+      "seed": 101,
+      "objective": "forecast",
+      "width": 64,
+      "rollouts": 4000,
+      "batch_size": 512,
+      "audit_worlds_per_block": 128,
+      "audit_blocks": 4000,
+      "selected_rollout": 4000,
+      "selection_rule": "fixed_final_step",
+      "parameters": 4801,
+      "seconds": 6.0893653750026715,
+      "counts": {
+        "root_episodes": 0,
+        "interaction_transitions": 0,
+        "audit_states": 1024000,
+        "interaction_policy_updates": 0,
+        "interaction_value_updates": 0,
+        "audit_policy_updates": 16000,
+        "audit_value_updates": 0
+      },
+      "training_world_seed": 9100101,
+      "audit_world_seed": 9400101,
+      "validation_world_sha256": "5dea872e38ba5075bb026109aac902c1567cda68097292952c7b65eed34d2261",
+      "files": {
+        "after_first_quarter.safetensors": "1e7b6bfd74be1ce6e417d4e1829a624b8a0a581f25e8c29ed44b0da179bad86d",
+        "audits.jsonl": "2b648ba36e823fd2f8f3c6c7a895fb4add5601bff8a91e14e18cb26da9970e59",
+        "history.json": "2c41ad3cf706b5bbf040bac24154dc8df421761c5a6e0febd4c9351221165461",
+        "initial.safetensors": "0bb7d0b38b59e0fd595009e7c0f2808944b02b0e760d5019b775c8e396be8d3c",
+        "interaction.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.safetensors": "ed1e052fdef3b836549332347387bfb3bc2bcbdc06d4357f2852aa718faa791d"
+      }
+    }
+  ],
+  "results": [
+    {
+      "model": "terminal_only-s101",
+      "recipe": "terminal_only",
+      "seed": 101,
+      "stage": "quarter",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.8042660458192218,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.04585123868507174,
+      "minimum_example_regret": 0.0018696294018096249,
+      "inspection_rate": 0.5397362250478182,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.5423466939844337,
+      "independent_inspection_rate": 0.5388705949062876,
+      "inspection_cost": 0.033181512617153894,
+      "terminal_brier": 0.16008037228356953,
+      "terminal_probability_rmse": 0.12398020925299272,
+      "audit_brier": 0.16126716816477615,
+      "audit_probability_rmse": 0.1220933454400709,
+      "duplicate_probability_change": 0.062334493774117206,
+      "sampled_report_variance": 0.0024720692800547406,
+      "never_inspect_same_report_head_return": 0.8231144732759649,
+      "always_inspect_same_report_head_return": 0.7883493085662989,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 1,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 2,
+          "mass": 0.3201829217165353,
+          "forecast": 0.21224198059784427,
+          "event_probability": 0.13969439927018504
+        },
+        {
+          "bin": 3,
+          "mass": 0.049636195257353674,
+          "forecast": 0.3520604200630573,
+          "event_probability": 0.3071368267302366
+        },
+        {
+          "bin": 4,
+          "mass": 0.14788229747081957,
+          "forecast": 0.4525037299547701,
+          "event_probability": 0.43924818150793166
+        },
+        {
+          "bin": 5,
+          "mass": 0.06052305212595589,
+          "forecast": 0.5508361830506565,
+          "event_probability": 0.5406427963824592
+        },
+        {
+          "bin": 6,
+          "mass": 0.07138419737733659,
+          "forecast": 0.652221549522137,
+          "event_probability": 0.6456399029050083
+        },
+        {
+          "bin": 7,
+          "mass": 0.09312995898574367,
+          "forecast": 0.7469007086166968,
+          "event_probability": 0.7464224569643741
+        },
+        {
+          "bin": 8,
+          "mass": 0.25726137706625535,
+          "forecast": 0.8408387525421245,
+          "event_probability": 0.8941850367659671
+        },
+        {
+          "bin": 9,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        }
+      ]
+    },
+    {
+      "model": "terminal_only-s101",
+      "recipe": "terminal_only",
+      "seed": 101,
+      "stage": "final",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.8412724393214399,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.008844845182853618,
+      "minimum_example_regret": 1.1765397182061932e-06,
+      "inspection_rate": 0.23311981201752702,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.00037780957078897685,
+      "independent_inspection_rate": 0.31029693896670546,
+      "inspection_cost": 0.011492324939067338,
+      "terminal_brier": 0.14589138098702426,
+      "terminal_probability_rmse": 0.08180476198671012,
+      "audit_brier": 0.16983572140790415,
+      "audit_probability_rmse": 0.15321663827364337,
+      "duplicate_probability_change": 0.1314198890664414,
+      "sampled_report_variance": 0.0013438547524684734,
+      "never_inspect_same_report_head_return": 0.8271377719972559,
+      "always_inspect_same_report_head_return": 0.7690640312964667,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 1,
+          "mass": 0.34763928933011956,
+          "forecast": 0.15147127429989324,
+          "event_probability": 0.12362755435041654
+        },
+        {
+          "bin": 2,
+          "mass": 0.01485507499208488,
+          "forecast": 0.2466426478154894,
+          "event_probability": 0.2976840499848902
+        },
+        {
+          "bin": 3,
+          "mass": 0.09338618228086755,
+          "forecast": 0.3530494104907359,
+          "event_probability": 0.35019932923784325
+        },
+        {
+          "bin": 4,
+          "mass": 0.026597170885714602,
+          "forecast": 0.4500777161784226,
+          "event_probability": 0.4597705335256342
+        },
+        {
+          "bin": 5,
+          "mass": 0.08631262191434667,
+          "forecast": 0.5743360022200814,
+          "event_probability": 0.5667266018243067
+        },
+        {
+          "bin": 6,
+          "mass": 0.07697451815221107,
+          "forecast": 0.631522202326837,
+          "event_probability": 0.6949330426509602
+        },
+        {
+          "bin": 7,
+          "mass": 0.050178656324303225,
+          "forecast": 0.7487915817356335,
+          "event_probability": 0.76246598962713
+        },
+        {
+          "bin": 8,
+          "mass": 0.3040564861203524,
+          "forecast": 0.8471412336689839,
+          "event_probability": 0.8889588296110781
+        },
+        {
+          "bin": 9,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        }
+      ]
+    },
+    {
+      "model": "audit_early-s101",
+      "recipe": "audit_early",
+      "seed": 101,
+      "stage": "quarter",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.8076615963421848,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.042455688162108714,
+      "minimum_example_regret": 0.0011572306554257783,
+      "inspection_rate": 0.5301922618127719,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.5431547486022407,
+      "independent_inspection_rate": 0.5258939079359,
+      "inspection_cost": 0.032542182287007726,
+      "terminal_brier": 0.1585967415357899,
+      "terminal_probability_rmse": 0.11667677697559635,
+      "audit_brier": 0.15991813663146515,
+      "audit_probability_rmse": 0.11643776649969492,
+      "duplicate_probability_change": 0.047686623182951235,
+      "sampled_report_variance": 0.0011994798350175272,
+      "never_inspect_same_report_head_return": 0.8247112903369024,
+      "always_inspect_same_report_head_return": 0.7920486998105001,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 1,
+          "mass": 0.2802470742029553,
+          "forecast": 0.19996000594178898,
+          "event_probability": 0.1201614074352563
+        },
+        {
+          "bin": 2,
+          "mass": 0.10235819904208476,
+          "forecast": 0.22068426630929386,
+          "event_probability": 0.2886847163831663
+        },
+        {
+          "bin": 3,
+          "mass": 0.033666188937595196,
+          "forecast": 0.3405243264157021,
+          "event_probability": 0.3764020251708118
+        },
+        {
+          "bin": 4,
+          "mass": 0.10717385534450637,
+          "forecast": 0.4608024278998359,
+          "event_probability": 0.4636669572035932
+        },
+        {
+          "bin": 5,
+          "mass": 0.04145546536634722,
+          "forecast": 0.5530670153025813,
+          "event_probability": 0.5403046637568482
+        },
+        {
+          "bin": 6,
+          "mass": 0.09318201069500512,
+          "forecast": 0.6465339696893158,
+          "event_probability": 0.6452427899974401
+        },
+        {
+          "bin": 7,
+          "mass": 0.016341492742546395,
+          "forecast": 0.7480976970258957,
+          "event_probability": 0.702413396402033
+        },
+        {
+          "bin": 8,
+          "mass": 0.3255757136689596,
+          "forecast": 0.8484961292560608,
+          "event_probability": 0.8713859019205982
+        },
+        {
+          "bin": 9,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        }
+      ]
+    },
+    {
+      "model": "audit_early-s101",
+      "recipe": "audit_early",
+      "seed": 101,
+      "stage": "final",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.8400982883598701,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.010018996144423465,
+      "minimum_example_regret": 3.8184353133297044e-06,
+      "inspection_rate": 0.24457906326306667,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.002147512020580846,
+      "independent_inspection_rate": 0.32496923955283763,
+      "inspection_cost": 0.012433322441627544,
+      "terminal_brier": 0.14639034417381858,
+      "terminal_probability_rmse": 0.09090471131243597,
+      "audit_brier": 0.16078523029256916,
+      "audit_probability_rmse": 0.1201034850807482,
+      "duplicate_probability_change": 0.059321395724135285,
+      "sampled_report_variance": 0.0010780450246837634,
+      "never_inspect_same_report_head_return": 0.8262403840944389,
+      "always_inspect_same_report_head_return": 0.7878601276430104,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 1,
+          "mass": 0.06374729308767242,
+          "forecast": 0.19999378773863202,
+          "event_probability": 0.054582246457847726
+        },
+        {
+          "bin": 2,
+          "mass": 0.3113309869408891,
+          "forecast": 0.21268480917070257,
+          "event_probability": 0.15108634181760208
+        },
+        {
+          "bin": 3,
+          "mass": 0.058644810367306614,
+          "forecast": 0.3276017227998304,
+          "event_probability": 0.3323067249303245
+        },
+        {
+          "bin": 4,
+          "mass": 0.057860382585416134,
+          "forecast": 0.45388557771466254,
+          "event_probability": 0.4277912757520851
+        },
+        {
+          "bin": 5,
+          "mass": 0.03768539085051751,
+          "forecast": 0.554024165366535,
+          "event_probability": 0.5355330032662204
+        },
+        {
+          "bin": 6,
+          "mass": 0.03148735854372838,
+          "forecast": 0.650691708176134,
+          "event_probability": 0.6117717972393655
+        },
+        {
+          "bin": 7,
+          "mass": 0.06589788077431355,
+          "forecast": 0.745992354020377,
+          "event_probability": 0.6862085987298516
+        },
+        {
+          "bin": 8,
+          "mass": 0.37334589685015623,
+          "forecast": 0.8485897241402519,
+          "event_probability": 0.867482941395091
+        },
+        {
+          "bin": 9,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        }
+      ]
+    },
+    {
+      "model": "audit_continuous-s101",
+      "recipe": "audit_continuous",
+      "seed": 101,
+      "stage": "quarter",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.8077169407500961,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.042400343754197364,
+      "minimum_example_regret": 0.0011048910863704214,
+      "inspection_rate": 0.5420067451814248,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.5299236763633933,
+      "independent_inspection_rate": 0.5460134845164026,
+      "inspection_cost": 0.03312975187806391,
+      "terminal_brier": 0.15662308583949092,
+      "terminal_probability_rmse": 0.11259896082328076,
+      "audit_brier": 0.15873611291175319,
+      "audit_probability_rmse": 0.1112462572301896,
+      "duplicate_probability_change": 0.07032086699470586,
+      "sampled_report_variance": 0.002530221532348992,
+      "never_inspect_same_report_head_return": 0.8239737497718682,
+      "always_inspect_same_report_head_return": 0.7924473568265705,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 1,
+          "mass": 0.25860711300864486,
+          "forecast": 0.15430885835489225,
+          "event_probability": 0.11205768872637682
+        },
+        {
+          "bin": 2,
+          "mass": 0.04626711160965717,
+          "forecast": 0.2530362747858139,
+          "event_probability": 0.23839535831688166
+        },
+        {
+          "bin": 3,
+          "mass": 0.06705591603102082,
+          "forecast": 0.35431663497466365,
+          "event_probability": 0.30021853106235014
+        },
+        {
+          "bin": 4,
+          "mass": 0.14103534335740917,
+          "forecast": 0.4605133566487101,
+          "event_probability": 0.4349340536037773
+        },
+        {
+          "bin": 5,
+          "mass": 0.103892369518821,
+          "forecast": 0.5364282294157167,
+          "event_probability": 0.5688525313884409
+        },
+        {
+          "bin": 6,
+          "mass": 0.09352200363604818,
+          "forecast": 0.6450755086177535,
+          "event_probability": 0.7026649653064035
+        },
+        {
+          "bin": 7,
+          "mass": 0.025999704257352242,
+          "forecast": 0.7472310009187775,
+          "event_probability": 0.7737614641593648
+        },
+        {
+          "bin": 8,
+          "mass": 0.26362043858104656,
+          "forecast": 0.8908363150890669,
+          "event_probability": 0.8985660473123278
+        },
+        {
+          "bin": 9,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        }
+      ]
+    },
+    {
+      "model": "audit_continuous-s101",
+      "recipe": "audit_continuous",
+      "seed": 101,
+      "stage": "final",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.8422578154097728,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.007859469094520758,
+      "minimum_example_regret": 1.2385095038563998e-06,
+      "inspection_rate": 0.2267937988477503,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.00385691106548547,
+      "independent_inspection_rate": 0.30071955487437907,
+      "inspection_cost": 0.010693062899418383,
+      "terminal_brier": 0.14574633581802607,
+      "terminal_probability_rmse": 0.07638915999286178,
+      "audit_brier": 0.15486766165575977,
+      "audit_probability_rmse": 0.09223490928998694,
+      "duplicate_probability_change": 0.054391124742288216,
+      "sampled_report_variance": 0.0013027858727827342,
+      "never_inspect_same_report_head_return": 0.8281813598087362,
+      "always_inspect_same_report_head_return": 0.7974426465313686,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        },
+        {
+          "bin": 1,
+          "mass": 0.3496741853396375,
+          "forecast": 0.15167008458394912,
+          "event_probability": 0.12825112599040367
+        },
+        {
+          "bin": 2,
+          "mass": 0.052440544138842686,
+          "forecast": 0.2741333071246572,
+          "event_probability": 0.30332080526204674
+        },
+        {
+          "bin": 3,
+          "mass": 0.06799197799103342,
+          "forecast": 0.3270349120351607,
+          "event_probability": 0.3846567429679336
+        },
+        {
+          "bin": 4,
+          "mass": 0.030616180457638715,
+          "forecast": 0.4553500225091475,
+          "event_probability": 0.49554335095200347
+        },
+        {
+          "bin": 5,
+          "mass": 0.0638515165623125,
+          "forecast": 0.550206389820525,
+          "event_probability": 0.5751714856426652
+        },
+        {
+          "bin": 6,
+          "mass": 0.06023209750104899,
+          "forecast": 0.6465567711324459,
+          "event_probability": 0.6785409630662043
+        },
+        {
+          "bin": 7,
+          "mass": 0.0882351284772091,
+          "forecast": 0.7493823383894508,
+          "event_probability": 0.7505642808815759
+        },
+        {
+          "bin": 8,
+          "mass": 0.28695836953227705,
+          "forecast": 0.8936685304789752,
+          "event_probability": 0.8969733617322103
+        },
+        {
+          "bin": 9,
+          "mass": 0.0,
+          "forecast": null,
+          "event_probability": null
+        }
+      ]
+    },
+    {
+      "model": "supervised-s101",
+      "recipe": "supervised",
+      "seed": 101,
+      "stage": "quarter",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.846291748573775,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.0038255359305186137,
+      "minimum_example_regret": -1.1102230246251565e-16,
+      "inspection_rate": 0.30810546875,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.0,
+      "independent_inspection_rate": 0.4102730819245774,
+      "inspection_cost": 0.013481517884372352,
+      "terminal_brier": 0.1400375782958919,
+      "terminal_probability_rmse": 0.05670593044575666,
+      "audit_brier": 0.15005848771577457,
+      "audit_probability_rmse": 0.06081204281839992,
+      "duplicate_probability_change": 0.015030212567060016,
+      "sampled_report_variance": 0.0,
+      "never_inspect_same_report_head_return": 0.8315862994509173,
+      "always_inspect_same_report_head_return": 0.8069122686396111,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.1671439854707911,
+          "forecast": 0.06318440718277803,
+          "event_probability": 0.06023314340479492
+        },
+        {
+          "bin": 1,
+          "mass": 0.1404603798425306,
+          "forecast": 0.14174435411932715,
+          "event_probability": 0.15771092996309782
+        },
+        {
+          "bin": 2,
+          "mass": 0.08426258184275759,
+          "forecast": 0.24869842413377988,
+          "event_probability": 0.2705397015881332
+        },
+        {
+          "bin": 3,
+          "mass": 0.06929503060917118,
+          "forecast": 0.350524537591385,
+          "event_probability": 0.38629465233429494
+        },
+        {
+          "bin": 4,
+          "mass": 0.06303022213793533,
+          "forecast": 0.4495839678711297,
+          "event_probability": 0.489389351232516
+        },
+        {
+          "bin": 5,
+          "mass": 0.06184214045842844,
+          "forecast": 0.5502597011430223,
+          "event_probability": 0.5961722058012111
+        },
+        {
+          "bin": 6,
+          "mass": 0.0729952019445694,
+          "forecast": 0.6507345362861735,
+          "event_probability": 0.7023147005297519
+        },
+        {
+          "bin": 7,
+          "mass": 0.08034858596375508,
+          "forecast": 0.7544776285272444,
+          "event_probability": 0.7923621267741547
+        },
+        {
+          "bin": 8,
+          "mass": 0.14912204641782786,
+          "forecast": 0.857151791584846,
+          "event_probability": 0.8863687978536452
+        },
+        {
+          "bin": 9,
+          "mass": 0.11149982531223342,
+          "forecast": 0.9387451848955597,
+          "event_probability": 0.956827398782224
+        }
+      ]
+    },
+    {
+      "model": "supervised-s101",
+      "recipe": "supervised",
+      "seed": 101,
+      "stage": "final",
+      "domain": "in_distribution",
+      "world_seed": 9600101,
+      "world_sha256": "370e1a59684086de8510ab8d5d85c1c9d2a7a5872198ef4857a131eae23bd4fb",
+      "net_return": 0.8476773852481649,
+      "oracle_return": 0.8501172845042936,
+      "oracle_regret": 0.002439899256128581,
+      "minimum_example_regret": -1.1102230246251565e-16,
+      "inspection_rate": 0.3460693359375,
+      "oracle_inspection_rate": 0.2696533203125,
+      "duplicate_inspection_rate": 0.0,
+      "independent_inspection_rate": 0.4608257477243173,
+      "inspection_cost": 0.015955990956513233,
+      "terminal_brier": 0.13617178944843647,
+      "terminal_probability_rmse": 0.03899143774627516,
+      "audit_brier": 0.14814318851017289,
+      "audit_probability_rmse": 0.04222327967064199,
+      "duplicate_probability_change": 0.030128747934256406,
+      "sampled_report_variance": 0.0,
+      "never_inspect_same_report_head_return": 0.8339441397926322,
+      "always_inspect_same_report_head_return": 0.8083820602339625,
+      "oracle_never_inspect_return": 0.8347630906262193,
+      "calibration_bins_expected": [
+        {
+          "bin": 0,
+          "mass": 0.17455571739216708,
+          "forecast": 0.05240534462930088,
+          "event_probability": 0.058180560468413696
+        },
+        {
+          "bin": 1,
+          "mass": 0.14221500409117968,
+          "forecast": 0.14297965198291707,
+          "event_probability": 0.15263763538512606
+        },
+        {
+          "bin": 2,
+          "mass": 0.07753590641851728,
+          "forecast": 0.24775521924123933,
+          "event_probability": 0.2699473211237359
+        },
+        {
+          "bin": 3,
+          "mass": 0.05278024339229798,
+          "forecast": 0.34836798667588165,
+          "event_probability": 0.37099576126854883
+        },
+        {
+          "bin": 4,
+          "mass": 0.051125780861139586,
+          "forecast": 0.44965909609315374,
+          "event_probability": 0.4658818973658296
+        },
+        {
+          "bin": 5,
+          "mass": 0.050093795004211406,
+          "forecast": 0.5522163619349072,
+          "event_probability": 0.5563651497517698
+        },
+        {
+          "bin": 6,
+          "mass": 0.0667256727869741,
+          "forecast": 0.6533433153075819,
+          "event_probability": 0.6577930444308618
+        },
+        {
+          "bin": 7,
+          "mass": 0.10012881020113869,
+          "forecast": 0.7517541949244098,
+          "event_probability": 0.7633702124764017
+        },
+        {
+          "bin": 8,
+          "mass": 0.13790561031184406,
+          "forecast": 0.8531913931025206,
+          "event_probability": 0.8653999103167079
+        },
+        {
+          "bin": 9,
+          "mass": 0.14693345954053016,
+          "forecast": 0.9422934250522967,
+          "event_probability": 0.9498093700572591
+        }
+      ]
+    }
+  ],
+  "paired_results": [
+    {
+      "model": "terminal_only-s101",
+      "recipe": "terminal_only",
+      "seed": 101,
+      "stage": "quarter",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.12722275794359303,
+          "copy_change": 0.08609152399003506,
+          "price_change": 0.0573119749315083,
+          "unseen_source_change": 0.04760043043643236,
+          "independent_update_absolute_error": 0.1256787731673106,
+          "wrong_direction_rate": 0.0,
+          "price_inspection_increase_rate": 1.0
+        },
+        "reversed": {
+          "probability_rmse": 0.2139305617753189,
+          "copy_change": 0.05482959980145097,
+          "price_change": 0.05388989998027682,
+          "unseen_source_change": 0.028210248332470655,
+          "independent_update_absolute_error": 0.2939722201968809,
+          "wrong_direction_rate": 1.0,
+          "price_inspection_increase_rate": 1.0
+        }
+      }
+    },
+    {
+      "model": "terminal_only-s101",
+      "recipe": "terminal_only",
+      "seed": 101,
+      "stage": "final",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.16760677611653102,
+          "copy_change": 0.16955283703282475,
+          "price_change": 0.04391642939299345,
+          "unseen_source_change": 0.02624094346538186,
+          "independent_update_absolute_error": 0.163103931945119,
+          "wrong_direction_rate": 0.0,
+          "price_inspection_increase_rate": 0.0
+        },
+        "reversed": {
+          "probability_rmse": 0.2798549429102375,
+          "copy_change": 0.10924545908346772,
+          "price_change": 0.05872190976515412,
+          "unseen_source_change": 0.060472250916063786,
+          "independent_update_absolute_error": 0.4005196673511794,
+          "wrong_direction_rate": 1.0,
+          "price_inspection_increase_rate": 0.0
+        }
+      }
+    },
+    {
+      "model": "audit_early-s101",
+      "recipe": "audit_early",
+      "seed": 101,
+      "stage": "quarter",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.12468726830040537,
+          "copy_change": 0.07294348208233714,
+          "price_change": 0.05746403755620122,
+          "unseen_source_change": 0.04014634154736996,
+          "independent_update_absolute_error": 0.13341141708559529,
+          "wrong_direction_rate": 0.03125,
+          "price_inspection_increase_rate": 0.78125
+        },
+        "reversed": {
+          "probability_rmse": 0.20381036098912514,
+          "copy_change": 0.037102929782122374,
+          "price_change": 0.045690640807151794,
+          "unseen_source_change": 0.035433199256658554,
+          "independent_update_absolute_error": 0.2830562749128123,
+          "wrong_direction_rate": 0.78125,
+          "price_inspection_increase_rate": 0.875
+        }
+      }
+    },
+    {
+      "model": "audit_early-s101",
+      "recipe": "audit_early",
+      "seed": 101,
+      "stage": "final",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.11895868730806705,
+          "copy_change": 0.07921882113441825,
+          "price_change": 0.02969368500635028,
+          "unseen_source_change": 0.016091088764369488,
+          "independent_update_absolute_error": 0.12000775182948392,
+          "wrong_direction_rate": 0.0,
+          "price_inspection_increase_rate": 0.0
+        },
+        "reversed": {
+          "probability_rmse": 0.22156742540359653,
+          "copy_change": 0.044928161427378654,
+          "price_change": 0.044646888971328735,
+          "unseen_source_change": 0.06230679340660572,
+          "independent_update_absolute_error": 0.3124324445794603,
+          "wrong_direction_rate": 0.984375,
+          "price_inspection_increase_rate": 0.0
+        }
+      }
+    },
+    {
+      "model": "audit_continuous-s101",
+      "recipe": "audit_continuous",
+      "seed": 101,
+      "stage": "quarter",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.11902888267498217,
+          "copy_change": 0.08150410978123546,
+          "price_change": 0.05380291864275932,
+          "unseen_source_change": 0.045132281724363565,
+          "independent_update_absolute_error": 0.11763220341098102,
+          "wrong_direction_rate": 0.0,
+          "price_inspection_increase_rate": 0.71875
+        },
+        "reversed": {
+          "probability_rmse": 0.21238647782553427,
+          "copy_change": 0.07247105985879898,
+          "price_change": 0.03688558842986822,
+          "unseen_source_change": 0.010367903392761946,
+          "independent_update_absolute_error": 0.30985655069307294,
+          "wrong_direction_rate": 1.0,
+          "price_inspection_increase_rate": 0.75
+        }
+      }
+    },
+    {
+      "model": "audit_continuous-s101",
+      "recipe": "audit_continuous",
+      "seed": 101,
+      "stage": "final",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.11350312974916933,
+          "copy_change": 0.08196608955040574,
+          "price_change": 0.05997028527781367,
+          "unseen_source_change": 0.024042217526584864,
+          "independent_update_absolute_error": 0.1217176570920261,
+          "wrong_direction_rate": 0.0,
+          "price_inspection_increase_rate": 0.0
+        },
+        "reversed": {
+          "probability_rmse": 0.18739719266664137,
+          "copy_change": 0.048788626212626696,
+          "price_change": 0.07036228803917766,
+          "unseen_source_change": 0.056857587303966284,
+          "independent_update_absolute_error": 0.2662758384081801,
+          "wrong_direction_rate": 0.96875,
+          "price_inspection_increase_rate": 0.0
+        }
+      }
+    },
+    {
+      "model": "supervised-s101",
+      "recipe": "supervised",
+      "seed": 101,
+      "stage": "quarter",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.08256498997803831,
+          "copy_change": 0.017661088029854,
+          "price_change": 0.055991011671721935,
+          "unseen_source_change": 0.035906769218854606,
+          "independent_update_absolute_error": 0.04311684595037286,
+          "wrong_direction_rate": 0.0
+        },
+        "reversed": {
+          "probability_rmse": 0.14889737859143004,
+          "copy_change": 0.011343426536768675,
+          "price_change": 0.08578898920677602,
+          "unseen_source_change": 0.07978749088943005,
+          "independent_update_absolute_error": 0.17761919447272662,
+          "wrong_direction_rate": 0.5
+        }
+      }
+    },
+    {
+      "model": "supervised-s101",
+      "recipe": "supervised",
+      "seed": 101,
+      "stage": "final",
+      "metrics": {
+        "ordinary": {
+          "probability_rmse": 0.05262272233630469,
+          "copy_change": 0.032634542672894895,
+          "price_change": 0.06243644095957279,
+          "unseen_source_change": 0.020010571228340268,
+          "independent_update_absolute_error": 0.050026940095183145,
+          "wrong_direction_rate": 0.0
+        },
+        "reversed": {
+          "probability_rmse": 0.12996153544765035,
+          "copy_change": 0.03220944129861891,
+          "price_change": 0.022689227713271976,
+          "unseen_source_change": 0.09876036865171045,
+          "independent_update_absolute_error": 0.1603688596511616,
+          "wrong_direction_rate": 0.484375
+        }
+      }
+    }
+  ]
+}

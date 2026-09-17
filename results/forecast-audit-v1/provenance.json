@@ -1,0 +1,7 @@
+{
+  "frozen_source_commit": "eb42b3c72fcdb56f36bc94977d4c42e909ff8bef",
+  "raw_run": "forecast-audit-final-v1",
+  "sealed_at": "2026-09-17T18:07:47.976012+00:00",
+  "traces": "Published gzip files decompress to the original hashes in each model manifest",
+  "prediction_arrays": "Retained locally and reproducible with forecast_audit_evaluate"
+}

@@ -261,8 +261,11 @@ and [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347).
   Development pilots guided the design; final domains were evaluated only after
   all checkpoints were sealed. We did not retrain in response to final results.
 
-A useful follow-up would keep collecting forecast-only audit episodes throughout
-training, including initial states and copied observations, rather than relying
-on the acquisition policy to visit every state that a probability interface
-might expose. Broader source conditions would test the reversed-sensor failure.
-Those interventions have not been tested in this release.
+The [continued forecast-practice study](forecast-audit.md) now tests that data
+intervention: asking for reports on initial states and acquired observations
+independently of the acquisition policy. It compares early and continued
+practice using identical extra examples, alongside a direct-label reference.
+The [paired probability benchmark](probability-benchmark.md) also expresses
+controlled situations as text for testing a language-capable model. Broader
+source conditions remain a separate training intervention; this follow-up
+still holds reversed sources out of training.

@@ -1,0 +1,24 @@
+{
+  "pilot": false,
+  "rollouts": 4000,
+  "batch_size": 512,
+  "audit_worlds_per_block": 128,
+  "threads": 1,
+  "torch": "2.14.0",
+  "numpy": "2.5.3",
+  "python": "3.14.6",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "source_sha256": {
+    "forecast_audit.py": "01562e49c888e6fffdc459036542298eb5c7f1e3cf986c4261293a9c083285f0",
+    "forecast_audit_evaluate.py": "d5144f3a529c1e925d63df6664e261d30d146e3d3b2e3d79ed6de942b83e356c",
+    "inspection_environment.py": "cafc96a0d36c412fb2f79f4d8d77a9366b15c60b4f6cc2b63bd6ddc863f1a115",
+    "inspection_evaluate.py": "eba666b3dbda87e0dbaa12e47b584769c8e9e7e8af812e8f350377177eee1aba",
+    "inspection_train.py": "600f6c5e212a6fd60a12952ed10ce2e329ba285a237299098d0f9ed7378cda3c",
+    "jev_benchmark.py": "560c7bb2e9d0c216408b03412e004a6e2234c7f1c4a0bf9af3913b35dc849bbb",
+    "probability_benchmark.py": "8e146a759ec87984dbeff5580a8277d71af47a1fbcf23a6be1fbeaf6dcd6683b",
+    "protocol.md": "b5d922779d13592ca7d279b1ca87823092090657fe20e33b5b13a28b14078e7e",
+    "requirements-calibration.txt": "a507960a4ebafafc58ec8d0883a3a35e9d618da0a95c49513ee5744869f80b27",
+    "test_forecast_audit.py": "ad1894f22d56c9b04682a65e65e5c3ffa243960c08a29aea64c9b18b99a12d13",
+    "test_jev_benchmark.py": "959e8c322934fe5d53d895455e83ef30f6fe385fa6bfa2519412a2b42bcce26e"
+  }
+}

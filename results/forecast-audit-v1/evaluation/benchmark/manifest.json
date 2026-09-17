@@ -1,0 +1,21 @@
+{
+  "requests": 6144,
+  "unique_numeric_cases": 3072,
+  "families": [
+    "ordinary",
+    "reversed"
+  ],
+  "variants": [
+    "initial",
+    "independent_zero",
+    "independent_one",
+    "copy_initial",
+    "copy_revealed",
+    "expensive"
+  ],
+  "text_versions": 2,
+  "files": {
+    "requests.jsonl.gz": "feb84ef40b8ac5666320fe395901b0c238ed7a99ef43e8ba8a118c1c7010cbf2",
+    "answers.jsonl.gz": "0c23a5f9cdbac856e15d3d3de189bfbf4c15c54592707758f4d49cf243b7e6b9"
+  }
+}

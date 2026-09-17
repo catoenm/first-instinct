@@ -1,0 +1,7 @@
+{
+  "offline_unit_tests": 76,
+  "passed": true,
+  "command": "python -m unittest discover -q",
+  "figure_inspected": true,
+  "live_jev_requests": 0
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "models": 12,
+  "workflow_evaluations": 96,
+  "paired_model_evaluations": 24,
+  "interaction_batches_replayed": 18,
+  "unique_interaction_worlds_regenerated": 6144000,
+  "unique_exercise_worlds_regenerated": 1536000,
+  "maximum_metric_difference": 0.0,
+  "benchmark_reproduced_byte_for_byte": true
+}

@@ -6,7 +6,7 @@ A local environment generates those observations and scores a sampled action.
 That is enough to run Proximal Policy Optimization; a remote service or a
 graphical game is not required.
 
-The [current experiment](ppo-data-protocol.md) separates three interventions:
+The [size and data-coverage experiment](ppo-data-protocol.md) separates three interventions:
 the training method, network size, and which situations appear in the training
 data. Its expanded generator spends the same episode budget on a broader mix.
 More rows from one narrow pattern and broader coverage are different changes.
@@ -58,6 +58,27 @@ looking gets fewer chances to learn how useful an additional observation is.
 It still uses tiny numeric networks, honestly announced source quality and
 synthetic events. It is not yet an agent reading real documents or making
 arbitrarily long sequences of decisions.
+
+## Practicing forecasts outside the chosen path
+
+The [continued forecast-practice experiment](forecast-audit.md) adds a second
+data stream. Regardless of what the interaction policy chooses, an exercise
+asks it to report a probability before and after an additional observation.
+That includes copied readings and initial states where the policy would usually
+buy more evidence. The environment rewards the report against the realized
+outcome; the exact event probability stays outside training.
+
+Early and continued practice use the same 1,024,000 exercise states per model,
+in the same order. Their scheduling differs. A label-trained reference receives
+exactly those exercise states too. World and observation hashes let a verifier
+check that the data match, instead of relying on nominal row counts.
+
+The [paired benchmark](probability-benchmark.md) makes six related variants of
+each base case and writes each as two equivalent text requests. Copies and
+prices should leave a forecast unchanged; fresh evidence should change it.
+The request file contains no answer, and a separate file holds exact targets.
+These are controlled language probes, not a claim that the numeric learner can
+understand text or that template variation covers real-world language.
 
 ## Bringing in language and external data
 

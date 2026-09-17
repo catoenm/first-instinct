@@ -1,0 +1,107 @@
+[
+  {
+    "rollout": 0,
+    "observed_audit_brier": 0.24993527176105604,
+    "selection_loss_diagnostic_only": 0.37395190945447054
+  },
+  {
+    "rollout": 200,
+    "observed_audit_brier": 0.1624983846520167,
+    "selection_loss_diagnostic_only": 0.19514489787762557
+  },
+  {
+    "rollout": 400,
+    "observed_audit_brier": 0.16382137522909213,
+    "selection_loss_diagnostic_only": 0.19543166523250535
+  },
+  {
+    "rollout": 600,
+    "observed_audit_brier": 0.15885418389890413,
+    "selection_loss_diagnostic_only": 0.19132628159879383
+  },
+  {
+    "rollout": 800,
+    "observed_audit_brier": 0.15754157814910338,
+    "selection_loss_diagnostic_only": 0.18991993452511363
+  },
+  {
+    "rollout": 1000,
+    "observed_audit_brier": 0.15522954766078956,
+    "selection_loss_diagnostic_only": 0.18800778950824032
+  },
+  {
+    "rollout": 1200,
+    "observed_audit_brier": 0.1542594036043506,
+    "selection_loss_diagnostic_only": 0.16351007648378324
+  },
+  {
+    "rollout": 1400,
+    "observed_audit_brier": 0.1547855962586836,
+    "selection_loss_diagnostic_only": 0.16097139027293889
+  },
+  {
+    "rollout": 1600,
+    "observed_audit_brier": 0.15547638493685012,
+    "selection_loss_diagnostic_only": 0.16025342236203105
+  },
+  {
+    "rollout": 1800,
+    "observed_audit_brier": 0.15462849767021375,
+    "selection_loss_diagnostic_only": 0.1596383147829405
+  },
+  {
+    "rollout": 2000,
+    "observed_audit_brier": 0.15493417741763588,
+    "selection_loss_diagnostic_only": 0.1587389379003059
+  },
+  {
+    "rollout": 2200,
+    "observed_audit_brier": 0.15563052567181515,
+    "selection_loss_diagnostic_only": 0.1588209121701467
+  },
+  {
+    "rollout": 2400,
+    "observed_audit_brier": 0.1565338253027699,
+    "selection_loss_diagnostic_only": 0.16002099959706112
+  },
+  {
+    "rollout": 2600,
+    "observed_audit_brier": 0.15588528391410478,
+    "selection_loss_diagnostic_only": 0.15951996314138295
+  },
+  {
+    "rollout": 2800,
+    "observed_audit_brier": 0.1555343935398362,
+    "selection_loss_diagnostic_only": 0.15930549346006662
+  },
+  {
+    "rollout": 3000,
+    "observed_audit_brier": 0.15578649328261215,
+    "selection_loss_diagnostic_only": 0.15913629082750008
+  },
+  {
+    "rollout": 3200,
+    "observed_audit_brier": 0.15605943238021414,
+    "selection_loss_diagnostic_only": 0.1589817848727482
+  },
+  {
+    "rollout": 3400,
+    "observed_audit_brier": 0.15488010660683948,
+    "selection_loss_diagnostic_only": 0.15885309675865064
+  },
+  {
+    "rollout": 3600,
+    "observed_audit_brier": 0.15527067857314752,
+    "selection_loss_diagnostic_only": 0.1584501628553757
+  },
+  {
+    "rollout": 3800,
+    "observed_audit_brier": 0.15511215697035757,
+    "selection_loss_diagnostic_only": 0.15786999621370454
+  },
+  {
+    "rollout": 4000,
+    "observed_audit_brier": 0.156143287048519,
+    "selection_loss_diagnostic_only": 0.1586862221364408
+  }
+]

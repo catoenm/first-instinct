@@ -19,7 +19,18 @@ First Instinct takes some text, a question, and a list of described answers.
 One shared network scores the answers. It can choose a tool, identify an emotion,
 or judge how two sentences relate—without generating a stream of text.
 
-**Latest: [Learning when to buy evidence—and where the forecasts still fail](docs/learned-inspection.md).**
+**Latest: [Keeping a decision model's forecasts in practice](docs/forecast-audit.md).**
+Extra forecast exercises throughout training reduced probability error from
+**13.9 to 8.6 percentage points** under familiar conditions, with better workflow
+reward in all three seeds. Giving the same exercises early achieved 10.8 points;
+direct-label training still did better at 4.1. The model stayed the same size.
+Unfamiliar sensors and irrelevant price changes exposed persistent failures.
+All twelve models and reproducible results are public, alongside a
+[paired benchmark with 6,144 text requests](docs/probability-benchmark.md) and an
+optional Jev runner. Live Jev results have not been collected.
+
+The previous [learned-inspection experiment](docs/learned-inspection.md) exposed
+the gap this follow-up tries to repair.
 Twelve tiny models learn to stop or buy another observation before reporting an
 answer. An initial exploration phase cut the forecast policy's lost reward by
 **63%** under familiar conditions. It almost never bought duplicate evidence,
