@@ -3,6 +3,7 @@ import argparse
 import gzip
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -29,11 +30,15 @@ def read_rows(p):
     return [json.loads(x) for x in raw.splitlines()]
 
 
-def run(source,inputs):
+def run(source,inputs,hash_seed=0):
     started=time.perf_counter()
+    # -I ignores PYTHONHASHSEED; remove inherited Python configuration instead,
+    # disable user-site packages and unsafe import paths, and pin two hash seeds.
+    env={k:v for k,v in os.environ.items() if not k.startswith('PYTHON')}
+    env['PYTHONHASHSEED']=str(hash_seed)
     try:
-        p=subprocess.run([sys.executable,'-I',str(WORKER)],input=canonical({'code':source,'inputs':inputs}),
-                         text=True,capture_output=True,timeout=3,check=True)
+        p=subprocess.run([sys.executable,'-s','-P',str(WORKER)],input=canonical({'code':source,'inputs':inputs}),
+                         text=True,capture_output=True,timeout=3,check=True,env=env)
         result=json.loads(p.stdout)
     except subprocess.TimeoutExpired:result={'results':None,'error':'Timeout'}
     except (subprocess.CalledProcessError,json.JSONDecodeError):result={'results':None,'error':'WorkerFailure'}
@@ -41,8 +46,8 @@ def run(source,inputs):
 
 
 def check(t,source,inputs,repeat=True):
-    result,seconds=run(source,inputs)
-    other,elapsed=run(source,inputs) if repeat else (result,0.)
+    result,seconds=run(source,inputs,0)
+    other,elapsed=run(source,inputs,1) if repeat else (result,0.)
     stable=canonical(result)==canonical(other)
     expected=[t.reference(*json.loads(json.dumps(args))) for args in inputs]
     records=[]
@@ -52,7 +57,9 @@ def check(t,source,inputs,repeat=True):
         records.append({'input':args,'expected':value,'observed':actual['value'],'error':actual['error'],'passed':passed})
     return {'stable':stable,'passed':all(r['passed'] for r in records),'checks':records,
             'seconds':seconds+elapsed,'process_runs':2 if repeat else 1,'test_executions':len(inputs)*(2 if repeat else 1),
-            'worker_error':result['error'],'result_sha256':sha(canonical(result))}
+            'worker_error':result['error'],'result_sha256':sha(canonical(result)),
+            'hash_seeds':[0,1] if repeat else [0],'repeat_result_sha256':sha(canonical(other)),
+            'disagreement_witness':{'first':result,'second':other} if not stable else None}
 
 
 def seed_for(t,offset):return int(sha(t.name)[:8],16)+offset
@@ -112,10 +119,11 @@ class LabelOracle:
     Cache reuse saves physical executions across strategies. The receipt records
     both logical verification work and newly executed work; neither is hidden.
     """
-    def __init__(self,rows,cache,budget,ledger):
+    def __init__(self,rows,cache,budget,ledger,allow_quarantine=False):
         self._rows={r['id']:r for r in rows};self._tasks={t.name:t for t in TASKS}
         self.cache=Path(cache);self.cache.mkdir(parents=True,exist_ok=True)
         self.budget=budget;self.ledger=Path(ledger);self.seen=set()
+        self.allow_quarantine=allow_quarantine
 
     def query(self,ids,reason):
         if len(ids)!=len(set(ids)) or any(i in self.seen for i in ids):raise ValueError('Repeated acquisition')
@@ -133,12 +141,14 @@ class LabelOracle:
                 if cached:result=json.loads(path.read_text())
                 else:
                     result=check(t,row['code'],inputs);write_json(path,result)
-                if not result['stable'] or result['worker_error']:raise ValueError('Private verification was unstable or invalid')
+                valid=result['stable'] and not result['worker_error']
+                if not valid and not self.allow_quarantine:raise ValueError('Private verification was unstable or invalid')
+                label=int(result['passed']) if valid else None
                 log.write(canonical({'id':identifier,'query':len(self.seen)+1,'reason':reason,
-                    'passed':result['passed'],'receipt_sha256':file_sha(path),'cache_key':key,
+                    'passed':label,'status':'valid' if valid else 'quarantined','receipt_sha256':file_sha(path),'cache_key':key,
                     'cache_hit':cached,'logical_test_executions':result['test_executions'],
                     'standalone_measured_seconds':result['seconds'],'new_execution_seconds':0. if cached else result['seconds']})+'\n')
-                labels.append(int(result['passed']));self.seen.add(identifier)
+                labels.append(label);self.seen.add(identifier)
         return labels
 
 

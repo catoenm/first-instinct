@@ -70,9 +70,12 @@ def evaluate_run(root,device='mps'):
     write_rows(out/'cases.jsonl.gz',all_rows)
     encode(all_rows,out/'features.npz',device)
     x=load(out/'features.npz',all_rows)-np.load(root/'feature_mean.npy')
-    oracle=LabelOracle(all_rows,root/'verifications',len(all_rows),out/'acquisitions.jsonl')
-    y=np.array(oracle.query([r['id'] for r in all_rows],'sealed_final_evaluation'))
-    write_rows(out/'answers.jsonl.gz',[{'id':r['id'],'passed':int(v)} for r,v in zip(all_rows,y)])
+    oracle=LabelOracle(all_rows,root/'verifications',len(all_rows),out/'acquisitions.jsonl',allow_quarantine=True)
+    labels=oracle.query([r['id'] for r in all_rows],'sealed_final_evaluation')
+    y=np.array([float(v) if v is not None else np.nan for v in labels])
+    write_rows(out/'answers.jsonl.gz',[{'id':r['id'],'passed':v} for r,v in zip(all_rows,labels)])
+    write_json(out/'quarantine.json',{'ids':[r['id'] for r,v in zip(all_rows,labels) if v is None],
+               'rule':'Unstable or invalid private executions remain in receipts and query costs but have no metric label.'})
     results=[];predictions=[]
     for m in seal['models']:
         name=f"{m['recipe']}-s{m['collection_seed']}";weights=np.load(root/name/'round-5.npz')
@@ -82,16 +85,18 @@ def evaluate_run(root,device='mps'):
         for reference,q in outputs.items():
             predictions.extend({'model':name,'reference':reference,'id':r['id'],'probabilities':p.tolist()} for r,p in zip(all_rows,q))
             for domain in ('new_task','new_family','new_transformation'):
-                ids=[i for i,r in enumerate(all_rows) if r['domain']==domain]
+                ids=[i for i,r in enumerate(all_rows) if r['domain']==domain and labels[i] is not None]
                 row={'model':name,'recipe':m['recipe'],'collection_seed':m['collection_seed'],
                      'reference':reference,'domain':domain,**summarize_predictions([all_rows[i] for i in ids],y[ids],q[ids])}
                 results.append(row)
                 if reference=='text':print(f'{name}/{domain}: Brier {row["initial"]["brier"]:.5f}; copy {row["copy_change"]:.4f}',flush=True)
     write_json(out/'results.json',results);write_rows(out/'predictions.jsonl.gz',predictions)
-    weak=[all(c['passed'] for c in r['visible_checks'][:2]) for r in all_rows]
+    valid=[(r,v) for r,v in zip(all_rows,labels) if v is not None]
+    weak=[all(c['passed'] for c in r['visible_checks'][:2]) for r,v in valid]
     write_json(out/'data-quality.json',{'candidates':len(all_rows),'tasks':len({r['task'] for r in all_rows}),
-        'initial_checks_all_pass':sum(weak),'initial_checks_pass_private_suite_fails':int(sum(w and not v for w,v in zip(weak,y))),
-        'private_suite_passes':int(y.sum()),'no_human_review':True,
+        'scored_candidates':len(valid),'quarantined_private_candidates':len(all_rows)-len(valid),
+        'initial_checks_all_pass':sum(weak),'initial_checks_pass_private_suite_fails':int(sum(w and not v for w,(_,v) in zip(weak,valid))),
+        'private_suite_passes':int(sum(v for r,v in valid)),'no_human_review':True,
         'meaning':'Verdicts refer to a fixed 32-test suite, not universal correctness.'})
     return results
 

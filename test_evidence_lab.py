@@ -104,6 +104,21 @@ class EvidenceLabTests(unittest.TestCase):
             self.assertTrue(record['cache_hit']);self.assertEqual(record['logical_test_executions'],64)
             self.assertEqual(record['new_execution_seconds'],0)
 
+    def test_hash_randomness_is_repeatable_and_invalid_labels_are_quarantined(self):
+        t=next(t for t in TASKS if t.name=='merge_max')
+        source='def solve(a, b):\n return list(set(a) | set(b))\n'
+        inputs=[[{'a':1,'b':2,'c':3,'d':4,'e':5},{}]]
+        a=check(t,source,inputs);b=check(t,source,inputs)
+        self.assertFalse(a['stable']);self.assertIsNotNone(a['disagreement_witness'])
+        for key in ('checks','stable','result_sha256','repeat_result_sha256','disagreement_witness'):
+            self.assertEqual(a[key],b[key])
+        row={'id':'unstable','task':t.name,'code':source}
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);oracle=LabelOracle([row],root/'cache',1,root/'ledger',allow_quarantine=True)
+            self.assertEqual(oracle.query(['unstable'],'test'),[None])
+            receipt=read_rows(root/'ledger')[0]
+            self.assertEqual(receipt['status'],'quarantined');self.assertEqual(receipt['logical_test_executions'],64)
+
     def test_acquisition_is_without_replacement_and_has_no_verifier_access(self):
         rows=[{'id':str(i),'task':str(i//20),'mechanism':str(i%3)} for i in range(100)]
         chosen=initial_selection(rows,11)

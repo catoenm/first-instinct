@@ -128,3 +128,24 @@ Freeze source and protocol before the three-seed final comparison. Retain the
 cache, receipts, request text, embeddings, every collection-round head and complete
 selection logs for reconstruction. Full-encoder fine-tuning, reinforcement learning,
 real-repository transfer, and a human audit are follow-ups, not completed claims.
+
+## Verifier amendment after the first final attempt
+
+The first final attempt, frozen at `0e9115e`, stopped during evaluation before
+producing any aggregate final metrics. A composed `merge_max` mutation raised
+different exception types across processes because set iteration order differed.
+Its 113 completed evaluation labels and the disagreement receipt are retained;
+the failed attempt does not contribute final results.
+
+The correction pins the first execution's Python hash seed to 0 and the second
+to 1, and retains both outputs whenever they disagree. This makes the two-run
+stability audit reproducible rather than relying on process-randomized hash seeds.
+Private evaluation disagreements are quarantined, counted in costs and retained
+without a metric label. Training and validation still fail the run if a requested
+private label is unstable; no silent replacement is allowed.
+
+Regenerate pools and repeat the same nine collectors with the same seeds,
+budgets, learner and last-round rule. Freeze this correction before restarting.
+The fixed test definitions are reused; this is a disclosed verifier repair,
+not an untouched second holdout or a new hyperparameter search. No aggregate
+final model results had been computed or inspected when the repair was chosen.

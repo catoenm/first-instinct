@@ -14,6 +14,8 @@ def summarize(root):
     root=Path(root);evaluation=root/'evaluation'
     results=json.loads((evaluation/'results.json').read_text());rows=read_rows(evaluation/'cases.jsonl.gz')
     outcomes={r['id']:r['passed'] for r in read_rows(evaluation/'answers.jsonl.gz')}
+    unscored=[r['id'] for r in rows if outcomes[r['id']] is None]
+    rows=[r for r in rows if outcomes[r['id']] is not None]
     cache={r['id']:r['cache_key'] for r in read_rows(evaluation/'acquisitions.jsonl')}
     summary=[]
     for domain in ('new_task','new_family','new_transformation'):
@@ -60,12 +62,14 @@ def summarize(root):
     per_task=[];by_id={r['id']:r for r in rows};predictions=read_rows(evaluation/'predictions.jsonl.gz')
     grouped={}
     for p in predictions:
+        if p['id'] not in by_id:continue
         row=by_id[p['id']];key=(p['model'],p['reference'],row['domain'],row['task'])
         grouped.setdefault(key,[]).append((p['probabilities'][0]-outcomes[p['id']])**2)
     for (model,reference,domain,task),errors in sorted(grouped.items()):
         per_task.append({'model':model,'reference':reference,'domain':domain,'task':task,'cases':len(errors),
                          'initial_brier':float(np.mean(errors))})
     return {'summary':summary,'data_quality':quality,'collection':collection,'counterexamples':counterexamples,
+            'private_quarantine_ids':unscored,
             'task_metrics':per_task,'exact_training_final_code_overlaps':overlaps,
             'train_candidates_by_task':dict(sorted(Counter(r['task'] for r in train).items())),
             'notes':['Candidate-weighted scores; related candidates share a task.',

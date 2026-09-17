@@ -60,13 +60,12 @@ def verify(root,reexecute=True):
         equal({r['id'] for r in candidates}|{r['id'] for r in rejects},set(record_by_id),'Dropped proposal')
         for row in candidates+rejects:
             for key,value in expected_proposals[row['id']].items():equal(row[key],value,'Candidate lineage differs')
-            if row in rejects:continue
-            t=tasks[row['task']];saved=record_by_id[row['id']]
-            equal(row['visible_checks'],saved['checks'],'Visible evidence differs from receipt')
+            t=tasks[row['id'].split('-')[0]];saved=record_by_id[row['id']]
+            if row not in rejects:equal(row['visible_checks'],saved['checks'],'Visible evidence differs from receipt')
             equal([c['input'] for c in saved['checks']],visible_inputs(t),'Visible input stream changed')
             if reexecute:
                 again=check(t,row['code'],visible_inputs(t));executions+=again['test_executions']
-                for key in ('checks','stable','passed','worker_error','result_sha256'):
+                for key in ('checks','stable','passed','worker_error','result_sha256','repeat_result_sha256','disagreement_witness'):
                     equal(again[key],saved[key],'Visible execution differs: '+row['id'])
         requests=[{'id':r['id']+'-'+v,'case_id':r['id'],'view':v,'state':render(r,v)} for r in candidates for v in VIEWS]
         equal(requests,read_rows(pool/'requests.jsonl.gz'),'Published request text differs')
@@ -93,16 +92,17 @@ def verify(root,reexecute=True):
                               'verifier':file_sha(Path(__file__).with_name('data.py'))}))
             equal(key,record['cache_key'],'Private cache lineage mismatch')
             path=root/'verifications'/(key+'.json');equal(file_sha(path),record['receipt_sha256'],'Private receipt changed')
-            saved=json.loads(path.read_text());equal(saved['passed'],record['passed'],'Acquired label differs')
+            saved=json.loads(path.read_text());valid=saved['stable'] and not saved['worker_error']
+            equal(int(saved['passed']) if valid else None,record['passed'],'Acquired label differs')
             equal(record['logical_test_executions'],64,'Unequal private test cost');logical+=64
             equal([r['input'] for r in saved['checks']],private_inputs(t),'Private suite differs')
             equal(record['standalone_measured_seconds'],saved['seconds'],'Standalone time differs')
             equal(record['new_execution_seconds'],0. if record['cache_hit'] else saved['seconds'],'Cache work differs')
-            physical_queries+=not record['cache_hit'];outcomes[row['id']]=int(record['passed'])
+            physical_queries+=not record['cache_hit'];outcomes[row['id']]=record['passed']
             if key not in verified:
                 if reexecute:
                     again=check(t,row['code'],private_inputs(t));executions+=again['test_executions']
-                    for k in ('checks','stable','passed','worker_error','result_sha256'):
+                    for k in ('checks','stable','passed','worker_error','result_sha256','repeat_result_sha256','disagreement_witness'):
                         equal(again[k],saved[k],'Private execution differs: '+row['id'])
                 verified[key]=True
     development=read_rows(root/'development-pool'/'cases.jsonl.gz')
@@ -133,8 +133,8 @@ def verify(root,reexecute=True):
     if not run['pilot']:
         final=read_rows(root/'evaluation'/'cases.jsonl.gz')
         final_x=load(root/'evaluation'/'features.npz',final)-mean
-        y=np.array([outcomes[r['id']] for r in final]);results=[];predictions=[]
-        equal([{'id':r['id'],'passed':int(v)} for r,v in zip(final,y)],read_rows(root/'evaluation'/'answers.jsonl.gz'),'Answer file differs')
+        y=np.array([float(outcomes[r['id']]) if outcomes[r['id']] is not None else np.nan for r in final]);results=[];predictions=[]
+        equal([{'id':r['id'],'passed':outcomes[r['id']]} for r in final],read_rows(root/'evaluation'/'answers.jsonl.gz'),'Answer file differs')
         for m in seal['models']:
             name=f"{m['recipe']}-s{m['collection_seed']}";z=np.load(root/name/'round-5.npz',allow_pickle=False)
             outputs={'text':predict(final_x,(z['weight'],z['bias'])),
@@ -143,7 +143,7 @@ def verify(root,reexecute=True):
             for reference,q in outputs.items():
                 predictions.extend({'model':name,'reference':reference,'id':r['id'],'probabilities':p.tolist()} for r,p in zip(final,q))
                 for domain in ('new_task','new_family','new_transformation'):
-                    ix=[i for i,r in enumerate(final) if r['domain']==domain]
+                    ix=[i for i,r in enumerate(final) if r['domain']==domain and outcomes[r['id']] is not None]
                     results.append({'model':name,'recipe':m['recipe'],'collection_seed':m['collection_seed'],
                         'reference':reference,'domain':domain,**summarize_predictions([final[i] for i in ix],y[ix],q[ix])})
         maximum_metric_difference=max(compare(results,json.loads((root/'evaluation'/'results.json').read_text())),
