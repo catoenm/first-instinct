@@ -1,0 +1,11 @@
+{
+  "candidates": 211,
+  "initial_checks_all_pass": 59,
+  "initial_checks_pass_private_suite_fails": 31,
+  "meaning": "Verdicts refer to a fixed 32-test suite, not universal correctness.",
+  "no_human_review": true,
+  "private_suite_passes": 30,
+  "quarantined_private_candidates": 2,
+  "scored_candidates": 209,
+  "tasks": 9
+}

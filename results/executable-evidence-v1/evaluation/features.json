@@ -1,0 +1,16 @@
+{
+  "contexts": 844,
+  "device": "mps",
+  "dtype": "float32",
+  "feature_function": "attention-mask mean pooling then layer normalization",
+  "features_sha256": "cabc1851e842e84494887783293f28175b37c2eb63a9759a4295ccc432cc44bf",
+  "frozen": true,
+  "maximum_tokens": 463,
+  "median_tokens": 204.0,
+  "model_id": "microsoft/deberta-v3-small",
+  "parameters": 141304320,
+  "revision": "a36c739020e01763fe789b4b85e2df55d6180012",
+  "seconds": 5.647932958003366,
+  "text_sha256": "cb2ad312068bff7d2fdf87f67cba1031cb244cbd93976b7da82ea873f5fdd3e0",
+  "torch": "2.14.0"
+}

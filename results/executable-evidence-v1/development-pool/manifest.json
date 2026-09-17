@@ -1,0 +1,32 @@
+{
+  "candidate_cases": 264,
+  "files": {
+    "cases.jsonl.gz": "c80d799dd9118b859aecaea528d5f28c8940df68d55b2ff710e01c85e55c558d",
+    "rejected.jsonl.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "requests.jsonl.gz": "ee09878b6c7070f264bb53e86e6ee5b08adff2d444e7bf4057399404dc443696",
+    "visible-receipts.jsonl.gz": "8023cb136a7850526f0cee7028ac34ebad0954e29aca7bbcf0222978e0b342b7"
+  },
+  "held_out_transformations": false,
+  "proposals": 264,
+  "rejected": 0,
+  "requests": 1056,
+  "tasks": [
+    "chunks",
+    "clamp",
+    "clean_spaces",
+    "count_above",
+    "count_positive",
+    "count_values",
+    "count_vowels",
+    "invert_unique",
+    "longest_word",
+    "max_default",
+    "rotate_left",
+    "second_distinct",
+    "sum_even",
+    "total_values",
+    "unique_order"
+  ],
+  "visible_seconds": 18.06120032392937,
+  "visible_test_executions": 2640
+}

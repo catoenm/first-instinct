@@ -19,6 +19,12 @@ accomplish, so I built an inspectable experiment on my Mac.
 I have not reverse-engineered Jev. What I can show is a small working laboratory
 that separates choosing a good action from estimating how likely an event is.
 
+The later [executable-evidence study](executable-evidence.md) explores the data
+question with authored Python programs. It compares label-collection strategies
+at equal verification budgets and exposes both incomplete test suites and
+forecast changes after copied evidence. That follow-up uses direct labels as
+a reference before adding another reinforcement-learning environment.
+
 ## The 80% example
 
 Suppose an event happens 80% of the time, and the model has no additional

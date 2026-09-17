@@ -1,0 +1,421 @@
+{
+  "checks": [
+    {
+      "error": null,
+      "expected": -1,
+      "input": [
+        {
+          "a": 2,
+          "b": -3
+        }
+      ],
+      "observed": -1,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -6,
+      "input": [
+        {
+          "a": 1,
+          "b": 6,
+          "c": -6,
+          "d": -7
+        }
+      ],
+      "observed": -6,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 2,
+      "input": [
+        {
+          "b": 2
+        }
+      ],
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 9,
+      "input": [
+        {
+          "c": 2,
+          "e": 7
+        }
+      ],
+      "observed": 9,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -3,
+      "input": [
+        {
+          "b": -5,
+          "d": 2
+        }
+      ],
+      "observed": -3,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 3,
+      "input": [
+        {
+          "c": 3
+        }
+      ],
+      "observed": 3,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 7,
+      "input": [
+        {
+          "b": 5,
+          "c": 2
+        }
+      ],
+      "observed": 7,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -5,
+      "input": [
+        {
+          "e": -5
+        }
+      ],
+      "observed": -5,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 1,
+      "input": [
+        {
+          "a": -3,
+          "b": -4,
+          "d": 6,
+          "e": 2
+        }
+      ],
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -4,
+      "input": [
+        {
+          "b": -4
+        }
+      ],
+      "observed": -4,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -8,
+      "input": [
+        {
+          "b": 2,
+          "c": -3,
+          "d": -7
+        }
+      ],
+      "observed": -8,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 5,
+      "input": [
+        {
+          "a": 4,
+          "b": 1,
+          "c": -1,
+          "d": 5,
+          "e": -4
+        }
+      ],
+      "observed": 5,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 0,
+      "input": [
+        {
+          "c": -4,
+          "d": 4
+        }
+      ],
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 20,
+      "input": [
+        {
+          "a": 6,
+          "b": 8,
+          "d": 4,
+          "e": 2
+        }
+      ],
+      "observed": 20,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -2,
+      "input": [
+        {
+          "b": -3,
+          "d": 1
+        }
+      ],
+      "observed": -2,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 0,
+      "input": [
+        {
+          "a": -6,
+          "b": -2,
+          "d": 8,
+          "e": 0
+        }
+      ],
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 1,
+      "input": [
+        {
+          "b": -1,
+          "c": 0,
+          "d": 2
+        }
+      ],
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -2,
+      "input": [
+        {
+          "a": 5,
+          "c": -7
+        }
+      ],
+      "observed": -2,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -4,
+      "input": [
+        {
+          "a": -4
+        }
+      ],
+      "observed": -4,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 6,
+      "input": [
+        {
+          "d": 6
+        }
+      ],
+      "observed": 6,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -5,
+      "input": [
+        {
+          "a": -5
+        }
+      ],
+      "observed": -5,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -12,
+      "input": [
+        {
+          "b": -7,
+          "d": -5
+        }
+      ],
+      "observed": -12,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 7,
+      "input": [
+        {
+          "b": -1,
+          "e": 8
+        }
+      ],
+      "observed": 7,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -9,
+      "input": [
+        {
+          "a": -7,
+          "b": -2,
+          "c": -1,
+          "d": -5,
+          "e": 6
+        }
+      ],
+      "observed": -9,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -9,
+      "input": [
+        {
+          "b": -6,
+          "c": -5,
+          "d": -1,
+          "e": 3
+        }
+      ],
+      "observed": -9,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -13,
+      "input": [
+        {
+          "a": -4,
+          "b": -6,
+          "c": -3
+        }
+      ],
+      "observed": -13,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 8,
+      "input": [
+        {
+          "d": 0,
+          "e": 8
+        }
+      ],
+      "observed": 8,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -12,
+      "input": [
+        {
+          "a": -4,
+          "b": 3,
+          "c": -3,
+          "d": -7,
+          "e": -1
+        }
+      ],
+      "observed": -12,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -8,
+      "input": [
+        {
+          "a": -5,
+          "b": -3,
+          "c": 5,
+          "d": -8,
+          "e": 3
+        }
+      ],
+      "observed": -8,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 1,
+      "input": [
+        {
+          "b": 5,
+          "e": -4
+        }
+      ],
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": 6,
+      "input": [
+        {
+          "a": 5,
+          "b": -1,
+          "c": -2,
+          "d": -4,
+          "e": 8
+        }
+      ],
+      "observed": 6,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": -3,
+      "input": [
+        {
+          "e": -3
+        }
+      ],
+      "observed": -3,
+      "passed": true
+    }
+  ],
+  "disagreement_witness": null,
+  "hash_seeds": [
+    0,
+    1
+  ],
+  "passed": true,
+  "process_runs": 2,
+  "repeat_result_sha256": "8f41bbef56ac77a76cbbab90ac3ceee92e0f8d83360ad8befc3001d6595d832d",
+  "result_sha256": "8f41bbef56ac77a76cbbab90ac3ceee92e0f8d83360ad8befc3001d6595d832d",
+  "seconds": 0.07976395899459021,
+  "stable": true,
+  "test_executions": 64,
+  "worker_error": null
+}

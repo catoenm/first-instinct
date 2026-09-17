@@ -1,0 +1,6296 @@
+{
+  "collection": [
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 8.046988041016448,
+      "private_passes": 18,
+      "queries": 100,
+      "recipe": "random",
+      "seed": 11,
+      "standalone_verification_seconds": 8.046988041016448
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 3.4436943709733896,
+      "private_passes": 26,
+      "queries": 100,
+      "recipe": "coverage",
+      "seed": 11,
+      "standalone_verification_seconds": 8.035778619014309
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 1.834722500956559,
+      "private_passes": 29,
+      "queries": 100,
+      "recipe": "adaptive",
+      "seed": 11,
+      "standalone_verification_seconds": 8.020472834978136
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 1.1267145849997178,
+      "private_passes": 15,
+      "queries": 100,
+      "recipe": "random",
+      "seed": 23,
+      "standalone_verification_seconds": 8.032787542957522
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 0.15952850098983617,
+      "private_passes": 27,
+      "queries": 100,
+      "recipe": "coverage",
+      "seed": 23,
+      "standalone_verification_seconds": 8.041661122981168
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 0.0,
+      "private_passes": 29,
+      "queries": 100,
+      "recipe": "adaptive",
+      "seed": 23,
+      "standalone_verification_seconds": 7.974187917934614
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 0.3233203749987297,
+      "private_passes": 14,
+      "queries": 100,
+      "recipe": "random",
+      "seed": 37,
+      "standalone_verification_seconds": 8.002273333004268
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 0.0,
+      "private_passes": 26,
+      "queries": 100,
+      "recipe": "coverage",
+      "seed": 37,
+      "standalone_verification_seconds": 8.048766000982141
+    },
+    {
+      "logical_tests": 6400,
+      "new_execution_seconds": 0.0,
+      "private_passes": 33,
+      "queries": 100,
+      "recipe": "adaptive",
+      "seed": 37,
+      "standalone_verification_seconds": 8.01076812796964
+    }
+  ],
+  "counterexamples": [
+    {
+      "code": "def solve(xs):\n    values = sorted(xs, reverse=True)\n    return values[(sum(values) - 2) // 2]\n",
+      "contract": "Input has positive odd length. Return its middle value after sorting.",
+      "domain": "new_task",
+      "first_private_failure": {
+        "error": "IndexError",
+        "expected": 4,
+        "input": [
+          [
+            9,
+            1,
+            4
+          ]
+        ],
+        "observed": null,
+        "passed": false
+      },
+      "id": "median_odd-ebb243e1f384e491",
+      "private_failure_count": 25,
+      "task": "median_odd",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": 0,
+          "input": [
+            [
+              0,
+              1,
+              -2
+            ]
+          ],
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": 3,
+          "input": [
+            [
+              3,
+              -3,
+              -2,
+              5,
+              4
+            ]
+          ],
+          "observed": 3,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s, needle):\n    s = s.lower()\n    needle = needle.lower()\n    for i in range(len(s) - len(needle) + 1):\n        if s[i:i + len(needle)] == needle:\n            return i\n    return -0\n",
+      "contract": "Return the index of the first case-insensitive occurrence of needle in s, or -1 if absent. ASCII strings only.",
+      "domain": "new_task",
+      "first_private_failure": {
+        "error": null,
+        "expected": -1,
+        "input": [
+          "abc",
+          "z"
+        ],
+        "observed": 0,
+        "passed": false
+      },
+      "id": "first_index-e59211f3424cddae",
+      "private_failure_count": 13,
+      "task": "first_index",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": 0,
+          "input": [
+            "U",
+            "U"
+          ],
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": 0,
+          "input": [
+            "",
+            ""
+          ],
+          "observed": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(1, len(xs)):\n        if not xs[i] <= xs[i - 2]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-151156a63f73d06d",
+      "private_failure_count": 2,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(2, len(xs)):\n        if xs[i] <= xs[i - 0]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-bd3d044df9d1eecd",
+      "private_failure_count": 2,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(3, len(xs)):\n        if xs[i] <= xs[i - 1]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-1c6c8a3eeb5a0d7b",
+      "private_failure_count": 6,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(1, len(xs)):\n        if xs[i] <= xs[i - 3]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            -4,
+            1,
+            4
+          ]
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "strict_sorted-f533d8379cdf6649",
+      "private_failure_count": 1,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    return all((a < b for a, b in zip(xs, xs[2:])))\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-a6143e453c6f66c7",
+      "private_failure_count": 1,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(2, len(xs)):\n        if not xs[i] <= xs[i - 1]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-fa867491fb635d85",
+      "private_failure_count": 6,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(2, len(xs)):\n        if xs[i] <= xs[i + 1]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-6b3f35344ea517ed",
+      "private_failure_count": 7,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return all((s[i] != s[len(s) - i - 1] for i in range(len(s) // 1)))\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          "aba"
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "palindrome-cb9794197ea41c96",
+      "private_failure_count": 15,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return all((s[i] == s[len(s) + i - 2] for i in range(len(s) // 2)))\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          "aba"
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "palindrome-1c9beb3aa783b9e5",
+      "private_failure_count": 11,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return s == s[::-2]\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          "aba"
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "palindrome-ed9a11b40f387333",
+      "private_failure_count": 8,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, required):\n    return any((x in xs for x in required))\n",
+      "contract": "Return True exactly when every distinct required integer occurs in xs. Multiplicity does not matter.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            5,
+            2,
+            1,
+            -4
+          ],
+          [
+            -2,
+            -3,
+            3,
+            5
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "contains_all-4450c4477149bb4a",
+      "private_failure_count": 17,
+      "task": "contains_all",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              -5,
+              4,
+              -4,
+              3
+            ],
+            [
+              -4
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, low, high):\n    for x in xs:\n        if not (x < low or x > high):\n            return False\n    return True\n",
+      "contract": "Return True exactly when every integer is in the inclusive interval [low, high]. Empty input satisfies this.",
+      "domain": "new_family",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            0,
+            2
+          ],
+          0,
+          2
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "all_in_range-6cfaa396d64f0bad",
+      "private_failure_count": 18,
+      "task": "all_in_range",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [],
+            1,
+            5
+          ],
+          "observed": true,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              -4,
+              4
+            ],
+            -5,
+            1
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    return all((a <= b for a, b in zip(xs, xs[1:])))\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-970be10eb40a35ed",
+      "private_failure_count": 1,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    return all((a < b for a, b in zip(xs, xs[1:][1:])))\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-62ced53f035baab9",
+      "private_failure_count": 1,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(1, len(xs[1:])):\n        if xs[i] <= xs[i - 1]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-f308f3c03e47b21e",
+      "private_failure_count": 1,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs):\n    for i in range(1, len(xs)):\n        if xs[i] < xs[i - 1]:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every adjacent pair is strictly increasing. Empty and singleton lists satisfy this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "strict_sorted-3a9178d22647eb09",
+      "private_failure_count": 1,
+      "task": "strict_sorted",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              0,
+              5,
+              5,
+              5,
+              5,
+              -5,
+              -1,
+              3
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              0,
+              2
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return s == s[1:][::-1]\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          "aba"
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "palindrome-7d66880476fb841f",
+      "private_failure_count": 10,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return all((s[i] == s[len(s[1:]) - i - 1] for i in range(len(s) // 2)))\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          "aba"
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "palindrome-dac63bf04a2dc512",
+      "private_failure_count": 10,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return s[1:] == s[::-1]\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          "aba"
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "palindrome-f21c1d2c0042f43e",
+      "private_failure_count": 10,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return all((s[1:][i] == s[len(s) - i - 1] for i in range(len(s) // 2)))\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          "aba"
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "palindrome-5300d2271aa081ed",
+      "private_failure_count": 10,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(s):\n    return all((s[i] == s[len(s) - i - 1] for i in range(len(s[1:]) // 2)))\n",
+      "contract": "Return True exactly when s equals its reverse, case sensitive and including punctuation.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          "Aa"
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "palindrome-338d2d7c2facc89b",
+      "private_failure_count": 3,
+      "task": "palindrome",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            "Ue IIxbCaUo\nxoeUU"
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            " ea"
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, required):\n    return set(required).issubset(set(xs[1:]))\n",
+      "contract": "Return True exactly when every distinct required integer occurs in xs. Multiplicity does not matter.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "contains_all-3f2987d795ec8bee",
+      "private_failure_count": 1,
+      "task": "contains_all",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              -5,
+              4,
+              -4,
+              3
+            ],
+            [
+              -4
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, required):\n    return all((x in xs[1:] for x in required))\n",
+      "contract": "Return True exactly when every distinct required integer occurs in xs. Multiplicity does not matter.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "contains_all-ed9781a0ef3618aa",
+      "private_failure_count": 1,
+      "task": "contains_all",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "observed": false,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [
+              -5,
+              4,
+              -4,
+              3
+            ],
+            [
+              -4
+            ]
+          ],
+          "observed": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, low, high):\n    for x in xs:\n        if x <= low or x > high:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every integer is in the inclusive interval [low, high]. Empty input satisfies this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            0,
+            2
+          ],
+          0,
+          2
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "all_in_range-f6c24c4f6cebe2fe",
+      "private_failure_count": 4,
+      "task": "all_in_range",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [],
+            1,
+            5
+          ],
+          "observed": true,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              -4,
+              4
+            ],
+            -5,
+            1
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, low, high):\n    return all((low < x <= high for x in xs))\n",
+      "contract": "Return True exactly when every integer is in the inclusive interval [low, high]. Empty input satisfies this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            0,
+            2
+          ],
+          0,
+          2
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "all_in_range-3830b383dccdc7a8",
+      "private_failure_count": 4,
+      "task": "all_in_range",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [],
+            1,
+            5
+          ],
+          "observed": true,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              -4,
+              4
+            ],
+            -5,
+            1
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, low, high):\n    return all((low <= x <= high for x in xs[1:]))\n",
+      "contract": "Return True exactly when every integer is in the inclusive interval [low, high]. Empty input satisfies this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            3
+          ],
+          0,
+          2
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "all_in_range-2578b65c6f3a783a",
+      "private_failure_count": 5,
+      "task": "all_in_range",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [],
+            1,
+            5
+          ],
+          "observed": true,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              -4,
+              4
+            ],
+            -5,
+            1
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, low, high):\n    for x in xs:\n        if x < low or x >= high:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every integer is in the inclusive interval [low, high]. Empty input satisfies this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            0,
+            2
+          ],
+          0,
+          2
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "all_in_range-63b3c1322eec136f",
+      "private_failure_count": 3,
+      "task": "all_in_range",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [],
+            1,
+            5
+          ],
+          "observed": true,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              -4,
+              4
+            ],
+            -5,
+            1
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, low, high):\n    return all((low <= x < high for x in xs))\n",
+      "contract": "Return True exactly when every integer is in the inclusive interval [low, high]. Empty input satisfies this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": true,
+        "input": [
+          [
+            0,
+            2
+          ],
+          0,
+          2
+        ],
+        "observed": false,
+        "passed": false
+      },
+      "id": "all_in_range-8338a689e6f359f0",
+      "private_failure_count": 3,
+      "task": "all_in_range",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [],
+            1,
+            5
+          ],
+          "observed": true,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              -4,
+              4
+            ],
+            -5,
+            1
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "code": "def solve(xs, low, high):\n    for x in xs[1:]:\n        if x < low or x > high:\n            return False\n    return True\n",
+      "contract": "Return True exactly when every integer is in the inclusive interval [low, high]. Empty input satisfies this.",
+      "domain": "new_transformation",
+      "first_private_failure": {
+        "error": null,
+        "expected": false,
+        "input": [
+          [
+            3
+          ],
+          0,
+          2
+        ],
+        "observed": true,
+        "passed": false
+      },
+      "id": "all_in_range-29aadc3484058bb2",
+      "private_failure_count": 5,
+      "task": "all_in_range",
+      "visible_checks": [
+        {
+          "error": null,
+          "expected": true,
+          "input": [
+            [],
+            1,
+            5
+          ],
+          "observed": true,
+          "passed": true
+        },
+        {
+          "error": null,
+          "expected": false,
+          "input": [
+            [
+              -4,
+              4
+            ],
+            -5,
+            1
+          ],
+          "observed": false,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "data_quality": [
+    {
+      "candidates": 113,
+      "domain": "new_task",
+      "initial_checks_all_pass": 17,
+      "initial_fail_private_pass": 1,
+      "initial_pass_private_fail": 2,
+      "mutation_proposals": 103,
+      "mutations_passing_private_suite": 6,
+      "private_suite_passes": 16,
+      "tasks": 5,
+      "visible_exception_candidates": 45
+    },
+    {
+      "candidates": 61,
+      "domain": "new_family",
+      "initial_checks_all_pass": 24,
+      "initial_fail_private_pass": 0,
+      "initial_pass_private_fail": 12,
+      "mutation_proposals": 53,
+      "mutations_passing_private_suite": 4,
+      "private_suite_passes": 12,
+      "tasks": 4,
+      "visible_exception_candidates": 16
+    },
+    {
+      "candidates": 35,
+      "domain": "new_transformation",
+      "initial_checks_all_pass": 18,
+      "initial_fail_private_pass": 1,
+      "initial_pass_private_fail": 17,
+      "mutation_proposals": 35,
+      "mutations_passing_private_suite": 2,
+      "private_suite_passes": 2,
+      "tasks": 9,
+      "visible_exception_candidates": 5
+    }
+  ],
+  "exact_training_final_code_overlaps": [],
+  "notes": [
+    "Candidate-weighted scores; related candidates share a task.",
+    "Pass rates describe this synthetic proposal population, not production software.",
+    "No human audit, Jev calls, encoder fine-tuning or reinforcement learning in this pilot."
+  ],
+  "private_quarantine_ids": [
+    "merge_max-04dc48024682fd8f",
+    "merge_max-3f63592982385eb8"
+  ],
+  "summary": [
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.10522158777079545,
+      "domain": "new_task",
+      "initial_brier_mean": 0.11346023469436532,
+      "initial_brier_seeds": [
+        0.10987551232262949,
+        0.10765489561032121,
+        0.12285029615014527
+      ],
+      "new_check_brier_mean": 0.1145682092984646,
+      "price_change_mean": 0.0032661580771302296,
+      "recipe": "random",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.10259860154798466,
+      "domain": "new_task",
+      "initial_brier_mean": 0.10482859407041199,
+      "initial_brier_seeds": [
+        0.10813885222321581,
+        0.1040438921289444,
+        0.10230303785907575
+      ],
+      "new_check_brier_mean": 0.0949832353334103,
+      "price_change_mean": 0.003302737492893649,
+      "recipe": "coverage",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.08928663176021641,
+      "domain": "new_task",
+      "initial_brier_mean": 0.1080195434682667,
+      "initial_brier_seeds": [
+        0.10316574941087092,
+        0.10832566632176133,
+        0.11256721467216788
+      ],
+      "new_check_brier_mean": 0.09799661641039953,
+      "price_change_mean": 0.0038794061113050387,
+      "recipe": "adaptive",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_task",
+      "initial_brier_mean": 0.078368627880517,
+      "initial_brier_seeds": [
+        0.0701350499717476,
+        0.08247583039202885,
+        0.08249500327777456
+      ],
+      "new_check_brier_mean": 0.07753550021306915,
+      "price_change_mean": 0.0,
+      "recipe": "random",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_task",
+      "initial_brier_mean": 0.06475414822638827,
+      "initial_brier_seeds": [
+        0.06521843926997757,
+        0.06432855099248089,
+        0.06471545441670631
+      ],
+      "new_check_brier_mean": 0.06298170111156035,
+      "price_change_mean": 0.0,
+      "recipe": "coverage",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_task",
+      "initial_brier_mean": 0.06934953066086719,
+      "initial_brier_seeds": [
+        0.06992661656606504,
+        0.06998643680473247,
+        0.06813553861180405
+      ],
+      "new_check_brier_mean": 0.06789033106128221,
+      "price_change_mean": 0.0,
+      "recipe": "adaptive",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_task",
+      "initial_brier_mean": 0.12229752795328325,
+      "initial_brier_seeds": [
+        0.12354080969538606,
+        0.12177753280732734,
+        0.12157424135713635
+      ],
+      "new_check_brier_mean": 0.12229752795328325,
+      "price_change_mean": 0.0,
+      "recipe": "random",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_task",
+      "initial_brier_mean": 0.13753786551349098,
+      "initial_brier_seeds": [
+        0.1367011666717702,
+        0.13921126319693244,
+        0.1367011666717702
+      ],
+      "new_check_brier_mean": 0.13753786551349098,
+      "price_change_mean": 0.0,
+      "recipe": "coverage",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_task",
+      "initial_brier_mean": 0.14930835542036816,
+      "initial_brier_seeds": [
+        0.14480815751599962,
+        0.14480815751599962,
+        0.1583087512291053
+      ],
+      "new_check_brier_mean": 0.14930835542036816,
+      "price_change_mean": 0.0,
+      "recipe": "adaptive",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.20706089216655918,
+      "domain": "new_family",
+      "initial_brier_mean": 0.1369858986829413,
+      "initial_brier_seeds": [
+        0.13283315572813398,
+        0.13472310730438933,
+        0.14340143301630057
+      ],
+      "new_check_brier_mean": 0.12493478200537056,
+      "price_change_mean": 0.002596066031616324,
+      "recipe": "random",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.24646658093710014,
+      "domain": "new_family",
+      "initial_brier_mean": 0.11871033203123932,
+      "initial_brier_seeds": [
+        0.12120910273581192,
+        0.11694305053063539,
+        0.11797884282727066
+      ],
+      "new_check_brier_mean": 0.12206305513635851,
+      "price_change_mean": 0.003065577361048175,
+      "recipe": "coverage",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.2229352161962512,
+      "domain": "new_family",
+      "initial_brier_mean": 0.12171400965070311,
+      "initial_brier_seeds": [
+        0.12212408128122093,
+        0.12079300044654107,
+        0.12222494722434736
+      ],
+      "new_check_brier_mean": 0.13374546624746628,
+      "price_change_mean": 0.003855065454044767,
+      "recipe": "adaptive",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_family",
+      "initial_brier_mean": 0.11867757116462836,
+      "initial_brier_seeds": [
+        0.11287636924319909,
+        0.12158692122674862,
+        0.12156942302393738
+      ],
+      "new_check_brier_mean": 0.11832918204042003,
+      "price_change_mean": 0.0,
+      "recipe": "random",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_family",
+      "initial_brier_mean": 0.11407891957975957,
+      "initial_brier_seeds": [
+        0.1138495238136793,
+        0.11452379473701566,
+        0.11386344018858374
+      ],
+      "new_check_brier_mean": 0.11332287719762679,
+      "price_change_mean": 0.0,
+      "recipe": "coverage",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_family",
+      "initial_brier_mean": 0.11694386214160546,
+      "initial_brier_seeds": [
+        0.11620932957865904,
+        0.11601310427782136,
+        0.11860915256833601
+      ],
+      "new_check_brier_mean": 0.11631994958370412,
+      "price_change_mean": 0.0,
+      "recipe": "adaptive",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_family",
+      "initial_brier_mean": 0.159410104982741,
+      "initial_brier_seeds": [
+        0.15813117275196806,
+        0.1596107424004639,
+        0.16048839979579102
+      ],
+      "new_check_brier_mean": 0.159410104982741,
+      "price_change_mean": 0.0,
+      "recipe": "random",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_family",
+      "initial_brier_mean": 0.16312032152408806,
+      "initial_brier_seeds": [
+        0.16264393896420673,
+        0.16407308664385079,
+        0.16264393896420673
+      ],
+      "new_check_brier_mean": 0.16312032152408806,
+      "price_change_mean": 0.0,
+      "recipe": "coverage",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_family",
+      "initial_brier_mean": 0.17056701604889254,
+      "initial_brier_seeds": [
+        0.1675080832718816,
+        0.1675080832718816,
+        0.1766848816029144
+      ],
+      "new_check_brier_mean": 0.17056701604889254,
+      "price_change_mean": 0.0,
+      "recipe": "adaptive",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.1578825019878803,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.04962171824280953,
+      "initial_brier_seeds": [
+        0.051133323384323165,
+        0.05494383063806115,
+        0.04278800070604428
+      ],
+      "new_check_brier_mean": 0.06885835362120488,
+      "price_change_mean": 0.002920900144537178,
+      "recipe": "random",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.17557426698276302,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.08242579333054713,
+      "initial_brier_seeds": [
+        0.07567918466773302,
+        0.08839268059638311,
+        0.08320551472752527
+      ],
+      "new_check_brier_mean": 0.10307626858383286,
+      "price_change_mean": 0.0032384898118040135,
+      "recipe": "coverage",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.15596399903397365,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.09484261634594864,
+      "initial_brier_seeds": [
+        0.08981828227698571,
+        0.08968371477531722,
+        0.10502585198554294
+      ],
+      "new_check_brier_mean": 0.12822895263433612,
+      "price_change_mean": 0.003933932398255412,
+      "recipe": "adaptive",
+      "reference": "text",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.09371471650595604,
+      "initial_brier_seeds": [
+        0.11260781567172533,
+        0.08475431249102146,
+        0.08378202135512139
+      ],
+      "new_check_brier_mean": 0.09397045871615943,
+      "price_change_mean": 0.0,
+      "recipe": "random",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.1482404216829671,
+      "initial_brier_seeds": [
+        0.14516299468373525,
+        0.1522952272195088,
+        0.1472630431456573
+      ],
+      "new_check_brier_mean": 0.14997588648516694,
+      "price_change_mean": 0.0,
+      "recipe": "coverage",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.14544034090459604,
+      "initial_brier_seeds": [
+        0.13854812992789148,
+        0.1376483059065905,
+        0.1601245868793062
+      ],
+      "new_check_brier_mean": 0.14743201991344182,
+      "price_change_mean": 0.0,
+      "recipe": "adaptive",
+      "reference": "visible_checks",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.06544552461507479,
+      "initial_brier_seeds": [
+        0.07055253473938596,
+        0.06382160707420222,
+        0.0619624320316362
+      ],
+      "new_check_brier_mean": 0.06544552461507479,
+      "price_change_mean": 0.0,
+      "recipe": "random",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.09834862049394923,
+      "initial_brier_seeds": [
+        0.09695996045477016,
+        0.10112594057230737,
+        0.09695996045477016
+      ],
+      "new_check_brier_mean": 0.09834862049394923,
+      "price_change_mean": 0.0,
+      "recipe": "coverage",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    },
+    {
+      "automatic_pass_counts": [
+        0,
+        0,
+        0
+      ],
+      "automatic_pass_errors": [
+        0,
+        0,
+        0
+      ],
+      "copy_change_mean": 0.0,
+      "domain": "new_transformation",
+      "initial_brier_mean": 0.11674264477032643,
+      "initial_brier_seeds": [
+        0.1100346020761246,
+        0.1100346020761246,
+        0.13015873015873014
+      ],
+      "new_check_brier_mean": 0.11674264477032643,
+      "price_change_mean": 0.0,
+      "recipe": "adaptive",
+      "reference": "label_prior",
+      "seeds": [
+        11,
+        23,
+        37
+      ]
+    }
+  ],
+  "task_metrics": [
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.3335640138408304,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.24091695501730104,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1379757785467128,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1379757785467128,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.12081891580161479,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1722895040369089,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1379757785467128,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.1515206701875797,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.1426549229317396,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1894463667820069,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.49826989619377154,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s11",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.2778864436411451,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.17787198662635556,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08957281898874538,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.10364221630033404,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.07333580176155015,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11288370701071175,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08737125570631855,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.16460364546594947,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.08927645782224737,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.03301708333374033,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.11270978481745116,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.16243526528503005,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.18581344625351037,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.023566399633103266,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.21820193637117122,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.06640662410314989,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.0793777196031339,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.007376460529387587,
+      "model": "adaptive-s11",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.22612482236717651,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.1489500871403807,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08093175663685993,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1176742556689432,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.044491345091587864,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11048662024816819,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06575987818087549,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.06813404698546983,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.059520569761193916,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.020325528429054263,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.20238806990086763,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.20238806990086763,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19123343657676367,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.020325528429054263,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.30263683783532025,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.17204431298889875,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.13094282973649382,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.035682509517328743,
+      "model": "adaptive-s11",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.3335640138408304,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.24091695501730104,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1379757785467128,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1379757785467128,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.12081891580161479,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1722895040369089,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1379757785467128,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.1515206701875797,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.1426549229317396,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1894463667820069,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.49826989619377154,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08650519031141869,
+      "model": "adaptive-s23",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.270282394076183,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.18036568216322432,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.0917661835331534,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09881863311485893,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.07103841437769153,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11007067186349824,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.09198803854184846,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.19366098701301193,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.09122320665085838,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.02816458909569604,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.1207254781177563,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.14592880478455042,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19351722319688805,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.027385114034705477,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.17435963633503634,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.08843192536444684,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.06220469992650801,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.006336692258873693,
+      "model": "adaptive-s23",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.22705412540650904,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.14950259970900234,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08079574351351267,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.11693375382992645,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.04456984103600301,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11041719798635825,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06576423569319574,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.06824806728388273,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.05971470397125592,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.020250056879824476,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.20062815072362764,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.20062815072362766,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19151599893472224,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.020250056879824476,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.3047974731430311,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.17056513508299379,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.1295718193142285,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.034830044101696295,
+      "model": "adaptive-s23",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.31111111111111117,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.2361111111111111,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1527777777777778,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.15277777777777776,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.13888888888888887,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.18055555555555558,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.15277777777777776,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.16374269005847952,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.1565656565656566,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.11111111111111112,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.11111111111111112,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.1111111111111111,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19444444444444448,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.1111111111111111,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.44444444444444453,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.11111111111111112,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.11111111111111113,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.1111111111111111,
+      "model": "adaptive-s37",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.24884958150031883,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.18009313298254004,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09419050146393239,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.10458986559120409,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08206785845986146,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11294609486477646,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.0937989044743211,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.20190108764259143,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.08874845479866897,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.045364445711338026,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.1487952662392334,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.18650399083537683,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1822496844862802,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.028896289090852744,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.16402701277164233,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.09399087169502472,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.09314412208912373,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.008265299069337761,
+      "model": "adaptive-s37",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.20650819107968985,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.1382785977518169,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08394407491324009,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.12840544880573962,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.04443473439203425,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10779735150037995,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06548614062516199,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.06459784837825303,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.05666905943296461,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.024562608872028553,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.24605782032896586,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.24605782032896586,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1893860268295804,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.024562608872028553,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.253973508732485,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.20914195175280967,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.15889239231566013,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.04267182163125248,
+      "model": "adaptive-s37",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.3524221453287198,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.2465397923875433,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.12889273356401384,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.12889273356401384,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10928489042675897,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.16810841983852365,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.12889273356401387,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.14437260972500457,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.13424032714690154,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1877162629757786,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.5406574394463669,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s11",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.2958123502555627,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.1786355222045852,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08843164027886662,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09846874880321808,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06727077586935505,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10901449991681184,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08769129199765417,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.2029724417203672,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.09217164916930477,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.020517874864224385,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.09877224566334956,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.15540912510882215,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.18071062984662706,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.024400015386054914,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.12496588797910015,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.04894076114940449,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.06319088026924602,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.005070598966462534,
+      "model": "coverage-s11",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.2170067286315902,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.14212462280574198,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.07833323490747036,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.11844969538546925,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.04009522516722274,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10625640232569777,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06151139632233633,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.06251609911760465,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.054234781032127796,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.017321113095995006,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.21918317611760338,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.21918317611760338,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19222495800233025,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.017321113095995006,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.28284311798145084,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.18553949894733532,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.13932858336772294,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.03285579303454899,
+      "model": "coverage-s11",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.3459438677431757,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.24447327950788159,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1317281814686659,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1317281814686659,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1129373317954633,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.16930988081507115,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1317281814686659,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.14656306278961534,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.13685295865226663,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.07535563244905807,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07535563244905807,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07535563244905807,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.18810073048827375,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07535563244905807,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.5263360246059208,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07535563244905807,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.07535563244905807,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07535563244905807,
+      "model": "coverage-s23",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.262294128826752,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.17238024945820096,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08704667752638885,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.0980788825806691,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06372868433437302,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10503520145839752,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08863791436994894,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.18959742570342275,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.08986206901365533,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.017462192622395806,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.1331845634667089,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.18516895543836168,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.183859996359721,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.026329804724022875,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.1403022485560191,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.0699353152349994,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.06831018667359358,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.0054012622581763375,
+      "model": "coverage-s23",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.21042422373614103,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.1383741152801155,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.07908835851717264,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.12202986806767424,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.039687802884921124,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10523095717592823,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.0611217811216373,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.061045832223114355,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.05292193006961314,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.01829060118673961,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.23388952993316361,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.23388952993316361,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19142146885616002,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.01829060118673961,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.2666469958536007,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.19795637514209297,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.14869858250868231,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.03511065260937389,
+      "model": "coverage-s23",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.3524221453287198,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.2465397923875433,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.12889273356401384,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.12889273356401384,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10928489042675897,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.16810841983852365,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.12889273356401387,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.14437260972500457,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.13424032714690154,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1877162629757786,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.5406574394463669,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.07006920415224914,
+      "model": "coverage-s37",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.2755077352350415,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.1742747333384951,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08678096674391089,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09759290282193667,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06381798127244583,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10565984049467038,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08565270870461596,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.18062876502529743,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.09114381869424269,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.01729305038626628,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.11402400989561867,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.15281183256229394,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.18802217155281342,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.021573887302672914,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.16114162540017965,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.071062802205289,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.06339987720942637,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.004702999559627709,
+      "model": "coverage-s37",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.21486603808690377,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.14080302637054223,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.07835098247418831,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.11935382794684303,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.03972489472404337,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10575354278233945,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06115571669925888,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.06181950757544009,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.05359345473722958,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.017364673509939695,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.2237078628090928,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.22370786280909283,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19208294206720827,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.017364673509939695,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.27775255137182875,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.18931733125923397,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.14207630457290296,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.03323422692464976,
+      "model": "coverage-s37",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.4111687812379854,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.2699923106497501,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.11312956555171089,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.11312956555171089,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08698577470203768,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1654171472510573,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11312956555171089,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.13376940043303184,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.12025969032889448,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.03469819300269127,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.03469819300269127,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.03469819300269127,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1915609381007305,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.03469819300269127,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.6621491733948481,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.03469819300269127,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.03469819300269127,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.03469819300269127,
+      "model": "random-s11",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.3724098730606013,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.2052833342130663,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.0962981114821342,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09530632436822557,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06687862328449644,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11589727319190966,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.0846125719685037,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.20019913084801685,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.09976482562122624,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.015407243141070785,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.044995213089569275,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.0822184482889517,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19294642430024642,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.011511676402036042,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.12692668863982695,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.01677337042219948,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.03577688083335352,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.002703900309540971,
+      "model": "random-s11",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.2561814366171863,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.16431122022127823,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.07559818830788527,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.10315437748290592,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.041729122860093594,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11305001629603995,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06388563513651319,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.07035440214452776,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.06093511013808777,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.01119419289476476,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.15174483095122973,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.15174483095122976,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19846446691006053,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.01119419289476476,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.372656053079979,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.1283197246084856,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.0957579569830863,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.021108791692228332,
+      "model": "random-s11",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.43637062668204535,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.281958861976163,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.1103902345251826,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.11039023452518261,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08179546328335255,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.16757977700884275,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.11039023452518261,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.13296505392662739,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.11818880850022716,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.024605920799692427,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.024605920799692427,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.024605920799692427,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.19617454825067282,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.024605920799692427,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.7108804306036139,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.024605920799692427,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.024605920799692427,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.024605920799692427,
+      "model": "random-s23",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.38466605516792407,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.20842461700008263,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09667628072243102,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09613131651621347,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06847167757438971,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1284699950402984,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08735220832780734,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.15948637966045504,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.10507767489989822,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.018810427241730113,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.0411706853156609,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08145258066566488,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.20046364790231677,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.010860707829003231,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.24062676320790644,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.018675050876962807,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.03379951166661512,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.0031015027474659562,
+      "model": "random-s23",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.314919104755106,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.20011847307041378,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08032632863919693,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09639279163133747,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.049342744905985315,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.1281219074467365,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.07363868964238308,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.08648191835837514,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.07500600807307345,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.008784086929260061,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.0890357548910264,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.0890357548910264,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.20351179833100483,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.008784086929260061,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.49225856065174783,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07566047689739867,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.05741025890588257,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.015242930925690798,
+      "model": "random-s23",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.4451557093425606,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.28633217993079585,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.10986159169550175,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.10986159169550173,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.08044982698961937,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.16868512110726644,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.10986159169550173,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.1330814059369878,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.11788298206983329,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.021626297577854673,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.021626297577854673,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.021626297577854673,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.1980968858131488,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.021626297577854673,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.7275086505190311,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.021626297577854673,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.021626297577854673,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.021626297577854673,
+      "model": "random-s37",
+      "reference": "label_prior",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.41989144139104184,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.24150354926605389,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09862793372712396,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09787214181082164,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.06854428982736784,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.13366016683869467,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.09065268984043835,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.23542575939040677,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.10820102365421218,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.0128829794855998,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.0258839408470185,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.04102807972958908,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.20663800858708598,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.007495505252328335,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.12920192709676523,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.014325494475619266,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.019313892436636695,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.0019550684411616553,
+      "model": "random-s37",
+      "reference": "text",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_family",
+      "initial_brier": 0.31716390744925044,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 8,
+      "domain": "new_family",
+      "initial_brier": 0.20129507159347587,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.08010730838587209,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 24,
+      "domain": "new_family",
+      "initial_brier": 0.09570747055021626,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.04914721736052138,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.12837130282227746,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 24,
+      "domain": "new_task",
+      "initial_brier": 0.0735306939982757,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 19,
+      "domain": "new_task",
+      "initial_brier": 0.08657450302481769,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 22,
+      "domain": "new_task",
+      "initial_brier": 0.07508357602596369,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    },
+    {
+      "cases": 5,
+      "domain": "new_transformation",
+      "initial_brier": 0.0081803451671848,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "adjacent_diff"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.08709971781834157,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "all_in_range"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.08709971781834157,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "contains_all"
+    },
+    {
+      "cases": 4,
+      "domain": "new_transformation",
+      "initial_brier": 0.20478034131349537,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "first_index"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.0081803451671848,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "median_odd"
+    },
+    {
+      "cases": 1,
+      "domain": "new_transformation",
+      "initial_brier": 0.496846491420242,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "merge_max"
+    },
+    {
+      "cases": 6,
+      "domain": "new_transformation",
+      "initial_brier": 0.07394648904314878,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "palindrome"
+    },
+    {
+      "cases": 7,
+      "domain": "new_transformation",
+      "initial_brier": 0.05579397531097293,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "strict_sorted"
+    },
+    {
+      "cases": 2,
+      "domain": "new_transformation",
+      "initial_brier": 0.014052985301148081,
+      "model": "random-s37",
+      "reference": "visible_checks",
+      "task": "sum_squares"
+    }
+  ],
+  "train_candidates_by_task": {
+    "clean_spaces": 16,
+    "count_positive": 24,
+    "count_values": 21,
+    "count_vowels": 24,
+    "invert_unique": 2,
+    "max_default": 24,
+    "rotate_left": 23,
+    "second_distinct": 24,
+    "sum_even": 24,
+    "unique_order": 6
+  }
+}

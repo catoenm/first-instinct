@@ -1,0 +1,45 @@
+{
+  "device": "mps",
+  "feature_mean_source": "unlabeled training pool only",
+  "features_sha256": "47756f096bfb6f8ac0ee277866b7337508b1c7ea126ed8473caf5c66eb3290c1",
+  "pilot": false,
+  "pool_sha256": "b9a1de04f84fa9ec64f3d06d4fa2c7be84926ee87536dffca5f29f4b6927ae68",
+  "recipes": [
+    "random",
+    "coverage",
+    "adaptive"
+  ],
+  "runtime": {
+    "numpy": "2.5.3",
+    "optimizer_device": "cpu",
+    "optimizer_dtype": "float64",
+    "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6",
+    "torch": "2.14.0"
+  },
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "source_sha256": {
+    "analysis.py": "d9dc9ce386f3961c64346e19611b7d620ec26e7ba1b88c3ed08c44428be5df11",
+    "candidates.py": "2a19ffe492092dc8a7e1e2f2eb6c573803400f17126afd1cfe1657c938097d18",
+    "data.py": "0fdc32c56fcea6e7b4424e970803062511beb85f1e028efc7fc37a53a3000bf8",
+    "decision_model.py": "e5eeaac81769ad9c95d01c4368fd64c3a2aa02bf71e89abb99def563abc1cc61",
+    "evaluate.py": "3baee62dce118f63b5e2f2078054ee292d7de5bcc6aab92f35db950fa40e513a",
+    "executable-evidence-protocol.md": "6fb3135b067e8a6e6fdf98c07ae854f8a1e97d951827c23d7a42d411e8b32ffb",
+    "features.py": "f8e4473d018f250d729072a680da6b5d62969e4b74a239da57503492a7d56f11",
+    "requirements-calibration.txt": "a507960a4ebafafc58ec8d0883a3a35e9d618da0a95c49513ee5744869f80b27",
+    "requirements-decision-lock.txt": "a9640547035c9e16d539c0c5d06a8db77d3f02baf1c552d002fab082783b272e",
+    "study.py": "b093da969a06c2055e7ac41eec137b47d40dd540d2c5cd7010873a6fe9a53351",
+    "tasks.py": "513d11493c0fe960e817cfaed057b5ed59d44505ae8da5c8a9505ffb0b41a9b2",
+    "test_evidence_lab.py": "69c680060d2a51d96dfa82a985a0d342ea122af0ca6573571bfe3af02614f841",
+    "verify.py": "5954d24502eedf49096a10e684f245ab6b3e80a8cad5d9578456923051c5da43",
+    "worker.py": "1c354896044d79874e96ee502c3f7b66e577ef2871f5c1a85a2c971c253106bb"
+  },
+  "train_candidates": 188,
+  "validation_candidates": 76,
+  "validation_used_for": "diagnostics only, never checkpoint selection",
+  "verification_budget": 100
+}

@@ -1,0 +1,305 @@
+{
+  "checks": [
+    {
+      "error": null,
+      "expected": "a b",
+      "input": [
+        "  a\t b\n"
+      ],
+      "observed": "   a\t b",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "",
+      "input": [
+        "   "
+      ],
+      "observed": "    ",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "xe eeIxao x oaox",
+      "input": [
+        "\nxe\t eeIxao\n\nx oaox"
+      ],
+      "observed": " xe\t eeIxaox oaox",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "CC Iob IU e C",
+      "input": [
+        "CC\t\tIob\tIU \ne\tC"
+      ],
+      "observed": " CC\t\tIob\tIU e\tC",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "aI",
+      "input": [
+        "aI"
+      ],
+      "observed": " aI",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "CUxx",
+      "input": [
+        "CUxx \t"
+      ],
+      "observed": " CUxx \t",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "Ix bee",
+      "input": [
+        "Ix\n\tbee\n"
+      ],
+      "observed": " Ix\tbee",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "xa CaC ao CUU U",
+      "input": [
+        " xa CaC\tao \nCUU\tU\n\t "
+      ],
+      "observed": "  xa CaC\tao CUU\tU\t ",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "ob C",
+      "input": [
+        "ob\nC\n"
+      ],
+      "observed": " obC",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "CbUe",
+      "input": [
+        " CbUe"
+      ],
+      "observed": "  CbUe",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "Ix bxbxxx",
+      "input": [
+        "\nIx  bxbxxx"
+      ],
+      "observed": " Ix  bxbxxx",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "xaob UU aaUo baUIbeC",
+      "input": [
+        "xaob\nUU\taaUo\t\nbaUIbeC"
+      ],
+      "observed": " xaobUU\taaUo\tbaUIbeC",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "",
+      "input": [
+        ""
+      ],
+      "observed": "",
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": "ox UeaU",
+      "input": [
+        "ox UeaU"
+      ],
+      "observed": " ox UeaU",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "Ix e",
+      "input": [
+        "Ix\te"
+      ],
+      "observed": " Ix\te",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "IbbIoe IaxIba",
+      "input": [
+        "\tIbbIoe  IaxIba"
+      ],
+      "observed": " \tIbbIoe  IaxIba",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "eaI ee",
+      "input": [
+        "\t\teaI ee"
+      ],
+      "observed": " \t\teaI ee",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "bI Ce o xaICbIUUIx",
+      "input": [
+        "bI\tCe\to\txaICbIUUIx"
+      ],
+      "observed": " bI\tCe\to\txaICbIUUIx",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "b UxoooCaU xC e",
+      "input": [
+        "b\tUxoooCaU\txC\te"
+      ],
+      "observed": " b\tUxoooCaU\txC\te",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "Uox Ux U",
+      "input": [
+        "Uox  Ux \n U"
+      ],
+      "observed": " Uox  Ux  U",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "Ixeo a eIbU",
+      "input": [
+        " Ixeo a eIbU"
+      ],
+      "observed": "  Ixeo a eIbU",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "oo CCa xx b Ue C",
+      "input": [
+        "oo\tCCa \t\txx b\tUe \tC"
+      ],
+      "observed": " oo\tCCa \t\txx b\tUe \tC",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "I oIee e x axe b Ie",
+      "input": [
+        "I\noIee e\t\t\nx\naxe\tb\tIe"
+      ],
+      "observed": " IoIee e\t\txaxe\tb\tIe",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "xUe o aI Cbb",
+      "input": [
+        "xUe\n\to\naI\nCbb"
+      ],
+      "observed": " xUe\toaICbb",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "bab Ce",
+      "input": [
+        "bab\nCe"
+      ],
+      "observed": " babCe",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "U e IUxb b",
+      "input": [
+        "\tU\t e IUxb\nb\t"
+      ],
+      "observed": " \tU\t e IUxbb\t",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "xb C eI",
+      "input": [
+        "xb C\teI"
+      ],
+      "observed": " xb C\teI",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "ooCoeIobx U aaCeabCb",
+      "input": [
+        "\tooCoeIobx\tU\naaCeabCb"
+      ],
+      "observed": " \tooCoeIobx\tUaaCeabCb",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "Ub",
+      "input": [
+        "Ub"
+      ],
+      "observed": " Ub",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "o aIaUeCe",
+      "input": [
+        "o aIaUeCe\n"
+      ],
+      "observed": " o aIaUeCe",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "CooCx eIoo ex o a",
+      "input": [
+        "CooCx  eIoo\t ex\to a"
+      ],
+      "observed": " CooCx  eIoo\t ex\to a",
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": "x ICeCCUa",
+      "input": [
+        " x\tICeCCUa"
+      ],
+      "observed": "  x\tICeCCUa",
+      "passed": false
+    }
+  ],
+  "disagreement_witness": null,
+  "hash_seeds": [
+    0,
+    1
+  ],
+  "passed": false,
+  "process_runs": 2,
+  "repeat_result_sha256": "2c84f8b5bc39c9541f08775be8f0a9af75b80ce2ec7ac95f1345cf14357b18f7",
+  "result_sha256": "2c84f8b5bc39c9541f08775be8f0a9af75b80ce2ec7ac95f1345cf14357b18f7",
+  "seconds": 0.07583620800141944,
+  "stable": true,
+  "test_executions": 64,
+  "worker_error": null
+}

@@ -1,0 +1,16 @@
+{
+  "candidate_cases": 475,
+  "frozen_features": "checksum and exact rendered text checked; encoder not re-run",
+  "maximum_metric_difference": 0.0,
+  "maximum_weight_difference": 0.0,
+  "original_logical_private_test_executions": 75968,
+  "original_physical_private_queries": 473,
+  "reconstructed_metric_rows": 81,
+  "reexecuted": true,
+  "replay_test_executions": 38574,
+  "replayed_head_fits": 108,
+  "run_sha256": "55c1af3a0a69a6216ac2311361241d16227530e672a117c65cafabdd83dedf2e",
+  "seconds": 72.06936687500274,
+  "unique_private_receipts": 473,
+  "verified": true
+}

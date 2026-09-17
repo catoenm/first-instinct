@@ -82,7 +82,21 @@ understand text or that template variation covers real-world language.
 
 ## Bringing in language and external data
 
-To bring back the text encoder, we could express verified underlying records in
+The [executable-evidence pilot](executable-evidence.md) now brings back a frozen
+language encoder. It asks whether a short Python candidate will pass a private
+test suite, given its contract, code and a few revealed checks. Outcomes come
+from execution, rather than a language model's judgment or the intention behind
+a proposed mutation. The pilot compares random, coverage and adaptive label
+collection at 100 private-suite queries each.
+
+Its 24 contracts are authored here. It is a small data-pipeline experiment, not
+real-repository evidence. Request text, execution receipts, source lineage,
+selection probabilities, costs and separated task families are retained. This
+stage uses direct labels; the earlier numeric environments remain the
+reinforcement-learning experiments. The new report explains the results and
+what remains before applying the workflow to real repositories.
+
+A broader language dataset could express verified underlying records in
 different forms: requests, tool results, short documents, and candidate-action
 descriptions. The underlying records would supply correctness checks. We would
 need diverse wording, held-out record families, and human or real-world checks

@@ -1,0 +1,15 @@
+{
+  "code_freeze": "33c30bab5e67161eef431c5761a628a455f36aef",
+  "original_attempt_freeze": "0e9115ef3d8398d78820a5f9a12163a38cadbf6f",
+  "development_seed": 101,
+  "archives": {
+    "aborted-attempt.tar.gz": {
+      "sha256": "faa7b38606bbb8079f6bcaf39f27487e96380e045d9c0c3f7699e00b5d9b1b37",
+      "bytes": 6351553
+    },
+    "development-seed-101.tar.gz": {
+      "sha256": "d1ac71be94ebacee43f0b3ebdeac92fe77baed38e00c476f13589af061b1f2c6",
+      "bytes": 3428606
+    }
+  }
+}

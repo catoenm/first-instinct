@@ -19,7 +19,19 @@ First Instinct takes some text, a question, and a list of described answers.
 One shared network scores the answers. It can choose a tool, identify an emotion,
 or judge how two sentences relate—without generating a stream of text.
 
-**Latest: [Keeping a decision model's forecasts in practice](docs/forecast-audit.md).**
+**Latest: [Executable evidence: auditing the data before reinforcement learning](docs/executable-evidence.md).**
+We built 24 authored Python tasks and compared random, coverage and adaptive
+data collection at **100 verified programs per run**. Coverage modestly improved
+forecasts on new tasks, while random sampling did better on new edit mechanisms.
+The audit found **31 of 59** programs that passed both visible checks failed a
+private suite—and two passed the private suite despite a known visible failure.
+A frozen language encoder also remained sensitive to explicitly copied evidence.
+All nine collectors, references, receipts, selection logs and a disclosed verifier
+repair are public. This pilot uses direct labels; the numeric studies below
+contain reinforcement learning. [Read the findings and run the replay →](docs/executable-evidence.md)
+
+The previous [forecast-practice experiment](docs/forecast-audit.md) tests
+keeping a decision model's forecasts in practice.
 Extra forecast exercises throughout training reduced probability error from
 **13.9 to 8.6 percentage points** under familiar conditions, with better workflow
 reward in all three seeds. Giving the same exercises early achieved 10.8 points;

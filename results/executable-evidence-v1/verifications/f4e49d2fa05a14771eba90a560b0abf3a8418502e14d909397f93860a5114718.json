@@ -1,0 +1,974 @@
+{
+  "checks": [
+    {
+      "error": "KeyError",
+      "expected": {
+        "x": -2,
+        "y": 1
+      },
+      "input": [
+        {
+          "x": -2
+        },
+        {
+          "x": -3,
+          "y": 1
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": {},
+      "input": [
+        {},
+        {}
+      ],
+      "observed": {},
+      "passed": true
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 7,
+        "b": -1,
+        "c": -4,
+        "d": 8,
+        "e": 1
+      },
+      "input": [
+        {
+          "a": 7,
+          "b": -3,
+          "c": -4,
+          "d": -1
+        },
+        {
+          "b": -1,
+          "c": -8,
+          "d": 8,
+          "e": 1
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "c": -8,
+        "d": 3
+      },
+      "input": [
+        {
+          "d": 3
+        },
+        {
+          "c": -8
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 2,
+        "b": -5,
+        "c": 6,
+        "d": 0
+      },
+      "input": [
+        {
+          "a": 2,
+          "b": -5,
+          "c": 6,
+          "d": 0
+        },
+        {}
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "c": -4
+      },
+      "input": [
+        {
+          "c": -4
+        },
+        {}
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 7,
+        "b": -7,
+        "c": -2,
+        "d": 6,
+        "e": 4
+      },
+      "input": [
+        {
+          "b": -7,
+          "c": -6,
+          "d": -2,
+          "e": 2
+        },
+        {
+          "a": 7,
+          "b": -7,
+          "c": -2,
+          "d": 6,
+          "e": 4
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 5,
+        "b": 2,
+        "c": 0,
+        "d": 6,
+        "e": 1
+      },
+      "input": [
+        {
+          "a": 5,
+          "b": -6,
+          "c": -2,
+          "d": -1,
+          "e": -8
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "c": 0,
+          "d": 6,
+          "e": 1
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": -1,
+        "b": 5,
+        "c": -1,
+        "d": -6,
+        "e": 3
+      },
+      "input": [
+        {
+          "a": -6,
+          "b": 5,
+          "c": -1,
+          "e": 3
+        },
+        {
+          "a": -1,
+          "d": -6
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 5,
+        "c": 4,
+        "d": 6
+      },
+      "input": [
+        {
+          "a": 5,
+          "c": 1,
+          "d": 3
+        },
+        {
+          "c": 4,
+          "d": 6
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 7,
+        "b": 6,
+        "c": 6,
+        "d": 7,
+        "e": -6
+      },
+      "input": [
+        {
+          "c": -3
+        },
+        {
+          "a": 7,
+          "b": 6,
+          "c": 6,
+          "d": 7,
+          "e": -6
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "d": -8
+      },
+      "input": [
+        {
+          "d": -8
+        },
+        {}
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "c": 1,
+        "d": 7,
+        "e": -5
+      },
+      "input": [
+        {
+          "d": 7,
+          "e": -5
+        },
+        {
+          "c": 1
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 3,
+        "b": 3,
+        "c": 2,
+        "d": 4,
+        "e": 2
+      },
+      "input": [
+        {
+          "a": 3,
+          "b": -7,
+          "c": -8,
+          "d": 4,
+          "e": 2
+        },
+        {
+          "a": -8,
+          "b": 3,
+          "c": 2,
+          "d": 1,
+          "e": -1
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 1,
+        "b": 3,
+        "c": 0,
+        "d": -1,
+        "e": -6
+      },
+      "input": [
+        {
+          "a": 1,
+          "c": -6
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "c": 0,
+          "d": -1,
+          "e": -6
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 8,
+        "b": -1,
+        "c": -3,
+        "d": 0,
+        "e": 5
+      },
+      "input": [
+        {
+          "a": -4,
+          "b": -1,
+          "c": -3,
+          "d": 0,
+          "e": 5
+        },
+        {
+          "a": 8,
+          "b": -6,
+          "c": -4,
+          "d": -3,
+          "e": -3
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 8,
+        "b": 6,
+        "c": 8,
+        "d": 7,
+        "e": 0
+      },
+      "input": [
+        {
+          "a": 2,
+          "b": 5,
+          "c": 8,
+          "d": 7,
+          "e": 0
+        },
+        {
+          "a": 8,
+          "b": 6,
+          "c": 7
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 3,
+        "c": 1,
+        "d": 4
+      },
+      "input": [
+        {
+          "a": 3,
+          "d": 4
+        },
+        {
+          "a": -5,
+          "c": 1
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": -3,
+        "b": -1
+      },
+      "input": [
+        {
+          "a": -3,
+          "b": -1
+        },
+        {}
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 5,
+        "b": -8,
+        "c": 5,
+        "d": 1
+      },
+      "input": [
+        {
+          "a": -1,
+          "d": 1
+        },
+        {
+          "a": 5,
+          "b": -8,
+          "c": 5,
+          "d": -4
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": -3,
+        "b": 7,
+        "c": -7,
+        "d": 2,
+        "e": -8
+      },
+      "input": [
+        {
+          "a": -3,
+          "b": 7,
+          "c": -7,
+          "d": 2,
+          "e": -8
+        },
+        {}
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "b": -6,
+        "e": 1
+      },
+      "input": [
+        {},
+        {
+          "b": -6,
+          "e": 1
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": -2
+      },
+      "input": [
+        {},
+        {
+          "a": -2
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 8,
+        "b": 3,
+        "c": -2,
+        "d": 4,
+        "e": 4
+      },
+      "input": [
+        {
+          "b": 3,
+          "e": 4
+        },
+        {
+          "a": 8,
+          "b": -6,
+          "c": -2,
+          "d": 4,
+          "e": -8
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 4,
+        "b": 3,
+        "c": -4,
+        "d": 7,
+        "e": 1
+      },
+      "input": [
+        {
+          "a": 4,
+          "b": 3,
+          "c": -4,
+          "d": 7,
+          "e": 1
+        },
+        {
+          "a": -2,
+          "b": -4,
+          "c": -5,
+          "d": -5,
+          "e": -8
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 3,
+        "c": -5,
+        "d": 5,
+        "e": 0
+      },
+      "input": [
+        {
+          "a": 3,
+          "c": -5,
+          "d": 5,
+          "e": 0
+        },
+        {}
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": 6,
+        "b": 8,
+        "c": -3,
+        "e": 8
+      },
+      "input": [
+        {
+          "a": 6,
+          "b": -6,
+          "c": -3,
+          "e": 8
+        },
+        {
+          "b": 8
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": -1,
+        "b": -8,
+        "c": 6,
+        "d": -8,
+        "e": 2
+      },
+      "input": [
+        {
+          "a": -1,
+          "c": 6,
+          "d": -8,
+          "e": 2
+        },
+        {
+          "a": -3,
+          "b": -8,
+          "c": -1,
+          "e": -6
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": -6,
+        "b": 6,
+        "c": -8,
+        "d": 0,
+        "e": 8
+      },
+      "input": [
+        {
+          "a": -6,
+          "b": 6,
+          "c": -8,
+          "d": -2,
+          "e": 8
+        },
+        {
+          "d": 0
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "KeyError",
+      "expected": {
+        "a": -7
+      },
+      "input": [
+        {},
+        {
+          "a": -7
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 0,
+        "b": 3,
+        "c": -2,
+        "d": 7,
+        "e": 6
+      },
+      "input": [
+        {
+          "a": -7,
+          "b": 3,
+          "c": -3,
+          "d": 2,
+          "e": -2
+        },
+        {
+          "a": 0,
+          "c": -2,
+          "d": 7,
+          "e": 6
+        }
+      ],
+      "observed": null,
+      "passed": false
+    },
+    {
+      "error": "ValueError",
+      "expected": {
+        "a": 1,
+        "b": 0,
+        "c": -3,
+        "d": 6,
+        "e": -7
+      },
+      "input": [
+        {
+          "d": -2
+        },
+        {
+          "a": 1,
+          "b": 0,
+          "c": -3,
+          "d": 6,
+          "e": -7
+        }
+      ],
+      "observed": null,
+      "passed": false
+    }
+  ],
+  "disagreement_witness": {
+    "first": {
+      "error": null,
+      "results": [
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": null,
+          "value": {}
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        }
+      ]
+    },
+    "second": {
+      "error": null,
+      "results": [
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": null,
+          "value": {}
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "KeyError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        },
+        {
+          "error": "ValueError",
+          "value": null
+        }
+      ]
+    }
+  },
+  "hash_seeds": [
+    0,
+    1
+  ],
+  "passed": false,
+  "process_runs": 2,
+  "repeat_result_sha256": "395ca95e3b83005a9fc26a877924c6895c26b1794da11c0b17c46a7ecdc77bfd",
+  "result_sha256": "fe0c4baec66997c11b846bfaab6c10608b097f8e9d66d012887d172b8d46f6a0",
+  "seconds": 0.08312470799864968,
+  "stable": false,
+  "test_executions": 64,
+  "worker_error": null
+}

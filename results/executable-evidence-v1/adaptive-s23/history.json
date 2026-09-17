@@ -1,0 +1,38 @@
+[
+  {
+    "positive_labels": 4,
+    "round": 0,
+    "validation_initial_brier": 0.1287828545756154,
+    "verified_cases": 20
+  },
+  {
+    "positive_labels": 10,
+    "round": 1,
+    "validation_initial_brier": 0.1177948851692888,
+    "verified_cases": 36
+  },
+  {
+    "positive_labels": 18,
+    "round": 2,
+    "validation_initial_brier": 0.11501463476465763,
+    "verified_cases": 52
+  },
+  {
+    "positive_labels": 20,
+    "round": 3,
+    "validation_initial_brier": 0.11707492801583298,
+    "verified_cases": 68
+  },
+  {
+    "positive_labels": 25,
+    "round": 4,
+    "validation_initial_brier": 0.11719242989154577,
+    "verified_cases": 84
+  },
+  {
+    "positive_labels": 29,
+    "round": 5,
+    "validation_initial_brier": 0.11803855825429804,
+    "verified_cases": 100
+  }
+]

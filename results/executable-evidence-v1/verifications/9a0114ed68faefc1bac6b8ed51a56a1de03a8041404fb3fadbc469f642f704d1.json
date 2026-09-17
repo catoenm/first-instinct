@@ -1,0 +1,840 @@
+{
+  "checks": [
+    {
+      "error": null,
+      "expected": [
+        3,
+        -2
+      ],
+      "input": [
+        [
+          1,
+          4,
+          2
+        ]
+      ],
+      "observed": [
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [],
+      "input": [
+        [
+          1
+        ]
+      ],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": [
+        4
+      ],
+      "input": [
+        [
+          -1,
+          3
+        ]
+      ],
+      "observed": [
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -8,
+        2,
+        2,
+        0
+      ],
+      "input": [
+        [
+          4,
+          -4,
+          -2,
+          0,
+          0
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -2,
+        8,
+        -4
+      ],
+      "input": [
+        [
+          -2,
+          -4,
+          4,
+          0
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -1,
+        3,
+        0,
+        -2,
+        -1,
+        5,
+        0
+      ],
+      "input": [
+        [
+          1,
+          0,
+          3,
+          3,
+          1,
+          0,
+          5,
+          5
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        2,
+        2,
+        -5,
+        6,
+        0,
+        -8,
+        6
+      ],
+      "input": [
+        [
+          0,
+          2,
+          4,
+          -1,
+          5,
+          5,
+          -3,
+          3
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -6,
+        1,
+        8,
+        -1,
+        -2
+      ],
+      "input": [
+        [
+          1,
+          -5,
+          -4,
+          4,
+          3,
+          1
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        6,
+        -6,
+        9,
+        -4,
+        2,
+        -8,
+        1
+      ],
+      "input": [
+        [
+          -4,
+          2,
+          -4,
+          5,
+          1,
+          3,
+          -5,
+          -4
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -7
+      ],
+      "input": [
+        [
+          2,
+          -5
+        ]
+      ],
+      "observed": [
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -7,
+        7,
+        -4,
+        -2,
+        1,
+        0,
+        4
+      ],
+      "input": [
+        [
+          5,
+          -2,
+          5,
+          1,
+          -1,
+          0,
+          0,
+          4
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -3,
+        1,
+        1,
+        0,
+        -8
+      ],
+      "input": [
+        [
+          5,
+          2,
+          3,
+          4,
+          4,
+          -4
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        10,
+        -6,
+        4,
+        -2
+      ],
+      "input": [
+        [
+          -5,
+          5,
+          -1,
+          3,
+          1
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        1,
+        5,
+        1
+      ],
+      "input": [
+        [
+          -2,
+          -1,
+          4,
+          5
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -3,
+        -1,
+        -1,
+        -2,
+        6,
+        4
+      ],
+      "input": [
+        [
+          2,
+          -1,
+          -2,
+          -3,
+          -5,
+          1,
+          5
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -9,
+        9,
+        -2,
+        -3,
+        3,
+        2,
+        -1
+      ],
+      "input": [
+        [
+          4,
+          -5,
+          4,
+          2,
+          -1,
+          2,
+          4,
+          3
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -2,
+        5,
+        -3,
+        0,
+        -4,
+        7
+      ],
+      "input": [
+        [
+          2,
+          0,
+          5,
+          2,
+          2,
+          -2,
+          5
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        7,
+        -5
+      ],
+      "input": [
+        [
+          -3,
+          4,
+          -1
+        ]
+      ],
+      "observed": [
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        2,
+        7,
+        -3,
+        -3
+      ],
+      "input": [
+        [
+          -5,
+          -3,
+          4,
+          1,
+          -2
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        6,
+        -10,
+        5
+      ],
+      "input": [
+        [
+          -1,
+          5,
+          -5,
+          0
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        4,
+        -1,
+        -2,
+        0,
+        4
+      ],
+      "input": [
+        [
+          -3,
+          1,
+          0,
+          -2,
+          -2,
+          2
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -1,
+        -1,
+        6,
+        -2,
+        -4
+      ],
+      "input": [
+        [
+          -3,
+          -4,
+          -5,
+          1,
+          -1,
+          -5
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -9,
+        5,
+        0,
+        -2,
+        2,
+        0
+      ],
+      "input": [
+        [
+          5,
+          -4,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -2,
+        -2,
+        4,
+        -4
+      ],
+      "input": [
+        [
+          3,
+          1,
+          -1,
+          3,
+          -1
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        0,
+        -2,
+        -2,
+        3
+      ],
+      "input": [
+        [
+          1,
+          1,
+          -1,
+          -3,
+          0
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        9,
+        -6,
+        5,
+        -2
+      ],
+      "input": [
+        [
+          -5,
+          4,
+          -2,
+          3,
+          1
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [],
+      "input": [
+        [
+          -5
+        ]
+      ],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": [
+        4,
+        -3,
+        1,
+        -5
+      ],
+      "input": [
+        [
+          -1,
+          3,
+          0,
+          1,
+          -4
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -10,
+        0,
+        1,
+        -1,
+        2
+      ],
+      "input": [
+        [
+          5,
+          -5,
+          -5,
+          -4,
+          -5,
+          -3
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -1,
+        1,
+        -1
+      ],
+      "input": [
+        [
+          -2,
+          -3,
+          -2,
+          -3
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        -10,
+        4,
+        0,
+        -4,
+        1,
+        2
+      ],
+      "input": [
+        [
+          5,
+          -5,
+          -1,
+          -1,
+          -5,
+          -4,
+          -2
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": [
+        6,
+        -3,
+        -2,
+        5,
+        -6,
+        0,
+        5
+      ],
+      "input": [
+        [
+          -4,
+          2,
+          -1,
+          -3,
+          2,
+          -4,
+          -4,
+          1
+        ]
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": false
+    }
+  ],
+  "disagreement_witness": null,
+  "hash_seeds": [
+    0,
+    1
+  ],
+  "passed": false,
+  "process_runs": 2,
+  "repeat_result_sha256": "de2ddfc9b2c17a18ec69d86ecd62ae3ffe0e1487d72fa5fb714a13370cb13d8e",
+  "result_sha256": "de2ddfc9b2c17a18ec69d86ecd62ae3ffe0e1487d72fa5fb714a13370cb13d8e",
+  "seconds": 0.08870175099582411,
+  "stable": true,
+  "test_executions": 64,
+  "worker_error": null
+}

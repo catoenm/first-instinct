@@ -1,0 +1,7 @@
+{
+  "ids": [
+    "merge_max-04dc48024682fd8f",
+    "merge_max-3f63592982385eb8"
+  ],
+  "rule": "Unstable or invalid private executions remain in receipts and query costs but have no metric label."
+}

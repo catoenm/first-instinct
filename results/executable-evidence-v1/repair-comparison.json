@@ -1,0 +1,8 @@
+{
+  "original_freeze": "0e9115ef3d8398d78820a5f9a12163a38cadbf6f",
+  "corrected_freeze": "33c30bab5e67161eef431c5761a628a455f36aef",
+  "compared_collection_round_checkpoints": 54,
+  "maximum_parameter_difference": 0.0,
+  "development_features_byte_identical": true,
+  "meaning": "The verifier repair changed no learned head parameter, prior or development feature. Final evaluation was not completed in the original attempt."
+}

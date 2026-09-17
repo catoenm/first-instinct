@@ -1,0 +1,305 @@
+{
+  "checks": [
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "aba"
+      ],
+      "observed": true,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "Aa"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "\t bUbae\txaUo\t "
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "\n"
+      ],
+      "observed": true,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "x\tU oUaaaIxoCxo"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        ""
+      ],
+      "observed": true,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "U"
+      ],
+      "observed": true,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "CI"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "\txUee\tea\n\tbxx"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "e\nI bCI e\t\t\t\t\t\te ICb I\ne"
+      ],
+      "observed": false,
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "xCCx\tUC\n\t\t\t\tUbI\nCxI"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "\tCCUCoUx"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "oeUeeCU\n\toCIb\tCaCeCUo"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "\t\too x\tae\noaaCx eeee xCaao\nea\tx oo\t\t"
+      ],
+      "observed": false,
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        " eoCeaCabbC\tUeeoCxIxe"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        " \no\t\t\tbCebxI\tC\nU\t"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "x\t"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "a\nbIUo\t\tCaooboaeaCUCCCCUCaeaobooaC\t\toUIb\na"
+      ],
+      "observed": false,
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "CaI"
+      ],
+      "observed": true,
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "eabee\n\neb\nU\ne aeb"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "b x\n"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "CIoooeoxe"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "CbUoeC\nCa"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        " xCxI\t\tIxCx "
+      ],
+      "observed": false,
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "x\taab \n\neoUIoaab"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "IbCoxxabxae Uo"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "ae\tCbeobIICbCoCb"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "II"
+      ],
+      "observed": true,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "\n\nbb\n\n"
+      ],
+      "observed": false,
+      "passed": false
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "CoCCIbCxexaCI\noa\n"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": false,
+      "input": [
+        "obeoa UIbCIaxIaIU\t"
+      ],
+      "observed": false,
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": true,
+      "input": [
+        "eI eIC\tU\t UoIaCUUCaIoU \tU\tCIe Ie"
+      ],
+      "observed": false,
+      "passed": false
+    }
+  ],
+  "disagreement_witness": null,
+  "hash_seeds": [
+    0,
+    1
+  ],
+  "passed": false,
+  "process_runs": 2,
+  "repeat_result_sha256": "77c9a8bb2fbcb050022c926fde31f2b740fc395bfeb4a56f587e8a68ee9fec5a",
+  "result_sha256": "77c9a8bb2fbcb050022c926fde31f2b740fc395bfeb4a56f587e8a68ee9fec5a",
+  "seconds": 0.08116549999976996,
+  "stable": true,
+  "test_executions": 64,
+  "worker_error": null
+}
