@@ -245,11 +245,11 @@ def train_one(args, root, mode, seed, cache, train, validation, weights):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--data", type=Path, default=ROOT / "output/multitask_v1")
+    parser.add_argument("--data", type=Path, default=ROOT / "output/multitask_v2")
     parser.add_argument("--init-run", type=Path, required=True, help="Verified full First Instinct v0.1.0 checkpoint")
     parser.add_argument("--output", type=Path)
-    parser.add_argument("--epochs", type=int, default=4)
-    parser.add_argument("--batch-size", type=int, default=8)
+    parser.add_argument("--epochs", type=int, default=6)
+    parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--seeds", nargs="+", type=int, default=[7, 17, 29])
     parser.add_argument("--encoder-learning-rate", type=float, default=2e-5)
     parser.add_argument("--head-learning-rate", type=float, default=1e-3)

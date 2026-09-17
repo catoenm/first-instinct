@@ -40,6 +40,24 @@ class MultitaskTests(unittest.TestCase):
         for row in self.examples():
             self.assertNotEqual(row["input"]["question"], paraphrase(row))
 
+    def test_every_wrong_emotion_appears_as_a_balanced_negative(self):
+        from collections import Counter
+        from multitask_data import EMOTIONS
+        negatives = Counter()
+        questions = Counter()
+        for source_label in EMOTIONS:
+            for offset in range(1, len(EMOTIONS)):
+                rows = human_examples("go_emotions", {"text": "A sample message.", "labels": [source_label]},
+                                      "train", source_label * 10 + offset, negative_offset=offset)
+                for row in rows[1:]:
+                    questions[row["queried_label"], row["target"]["option_id"]] += 1
+                    if row["target"]["option_id"] == "no":
+                        negatives[EMOTIONS[source_label], row["queried_label"]] += 1
+        for actual in EMOTIONS.values():
+            self.assertEqual(questions[actual, "yes"], questions[actual, "no"])
+            for queried in EMOTIONS.values():
+                self.assertEqual(negatives[actual, queried], int(actual != queried))
+
     def test_source_group_cannot_cross_partitions(self):
         train = self.examples()
         test = copy.deepcopy(train)

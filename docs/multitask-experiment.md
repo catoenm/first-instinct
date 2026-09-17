@@ -42,8 +42,9 @@ Every selected human-labeled source produces three examples:
 The two binary examples have **identical state and answer options**, but
 different questions and opposite targets. All versions of a source stay in the
 same partition. Every individual binary question has equally many yes and no
-labels because categories are sampled equally and negative categories follow a
-fixed cycle.
+labels because categories are sampled equally. A balanced schedule pairs each
+reference category with **every other category equally often**, within every
+partition. Binary negatives therefore cover all alternative classes.
 
 The final test contains **360 opposite-answer pairs**. We report how often a
 model gets **both** answers right. A deterministic model that ignores the
@@ -82,7 +83,7 @@ all 141,305,088 parameters. Frozen features are cached once; every full-model
 update recomputes its encoder representations.
 
 - Three training seeds: **7, 17, 29**. They change shuffling, option ordering, and full-model dropout. The data split remains fixed.
-- Four passes over the training questions; batches of eight questions. Nearby lengths are grouped to limit padding.
+- Six passes over the training questions; batches of 32 questions. Nearby lengths are grouped to limit padding.
 - AdamW; encoder learning rate 0.00002, scoring-layer learning rate 0.001, weight decay 0.01, gradient norm clipped at 1.
 - Each task receives equal expected weight in the loss, using inverse task-frequency weights.
 - Select the checkpoint with the lowest mean validation log loss across the five tasks, including the initial checkpoint.
@@ -92,6 +93,14 @@ update recomputes its encoder representations.
 These are two fixed training recipes under the same data and pass budget.
 They have not been separately tuned to establish the best possible performance
 of either approach. No probability calibration or reinforcement learning is used.
+
+Before the final run, a data audit found that an initial pairing rule always used
+the same negative category for each positive category. We replaced it with the
+balanced all-alternatives schedule above. The exploratory training run was
+stopped before any final test predictions. The source states and sample counts
+stay the same; the negative questions change. Training-batch profiling, using
+training examples only, led to the larger batch and six-pass budget. All
+checkpoints in the reported comparison use this corrected recipe.
 
 ## Three final evaluations
 
@@ -122,6 +131,10 @@ install the processor-only PyTorch wheel first as described in the main README.
 Training automatically uses Apple's Metal Performance Shaders backend when
 available, or the central processor otherwise. Training on other machines can
 produce numerically different results.
+
+The training preset targets the measured M5 Max with 128 GB of unified memory.
+The largest-batch preflight fit on that machine. Smaller-memory systems can use
+`--batch-size 8` or less; this changes the optimization trajectory and runtime.
 
 Every run records a protocol, the exact source snapshot, update traces, task
 weights, validation histories, selected model hashes, and complete final test

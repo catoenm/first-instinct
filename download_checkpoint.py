@@ -13,7 +13,6 @@ from pathlib import Path, PurePosixPath
 
 
 ROOT = Path(__file__).resolve().parent
-RELEASE = ROOT / "releases/v0.1.0.json"
 
 
 def checksum(path):
@@ -55,11 +54,13 @@ def unpack_verified(archive, destination, expected_sha256, directory_name):
 
 
 def main():
-    release = json.loads(RELEASE.read_text())
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path,
-                        default=ROOT / "output/pretrained" / release["directory"])
+    parser.add_argument("--version", choices=sorted(path.stem for path in (ROOT / "releases").glob("v*.json")),
+                        default="v0.1.0", help="Checkpoint release to download")
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
+    release = json.loads((ROOT / "releases" / f"{args.version}.json").read_text())
+    args.output = args.output or ROOT / "output/pretrained" / release["directory"]
     if args.output.exists():
         parser.error(f"Destination already exists: {args.output}; choose another --output path")
     args.output.parent.mkdir(parents=True, exist_ok=True)

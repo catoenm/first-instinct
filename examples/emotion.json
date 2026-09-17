@@ -1,0 +1,12 @@
+{
+  "state": "Message: I finally got the job! I'm so happy!",
+  "question": "Which listed emotion is expressed by this message?",
+  "options": [
+    {"id": "anger", "description": "Anger: feeling angry or hostile."},
+    {"id": "disgust", "description": "Disgust: feeling revulsion or strong distaste."},
+    {"id": "fear", "description": "Fear: feeling afraid or threatened."},
+    {"id": "joy", "description": "Joy: feeling happy or delighted."},
+    {"id": "sadness", "description": "Sadness: feeling unhappy, sorrowful, or down."},
+    {"id": "surprise", "description": "Surprise: reacting to something unexpected."}
+  ]
+}

@@ -91,7 +91,7 @@ def paraphrase(row):
     return f"Is {row['queried_label']} conveyed by the author of this message?"
 
 
-def human_examples(family, row, source_split, index):
+def human_examples(family, row, source_split, index, negative_offset=1):
     labels = RELATIONS if family == "snli" else EMOTIONS
     label = labels[row["label"] if family == "snli" else row["labels"][0]]
     state = (f"Premise: {row['premise']}\nHypothesis: {row['hypothesis']}" if family == "snli"
@@ -115,8 +115,9 @@ def human_examples(family, row, source_split, index):
                  "input": {"state": state, "question": question, "options": options},
                  "target": {"option_id": label}}]
     categories = list(labels.values())
-    # With equal class quotas, cycling negatives balances every question's yes/no labels.
-    negative = categories[(categories.index(label) + 1) % len(categories)]
+    if not 1 <= negative_offset < len(categories):
+        raise ValueError("Negative offset must select a different category")
+    negative = categories[(categories.index(label) + negative_offset) % len(categories)]
     for queried in (label, negative):
         question = (RELATION_QUESTIONS[queried] if family == "snli"
                     else f"Does this message express {queried}?")
@@ -142,6 +143,7 @@ def select_human(family, source, tokenizer, seed):
         random.Random(f"{seed}:{family}:{split}").shuffle(indices)
         counts, chosen = Counter(), []
         quota = QUOTAS[family][split]
+        assert quota % (len(labels) - 1) == 0, "Quotas must balance every wrong category"
         for index in indices:
             row = rows[index]
             label = row.get("label") if family == "snli" else (row["labels"][0] if len(row["labels"]) == 1 else None)
@@ -151,7 +153,8 @@ def select_human(family, source, tokenizer, seed):
             if key in accepted_keys or (split == "train" and key in reserved):
                 audit["repeated_or_reserved_source_group"] += 1
                 continue
-            examples = human_examples(family, row, split, index)
+            offset = 1 + counts[label] % (len(labels) - 1)
+            examples = human_examples(family, row, split, index, negative_offset=offset)
             current = shingles(examples[0]["input"]["state"])
             if any(jaccard(current, earlier) >= .8 for earlier in accepted_shingles):
                 audit["near_duplicate_state"] += 1
@@ -258,7 +261,7 @@ def verify(splits):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=ROOT / "output/multitask_v1")
+    parser.add_argument("--output", type=Path, default=ROOT / "output/multitask_v2")
     parser.add_argument("--seed", type=int, default=20260917)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
@@ -285,7 +288,7 @@ def main():
         "tasks": {split: dict(Counter(r["task"] for r in rows)) for split, rows in splits.items()},
         "filter_audit": audits, "quotas_per_class": QUOTAS,
         "split_policy": "Official human splits; all official validation/test source groups excluded from training; one selected row per premise or normalized emotion text; no selected same-family state word-trigram Jaccard >= 0.8. All derived questions stay together. Tools preserve prior train/validation boundaries; old test/development groups retired; new connected groups assigned by fixed hash.",
-        "paired_policy": "Each human state yields one categorical decision and a yes/no pair: its annotated class and the next class in a fixed cycle. Classes sampled equally; every binary question has balanced yes/no labels. Pairs share state and options, with opposite targets.",
+        "paired_policy": "Each human state yields one categorical decision and a yes/no pair: its annotated class and a different class. A balanced offset schedule covers EVERY other class equally for each reference class and split. Every binary question has balanced yes/no labels. Pairs share state and options, with opposite targets.",
         "limitations": "Known task families, not unseen-family generalization. Public human labels and synthetic tool references can be wrong; binary negatives derive from the selected single label. Pretraining contamination not measured. Decisions sharing a source state are correlated. No probability calibration.",
         "code_sha256": {name: checksum(ROOT / name) for name in ("multitask_data.py", "decision_data.py", "decision_dataset.py", "decision_model.py")},
         "outputs": {p.name: checksum(p) for p in sorted(args.output.iterdir())},

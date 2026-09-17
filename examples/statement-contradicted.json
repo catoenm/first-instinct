@@ -1,0 +1,8 @@
+{
+  "state": "Premise: A woman is carrying a red bag.\nHypothesis: A person is carrying something.",
+  "question": "Does the premise guarantee that the hypothesis is false?",
+  "options": [
+    {"id": "yes", "description": "Yes, the answer to the question is yes."},
+    {"id": "no", "description": "No, the answer to the question is no."}
+  ]
+}
