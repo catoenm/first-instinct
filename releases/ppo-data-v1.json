@@ -2,12 +2,134 @@
   "tag": "ppo-data-v1",
   "directory_name": "first-instinct-ppo-data-v1",
   "archive_name": "first-instinct-ppo-data-v1.zip",
-  "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip",
   "archive_bytes": 154968132,
   "archive_sha256": "07a20f8c9ac7014a2da207a1535b7cc2e84d1ec288bc8a4402c01b0f65aab67c",
   "artifact_manifest_sha256": {
     ".": "15812b255fdf853120724aaabb77cf87e5d931bc025804ac9817118280477c3a"
   },
   "policies_trained": 75,
-  "note": "Synthetic numeric experiments; independent of the released text checkpoint and of Jev."
+  "note": "Synthetic numeric experiments; independent of the released text checkpoint and of Jev.",
+  "download_parts": [
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part01",
+      "bytes": 8000000,
+      "sha256": "68513dde8bc59f556025093875a5be94067570487c334e5ccaf4cb56fdf71797",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part01"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part02",
+      "bytes": 8000000,
+      "sha256": "524cb05127f53020e2afc12a0065363cf69afc6027f4367b1deedf125e8221d9",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part02"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part03",
+      "bytes": 8000000,
+      "sha256": "c89b67f1ca2fe54c59d845ce7997720eb05e4c207d2bdcdb1927d63da00432b3",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part03"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part04",
+      "bytes": 8000000,
+      "sha256": "40be20fd508efdd063d032bea52dffd7e8959c2e4109ceb24ceb88a1f0ef7eb3",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part04"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part05",
+      "bytes": 8000000,
+      "sha256": "3684de960c6e6ee65b6d57e5845c388884349896ac247a75d2566c8e3e441ae9",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part05"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part06",
+      "bytes": 8000000,
+      "sha256": "9bd104350bb0285df5dfb2c4740cd9d0d5fee60ec503c07b6b40ca6f4f836492",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part06"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part07",
+      "bytes": 8000000,
+      "sha256": "ee9c72d313ed97b94005049dd82c4354b2eb01c514bf4871346d36310f514e1b",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part07"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part08",
+      "bytes": 8000000,
+      "sha256": "bcd545524ca0993676f049e3f5b63099f5c9d2fdb843ce4cc18a016620f0da91",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part08"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part09",
+      "bytes": 8000000,
+      "sha256": "4ef03a49c10b8453dd7c2e6ab946ea2b8ae21bf2f6ed9688e8b75be061c1422a",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part09"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part10",
+      "bytes": 8000000,
+      "sha256": "65d38940d5fd5e4e0710abfb40ad7529bc511c94715d2fe936521413f10bc4ae",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part10"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part11",
+      "bytes": 8000000,
+      "sha256": "ddac0edb06ec68544c315d566c9c6923297d47931f41486c1824e942fdf71afa",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part11"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part12",
+      "bytes": 8000000,
+      "sha256": "3176527d41d084620c970c58bd7d5b30269cf112445a590765fd9768740e23b6",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part12"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part13",
+      "bytes": 8000000,
+      "sha256": "cbcfe0002930c03b0f79a1160a1d71f6f6cc466c0fb0f3fef4c90b39e359a1ea",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part13"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part14",
+      "bytes": 8000000,
+      "sha256": "298299eaf557c26599d0a236b3e47d7c99e5d2457e449f639a69b9a9e461878e",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part14"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part15",
+      "bytes": 8000000,
+      "sha256": "622bb80088827ec6ac9f74d2efffc8426eeb0f20c0dcee9514cbf3c8cd2427ea",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part15"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part16",
+      "bytes": 8000000,
+      "sha256": "e87e614e292f5a7fb9392c9fb39e569b031d862e132153add3bc921f42175d52",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part16"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part17",
+      "bytes": 8000000,
+      "sha256": "8355da6e32b2791b22396f4bdaa9def6aeb2baf7a7b4a4f66de80b1c2aae389f",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part17"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part18",
+      "bytes": 8000000,
+      "sha256": "ee90bafe9d977ee846ef057fa8a9c993f57648a7a200d439613fc8554c3cbe81",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part18"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part19",
+      "bytes": 8000000,
+      "sha256": "b9913d637b26b02904a01fd28a663eb5ac95b1423bc91e45cf99778e87717b63",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part19"
+    },
+    {
+      "name": "first-instinct-ppo-data-v1.zip.part20",
+      "bytes": 2968132,
+      "sha256": "33971f679820101ab3523ed6458c949aa82655e6cb26c8fe094b901d26633f73",
+      "download_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/first-instinct-ppo-data-v1.zip.part20"
+    }
+  ],
+  "download_base_url": "https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1"
 }

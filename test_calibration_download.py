@@ -5,11 +5,29 @@ import tempfile
 import unittest
 import zipfile
 
-from calibration_lab.download import unpack, verify
+from calibration_lab.download import unpack, verify, download_archive
 from calibration_lab.train import digest
 
 
 class CalibrationDownloadTests(unittest.TestCase):
+    def test_ordered_download_parts_and_legacy_download_reject_corruption(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            parts=[]
+            for i,data in enumerate([b'first part',b'second part']):
+                path=root/f'part{i}'
+                path.write_bytes(data)
+                parts.append({'download_url':path.as_uri(),'bytes':len(data),'sha256':digest(path)})
+            archive=root/'joined'
+            download_archive({'download_parts':parts},archive)
+            self.assertEqual(archive.read_bytes(),b'first partsecond part')
+            legacy={'download_url':archive.as_uri(),'archive_bytes':archive.stat().st_size,'archive_sha256':digest(archive)}
+            download_archive(legacy,root/'legacy')
+            self.assertEqual((root/'legacy').read_bytes(),archive.read_bytes())
+            (root/'part1').write_bytes(b'changed')
+            with self.assertRaisesRegex(ValueError,'checksum or size'):
+                download_archive({'download_parts':parts},root/'rejected')
+
     def test_verified_bundle_and_corruption_rejection(self):
         for experiments in [('.',),('main','thresholds')]:
             with self.subTest(experiments=experiments), tempfile.TemporaryDirectory() as tmp:

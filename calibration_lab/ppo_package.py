@@ -1,10 +1,27 @@
 """Package the sealed model-size, learning-method and data-coverage experiment."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import zipfile
 
 from .train import ROOT, digest, write_json
+
+
+def split_archive(archive,release,part_bytes=8_000_000):
+    if part_bytes<1 or digest(archive)!=release['archive_sha256']:
+        raise ValueError('Invalid part size or changed archive')
+    parts=[]
+    with archive.open('rb') as source:
+        while chunk := source.read(part_bytes):
+            path=archive.with_name(archive.name+f'.part{len(parts)+1:02d}')
+            checksum=hashlib.sha256(chunk).hexdigest()
+            if path.exists() and digest(path)!=checksum:
+                raise FileExistsError(path)
+            path.write_bytes(chunk)
+            parts.append({'name':path.name,'bytes':len(chunk),'sha256':checksum,
+                          'download_url':release['download_base_url']+'/'+path.name})
+    return parts
 
 
 def main():
@@ -32,11 +49,12 @@ def main():
         add('LICENSE',(ROOT/'LICENSE').read_bytes())
         add('README.txt',b'First Instinct: PPO, capacity and data coverage. MIT licensed.\n75 numeric policies, 25 auxiliary value networks, 6 test domains, 5 training seeds.\nIncludes sealed hashes, weights, traces, test predictions and frozen training code.\nInstructions: https://github.com/catoenm/first-instinct/blob/main/docs/ppo-data-results.md\nThese are one-step numeric experiments, independent of Jev and the text checkpoint.\n')
     release = {'tag':'ppo-data-v1','directory_name':directory,'archive_name':args.archive.name,
-               'download_url':f'https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1/{args.archive.name}',
+               'download_base_url':'https://github.com/catoenm/first-instinct/releases/download/ppo-data-v1',
                'archive_bytes':args.archive.stat().st_size,'archive_sha256':digest(args.archive),
                'artifact_manifest_sha256':{'.':digest(args.run/'artifacts_sha256.json')},
                'policies_trained':len(list(args.run.glob('*/manifest.json'))),
                'note':'Synthetic numeric experiments; independent of the released text checkpoint and of Jev.'}
+    release['download_parts']=split_archive(args.archive,release)
     write_json(ROOT/'releases/ppo-data-v1.json',release)
     print(json.dumps(release,indent=2))
 

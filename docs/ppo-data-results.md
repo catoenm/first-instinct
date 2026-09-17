@@ -236,7 +236,9 @@ is approximately 155 MB and includes all selected and initial weights, rollout
 traces, raw test predictions, and frozen training code. It is licensed under
 MIT, including the synthetic examples and tiny numeric weights. Downloading
 does not require an account. The downloader checks the archive checksum and
-every sealed artifact before installation.
+every sealed artifact before installation. The archive is delivered in 20 parts
+of at most 8 MB to keep transfers manageable. The downloader checks each part,
+joins them in order, and verifies the unchanged complete archive checksum.
 
 The [verification record](../results/ppo-data-v1/verification.json) confirms:
 
@@ -259,7 +261,7 @@ ratio left the 0.8–1.2 clipping interval. Those logs include the ratio after
 the final update, so this count is not a count of gradients suppressed by
 clipping. Exact gradient tests check the clipping rule separately.
 
-The repository's 57 offline tests passed locally. Frozen training code also
+The repository's 58 offline tests passed locally. Frozen training code also
 passed the macOS and Linux checks before the final experiment. All training
 ran on the personal Mac's central processor with four PyTorch threads.
 No graphics processor service was rented.

@@ -1,5 +1,6 @@
 """Download and hash-check a public numeric experiment evidence bundle."""
 import argparse
+import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import shutil
@@ -43,6 +44,21 @@ def unpack(archive, destination, release):
         shutil.move(str(content),destination)
 
 
+def download_archive(release, archive):
+    parts = release.get('download_parts') or [{'download_url':release['download_url'],
+             'bytes':release['archive_bytes'],'sha256':release['archive_sha256']}]
+    with archive.open('wb') as output:
+        for part in parts:
+            checksum,size = hashlib.sha256(),0
+            with urllib.request.urlopen(part['download_url'],timeout=90) as source:
+                while chunk := source.read(1024*1024):
+                    checksum.update(chunk)
+                    size += len(chunk)
+                    output.write(chunk)
+            if size != part['bytes'] or checksum.hexdigest() != part['sha256']:
+                raise ValueError('Download part checksum or size mismatch')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--version',choices=['calibration-v1','ppo-data-v1'],default='calibration-v1')
@@ -58,8 +74,7 @@ def main():
     print(f'Downloading {release["archive_bytes"]/1e6:.1f} MB of weights, traces, and per-example evidence.',flush=True)
     with tempfile.TemporaryDirectory(prefix='calibration-download-') as temporary:
         archive = Path(temporary)/'bundle.zip'
-        with urllib.request.urlopen(release['download_url'],timeout=90) as source, archive.open('wb') as output:
-            shutil.copyfileobj(source,output)
+        download_archive(release,archive)
         unpack(archive,args.destination,release)
     print('Downloaded and verified:',args.destination)
 
