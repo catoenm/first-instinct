@@ -230,3 +230,8 @@ offers a much larger pool of tool trajectories, with Apache 2.0 licensing on its
 dataset card. Those trajectories would need their own schema, success and source
 audits before becoming calibrated-outcome targets. They have not been imported
 into this experiment.
+
+We subsequently [audited one TOUCAN shard](toucan-data-audit.md): 12,963
+trajectories across 425 servers. The audit found concrete declaration, identifier
+and split-design issues to resolve before scaling training; it did not execute
+those tools or turn model-judge scores into verified rewards.

@@ -1,0 +1,48 @@
+{
+  "code_sha256": "973adda469fff4bde272866033837f746d227a227f2829dcd52e1ba372858681",
+  "distinct_unscoped_prompt_ids": 7025,
+  "interpretation": "Structural checks are not complete JSON Schema validation. Error-shaped responses are narrow flags. Judge scores are model annotations, not independently verified outcomes. No tools were executed and no data were used for training.",
+  "judge_completeness_histogram": {
+    "1": 718,
+    "2": 2153,
+    "3": 3365,
+    "4": 1941,
+    "5": 4786
+  },
+  "largest_server_cooccurrence_component": 422,
+  "multi_server_rows": 4559,
+  "parse_failures": 0,
+  "parsed_rows": 12963,
+  "rows_with_error_shaped_responses": 564,
+  "server_cooccurrence_components": 4,
+  "source": {
+    "bytes": 149328162,
+    "dataset": "Agent-Ark/Toucan-1.5M",
+    "dataset_card_sha256": "59eb287d06206f09c3a4f27d8b77b11600b54d81daa328b5ce2d1e15485efb13",
+    "file": "Kimi-K2/train-00000-of-00040.parquet",
+    "license": "Apache-2.0 as declared in the pinned dataset card",
+    "revision": "0df3cf37f2abefb380370cfb02eabea2a35ae782",
+    "scope": "One contiguous shard of one teacher subset, not a random sample of the full corpus.",
+    "sha256": "f5204ef699c468ebba526db58f38d37253c471a6b8f6591866613d9bbf3af332"
+  },
+  "structurally_usable_first_calls": 12348,
+  "subsets": {
+    "single-turn-original": 12963
+  },
+  "totals": {
+    "calls": 54100,
+    "calls_without_exact_declared_name": 2492,
+    "calls_without_response": 0,
+    "duplicate_declared_names": 40,
+    "error_shaped_responses": 1077,
+    "malformed_argument_objects": 122,
+    "missing_required_fields": 89,
+    "opaque_responses": 35002,
+    "parallel_call_turns": 0,
+    "responses": 54100,
+    "unmatched_responses": 0
+  },
+  "unique_servers": 425,
+  "unique_whitespace_normalized_questions": 12963,
+  "usable_first_calls_with_judge_completeness_at_least_4": 6462
+}
