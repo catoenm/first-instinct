@@ -1,0 +1,778 @@
+{
+  "schema": "reservation-language-baseline-v1",
+  "created_at_unix": 1789758353.270404,
+  "selection_role": "none",
+  "training": false,
+  "settings": {
+    "episodes": 72,
+    "maximum_model_attempts": 324,
+    "max_tokens": 1536,
+    "max_wall_seconds": 7200,
+    "port": 8766,
+    "retries": 0,
+    "http_timeout_seconds": 60
+  },
+  "cases": [
+    {
+      "case": "p0-w0",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 3,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p0-w1",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 3,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p0-w2",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 3,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p0-w3",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 3,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p1-w0",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 6,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p1-w1",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 6,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p1-w2",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 6,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p1-w3",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_queries",
+        "horizon": 6,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p2-w0",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 3,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p2-w1",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 3,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p2-w2",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 3,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p2-w3",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 3,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p3-w0",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 6,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p3-w1",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 6,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p3-w2",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 6,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p3-w3",
+      "profile": {
+        "cohort": "familiar",
+        "price": "cheap_attempts",
+        "horizon": 6,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "weight_within_cohort": 0.0625
+    },
+    {
+      "case": "p4-w4",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_queries",
+        "horizon": 3,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "weight_within_cohort": 0.125
+    },
+    {
+      "case": "p4-w5",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_queries",
+        "horizon": 3,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "weight_within_cohort": 0.125
+    },
+    {
+      "case": "p5-w4",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_queries",
+        "horizon": 6,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "weight_within_cohort": 0.125
+    },
+    {
+      "case": "p5-w5",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_queries",
+        "horizon": 6,
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "weight_within_cohort": 0.125
+    },
+    {
+      "case": "p6-w4",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_attempts",
+        "horizon": 3,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "weight_within_cohort": 0.125
+    },
+    {
+      "case": "p6-w5",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_attempts",
+        "horizon": 3,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "weight_within_cohort": 0.125
+    },
+    {
+      "case": "p7-w4",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_attempts",
+        "horizon": 6,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "weight_within_cohort": 0.125
+    },
+    {
+      "case": "p7-w5",
+      "profile": {
+        "cohort": "combined",
+        "price": "cheap_attempts",
+        "horizon": 6,
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "weight_within_cohort": 0.125
+    }
+  ],
+  "variants": [
+    "original",
+    "reversed",
+    "reworded"
+  ],
+  "binding": {
+    "adapter_files_sha256": {
+      "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472",
+      "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+      "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+      "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+    },
+    "expected_metadata": {
+      "checkpoint": {
+        "kind": "supervised",
+        "label": "Supervised checkpoint, step 2742",
+        "run_status": "complete",
+        "step": 2742
+      },
+      "device": "mps",
+      "model": "Qwen/Qwen3.5-9B",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "tokenizer_files_sha256": {
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+    },
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "peft": "0.21.0",
+      "tokenizers": "0.23.2",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.31.0"
+    },
+    "sources_sha256": {
+      "puffer_lab/text_baseline.py": "044a97ab9a6df0e992fcb2c3c018befb3a4ac021c9809432b3f09988f764fe31",
+      "puffer_lab/text_render.py": "0ec4808576b3c88d2daea0805a658a0309b921d4bef8137520ab95bfae192385",
+      "test_reservation_language.py": "2e55819c1b69faf5da41ca3f328db81c6ac9dd111a368cd7a8f22b8cf3ffb0b5",
+      "docs/reservation-language-v1-protocol.md": "ce8c25119a05a568fd21c336fe93546445f3d4ed4504b1f32984312820b62e56",
+      "puffer_lab/contract.py": "1deffe17e28a9f057ae0cd64dba412e44d7cf7b7eb9cd8a6e27cd2a0cfcb25f7",
+      "puffer_lab/native.py": "703efb22bebd88e089b663d8012775066ab21f3516b2b1244171eaa321cdb17b",
+      "puffer_lab/native_bridge.c": "c55cfaa7b511ceb0a655d1526c067f5b0122e64cb5d3d2932a253cbbe50e31db",
+      "puffer_lab/reservation_core.h": "4dd829cb61a1af2ee47914e9794c2422fb73d565317acfc53efb1a68a3029548",
+      "general_lab/robustness_local.py": "586ddecc34828564cf8f2937cdf791a925b39a87ebb4963164e1364743596bd1",
+      "general_lab/robustness.py": "653ff8cdc34a1e935638ef40725513c8dde57f5d6223d61acb39d3fcaddcaa8c",
+      "general_lab/toolsandbox_transfer_local.py": "aea3585a5c8f66b1473d45c497ee8bf2e91b0e0544332e541fe382bc952f40b1",
+      "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+      "general_lab/serve.py": "5b4956df967bd056dbdbcc16a4beaad41a0d9667133249fef6995e0c98c9ef0d",
+      "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+      "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+      "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689"
+    },
+    "environment_freeze_sha256": "bd6061363d82eae3de1808150d2e3572e215f327b830f256c7ec93f1e46cf410"
+  },
+  "preflight": {
+    "recorded_history_renderings": 4071,
+    "synthetic_length_guards": 3,
+    "minimum_tokens": 732,
+    "maximum_tokens": 854,
+    "truncation": false
+  },
+  "provenance_limit": "Disk hashes and reported service identity do not attest in-memory tensors.",
+  "content_sha256": "ad600a30fa008499d71812e28c567ceb4d7ce952ad3be9c2e52510c33e54d31d"
+}

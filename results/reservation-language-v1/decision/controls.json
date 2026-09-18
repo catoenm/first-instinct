@@ -1,0 +1,2812 @@
+[
+  {
+    "case": "p0-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p0-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "atomic"
+    ],
+    "return": 0.9549999786540866,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 1,
+      "cost": 18,
+      "code": 3,
+      "known_a": 0,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p0-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p0-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account"
+    ],
+    "return": -0.03499999921768904,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 2,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 14,
+      "code": 2,
+      "known_a": 1,
+      "known_b": 2,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p0-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p0-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account"
+    ],
+    "return": -0.03499999921768904,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 14,
+      "code": 2,
+      "known_a": 2,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p0-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p0-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "create_account"
+    ],
+    "return": -0.03499999921768904,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 14,
+      "code": 9,
+      "known_a": 1,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p1-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p1-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9550000010058284,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 4,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 18,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p1-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p1-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9250000016763806,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 1,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 5,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 30,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p1-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p1-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9250000016763806,
+    "success": 1,
+    "state": {
+      "a": 1,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 5,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 30,
+      "code": 11,
+      "known_a": 1,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p1-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p1-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "create_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9250000016763806,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 5,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 30,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p2-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p2-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "atomic"
+    ],
+    "return": 0.9500000104308128,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 1,
+      "cost": 20,
+      "code": 3,
+      "known_a": 0,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p2-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p2-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account"
+    ],
+    "return": -0.06999999843537807,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 2,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 28,
+      "code": 2,
+      "known_a": 1,
+      "known_b": 2,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p2-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p2-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account"
+    ],
+    "return": -0.06999999843537807,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 28,
+      "code": 2,
+      "known_a": 2,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p2-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p2-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "create_account"
+    ],
+    "return": -0.06999999843537807,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 28,
+      "code": 9,
+      "known_a": 1,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p3-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p3-w0",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 0,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9500000011175871,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 1,
+      "step": 4,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 20,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p3-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p3-w1",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 1,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9200000017881393,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 1,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 1,
+      "step": 5,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 32,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p3-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 1,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p3-w2",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 2,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9200000017881393,
+    "success": 1,
+    "state": {
+      "a": 1,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 1,
+      "step": 5,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 32,
+      "code": 11,
+      "known_a": 1,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p3-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 1,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p3-w3",
+    "profile": {
+      "cohort": "familiar",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "world": 3,
+    "weight_within_cohort": 0.0625,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "inspect_account",
+      "create_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.9200000017881393,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 1,
+      "initial_b": 1,
+      "initial_account": 0,
+      "step": 5,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 32,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p4-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p4-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account"
+    ],
+    "return": -0.03499999921768904,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 2,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 14,
+      "code": 2,
+      "known_a": 1,
+      "known_b": 2,
+      "known_account": 0
+    }
+  },
+  {
+    "case": "p4-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p4-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account"
+    ],
+    "return": -0.03499999921768904,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 1,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 14,
+      "code": 2,
+      "known_a": 2,
+      "known_b": 1,
+      "known_account": 0
+    }
+  },
+  {
+    "case": "p5-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p5-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account",
+      "create_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.8950000023469329,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 1,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 6,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 42,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p5-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p5-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account",
+      "create_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.8950000023469329,
+    "success": 1,
+    "state": {
+      "a": 1,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 6,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 42,
+      "code": 11,
+      "known_a": 1,
+      "known_b": 0,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p6-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p6-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account"
+    ],
+    "return": -0.06999999843537807,
+    "success": 0,
+    "state": {
+      "a": 1,
+      "b": 2,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 28,
+      "code": 2,
+      "known_a": 1,
+      "known_b": 2,
+      "known_account": 0
+    }
+  },
+  {
+    "case": "p6-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p6-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 3,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account"
+    ],
+    "return": -0.06999999843537807,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 1,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 3,
+      "horizon": 3,
+      "done": 1,
+      "outcome": 2,
+      "cost": 28,
+      "code": 2,
+      "known_a": 2,
+      "known_b": 1,
+      "known_account": 0
+    }
+  },
+  {
+    "case": "p7-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 0,
+      "b": 2,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p7-w4",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 4,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_a",
+      "inspect_account",
+      "create_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.8900000024586916,
+    "success": 1,
+    "state": {
+      "a": 0,
+      "b": 1,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 1,
+      "added_b": 0,
+      "initial_a": 0,
+      "initial_b": 2,
+      "initial_account": 0,
+      "step": 6,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 44,
+      "code": 11,
+      "known_a": 0,
+      "known_b": 1,
+      "known_account": 1
+    }
+  },
+  {
+    "case": "p7-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "finish",
+    "actions": [
+      "finish"
+    ],
+    "return": 0.0,
+    "success": 0,
+    "state": {
+      "a": 2,
+      "b": 0,
+      "account": 0,
+      "header": 0,
+      "alloc_a": 0,
+      "alloc_b": 0,
+      "added_a": 0,
+      "added_b": 0,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 1,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 2,
+      "cost": 0,
+      "code": 11,
+      "known_a": -1,
+      "known_b": -1,
+      "known_account": -1
+    }
+  },
+  {
+    "case": "p7-w5",
+    "profile": {
+      "cohort": "combined",
+      "price": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "world": 5,
+    "weight_within_cohort": 0.125,
+    "variant": "public",
+    "actions": [
+      "inspect_stock",
+      "replenish_b",
+      "inspect_account",
+      "create_account",
+      "atomic",
+      "finish"
+    ],
+    "return": 0.8900000024586916,
+    "success": 1,
+    "state": {
+      "a": 1,
+      "b": 0,
+      "account": 1,
+      "header": 1,
+      "alloc_a": 1,
+      "alloc_b": 1,
+      "added_a": 0,
+      "added_b": 1,
+      "initial_a": 2,
+      "initial_b": 0,
+      "initial_account": 0,
+      "step": 6,
+      "horizon": 6,
+      "done": 1,
+      "outcome": 1,
+      "cost": 44,
+      "code": 11,
+      "known_a": 1,
+      "known_b": 0,
+      "known_account": 1
+    }
+  }
+]

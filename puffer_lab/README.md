@@ -10,6 +10,11 @@ Read the [results and limitations](../docs/puffer-reservation-results.md),
 [environment protocol](../docs/puffer-reservation-v1-protocol.md), and
 [learning protocol](../docs/puffer-reservation-learning-v1-protocol.md).
 
+The subsequent [9B language study](../docs/reservation-language-results.md)
+tests complete textual decision trajectories and explicit outcome forecasts.
+It also introduces a verified command-consequence curriculum; those data have
+not yet been used to train the language model.
+
 ## What the agent does
 
 Reserve one unit each of two inventory items for a customer. The customer may

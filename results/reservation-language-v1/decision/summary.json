@@ -1,0 +1,166 @@
+{
+  "model": {
+    "original/familiar": {
+      "episodes": 16,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.6875,
+      "mean_return": 0.6418750021839514,
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.5
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 0.875
+        }
+      }
+    },
+    "reversed/familiar": {
+      "episodes": 16,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.6875,
+      "mean_return": 0.40000000433064997,
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.625
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 0.75
+        }
+      }
+    },
+    "reworded/familiar": {
+      "episodes": 16,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.6875,
+      "mean_return": 0.5193750027101487,
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.625
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 0.75
+        }
+      }
+    },
+    "original/combined": {
+      "episodes": 8,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.125,
+      "mean_return": -0.05062499886844307,
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 0.25
+        }
+      }
+    },
+    "reversed/combined": {
+      "episodes": 8,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.25,
+      "mean_return": -0.31812499614898115,
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 0.5
+        }
+      }
+    },
+    "reworded/combined": {
+      "episodes": 8,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.125,
+      "mean_return": -0.06499999854713678,
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 0.25
+        }
+      }
+    }
+  },
+  "controls": {
+    "finish/familiar": {
+      "episodes": 16,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.0,
+      "mean_return": 0.0,
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 0.0
+        }
+      }
+    },
+    "public/familiar": {
+      "episodes": 16,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.625,
+      "mean_return": 0.5643750005401671,
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.25
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 1.0
+        }
+      }
+    },
+    "finish/combined": {
+      "episodes": 8,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.0,
+      "mean_return": 0.0,
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 0.0
+        }
+      }
+    },
+    "public/combined": {
+      "episodes": 8,
+      "total_cohort_weight": 1.0,
+      "success_rate": 0.5,
+      "mean_return": 0.42000000178813934,
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 1.0
+        }
+      }
+    }
+  }
+}

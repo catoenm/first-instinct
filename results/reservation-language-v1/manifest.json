@@ -1,0 +1,26 @@
+{
+  "schema": "reservation-language-evidence-v1",
+  "sha256": {
+    "README.md": "36a331241d8f16d23515d9ff19dff8867e3130a9a962a72fb89acb8da99cc6c4",
+    "analysis.json": "0862f19ed556a105a2e2fc344ab870578eaba45f68014e8aecc434d919005ba9",
+    "decision/controls.json": "853e50bdf20e41f34ac8dcd68c1d269ba70edc5f61c3ae969a7bd68d8f224a97",
+    "decision/episodes.jsonl": "09b65c04bed087f590daab440846011c5e2c4087d917a484c651ce05fb297f65",
+    "decision/freeze.json": "1abbdd3949fbb5215bf4bf3adfa3235061b0eeea10586d454c6f62fbe6f58c80",
+    "decision/progress.json": "c586d42b29510b9c1b1d53664dd18da31a4990588c73406e9a88b1e160ca74e2",
+    "decision/requests.jsonl": "a4a994f72c3037f6e643114e965a032df248ce7c828d2079bd5fa0bc113763f4",
+    "decision/responses.jsonl": "51a8d5a984b8b5e35cbe9621f76a05470feebbd2ba6c95214107aa0d3f609694",
+    "decision/run.json": "fc6a4b7c6b8a2f484bb9d0cf6d5686f24be908d01f23a602bea56188f90c9189",
+    "decision/summary.json": "26052c3f4eeadb24a15145b19cc6d51d0e172e30c738e32aa564f68b41757726",
+    "decision/transitions.jsonl": "afa42b99384f15907de03c243b1f19676ce841a46408025310afc5676991799d",
+    "dynamics/freeze.json": "e080cfd6efc8ff5d56c907f7f85e490746fa50c89915e69a2902dda84a00c849",
+    "dynamics/rows.jsonl": "49922981370c9908d6fa94ada85614eda5af93ab1fa58dfc8a76a7872dd3186e",
+    "dynamics/summary.json": "179a07127a737ca014957ee71b93e360ae85e824e6837a531b148db884264f49",
+    "forecast/attempts.jsonl": "a94c141a5c780c0b00ea710888b375019ae93ee31d16dca9a967398275676899",
+    "forecast/freeze.json": "558f0f7013de0f0ee011322a73484e73d9d56b0c9b404cacfc070c04c9bbecf2",
+    "forecast/gold.json": "d5c1f4c998510d7a7e4b0a818f2b972ed246113a01024a6b9cc9d11348c336b0",
+    "forecast/progress.json": "cba42e11ab4ea0029a03c20a83da64c81197ad221501539a1d445354c0cccf7f",
+    "forecast/questions.json": "20a2dac24e0c275ead8fbb176bf6405ec91c0cbc10591216eb675efa802e87a4",
+    "forecast/responses.jsonl": "e4b640ac4446ac8fe43015ed8b8ffc1f32bd80ca96963df4bc04599d2b096838",
+    "forecast/run.json": "f2fde7f500a90cf7e06ddc9248000a36ee9baee720c97ac77cfafe4778f5db93"
+  }
+}

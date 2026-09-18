@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "started_at_unix": 1789758373.032485,
+  "freeze_sha256": "1abbdd3949fbb5215bf4bf3adfa3235061b0eeea10586d454c6f62fbe6f58c80",
+  "training": false,
+  "model_updated": false,
+  "model_attempts": 254,
+  "completed_episodes": 72,
+  "elapsed_seconds": 554.2307848340133,
+  "completed_at_unix": 1789758927.2471738
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "reservation-dynamics-development-v1",
+  "source_sha256": {
+    "puffer_lab/dynamics_data.py": "5c35a0622b33534f42d22f66078c349eca410a63935f6e549c5774414acbdf5f",
+    "test_reservation_dynamics.py": "0ca9e5d45849c97ae7ae949aeecc24c2296e3bbeac60c2859f141db630d91767",
+    "docs/reservation-dynamics-data-v1.md": "182e49705aed6fe897acbe85ecf16e28b506765ac93f9441abdcf3e080fb265a",
+    "puffer_lab/text_render.py": "0ec4808576b3c88d2daea0805a658a0309b921d4bef8137520ab95bfae192385",
+    "puffer_lab/contract.py": "1deffe17e28a9f057ae0cd64dba412e44d7cf7b7eb9cd8a6e27cd2a0cfcb25f7"
+  },
+  "branches_sha256": "8da662f62190222f08b69d866ac713c4789e5cd64f53eed5605e6ac090da289d",
+  "qualified_targets_sha256": "8b34708cd0fb6d73bc116414cba56d7e6262647c4ced6db7315a2e3fbd63aa7a",
+  "max_rows": 3500,
+  "max_bytes": 25000000,
+  "training": false
+}
