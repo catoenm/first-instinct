@@ -1,0 +1,1209 @@
+{
+  "kind": "validation",
+  "mode": "policy",
+  "mean_return": 0.1431249974993989,
+  "success_rate": 0.25,
+  "episodes": 32,
+  "rows": [
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.9625000115483999,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.037500000558793545,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.037500000558793545,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.037500000558793545,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.9250000109896064,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.07500000111758709,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.07500000111758709,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.07500000111758709,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.8949999734759331,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.10500000044703484,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.10500000044703484,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.10500000044703484,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.7899999730288982,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.21000000089406967,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.21000000089406967,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.21000000089406967,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.9625000115483999,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.037500000558793545,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.037500000558793545,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.037500000558793545,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.9250000109896064,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.07500000111758709,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.07500000111758709,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.07500000111758709,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.8949999734759331,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.10500000044703484,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.10500000044703484,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.10500000044703484,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": 0.7899999730288982,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.21000000089406967,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.21000000089406967,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic",
+        "atomic"
+      ],
+      "return": -0.21000000089406967,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    }
+  ]
+}

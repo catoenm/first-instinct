@@ -1,0 +1,1192 @@
+{
+  "kind": "validation",
+  "mode": "policy",
+  "mean_return": 0.038281251676380634,
+  "success_rate": 0.125,
+  "episodes": 32,
+  "rows": [
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.9575000004842877,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.029999999329447746,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.04249999951571226,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.04249999951571226,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.9350000005215406,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.029999999329447746,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.06499999947845936,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.06499999947845936,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.9575000004842877,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.029999999329447746,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.04249999951571226,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.04249999951571226,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.14999999664723873,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.14999999664723873,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.14999999664723873,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.9350000005215406,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.029999999329447746,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.06499999947845936,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "finish"
+      ],
+      "return": -0.06499999947845936,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "replenish_a",
+        "finish"
+      ],
+      "return": -0.11999999731779099,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    }
+  ]
+}

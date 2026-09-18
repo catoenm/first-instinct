@@ -1,0 +1,17 @@
+{
+  "schema": "puffer-reservation-learning-v1",
+  "seeds": [
+    41,
+    73
+  ],
+  "training_transitions_per_seed": 131072,
+  "maximum_transitions_including_evaluation_per_seed": 160000,
+  "source_sha256": {
+    "puffer_lab/train_small.py": "d9665aeb3aa22832d6d60a8240d738fd7ff65014b6f5a68232e9cdbd9b5bccb0",
+    "test_puffer_reservation.py": "ee1ad2ec3cf5c0925d8ff56b0d426070402ac10b50969d2c568829d909f3ad02",
+    "docs/puffer-reservation-learning-v1-protocol.md": "cc1b1b955bdde40fa3dfd88c8d5ca0805b04d9f28cd53292c58fabaa70574c91"
+  },
+  "environment_freeze_sha256": "bd6061363d82eae3de1808150d2e3572e215f327b830f256c7ec93f1e46cf410",
+  "cuda_puffer_trainer": false,
+  "language_model_training": false
+}

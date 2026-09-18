@@ -1,0 +1,60 @@
+{
+  "status": "complete",
+  "error": null,
+  "seed": 73,
+  "updates_completed": 64,
+  "training_transitions": 131072,
+  "all_transitions": 135340,
+  "optimizer_steps": 2048,
+  "selected_update": 40,
+  "validation_selection": [
+    {
+      "update": 0,
+      "mean_return": 0.038281251676380634,
+      "success_rate": 0.125
+    },
+    {
+      "update": 8,
+      "mean_return": 0.1431249974993989,
+      "success_rate": 0.25
+    },
+    {
+      "update": 16,
+      "mean_return": 0.6321874954737723,
+      "success_rate": 0.75
+    },
+    {
+      "update": 24,
+      "mean_return": 0.5443750007543713,
+      "success_rate": 0.625
+    },
+    {
+      "update": 32,
+      "mean_return": 0.7920312493224628,
+      "success_rate": 0.875
+    },
+    {
+      "update": 40,
+      "mean_return": 0.9359374975902028,
+      "success_rate": 1.0
+    },
+    {
+      "update": 48,
+      "mean_return": 0.9359374975902028,
+      "success_rate": 1.0
+    },
+    {
+      "update": 56,
+      "mean_return": 0.9359374975902028,
+      "success_rate": 1.0
+    },
+    {
+      "update": 64,
+      "mean_return": 0.9359374975902028,
+      "success_rate": 1.0
+    }
+  ],
+  "elapsed_seconds": 2.7379500409879256,
+  "language_model_updated": false,
+  "native_puffer_trainer_executed": false
+}

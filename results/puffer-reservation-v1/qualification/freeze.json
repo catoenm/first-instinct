@@ -1,0 +1,144 @@
+{
+  "schema": "puffer-reservation-qualification-v1",
+  "source_sha256": {
+    "puffer_lab/__init__.py": "9937c47a12d672c1e08e2eee4d842abdb9df8437fbb14533b36985cf3aa7e146",
+    "puffer_lab/native.py": "703efb22bebd88e089b663d8012775066ab21f3516b2b1244171eaa321cdb17b",
+    "puffer_lab/sql_oracle.py": "60eeccac2488ed90838f8738f6495407de4ecc6c8e2a00504f357f2f41c0ae1a",
+    "puffer_lab/contract.py": "1deffe17e28a9f057ae0cd64dba412e44d7cf7b7eb9cd8a6e27cd2a0cfcb25f7",
+    "puffer_lab/qualify.py": "9eb27d8a824c653fd15bacd005115400f150df73dd24d4bc08f07ca734f245af",
+    "puffer_lab/reservation_core.h": "4dd829cb61a1af2ee47914e9794c2422fb73d565317acfc53efb1a68a3029548",
+    "puffer_lab/reservation.h": "a01c8f0fed98fe32d78d6c5117e6be6edf4e798fbf8e141368274da7c3cb47e9",
+    "puffer_lab/native_bridge.c": "c55cfaa7b511ceb0a655d1526c067f5b0122e64cb5d3d2932a253cbbe50e31db",
+    "puffer_lab/check_adapter.c": "036305a7e70d39610f103b7df9ec16e1e8bf2f483c33750561d6fa53b550b270",
+    "puffer_lab/reservation.ini": "bf87183b735acef5abc014c7899555c04ed281a1538214306866addea12f237f",
+    "docs/puffer-reservation-v1-protocol.md": "c605048e7702982a827ba72e9d6453346f37d61a53db15c7c32732997f76b053"
+  },
+  "puffer_revision": "6ffa5b10dbbbe4d1e8288367c7d9d3acd3bad4a2",
+  "reference_sha256": {
+    "LICENSE.raylib": "355bdd50936805f62f091da289f7ba467ea0711586a464ad755dcc73dcfb52a8",
+    "LICENSE.pufferlib": "24dae53fbe9da4b15693499b043783c7572b894ac9a5dbc6889856a409c24dee",
+    "ini.h": "cd4c83ba12ba40a7bef03ad810246cc0a5880f81e8566f6ac5a089b5c598859f",
+    "pufferenv.h": "3324a670791e2b3e46cbe7d10d9233d52fbc258e0d7e37d5b0c470e580de880c",
+    "raylib.h": "afb287ecd313de61e0000921375190b7e1cc35cd381ad6caf914489473a3c871"
+  },
+  "profiles": [
+    {
+      "name": "cheap_queries",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "cheap_attempts",
+      "horizon": 6,
+      "costs": [
+        8,
+        8,
+        4,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "short_horizon",
+      "horizon": 3,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "combined_faults",
+      "horizon": 6,
+      "costs": [
+        1,
+        1,
+        16,
+        4,
+        12,
+        12,
+        12,
+        8,
+        0
+      ],
+      "prior": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "prefixes": [
+    [],
+    [
+      "inspect_stock"
+    ],
+    [
+      "sequential"
+    ]
+  ],
+  "actions": [
+    "inspect_stock",
+    "inspect_account",
+    "atomic",
+    "sequential",
+    "replenish_a",
+    "replenish_b",
+    "create_account",
+    "undo",
+    "finish"
+  ],
+  "max_database_attempts_including_debug": 1424,
+  "prequalification_debug_attempts": 6,
+  "planned_main_branches": 1296,
+  "sqlite_version": "3.53.4",
+  "training_performed": false,
+  "model_predictions": 0
+}

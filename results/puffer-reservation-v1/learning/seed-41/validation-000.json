@@ -1,0 +1,1209 @@
+{
+  "kind": "validation",
+  "mode": "policy",
+  "mean_return": -0.27906248456565663,
+  "success_rate": 0.1875,
+  "episodes": 32,
+  "rows": [
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": 0.9550000289455056,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -1.0449999710544944,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "sequential"
+      ],
+      "return": -1.0249999901279807,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -0.04499999899417162,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": 0.9550000289455056,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -1.0449999710544944,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "sequential"
+      ],
+      "return": -1.0249999901279807,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -0.04499999899417162,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          2,
+          2,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "undo",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": 0.945000029169023,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -1.054999970830977,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "sequential"
+      ],
+      "return": -1.0349999899044633,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -0.0549999987706542,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": 0.8550000311806798,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -1.1449999688193202,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "sequential",
+        "inspect_stock",
+        "sequential",
+        "replenish_a"
+      ],
+      "return": -1.089999970048666,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          5,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": 0.945000029169023,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -1.054999970830977,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "sequential"
+      ],
+      "return": -1.0349999899044633,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b"
+      ],
+      "return": -0.0549999987706542,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 0,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": 0.8550000311806798,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 1,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -1.1449999688193202,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 2,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "sequential",
+        "inspect_stock",
+        "sequential",
+        "replenish_a"
+      ],
+      "return": -1.089999970048666,
+      "success": 0,
+      "outcome": 3,
+      "aggregation_weight": 0.03125
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          6,
+          6,
+          14,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "world": 3,
+      "repeat": 0,
+      "actions": [
+        "sequential",
+        "inspect_stock",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b",
+        "replenish_b"
+      ],
+      "return": -0.14499999675899744,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.03125
+    }
+  ]
+}

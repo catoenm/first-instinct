@@ -1,0 +1,29 @@
+{
+  "seed": 73,
+  "algorithm": "local PyTorch PPO, not native CUDA PuffeRL",
+  "device": "cpu",
+  "parameters": 7370,
+  "updates": 64,
+  "environments": 64,
+  "rollout_steps": 32,
+  "training_transitions": 131072,
+  "epochs": 4,
+  "minibatch": 256,
+  "learning_rate": 0.0003,
+  "clip": 0.2,
+  "entropy": 0.02,
+  "value_coefficient": 0.5,
+  "gradient_norm": 0.5,
+  "gamma": 1.0,
+  "lambda": 0.95,
+  "max_transitions_with_evaluation": 160000,
+  "max_seconds": 900,
+  "torch_version": "2.14.0",
+  "initial_weight_sha256": "dee0ecc88a91fd99434832d1b133566de6ca2d5fe0a812f640590b3369ea632e",
+  "sources_sha256": {
+    "train_small.py": "d9665aeb3aa22832d6d60a8240d738fd7ff65014b6f5a68232e9cdbd9b5bccb0",
+    "reservation_core.h": "4dd829cb61a1af2ee47914e9794c2422fb73d565317acfc53efb1a68a3029548",
+    "contract.py": "1deffe17e28a9f057ae0cd64dba412e44d7cf7b7eb9cd8a6e27cd2a0cfcb25f7",
+    "native.py": "703efb22bebd88e089b663d8012775066ab21f3516b2b1244171eaa321cdb17b"
+  }
+}

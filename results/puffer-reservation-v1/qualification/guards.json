@@ -1,0 +1,40 @@
+[
+  {
+    "guard": "noop",
+    "world": 0,
+    "outcome": "incomplete"
+  },
+  {
+    "guard": "noop",
+    "world": 1,
+    "outcome": "incomplete"
+  },
+  {
+    "guard": "noop",
+    "world": 2,
+    "outcome": "incomplete"
+  },
+  {
+    "guard": "noop",
+    "world": 3,
+    "outcome": "incomplete"
+  },
+  {
+    "guard": "noop",
+    "world": 4,
+    "outcome": "incomplete"
+  },
+  {
+    "guard": "noop",
+    "world": 5,
+    "outcome": "incomplete"
+  },
+  {
+    "guard": "protected_corruption",
+    "outcome": "forbidden"
+  },
+  {
+    "guard": "scoped_undo_preserves_replenishment",
+    "outcome": "success"
+  }
+]

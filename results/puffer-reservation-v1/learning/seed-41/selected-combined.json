@@ -1,0 +1,605 @@
+{
+  "kind": "combined",
+  "mode": "policy",
+  "mean_return": 0.39750000229105353,
+  "success_rate": 0.5,
+  "episodes": 16,
+  "rows": [
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.04999999888241291,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.04999999888241291,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "create_account",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.9200000017881393,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "create_account",
+        "atomic",
+        "replenish_b",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.8900000024586916,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.1099999975413084,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.1099999975413084,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "create_account",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.8600000031292439,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "create_account",
+        "atomic",
+        "replenish_b",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.8300000037997961,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.04999999888241291,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.04999999888241291,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "create_account",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.9200000017881393,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "create_account",
+        "atomic",
+        "replenish_b",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.8900000024586916,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.1099999975413084,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "atomic",
+        "create_account",
+        "atomic"
+      ],
+      "return": -0.1099999975413084,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "atomic",
+        "create_account",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.8600000031292439,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "replenish_a",
+        "create_account",
+        "atomic",
+        "replenish_b",
+        "atomic",
+        "finish"
+      ],
+      "return": 0.8300000037997961,
+      "success": 1,
+      "outcome": 1,
+      "aggregation_weight": 0.0625
+    }
+  ]
+}

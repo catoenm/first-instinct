@@ -1,0 +1,8 @@
+{
+  "transitions": 3000,
+  "episodes": 738,
+  "status": "passed",
+  "trainer_executed": false,
+  "binary_sha256": "022fbb88503a2a08d3132d292ec1f209a0f974f513e3942d29267a4d1cf4a2c6",
+  "header_sha256": "3324a670791e2b3e46cbe7d10d9233d52fbc258e0d7e37d5b0c470e580de880c"
+}

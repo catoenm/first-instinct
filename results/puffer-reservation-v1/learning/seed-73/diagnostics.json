@@ -1,0 +1,62 @@
+{
+  "initial": {
+    "familiar": {
+      "mean_return": 0.03500000201165676,
+      "success_rate": 0.125,
+      "episodes": 32
+    },
+    "combined": {
+      "mean_return": -0.011249999748542905,
+      "success_rate": 0.0,
+      "episodes": 16
+    }
+  },
+  "selected": {
+    "familiar": {
+      "mean_return": 0.9337499990360811,
+      "success_rate": 1.0,
+      "episodes": 32
+    },
+    "combined": {
+      "mean_return": 0.39250000240281224,
+      "success_rate": 0.5,
+      "episodes": 16
+    }
+  },
+  "finish": {
+    "familiar": {
+      "mean_return": 0.0,
+      "success_rate": 0.0,
+      "episodes": 32
+    },
+    "combined": {
+      "mean_return": 0.0,
+      "success_rate": 0.0,
+      "episodes": 16
+    }
+  },
+  "public": {
+    "familiar": {
+      "mean_return": 0.5643750005401671,
+      "success_rate": 0.625,
+      "episodes": 32
+    },
+    "combined": {
+      "mean_return": 0.42000000178813934,
+      "success_rate": 0.5,
+      "episodes": 16
+    }
+  },
+  "random": {
+    "familiar": {
+      "mean_return": -0.00648437169729732,
+      "success_rate": 0.15234375,
+      "episodes": 512
+    },
+    "combined": {
+      "mean_return": -0.06145507608380285,
+      "success_rate": 0.03125,
+      "episodes": 256
+    }
+  }
+}

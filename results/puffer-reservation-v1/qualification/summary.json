@@ -1,0 +1,86 @@
+{
+  "status": "qualified",
+  "error": null,
+  "training_performed": false,
+  "mechanisms": 1,
+  "public_profiles": 4,
+  "matched_replayed_branches": 648,
+  "database_attempts": 1304,
+  "debug_attempts": 6,
+  "database_attempts_total": 1310,
+  "sql_statements_primary_branches": 93765,
+  "primary_simulated_transitions": 2878,
+  "baselines": [
+    {
+      "profile": "cheap_queries",
+      "expected_returns": {
+        "atomic": 0.905625,
+        "create_account": 0.9125,
+        "finish": 0.0,
+        "inspect_account": 0.9325,
+        "inspect_stock": 0.9325,
+        "replenish_a": 0.91,
+        "replenish_b": 0.91,
+        "sequential": 0.925625,
+        "undo": 0.9125
+      },
+      "best_first_actions": [
+        "inspect_account",
+        "inspect_stock"
+      ]
+    },
+    {
+      "profile": "cheap_attempts",
+      "expected_returns": {
+        "atomic": 0.945,
+        "create_account": 0.925,
+        "finish": 0.0,
+        "inspect_account": 0.9275,
+        "inspect_stock": 0.9275,
+        "replenish_a": 0.905,
+        "replenish_b": 0.905,
+        "sequential": 0.935,
+        "undo": 0.9075
+      },
+      "best_first_actions": [
+        "atomic"
+      ]
+    },
+    {
+      "profile": "short_horizon",
+      "expected_returns": {
+        "atomic": 0.185625,
+        "create_account": 0.4325,
+        "finish": 0.0,
+        "inspect_account": 0.2125,
+        "inspect_stock": 0.2125,
+        "replenish_a": -0.041875,
+        "replenish_b": -0.041875,
+        "sequential": 0.206875,
+        "undo": -0.03875
+      },
+      "best_first_actions": [
+        "create_account"
+      ]
+    },
+    {
+      "profile": "combined_faults",
+      "expected_returns": {
+        "atomic": 0.8895833333333333,
+        "create_account": 0.9075,
+        "finish": 0.0,
+        "inspect_account": 0.92,
+        "inspect_stock": 0.92,
+        "replenish_a": 0.9,
+        "replenish_b": 0.9,
+        "sequential": 0.9129166666666667,
+        "undo": 0.9
+      },
+      "best_first_actions": [
+        "inspect_account",
+        "inspect_stock"
+      ]
+    }
+  ],
+  "elapsed_seconds": 1.9433250409783795
+}

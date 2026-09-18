@@ -1,0 +1,569 @@
+{
+  "kind": "combined",
+  "mode": "policy",
+  "mean_return": -0.011249999748542905,
+  "success_rate": 0.0,
+  "episodes": 16,
+  "rows": [
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 0,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 1,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 2,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 3,
+      "profile": {
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.0024999999441206455,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 4,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 5,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 6,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 4,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    },
+    {
+      "context": 7,
+      "profile": {
+        "costs": [
+          8,
+          8,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "world": 5,
+      "repeat": 0,
+      "actions": [
+        "inspect_account",
+        "finish"
+      ],
+      "return": -0.019999999552965164,
+      "success": 0,
+      "outcome": 2,
+      "aggregation_weight": 0.0625
+    }
+  ]
+}
