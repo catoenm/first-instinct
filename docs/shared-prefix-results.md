@@ -1,5 +1,8 @@
 # Reusing one state across independent questions
 
+A later [ordinary-batch control](shared-prefix-batch-control-results.md) adds
+the missing batched baseline. The original measurements below remain unchanged.
+
 An isolated inference prototype answered eight questions about one shared state
 in **3.65 seconds**, versus **12.69 seconds** for serial complete forwards of the
 identical prompts. That is a 3.47× ratio of median wall times on an Apple M5 Max.

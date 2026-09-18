@@ -94,8 +94,11 @@ They establish a new data mechanism, not learned calibration or transfer.
 
 The [measured shared-prefix prototype](shared-prefix-results.md) preserved
 same-layout answers while reducing eight-question serial latency from 12.69 to
-3.65 seconds locally. All versions missed one of eight questions. A batched
-baseline and broader prompt-order checks remain necessary before deployment.
+3.65 seconds locally. All versions missed one of eight questions. A subsequent
+[ordinary-batch control](shared-prefix-batch-control-results.md) measured 12.07
+seconds batched versus 3.50 seconds cached, with matching answers, on the same
+Mac reference-kernel runtime. This does not establish a CUDA speedup; broader
+prompt-order checks remain necessary before deployment.
 
 ## Revised sequence
 

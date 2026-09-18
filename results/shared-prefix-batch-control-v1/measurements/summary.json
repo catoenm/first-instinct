@@ -1,0 +1,3072 @@
+{
+  "status": "verified",
+  "schema": "shared-prefix-batch-control-analysis-v1",
+  "model_inference": false,
+  "freeze_content_sha256": "951e5fe59bbec09d156eaf27916b23c8f3c3dcc614fe56244d71e4a41da7053e",
+  "totals": {
+    "questions": 156,
+    "model_calls": 123,
+    "forward_input_tokens": 63698,
+    "padded_input_tokens": 64038
+  },
+  "observations": 40,
+  "measured_trials": 27,
+  "timing": [
+    {
+      "questions": 1,
+      "condition": "batched_complete",
+      "observations": [
+        {
+          "repetition": 2,
+          "wall_seconds": 1.5422528339986457
+        },
+        {
+          "repetition": 0,
+          "wall_seconds": 1.5426789580087643
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 1.559445874998346
+        }
+      ],
+      "mean_wall_seconds": 1.5481258890019187,
+      "median_wall_seconds": 1.5426789580087643,
+      "min_wall_seconds": 1.5422528339986457,
+      "max_wall_seconds": 1.559445874998346
+    },
+    {
+      "questions": 1,
+      "condition": "serial_complete",
+      "observations": [
+        {
+          "repetition": 2,
+          "wall_seconds": 1.5495506669976749
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 1.5508171249966836
+        },
+        {
+          "repetition": 0,
+          "wall_seconds": 1.5099569580052048
+        }
+      ],
+      "mean_wall_seconds": 1.536774916666521,
+      "median_wall_seconds": 1.5495506669976749,
+      "min_wall_seconds": 1.5099569580052048,
+      "max_wall_seconds": 1.5508171249966836
+    },
+    {
+      "questions": 1,
+      "condition": "serial_shared_prefix",
+      "observations": [
+        {
+          "repetition": 0,
+          "wall_seconds": 1.5412497079960303
+        },
+        {
+          "repetition": 2,
+          "wall_seconds": 1.569623416988179
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 1.5908572080079466
+        }
+      ],
+      "mean_wall_seconds": 1.5672434443307186,
+      "median_wall_seconds": 1.569623416988179,
+      "min_wall_seconds": 1.5412497079960303,
+      "max_wall_seconds": 1.5908572080079466
+    },
+    {
+      "questions": 3,
+      "condition": "batched_complete",
+      "observations": [
+        {
+          "repetition": 2,
+          "wall_seconds": 4.625638500001514
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 4.486315750007634
+        },
+        {
+          "repetition": 0,
+          "wall_seconds": 4.633730290996027
+        }
+      ],
+      "mean_wall_seconds": 4.581894847001725,
+      "median_wall_seconds": 4.625638500001514,
+      "min_wall_seconds": 4.486315750007634,
+      "max_wall_seconds": 4.633730290996027
+    },
+    {
+      "questions": 3,
+      "condition": "serial_complete",
+      "observations": [
+        {
+          "repetition": 0,
+          "wall_seconds": 4.647075999993831
+        },
+        {
+          "repetition": 2,
+          "wall_seconds": 4.620647332994849
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 4.639561292002327
+        }
+      ],
+      "mean_wall_seconds": 4.635761541663669,
+      "median_wall_seconds": 4.639561292002327,
+      "min_wall_seconds": 4.620647332994849,
+      "max_wall_seconds": 4.647075999993831
+    },
+    {
+      "questions": 3,
+      "condition": "serial_shared_prefix",
+      "observations": [
+        {
+          "repetition": 1,
+          "wall_seconds": 2.131168624997372
+        },
+        {
+          "repetition": 0,
+          "wall_seconds": 2.1372533749963623
+        },
+        {
+          "repetition": 2,
+          "wall_seconds": 2.151962916002958
+        }
+      ],
+      "mean_wall_seconds": 2.140128305332231,
+      "median_wall_seconds": 2.1372533749963623,
+      "min_wall_seconds": 2.131168624997372,
+      "max_wall_seconds": 2.151962916002958
+    },
+    {
+      "questions": 8,
+      "condition": "batched_complete",
+      "observations": [
+        {
+          "repetition": 0,
+          "wall_seconds": 12.048781374993268
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 12.072016707999865
+        },
+        {
+          "repetition": 2,
+          "wall_seconds": 12.740883791004308
+        }
+      ],
+      "mean_wall_seconds": 12.28722729133248,
+      "median_wall_seconds": 12.072016707999865,
+      "min_wall_seconds": 12.048781374993268,
+      "max_wall_seconds": 12.740883791004308
+    },
+    {
+      "questions": 8,
+      "condition": "serial_complete",
+      "observations": [
+        {
+          "repetition": 2,
+          "wall_seconds": 12.325542666003457
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 12.463433083001291
+        },
+        {
+          "repetition": 0,
+          "wall_seconds": 12.333073208996211
+        }
+      ],
+      "mean_wall_seconds": 12.374016319333654,
+      "median_wall_seconds": 12.333073208996211,
+      "min_wall_seconds": 12.325542666003457,
+      "max_wall_seconds": 12.463433083001291
+    },
+    {
+      "questions": 8,
+      "condition": "serial_shared_prefix",
+      "observations": [
+        {
+          "repetition": 2,
+          "wall_seconds": 3.4996625000057975
+        },
+        {
+          "repetition": 0,
+          "wall_seconds": 3.50099837500602
+        },
+        {
+          "repetition": 1,
+          "wall_seconds": 3.4311824589967728
+        }
+      ],
+      "mean_wall_seconds": 3.4772811113361968,
+      "median_wall_seconds": 3.4996625000057975,
+      "min_wall_seconds": 3.4311824589967728,
+      "max_wall_seconds": 3.50099837500602
+    }
+  ],
+  "median_ratios": [
+    {
+      "questions": 1,
+      "serial_over_batch": 1.004454399895219,
+      "serial_over_cache": 0.9872117415086606,
+      "batch_over_cache": 0.982833806703065
+    },
+    {
+      "questions": 3,
+      "serial_over_batch": 1.0030099178742151,
+      "serial_over_cache": 2.1708054582018024,
+      "batch_over_cache": 2.1642911196756853
+    },
+    {
+      "questions": 8,
+      "serial_over_batch": 1.0216249287348442,
+      "serial_over_cache": 3.5240750240846883,
+      "batch_over_cache": 3.4494802593049663
+    }
+  ],
+  "equivalence_passed": true,
+  "probability_tolerance": 0.0001,
+  "max_probability_delta_all_checks": 2.7418136596679688e-06,
+  "max_measured_probability_delta": {
+    "batched_complete": 2.7418136596679688e-06,
+    "serial_shared_prefix": 2.3543834686279297e-06
+  },
+  "all_selected_answers_agree": true,
+  "independence": {
+    "batched_complete_order": {
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "questions": 8,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170890621840954,
+          "candidate_probability": 0.008170890621840954,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.04266217350959778,
+          "candidate_probability": 0.04266217350959778,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491668939590454,
+          "candidate_probability": 0.9491668939590454,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679595470428467,
+          "candidate_probability": 0.5679595470428467,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320404529571533,
+          "candidate_probability": 0.4320404529571533,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.0339430533349514,
+          "candidate_probability": 0.0339430533349514,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555734992027283,
+          "candidate_probability": 0.9555734992027283,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.010483446530997753,
+          "candidate_probability": 0.010483446530997753,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891979455947876,
+          "candidate_probability": 0.8891979455947876,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.10393175482749939,
+          "candidate_probability": 0.10393175482749939,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.006870369892567396,
+          "candidate_probability": 0.006870369892567396,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.00531529076397419,
+          "candidate_probability": 0.00531529076397419,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.9946847558021545,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08993078768253326,
+          "candidate_probability": 0.08993078768253326,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926927804946899,
+          "candidate_probability": 0.7926927804946899,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737646162509918,
+          "candidate_probability": 0.11737646162509918,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028637167997658253,
+          "candidate_probability": 0.0028637167997658253,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    "serial_shared_prefix_order": {
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "questions": 8,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170814253389835,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.04266202077269554,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491671323776245,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679590702056885,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320409297943115,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.03394230827689171,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.010483475401997566,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.0006480906158685684,
+          "candidate_probability": 0.0006480906158685684,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.006870427168905735,
+          "candidate_probability": 0.006870427168905735,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315240006893873,
+          "candidate_probability": 0.005315240006893873,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.9946847558021545,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992965519428253,
+          "candidate_probability": 0.08992965519428253,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926918268203735,
+          "candidate_probability": 0.7926918268203735,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737854778766632,
+          "candidate_probability": 0.11737854778766632,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.002863651607185602,
+          "candidate_probability": 0.002863651607185602,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587619304656982,
+          "candidate_probability": 0.9587619304656982,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.0383744016289711,
+          "candidate_probability": 0.0383744016289711,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    "serial_complete_alone": {
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "questions": 8,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679613947868347,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320385754108429,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.033942434936761856,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.01048335526138544,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.0068704537115991116,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.005315360613167286,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.994684636592865,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08992911130189896,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926930785179138,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737783998250961,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.0028636730276048183,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    "batched_complete_alone": {
+      "max_probability_delta": 2.7418136596679688e-06,
+      "choice_agreement": 1.0,
+      "questions": 8,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170890621840954,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 7.916241884231567e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.04266217350959778,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 1.564621925354004e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491668939590454,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679595470428467,
+          "candidate_probability": 0.5679613947868347,
+          "absolute_delta": 1.8477439880371094e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320404529571533,
+          "candidate_probability": 0.4320385754108429,
+          "absolute_delta": 1.8775463104248047e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.0339430533349514,
+          "candidate_probability": 0.033942434936761856,
+          "absolute_delta": 6.183981895446777e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555734992027283,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 7.748603820800781e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.010483446530997753,
+          "candidate_probability": 0.01048335526138544,
+          "absolute_delta": 9.12696123123169e-08
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891979455947876,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 2.7418136596679688e-06
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.10393175482749939,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 2.652406692504883e-06
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.006870369892567396,
+          "candidate_probability": 0.0068704537115991116,
+          "absolute_delta": 8.381903171539307e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.00531529076397419,
+          "candidate_probability": 0.005315360613167286,
+          "absolute_delta": 6.984919309616089e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.9946847558021545,
+          "candidate_probability": 0.994684636592865,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08993078768253326,
+          "candidate_probability": 0.08992911130189896,
+          "absolute_delta": 1.6763806343078613e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926927804946899,
+          "candidate_probability": 0.7926930785179138,
+          "absolute_delta": 2.980232238769531e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737646162509918,
+          "candidate_probability": 0.11737783998250961,
+          "absolute_delta": 1.3783574104309082e-06
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028637167997658253,
+          "candidate_probability": 0.0028636730276048183,
+          "absolute_delta": 4.377216100692749e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    "serial_shared_prefix_alone": {
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "questions": 8,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170814253389835,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.04266202077269554,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491671323776245,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679590702056885,
+          "candidate_probability": 0.5679613947868347,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320409297943115,
+          "candidate_probability": 0.4320385754108429,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.03394230827689171,
+          "candidate_probability": 0.033942434936761856,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.010483475401997566,
+          "candidate_probability": 0.01048335526138544,
+          "absolute_delta": 1.2014061212539673e-07
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.0006480906158685684,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 3.6670826375484467e-09
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.006870427168905735,
+          "candidate_probability": 0.0068704537115991116,
+          "absolute_delta": 2.6542693376541138e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315240006893873,
+          "candidate_probability": 0.005315360613167286,
+          "absolute_delta": 1.2060627341270447e-07
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.9946847558021545,
+          "candidate_probability": 0.994684636592865,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992965519428253,
+          "candidate_probability": 0.08992911130189896,
+          "absolute_delta": 5.438923835754395e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926918268203735,
+          "candidate_probability": 0.7926930785179138,
+          "absolute_delta": 1.2516975402832031e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737854778766632,
+          "candidate_probability": 0.11737783998250961,
+          "absolute_delta": 7.078051567077637e-07
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.002863651607185602,
+          "candidate_probability": 0.0028636730276048183,
+          "absolute_delta": 2.1420419216156006e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587619304656982,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.0383744016289711,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 6.705522537231445e-08
+        }
+      ]
+    }
+  },
+  "warmup_checks": {
+    "batched_complete": {
+      "max_probability_delta": 2.7418136596679688e-06,
+      "choice_agreement": 1.0,
+      "questions": 8,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170890621840954,
+          "absolute_delta": 7.916241884231567e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266217350959778,
+          "absolute_delta": 1.564621925354004e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491668939590454,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679595470428467,
+          "absolute_delta": 1.8477439880371094e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320404529571533,
+          "absolute_delta": 1.8775463104248047e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.0339430533349514,
+          "absolute_delta": 6.183981895446777e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555734992027283,
+          "absolute_delta": 7.748603820800781e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483446530997753,
+          "absolute_delta": 9.12696123123169e-08
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891979455947876,
+          "absolute_delta": 2.7418136596679688e-06
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.10393175482749939,
+          "absolute_delta": 2.652406692504883e-06
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870369892567396,
+          "absolute_delta": 8.381903171539307e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.00531529076397419,
+          "absolute_delta": 6.984919309616089e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08993078768253326,
+          "absolute_delta": 1.6763806343078613e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926927804946899,
+          "absolute_delta": 2.980232238769531e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737646162509918,
+          "absolute_delta": 1.3783574104309082e-06
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.0028637167997658253,
+          "absolute_delta": 4.377216100692749e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    "serial_shared_prefix": {
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "questions": 8,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 1.2014061212539673e-07
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.0006480906158685684,
+          "absolute_delta": 3.6670826375484467e-09
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870427168905735,
+          "absolute_delta": 2.6542693376541138e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.005315240006893873,
+          "absolute_delta": 1.2060627341270447e-07
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08992965519428253,
+          "absolute_delta": 5.438923835754395e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926918268203735,
+          "absolute_delta": 1.2516975402832031e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737854778766632,
+          "absolute_delta": 7.078051567077637e-07
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.002863651607185602,
+          "absolute_delta": 2.1420419216156006e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587619304656982,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.0383744016289711,
+          "absolute_delta": 6.705522537231445e-08
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "repetition": 0,
+      "questions": 1,
+      "condition": "batched_complete",
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 0,
+      "questions": 1,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 0,
+      "questions": 3,
+      "condition": "batched_complete",
+      "max_probability_delta": 1.430511474609375e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.00817075464874506,
+          "absolute_delta": 5.681067705154419e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042661864310503006,
+          "absolute_delta": 4.6566128730773926e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491673111915588,
+          "absolute_delta": 5.364418029785156e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679628252983093,
+          "absolute_delta": 1.430511474609375e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.43203720450401306,
+          "absolute_delta": 1.3709068298339844e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394293040037155,
+          "absolute_delta": 4.954636096954346e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555736184120178,
+          "absolute_delta": 6.556510925292969e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483489371836185,
+          "absolute_delta": 1.341104507446289e-07
+        }
+      ]
+    },
+    {
+      "repetition": 0,
+      "questions": 3,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 1.2014061212539673e-07
+        }
+      ]
+    },
+    {
+      "repetition": 0,
+      "questions": 8,
+      "condition": "batched_complete",
+      "max_probability_delta": 2.7418136596679688e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170890621840954,
+          "absolute_delta": 7.916241884231567e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266217350959778,
+          "absolute_delta": 1.564621925354004e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491668939590454,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679595470428467,
+          "absolute_delta": 1.8477439880371094e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320404529571533,
+          "absolute_delta": 1.8775463104248047e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.0339430533349514,
+          "absolute_delta": 6.183981895446777e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555734992027283,
+          "absolute_delta": 7.748603820800781e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483446530997753,
+          "absolute_delta": 9.12696123123169e-08
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891979455947876,
+          "absolute_delta": 2.7418136596679688e-06
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.10393175482749939,
+          "absolute_delta": 2.652406692504883e-06
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870369892567396,
+          "absolute_delta": 8.381903171539307e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.00531529076397419,
+          "absolute_delta": 6.984919309616089e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08993078768253326,
+          "absolute_delta": 1.6763806343078613e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926927804946899,
+          "absolute_delta": 2.980232238769531e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737646162509918,
+          "absolute_delta": 1.3783574104309082e-06
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.0028637167997658253,
+          "absolute_delta": 4.377216100692749e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 0,
+      "questions": 8,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 1.2014061212539673e-07
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.0006480906158685684,
+          "absolute_delta": 3.6670826375484467e-09
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870427168905735,
+          "absolute_delta": 2.6542693376541138e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.005315240006893873,
+          "absolute_delta": 1.2060627341270447e-07
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08992965519428253,
+          "absolute_delta": 5.438923835754395e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926918268203735,
+          "absolute_delta": 1.2516975402832031e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737854778766632,
+          "absolute_delta": 7.078051567077637e-07
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.002863651607185602,
+          "absolute_delta": 2.1420419216156006e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587619304656982,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.0383744016289711,
+          "absolute_delta": 6.705522537231445e-08
+        }
+      ]
+    },
+    {
+      "repetition": 1,
+      "questions": 1,
+      "condition": "batched_complete",
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 1,
+      "questions": 1,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 1,
+      "questions": 3,
+      "condition": "batched_complete",
+      "max_probability_delta": 1.430511474609375e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.00817075464874506,
+          "absolute_delta": 5.681067705154419e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042661864310503006,
+          "absolute_delta": 4.6566128730773926e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491673111915588,
+          "absolute_delta": 5.364418029785156e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679628252983093,
+          "absolute_delta": 1.430511474609375e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.43203720450401306,
+          "absolute_delta": 1.3709068298339844e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394293040037155,
+          "absolute_delta": 4.954636096954346e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555736184120178,
+          "absolute_delta": 6.556510925292969e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483489371836185,
+          "absolute_delta": 1.341104507446289e-07
+        }
+      ]
+    },
+    {
+      "repetition": 1,
+      "questions": 3,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 1.2014061212539673e-07
+        }
+      ]
+    },
+    {
+      "repetition": 1,
+      "questions": 8,
+      "condition": "batched_complete",
+      "max_probability_delta": 2.7418136596679688e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170890621840954,
+          "absolute_delta": 7.916241884231567e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266217350959778,
+          "absolute_delta": 1.564621925354004e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491668939590454,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679595470428467,
+          "absolute_delta": 1.8477439880371094e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320404529571533,
+          "absolute_delta": 1.8775463104248047e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.0339430533349514,
+          "absolute_delta": 6.183981895446777e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555734992027283,
+          "absolute_delta": 7.748603820800781e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483446530997753,
+          "absolute_delta": 9.12696123123169e-08
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891979455947876,
+          "absolute_delta": 2.7418136596679688e-06
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.10393175482749939,
+          "absolute_delta": 2.652406692504883e-06
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870369892567396,
+          "absolute_delta": 8.381903171539307e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.00531529076397419,
+          "absolute_delta": 6.984919309616089e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08993078768253326,
+          "absolute_delta": 1.6763806343078613e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926927804946899,
+          "absolute_delta": 2.980232238769531e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737646162509918,
+          "absolute_delta": 1.3783574104309082e-06
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.0028637167997658253,
+          "absolute_delta": 4.377216100692749e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 1,
+      "questions": 8,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 1.2014061212539673e-07
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.0006480906158685684,
+          "absolute_delta": 3.6670826375484467e-09
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870427168905735,
+          "absolute_delta": 2.6542693376541138e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.005315240006893873,
+          "absolute_delta": 1.2060627341270447e-07
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08992965519428253,
+          "absolute_delta": 5.438923835754395e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926918268203735,
+          "absolute_delta": 1.2516975402832031e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737854778766632,
+          "absolute_delta": 7.078051567077637e-07
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.002863651607185602,
+          "absolute_delta": 2.1420419216156006e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587619304656982,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.0383744016289711,
+          "absolute_delta": 6.705522537231445e-08
+        }
+      ]
+    },
+    {
+      "repetition": 2,
+      "questions": 1,
+      "condition": "batched_complete",
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 2,
+      "questions": 1,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 0.0,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170811459422112,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042662329971790314,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491667747497559,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 2,
+      "questions": 3,
+      "condition": "batched_complete",
+      "max_probability_delta": 1.430511474609375e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.00817075464874506,
+          "absolute_delta": 5.681067705154419e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.042661864310503006,
+          "absolute_delta": 4.6566128730773926e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491673111915588,
+          "absolute_delta": 5.364418029785156e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679628252983093,
+          "absolute_delta": 1.430511474609375e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.43203720450401306,
+          "absolute_delta": 1.3709068298339844e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394293040037155,
+          "absolute_delta": 4.954636096954346e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555736184120178,
+          "absolute_delta": 6.556510925292969e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483489371836185,
+          "absolute_delta": 1.341104507446289e-07
+        }
+      ]
+    },
+    {
+      "repetition": 2,
+      "questions": 3,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 1.2014061212539673e-07
+        }
+      ]
+    },
+    {
+      "repetition": 2,
+      "questions": 8,
+      "condition": "batched_complete",
+      "max_probability_delta": 2.7418136596679688e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170890621840954,
+          "absolute_delta": 7.916241884231567e-08
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266217350959778,
+          "absolute_delta": 1.564621925354004e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491668939590454,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679595470428467,
+          "absolute_delta": 1.8477439880371094e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320404529571533,
+          "absolute_delta": 1.8775463104248047e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.0339430533349514,
+          "absolute_delta": 6.183981895446777e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555734992027283,
+          "absolute_delta": 7.748603820800781e-07
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483446530997753,
+          "absolute_delta": 9.12696123123169e-08
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.000648094282951206,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891979455947876,
+          "absolute_delta": 2.7418136596679688e-06
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.10393175482749939,
+          "absolute_delta": 2.652406692504883e-06
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870369892567396,
+          "absolute_delta": 8.381903171539307e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.00531529076397419,
+          "absolute_delta": 6.984919309616089e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08993078768253326,
+          "absolute_delta": 1.6763806343078613e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926927804946899,
+          "absolute_delta": 2.980232238769531e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737646162509918,
+          "absolute_delta": 1.3783574104309082e-06
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.0028637167997658253,
+          "absolute_delta": 4.377216100692749e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587618112564087,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.03837446868419647,
+          "absolute_delta": 0.0
+        }
+      ]
+    },
+    {
+      "repetition": 2,
+      "questions": 8,
+      "condition": "serial_shared_prefix",
+      "max_probability_delta": 2.3543834686279297e-06,
+      "choice_agreement": 1.0,
+      "per_option": [
+        {
+          "question": "dispatch_route",
+          "option": "hold",
+          "reference_probability": 0.008170811459422112,
+          "candidate_probability": 0.008170814253389835,
+          "absolute_delta": 2.7939677238464355e-09
+        },
+        {
+          "question": "dispatch_route",
+          "option": "standard",
+          "reference_probability": 0.042662329971790314,
+          "candidate_probability": 0.04266202077269554,
+          "absolute_delta": 3.0919909477233887e-07
+        },
+        {
+          "question": "dispatch_route",
+          "option": "protected",
+          "reference_probability": 0.9491667747497559,
+          "candidate_probability": 0.9491671323776245,
+          "absolute_delta": 3.5762786865234375e-07
+        },
+        {
+          "question": "restock",
+          "option": "yes",
+          "reference_probability": 0.5679613947868347,
+          "candidate_probability": 0.5679590702056885,
+          "absolute_delta": 2.3245811462402344e-06
+        },
+        {
+          "question": "restock",
+          "option": "no",
+          "reference_probability": 0.4320385754108429,
+          "candidate_probability": 0.4320409297943115,
+          "absolute_delta": 2.3543834686279297e-06
+        },
+        {
+          "question": "urgency",
+          "option": "0",
+          "reference_probability": 0.033942434936761856,
+          "candidate_probability": 0.03394230827689171,
+          "absolute_delta": 1.2665987014770508e-07
+        },
+        {
+          "question": "urgency",
+          "option": "1",
+          "reference_probability": 0.9555742740631104,
+          "candidate_probability": 0.9555742740631104,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "urgency",
+          "option": "2",
+          "reference_probability": 0.01048335526138544,
+          "candidate_probability": 0.010483475401997566,
+          "absolute_delta": 1.2014061212539673e-07
+        },
+        {
+          "question": "temperature_safe",
+          "option": "yes",
+          "reference_probability": 0.9993519186973572,
+          "candidate_probability": 0.9993519186973572,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "temperature_safe",
+          "option": "no",
+          "reference_probability": 0.000648094282951206,
+          "candidate_probability": 0.0006480906158685684,
+          "absolute_delta": 3.6670826375484467e-09
+        },
+        {
+          "question": "carton",
+          "option": "small",
+          "reference_probability": 0.8891952037811279,
+          "candidate_probability": 0.8891952037811279,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "medium",
+          "reference_probability": 0.1039344072341919,
+          "candidate_probability": 0.1039344072341919,
+          "absolute_delta": 0.0
+        },
+        {
+          "question": "carton",
+          "option": "large",
+          "reference_probability": 0.0068704537115991116,
+          "candidate_probability": 0.006870427168905735,
+          "absolute_delta": 2.6542693376541138e-08
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "yes",
+          "reference_probability": 0.005315360613167286,
+          "candidate_probability": 0.005315240006893873,
+          "absolute_delta": 1.2060627341270447e-07
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "option": "no",
+          "reference_probability": 0.994684636592865,
+          "candidate_probability": 0.9946847558021545,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "0",
+          "reference_probability": 0.08992911130189896,
+          "candidate_probability": 0.08992965519428253,
+          "absolute_delta": 5.438923835754395e-07
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "1",
+          "reference_probability": 0.7926930785179138,
+          "candidate_probability": 0.7926918268203735,
+          "absolute_delta": 1.2516975402832031e-06
+        },
+        {
+          "question": "warranty_coverage",
+          "option": "2",
+          "reference_probability": 0.11737783998250961,
+          "candidate_probability": 0.11737854778766632,
+          "absolute_delta": 7.078051567077637e-07
+        },
+        {
+          "question": "carrier",
+          "option": "economy",
+          "reference_probability": 0.0028636730276048183,
+          "candidate_probability": 0.002863651607185602,
+          "absolute_delta": 2.1420419216156006e-08
+        },
+        {
+          "question": "carrier",
+          "option": "priority",
+          "reference_probability": 0.9587618112564087,
+          "candidate_probability": 0.9587619304656982,
+          "absolute_delta": 1.1920928955078125e-07
+        },
+        {
+          "question": "carrier",
+          "option": "courier",
+          "reference_probability": 0.03837446868419647,
+          "candidate_probability": 0.0383744016289711,
+          "absolute_delta": 6.705522537231445e-08
+        }
+      ]
+    }
+  ],
+  "quality_reference_repetition": 0,
+  "eight_question_quality": {
+    "serial_complete": {
+      "questions": 8,
+      "accuracy": 0.875,
+      "answers": [
+        {
+          "question": "dispatch_route",
+          "choice": "protected",
+          "target": "protected",
+          "correct": true
+        },
+        {
+          "question": "restock",
+          "choice": "yes",
+          "target": "yes",
+          "correct": true
+        },
+        {
+          "question": "urgency",
+          "choice": "1",
+          "target": "1",
+          "correct": true
+        },
+        {
+          "question": "temperature_safe",
+          "choice": "yes",
+          "target": "yes",
+          "correct": true
+        },
+        {
+          "question": "carton",
+          "choice": "small",
+          "target": "medium",
+          "correct": false
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "choice": "no",
+          "target": "no",
+          "correct": true
+        },
+        {
+          "question": "warranty_coverage",
+          "choice": "1",
+          "target": "1",
+          "correct": true
+        },
+        {
+          "question": "carrier",
+          "choice": "priority",
+          "target": "priority",
+          "correct": true
+        }
+      ]
+    },
+    "batched_complete": {
+      "questions": 8,
+      "accuracy": 0.875,
+      "answers": [
+        {
+          "question": "dispatch_route",
+          "choice": "protected",
+          "target": "protected",
+          "correct": true
+        },
+        {
+          "question": "restock",
+          "choice": "yes",
+          "target": "yes",
+          "correct": true
+        },
+        {
+          "question": "urgency",
+          "choice": "1",
+          "target": "1",
+          "correct": true
+        },
+        {
+          "question": "temperature_safe",
+          "choice": "yes",
+          "target": "yes",
+          "correct": true
+        },
+        {
+          "question": "carton",
+          "choice": "small",
+          "target": "medium",
+          "correct": false
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "choice": "no",
+          "target": "no",
+          "correct": true
+        },
+        {
+          "question": "warranty_coverage",
+          "choice": "1",
+          "target": "1",
+          "correct": true
+        },
+        {
+          "question": "carrier",
+          "choice": "priority",
+          "target": "priority",
+          "correct": true
+        }
+      ]
+    },
+    "serial_shared_prefix": {
+      "questions": 8,
+      "accuracy": 0.875,
+      "answers": [
+        {
+          "question": "dispatch_route",
+          "choice": "protected",
+          "target": "protected",
+          "correct": true
+        },
+        {
+          "question": "restock",
+          "choice": "yes",
+          "target": "yes",
+          "correct": true
+        },
+        {
+          "question": "urgency",
+          "choice": "1",
+          "target": "1",
+          "correct": true
+        },
+        {
+          "question": "temperature_safe",
+          "choice": "yes",
+          "target": "yes",
+          "correct": true
+        },
+        {
+          "question": "carton",
+          "choice": "small",
+          "target": "medium",
+          "correct": false
+        },
+        {
+          "question": "signed_delivery_guaranteed",
+          "choice": "no",
+          "target": "no",
+          "correct": true
+        },
+        {
+          "question": "warranty_coverage",
+          "choice": "1",
+          "target": "1",
+          "correct": true
+        },
+        {
+          "question": "carrier",
+          "choice": "priority",
+          "target": "priority",
+          "correct": true
+        }
+      ]
+    }
+  },
+  "eight_question_accuracy_all_repetitions": [
+    {
+      "condition": "serial_complete",
+      "repetition": 0,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "serial_complete",
+      "repetition": 1,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "serial_complete",
+      "repetition": 2,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "batched_complete",
+      "repetition": 0,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "batched_complete",
+      "repetition": 1,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "batched_complete",
+      "repetition": 2,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "serial_shared_prefix",
+      "repetition": 0,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "serial_shared_prefix",
+      "repetition": 1,
+      "accuracy": 0.875
+    },
+    {
+      "condition": "serial_shared_prefix",
+      "repetition": 2,
+      "accuracy": 0.875
+    }
+  ],
+  "runtime": {
+    "cuda_version": null,
+    "device": "mps:0",
+    "device_name": "arm64",
+    "model_parameter_dtype": "torch.float32",
+    "offline_loading": true,
+    "output_head_dtype": "torch.float32",
+    "packages": {
+      "huggingface-hub": "1.31.0",
+      "peft": "0.21.0",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    },
+    "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6",
+    "torch_threads": 6
+  },
+  "hardware_description": "Apple M5 Max, 128 GiB unified memory (experiment host; device API reports arm64)",
+  "memory_note": "MPS before/after current and driver allocations are retained in raw observations; no measured peak.",
+  "scope": "Post-hoc performance control on the exact already measured eight-question authored state; no independent quality, concurrency, deployment, training or Jev-internals result.",
+  "analysis_script_sha256": "532c1060e1dbffac1191397630e314e57847b54f2135f43215804276f6e6204f",
+  "files_sha256": {
+    "run.json": "8929503604f38c9c0b098b5531deab5a8ca96a4c43d0e7a652695cc6477b51a4",
+    "metrics.json": "028cc1ead2ee8e136c5d22cfd1a8897b94a425f8682d55c07f8816bd7c45e5b8",
+    "observations.jsonl": "542d5f83d93476dce2e97d2828868cb275db14b764b5ccd756ade19ca23fac8f"
+  }
+}
