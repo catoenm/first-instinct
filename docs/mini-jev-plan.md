@@ -1,5 +1,8 @@
 # A general decision model: the intended target
 
+The [research-note draft](first-instinct-research-note.md) gives a shorter
+account of the completed findings and the questions still under test.
+
 Status, September 18, 2026: the nine-billion-parameter supervised model is
 trained, evaluated, released and serving the local demo. It improved held-out
 accuracy from 63.3% to 78.1%. Four completed language reinforcement-learning
