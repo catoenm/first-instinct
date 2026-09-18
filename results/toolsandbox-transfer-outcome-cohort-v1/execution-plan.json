@@ -1,0 +1,134 @@
+{
+  "deduplication": "Exact weights bytes AND adapter config bytes AND pinned model specification; preserve every role. No tensor loading or approximate identity.",
+  "eligible_roles": 10,
+  "execution_requires": "A reviewed runner and matching available runtime; this preparer executes no inference.",
+  "model_inference_launched": false,
+  "planned_new_model_questions": 4320,
+  "questions_without_dedup": 7200,
+  "required_reference_inference_contract": {
+    "attention_implementation": "sdpa",
+    "device": "mps",
+    "inference_batch_size": 1,
+    "max_options": 36,
+    "max_tokens": 1536,
+    "packages": {
+      "huggingface-hub": "1.31.0",
+      "peft": "0.21.0",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    },
+    "parameter_dtype": "float32",
+    "prediction_path": "scale_lab.infer.Predictor.predict -> scale_lab.model.evaluate(batch_size=1); frozen state/question/options serialization and option order; independent prompts.",
+    "runtime_mismatch": "Refuse execution and reference reuse. No automatic CUDA, dtype, batching, or serialization substitution.",
+    "source_sha256": {
+      "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+      "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+      "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+      "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689"
+    },
+    "tokenizer_files_sha256": {
+      "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    },
+    "training": false,
+    "use_cache": false
+  },
+  "roles": 12,
+  "status": "prepared_not_launched",
+  "unique_eligible_adapters": 6,
+  "units": [
+    {
+      "adapter_files_sha256": {
+        "adapter_config.json": "0d7e8d1c4d91d67848e7554193d9fb89d98313d9c6a501c40f281d133f87cb4c",
+        "adapter_model.safetensors": "d681df96de1b930a2f3b29bb6738aa765780081176ef1318fab4005219da8d6a"
+      },
+      "adapter_path": "runs/outcome-s77/best",
+      "identical_to_sft": false,
+      "identity_sha256": "e4c94658a133042e6d384e48f8b743e9274186f4f11af6cf31959fb7728f018b",
+      "planned_new_model_questions": 720,
+      "reuse_completed_sft_predictions": false,
+      "roles": [
+        "outcome-s77/best",
+        "outcome-s77/latest"
+      ]
+    },
+    {
+      "adapter_files_sha256": {
+        "adapter_config.json": "312da8ae20dd15a54859f27cc9b8054617b247c69fdc36d0fca186e3fc6b510f",
+        "adapter_model.safetensors": "6da1c275bc40bc09c58b93f8857d0d84e2af885440431fd955ac23d9da75b716"
+      },
+      "adapter_path": "runs/outcome-s83/best",
+      "identical_to_sft": false,
+      "identity_sha256": "b78b9acb96c99accce37fb85dc4e4883d7e750056c2b37290644f599278372e3",
+      "planned_new_model_questions": 720,
+      "reuse_completed_sft_predictions": false,
+      "roles": [
+        "outcome-s83/best",
+        "outcome-s83/latest"
+      ]
+    },
+    {
+      "adapter_files_sha256": {
+        "adapter_config.json": "0a3963c25e072b97b992fccc2519d5c9f20166f47b0aac145ce0cd34d44b8cb0",
+        "adapter_model.safetensors": "403885fe6fd26bb04b9687ef09ceee0c77b41e8de4120251c02d4304026f1b55"
+      },
+      "adapter_path": "runs/reward-s77/best",
+      "identical_to_sft": false,
+      "identity_sha256": "ee6b3aa9f073472f46439975cec3b49432b560e50c24fc53f7d74ee21fbb5e51",
+      "planned_new_model_questions": 720,
+      "reuse_completed_sft_predictions": false,
+      "roles": [
+        "reward-s77/best"
+      ]
+    },
+    {
+      "adapter_files_sha256": {
+        "adapter_config.json": "0a3963c25e072b97b992fccc2519d5c9f20166f47b0aac145ce0cd34d44b8cb0",
+        "adapter_model.safetensors": "1cf41a0d6d0a6243aa35733c4e067aee1b8a3f554354350430bbae54e465c190"
+      },
+      "adapter_path": "runs/reward-s77/latest",
+      "identical_to_sft": false,
+      "identity_sha256": "b8552d2cd6d6dca60a919488519cec527722adf54a00947c43d1b9ce070fc064",
+      "planned_new_model_questions": 720,
+      "reuse_completed_sft_predictions": false,
+      "roles": [
+        "reward-s77/latest"
+      ]
+    },
+    {
+      "adapter_files_sha256": {
+        "adapter_config.json": "0efbdf73b46eb6e5c1cd8f4b7a4dfac7fcdd89d7131f0a46f83d5690ea85ba9d",
+        "adapter_model.safetensors": "425a6cd6f776d3ae59baa859dc75f7d20c4be7740aafbef1ee79a05271a7c788"
+      },
+      "adapter_path": "runs/reward-s83/best",
+      "identical_to_sft": false,
+      "identity_sha256": "6d799dff0d02ba495778736b09d41b32355f653eb6dfe394daf66e5803d7e5c7",
+      "planned_new_model_questions": 720,
+      "reuse_completed_sft_predictions": false,
+      "roles": [
+        "reward-s83/best",
+        "reward-s83/latest"
+      ]
+    },
+    {
+      "adapter_files_sha256": {
+        "adapter_config.json": "960e43f40a0dbe7ae986bdd5a25fd221f77ffa86d075b1c74bff714706edc56b",
+        "adapter_model.safetensors": "c8d6007eb0657e3e5ab8b1a6001ac4ec67a454463e692c6975aa5a8aba7ca562"
+      },
+      "adapter_path": "runs/hybrid-s83/best",
+      "identical_to_sft": false,
+      "identity_sha256": "271be97400a56826b3d14e0dab2b258559f3cbb8ac108b7c5d62804ddcb00b68",
+      "planned_new_model_questions": 720,
+      "reuse_completed_sft_predictions": false,
+      "roles": [
+        "hybrid-s83/best",
+        "hybrid-s83/latest"
+      ]
+    }
+  ]
+}
