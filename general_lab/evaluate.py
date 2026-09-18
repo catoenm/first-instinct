@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import time
 
+import torch
 from transformers import AutoTokenizer
 
 from general_lab.train import macro_metrics
@@ -37,6 +38,7 @@ def main():
     p.add_argument("--batch-size", type=int, default=32)
     p.add_argument("--device", default="auto", choices=["auto", "cuda", "mps", "cpu"])
     args = p.parse_args()
+    torch.set_float32_matmul_precision("high")
     if args.batch_size <= 0:
         p.error("batch_size must be positive")
     manifest = json.loads((args.data / "manifest.json").read_text())

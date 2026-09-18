@@ -405,6 +405,7 @@ def _hash_trainable(initial):
 
 def train(args):
     from transformers import AutoTokenizer
+    torch.set_float32_matmul_precision("high")
     started = time.monotonic(); deadline = started + args.max_hours * 3600; stopped = [False]
     def request_stop(*unused):
         stopped[0] = True
