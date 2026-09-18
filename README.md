@@ -15,6 +15,15 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 
 </div>
 
+**In progress: [general decisions with a nine-billion-parameter model](docs/general-training-v1-protocol.md).**
+The new experiment trains on 350,857 examples: licensed public instruction
+tasks, executable reasoning worlds, and evidence-acquisition environments.
+It accepts user-defined questions and choices, then compares reward training
+with and without an observed-outcome forecasting loss in the same language
+network. The full supervised run is underway; measured held-out results and
+language-model reinforcement-learning results are pending. The released model
+and browser demo below remain the earlier software experiment.
+
 First Instinct explores a practical question: **when should a model gather more
 evidence before making a decision?** A four-billion-parameter forecaster reads
 code and verified checks. A separate small policy learns whether to inspect

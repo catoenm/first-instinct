@@ -56,7 +56,7 @@ class LanguagePolicy(nn.Module):
         self._hidden = inputs[0][:, -1, :]
 
     def forward(self, rows):
-        inputs, ids, mask, acceptable = batch(rows, self.labels, self.pad_id, self.device)
+        inputs, ids, mask, acceptable = batch(rows, self.labels, self.pad_id, self.device, pad_to_multiple=64)
         self._hidden = None
         logits = score(self.language, inputs, ids, mask)
         if self._hidden is None:
@@ -372,12 +372,15 @@ def evaluate(policy, tokenizer, split, count, seed, batch_size, max_tokens, chec
 def replay_sample(path, limit, seed, model_alias):
     if path is None:
         return [], None
+    if path.name != "train.jsonl":
+        raise ValueError("Replay may only consume the prepared train.jsonl split")
     manifest_path = path.parent / "manifest.json"
     if not manifest_path.exists():
         raise ValueError("Replay data must have a prepared-data manifest")
     manifest = json.loads(manifest_path.read_text())
     actual_hash = file_hash(path)
-    if manifest.get("model_alias") != model_alias or manifest.get("outputs", {}).get(path.name) != actual_hash:
+    if (manifest.get("model_alias") != model_alias or manifest.get("model") != MODELS[model_alias]
+            or manifest.get("outputs", {}).get("train.jsonl") != actual_hash):
         raise ValueError("Replay model or file checksum mismatch")
     rng = random.Random(seed); rows = []; total = 0
     with path.open() as stream:
@@ -389,7 +392,8 @@ def replay_sample(path, limit, seed, model_alias):
                 index = rng.randrange(total)
                 if index < limit:
                     rows[index] = row
-    return rows, {"sha256": actual_hash, "rows": total, "reservoir_rows": len(rows), "manifest_sha256": file_hash(manifest_path)}
+    return rows, {"sha256": actual_hash, "rows": total, "reservoir_rows": len(rows),
+                  "split": "train", "model": MODELS[model_alias], "manifest_sha256": file_hash(manifest_path)}
 
 
 def _hash_trainable(initial):
@@ -419,6 +423,8 @@ def train(args):
                                         "heldout_test_or_shift_metrics_used": False, "evaluation_seed": 71043,
                                         "candidate_update_zero": True},
                "billing_note": "max_hours bounds execution, not provider billing. A separate provider stop deadline is required.",
+               "optimizer_step_receipts": "optimizer-steps.jsonl",
+               "update_accounting": "updates counts rollouts with all requested PPO epochs committed; optimizer_steps counts every committed epoch",
                "code_sha256": {str(p.relative_to(ROOT)): file_hash(p) for folder in ("general_lab", "scale_lab") for p in sorted((ROOT / folder).glob("*.py"))},
                "packages": {name: importlib.metadata.version(name) for name in ("torch", "transformers", "peft")}}
     write_json(args.output / "run.json", receipt)
@@ -455,12 +461,19 @@ def train(args):
         model.save_pretrained(args.output / "best")
         torch.save(policy.value.state_dict(), args.output / "best-value.pt")
         receipt["status"] = "training"; write_json(args.output / "run.json", receipt)
-        with (args.output / "training.jsonl").open("w") as training, (args.output / "rollouts.jsonl").open("w") as rollout_file:
+        with (args.output / "training.jsonl").open("w") as training, \
+                (args.output / "rollouts.jsonl").open("w") as rollout_file, \
+                (args.output / "optimizer-steps.jsonl").open("w") as step_file:
             for number in range(1, args.max_updates + 1):
                 check()
                 args.update_number = number
                 episodes = [make_episode(args.seed * 10**8 + number * args.episodes_per_update + i, "train") for i in range(args.episodes_per_update)]
                 records, traces = collect(policy, tokenizer, episodes, args.batch_size, args.max_tokens, check)
+                # Persist the sampled data before applying any optimizer step.
+                # A deadline between PPO epochs must not orphan changed weights.
+                for trace in traces:
+                    rollout_file.write(json.dumps({"update": number, **trace}, allow_nan=False) + "\n")
+                rollout_file.flush()
                 forecasts = forecast_rows(tokenizer, args.episodes_per_update, args.seed * 10**6 + number, args.max_tokens) if args.forecast_weight else []
                 replay_rng = random.Random(args.seed + number)
                 replay = replay_rng.sample(replay_pool, min(len(replay_pool), args.episodes_per_update)) if replay_pool else []
@@ -469,17 +482,23 @@ def train(args):
                     args.epoch_number = epoch
                     result = update(policy, optimizer, records, forecasts, replay, args, check, audit_policy=(optimizer_steps == 0))
                     optimizer_steps += 1
+                    if epoch + 1 == args.ppo_epochs:
+                        updates = number
                     if "pure_policy_language_gradient" in result:
                         receipt["pure_policy_language_gradient"] = result["pure_policy_language_gradient"]
                     epoch_metrics.append(result)
-                updates = number
+                    step_file.write(json.dumps({"update": number, "ppo_epoch": epoch + 1,
+                                                "optimizer_step": optimizer_steps, "completed_rollout_updates": updates,
+                                                "rollout_ids": [trace["id"] for trace in traces],
+                                                "forecast_ids": [row["id"] for row in forecasts],
+                                                "replay_ids": [row["id"] for row in replay],
+                                                "transitions": len(records), "metrics": result,
+                                                "seconds": time.monotonic() - started}, allow_nan=False) + "\n")
+                    step_file.flush()
                 event = {"update": number, "optimizer_steps": optimizer_steps, "episodes": len(episodes),
                          "transitions": len(records), "empirical_forecast_labels": len(forecasts), "replay_rows": len(replay),
                          "mean_sampled_return": sum(t["return"] for t in traces) / len(traces),
                          "epochs": epoch_metrics, "seconds": time.monotonic() - started}
-                for trace in traces:
-                    rollout_file.write(json.dumps({"update": number, **trace}, allow_nan=False) + "\n")
-                rollout_file.flush()
                 if number % args.eval_every == 0 or number == args.max_updates:
                     measured, audit, policy_traces = evaluate(policy, tokenizer, "validation", args.eval_episodes, 71043, args.batch_size, args.max_tokens, check)
                     event["validation"] = measured
@@ -541,6 +560,10 @@ def train(args):
             torch.save(policy.value.state_dict(), args.output / "latest-value.pt")
             receipt["language_parameter_audit"] = parameter_audit(policy.language, initial)
         receipt.update(updates=updates, optimizer_steps=optimizer_steps, selected_update=selected_update,
+                       partially_optimized_update=({"update": updates + 1,
+                                                   "completed_ppo_epochs": optimizer_steps - updates * args.ppo_epochs,
+                                                   "requested_ppo_epochs": args.ppo_epochs}
+                                                  if optimizer_steps > updates * args.ppo_epochs else None),
                        best_validation_expected_reward=best_reward if math.isfinite(best_reward) else None,
                        seconds=time.monotonic() - started,
                        peak_cuda_memory_bytes=torch.cuda.max_memory_allocated() if device == "cuda" else None)

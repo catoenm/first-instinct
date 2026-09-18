@@ -4,6 +4,8 @@ from dataclasses import replace
 import itertools
 import json
 import math
+from pathlib import Path
+from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
@@ -16,8 +18,8 @@ from general_lab.environments import (Episode, HELDOUT_SKINS, SKINS, Sensor, act
                                       public_input, step, terminal_reward, terminal_values,
                                       warmstart_rows)
 from general_lab.rl import (DeadlineReached, LanguagePolicy, clipped_policy_loss, collect,
-                            evaluate, forecast_rows, parameter_audit, snapshot, update)
-from scale_lab.common import targets
+                            evaluate, forecast_rows, parameter_audit, replay_sample, snapshot, train, update)
+from scale_lab.common import MODELS, file_hash, targets
 
 
 class TinyTokenizer:
@@ -198,6 +200,85 @@ class LanguagePPOTests(unittest.TestCase):
         audit = parameter_audit(self.policy.language, initial)
         self.assertGreater(audit["changed_elements"], 0)
         self.assertGreater(result["pure_policy_language_gradient"]["nonzero_elements"], 0)
+
+    def test_replay_requires_training_split_and_exact_pinned_model(self):
+        with TemporaryDirectory(prefix="first-instinct-replay-") as directory:
+            root = Path(directory)
+            example = {"id": "fixture", "input_ids": [1, 2], "option_ids": ["yes", "no"], "target_indices": [0]}
+            for split in ("train", "validation", "test", "challenge"):
+                (root / f"{split}.jsonl").write_text(json.dumps(example) + "\n")
+            manifest = {"model_alias": "qwen35-9b", "model": dict(MODELS["qwen35-9b"]),
+                        "outputs": {path.name: file_hash(path) for path in root.glob("*.jsonl")}}
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(json.dumps(manifest))
+            rows, receipt = replay_sample(root / "train.jsonl", 2, 47, "qwen35-9b")
+            self.assertEqual(rows, [example])
+            self.assertEqual(receipt["split"], "train")
+            self.assertEqual(receipt["model"], MODELS["qwen35-9b"])
+            for split in ("validation", "test", "challenge"):
+                with self.assertRaisesRegex(ValueError, "only consume.*train.jsonl"):
+                    replay_sample(root / f"{split}.jsonl", 2, 47, "qwen35-9b")
+            for field in ("id", "revision", "kind"):
+                wrong = {**manifest, "model": {**manifest["model"], field: "different"}}
+                manifest_path.write_text(json.dumps(wrong))
+                with self.assertRaisesRegex(ValueError, "Replay model or file checksum mismatch"):
+                    replay_sample(root / "train.jsonl", 2, 47, "qwen35-9b")
+
+    def test_deadline_between_ppo_epochs_preserves_rollout_and_step_receipt(self):
+        # Run a real tiny-language PPO optimizer step through train(), then
+        # interrupt before epoch two. Only model/tokenizer loading is replaced.
+        with TemporaryDirectory(prefix="first-instinct-rl-interrupt-") as directory:
+            root = Path(directory)
+            adapter = root / "starting-adapter"
+            adapter.mkdir()
+            (adapter / "adapter_config.json").write_text(json.dumps({"base_model_name_or_path": MODELS["qwen35-9b"]["id"]}))
+            language = TinyLanguage()
+
+            def save_fixture(path):
+                path = Path(path)
+                path.mkdir(exist_ok=True)
+                (path / "fixture.json").write_text('{"fixture":true}\n')
+
+            language.save_pretrained = save_fixture
+            tokenizer = TinyTokenizer()
+            tokenizer.pad_token_id = tokenizer.eos_token_id = 0
+            tokenizer.save_pretrained = lambda path: Path(path).mkdir(exist_ok=True)
+            args = SimpleNamespace(output=root / "run", adapter=adapter, model="qwen35-9b", device="cpu",
+                                   seed=47, max_hours=1., replay_data=None, replay_pool_size=2,
+                                   learning_rate=.001, value_learning_rate=.001,
+                                   eval_splits=["validation"], eval_episodes=1, eval_every=1,
+                                   batch_size=2, max_tokens=10000, max_updates=1, episodes_per_update=4,
+                                   ppo_epochs=2, forecast_weight=0., forecast_loss="log", replay_weight=0.,
+                                   clip=.2, value_weight=.5, entropy_weight=.01)
+            calls = []
+
+            def interrupt_second(*arguments, **keywords):
+                calls.append(1)
+                if len(calls) == 2:
+                    raise DeadlineReached("fixture interruption between committed PPO epochs")
+                return update(*arguments, **keywords)
+
+            with patch("transformers.AutoTokenizer.from_pretrained", return_value=tokenizer), \
+                    patch("general_lab.rl.load_model", return_value=language), \
+                    patch("general_lab.rl.label_token_ids", return_value=list(range(40, 76))), \
+                    patch("general_lab.rl.update", side_effect=interrupt_second):
+                receipt = train(args)
+            self.assertEqual(receipt["status"], "bounded_stop")
+            self.assertEqual(receipt["updates"], 0)
+            self.assertEqual(receipt["optimizer_steps"], 1)
+            self.assertEqual(receipt["partially_optimized_update"],
+                             {"update": 1, "completed_ppo_epochs": 1, "requested_ppo_epochs": 2})
+            self.assertGreater(receipt["language_parameter_audit"]["changed_elements"], 0)
+            self.assertGreater(receipt["pure_policy_language_gradient"]["nonzero_elements"], 0)
+            rollouts = [json.loads(line) for line in (args.output / "rollouts.jsonl").read_text().splitlines()]
+            steps = [json.loads(line) for line in (args.output / "optimizer-steps.jsonl").read_text().splitlines()]
+            self.assertEqual(len(rollouts), args.episodes_per_update)
+            self.assertTrue(all(row["update"] == 1 for row in rollouts))
+            self.assertEqual(len(steps), 1)
+            self.assertEqual((steps[0]["update"], steps[0]["ppo_epoch"], steps[0]["optimizer_step"]), (1, 1, 1))
+            self.assertEqual(set(steps[0]["rollout_ids"]), {row["id"] for row in rollouts})
+            self.assertTrue((args.output / "latest").exists())
+            self.assertEqual((args.output / "training.jsonl").read_text(), "")
 
     def test_real_qwen_adapter_hook_and_checkpointing(self):
         from peft import LoraConfig, get_peft_model

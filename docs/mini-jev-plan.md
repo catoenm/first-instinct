@@ -1,6 +1,10 @@
 # A general decision model: the intended target
 
-Status: research plan, not an implemented or trained capability claim.
+Status: the general interface, data factory and language reinforcement-learning
+trainer are implemented. The nine-billion-parameter supervised run is underway;
+its held-out evaluation and language reinforcement-learning comparison are pending.
+See the [frozen experiment protocol](general-training-v1-protocol.md). The
+previously released software model remains a separate, narrower experiment.
 
 The target is a small, open model that accepts arbitrary supplied state and
 user-defined questions, option descriptions and ordered levels. It should answer
@@ -28,6 +32,25 @@ The separate small models received reinforcement learning for probability
 reports and evidence acquisition. The language adapter itself has not received
 reinforcement learning. Previously prepared general-task rows and preliminary
 pilots do not establish generalization of this released software adapter.
+
+The new corpus contains 350,857 prepared training rows and 112,309,610 input
+tokens. Its 43,278,336 trainable language-adapter parameters affect the existing
+nine-billion-parameter foundation's attention and feed-forward computation.
+The output projection retains the foundation's vocabulary weights; it is not a
+new fixed-label classifier. The upcoming reinforcement-learning stage uses
+these same adapters, with a value head used only during training.
+
+The generic interface accepts independently specified choice, binary and
+ordered questions over one supplied state. For example:
+
+```bash
+python -m general_lab.interface --input examples/general-decisions.json \
+  --model qwen35-9b --run /path/to/completed/general/run
+```
+
+Omitting `--run` uses the untouched foundation. Each question has a separate
+forward pass; this does not implement shared-state attention reuse. Current
+limits are 1,536 input tokens per question and 2–36 offered choices.
 
 ## Revised sequence
 

@@ -1,0 +1,40 @@
+{
+  "state": {
+    "policy": [
+      "A delivered parcel should be closed.",
+      "For an undelivered parcel, an unresolved address problem requires contacting the customer.",
+      "Otherwise, expedite an undelivered parcel when it is at least two days late.",
+      "An undelivered parcel with no address problem and fewer than two late days should be monitored."
+    ],
+    "parcel": {
+      "status": "in transit",
+      "days_late": 3,
+      "address_problem": false
+    }
+  },
+  "questions": {
+    "next_action": {
+      "type": "choice",
+      "instructions": "Which next action follows the supplied policy?",
+      "criteria": {
+        "expedite": "Expedite the parcel",
+        "contact": "Contact the customer about their address",
+        "monitor": "Monitor the parcel without expediting",
+        "close": "Close the delivery case"
+      }
+    },
+    "eligible": {
+      "type": "binary",
+      "instructions": "Under the supplied policy, is this parcel eligible to be expedited?"
+    },
+    "delay_level": {
+      "type": "score",
+      "instructions": "Classify the parcel's delay using these exact levels.",
+      "criteria": [
+        "On time: zero late days",
+        "Slight delay: one or two late days",
+        "Long delay: at least three late days"
+      ]
+    }
+  }
+}
