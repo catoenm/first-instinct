@@ -3,42 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An experiment in training a language model to make decisions and estimate probabilities.">
+  <meta name="description" content="An open experiment in language models that make decisions. Give it context. Get an answer and its probability.">
+  <meta name="theme-color" content="#eeeade">
   <title>First Instinct</title>
   <link rel="stylesheet" href="/style.css">
   <script src="/app.js" defer></script>
 </head>
 <body>
   <main>
-    <header>
-      <h1>First Instinct</h1>
-      <p class="intro">A language model that picks an answer instead of writing one.</p>
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">An open model experiment / 001</p>
+        <h1><span class="brand-mark" aria-hidden="true">fi.</span>First Instinct</h1>
+      </div>
+      <a class="github" href="https://github.com/catoenm/first-instinct" aria-label="First Instinct on GitHub" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.16 1.18A11 11 0 0 1 12 6.02c.98 0 1.96.13 2.88.39 2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.42.36.78 1.06.78 2.14v3.16c0 .31.21.68.79.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+      </a>
     </header>
-    <form id="demo">
-      <label for="example">What should happen to this parcel?</label>
-      <textarea id="example" rows="4" required spellcheck="false" aria-describedby="hint">Expedite a parcel if it is at least two days late. Otherwise, wait.
+    <p class="intro">Give it context. Give it choices. Get a decision.</p>
+    <section class="workbench" aria-label="Try the model">
+      <div class="window-bar"><span>Decision workbench</span><span id="connection" class="connection">Connecting</span></div>
+      <div class="tabs" role="tablist" aria-label="Example scenarios">
+        <button id="tab-parcel" type="button" role="tab" aria-selected="true" aria-controls="example-panel" data-example="parcel"><span>01</span> Parcel</button>
+        <button id="tab-support" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="support"><span>02</span> Support</button>
+        <button id="tab-access" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="access"><span>03</span> Access</button>
+        <button id="tab-severity" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="severity"><span>04</span> Severity</button>
+      </div>
+      <form id="demo">
+        <div id="example-panel" role="tabpanel" aria-labelledby="tab-parcel">
+          <div class="question-line"><h2 id="question">What should happen to this parcel?</h2><span id="question-type" class="type-label">Choose one</span></div>
+          <div class="field-heading"><label for="example">Context <span>/ editable</span></label><button id="reset" type="button" class="text-button" title="Restore this example">↺ Reset</button></div>
+          <textarea id="example" rows="4" required spellcheck="false" aria-describedby="hint">Expedite a parcel if it is at least two days late. Otherwise, wait.
 
 This parcel is three days late.</textarea>
-      <p id="hint" class="small">Try changing “three” to “one”. The possible answers are <strong>Expedite</strong> or <strong>Wait</strong>.</p>
-      <div class="run-line">
-        <button id="run" type="submit" disabled>Run</button>
-        <p id="status" class="small" role="status" aria-live="polite">Connecting to the model…</p>
-      </div>
-      <div id="result" hidden>
-        <div class="answer"><span id="expedite-label">Expedite</span><span id="expedite-probability"></span></div>
-        <div class="answer"><span id="wait-label">Wait</span><span id="wait-probability"></span></div>
-        <p class="small note">These are model probabilities, not guarantees.</p>
-      </div>
-    </form>
-    <section class="about" aria-labelledby="about-title">
-      <h2 id="about-title">What we built</h2>
-      <p>We started with Qwen3.5-9B, a pretrained language model with nine billion parameters. We adapted it on 350,857 examples: public instruction tasks, reasoning problems checked by code, and simulated decision scenarios.</p>
-      <p>Small trainable components throughout the language network learn to score the answers you provide. The parcel question is just one example; the underlying interface accepts your own questions and choices.</p>
-      <p>We’re also testing reinforcement learning: letting the model gather evidence, take actions, and learn from what happens. The experiment asks whether training it to forecast outcomes improves its decisions and probability estimates.</p>
-      <p id="model-note" class="small">Loading the current model’s training status…</p>
-      <a href="https://github.com/catoenm/first-instinct">Code &amp; experiments on GitHub</a>
+          <p id="hint" class="hint">Try changing “three” to “one”.</p>
+          <div class="run-line">
+            <button id="run" class="run-button" type="submit" disabled><span id="run-label">Run decision</span><span aria-hidden="true">↵</span></button>
+            <p id="status" role="status" aria-live="polite">Connecting to the model…</p>
+          </div>
+          <div class="output-heading"><span>Model output</span><span>Probability</span></div>
+          <div id="result" aria-label="Answer probabilities"></div>
+          <p id="probability-note" class="note">Run to see the model’s probabilities for these answers.</p>
+        </div>
+      </form>
     </section>
-    <noscript><p>Enable JavaScript to run the example.</p></noscript>
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">A small experiment in making decisions.</h2>
+      <p>We adapted Qwen3.5-9B on <strong>350,857 examples</strong> of instructions, code-checked reasoning, and simulated decisions. It scores the answers you supply in one pass, without writing a response.</p>
+      <p>Our reinforcement-learning experiment asks: can learning from actions and observed outcomes make its decisions—and its probabilities—better?</p>
+      <a href="https://github.com/catoenm/first-instinct/blob/main/docs/general-supervised-results.md" target="_blank" rel="noopener noreferrer">Read the experiment <span aria-hidden="true">↗</span></a>
+    </section>
+    <footer><span id="model-note">Loading model status…</span><span class="footer-mark" aria-hidden="true">END OF TRANSMISSION _</span></footer>
+    <noscript><p>Enable JavaScript to choose and run an example.</p></noscript>
   </main>
 </body>
 </html>

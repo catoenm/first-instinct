@@ -321,7 +321,7 @@ def readme(spec, manifest, runs, freeze):
              "Run the browser demo from this extracted directory:", "", "```sh",
              f"python -m general_lab.serve --run runs/supervised --device auto --max-tokens {manifest['max_tokens']}",
              "```", "",
-             "Open [the local demo](http://127.0.0.1:8766/) and select **Run** to try the editable parcel example. For the broader question interface, use `python -m general_lab.interface --run runs/supervised --input examples/general-decisions.json --device auto`. See the [demo guide](docs/general-demo.md) for details and limitations.", "",
+             "Open [the local demo](http://127.0.0.1:8766/), choose an example tab, and select **Run decision**. Parcel, Support, Access, and Severity demonstrate choices, yes/no answers, and ordered levels. For the broader question interface, use `python -m general_lab.interface --run runs/supervised --input examples/general-decisions.json --device auto`. See the [demo guide](docs/general-demo.md) for details and limitations.", "",
              "## Included runs", ""]
     for run in runs:
         lines.append(f"- `{run['artifact_path']}`: {run['status']}; {run['completed_updates']} updates; selected {run['selected_update']}. {run['selection_note']}")

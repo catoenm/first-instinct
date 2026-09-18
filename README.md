@@ -26,8 +26,8 @@ the same language network; their results and the combined release are pending.
 The released model and browser demo below remain the earlier software experiment.
 An optional [TensorBoard monitor](docs/training-monitor.md) reads the existing
 logs without restarting the training process.
-The new [general decision demo](docs/general-demo.md) offers one editable
-example and a short explanation. The local version now serves the completed
+The new [general decision demo](docs/general-demo.md) offers four example tabs
+in a compact retro interface. The local version now serves the completed
 supervised checkpoint; the underlying interface accepts your own questions
 and choices.
 

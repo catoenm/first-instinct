@@ -1,8 +1,9 @@
 # General decision demo
 
-The local browser demo presents one editable parcel example and a Run button,
-followed by a short explanation of the experiment. It uses the trained language
-model to score two supplied answers: expedite or wait.
+The local browser demo is a compact retro workbench with four example tabs:
+Parcel, Support, Access, and Severity. One editable context and a Run button
+remain visible at a time. The examples exercise choice, yes/no, and ordered
+severity questions against the actual trained language model.
 
 The supervised training pass is complete, and the author's local demo now
 serves its selected checkpoint at step 2,742. See the
@@ -33,10 +34,12 @@ inspection demo can continue on port 8765.
 
 ## Try it
 
-1. Read the parcel policy and situation in the text box.
-2. Select **Run** to see probabilities for expediting or waiting.
-3. Change “three days late” to “one day late” and run again. You can also edit
-   the policy. Editing the example clears the earlier result.
+1. Choose an example tab and read its context and possible answers.
+2. Select **Run decision** to see the model's probabilities.
+3. Edit the context and run again. Try changing the parcel's delay, asking
+   support about a password, changing Robin's role, or describing a milder incident.
+4. **Reset** restores the selected example. Switching tabs preserves edits;
+   editing or switching clears the previous result. Arrow keys also move between tabs.
 
 The note below the explanation identifies the loaded model and its training
 status. Unfinished runs are labeled **Training preview**. If a reinforcement
@@ -46,11 +49,12 @@ the selected model.
 
 ## Limits of this experiment
 
-The browser deliberately shows only one simple choice question. The underlying
-interface also supports user-defined choice, yes/no, and ordered-level
-questions. It scores supplied answers directly, without generating an
-explanation first. Use the command below and edit its input file to explore
-those capabilities.
+The browser presents one question at a time, with answer definitions supplied
+by the selected example. The underlying interface supports arbitrary user-defined
+choice, yes/no, and ordered-level questions. It scores supplied answers directly,
+without generating an explanation first. Use the command below and edit its
+input file to supply your own questions and answer definitions. The severity
+tab shows each level's probability and highlights the most probable level.
 
 Each question independently includes the shared state and its own answer
 definitions. The interface accepts up to 32 questions with 2–36 options each
