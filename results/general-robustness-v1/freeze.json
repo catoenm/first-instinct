@@ -1,0 +1,39 @@
+{
+  "adapter_files_sha256": {
+    "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+    "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+    "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472"
+  },
+  "code_sha256": {
+    "docs/general-robustness-v1-protocol.md": "e1e752bd68e4cf4a4d34012d4771e697077964c69ffa8c59ffedeeb6b0e6d1cc",
+    "docs/general-robustness.md": "b385511c60f8749f74ac3b132a6e373e154ce123d44ff18c4770684f6191b75b",
+    "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+    "general_lab/robustness.py": "653ff8cdc34a1e935638ef40725513c8dde57f5d6223d61acb39d3fcaddcaa8c",
+    "general_lab/robustness_local.py": "586ddecc34828564cf8f2937cdf791a925b39a87ebb4963164e1364743596bd1",
+    "general_lab/serve.py": "5b4956df967bd056dbdbcc16a4beaad41a0d9667133249fef6995e0c98c9ef0d",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+    "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689",
+    "test_general_robustness.py": "ea152bb1c2ec5cd238d71263b15c35a3e064eb49739e023f2ae4f5fa42b13cb5",
+    "test_robustness_local.py": "759ac10ec8d39a7d115970ecd4c1415be2e34752c95bfb8a8bc05c4f471e5cc6"
+  },
+  "corpus_content_sha256": "1e9936ffbca4ae6633bea94417fad85fca9eff73494abc45a341dd50037a5119",
+  "corpus_file_sha256": "b29dc72997ca14d3d26318769a242fdb5fa8a2eb18fc31cd2ada987c7c2b52be",
+  "expected_server_metadata": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "frozen_at_unix": 1789714056.1084101,
+  "model_predictions_before_freeze": 0,
+  "prompt_audit_sha256": "ccb15c3c6996795c07109b9a7b968314b9b2c263c0f680dcca395932afdff681",
+  "schema": "typed-robustness-local-v1",
+  "selection_role": "none"
+}

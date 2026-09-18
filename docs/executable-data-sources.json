@@ -1,0 +1,270 @@
+{
+  "schema": "first-instinct-executable-data-research-sources-v1",
+  "research_date": "2026-09-18",
+  "method": "Read public primary-source documentation, code and selected code excerpts. No environment execution, dependency installation, protected-bundle unpacking or model/provider calls.",
+  "memo": "executable-data-next.md",
+  "repositories": [
+    {
+      "repository": "https://github.com/apple-aiml-research/ToolSandbox",
+      "revision": "c8571d7854316d2e1c5f288e59fe1e34e53f6dd1",
+      "ref_verification": "GitHub git/ref/heads/main on 2026-09-18",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/LICENSE",
+          "memo_reference": "ts-license"
+        },
+        {
+          "path": "ACKNOWLEDGEMENTS",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/ACKNOWLEDGEMENTS",
+          "memo_reference": "ts-ack"
+        },
+        {
+          "path": "tool_sandbox/common/execution_context.py",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/tool_sandbox/common/execution_context.py",
+          "memo_reference": "ts-context"
+        },
+        {
+          "path": "tool_sandbox/tools/reminder.py",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/tool_sandbox/tools/reminder.py",
+          "memo_reference": "ts-reminder"
+        },
+        {
+          "path": "tool_sandbox/common/evaluation.py",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/tool_sandbox/common/evaluation.py",
+          "memo_reference": "ts-eval"
+        },
+        {
+          "path": "tool_sandbox/tools/rapid_api_search_tools.py",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/tool_sandbox/tools/rapid_api_search_tools.py",
+          "memo_reference": "ts-search"
+        },
+        {
+          "path": "pyproject.toml",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/pyproject.toml",
+          "memo_reference": "ts-project"
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://github.com/apple-aiml-research/ToolSandbox/blob/c8571d7854316d2e1c5f288e59fe1e34e53f6dd1/README.md",
+          "memo_reference": "ts-readme"
+        }
+      ],
+      "license": {
+        "name": "Custom Apple software license",
+        "inspection_limit": "Root license inspected; separate third-party acknowledgement file partially inspected; no complete transitive audit."
+      },
+      "runtime_tested": false
+    },
+    {
+      "repository": "https://github.com/StonyBrookNLP/appworld",
+      "revision": "42b5bcf3cd334fee33f0c37c02070a9f5807add5",
+      "ref_verification": "GitHub git/ref/heads/main on 2026-09-18",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/LICENSE",
+          "memo_reference": "aw-license"
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/README.md",
+          "memo_reference": "aw-readme"
+        },
+        {
+          "path": "src/appworld/evaluator.py",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/src/appworld/evaluator.py",
+          "memo_reference": "aw-eval"
+        },
+        {
+          "path": "src/appworld/task.py",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/src/appworld/task.py",
+          "memo_reference": "aw-task"
+        },
+        {
+          "path": "src/appworld/environment.py",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/src/appworld/environment.py",
+          "memo_reference": "aw-env"
+        },
+        {
+          "path": "guides/parallelizing_worlds.md",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/guides/parallelizing_worlds.md",
+          "memo_reference": "aw-parallel"
+        },
+        {
+          "path": "pyproject.toml",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/pyproject.toml",
+          "memo_reference": "aw-project"
+        },
+        {
+          "path": "src/appworld/download.py",
+          "source_url": "https://github.com/StonyBrookNLP/appworld/blob/42b5bcf3cd334fee33f0c37c02070a9f5807add5/src/appworld/download.py",
+          "memo_reference": "aw-download"
+        }
+      ],
+      "license": {
+        "name": "Apache-2.0 public portion; additional restrictions for protected material",
+        "inspection_limit": "Root license and maintainer explanation inspected; protected bundles and their embedded task-specific license files not downloaded/unpacked."
+      },
+      "runtime_tested": false
+    },
+    {
+      "repository": "https://github.com/sierra-research/tau2-bench",
+      "revision": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+      "ref_verification": "GitHub git/ref/heads/main on 2026-09-18",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/LICENSE",
+          "memo_reference": "tau-license"
+        },
+        {
+          "path": "README.md",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/README.md",
+          "memo_reference": "tau-readme"
+        },
+        {
+          "path": "pyproject.toml",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/pyproject.toml",
+          "memo_reference": "tau-project"
+        },
+        {
+          "path": "src/tau2/evaluator/evaluator.py",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/evaluator/evaluator.py",
+          "memo_reference": "tau-eval"
+        },
+        {
+          "path": "src/tau2/evaluator/evaluator_env.py",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/evaluator/evaluator_env.py",
+          "memo_reference": "tau-env-eval"
+        },
+        {
+          "path": "src/tau2/evaluator/evaluator_nl_assertions.py",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/evaluator/evaluator_nl_assertions.py",
+          "memo_reference": "tau-nl"
+        },
+        {
+          "path": "src/tau2/gym/README.md",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/gym/README.md",
+          "memo_reference": "tau-gym"
+        },
+        {
+          "path": "src/tau2/domains/retail/environment.py",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/domains/retail/environment.py",
+          "memo_reference": "tau-retail"
+        },
+        {
+          "path": "src/tau2/domains/telecom/environment.py",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/domains/telecom/environment.py",
+          "memo_reference": "tau-telecom"
+        },
+        {
+          "path": "data/tau2/domains/retail/split_tasks.json",
+          "source_url": "https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/data/tau2/domains/retail/split_tasks.json",
+          "memo_reference": "tau-split"
+        }
+      ],
+      "license": {
+        "name": "MIT",
+        "inspection_limit": "Root license inspected."
+      },
+      "runtime_tested": false
+    },
+    {
+      "repository": "https://github.com/ServiceNow/BrowserGym",
+      "revision": "9e779f087de9a65668b6974d11f9ce9816026e96",
+      "ref_verification": "GitHub git/ref/heads/main on 2026-09-18",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://github.com/ServiceNow/BrowserGym/blob/9e779f087de9a65668b6974d11f9ce9816026e96/LICENSE",
+          "memo_reference": "bg-license"
+        },
+        {
+          "path": "browsergym/miniwob/README.md",
+          "source_url": "https://github.com/ServiceNow/BrowserGym/blob/9e779f087de9a65668b6974d11f9ce9816026e96/browsergym/miniwob/README.md",
+          "memo_reference": "bg-miniwob"
+        },
+        {
+          "path": "browsergym/core/requirements.txt",
+          "source_url": "https://github.com/ServiceNow/BrowserGym/blob/9e779f087de9a65668b6974d11f9ce9816026e96/browsergym/core/requirements.txt",
+          "memo_reference": "bg-requirements"
+        },
+        {
+          "path": "browsergym/miniwob/src/browsergym/miniwob/base.py",
+          "source_url": "https://github.com/ServiceNow/BrowserGym/blob/9e779f087de9a65668b6974d11f9ce9816026e96/browsergym/miniwob/src/browsergym/miniwob/base.py",
+          "memo_reference": "bg-base"
+        }
+      ],
+      "license": {
+        "name": "Apache-2.0",
+        "inspection_limit": "Root license inspected; benchmark assets have separate licenses."
+      },
+      "runtime_tested": false
+    },
+    {
+      "repository": "https://github.com/Farama-Foundation/miniwob-plusplus",
+      "revision": "7fd85d71a4b60325c6585396ec4f48377d049838",
+      "ref_verification": "Pinned commit from inspected BrowserGym miniwob/README.md; not claimed to be current main.",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://github.com/Farama-Foundation/miniwob-plusplus/blob/7fd85d71a4b60325c6585396ec4f48377d049838/LICENSE",
+          "memo_reference": "mw-license"
+        },
+        {
+          "path": "miniwob/html/miniwob/click-checkboxes.html",
+          "source_url": "https://github.com/Farama-Foundation/miniwob-plusplus/blob/7fd85d71a4b60325c6585396ec4f48377d049838/miniwob/html/miniwob/click-checkboxes.html",
+          "memo_reference": "mw-checkboxes"
+        }
+      ],
+      "license": {
+        "name": "MIT",
+        "inspection_limit": "License inspected at the BrowserGym-pinned revision."
+      },
+      "runtime_tested": false
+    },
+    {
+      "repository": "https://github.com/facebookresearch/OpenApps",
+      "revision": "c7e08cb269bf6a4ce370cd66c69e28c7c6b28243",
+      "ref_verification": "GitHub git/ref/heads/main on 2026-09-18",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "source_url": "https://github.com/facebookresearch/OpenApps/blob/c7e08cb269bf6a4ce370cd66c69e28c7c6b28243/LICENSE",
+          "memo_reference": "oa-license"
+        },
+        {
+          "path": "src/open_apps/tasks/tasks.py",
+          "source_url": "https://github.com/facebookresearch/OpenApps/blob/c7e08cb269bf6a4ce370cd66c69e28c7c6b28243/src/open_apps/tasks/tasks.py",
+          "memo_reference": "oa-tasks"
+        },
+        {
+          "path": "src/open_apps/state.py",
+          "source_url": "https://github.com/facebookresearch/OpenApps/blob/c7e08cb269bf6a4ce370cd66c69e28c7c6b28243/src/open_apps/state.py",
+          "memo_reference": "oa-state"
+        },
+        {
+          "path": "src/open_apps/apps/assets/vendor/README.md",
+          "source_url": "https://github.com/facebookresearch/OpenApps/blob/c7e08cb269bf6a4ce370cd66c69e28c7c6b28243/src/open_apps/apps/assets/vendor/README.md",
+          "memo_reference": "oa-assets"
+        },
+        {
+          "path": "docs/installation.md",
+          "source_url": "https://github.com/facebookresearch/OpenApps/blob/c7e08cb269bf6a4ce370cd66c69e28c7c6b28243/docs/installation.md",
+          "memo_reference": "oa-install"
+        },
+        {
+          "path": "pyproject.toml",
+          "source_url": "https://github.com/facebookresearch/OpenApps/blob/c7e08cb269bf6a4ce370cd66c69e28c7c6b28243/pyproject.toml",
+          "memo_reference": "oa-project"
+        }
+      ],
+      "license": {
+        "name": "CC-BY-NC-4.0",
+        "inspection_limit": "Root license inspected; commercial-use permission not established."
+      },
+      "runtime_tested": false
+    }
+  ]
+}

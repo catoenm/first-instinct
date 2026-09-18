@@ -1,0 +1,12 @@
+{
+  "input_tokens": 99354,
+  "interface_contracts": {
+    "interpretation": "Serialization guarantees without model inference; not learned semantic robustness or shared-state computation.",
+    "opaque_id_byte_identical_prompts": 96,
+    "question_independence_contracts": 96
+  },
+  "maximum_tokens": 272,
+  "model_inference": false,
+  "questions": 456,
+  "unique_encoded_prompts": 360
+}

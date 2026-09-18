@@ -1,10 +1,18 @@
 # A general decision model: the intended target
 
-Status: the general interface, data factory and language reinforcement-learning
-trainer are implemented. The nine-billion-parameter supervised run is underway;
-its held-out evaluation and language reinforcement-learning comparison are pending.
-See the [frozen experiment protocol](general-training-v1-protocol.md). The
-previously released software model remains a separate, narrower experiment.
+Status, September 18, 2026: the nine-billion-parameter supervised model is
+trained, evaluated, released and serving the local demo. It improved held-out
+accuracy from 63.3% to 78.1%. Four completed language reinforcement-learning
+runs did not reliably improve decisions; the demo therefore retains the
+supervised checkpoint. See the [supervised results](general-supervised-results.md)
+and [reinforcement results](general-reinforcement-results.md).
+
+A new [executable-outcome comparison](outcome-v2-protocol.md) is running from
+that same supervised checkpoint. Outcome-only, reward-only and combined
+training each have two seeds. Its 59,993 verified questions concern action
+consequences and future costs in two sequential environments. No improvement
+from this new experiment has yet been established. The earlier software model
+remains a separate, narrower experiment.
 
 The target is a small, open model that accepts arbitrary supplied state and
 user-defined questions, option descriptions and ordered levels. It should answer
@@ -18,7 +26,8 @@ Calibrated Decisions recipe are unknown.
 The generic Qwen scorer already accepts supplied state, question and 2–36 option
 descriptions. It reads allowed label-token logits directly from the network in
 one forward pass per question. It does not generate text for another classifier
-to read. The browser demo exposes a narrower software-inspection workflow.
+to read. The general browser demo exposes four editable examples; the underlying
+interface also accepts a visitor's own question and choice definitions.
 
 The released software adapter trains 32,464,896 parameters in low-rank updates
 to language attention and feed-forward projections. Original matrices and the
@@ -29,16 +38,20 @@ matrices would change checkpoint storage, not add learning.
 
 The software adapter received outcome-supervised training on one event family.
 The separate small models received reinforcement learning for probability
-reports and evidence acquisition. The language adapter itself has not received
-reinforcement learning. Previously prepared general-task rows and preliminary
-pilots do not establish generalization of this released software adapter.
+reports and evidence acquisition. That older four-billion-parameter language
+adapter itself did not receive reinforcement learning. This differs from the
+newer nine-billion-parameter language reinforcement runs, which did update
+internal language adapters from sampled rewards, but did not reliably improve
+held-out decisions.
 
 The new corpus contains 350,857 prepared training rows and 112,309,610 input
 tokens. Its 43,278,336 trainable language-adapter parameters affect the existing
 nine-billion-parameter foundation's attention and feed-forward computation.
 The output projection retains the foundation's vocabulary weights; it is not a
-new fixed-label classifier. The upcoming reinforcement-learning stage uses
-these same adapters, with a value head used only during training.
+new fixed-label classifier. The completed reinforcement-learning stage used
+these same language adapters, with a value head used only during training. The
+new outcome comparison isolates the value head from language gradients and
+adds explicit forecasts of terminal outcomes and future costs.
 
 The generic interface accepts independently specified choice, binary and
 ordered questions over one supplied state. For example:
@@ -51,6 +64,13 @@ python -m general_lab.interface --input examples/general-decisions.json \
 Omitting `--run` uses the untouched foundation. Each question has a separate
 forward pass; this does not implement shared-state attention reuse. Current
 limits are 1,536 input tokens per question and 2–36 offered choices.
+
+Two supplementary checks now address this interface directly: a
+[typed-question robustness audit](general-robustness.md) and an isolated
+[shared-state inference prototype](shared-state-experiment.md). Neither changes
+the running experiment's inputs or checkpoint selection. The
+[external data review](executable-data-next.md) identifies actual third-party
+tool environments to broaden the executable mechanisms beyond authored worlds.
 
 ## Revised sequence
 
