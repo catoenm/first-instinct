@@ -5,6 +5,11 @@ parameters to the described-option interface. The released v0.2.0 model remains
 the 141-million-parameter DeBERTa experiment. There is no claim of Jev parity or
 knowledge of its private training method.
 
+The newer [software outcome experiment](software-outcome-model.md) adapts the
+same foundation to execution-verified event forecasts and includes a local
+inspection demo. The general-task mixture described below is a separate pilot;
+its adapter was not used to initialize the software model.
+
 See the [architecture roadmap](architecture-roadmap.md) for the distinction
 between the running supervised model and proposed outcome/value predictors.
 
@@ -81,8 +86,8 @@ pilot's small-model reference excludes all 17 such rows it could process, leavin
 limit. The primary comparison for the larger experiment is its own pretrained
 checkpoint versus the selected adapter on identical held-out examples.
 
-The execution task runs only twelve known local arithmetic functions; source
-code from the internet is never executed. Incorrect actions, coincidentally
+The execution task in this original general-task mixture runs only twelve known
+local arithmetic functions. Incorrect actions, coincidentally
 correct alternatives and no-suitable-action cases are retained. Three operations
 are held out entirely as a separate challenge. This is a narrow authored
 environment, not evidence of general tool execution or repository-level coding.

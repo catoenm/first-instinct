@@ -1,0 +1,70 @@
+{
+  "code_sha256": "a943f95cfbb349a147e762529c4ef677682cc5b091888edd115e3366052df261",
+  "interpretation": "First contiguous shards of three teacher subsets, not a representative sample. Identical normalized questions are overlapping source prompts, not independent examples. Distinct questions may still share a source task. No tools executed; no success labels inferred.",
+  "largest_server_cooccurrence_component": 424,
+  "pairwise_exact_question_overlaps": [
+    {
+      "a": "Kimi-K2/train-00000-of-00040.parquet",
+      "b": "OSS/train-00000-of-00047.parquet",
+      "shared_questions": 1266
+    },
+    {
+      "a": "Kimi-K2/train-00000-of-00040.parquet",
+      "b": "Qwen3/train-00000-of-00044.parquet",
+      "shared_questions": 0
+    },
+    {
+      "a": "OSS/train-00000-of-00047.parquet",
+      "b": "Qwen3/train-00000-of-00044.parquet",
+      "shared_questions": 0
+    }
+  ],
+  "rows": 35227,
+  "server_cooccurrence_components": 6,
+  "sources": [
+    {
+      "row_audit_sha256": "115c3a386d9eb75a10f04762663ecb635ffd66a0a81e2dcabeb7ad5d9adde0cb",
+      "source": {
+        "bytes": 149328162,
+        "dataset": "Agent-Ark/Toucan-1.5M",
+        "dataset_card_sha256": "59eb287d06206f09c3a4f27d8b77b11600b54d81daa328b5ce2d1e15485efb13",
+        "file": "Kimi-K2/train-00000-of-00040.parquet",
+        "license": "Apache-2.0 as declared in the pinned dataset card",
+        "revision": "0df3cf37f2abefb380370cfb02eabea2a35ae782",
+        "scope": "One contiguous shard of one teacher subset, not a random sample of the full corpus.",
+        "sha256": "f5204ef699c468ebba526db58f38d37253c471a6b8f6591866613d9bbf3af332"
+      },
+      "summary_sha256": "643488b06c40da094be4a66e220308e0939cf9b91b3f6b3ef2d71cd29bf440c7"
+    },
+    {
+      "row_audit_sha256": "48ea43d263f7701432ccf2663808f93490c93ccb086e67d826c4a5021b98b14c",
+      "source": {
+        "bytes": 154444700,
+        "dataset": "Agent-Ark/Toucan-1.5M",
+        "dataset_card_sha256": "59eb287d06206f09c3a4f27d8b77b11600b54d81daa328b5ce2d1e15485efb13",
+        "file": "OSS/train-00000-of-00047.parquet",
+        "license": "Apache-2.0 as declared in the pinned dataset card",
+        "revision": "0df3cf37f2abefb380370cfb02eabea2a35ae782",
+        "scope": "One contiguous shard of one teacher subset, not a random sample of the full corpus.",
+        "sha256": "82b638601253f4ae0ad796b5366c1cf0acb144ad6e3171918a90e687eb524b01"
+      },
+      "summary_sha256": "906234121bdfd4ec0278928838a0f08aef7fd4f563c8a9cda464b1ea69618987"
+    },
+    {
+      "row_audit_sha256": "f11abe04043ddd6a9f3d34412055e405c12c7e97b6ae04640ee69c8cf17c131e",
+      "source": {
+        "bytes": 129783116,
+        "dataset": "Agent-Ark/Toucan-1.5M",
+        "dataset_card_sha256": "59eb287d06206f09c3a4f27d8b77b11600b54d81daa328b5ce2d1e15485efb13",
+        "file": "Qwen3/train-00000-of-00044.parquet",
+        "license": "Apache-2.0 as declared in the pinned dataset card",
+        "revision": "0df3cf37f2abefb380370cfb02eabea2a35ae782",
+        "scope": "One contiguous shard of one teacher subset, not a random sample of the full corpus.",
+        "sha256": "1a1598c2f0548b25d7048ace5f6e64ad60e080b5a5cbf363eddb861fc263f7d8"
+      },
+      "summary_sha256": "5e6649e3cd7782a0dac4c44c731c54839b125f797fae96b17b14f541eb7af320"
+    }
+  ],
+  "unique_servers": 429,
+  "unique_whitespace_normalized_questions": 33961
+}

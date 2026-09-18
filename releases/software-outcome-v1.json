@@ -1,0 +1,17 @@
+{
+  "archive_bytes": 125138315,
+  "archive_sha256": "040ce1c72ad9719892ca6f292ff5668732a601dae5d2f80a2fa2633f0bf2c225",
+  "artifact_manifest_sha256": {
+    ".": "1f543fc4008bb2af996d3d522d4a1b48b1302b62f4c474fdd93f08ff2dce974e"
+  },
+  "data_sha256": "dce7c5941701878ee8c412b5ceaf451228c59d0e15ac5a8c1e99043c2e454b6c",
+  "directory_name": "first-instinct-software-outcome-v1",
+  "download_url": "https://github.com/catoenm/first-instinct/releases/download/software-outcome-v1/first-instinct-software-outcome-v1.zip",
+  "model": {
+    "id": "Qwen/Qwen3.5-4B",
+    "kind": "qwen3_5",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+  },
+  "note": "Selected adapter plus evidence; foundation weights downloaded separately. Outcome-supervised model, not a large-model reinforcement-learning checkpoint.",
+  "tag": "software-outcome-v1"
+}

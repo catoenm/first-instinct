@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First Instinct · Evidence room</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a href="/" class="brand">first instinct<span> / evidence room</span></a><span class="tag">LOCAL EXPERIMENT</span></header>
+<main>
+  <section class="intro"><div class="eyebrow">A SMALL DECISION, WITH SOMETHING AT STAKE</div>
+    <h1>Would you trust<br>one passing test?</h1>
+    <p>A four-billion-parameter model reads a program and forecasts whether its complete test suite passes. You choose what evidence to reveal. The hidden outcome stays sealed until you finish.</p>
+  </section>
+  <div class="controls"><label for="candidate">Verified program</label><select id="candidate" aria-label="Verified program"></select><button id="start">Start episode ↗</button></div>
+  <p id="status" role="status" aria-live="polite">Loading the experiment…</p>
+  <div class="workspace" id="workspace" hidden>
+    <section class="program panel"><div class="section-label"><span>01 / THE CANDIDATE</span><span id="function"></span></div><p id="contract"></p><pre><code id="code"></code></pre>
+      <div class="section-label"><span>02 / VISIBLE EVIDENCE</span></div><div id="evidence"></div>
+    </section>
+    <aside>
+      <section class="forecast panel"><div class="section-label">03 / THE FORECAST</div><div class="probability"><span id="probability">—</span><span>%</span></div><p class="muted">estimated chance the complete fixed suite passes</p><progress id="meter" max="1" value="0" aria-label="Estimated pass probability"></progress>
+      <p id="raw" class="small"></p><div id="history"></div></section>
+      <section class="panel actions"><div class="section-label">04 / YOUR NEXT MOVE</div><p>Reveal up to two checks before committing. Each inspection costs 0.01 simulated reward units.</p><div id="inspections"></div><div id="policy-panel" hidden><p id="recommendation"></p><button id="policy" class="policy">Follow trained inspector →</button><p class="small">A separate small model learned inspection through Proximal Policy Optimization. The large model forecasts the outcome.</p></div><button id="finish" class="finish">Commit the forecast →</button><p id="cost" class="small"></p></section>
+      <section class="panel result" id="result" hidden><div class="section-label">THE SEALED OUTCOME</div><h2 id="outcome"></h2><p id="reward"></p><p class="small">Reward = 1 − (reported probability − outcome)² − inspection costs. Reports use a grid of 0.05.</p></section>
+    </aside>
+  </div>
+  <section class="footnote"><strong>What this shows.</strong> These are real, previously executed checks on mutations of open-source functions. Revealing a check replays its saved result. Choose inspections yourself or follow the small trained inspector. The larger model learned from outcome labels; its forecast uses a temperature fitted on validation data and can still be wrong. These two models were trained separately. The code, measurements and reinforcement-learning study are in the public repository.</section>
+</main>
+<footer><span>FIRST INSTINCT / OPEN EXPERIMENTS</span><a href="https://github.com/catoenm/first-instinct/blob/main/docs/software-outcome-model.md" target="_blank" rel="noreferrer">Read the experiment ↗</a></footer>
+<script src="/app.js"></script>
+</body></html>

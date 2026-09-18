@@ -1,0 +1,10 @@
+{
+  "bytes": 129783116,
+  "dataset": "Agent-Ark/Toucan-1.5M",
+  "dataset_card_sha256": "59eb287d06206f09c3a4f27d8b77b11600b54d81daa328b5ce2d1e15485efb13",
+  "file": "Qwen3/train-00000-of-00044.parquet",
+  "license": "Apache-2.0 as declared in the pinned dataset card",
+  "revision": "0df3cf37f2abefb380370cfb02eabea2a35ae782",
+  "scope": "One contiguous shard of one teacher subset, not a random sample of the full corpus.",
+  "sha256": "1a1598c2f0548b25d7048ace5f6e64ad60e080b5a5cbf363eddb861fc263f7d8"
+}

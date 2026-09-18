@@ -213,11 +213,17 @@ reported replacement run preserves the same data and splits. See the full
 
 ## What this makes worth investigating next
 
-The useful question is whether a language model can beat the simple planner by
-reading code and recognizing which checks are informative for that particular
-candidate. Our larger-model export has 36,189 training views after length checks,
-containing 34.6 million input tokens. Overlong inputs are excluded, never silently
-truncated. Seven views of one program still represent one program variant.
+The [completed language-model pilot](software-outcome-model.md) now improves
+forecasts over a simple evidence-frequency reference and provides an interactive
+local demo. Previously trained small inspectors also improve reward when paired
+with those forecasts, although the empirical planner still chooses evidence
+better. The next question is whether training acquisition with the large
+forecaster, and adding independent source repositories, improves that result.
+
+The export has 36,189 training views after length checks, containing 34.6 million
+input tokens. The pilot's selected checkpoint processes 4.57 million of those
+tokens. Overlong inputs are excluded, never silently truncated. Seven views of
+one program still represent one program variant.
 
 The next data expansion should add repositories, dependency-bearing tasks,
 independently authored tests and actual bug fixes. Keep a representative audit

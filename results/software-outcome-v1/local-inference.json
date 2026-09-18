@@ -1,0 +1,114 @@
+{
+  "device": "mps",
+  "load_seconds": 4.550629208009923,
+  "maximum_probability_difference_from_cloud": 2.5898334570229053e-06,
+  "peak_process_memory_note": "Weights use float32 on this Mac, versus bfloat16 in the cloud. This is a portability and request-timing check on eight fixed requests, not a second full evaluation. Model loading excluded from per-request times; first request may be cold.",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "predictions": [
+    {
+      "choice": "fails",
+      "gpu_probability": 3.120191104244441e-05,
+      "id": "af0778f0ff8bb610e2b7a47c-view-0",
+      "input_tokens": 627,
+      "milliseconds": 1508.64412500232,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999676942825317,
+        "passes": 3.233470124541782e-05
+      },
+      "probability_difference": 1.1327902029734105e-06
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 3.3214189897989854e-05,
+      "id": "af0778f0ff8bb610e2b7a47c-view-1",
+      "input_tokens": 745,
+      "milliseconds": 1677.4986249947688,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999676942825317,
+        "passes": 3.2332816772395745e-05
+      },
+      "probability_difference": 8.813731255941093e-07
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 3.535625000949949e-05,
+      "id": "af0778f0ff8bb610e2b7a47c-view-2",
+      "input_tokens": 770,
+      "milliseconds": 1806.8491669982905,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.999966025352478,
+        "passes": 3.3983280445681885e-05
+      },
+      "probability_difference": 1.3729695638176054e-06
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 2.2827998691354878e-05,
+      "id": "af0778f0ff8bb610e2b7a47c-view-4",
+      "input_tokens": 648,
+      "milliseconds": 1511.5260419988772,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999784231185913,
+        "passes": 2.1555668354267254e-05
+      },
+      "probability_difference": 1.2723303370876238e-06
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 3.120191104244441e-05,
+      "id": "af0778f0ff8bb610e2b7a47c-view-3",
+      "input_tokens": 853,
+      "milliseconds": 1927.758666992304,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999662637710571,
+        "passes": 3.379174449946731e-05
+      },
+      "probability_difference": 2.5898334570229053e-06
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 2.9311537218745798e-05,
+      "id": "af0778f0ff8bb610e2b7a47c-view-5",
+      "input_tokens": 737,
+      "milliseconds": 1651.5678340074373,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999707937240601,
+        "passes": 2.9201806682976894e-05
+      },
+      "probability_difference": 1.0973053576890379e-07
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 2.9311537218745798e-05,
+      "id": "af0778f0ff8bb610e2b7a47c-view-6",
+      "input_tokens": 764,
+      "milliseconds": 1673.9007079886505,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999703168869019,
+        "passes": 2.9645278118550777e-05
+      },
+      "probability_difference": 3.3374089980497956e-07
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 3.535625000949949e-05,
+      "id": "1ee31d13e671df0a12a43047-view-0",
+      "input_tokens": 618,
+      "milliseconds": 1390.7937500043772,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999644756317139,
+        "passes": 3.5541776014724746e-05
+      },
+      "probability_difference": 1.8552600522525609e-07
+    }
+  ],
+  "torch": "2.14.0"
+}

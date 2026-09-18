@@ -1,0 +1,17 @@
+{
+  "comparison.json": "4a76f35b691c23cde944decdb854c947cdce955b28d2f7547de5cfd0458737a0",
+  "kimi/parse-failures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "kimi/row-audit.jsonl.gz": "0157cfaf7485c36c1894a5f1378a45872e8e9cc5fb6e3c897aad7717e5da699c",
+  "kimi/source.json": "8275755d9f0da1f31629af839db08f4472d5caa20dcdef7b1d83cc17c9f61c58",
+  "kimi/summary.json": "643488b06c40da094be4a66e220308e0939cf9b91b3f6b3ef2d71cd29bf440c7",
+  "oss/parse-failures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "oss/row-audit.jsonl.gz": "b77f8ed76304b271a50047f92006051ec4e2f229752e9d9ed8a1f26e23568c79",
+  "oss/source.json": "a8ba35927b23ca9fa2e6695643a1e474ba5fc0c161a1335b182ba6da6e497024",
+  "oss/summary.json": "906234121bdfd4ec0278928838a0f08aef7fd4f563c8a9cda464b1ea69618987",
+  "qwen/parse-failures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "qwen/row-audit.jsonl.gz": "6e380eaf98e1fa305538dd38d55f2e14e8267cd39a9f10c26d2264e57224a3dc",
+  "qwen/source.json": "f861069d87b6c95e70206c6411cd3a67501fc60b5625c44e573a78b3099ae2f8",
+  "qwen/summary.json": "5e6649e3cd7782a0dac4c44c731c54839b125f797fae96b17b14f541eb7af320",
+  "toucan_audit.py": "973adda469fff4bde272866033837f746d227a227f2829dcd52e1ba372858681",
+  "toucan_compare.py": "a943f95cfbb349a147e762529c4ef677682cc5b091888edd115e3366052df261"
+}

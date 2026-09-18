@@ -1,0 +1,468 @@
+{
+  "code_sha256": "34e47695a0865695b2faeab06d49f654d1859e58bb207425144c3b9d6d0a4250",
+  "data_sha256": "dce7c5941701878ee8c412b5ceaf451228c59d0e15ac5a8c1e99043c2e454b6c",
+  "inputs_sha256": {
+    "hybrid/frozen-s17/selector.safetensors": "0539784dcbf7b751e4b96081a32e2eb5fa46b094aa152ec73203d0aa84034675",
+    "hybrid/frozen-s29/selector.safetensors": "19733facb765fd43e89ca241f8ecf39123dcb75e615f89bbb911ced49b57eda5",
+    "hybrid/frozen-s43/selector.safetensors": "1096285623ccd78f735cf7a3b9303e2f8ae71b164cfa9cb3d57b7ea58e8b4a99",
+    "runs/base-challenge/predictions.jsonl": "15fcdeb126c3e12be76d97b674c15939e0f07d3d82a51997b4a06932de21a5ba",
+    "runs/base-test/predictions.jsonl": "7b914206d14c9a7e7d93935842ff63fdd25b040bc61d91746a19c9c72692bc10",
+    "runs/trained-challenge/predictions.jsonl": "9153f698f23643f9aaf675a0788c387b6494cd9886a02dd12b0cb75b25865aee",
+    "runs/trained-test/predictions.jsonl": "a181504c44db6be7c121ce822d2519525e8c78fd09f8651726b08e457549d683"
+  },
+  "protocol": "All inspection costs fixed at 0.01 to match the language prompts. Reports rounded to 0.05. Three previously selected frozen-forecaster acquisition policies, with no new fitting or test-based selection. An exploratory transfer diagnostic, not joint language-model reinforcement learning. The empirical planner chooses actions with its original training-frequency model; its terminal reports here are replaced by language forecasts.",
+  "results": {
+    "challenge": {
+      "base": {
+        "empirical_planner": {
+          "cost": 0.009218750000000001,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.16769531249999997,
+          "purchases": 0.921875,
+          "report_brier": 0.15826171875,
+          "reward": 0.83251953125,
+          "stop_immediately_reward": 0.66482421875
+        },
+        "frozen_selector_s17": {
+          "cost": 0.007979176704573038,
+          "duplicate_purchases": 0.0002670441224473806,
+          "gain_over_same_forecaster_stopping": 0.13740585559148122,
+          "purchases": 0.7979176704573039,
+          "report_brier": 0.1897907489539457,
+          "reward": 0.8022300743414812,
+          "stop_immediately_reward": 0.66482421875
+        },
+        "frozen_selector_s29": {
+          "cost": 0.012149939360430516,
+          "duplicate_purchases": 0.00021093767333803294,
+          "gain_over_same_forecaster_stopping": 0.16102527911931597,
+          "purchases": 1.2149939360430515,
+          "report_brier": 0.1620005627702535,
+          "reward": 0.825849497869316,
+          "stop_immediately_reward": 0.66482421875
+        },
+        "frozen_selector_s43": {
+          "cost": 0.006784458089734129,
+          "duplicate_purchases": 3.723733985547763e-05,
+          "gain_over_same_forecaster_stopping": 0.13134073850980116,
+          "purchases": 0.6784458089734129,
+          "report_brier": 0.1970505846504647,
+          "reward": 0.7961649572598012,
+          "stop_immediately_reward": 0.66482421875
+        },
+        "inspect_probes_once": {
+          "cost": 0.0063281249999999995,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.13326171874999998,
+          "purchases": 0.6328125,
+          "report_brier": 0.1955859375,
+          "reward": 0.7980859375,
+          "stop_immediately_reward": 0.66482421875
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.33517578125,
+          "reward": 0.66482421875,
+          "stop_immediately_reward": 0.66482421875
+        }
+      },
+      "base_temperature_scaled": {
+        "empirical_planner": {
+          "cost": 0.009218750000000001,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.16630859374999998,
+          "purchases": 0.921875,
+          "report_brier": 0.15861328125000002,
+          "reward": 0.83216796875,
+          "stop_immediately_reward": 0.6658593749999999
+        },
+        "frozen_selector_s17": {
+          "cost": 0.007979176704573038,
+          "duplicate_purchases": 0.0002670441224473806,
+          "gain_over_same_forecaster_stopping": 0.13682004897737626,
+          "purchases": 0.7979176704573039,
+          "report_brier": 0.18934139931805072,
+          "reward": 0.8026794239773762,
+          "stop_immediately_reward": 0.6658593749999999
+        },
+        "frozen_selector_s29": {
+          "cost": 0.012149939360430516,
+          "duplicate_purchases": 0.00021093767333803294,
+          "gain_over_same_forecaster_stopping": 0.16001556739109335,
+          "purchases": 1.2149939360430515,
+          "report_brier": 0.16197511824847616,
+          "reward": 0.8258749423910934,
+          "stop_immediately_reward": 0.6658593749999999
+        },
+        "frozen_selector_s43": {
+          "cost": 0.006784458089734129,
+          "duplicate_purchases": 3.723733985547763e-05,
+          "gain_over_same_forecaster_stopping": 0.13073628480956634,
+          "purchases": 0.6784458089734129,
+          "report_brier": 0.19661988210069953,
+          "reward": 0.7965956598095664,
+          "stop_immediately_reward": 0.6658593749999999
+        },
+        "inspect_probes_once": {
+          "cost": 0.0063281249999999995,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.1323046875,
+          "purchases": 0.6328125,
+          "report_brier": 0.1955078125,
+          "reward": 0.7981640625000002,
+          "stop_immediately_reward": 0.6658593749999999
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.334140625,
+          "reward": 0.6658593749999999,
+          "stop_immediately_reward": 0.6658593749999999
+        }
+      },
+      "trained": {
+        "empirical_planner": {
+          "cost": 0.009218750000000001,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.06958984374999999,
+          "purchases": 0.921875,
+          "report_brier": 0.03972656250000001,
+          "reward": 0.9510546875000001,
+          "stop_immediately_reward": 0.8814648437499999
+        },
+        "frozen_selector_s17": {
+          "cost": 0.007979176704573038,
+          "duplicate_purchases": 0.0002670441224473806,
+          "gain_over_same_forecaster_stopping": 0.03676140229687744,
+          "purchases": 0.7979176704573039,
+          "report_brier": 0.07379457724854954,
+          "reward": 0.9182262460468774,
+          "stop_immediately_reward": 0.8814648437499999
+        },
+        "frozen_selector_s29": {
+          "cost": 0.012149939360430516,
+          "duplicate_purchases": 0.00021093767333803294,
+          "gain_over_same_forecaster_stopping": 0.06118524723810306,
+          "purchases": 1.2149939360430515,
+          "report_brier": 0.04519996965146642,
+          "reward": 0.942650090988103,
+          "stop_immediately_reward": 0.8814648437499999
+        },
+        "frozen_selector_s43": {
+          "cost": 0.006784458089734129,
+          "duplicate_purchases": 3.723733985547763e-05,
+          "gain_over_same_forecaster_stopping": 0.03643512293614114,
+          "purchases": 0.6784458089734129,
+          "report_brier": 0.07531557522412474,
+          "reward": 0.9178999666861412,
+          "stop_immediately_reward": 0.8814648437499999
+        },
+        "inspect_probes_once": {
+          "cost": 0.0063281249999999995,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0280859375,
+          "purchases": 0.6328125,
+          "report_brier": 0.08412109375,
+          "reward": 0.9095507812500001,
+          "stop_immediately_reward": 0.8814648437499999
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.11853515625000001,
+          "reward": 0.8814648437499999,
+          "stop_immediately_reward": 0.8814648437499999
+        }
+      },
+      "trained_temperature_scaled": {
+        "empirical_planner": {
+          "cost": 0.009218750000000001,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0751953125,
+          "purchases": 0.921875,
+          "report_brier": 0.03638671875,
+          "reward": 0.9543945312500001,
+          "stop_immediately_reward": 0.87919921875
+        },
+        "frozen_selector_s17": {
+          "cost": 0.007979176704573038,
+          "duplicate_purchases": 0.0002670441224473806,
+          "gain_over_same_forecaster_stopping": 0.04303187448662478,
+          "purchases": 0.7979176704573039,
+          "report_brier": 0.06978973005880218,
+          "reward": 0.9222310932366247,
+          "stop_immediately_reward": 0.87919921875
+        },
+        "frozen_selector_s29": {
+          "cost": 0.012149939360430516,
+          "duplicate_purchases": 0.00021093767333803294,
+          "gain_over_same_forecaster_stopping": 0.06644220351418824,
+          "purchases": 1.2149939360430515,
+          "report_brier": 0.04220863837538125,
+          "reward": 0.9456414222641882,
+          "stop_immediately_reward": 0.87919921875
+        },
+        "frozen_selector_s43": {
+          "cost": 0.006784458089734129,
+          "duplicate_purchases": 3.723733985547763e-05,
+          "gain_over_same_forecaster_stopping": 0.041757916920714185,
+          "purchases": 0.6784458089734129,
+          "report_brier": 0.0722584062395517,
+          "reward": 0.9209571356707141,
+          "stop_immediately_reward": 0.87919921875
+        },
+        "inspect_probes_once": {
+          "cost": 0.0063281249999999995,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.03474609375,
+          "purchases": 0.6328125,
+          "report_brier": 0.0797265625,
+          "reward": 0.9139453125,
+          "stop_immediately_reward": 0.87919921875
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.12080078125,
+          "reward": 0.87919921875,
+          "stop_immediately_reward": 0.87919921875
+        }
+      }
+    },
+    "test": {
+      "base": {
+        "empirical_planner": {
+          "cost": 0.00828125,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.07056640624999999,
+          "purchases": 0.828125,
+          "report_brier": 0.07890625000000001,
+          "reward": 0.9128125,
+          "stop_immediately_reward": 0.84224609375
+        },
+        "frozen_selector_s17": {
+          "cost": 0.006274770660761786,
+          "duplicate_purchases": 0.00019944096271900074,
+          "gain_over_same_forecaster_stopping": 0.0501011407784844,
+          "purchases": 0.6274770660761786,
+          "report_brier": 0.10137799481075382,
+          "reward": 0.8923472345284844,
+          "stop_immediately_reward": 0.84224609375
+        },
+        "frozen_selector_s29": {
+          "cost": 0.011623650279723896,
+          "duplicate_purchases": 0.0002143490624734432,
+          "gain_over_same_forecaster_stopping": 0.06781850858199491,
+          "purchases": 1.1623650279723898,
+          "report_brier": 0.0783117473882812,
+          "reward": 0.9100646023319949,
+          "stop_immediately_reward": 0.84224609375
+        },
+        "frozen_selector_s43": {
+          "cost": 0.00717094640756377,
+          "duplicate_purchases": 3.303655570167925e-05,
+          "gain_over_same_forecaster_stopping": 0.048637887837296195,
+          "purchases": 0.717094640756377,
+          "report_brier": 0.10194507200514002,
+          "reward": 0.8908839815872962,
+          "stop_immediately_reward": 0.84224609375
+        },
+        "inspect_probes_once": {
+          "cost": 0.00484375,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.03591796875,
+          "purchases": 0.484375,
+          "report_brier": 0.1169921875,
+          "reward": 0.8781640625000001,
+          "stop_immediately_reward": 0.84224609375
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.15775390624999996,
+          "reward": 0.84224609375,
+          "stop_immediately_reward": 0.84224609375
+        }
+      },
+      "base_temperature_scaled": {
+        "empirical_planner": {
+          "cost": 0.00828125,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0699609375,
+          "purchases": 0.828125,
+          "report_brier": 0.079609375,
+          "reward": 0.912109375,
+          "stop_immediately_reward": 0.8421484375000001
+        },
+        "frozen_selector_s17": {
+          "cost": 0.006274770660761786,
+          "duplicate_purchases": 0.00019944096271900074,
+          "gain_over_same_forecaster_stopping": 0.04964222776873488,
+          "purchases": 0.6274770660761786,
+          "report_brier": 0.10193456407050333,
+          "reward": 0.8917906652687349,
+          "stop_immediately_reward": 0.8421484375000001
+        },
+        "frozen_selector_s29": {
+          "cost": 0.011623650279723896,
+          "duplicate_purchases": 0.0002143490624734432,
+          "gain_over_same_forecaster_stopping": 0.06731175420120954,
+          "purchases": 1.1623650279723898,
+          "report_brier": 0.07891615801906655,
+          "reward": 0.9094601917012095,
+          "stop_immediately_reward": 0.8421484375000001
+        },
+        "frozen_selector_s43": {
+          "cost": 0.00717094640756377,
+          "duplicate_purchases": 3.303655570167925e-05,
+          "gain_over_same_forecaster_stopping": 0.048039180594590954,
+          "purchases": 0.717094640756377,
+          "report_brier": 0.10264143549784527,
+          "reward": 0.8901876180945909,
+          "stop_immediately_reward": 0.8421484375000001
+        },
+        "inspect_probes_once": {
+          "cost": 0.00484375,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.03513671875,
+          "purchases": 0.484375,
+          "report_brier": 0.11787109374999999,
+          "reward": 0.8772851562500001,
+          "stop_immediately_reward": 0.8421484375000001
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.1578515625,
+          "reward": 0.8421484375000001,
+          "stop_immediately_reward": 0.8421484375000001
+        }
+      },
+      "trained": {
+        "empirical_planner": {
+          "cost": 0.00828125,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.04677734375,
+          "purchases": 0.828125,
+          "report_brier": 0.0387109375,
+          "reward": 0.9530078125000001,
+          "stop_immediately_reward": 0.90623046875
+        },
+        "frozen_selector_s17": {
+          "cost": 0.006274770660761786,
+          "duplicate_purchases": 0.00019944096271900074,
+          "gain_over_same_forecaster_stopping": 0.031028647875185444,
+          "purchases": 0.6274770660761786,
+          "report_brier": 0.05646611271405276,
+          "reward": 0.9372591166251855,
+          "stop_immediately_reward": 0.90623046875
+        },
+        "frozen_selector_s29": {
+          "cost": 0.011623650279723896,
+          "duplicate_purchases": 0.0002143490624734432,
+          "gain_over_same_forecaster_stopping": 0.04094182276427023,
+          "purchases": 1.1623650279723898,
+          "report_brier": 0.04120405820600587,
+          "reward": 0.9471722915142702,
+          "stop_immediately_reward": 0.90623046875
+        },
+        "frozen_selector_s43": {
+          "cost": 0.00717094640756377,
+          "duplicate_purchases": 3.303655570167925e-05,
+          "gain_over_same_forecaster_stopping": 0.029728656065790404,
+          "purchases": 0.717094640756377,
+          "report_brier": 0.056869928776645824,
+          "reward": 0.9359591248157904,
+          "stop_immediately_reward": 0.90623046875
+        },
+        "inspect_probes_once": {
+          "cost": 0.00484375,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.01228515625,
+          "purchases": 0.484375,
+          "report_brier": 0.07664062499999999,
+          "reward": 0.9185156250000001,
+          "stop_immediately_reward": 0.90623046875
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.09376953125000001,
+          "reward": 0.90623046875,
+          "stop_immediately_reward": 0.90623046875
+        }
+      },
+      "trained_temperature_scaled": {
+        "empirical_planner": {
+          "cost": 0.00828125,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.04630859375,
+          "purchases": 0.828125,
+          "report_brier": 0.03865234375,
+          "reward": 0.95306640625,
+          "stop_immediately_reward": 0.9067578125
+        },
+        "frozen_selector_s17": {
+          "cost": 0.006274770660761786,
+          "duplicate_purchases": 0.00019944096271900074,
+          "gain_over_same_forecaster_stopping": 0.030408738260808796,
+          "purchases": 0.6274770660761786,
+          "report_brier": 0.056558678578429424,
+          "reward": 0.9371665507608088,
+          "stop_immediately_reward": 0.9067578125
+        },
+        "frozen_selector_s29": {
+          "cost": 0.011623650279723896,
+          "duplicate_purchases": 0.0002143490624734432,
+          "gain_over_same_forecaster_stopping": 0.041126265471370285,
+          "purchases": 1.1623650279723898,
+          "report_brier": 0.04049227174890581,
+          "reward": 0.9478840779713703,
+          "stop_immediately_reward": 0.9067578125
+        },
+        "frozen_selector_s43": {
+          "cost": 0.00717094640756377,
+          "duplicate_purchases": 3.303655570167925e-05,
+          "gain_over_same_forecaster_stopping": 0.029002608320305524,
+          "purchases": 0.717094640756377,
+          "report_brier": 0.05706863277213071,
+          "reward": 0.9357604208203055,
+          "stop_immediately_reward": 0.9067578125
+        },
+        "inspect_probes_once": {
+          "cost": 0.00484375,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.014765624999999998,
+          "purchases": 0.484375,
+          "report_brier": 0.0736328125,
+          "reward": 0.9215234375,
+          "stop_immediately_reward": 0.9067578125
+        },
+        "stop": {
+          "cost": 0.0,
+          "duplicate_purchases": 0.0,
+          "gain_over_same_forecaster_stopping": 0.0,
+          "purchases": 0.0,
+          "report_brier": 0.0932421875,
+          "reward": 0.9067578125,
+          "stop_immediately_reward": 0.9067578125
+        }
+      }
+    }
+  }
+}

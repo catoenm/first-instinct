@@ -2,7 +2,7 @@
 
 DeBERTa and Qwen are both transformers. Classification is a training task, not
 an alternative to a transformer architecture. First Instinct now has two
-separate implementations:
+separate text-model implementations:
 
 | | Released small model | Larger experiment |
 | --- | --- | --- |
@@ -20,7 +20,13 @@ foundation also costs more to serve, so accuracy and latency both matter.
 
 ## Proposed next experiment: different targets on a shared foundation
 
-The following components are **a proposal, not implemented by `scale_lab`**:
+The [software outcome model](software-outcome-model.md) now uses the existing
+Qwen label scorer to forecast a specified event from code and visible checks.
+The [inspection study](software-inspection.md) trains separate small acquisition
+and value networks using Proximal Policy Optimization. These components do not
+share a trainable language backbone.
+
+The following **jointly trained system remains a proposal**:
 
 ```mermaid
 flowchart LR

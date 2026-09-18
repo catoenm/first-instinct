@@ -1,0 +1,179 @@
+{
+  "device": "mps",
+  "load_seconds": 2.835764792005648,
+  "maximum_probability_difference_from_cloud": 0.016845703125,
+  "peak_process_memory_note": "Weights use float32 on this Mac, versus bfloat16 in the cloud. This is a portability check selecting distinct requests closest to 16 predeclared cloud-probability levels from zero to one, not a second full evaluation or representative latency sample. Model loading excluded from per-request times; first request may be cold.",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "predictions": [
+    {
+      "choice": "fails",
+      "gpu_probability": 1.3846004549122881e-05,
+      "id": "3c99ab06a75fc01b746b6e55-view-5",
+      "input_tokens": 763,
+      "milliseconds": 1637.711625007796,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9999853372573853,
+        "passes": 1.4655837730970234e-05
+      },
+      "probability_difference": 8.098331818473525e-07
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 0.001325022429227829,
+      "id": "e9d47e7500d50729508ff961-view-2",
+      "input_tokens": 777,
+      "milliseconds": 1805.160916002933,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9989042282104492,
+        "passes": 0.001095821033231914
+      },
+      "probability_difference": 0.00022920139599591494
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 0.08509904146194458,
+      "id": "24e7c0c196a8fa962fa1c9d7-view-0",
+      "input_tokens": 717,
+      "milliseconds": 1653.443667004467,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.9171646237373352,
+        "passes": 0.08283533155918121
+      },
+      "probability_difference": 0.0022637099027633667
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 0.2018132209777832,
+      "id": "18c1e0202898f2594cb6cfed-view-0",
+      "input_tokens": 604,
+      "milliseconds": 1400.3800420032348,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.8020119071006775,
+        "passes": 0.19798815250396729
+      },
+      "probability_difference": 0.003825068473815918
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 0.29421496391296387,
+      "id": "5d390f2de98adbcf409092d7-view-0",
+      "input_tokens": 604,
+      "milliseconds": 1330.6652090104762,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.6975159645080566,
+        "passes": 0.30248403549194336
+      },
+      "probability_difference": 0.008269071578979492
+    },
+    {
+      "choice": "fails",
+      "gpu_probability": 0.4073334336280823,
+      "id": "de6044b4f379c120c4c443cf-view-0",
+      "input_tokens": 565,
+      "milliseconds": 1309.3983750004554,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.59275221824646,
+        "passes": 0.40724775195121765
+      },
+      "probability_difference": 8.568167686462402e-05
+    },
+    {
+      "choice": "passes",
+      "gpu_probability": 0.5,
+      "id": "11f8645e1a7f7883203a8b22-view-4",
+      "input_tokens": 1291,
+      "milliseconds": 2859.3226249940926,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.4887990951538086,
+        "passes": 0.5112009644508362
+      },
+      "probability_difference": 0.011200964450836182
+    },
+    {
+      "choice": "passes",
+      "gpu_probability": 0.5926666259765625,
+      "id": "0d2a8120b13e2b8bcdf7f17e-view-4",
+      "input_tokens": 638,
+      "milliseconds": 1366.6277080046711,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.42417898774147034,
+        "passes": 0.5758209228515625
+      },
+      "probability_difference": 0.016845703125
+    },
+    {
+      "choice": "passes",
+      "gpu_probability": 0.7057850360870361,
+      "id": "0d2a8120b13e2b8bcdf7f17e-view-6",
+      "input_tokens": 811,
+      "milliseconds": 1778.1165420019533,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.29555463790893555,
+        "passes": 0.7044453024864197
+      },
+      "probability_difference": 0.001339733600616455
+    },
+    {
+      "choice": "passes",
+      "gpu_probability": 0.7981867790222168,
+      "id": "20df754e03fc4346b26f15a8-view-2",
+      "input_tokens": 941,
+      "milliseconds": 2004.3397499975981,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.1944155991077423,
+        "passes": 0.8055843710899353
+      },
+      "probability_difference": 0.007397592067718506
+    },
+    {
+      "choice": "passes",
+      "gpu_probability": 0.9046505093574524,
+      "id": "08d7ca5532439b6ed5d816b8-view-5",
+      "input_tokens": 989,
+      "milliseconds": 2161.8332080106484,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.08694832026958466,
+        "passes": 0.9130516052246094
+      },
+      "probability_difference": 0.008401095867156982
+    },
+    {
+      "choice": "passes",
+      "gpu_probability": 0.9525741338729858,
+      "id": "197159260ed642e91fcc106d-view-2",
+      "input_tokens": 802,
+      "milliseconds": 1789.6944999956759,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.044779323041439056,
+        "passes": 0.9552206993103027
+      },
+      "probability_difference": 0.0026465654373168945
+    },
+    {
+      "choice": "passes",
+      "gpu_probability": 0.9796676635742188,
+      "id": "a78e28a88e4766e2389456f5-view-2",
+      "input_tokens": 764,
+      "milliseconds": 1615.3779170126654,
+      "note": "Conditional option probabilities; not calibrated probabilities of success.",
+      "probabilities": {
+        "fails": 0.021330948919057846,
+        "passes": 0.9786690473556519
+      },
+      "probability_difference": 0.0009986162185668945
+    }
+  ],
+  "torch": "2.14.0"
+}

@@ -1,0 +1,1950 @@
+{
+  "run": {
+    "baseline": {
+      "acceptable_set_log_loss": 0.5621557712046231,
+      "accuracy": 0.78515625,
+      "by_task": {
+        "software_outcome": {
+          "accuracy": 0.78515625,
+          "n": 256
+        }
+      },
+      "n": 256,
+      "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+    },
+    "best_step": 150,
+    "best_validation_loss": 0.22123537332276116,
+    "billing_note": "The training deadline does not stop the rented machine.",
+    "code_sha256": {
+      "scale_lab/__init__.py": "15300119a8f9c724a4dadf4e9dea98796469f39c779963947022d01c23bbc46e",
+      "scale_lab/bundle.py": "7e93756177a7230239021cb2619223e7f6bde929a608fa803e7dd11f3a503d79",
+      "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+      "scale_lab/data.py": "93071b2efa6ea449f63c4a0be3d9f7cda10a11dbf39064cc22ad6b969fb2be6d",
+      "scale_lab/environment.py": "e5284407408698e9a73fa117304eb8548aa1bb963e0215f4afa14436ed41ec63",
+      "scale_lab/eval.py": "cb14a6ff31be719ef32dc5da3cc1a4ed80720bf1d2ed8ad86f45d458dc1ff070",
+      "scale_lab/glaive.py": "971c01b3cca1e5cb5bc431b4b07f94a572eea99a3ccc3cc2a2c5cab54fa0ee29",
+      "scale_lab/infer.py": "af728b7ea21132a247da4f0232a5dafe1c58af128e309683e6092bd2bd79161c",
+      "scale_lab/model.py": "bf23256dc81f93924b63f9f4de2f49089138e0a0314e757cffa5dba737731aeb",
+      "scale_lab/order_audit.py": "3fa906d5d339be501b883fc6b223793f3f4130eb43858533775b3afe3d6878c9",
+      "scale_lab/prepare.py": "d51d13581315c965071fc7642219e44f50d447aa5245c5fb41cddcb6228417fc",
+      "scale_lab/train.py": "26d68637e89d7f23e3017426eb5fe408fbbbf80e21d7040cc3891a55b8cacbe9"
+    },
+    "config": {
+      "accumulation": 4,
+      "batch_size": 8,
+      "data": "data",
+      "device": "cuda",
+      "epochs": 1,
+      "eval_every": 50,
+      "learning_rate": 0.0001,
+      "length_bucket_size": 2048,
+      "limit": null,
+      "max_hours": 0.5,
+      "max_steps": 200,
+      "model_alias": null,
+      "output": "runs/outcome-01",
+      "seed": 41,
+      "validation_per_task": 256
+    },
+    "data_manifest_sha256": "9c72af7fd22c33c3b3e742c4f5dcccf46423770d5dad2122af0b3fd266b37bc4",
+    "device": "cuda",
+    "model": {
+      "id": "Qwen/Qwen3.5-4B",
+      "kind": "qwen3_5",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+    },
+    "packages": {
+      "accelerate": "1.15.0",
+      "peft": "0.21.0",
+      "torch": "2.13.0+cu129",
+      "transformers": "5.17.0"
+    },
+    "padded_tokens": 5843648,
+    "parameters": 4571730432,
+    "peak_cuda_memory_bytes": 19175606784,
+    "seconds": 1803.3420757111162,
+    "status": "bounded_stop",
+    "steps": 189,
+    "tokens": 5827516,
+    "trainable_parameters": 32464896,
+    "training_rows": 36189,
+    "validation_ids": [
+      "0008ce2aecd884fc85f38147-view-0",
+      "0008ce2aecd884fc85f38147-view-1",
+      "0008ce2aecd884fc85f38147-view-2",
+      "0008ce2aecd884fc85f38147-view-4",
+      "0008ce2aecd884fc85f38147-view-3",
+      "0008ce2aecd884fc85f38147-view-5",
+      "0008ce2aecd884fc85f38147-view-6",
+      "007734b5709842637534086e-view-0",
+      "007734b5709842637534086e-view-1",
+      "007734b5709842637534086e-view-2",
+      "007734b5709842637534086e-view-4",
+      "007734b5709842637534086e-view-3",
+      "007734b5709842637534086e-view-5",
+      "007734b5709842637534086e-view-6",
+      "00ba94db1c2c24ffce5731ca-view-0",
+      "00ba94db1c2c24ffce5731ca-view-1",
+      "00ba94db1c2c24ffce5731ca-view-2",
+      "00ba94db1c2c24ffce5731ca-view-4",
+      "00ba94db1c2c24ffce5731ca-view-3",
+      "00ba94db1c2c24ffce5731ca-view-5",
+      "00ba94db1c2c24ffce5731ca-view-6",
+      "010948ba37d1c220646d287c-view-0",
+      "010948ba37d1c220646d287c-view-4",
+      "01adfb5ad5894b6723069740-view-0",
+      "01adfb5ad5894b6723069740-view-1",
+      "01adfb5ad5894b6723069740-view-2",
+      "01adfb5ad5894b6723069740-view-4",
+      "01adfb5ad5894b6723069740-view-3",
+      "01adfb5ad5894b6723069740-view-5",
+      "01adfb5ad5894b6723069740-view-6",
+      "01b031621c8007cf085dce52-view-0",
+      "01b031621c8007cf085dce52-view-1",
+      "01b031621c8007cf085dce52-view-2",
+      "01b031621c8007cf085dce52-view-4",
+      "01b031621c8007cf085dce52-view-3",
+      "01b031621c8007cf085dce52-view-5",
+      "01b031621c8007cf085dce52-view-6",
+      "0291e46d73a534ffaee55eed-view-0",
+      "0291e46d73a534ffaee55eed-view-1",
+      "0291e46d73a534ffaee55eed-view-2",
+      "0291e46d73a534ffaee55eed-view-4",
+      "0291e46d73a534ffaee55eed-view-3",
+      "0291e46d73a534ffaee55eed-view-5",
+      "0291e46d73a534ffaee55eed-view-6",
+      "029e84c190f8dc96aa95d08c-view-0",
+      "029e84c190f8dc96aa95d08c-view-1",
+      "029e84c190f8dc96aa95d08c-view-2",
+      "029e84c190f8dc96aa95d08c-view-4",
+      "029e84c190f8dc96aa95d08c-view-3",
+      "029e84c190f8dc96aa95d08c-view-5",
+      "029e84c190f8dc96aa95d08c-view-6",
+      "02b0266015a0effdeb6cd170-view-0",
+      "02b0266015a0effdeb6cd170-view-1",
+      "02b0266015a0effdeb6cd170-view-2",
+      "02b0266015a0effdeb6cd170-view-4",
+      "02b0266015a0effdeb6cd170-view-3",
+      "02b0266015a0effdeb6cd170-view-5",
+      "02b0266015a0effdeb6cd170-view-6",
+      "02e0e62ae34b91c3cc3dfa7f-view-0",
+      "02e0e62ae34b91c3cc3dfa7f-view-1",
+      "02e0e62ae34b91c3cc3dfa7f-view-2",
+      "02e0e62ae34b91c3cc3dfa7f-view-4",
+      "02e0e62ae34b91c3cc3dfa7f-view-3",
+      "02e0e62ae34b91c3cc3dfa7f-view-5",
+      "02e0e62ae34b91c3cc3dfa7f-view-6",
+      "0388789808540fcb4b9ec6a9-view-0",
+      "0388789808540fcb4b9ec6a9-view-1",
+      "0388789808540fcb4b9ec6a9-view-2",
+      "0388789808540fcb4b9ec6a9-view-4",
+      "0388789808540fcb4b9ec6a9-view-3",
+      "0388789808540fcb4b9ec6a9-view-5",
+      "0388789808540fcb4b9ec6a9-view-6",
+      "03927be62d114abe183710b7-view-0",
+      "03927be62d114abe183710b7-view-1",
+      "03927be62d114abe183710b7-view-2",
+      "03927be62d114abe183710b7-view-4",
+      "03927be62d114abe183710b7-view-3",
+      "03927be62d114abe183710b7-view-5",
+      "03927be62d114abe183710b7-view-6",
+      "046f320a19664c33b79046f7-view-0",
+      "046f320a19664c33b79046f7-view-1",
+      "046f320a19664c33b79046f7-view-2",
+      "046f320a19664c33b79046f7-view-4",
+      "046f320a19664c33b79046f7-view-3",
+      "046f320a19664c33b79046f7-view-5",
+      "046f320a19664c33b79046f7-view-6",
+      "04c3c429318d4fcd3828e8c1-view-0",
+      "04c3c429318d4fcd3828e8c1-view-1",
+      "04c3c429318d4fcd3828e8c1-view-2",
+      "04c3c429318d4fcd3828e8c1-view-4",
+      "04c3c429318d4fcd3828e8c1-view-3",
+      "04c3c429318d4fcd3828e8c1-view-5",
+      "04c3c429318d4fcd3828e8c1-view-6",
+      "04d09ae86853eb9008b99d17-view-0",
+      "04d09ae86853eb9008b99d17-view-1",
+      "04d09ae86853eb9008b99d17-view-2",
+      "04d09ae86853eb9008b99d17-view-4",
+      "04d09ae86853eb9008b99d17-view-3",
+      "04d09ae86853eb9008b99d17-view-5",
+      "04d09ae86853eb9008b99d17-view-6",
+      "04d4555a9617279ba9360625-view-0",
+      "04d4555a9617279ba9360625-view-1",
+      "04d4555a9617279ba9360625-view-2",
+      "04d4555a9617279ba9360625-view-4",
+      "04d4555a9617279ba9360625-view-3",
+      "04d4555a9617279ba9360625-view-5",
+      "04d4555a9617279ba9360625-view-6",
+      "04f0e808a6d1cc828c3b653f-view-0",
+      "04f0e808a6d1cc828c3b653f-view-1",
+      "04f0e808a6d1cc828c3b653f-view-2",
+      "04f0e808a6d1cc828c3b653f-view-4",
+      "04f0e808a6d1cc828c3b653f-view-3",
+      "04f0e808a6d1cc828c3b653f-view-5",
+      "04f0e808a6d1cc828c3b653f-view-6",
+      "05346d5c60a3a7094570e85d-view-0",
+      "05346d5c60a3a7094570e85d-view-1",
+      "05346d5c60a3a7094570e85d-view-2",
+      "05346d5c60a3a7094570e85d-view-4",
+      "05346d5c60a3a7094570e85d-view-3",
+      "05346d5c60a3a7094570e85d-view-5",
+      "05346d5c60a3a7094570e85d-view-6",
+      "058f5ab074ab277000532ee5-view-0",
+      "058f5ab074ab277000532ee5-view-1",
+      "058f5ab074ab277000532ee5-view-2",
+      "058f5ab074ab277000532ee5-view-4",
+      "058f5ab074ab277000532ee5-view-3",
+      "058f5ab074ab277000532ee5-view-5",
+      "058f5ab074ab277000532ee5-view-6",
+      "05b3607515e949ac21bad20f-view-0",
+      "05b3607515e949ac21bad20f-view-1",
+      "05b3607515e949ac21bad20f-view-2",
+      "05b3607515e949ac21bad20f-view-4",
+      "05b3607515e949ac21bad20f-view-3",
+      "05b3607515e949ac21bad20f-view-5",
+      "05b3607515e949ac21bad20f-view-6",
+      "0696eb9816a64f5e16d19483-view-0",
+      "0696eb9816a64f5e16d19483-view-1",
+      "0696eb9816a64f5e16d19483-view-2",
+      "0696eb9816a64f5e16d19483-view-4",
+      "0696eb9816a64f5e16d19483-view-3",
+      "0696eb9816a64f5e16d19483-view-5",
+      "0696eb9816a64f5e16d19483-view-6",
+      "069792ed2c331ac9a6e9b6af-view-0",
+      "069792ed2c331ac9a6e9b6af-view-4",
+      "06a1dcae407e3400a68dbcd5-view-0",
+      "06a1dcae407e3400a68dbcd5-view-1",
+      "06a1dcae407e3400a68dbcd5-view-2",
+      "06a1dcae407e3400a68dbcd5-view-4",
+      "06a1dcae407e3400a68dbcd5-view-3",
+      "06a1dcae407e3400a68dbcd5-view-5",
+      "06a1dcae407e3400a68dbcd5-view-6",
+      "06cd22ce85dcac47452d6028-view-0",
+      "06cd22ce85dcac47452d6028-view-1",
+      "06cd22ce85dcac47452d6028-view-2",
+      "06cd22ce85dcac47452d6028-view-4",
+      "06cd22ce85dcac47452d6028-view-3",
+      "06cd22ce85dcac47452d6028-view-5",
+      "06cd22ce85dcac47452d6028-view-6",
+      "07424c547627368cc5553d12-view-0",
+      "07424c547627368cc5553d12-view-1",
+      "07424c547627368cc5553d12-view-2",
+      "07424c547627368cc5553d12-view-4",
+      "07424c547627368cc5553d12-view-3",
+      "07424c547627368cc5553d12-view-5",
+      "07424c547627368cc5553d12-view-6",
+      "07678f2e60f33ae14ec06bff-view-0",
+      "07678f2e60f33ae14ec06bff-view-1",
+      "07678f2e60f33ae14ec06bff-view-2",
+      "07678f2e60f33ae14ec06bff-view-4",
+      "07678f2e60f33ae14ec06bff-view-5",
+      "07678f2e60f33ae14ec06bff-view-6",
+      "077f38207ae2f932f885638a-view-0",
+      "077f38207ae2f932f885638a-view-1",
+      "077f38207ae2f932f885638a-view-2",
+      "077f38207ae2f932f885638a-view-4",
+      "077f38207ae2f932f885638a-view-3",
+      "077f38207ae2f932f885638a-view-5",
+      "077f38207ae2f932f885638a-view-6",
+      "079ea3a97624b8fd8333566c-view-0",
+      "079ea3a97624b8fd8333566c-view-1",
+      "079ea3a97624b8fd8333566c-view-2",
+      "079ea3a97624b8fd8333566c-view-4",
+      "079ea3a97624b8fd8333566c-view-3",
+      "079ea3a97624b8fd8333566c-view-5",
+      "079ea3a97624b8fd8333566c-view-6",
+      "084c24dfbf4598adc29d257f-view-0",
+      "084c24dfbf4598adc29d257f-view-1",
+      "084c24dfbf4598adc29d257f-view-2",
+      "084c24dfbf4598adc29d257f-view-4",
+      "084c24dfbf4598adc29d257f-view-3",
+      "084c24dfbf4598adc29d257f-view-5",
+      "084c24dfbf4598adc29d257f-view-6",
+      "08b6f60659a6364d5d5c7a08-view-0",
+      "08b6f60659a6364d5d5c7a08-view-1",
+      "08b6f60659a6364d5d5c7a08-view-2",
+      "08b6f60659a6364d5d5c7a08-view-4",
+      "08b6f60659a6364d5d5c7a08-view-3",
+      "08b6f60659a6364d5d5c7a08-view-5",
+      "08b6f60659a6364d5d5c7a08-view-6",
+      "08e4467336c067686d4a719e-view-0",
+      "08e4467336c067686d4a719e-view-1",
+      "08e4467336c067686d4a719e-view-2",
+      "08e4467336c067686d4a719e-view-4",
+      "08e4467336c067686d4a719e-view-3",
+      "08e4467336c067686d4a719e-view-5",
+      "08e4467336c067686d4a719e-view-6",
+      "090113c7f074bcd96b996f88-view-0",
+      "090113c7f074bcd96b996f88-view-1",
+      "090113c7f074bcd96b996f88-view-2",
+      "090113c7f074bcd96b996f88-view-4",
+      "090113c7f074bcd96b996f88-view-3",
+      "090113c7f074bcd96b996f88-view-5",
+      "090113c7f074bcd96b996f88-view-6",
+      "095038148889db5b43d49c5a-view-0",
+      "095038148889db5b43d49c5a-view-1",
+      "095038148889db5b43d49c5a-view-2",
+      "095038148889db5b43d49c5a-view-4",
+      "095038148889db5b43d49c5a-view-3",
+      "095038148889db5b43d49c5a-view-5",
+      "095038148889db5b43d49c5a-view-6",
+      "097c7a5b0e1ae5d5ac67125b-view-0",
+      "097c7a5b0e1ae5d5ac67125b-view-4",
+      "0986afeace410b606e8d835c-view-0",
+      "0986afeace410b606e8d835c-view-1",
+      "0986afeace410b606e8d835c-view-2",
+      "0986afeace410b606e8d835c-view-4",
+      "0986afeace410b606e8d835c-view-3",
+      "0986afeace410b606e8d835c-view-5",
+      "0986afeace410b606e8d835c-view-6",
+      "09903338da9541bd161e2e2d-view-0",
+      "09903338da9541bd161e2e2d-view-1",
+      "09903338da9541bd161e2e2d-view-2",
+      "09903338da9541bd161e2e2d-view-4",
+      "09903338da9541bd161e2e2d-view-3",
+      "09903338da9541bd161e2e2d-view-5",
+      "09903338da9541bd161e2e2d-view-6",
+      "0a28e73697f6152fd14003a2-view-0",
+      "0a28e73697f6152fd14003a2-view-1",
+      "0a28e73697f6152fd14003a2-view-2",
+      "0a28e73697f6152fd14003a2-view-4",
+      "0a28e73697f6152fd14003a2-view-3",
+      "0a28e73697f6152fd14003a2-view-5",
+      "0a28e73697f6152fd14003a2-view-6",
+      "0a46c07c78339a9829b4c4ef-view-0",
+      "0a46c07c78339a9829b4c4ef-view-1",
+      "0a46c07c78339a9829b4c4ef-view-2",
+      "0a46c07c78339a9829b4c4ef-view-4",
+      "0a46c07c78339a9829b4c4ef-view-3",
+      "0a46c07c78339a9829b4c4ef-view-5",
+      "0a46c07c78339a9829b4c4ef-view-6",
+      "0b279e4bbed394a11ae38b4b-view-0",
+      "0b279e4bbed394a11ae38b4b-view-1",
+      "0b279e4bbed394a11ae38b4b-view-2",
+      "0b279e4bbed394a11ae38b4b-view-4",
+      "0b279e4bbed394a11ae38b4b-view-3",
+      "0b279e4bbed394a11ae38b4b-view-5"
+    ],
+    "visits": 6048
+  },
+  "selection": {
+    "challenge": {
+      "candidate_ids": [
+        "cd09cc6152fb52c6b75681ad",
+        "e61700e43176872f0bdbf456",
+        "808564853ea851a61eafbf4e",
+        "ee484266fb335f749de62e6c",
+        "e8523e2ad6803be8f49953cc",
+        "bf4da9bf4ea159061d9704fd",
+        "2944c648b3790a43fdaf97cf",
+        "ddc0cb6ba4be1aa2e34b50f1",
+        "139cb6d1b3744d86ec304d81",
+        "fd66faa8c949080313c0f4b1",
+        "38cc85ceed74914c051279f8",
+        "4e5ec157de584685fa3b6137",
+        "ecc200cf0510d63063f9df4f",
+        "57ddfdd0cf002ad482a87539",
+        "6b7ca997e93ddc4da9d981a3",
+        "ee22069abfc7d06786f165ee",
+        "19e1b7fb9190dc2c0e855aae",
+        "4415819a7ab57ac21d533df0",
+        "56e2c2e0b62aff1fb6c6b160",
+        "9509b8fe823e5a932d954611",
+        "e3aabf9cb7e64174beacf6f9",
+        "5831ad4c54c226dc772d23d3",
+        "9ec09c2dc7ff0c0c03e22651",
+        "3fdb2068ea5b454ccd59c0e8",
+        "1291af6c7b56ec680ad5d7a2",
+        "4b26dd6a198c9d349aae76e3",
+        "d51e352855a413f92db0d040",
+        "13e4c74e098638eaf0d5709f",
+        "f1bcca62db04c233ba4ed703",
+        "4ae996f3d4e3f79e59d6d4af",
+        "d928bea2a34af8020fa7f830",
+        "78d5f949f96280d1984300fb",
+        "ad59726b524163f59a7acd27",
+        "38c94daf29fb77f18bd205d4",
+        "e4375e279830fc819284627b",
+        "b80c0b9e634362fa284abaac",
+        "6302e6e8660b8d8f38caaaa5",
+        "5f50f4fda50e133040f25efb",
+        "ab14719f3ce0aaedaef60950",
+        "a9ffefa8c859b542aa483201",
+        "63f0a718bec4ba5b06d24460",
+        "1cd9625e052d271a00e69ee8",
+        "d061d11325603c8670bc801d",
+        "32c1e8391de7387b16ffb5de",
+        "5e365d26759173fc3a159834",
+        "327acb6abc88da6a7c59e963",
+        "4628ca89b8660033ca5b2434",
+        "d5d9ed309feeaa007a3349b7",
+        "ef5e87a0a3fd9313c58ccea2",
+        "d7e8da60c42bf39c5195dba1",
+        "d208d21cb243a112a9d1619a",
+        "c823a125c94f96c478c73775",
+        "a7d6e1f81602e29ccd4e795c",
+        "d0dc8b6ba69bee8d2e93180d",
+        "3a589138a244953fa6bf6ac6",
+        "94d68b064429878c7f603580",
+        "431e686dd735eb7cc9ba4d91",
+        "90250ecaef02bf28e7debd53",
+        "2b61e7d7529756cfd30f4e99",
+        "34550b802a73e73136f0f25f",
+        "8058b412e29cb06ddcfd7755",
+        "186c5a602a098d0bd91e8b7f",
+        "b4fb3618166ecb52dec2500b",
+        "2d959a2d83db56908c29a685",
+        "fd22d0b9cd4b423ed660baa8",
+        "005c548b134165619ce04488",
+        "105b09fddaecb1c4f5f4eab7",
+        "5750e9bd37a817bd7f31dc9d",
+        "2c502c24c5b35e9586995b97",
+        "dd28ec7d809a7720898088ca",
+        "4776d8a8edf0b42454414c60",
+        "1e5841724d038a648ae1187a",
+        "38cc5cc7acf46e69121bd3cb",
+        "370120ecc74cbddcbe7bcc2c",
+        "c3cebd8179bf48a1c98c27fc",
+        "3ff637ca72def5067572ebaf",
+        "5d4af889954cc4189ac30de4",
+        "4890b8c400a02e006ce887d6",
+        "0865484f7d1b89fe78517b09",
+        "d7a10705deaba84291711416",
+        "2df3b01f39fa4b97e399bc87",
+        "1fe214fbd3e4274e03df284b",
+        "1137829b5acf1452abb7fcdb",
+        "e08ca46e72ad7d813a3dc889",
+        "304f9a5fbc1b86215341fd84",
+        "d8d954ed46ffd7ac866055c7",
+        "332b8b3d244278d47deafb5a",
+        "cececf35a807ee43dfeaabda",
+        "f85fa477bb8b00c90b0b920a",
+        "85557ad6abd4a3548332a2a7",
+        "4125228a91f0c4f478785747",
+        "7cea43d801c0b6616708a646",
+        "450713d8cdc97ce5deecc68d",
+        "677a6c8b9d62d2a2bc238907",
+        "f0bdcbc97ab9cdda75c578af",
+        "04ec6d0cac25963840e845a8",
+        "433a7c82ee4b39523a1ef288",
+        "4445c0f269d4c8801c7f6ac8",
+        "0f3090b6bdc153ff44088a34",
+        "af8b71ab6231a3c01a690c64",
+        "a08036ffed1f6179dea171e4",
+        "b4876e1c2a4501555ca20e61",
+        "37639b3a783aec9c3a4c4e47",
+        "e53808fc4fae799444aef51d",
+        "aeba7baa4236dba5d8515079",
+        "56f3f0e3eea49d0e790c7844",
+        "29c1359bd7bdeb9d7d5d717b",
+        "256b9c1e8fa454142b4b372e",
+        "4638a815ca168744e72c29d8",
+        "fb9f5ac36b0cae6e1368e151",
+        "647e585a0cf0dfd84405b938",
+        "986df62fb8818ec71f20c33d",
+        "50890b975e7cac46af2d0f30",
+        "9cd5eed54676e53020971bef",
+        "660356075e92ec8b0f114814",
+        "3ee7818daac92d16b7315d45",
+        "c079e972d62436b9490f6597",
+        "059b67ff01282aa0c7515ac8",
+        "6616835172cbcf433b09e688",
+        "8b8276af206fcee7c5d3d5b2",
+        "fd7194c79e21d8e29f149669",
+        "071cf781d8704a961b7201da",
+        "a499f72b20d093a1c2ddaf24",
+        "84aac97530f74778e3af1360",
+        "6e4d28e83a9646169f149ccf",
+        "8888253f596e5c432c791a82",
+        "5f7ed6f6c216970056163030",
+        "65f6c549d4c24f2e4ef8cee1"
+      ],
+      "candidates": 128,
+      "complete_case_population": 705,
+      "views": 896
+    },
+    "test": {
+      "candidate_ids": [
+        "af0778f0ff8bb610e2b7a47c",
+        "1ee31d13e671df0a12a43047",
+        "6d760d8ba4a6f1205eb20f31",
+        "acc36b5e13534202df35f3ff",
+        "8f8242aee6501b90ce620d83",
+        "40d9a74d128b308c30eaf743",
+        "a2105ea970d33531e9f943e3",
+        "5d390f2de98adbcf409092d7",
+        "23389af2de739f907e0239bf",
+        "452cd4dc7268b8dcfc7ab0d5",
+        "a78e28a88e4766e2389456f5",
+        "6b245abe78ab7c252b5cfde4",
+        "1a978f3ab56ab62367109655",
+        "e45731ea67cebc068b3edbdf",
+        "2cdccf64a49f007c7b3f7cda",
+        "8b105dcd29c633c40005f9bb",
+        "24e7c0c196a8fa962fa1c9d7",
+        "af452f56ab30f405aa282b90",
+        "21e467216030a8e24e4eaa9e",
+        "dc3591e4b113d7fbb1330c8f",
+        "26e74e2610983f3ac2f2595a",
+        "be21b6669d19f789a4d14a4f",
+        "18c1e0202898f2594cb6cfed",
+        "1385b9fab66853e7d39ecd3c",
+        "bea1b0085d9c18f2ee1aa3a8",
+        "8a2a19de5805bb847ab0f2d7",
+        "fa70fa673da6d999dad9d55f",
+        "69cc05b76a5d4963a03cad7e",
+        "a325cf390e33b34c653d1589",
+        "e147610c1a977ff7931e829f",
+        "0321e0b022d4dd47fd6be067",
+        "6e81629486d8b4ad03ea08b4",
+        "8bf106a1127981a0df8f9cd9",
+        "7abdab77c2497ea71e4f3572",
+        "903f6574f1ee4e2e3bc8ac5a",
+        "11f8645e1a7f7883203a8b22",
+        "02d40574a7b33995fa06dd4a",
+        "9369a9b544a48aa52548ccc1",
+        "ec7014963e2e6abc68446278",
+        "75ed6aee199b660caa2b8509",
+        "7961a725cb7e3d37c86465fc",
+        "f56536489b02e8253d130419",
+        "e8f10335fc64506d12c19068",
+        "1f8164bfb47ef87a8ad929e9",
+        "06c24438d3037031bac55fe2",
+        "2a82e9f8b8a0a15fc8cbe8fe",
+        "82c5fcf570ea0bbe6bb88e17",
+        "124689357eb8c0eeba4c817e",
+        "0d2a8120b13e2b8bcdf7f17e",
+        "a9bd86252663273b83870bf3",
+        "d2c3b5e98a8f6307f57db571",
+        "6079e79889b5d3a563851b83",
+        "197159260ed642e91fcc106d",
+        "a01f06deb222c18719693f57",
+        "c9143f5ed779d45e24729f9f",
+        "c27cae08946e16ddcacd7f03",
+        "5a7f2d5a84d28ee178b71780",
+        "b087fec727f22136f37a3e52",
+        "bea2c7d076cd05547808cb89",
+        "f67529ce76bdda61629a8015",
+        "6f5107b891d1a2e4c5abd000",
+        "ae490a45c34d078e19d5dd56",
+        "e07224a7f5d380bd9c9cd248",
+        "12f546fe9263852dafb84a9e",
+        "8454ee59e86a36c113a35df5",
+        "b6144b5b332ac4cef74fd216",
+        "58751defbaf3213d9f926733",
+        "cfa521cfe573c90d61a6eba2",
+        "34e693a24293e718150bce89",
+        "49664e30b5a16af1989b00ce",
+        "12929a84d672f8e4a745430e",
+        "20b66bc345df4cb11a4a4fb9",
+        "555f91a55bab78929121d768",
+        "c7cf3def9397acefbb955281",
+        "390689bbbaf4e58a7925c4ad",
+        "bf46370c12a1d5fb0f075915",
+        "d01e6a874ce3dd8372c396d1",
+        "de6044b4f379c120c4c443cf",
+        "1efd72b40a0f781e41ae5faa",
+        "fb9c50bb3a0aa1fa9160a1f9",
+        "4630632784488e565ce86c47",
+        "d3b49bf195ea28e6f8ebe167",
+        "bd9f344deb158fa619e4866c",
+        "3c99ab06a75fc01b746b6e55",
+        "08d7ca5532439b6ed5d816b8",
+        "d490fb7d9bb2f793879a7ab5",
+        "2db0cc373c623ff6cf3db682",
+        "e9c3094cd1e51f275ac50a6a",
+        "eb761beb929e28d99275c7c8",
+        "14991010b0a225219c67868e",
+        "d244c6b3eadfd7e10b07f47d",
+        "a916ea94dae1cb9e57e9cf15",
+        "29b8e01f4fc0e3e69683f6cd",
+        "499138b29d0022fa80bdd04e",
+        "203f739df9647b30549042b9",
+        "591ac43c486d8127f51f38c3",
+        "15221a4ca7b34a6ef97bead9",
+        "3f3f8aaef369807ab900a25c",
+        "4ae2a2ebe8014bf17fcc68d3",
+        "f8b43aa0eff8b21b49025bf8",
+        "9149cfbe14d45cfb221b8d90",
+        "55690613eb9c481a9f579f85",
+        "403d97f4fa8f019568d3f7dd",
+        "24fba10f9f5e5fecdac3d380",
+        "ee8b81368bb29b9ba2452a60",
+        "1f868eacaf9f47617907625e",
+        "da145f17130ccbe4b886a04f",
+        "97716b9d003392bbc7b613c2",
+        "176e0bb8166c99c65f0a26a0",
+        "7d45e00c8e9ec79b449d6317",
+        "e9d47e7500d50729508ff961",
+        "c524dd9f64f15d802abff672",
+        "20df754e03fc4346b26f15a8",
+        "b7a3cb937633189e13d2fa21",
+        "7702ad78d491798b8f78f83c",
+        "2c8d1cac3d352d9eb1e0179a",
+        "d2841d737d3d3ff4b41725e4",
+        "c5473a22c996891f8bcbe0cd",
+        "2d58b3d8da7e0d35b0b5fb5f",
+        "ebf93835ab20641684cc55e1",
+        "c9c6b52c2dba6f84ec9f7b8e",
+        "4a51411f8a8b4a4c3544c56a",
+        "4536503537967abbf1e16fa2",
+        "3d41a6e505f2464d44f1754e",
+        "a03e837f32625ae104ed51aa",
+        "d0fc4380b4dc55d35dbfa653",
+        "93b4854482ac0ce4a9beb817",
+        "db9b6f3c1371c02c6cf2c341"
+      ],
+      "candidates": 128,
+      "complete_case_population": 529,
+      "views": 896
+    }
+  },
+  "calibration_selection": {
+    "candidates": 166,
+    "excluded_checkpoint_selection_groups": [
+      "0480af8ac7baf5f91faaeabc",
+      "11a196205c37cbb19291ebbb",
+      "2d22056a9690fe6f4a144c58",
+      "3bf7b472aa1661aa3286c5d4",
+      "44ccb6068afe136ed5e136ae",
+      "5b3e9e221c52f97218dbffab",
+      "5b76a222ff30bc5f00d043cc",
+      "5f748dd0ae657f9d0b11beba",
+      "6728ed643546402382ca3961",
+      "6f3e5b1a0223a6e6114f7fa1",
+      "746b0dc2b086779597168992",
+      "80dcf20a5f7ba499351047fc",
+      "83bbca8caa5a7bff5df4d35c",
+      "953959648ae96d5ba8d34377",
+      "a2c6cc38625ebf2cc46e2142",
+      "bdd343768f1ca5fa37c9bd9c",
+      "c030da844c674fd73bc55a97",
+      "c34cff86c0d75643039a390e",
+      "f7075e48f6c3553b0c2e4b55"
+    ],
+    "protocol": "All complete seven-view candidates from validation source groups absent from the first 256 checkpoint-selection rows. Chosen before final adapter evaluations were read. No outcome-based filtering.",
+    "source_groups": [
+      "011eb30afdc5868ba42b6f30",
+      "3cf0c1c00026e5a121e88652",
+      "480c8ff853667e63ab43aa20",
+      "58d707aa3b981251b8074c88",
+      "6ff67114af17f94f38b53a42",
+      "926085b4d8726d234d05a5c2"
+    ],
+    "source_prepared_manifest_sha256": "9c72af7fd22c33c3b3e742c4f5dcccf46423770d5dad2122af0b3fd266b37bc4",
+    "views": 1162
+  },
+  "calibrators": {
+    "base": {
+      "temperature": 1.0162245912673256,
+      "validation_log_loss": 0.3406960844636273,
+      "search_bounds": [
+        0.2,
+        5.0
+      ],
+      "at_search_boundary": false,
+      "n": 1162,
+      "candidates": 166,
+      "source_groups": 6,
+      "note": "Fit on validation source groups absent from checkpoint selection. No final-test fitting; source-group count remains small."
+    },
+    "trained": {
+      "temperature": 1.2937048333339856,
+      "validation_log_loss": 0.16552306355926194,
+      "search_bounds": [
+        0.2,
+        5.0
+      ],
+      "at_search_boundary": false,
+      "n": 1162,
+      "candidates": 166,
+      "source_groups": 6,
+      "note": "Fit on validation source groups absent from checkpoint selection. No final-test fitting; source-group count remains small."
+    }
+  },
+  "results": {
+    "test": {
+      "base": {
+        "n": 896,
+        "brier": 0.1110340062279679,
+        "log_loss": 0.36505093969852725,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 259,
+            "forecast": 0.06333214321450607,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "n": 170,
+            "forecast": 0.13790153896107393,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.2,
+            "n": 43,
+            "forecast": 0.23258270253968794,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 27,
+            "forecast": 0.3532038154425444,
+            "frequency": 0.037037037037037035
+          },
+          {
+            "lower": 0.4,
+            "n": 23,
+            "forecast": 0.44062001160953357,
+            "frequency": 0.13043478260869565
+          },
+          {
+            "lower": 0.5,
+            "n": 34,
+            "forecast": 0.5447301829562468,
+            "frequency": 0.058823529411764705
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 41,
+            "forecast": 0.6530509736479783,
+            "frequency": 0.36585365853658536
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 80,
+            "forecast": 0.7558563388884068,
+            "frequency": 0.575
+          },
+          {
+            "lower": 0.8,
+            "n": 87,
+            "forecast": 0.8546855483932057,
+            "frequency": 0.6781609195402298
+          },
+          {
+            "lower": 0.9,
+            "n": 132,
+            "forecast": 0.9472905695438385,
+            "frequency": 0.8484848484848485
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 22,
+        "accuracy": 0.8448660714285714,
+        "equal_option_probability_states": 8,
+        "no_observed_failure": {
+          "n": 354,
+          "brier": 0.21495957078310698,
+          "log_loss": 0.6406059616116986,
+          "bins": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 2,
+              "forecast": 0.36309291422367096,
+              "frequency": 0.5
+            },
+            {
+              "lower": 0.4,
+              "n": 9,
+              "forecast": 0.4379825294017792,
+              "frequency": 0.3333333333333333
+            },
+            {
+              "lower": 0.5,
+              "n": 13,
+              "forecast": 0.5453545680412879,
+              "frequency": 0.15384615384615385
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 33,
+              "forecast": 0.6526839498317603,
+              "frequency": 0.45454545454545453
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 78,
+              "forecast": 0.7571402184474163,
+              "frequency": 0.5897435897435898
+            },
+            {
+              "lower": 0.8,
+              "n": 87,
+              "forecast": 0.8546855483932057,
+              "frequency": 0.6781609195402298
+            },
+            {
+              "lower": 0.9,
+              "n": 132,
+              "forecast": 0.9472905695438385,
+              "frequency": 0.8484848484848485
+            }
+          ]
+        },
+        "known_visible_failure_states": 542,
+        "known_visible_failure_mean_forecast": 0.1530062437256819,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 69,
+          "mean_probability_change": 0.058172095405018845
+        },
+        "temperature": 1.0
+      },
+      "base_temperature_scaled": {
+        "n": 896,
+        "brier": 0.11107536113157589,
+        "log_loss": 0.3653324334193901,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 259,
+            "forecast": 0.0658485810948432,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "n": 170,
+            "forecast": 0.14137167218995467,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.2,
+            "n": 43,
+            "forecast": 0.23596717671492526,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 27,
+            "forecast": 0.35540320983636553,
+            "frequency": 0.037037037037037035
+          },
+          {
+            "lower": 0.4,
+            "n": 23,
+            "forecast": 0.4415556250264324,
+            "frequency": 0.13043478260869565
+          },
+          {
+            "lower": 0.5,
+            "n": 34,
+            "forecast": 0.5440254975250798,
+            "frequency": 0.058823529411764705
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 41,
+            "forecast": 0.6507709784694771,
+            "frequency": 0.36585365853658536
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 80,
+            "forecast": 0.7525586665226368,
+            "frequency": 0.575
+          },
+          {
+            "lower": 0.8,
+            "n": 87,
+            "forecast": 0.8511854324293672,
+            "frequency": 0.6781609195402298
+          },
+          {
+            "lower": 0.9,
+            "n": 132,
+            "forecast": 0.9450623718603313,
+            "frequency": 0.8484848484848485
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 22,
+        "accuracy": 0.8448660714285714,
+        "equal_option_probability_states": 8,
+        "no_observed_failure": {
+          "n": 354,
+          "brier": 0.21414832199884518,
+          "log_loss": 0.6368620361698283,
+          "bins": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 2,
+              "forecast": 0.36516653673534083,
+              "frequency": 0.5
+            },
+            {
+              "lower": 0.4,
+              "n": 9,
+              "forecast": 0.4389578048565951,
+              "frequency": 0.3333333333333333
+            },
+            {
+              "lower": 0.5,
+              "n": 13,
+              "forecast": 0.5446402711520402,
+              "frequency": 0.15384615384615385
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 33,
+              "forecast": 0.6504090467298865,
+              "frequency": 0.45454545454545453
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 78,
+              "forecast": 0.7538325850768884,
+              "frequency": 0.5897435897435898
+            },
+            {
+              "lower": 0.8,
+              "n": 87,
+              "forecast": 0.8511854324293672,
+              "frequency": 0.6781609195402298
+            },
+            {
+              "lower": 0.9,
+              "n": 132,
+              "forecast": 0.9450623718603313,
+              "frequency": 0.8484848484848485
+            }
+          ]
+        },
+        "known_visible_failure_states": 542,
+        "known_visible_failure_mean_forecast": 0.1556193261078605,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 69,
+          "mean_probability_change": 0.05817061846002212
+        },
+        "temperature": 1.0162245912673256
+      },
+      "trained": {
+        "n": 896,
+        "brier": 0.07110509332925317,
+        "log_loss": 0.21637356473021452,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 543,
+            "forecast": 0.00023677082853806885,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "n": 2,
+            "forecast": 0.14874034374952316,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.2,
+            "n": 14,
+            "forecast": 0.24846091866493225,
+            "frequency": 0.07142857142857142
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 10,
+            "forecast": 0.3461842745542526,
+            "frequency": 0.3
+          },
+          {
+            "lower": 0.4,
+            "n": 16,
+            "forecast": 0.45140144787728786,
+            "frequency": 0.1875
+          },
+          {
+            "lower": 0.5,
+            "n": 27,
+            "forecast": 0.5482092080292879,
+            "frequency": 0.5555555555555556
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 29,
+            "forecast": 0.654860062845822,
+            "frequency": 0.5517241379310345
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 72,
+            "forecast": 0.7607133810718855,
+            "frequency": 0.6666666666666666
+          },
+          {
+            "lower": 0.8,
+            "n": 82,
+            "forecast": 0.8562205579222703,
+            "frequency": 0.7804878048780488
+          },
+          {
+            "lower": 0.9,
+            "n": 101,
+            "forecast": 0.9351872152621203,
+            "frequency": 0.8712871287128713
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 22,
+        "accuracy": 0.9017857142857143,
+        "equal_option_probability_states": 7,
+        "no_observed_failure": {
+          "n": 354,
+          "brier": 0.17997219035773762,
+          "log_loss": 0.5475345829386441,
+          "bins": [
+            {
+              "lower": 0.0,
+              "n": 1,
+              "forecast": 0.08509904146194458,
+              "frequency": 0.0
+            },
+            {
+              "lower": 0.1,
+              "n": 2,
+              "forecast": 0.14874034374952316,
+              "frequency": 0.0
+            },
+            {
+              "lower": 0.2,
+              "n": 14,
+              "forecast": 0.24846091866493225,
+              "frequency": 0.07142857142857142
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 10,
+              "forecast": 0.3461842745542526,
+              "frequency": 0.3
+            },
+            {
+              "lower": 0.4,
+              "n": 16,
+              "forecast": 0.45140144787728786,
+              "frequency": 0.1875
+            },
+            {
+              "lower": 0.5,
+              "n": 27,
+              "forecast": 0.5482092080292879,
+              "frequency": 0.5555555555555556
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 29,
+              "forecast": 0.654860062845822,
+              "frequency": 0.5517241379310345
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 72,
+              "forecast": 0.7607133810718855,
+              "frequency": 0.6666666666666666
+            },
+            {
+              "lower": 0.8,
+              "n": 82,
+              "forecast": 0.8562205579222703,
+              "frequency": 0.7804878048780488
+            },
+            {
+              "lower": 0.9,
+              "n": 101,
+              "forecast": 0.9351872152621203,
+              "frequency": 0.8712871287128713
+            }
+          ]
+        },
+        "known_visible_failure_states": 542,
+        "known_visible_failure_mean_forecast": 8.01983734948834e-05,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 69,
+          "mean_probability_change": 0.013611720136026817
+        },
+        "temperature": 1.0
+      },
+      "trained_temperature_scaled": {
+        "n": 896,
+        "brier": 0.0699744249918066,
+        "log_loss": 0.21142025224394548,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 542,
+            "forecast": 0.0006395641204723207,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "n": 2,
+            "forecast": 0.1638262828139777,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.2,
+            "n": 9,
+            "forecast": 0.2677259045849882,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 13,
+            "forecast": 0.35080844234808495,
+            "frequency": 0.23076923076923078
+          },
+          {
+            "lower": 0.4,
+            "n": 19,
+            "forecast": 0.45323716308557316,
+            "frequency": 0.21052631578947367
+          },
+          {
+            "lower": 0.5,
+            "n": 36,
+            "forecast": 0.5519006248791949,
+            "frequency": 0.5833333333333334
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 41,
+            "forecast": 0.6551210674939274,
+            "frequency": 0.5121951219512195
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 92,
+            "forecast": 0.7470539049259395,
+            "frequency": 0.7391304347826086
+          },
+          {
+            "lower": 0.8,
+            "n": 106,
+            "forecast": 0.8501951378648789,
+            "frequency": 0.8490566037735849
+          },
+          {
+            "lower": 0.9,
+            "n": 36,
+            "forecast": 0.9297287935140365,
+            "frequency": 0.8611111111111112
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 22,
+        "accuracy": 0.9017857142857143,
+        "equal_option_probability_states": 7,
+        "no_observed_failure": {
+          "n": 354,
+          "brier": 0.17710940572589637,
+          "log_loss": 0.5341404645615823,
+          "bins": [
+            {
+              "lower": 0.1,
+              "n": 2,
+              "forecast": 0.1638262828139777,
+              "frequency": 0.0
+            },
+            {
+              "lower": 0.2,
+              "n": 9,
+              "forecast": 0.2677259045849882,
+              "frequency": 0.0
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 13,
+              "forecast": 0.35080844234808495,
+              "frequency": 0.23076923076923078
+            },
+            {
+              "lower": 0.4,
+              "n": 19,
+              "forecast": 0.45323716308557316,
+              "frequency": 0.21052631578947367
+            },
+            {
+              "lower": 0.5,
+              "n": 36,
+              "forecast": 0.5519006248791949,
+              "frequency": 0.5833333333333334
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 41,
+              "forecast": 0.6551210674939274,
+              "frequency": 0.5121951219512195
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 92,
+              "forecast": 0.7470539049259395,
+              "frequency": 0.7391304347826086
+            },
+            {
+              "lower": 0.8,
+              "n": 106,
+              "forecast": 0.8501951378648789,
+              "frequency": 0.8490566037735849
+            },
+            {
+              "lower": 0.9,
+              "n": 36,
+              "forecast": 0.9297287935140365,
+              "frequency": 0.8611111111111112
+            }
+          ]
+        },
+        "known_visible_failure_states": 542,
+        "known_visible_failure_mean_forecast": 0.0006395641204723207,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 69,
+          "mean_probability_change": 0.011512029812129542
+        },
+        "temperature": 1.2937048333339856
+      }
+    },
+    "challenge": {
+      "base": {
+        "n": 896,
+        "brier": 0.21361192886212205,
+        "log_loss": 0.6647404089953171,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 151,
+            "forecast": 0.062099175959430784,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "n": 171,
+            "forecast": 0.1405564316532068,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.2,
+            "n": 85,
+            "forecast": 0.24421570967225467,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 36,
+            "forecast": 0.3481997276345889,
+            "frequency": 0.1111111111111111
+          },
+          {
+            "lower": 0.4,
+            "n": 37,
+            "forecast": 0.4330081077846321,
+            "frequency": 0.13513513513513514
+          },
+          {
+            "lower": 0.5,
+            "n": 62,
+            "forecast": 0.5510258914962891,
+            "frequency": 0.08064516129032258
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 62,
+            "forecast": 0.655117267562497,
+            "frequency": 0.11290322580645161
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 80,
+            "forecast": 0.7451767168939114,
+            "frequency": 0.325
+          },
+          {
+            "lower": 0.8,
+            "n": 70,
+            "forecast": 0.8603316221918379,
+            "frequency": 0.37142857142857144
+          },
+          {
+            "lower": 0.9,
+            "n": 142,
+            "forecast": 0.9509337028147469,
+            "frequency": 0.5211267605633803
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 30,
+        "accuracy": 0.6886160714285714,
+        "equal_option_probability_states": 12,
+        "no_observed_failure": {
+          "n": 349,
+          "brier": 0.40241967395616063,
+          "log_loss": 1.2148595728190248,
+          "bins": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 7,
+              "forecast": 0.35292618189539227,
+              "frequency": 0.5714285714285714
+            },
+            {
+              "lower": 0.4,
+              "n": 12,
+              "forecast": 0.4431437204281489,
+              "frequency": 0.4166666666666667
+            },
+            {
+              "lower": 0.5,
+              "n": 20,
+              "forecast": 0.549598115682602,
+              "frequency": 0.25
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 30,
+              "forecast": 0.6614140709241231,
+              "frequency": 0.23333333333333334
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 72,
+              "forecast": 0.7461826445327865,
+              "frequency": 0.3611111111111111
+            },
+            {
+              "lower": 0.8,
+              "n": 67,
+              "forecast": 0.861978822679662,
+              "frequency": 0.3880597014925373
+            },
+            {
+              "lower": 0.9,
+              "n": 141,
+              "forecast": 0.9512619524137348,
+              "frequency": 0.524822695035461
+            }
+          ]
+        },
+        "known_visible_failure_states": 547,
+        "known_visible_failure_mean_forecast": 0.23427697308565842,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 68,
+          "mean_probability_change": 0.06932467397521525
+        },
+        "temperature": 1.0
+      },
+      "base_temperature_scaled": {
+        "n": 896,
+        "brier": 0.2130511914839376,
+        "log_loss": 0.6609608909945747,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 151,
+            "forecast": 0.06457940623750584,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "n": 171,
+            "forecast": 0.14403301638269042,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.2,
+            "n": 85,
+            "forecast": 0.24751514463054233,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 36,
+            "forecast": 0.35046458441870076,
+            "frequency": 0.1111111111111111
+          },
+          {
+            "lower": 0.4,
+            "n": 37,
+            "forecast": 0.4340599419371854,
+            "frequency": 0.13513513513513514
+          },
+          {
+            "lower": 0.5,
+            "n": 62,
+            "forecast": 0.550223116874596,
+            "frequency": 0.08064516129032258
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 62,
+            "forecast": 0.6528096808436493,
+            "frequency": 0.11290322580645161
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 80,
+            "forecast": 0.7419458400691272,
+            "frequency": 0.325
+          },
+          {
+            "lower": 0.8,
+            "n": 70,
+            "forecast": 0.8568676553680334,
+            "frequency": 0.37142857142857144
+          },
+          {
+            "lower": 0.9,
+            "n": 142,
+            "forecast": 0.9487996510768674,
+            "frequency": 0.5211267605633803
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 30,
+        "accuracy": 0.6886160714285714,
+        "equal_option_probability_states": 12,
+        "no_observed_failure": {
+          "n": 349,
+          "brier": 0.400307642383191,
+          "log_loss": 1.20188341647638,
+          "bins": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 7,
+              "forecast": 0.3551330466737116,
+              "frequency": 0.5714285714285714
+            },
+            {
+              "lower": 0.4,
+              "n": 12,
+              "forecast": 0.4440380543513158,
+              "frequency": 0.4166666666666667
+            },
+            {
+              "lower": 0.5,
+              "n": 20,
+              "forecast": 0.5488186330709067,
+              "frequency": 0.25
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 30,
+              "forecast": 0.6590242243297028,
+              "frequency": 0.23333333333333334
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 72,
+              "forecast": 0.742944372883973,
+              "frequency": 0.3611111111111111
+            },
+            {
+              "lower": 0.8,
+              "n": 67,
+              "forecast": 0.8585208745416564,
+              "frequency": 0.3880597014925373
+            },
+            {
+              "lower": 0.9,
+              "n": 141,
+              "forecast": 0.9491350631764411,
+              "frequency": 0.524822695035461
+            }
+          ]
+        },
+        "known_visible_failure_states": 547,
+        "known_visible_failure_mean_forecast": 0.23646879085983788,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 68,
+          "mean_probability_change": 0.0691041673348104
+        },
+        "temperature": 1.0162245912673256
+      },
+      "trained": {
+        "n": 896,
+        "brier": 0.08640877230884327,
+        "log_loss": 0.25512772048528315,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 571,
+            "forecast": 0.0024307988813826787,
+            "frequency": 0.010507880910683012
+          },
+          {
+            "lower": 0.1,
+            "n": 24,
+            "forecast": 0.14780490845441818,
+            "frequency": 0.125
+          },
+          {
+            "lower": 0.2,
+            "n": 22,
+            "forecast": 0.23903015120462937,
+            "frequency": 0.09090909090909091
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 18,
+            "forecast": 0.3647577597035302,
+            "frequency": 0.1111111111111111
+          },
+          {
+            "lower": 0.4,
+            "n": 19,
+            "forecast": 0.4363694190979004,
+            "frequency": 0.15789473684210525
+          },
+          {
+            "lower": 0.5,
+            "n": 47,
+            "forecast": 0.5475232410938182,
+            "frequency": 0.1276595744680851
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 33,
+            "forecast": 0.6509327039574132,
+            "frequency": 0.36363636363636365
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 40,
+            "forecast": 0.7505419313907623,
+            "frequency": 0.5
+          },
+          {
+            "lower": 0.8,
+            "n": 71,
+            "forecast": 0.8628877309006704,
+            "frequency": 0.7746478873239436
+          },
+          {
+            "lower": 0.9,
+            "n": 51,
+            "forecast": 0.9321262298845777,
+            "frequency": 0.7450980392156863
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 30,
+        "accuracy": 0.8649553571428571,
+        "equal_option_probability_states": 9,
+        "no_observed_failure": {
+          "n": 349,
+          "brier": 0.22184027166631465,
+          "log_loss": 0.6548770168597948,
+          "bins": [
+            {
+              "lower": 0.0,
+              "n": 24,
+              "forecast": 0.05606791997949282,
+              "frequency": 0.25
+            },
+            {
+              "lower": 0.1,
+              "n": 24,
+              "forecast": 0.14780490845441818,
+              "frequency": 0.125
+            },
+            {
+              "lower": 0.2,
+              "n": 22,
+              "forecast": 0.23903015120462937,
+              "frequency": 0.09090909090909091
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 18,
+              "forecast": 0.3647577597035302,
+              "frequency": 0.1111111111111111
+            },
+            {
+              "lower": 0.4,
+              "n": 19,
+              "forecast": 0.4363694190979004,
+              "frequency": 0.15789473684210525
+            },
+            {
+              "lower": 0.5,
+              "n": 47,
+              "forecast": 0.5475232410938182,
+              "frequency": 0.1276595744680851
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 33,
+              "forecast": 0.6509327039574132,
+              "frequency": 0.36363636363636365
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 40,
+              "forecast": 0.7505419313907623,
+              "frequency": 0.5
+            },
+            {
+              "lower": 0.8,
+              "n": 71,
+              "forecast": 0.8628877309006704,
+              "frequency": 0.7746478873239436
+            },
+            {
+              "lower": 0.9,
+              "n": 51,
+              "forecast": 0.9321262298845777,
+              "frequency": 0.7450980392156863
+            }
+          ]
+        },
+        "known_visible_failure_states": 547,
+        "known_visible_failure_mean_forecast": 7.743342186779106e-05,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 68,
+          "mean_probability_change": 0.01918629596419872
+        },
+        "temperature": 1.0
+      },
+      "trained_temperature_scaled": {
+        "n": 896,
+        "brier": 0.08350159807534761,
+        "log_loss": 0.24312383768159287,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 561,
+            "forecast": 0.002514527790461637,
+            "frequency": 0.0035650623885918
+          },
+          {
+            "lower": 0.1,
+            "n": 20,
+            "forecast": 0.15580622593431742,
+            "frequency": 0.25
+          },
+          {
+            "lower": 0.2,
+            "n": 30,
+            "forecast": 0.2511832646465294,
+            "frequency": 0.1
+          },
+          {
+            "lower": 0.30000000000000004,
+            "n": 13,
+            "forecast": 0.35437238884727024,
+            "frequency": 0.07692307692307693
+          },
+          {
+            "lower": 0.4,
+            "n": 30,
+            "forecast": 0.4337556066518898,
+            "frequency": 0.16666666666666666
+          },
+          {
+            "lower": 0.5,
+            "n": 60,
+            "forecast": 0.5495375942580789,
+            "frequency": 0.21666666666666667
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 37,
+            "forecast": 0.6514072638932891,
+            "frequency": 0.24324324324324326
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 52,
+            "forecast": 0.7540549763258511,
+            "frequency": 0.6538461538461539
+          },
+          {
+            "lower": 0.8,
+            "n": 78,
+            "forecast": 0.8466331262414395,
+            "frequency": 0.782051282051282
+          },
+          {
+            "lower": 0.9,
+            "n": 15,
+            "forecast": 0.9143071684741204,
+            "frequency": 0.9333333333333333
+          }
+        ],
+        "candidates": 128,
+        "source_groups": 30,
+        "accuracy": 0.8649553571428571,
+        "equal_option_probability_states": 9,
+        "no_observed_failure": {
+          "n": 349,
+          "brier": 0.2143757701856207,
+          "log_loss": 0.6231737257946857,
+          "bins": [
+            {
+              "lower": 0.0,
+              "n": 14,
+              "forecast": 0.0756761414985991,
+              "frequency": 0.14285714285714285
+            },
+            {
+              "lower": 0.1,
+              "n": 20,
+              "forecast": 0.15580622593431742,
+              "frequency": 0.25
+            },
+            {
+              "lower": 0.2,
+              "n": 30,
+              "forecast": 0.2511832646465294,
+              "frequency": 0.1
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 13,
+              "forecast": 0.35437238884727024,
+              "frequency": 0.07692307692307693
+            },
+            {
+              "lower": 0.4,
+              "n": 30,
+              "forecast": 0.4337556066518898,
+              "frequency": 0.16666666666666666
+            },
+            {
+              "lower": 0.5,
+              "n": 60,
+              "forecast": 0.5495375942580789,
+              "frequency": 0.21666666666666667
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 37,
+              "forecast": 0.6514072638932891,
+              "frequency": 0.24324324324324326
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 52,
+              "forecast": 0.7540549763258511,
+              "frequency": 0.6538461538461539
+            },
+            {
+              "lower": 0.8,
+              "n": 78,
+              "forecast": 0.8466331262414395,
+              "frequency": 0.782051282051282
+            },
+            {
+              "lower": 0.9,
+              "n": 15,
+              "forecast": 0.9143071684741204,
+              "frequency": 0.9333333333333333
+            }
+          ]
+        },
+        "known_visible_failure_states": 547,
+        "known_visible_failure_mean_forecast": 0.0006420184816610439,
+        "copy_diagnostic": {
+          "pairs_with_matched_option_order": 68,
+          "mean_probability_change": 0.016833113585508236
+        },
+        "temperature": 1.2937048333339856
+      }
+    }
+  },
+  "empirical_evidence_references": {
+    "test": {
+      "common_states": {
+        "n": 896,
+        "brier": 0.08385922980323736,
+        "log_loss": 0.24306015268683862,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 542,
+            "forecast": 0.0,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.5,
+            "n": 124,
+            "forecast": 0.534772182254197,
+            "frequency": 0.5483870967741935
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 102,
+            "forecast": 0.7546531302876482,
+            "frequency": 0.6666666666666666
+          },
+          {
+            "lower": 0.8,
+            "n": 128,
+            "forecast": 0.8511606845550225,
+            "frequency": 0.796875
+          }
+        ]
+      },
+      "initial": {
+        "n": 128,
+        "brier": 0.1200494640259016,
+        "log_loss": 0.3336526802198553,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 66,
+            "forecast": 0.0,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.5,
+            "n": 62,
+            "forecast": 0.5347721822541968,
+            "frequency": 0.5483870967741935
+          }
+        ]
+      },
+      "copy_probability_change": 0.0,
+      "price_probability_change": 0.0,
+      "training_pass_rates_after_all_revealed_checks_pass": {
+        "0": 0.5347721822541966,
+        "1": 0.8348151614412728,
+        "2": 0.754653130287648,
+        "3": 0.887120835405271
+      }
+    },
+    "challenge": {
+      "common_states": {
+        "n": 896,
+        "brier": 0.1109722888085497,
+        "log_loss": 0.30420945541432914,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 547,
+            "forecast": 0.0,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.5,
+            "n": 162,
+            "forecast": 0.5347721822541968,
+            "frequency": 0.25925925925925924
+          },
+          {
+            "lower": 0.7000000000000001,
+            "n": 86,
+            "forecast": 0.7546531302876482,
+            "frequency": 0.4883720930232558
+          },
+          {
+            "lower": 0.8,
+            "n": 101,
+            "forecast": 0.8487978663623417,
+            "frequency": 0.6237623762376238
+          }
+        ]
+      },
+      "initial": {
+        "n": 128,
+        "brier": 0.1695629108224212,
+        "log_loss": 0.4613901111036269,
+        "bins": [
+          {
+            "lower": 0.0,
+            "n": 47,
+            "forecast": 0.0,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.5,
+            "n": 81,
+            "forecast": 0.5347721822541968,
+            "frequency": 0.25925925925925924
+          }
+        ]
+      },
+      "copy_probability_change": 0.0,
+      "price_probability_change": 0.0,
+      "training_pass_rates_after_all_revealed_checks_pass": {
+        "0": 0.5347721822541966,
+        "1": 0.8348151614412728,
+        "2": 0.754653130287648,
+        "3": 0.887120835405271
+      }
+    }
+  },
+  "paired_source_group_comparisons": [
+    {
+      "split": "test",
+      "variant": "raw",
+      "groups": 22,
+      "group_macro_brier_difference": 0.04875964776423752,
+      "bootstrap_95_percent": [
+        0.0280452598691192,
+        0.07105816583735172
+      ],
+      "interpretation": "A minus B; positive means B is better. Conditional on this source corpus and training seeds."
+    },
+    {
+      "split": "test",
+      "variant": "temperature_scaled",
+      "groups": 22,
+      "group_macro_brier_difference": 0.05106934626560062,
+      "bootstrap_95_percent": [
+        0.030532180120304866,
+        0.07325838845507594
+      ],
+      "interpretation": "A minus B; positive means B is better. Conditional on this source corpus and training seeds."
+    },
+    {
+      "split": "test",
+      "variant": "empirical_reference_minus_trained_temperature_scaled",
+      "groups": 22,
+      "group_macro_brier_difference": 0.016245391290503515,
+      "bootstrap_95_percent": [
+        0.005978284160019243,
+        0.026882187887636782
+      ],
+      "interpretation": "A minus B; positive means B is better. Conditional on this source corpus and training seeds."
+    },
+    {
+      "split": "challenge",
+      "variant": "raw",
+      "groups": 30,
+      "group_macro_brier_difference": 0.10557325971630963,
+      "bootstrap_95_percent": [
+        0.0722813117583324,
+        0.13649814446080277
+      ],
+      "interpretation": "A minus B; positive means B is better. Conditional on this source corpus and training seeds."
+    },
+    {
+      "split": "challenge",
+      "variant": "temperature_scaled",
+      "groups": 30,
+      "group_macro_brier_difference": 0.1077286271764871,
+      "bootstrap_95_percent": [
+        0.07501478100921177,
+        0.1387894468517155
+      ],
+      "interpretation": "A minus B; positive means B is better. Conditional on this source corpus and training seeds."
+    },
+    {
+      "split": "challenge",
+      "variant": "empirical_reference_minus_trained_temperature_scaled",
+      "groups": 30,
+      "group_macro_brier_difference": 0.016188068256563295,
+      "bootstrap_95_percent": [
+        0.00030550151176729685,
+        0.03149388845098729
+      ],
+      "interpretation": "A minus B; positive means B is better. Conditional on this source corpus and training seeds."
+    }
+  ],
+  "limitations": [
+    "One adapter-training seed and a bounded pilot.",
+    "Seven views of each candidate are correlated.",
+    "The original base model may have seen the public source code in pretraining.",
+    "Outcome-label training of the language model; its acquisition policy has not undergone reinforcement learning."
+  ]
+}

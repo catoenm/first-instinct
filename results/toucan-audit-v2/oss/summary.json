@@ -1,0 +1,48 @@
+{
+  "code_sha256": "973adda469fff4bde272866033837f746d227a227f2829dcd52e1ba372858681",
+  "distinct_unscoped_prompt_ids": 5851,
+  "interpretation": "Structural checks are not complete JSON Schema validation. Error-shaped responses are narrow flags. Judge scores are model annotations, not independently verified outcomes. No tools were executed and no data were used for training.",
+  "judge_completeness_histogram": {
+    "1": 145,
+    "2": 603,
+    "3": 1244,
+    "4": 1086,
+    "5": 6649
+  },
+  "largest_server_cooccurrence_component": 55,
+  "multi_server_rows": 2083,
+  "parse_failures": 0,
+  "parsed_rows": 9727,
+  "rows_with_error_shaped_responses": 291,
+  "server_cooccurrence_components": 42,
+  "source": {
+    "bytes": 154444700,
+    "dataset": "Agent-Ark/Toucan-1.5M",
+    "dataset_card_sha256": "59eb287d06206f09c3a4f27d8b77b11600b54d81daa328b5ce2d1e15485efb13",
+    "file": "OSS/train-00000-of-00047.parquet",
+    "license": "Apache-2.0 as declared in the pinned dataset card",
+    "revision": "0df3cf37f2abefb380370cfb02eabea2a35ae782",
+    "scope": "One contiguous shard of one teacher subset, not a random sample of the full corpus.",
+    "sha256": "82b638601253f4ae0ad796b5366c1cf0acb144ad6e3171918a90e687eb524b01"
+  },
+  "structurally_usable_first_calls": 8544,
+  "subsets": {
+    "single-turn-original": 9727
+  },
+  "totals": {
+    "calls": 29531,
+    "calls_without_exact_declared_name": 685,
+    "calls_without_response": 0,
+    "duplicate_declared_names": 1,
+    "error_shaped_responses": 529,
+    "malformed_argument_objects": 6,
+    "missing_required_fields": 63,
+    "opaque_responses": 1417,
+    "parallel_call_turns": 0,
+    "responses": 29531,
+    "unmatched_responses": 0
+  },
+  "unique_servers": 404,
+  "unique_whitespace_normalized_questions": 9727,
+  "usable_first_calls_with_judge_completeness_at_least_4": 6688
+}

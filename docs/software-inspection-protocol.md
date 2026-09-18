@@ -120,3 +120,36 @@ reward, keeping full common-state forecast measurements. This objective differs
 from the original report-policy study's forecast-based selection. Do not claim
 this isolates one change relative to that study: initialization, report
 parameterization, supervision and separation of networks all differ.
+
+## Bounded language-model pilot
+
+Export all seven evidence views with fixed inspection prices of 0.01. The target
+is the same complete-suite outcome. Independently shuffle the two option labels
+for each view, and exclude inputs longer than 2,048 tokens without truncation.
+Use the pinned Qwen3.5-4B foundation and train low-rank adapters from its original
+pretrained state, with a 200-update ceiling and a 30-minute training deadline.
+This is direct outcome-label training, not a language-model reinforcement run.
+
+Use the first 256 prepared validation views to select the checkpoint by log loss;
+they cover 39 candidates and 19 source groups. Before reading final adapter test
+predictions, reserve every complete seven-view candidate from the other six
+validation source groups for temperature fitting: 166 candidates, 1,162 views.
+This added calibration pass avoids reusing checkpoint-selection groups. Fit
+separate scalar temperatures for base and adapted models with the same fixed
+201-point search from 0.2 to 5. The calibration population is still small and
+correlated within source groups.
+
+For each final split, select 128 candidates with all seven views in context using
+the smallest `sha256("gpu-evaluation-v1:" + candidate_id)` values. Selection occurs
+before model predictions. Compare base and selected adapter on identical inputs,
+with raw and adjusted Brier score, log loss, calibration bins, known-failure
+forecasts and matched-option-order copy sensitivity. Include the training-only
+evidence-frequency reference on the same candidates. Do not interpret a lower
+Brier score as isolating calibration from informativeness.
+
+An exploratory transfer diagnostic plugs these saved forecasts into the three
+previously selected `frozen` acquisition policies, with no further fitting. Keep
+prices at 0.01 to match the language prompts and integrate all paths exactly.
+Compare stopping immediately, inspecting probes once, and the empirical planner's
+inspection choices. This tests a composite of separately trained components;
+it is not a jointly trained language-model reinforcement policy.

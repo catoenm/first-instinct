@@ -2,38 +2,72 @@
 
 # First Instinct
 
-**Small model. Described options. One decision.**
+**Build verified data. Learn when to inspect it.**
 
-An inspectable experiment in teaching a small language encoder to make decisions.
-<br>Train it on a Mac. Read every update. Try the saved model.
+Open experiments in outcome forecasts, reinforcement learning, and the cost of evidence.
+<br>Inspect the data. Try the models. Reproduce the measurements.
 
 [![Tests](https://github.com/catoenm/first-instinct/actions/workflows/tests.yml/badge.svg)](https://github.com/catoenm/first-instinct/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Parameters](https://img.shields.io/badge/parameters-141M-7267EF.svg)](docs/model-card-v0.2.md)
+[![Forecaster](https://img.shields.io/badge/forecaster-4B-245b47.svg)](docs/software-outcome-model.md)
 
-[Try it](#try-the-model) · [Reproduce](#reproduce-the-experiment) · [Results](docs/multitask-experiment.md) · [How it works](docs/how-it-works.md)
+[Try the evidence room](docs/software-outcome-model.md#try-the-local-evidence-room) · [Results](docs/software-outcome-model.md) · [Data factory](docs/software-inspection.md) · [Research brief](docs/data-research-brief.md)
 
 </div>
 
-First Instinct takes some text, a question, and a list of described answers.
-One shared network scores the answers. It can choose a tool, identify an emotion,
-or judge how two sentences relate—without generating a stream of text.
+First Instinct explores a practical question: **when should a model gather more
+evidence before making a decision?** A four-billion-parameter forecaster reads
+code and verified checks. A separate small policy learns whether to inspect
+more evidence or stop. The data, training methods and failure cases are open.
 
-**In progress: [a four-billion-parameter decision model](docs/larger-model.md).**
-The separate `scale_lab` pipeline adds pinned pretrained models, adapter training,
-larger public datasets and executable outcome records. The existing released
-model and results below remain the completed experiments.
+**New: [the local evidence room](docs/software-outcome-model.md).** Choose a
+candidate program, reveal checks yourself or follow the trained inspector, and
+watch the forecast change before opening the hidden outcome.
 
-**Latest: [Learning to inspect software before making a forecast](docs/software-inspection.md).**
-The new data factory verifies **7,793 program variants from 369 open-source
-functions**, with source groups kept separate and about half a million candidate
-test executions. Twenty-four small models test reward-only forecasts and a
-hybrid that learns forecasts from outcomes while using reinforcement learning
-to buy evidence. Inspection helps, but a simple empirical planner remains
-stronger; broader forecast practice does not consistently win. Data, receipts,
-checkpoints and a runnable environment are public. The language-model export
-contains 36,189 training views and 34.6 million input tokens.
-[Read the results and run the inspection demo →](docs/software-inspection.md)
+| Held-out test | Original foundation accuracy | Adapted model accuracy |
+| --- | ---: | ---: |
+| New source groups | 84.5% | **90.2%** |
+| Strings and ciphers | 68.9% | **86.5%** |
+
+Each test has **128 candidates with seven correlated evidence views**. The
+adapted model also improves probability error over a training-frequency
+reference. It is a short outcome-supervised adaptation of Qwen3.5-4B; the
+separate small inspectors use Proximal Policy Optimization. The two models were
+trained separately. This is not evidence of Jev parity or a recovered private
+training recipe.
+
+![Forecast quality on verified software outcomes](docs/assets/software-outcome/forecast-quality.png)
+
+With a Python environment active in this checkout:
+
+```bash
+python -m pip install -r requirements-scale.txt
+python -m inspection_lab.download
+python -m scale_lab.download
+python -m inspection_lab.serve
+```
+
+Open `http://127.0.0.1:8765`. The model stays loaded locally; the demo never
+executes submitted code. The Mac check used an M5 Max with 128 GB of memory.
+Foundation weights download separately on first use. See the
+[model guide](docs/software-outcome-model.md) for hardware limits and measurements.
+
+The [data factory](docs/software-inspection.md) verifies **7,793 program variants
+from 369 open-source functions**, with connected source groups kept separate and
+about half a million candidate-check executions. Twenty-four small models test
+reward-only forecasts and hybrids. Learning inspection helps, but a simple
+empirical planner remains stronger at choosing evidence. Extra forecast practice
+is not a consistent win. All checkpoints and execution receipts are public.
+
+A [broader tool-data audit](docs/toucan-data-audit.md) covers **35,227 trajectories**
+and finds repeated questions across teachers, declaration mismatches and
+challenges for source-based evaluation splits. These audited traces have not
+been turned into verified outcome labels or used to train the software model.
+
+[Full results and model download →](docs/software-outcome-model.md) ·
+[Data research brief →](docs/data-research-brief.md) · [Post draft →](docs/post-draft.md)
+
+## Earlier experiments
 
 The previous [Executable evidence: auditing the data before reinforcement learning](docs/executable-evidence.md)
 pilot used authored contracts.

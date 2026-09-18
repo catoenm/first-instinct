@@ -1,0 +1,23 @@
+{
+  "job": {
+    "distinct_candidates": 3759,
+    "distinct_views": 6048,
+    "input_tokens": 5827516,
+    "note": "Reconstructed from the pinned batching algorithm and recorded step count, not a separately logged input trace. All visit and token totals match the trainer receipt.",
+    "padded_tokens": 5843648,
+    "row_visits": 6048,
+    "source_groups": 170,
+    "steps": 189
+  },
+  "run_sha256": "56c8f764514c594f77c9537b9a0d86a7d460aeece5321f1f64d33582b1701886",
+  "selected_checkpoint": {
+    "distinct_candidates": 3271,
+    "distinct_views": 4800,
+    "input_tokens": 4565626,
+    "note": "Reconstructed from the pinned batching algorithm and recorded step count, not a separately logged input trace. All visit and token totals match the trainer receipt.",
+    "padded_tokens": 4578320,
+    "row_visits": 4800,
+    "source_groups": 170,
+    "steps": 150
+  }
+}
