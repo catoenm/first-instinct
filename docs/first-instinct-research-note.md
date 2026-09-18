@@ -101,6 +101,17 @@ model's direct action answers. The outcome-trained checkpoints have yet to face
 this same check. A correct interface and good answers on simpler fixtures did
 not establish useful transfer here.
 
+A [post-hoc answer-order check](toolsandbox-transfer-order-results.md) exposed
+another weakness. Reversing the choices changed the most likely future cost on
+**69 of 96 questions**. The winning outcome answer stayed the same on all 144
+outcome questions, yet individual outcome probabilities moved by as much as
+**27.6 percentage points**. Only three of the 48 implied initial actions
+changed; the planner still stopped in 45. The original and reversed calls were
+made at different times, without contemporaneous repeats. This is a bounded
+sensitivity finding, not a chosen prompt improvement or an explanation of the
+whole transfer failure. It reinforces the need to evaluate probability behavior
+separately from selected-answer accuracy.
+
 There is also a concrete efficiency result. Reusing a shared state prefix for
 eight independent questions took **3.50 seconds versus 12.07 seconds for an
 ordinary batched complete forward**, a **3.45× ratio of medians** on our Apple

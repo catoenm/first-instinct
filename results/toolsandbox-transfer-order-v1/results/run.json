@@ -1,0 +1,18 @@
+{
+  "attempted": 240,
+  "completed_at_unix": 1789721008.143677,
+  "freeze_content_sha256": "afe69773a751c941b0bec11bc2f489232b18e573049fcb464ff7f53de66817e0",
+  "freeze_sha256": "f985639f18fdf6e90bd5158f759e47a5164dbf0f170b0b770216389f1265a54e",
+  "model_seconds": 734.9303345411172,
+  "process": {
+    "pid": 87342,
+    "started": "Fri Sep 18 03:31:12 2026"
+  },
+  "received": 240,
+  "schema": "toolsandbox-transfer-option-order-v1",
+  "scope": "Post-hoc sensitivity diagnostic motivated by the completed supervised reference. One reversal of every nontrivial root-state menu; no prompt tuning, model selection, training-gain claim, new tool execution, or change to the primary 720-question result.",
+  "seconds": 740.0121923750121,
+  "started_at_unix": 1789720268.054253,
+  "status": "complete",
+  "validated": 240
+}
