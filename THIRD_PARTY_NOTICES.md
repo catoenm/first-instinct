@@ -86,3 +86,29 @@ the pinned revision, input origins and execution receipts are preserved.
 The local execution image is the official Python image pinned by manifest digest
 in `inspection_lab/sandbox.py`. It is downloaded from Docker Hub and is not
 redistributed in the repository or experiment archive.
+
+## General instruction-conditioned decisions
+
+The `general_lab` experiment uses selected tasks from
+[Super-NaturalInstructions](https://github.com/allenai/natural-instructions),
+revision `55a365637381ce7f3748fa2eac7aef1a113bbb82`, by Yizhong Wang,
+Swaroop Mishra, and the contributors credited in the
+[paper](https://arxiv.org/abs/2204.07705) and task metadata. Instructions and
+metadata are Apache-2.0; individual task instances retain their original
+licenses. They are not relicensed as project-authored MIT data.
+
+The reproducible curation audit records each included task's contributors,
+source URLs, pinned task URL, checksum, and instance-license declaration.
+It accompanies the prepared data and must accompany derived artifacts.
+Selected instance licenses in this run are MIT, Apache-2.0, CC-BY-4.0,
+BSD-2-Clause, and CC0. See [the data documentation](docs/general-data-sources.md)
+for transformations, source ancestry, exclusions, and attribution details.
+Original sources remain authoritative for their copyright notices and terms.
+The repository provides download/conversion code; it does not include the full
+upstream instance corpus in Git.
+
+The nine-billion-parameter foundation is
+[Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B), revision
+`c202236235762e1c871ad0ccb60c8ee5ba337b9a`, published by the Qwen team
+under Apache-2.0. Generated executable scenarios, environment code, and
+original question templates are project-authored materials under MIT.
