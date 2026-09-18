@@ -1,0 +1,549 @@
+{
+  "source_report_sha256": "1b3b4c71c7bfd82570155f7469bb77f83da18ad5100eb1a484b932b93fe0e037",
+  "rows": [
+    {
+      "label": "Supervised reference",
+      "roles": [],
+      "status": "complete",
+      "decisions": {
+        "root_state": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "phone_prior_weighted": {
+          "expected_regret": 40.986979166666664,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.3333333333333333
+        }
+      },
+      "forecasts": {
+        "root_state": {
+          "outcome": {
+            "exact_expected_brier": 1.257688482425224,
+            "exact_expected_clipped_log_loss": 3.2682068080299254,
+            "excess_expected_brier": 0.6925843157585573,
+            "max_absolute_probability_error": 0.5986742999876797,
+            "modal_accuracy": 0.3055555555555555,
+            "oracle_expected_brier": 0.5651041666666666,
+            "oracle_expected_clipped_log_loss": 0.8916797428585295,
+            "per_option_mse": 0.08657303946981966,
+            "summed_squared_probability_error": 0.6925843157585573,
+            "total_variation": 0.6809043200117028
+          },
+          "cost": {
+            "exact_expected_brier": 1.0558090583835908,
+            "exact_expected_clipped_log_loss": 3.636834866424234,
+            "excess_expected_brier": 0.47768405838359096,
+            "max_absolute_probability_error": 0.5041853288469913,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692478,
+            "per_option_mse": 0.03550600060134999,
+            "summed_squared_probability_error": 0.47768405838359096,
+            "total_variation": 0.8438605028247063
+          }
+        },
+        "phone_prior_weighted": {
+          "outcome": {
+            "exact_expected_brier": 1.2921893352973959,
+            "exact_expected_clipped_log_loss": 4.791153705925115,
+            "excess_expected_brier": 0.8630226686307293,
+            "max_absolute_probability_error": 0.6602344770693535,
+            "modal_accuracy": 0.21180555555555552,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.10787783357884116,
+            "summed_squared_probability_error": 0.8630226686307293,
+            "total_variation": 0.7484716256268942
+          },
+          "cost": {
+            "exact_expected_brier": 0.9868028831674747,
+            "exact_expected_clipped_log_loss": 3.122176369040842,
+            "excess_expected_brier": 0.5576362165008081,
+            "max_absolute_probability_error": 0.6048274390965768,
+            "modal_accuracy": 0.033854166666666664,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.03999746743881609,
+            "summed_squared_probability_error": 0.5576362165008081,
+            "total_variation": 0.8774912906652995
+          }
+        }
+      }
+    },
+    {
+      "label": "Outcome 77 selected/latest (60)",
+      "roles": [
+        "outcome-s77/best",
+        "outcome-s77/latest"
+      ],
+      "status": "complete",
+      "identity_sha256": "e4c94658a133042e6d384e48f8b743e9274186f4f11af6cf31959fb7728f018b",
+      "reason": null,
+      "decisions": {
+        "root_state": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "phone_prior_weighted": {
+          "expected_regret": 42.98958333333333,
+          "expected_value": -1.7942708333333321,
+          "optimal_action_fraction": 0.32291666666666663
+        }
+      },
+      "forecasts": {
+        "root_state": {
+          "outcome": {
+            "exact_expected_brier": 1.2488559365110465,
+            "exact_expected_clipped_log_loss": 3.1164207092705505,
+            "excess_expected_brier": 0.68375176984438,
+            "max_absolute_probability_error": 0.5935902956439855,
+            "modal_accuracy": 0.3055555555555555,
+            "oracle_expected_brier": 0.5651041666666666,
+            "oracle_expected_clipped_log_loss": 0.8916797428585295,
+            "per_option_mse": 0.0854689712305475,
+            "summed_squared_probability_error": 0.68375176984438,
+            "total_variation": 0.6815028951977081
+          },
+          "cost": {
+            "exact_expected_brier": 1.0459888227550698,
+            "exact_expected_clipped_log_loss": 3.7272457621995154,
+            "excess_expected_brier": 0.4678638227550698,
+            "max_absolute_probability_error": 0.49871508640596096,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692478,
+            "per_option_mse": 0.03506264566464798,
+            "summed_squared_probability_error": 0.4678638227550698,
+            "total_variation": 0.8537211278829393
+          }
+        },
+        "phone_prior_weighted": {
+          "outcome": {
+            "exact_expected_brier": 1.218501990750635,
+            "exact_expected_clipped_log_loss": 4.840804262209999,
+            "excess_expected_brier": 0.7893353240839682,
+            "max_absolute_probability_error": 0.6245830838305942,
+            "modal_accuracy": 0.21180555555555552,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.09866691551049603,
+            "summed_squared_probability_error": 0.7893353240839682,
+            "total_variation": 0.727513771246903
+          },
+          "cost": {
+            "exact_expected_brier": 0.9897620265112593,
+            "exact_expected_clipped_log_loss": 3.3104807084888264,
+            "excess_expected_brier": 0.5605953598445927,
+            "max_absolute_probability_error": 0.6065677271174839,
+            "modal_accuracy": 0.014322916666666666,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.040795038111683855,
+            "summed_squared_probability_error": 0.5605953598445927,
+            "total_variation": 0.8868818640003154
+          }
+        }
+      }
+    },
+    {
+      "label": "Outcome 83 selected/latest (60)",
+      "roles": [
+        "outcome-s83/best",
+        "outcome-s83/latest"
+      ],
+      "status": "complete",
+      "identity_sha256": "b78b9acb96c99accce37fb85dc4e4883d7e750056c2b37290644f599278372e3",
+      "reason": null,
+      "decisions": {
+        "root_state": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "phone_prior_weighted": {
+          "expected_regret": 40.986979166666664,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.3333333333333333
+        }
+      },
+      "forecasts": {
+        "root_state": {
+          "outcome": {
+            "exact_expected_brier": 1.2538224865742242,
+            "exact_expected_clipped_log_loss": 3.2243490811405544,
+            "excess_expected_brier": 0.6887183199075576,
+            "max_absolute_probability_error": 0.5974075595828859,
+            "modal_accuracy": 0.3055555555555555,
+            "oracle_expected_brier": 0.5651041666666666,
+            "oracle_expected_clipped_log_loss": 0.8916797428585295,
+            "per_option_mse": 0.0860897899884447,
+            "summed_squared_probability_error": 0.6887183199075576,
+            "total_variation": 0.683479055992292
+          },
+          "cost": {
+            "exact_expected_brier": 1.0426430939091758,
+            "exact_expected_clipped_log_loss": 3.6399718994380548,
+            "excess_expected_brier": 0.4645180939091757,
+            "max_absolute_probability_error": 0.4979673305909576,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692478,
+            "per_option_mse": 0.03477098772578623,
+            "summed_squared_probability_error": 0.4645180939091757,
+            "total_variation": 0.852458425990335
+          }
+        },
+        "phone_prior_weighted": {
+          "outcome": {
+            "exact_expected_brier": 1.2136800573729853,
+            "exact_expected_clipped_log_loss": 4.808202929042259,
+            "excess_expected_brier": 0.7845133907063186,
+            "max_absolute_probability_error": 0.621035201493593,
+            "modal_accuracy": 0.21180555555555552,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.09806417383828983,
+            "summed_squared_probability_error": 0.7845133907063186,
+            "total_variation": 0.7258613752747116
+          },
+          "cost": {
+            "exact_expected_brier": 0.9844769626396953,
+            "exact_expected_clipped_log_loss": 3.2095036408010245,
+            "excess_expected_brier": 0.5553102959730287,
+            "max_absolute_probability_error": 0.6053814853094082,
+            "modal_accuracy": 0.020833333333333332,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.040331157638881385,
+            "summed_squared_probability_error": 0.5553102959730287,
+            "total_variation": 0.8844086092581165
+          }
+        }
+      }
+    },
+    {
+      "label": "Reward 77 selected (40)",
+      "roles": [
+        "reward-s77/best"
+      ],
+      "status": "complete",
+      "identity_sha256": "ee6b3aa9f073472f46439975cec3b49432b560e50c24fc53f7d74ee21fbb5e51",
+      "reason": null,
+      "decisions": {
+        "root_state": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "phone_prior_weighted": {
+          "expected_regret": 42.98958333333333,
+          "expected_value": -1.7942708333333321,
+          "optimal_action_fraction": 0.32291666666666663
+        }
+      },
+      "forecasts": {
+        "root_state": {
+          "outcome": {
+            "exact_expected_brier": 1.2332833897008693,
+            "exact_expected_clipped_log_loss": 2.7938962276459804,
+            "excess_expected_brier": 0.6681792230342027,
+            "max_absolute_probability_error": 0.5853553843496936,
+            "modal_accuracy": 0.3055555555555555,
+            "oracle_expected_brier": 0.5651041666666666,
+            "oracle_expected_clipped_log_loss": 0.8916797428585295,
+            "per_option_mse": 0.08352240287927534,
+            "summed_squared_probability_error": 0.6681792230342027,
+            "total_variation": 0.6663145018650942
+          },
+          "cost": {
+            "exact_expected_brier": 1.0655626541235526,
+            "exact_expected_clipped_log_loss": 3.717898991323281,
+            "excess_expected_brier": 0.4874376541235526,
+            "max_absolute_probability_error": 0.5061276143290645,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692478,
+            "per_option_mse": 0.03623593513254295,
+            "summed_squared_probability_error": 0.4874376541235526,
+            "total_variation": 0.8497910218969384
+          }
+        },
+        "phone_prior_weighted": {
+          "outcome": {
+            "exact_expected_brier": 1.3702472459213857,
+            "exact_expected_clipped_log_loss": 4.768110436138276,
+            "excess_expected_brier": 0.9410805792547191,
+            "max_absolute_probability_error": 0.7059641982976548,
+            "modal_accuracy": 0.21180555555555552,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.11763507240683989,
+            "summed_squared_probability_error": 0.9410805792547191,
+            "total_variation": 0.7752537525769171
+          },
+          "cost": {
+            "exact_expected_brier": 0.9785271363451468,
+            "exact_expected_clipped_log_loss": 3.009330022073998,
+            "excess_expected_brier": 0.5493604696784802,
+            "max_absolute_probability_error": 0.6007279078172966,
+            "modal_accuracy": 0.049479166666666664,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.039135829154632054,
+            "summed_squared_probability_error": 0.5493604696784802,
+            "total_variation": 0.868309692681881
+          }
+        }
+      }
+    },
+    {
+      "label": "Reward 77 latest (60)",
+      "roles": [
+        "reward-s77/latest"
+      ],
+      "status": "complete",
+      "identity_sha256": "b8552d2cd6d6dca60a919488519cec527722adf54a00947c43d1b9ce070fc064",
+      "reason": null,
+      "decisions": {
+        "root_state": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "phone_prior_weighted": {
+          "expected_regret": 40.986979166666664,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.3333333333333333
+        }
+      },
+      "forecasts": {
+        "root_state": {
+          "outcome": {
+            "exact_expected_brier": 1.3004744252606997,
+            "exact_expected_clipped_log_loss": 3.0517799744141225,
+            "excess_expected_brier": 0.7353702585940329,
+            "max_absolute_probability_error": 0.6249796160619654,
+            "modal_accuracy": 0.3055555555555555,
+            "oracle_expected_brier": 0.5651041666666666,
+            "oracle_expected_clipped_log_loss": 0.8916797428585295,
+            "per_option_mse": 0.09192128232425412,
+            "summed_squared_probability_error": 0.7353702585940329,
+            "total_variation": 0.6870169755598503
+          },
+          "cost": {
+            "exact_expected_brier": 1.0852639351413667,
+            "exact_expected_clipped_log_loss": 3.892595859860987,
+            "excess_expected_brier": 0.5071389351413667,
+            "max_absolute_probability_error": 0.5096738479805936,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692478,
+            "per_option_mse": 0.03782750186609347,
+            "summed_squared_probability_error": 0.5071389351413667,
+            "total_variation": 0.859178939771785
+          }
+        },
+        "phone_prior_weighted": {
+          "outcome": {
+            "exact_expected_brier": 1.4463834329527143,
+            "exact_expected_clipped_log_loss": 5.221785832767351,
+            "excess_expected_brier": 1.0172167662860478,
+            "max_absolute_probability_error": 0.742107947011694,
+            "modal_accuracy": 0.21180555555555552,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.12715209578575598,
+            "summed_squared_probability_error": 1.0172167662860478,
+            "total_variation": 0.7945113467046295
+          },
+          "cost": {
+            "exact_expected_brier": 0.9834265491234314,
+            "exact_expected_clipped_log_loss": 3.020843936960227,
+            "excess_expected_brier": 0.5542598824567647,
+            "max_absolute_probability_error": 0.6000801138579845,
+            "modal_accuracy": 0.049479166666666664,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.039547829247798164,
+            "summed_squared_probability_error": 0.5542598824567647,
+            "total_variation": 0.8661445294469557
+          }
+        }
+      }
+    },
+    {
+      "label": "Reward 83 selected/latest (60)",
+      "roles": [
+        "reward-s83/best",
+        "reward-s83/latest"
+      ],
+      "status": "complete",
+      "identity_sha256": "6d799dff0d02ba495778736b09d41b32355f653eb6dfe394daf66e5803d7e5c7",
+      "reason": null,
+      "decisions": {
+        "root_state": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "phone_prior_weighted": {
+          "expected_regret": 40.986979166666664,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.3333333333333333
+        }
+      },
+      "forecasts": {
+        "root_state": {
+          "outcome": {
+            "exact_expected_brier": 1.3688056910591881,
+            "exact_expected_clipped_log_loss": 3.868701620824832,
+            "excess_expected_brier": 0.8037015243925215,
+            "max_absolute_probability_error": 0.6639458361031655,
+            "modal_accuracy": 0.3055555555555555,
+            "oracle_expected_brier": 0.5651041666666666,
+            "oracle_expected_clipped_log_loss": 0.8916797428585295,
+            "per_option_mse": 0.10046269054906519,
+            "summed_squared_probability_error": 0.8037015243925215,
+            "total_variation": 0.7193090366514904
+          },
+          "cost": {
+            "exact_expected_brier": 1.0704341371544122,
+            "exact_expected_clipped_log_loss": 3.672786181232218,
+            "excess_expected_brier": 0.4923091371544121,
+            "max_absolute_probability_error": 0.5065518720342272,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692478,
+            "per_option_mse": 0.03659948911197775,
+            "summed_squared_probability_error": 0.4923091371544121,
+            "total_variation": 0.8501363973809929
+          }
+        },
+        "phone_prior_weighted": {
+          "outcome": {
+            "exact_expected_brier": 1.4636222325357997,
+            "exact_expected_clipped_log_loss": 5.395124507234011,
+            "excess_expected_brier": 1.0344555658691332,
+            "max_absolute_probability_error": 0.7482816026959981,
+            "modal_accuracy": 0.21180555555555552,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.12930694573364165,
+            "summed_squared_probability_error": 1.0344555658691332,
+            "total_variation": 0.7957378818097637
+          },
+          "cost": {
+            "exact_expected_brier": 0.9782319184321393,
+            "exact_expected_clipped_log_loss": 2.972900084594211,
+            "excess_expected_brier": 0.5490652517654726,
+            "max_absolute_probability_error": 0.5988647930911004,
+            "modal_accuracy": 0.049479166666666664,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.03913580474690583,
+            "summed_squared_probability_error": 0.5490652517654726,
+            "total_variation": 0.8654848049667028
+          }
+        }
+      }
+    },
+    {
+      "label": "Hybrid 77 selected (40)",
+      "roles": [
+        "hybrid-s77/best"
+      ],
+      "status": "ineligible",
+      "identity_sha256": "6951281c6233fc3948351b175170acc449880d6525ebeb6b028ecbe8ce510856",
+      "reason": "failed_or_unfinalized_run"
+    },
+    {
+      "label": "Hybrid 77 latest (58)",
+      "roles": [
+        "hybrid-s77/latest"
+      ],
+      "status": "ineligible",
+      "identity_sha256": "38ddeeec965b709adaf1cf936386cafefa4b90a3c4c4406ce21b52c1634765d1",
+      "reason": "failed_or_unfinalized_run"
+    },
+    {
+      "label": "Hybrid 83 selected/latest (60)",
+      "roles": [
+        "hybrid-s83/best",
+        "hybrid-s83/latest"
+      ],
+      "status": "complete",
+      "identity_sha256": "271be97400a56826b3d14e0dab2b258559f3cbb8ac108b7c5d62804ddcb00b68",
+      "reason": null,
+      "decisions": {
+        "root_state": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "phone_prior_weighted": {
+          "expected_regret": 40.986979166666664,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.3333333333333333
+        }
+      },
+      "forecasts": {
+        "root_state": {
+          "outcome": {
+            "exact_expected_brier": 1.3038166300703122,
+            "exact_expected_clipped_log_loss": 3.202185991388869,
+            "excess_expected_brier": 0.7387124634036457,
+            "max_absolute_probability_error": 0.6268602193578974,
+            "modal_accuracy": 0.3055555555555555,
+            "oracle_expected_brier": 0.5651041666666666,
+            "oracle_expected_clipped_log_loss": 0.8916797428585295,
+            "per_option_mse": 0.09233905792545571,
+            "summed_squared_probability_error": 0.7387124634036457,
+            "total_variation": 0.7000319480876998
+          },
+          "cost": {
+            "exact_expected_brier": 1.038684827979845,
+            "exact_expected_clipped_log_loss": 3.596160371983925,
+            "excess_expected_brier": 0.460559827979845,
+            "max_absolute_probability_error": 0.49729730698648683,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692478,
+            "per_option_mse": 0.03448155436620538,
+            "summed_squared_probability_error": 0.460559827979845,
+            "total_variation": 0.8480680609633661
+          }
+        },
+        "phone_prior_weighted": {
+          "outcome": {
+            "exact_expected_brier": 1.3275534249958205,
+            "exact_expected_clipped_log_loss": 4.892503298725265,
+            "excess_expected_brier": 0.8983867583291538,
+            "max_absolute_probability_error": 0.6789559692990046,
+            "modal_accuracy": 0.21180555555555552,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.11229834479114423,
+            "summed_squared_probability_error": 0.8983867583291538,
+            "total_variation": 0.7618243246211417
+          },
+          "cost": {
+            "exact_expected_brier": 0.9815769966396669,
+            "exact_expected_clipped_log_loss": 3.1709344594186026,
+            "excess_expected_brier": 0.5524103299730003,
+            "max_absolute_probability_error": 0.6040695778895799,
+            "modal_accuracy": 0.03645833333333333,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.04009616730830388,
+            "summed_squared_probability_error": 0.5524103299730003,
+            "total_variation": 0.8810049913721134
+          }
+        }
+      }
+    }
+  ],
+  "scope": "All 12 roles plus supervised reference; exact identities share a row. Initial and phone-conditioned expected regrets are separate endpoints. Forecast panels show initial-state excess expected Brier, excluding singleton costs. 48 related roots; one authored four-world mechanism; no adaptive policy execution."
+}

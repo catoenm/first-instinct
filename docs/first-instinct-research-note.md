@@ -1,7 +1,8 @@
 # First Instinct: a decision interface is the beginning
 
-*Public-facing draft, September 18, 2026. Outcome-training results are recovered;
-the separate tool-transfer comparison is not yet complete.*
+*Public-facing draft, September 18, 2026. Outcome-training and eligible-checkpoint
+tool-transfer results are complete; the original cancelled training arm remains
+explicitly unavailable.*
 
 Letting a language model answer new questions from supplied choices is
 straightforward. Making its probabilities useful for decisions across
@@ -97,9 +98,21 @@ research credits**, identical to always stopping. All 720 probability questions
 were retained and independently rescored. Those questions share correlated
 contexts; they are not 720 independent tasks. This evaluates choices implied by
 forecasts under the declared continuation, not a new executed policy or the
-model's direct action answers. The outcome-trained checkpoints have yet to face
-this same check. A correct interface and good answers on simpler fixtures did
-not establish useful transfer here.
+model's direct action answers. A correct interface and good answers on simpler
+fixtures did not establish useful transfer here.
+
+The [completed checkpoint comparison](toolsandbox-transfer-outcome-results.md)
+then asked the same 720 questions of every eligible outcome-trained,
+reward-trained and combined checkpoint. Ten selected/latest roles reduced to
+six exact distinct adapters; two roles from the cancelled run stayed unavailable.
+All **4,320 new predictions** completed. Every adapter still chose **stop at
+all 48 initial states**, with exactly the same **20.4-credit expected regret**.
+Some forecast errors decreased, others increased, and none changed the primary
+decision result. After a phone lookup, two adapters changed one conditional
+decision and made the prior-weighted endpoint worse. These are changes in
+choices implied by forecasts, not new executed adaptive policies. The result
+establishes no transfer gain on this mechanism; it does not prove that transfer
+is impossible or diagnose a single cause.
 
 A [post-hoc answer-order check](toolsandbox-transfer-order-results.md) exposed
 another weakness. Reversing the choices changed the most likely future cost on
@@ -153,9 +166,11 @@ choices differed, substituting exact terminal expectations nearly removed the
 local value gap. Substituting exact costs did much less. These are arithmetic
 re-rankings of stored traces, not improvements measured by rerunning a policy.
 They motivate better training coverage of action consequences and information
-gathering. Held-out traces remain evaluation data. The next comparison checks
-every eligible checkpoint on the same unfamiliar ToolSandbox questions used
-for the supervised reference, without choosing a checkpoint from its results.
+gathering. Held-out traces remain evaluation data. The completed ToolSandbox
+comparison shows why these within-mechanism gains cannot establish general
+decision ability. The [next data design](outcome-v3-data-design.md) calls for
+fresh executable mechanisms and separately controlled output representations,
+with a genuine starting-model baseline and isolated final evaluation.
 
 Progress would mean better forecasts and executed decisions on held-out
 mechanisms while retaining general question answering. If the hybrid cannot

@@ -106,8 +106,13 @@ using this diagnostic. The [local executor](toolsandbox-transfer-execute-v1-prot
 and [read-only report](toolsandbox-transfer-report.md) preserve the same inputs
 and inference contract. Its [published execution freeze](../results/toolsandbox-transfer-outcome-execution-v1/)
 retains twelve roles, ten eligible roles and six exact unique adapter identities.
-The two cancelled hybrid-77 roles remain unavailable. The local comparison
-is running, with 4,320 new questions planned; no transfer result is claimed yet.
+The two cancelled hybrid-77 roles remain unavailable. The
+[completed local comparison](toolsandbox-transfer-outcome-results.md) produced
+all 4,320 new predictions. Every eligible adapter still chose stop at all 48
+initial states, leaving expected regret unchanged at 20.40625 research credits.
+Probability estimates changed, but no primary transfer benefit appeared on this
+authored mechanism. Two adapters made one phone-conditioned choice worse.
+The original supervised demo was restored; no checkpoint was promoted.
 A separate [completed post-hoc answer-order audit](toolsandbox-transfer-order-results.md)
 reversed all 240 nontrivial initial-state forecast menus once, reusing their
 original reference predictions. The most likely cost changed on 69 of 96 cost
@@ -159,10 +164,12 @@ The recovered [first-divergence diagnostic](outcome-v2-divergence-results.md)
 points toward terminal-outcome prediction as a training-data priority. Local
 substitution of exact terminal expectations removes much more of the first
 decision gap than substitution of exact costs. This does not measure an
-improved executed policy. Finish the fixed transfer comparison before deciding
-whether fresh training mechanisms should emphasize hidden tool state,
-information gathering, or another gap; do not turn these diagnostic roots into
-training examples or select a checkpoint from them.
+improved executed policy. The completed transfer check adds evidence that the
+current two training mechanisms do not suffice for this unfamiliar tool task.
+The [next data design](outcome-v3-data-design.md) specifies fresh mechanisms,
+controlled representation changes and a starting-model baseline before another
+training allocation. These remain hypotheses to test. Do not turn existing
+diagnostic roots into training examples or select a checkpoint from them.
 
 ## What would count as progress
 

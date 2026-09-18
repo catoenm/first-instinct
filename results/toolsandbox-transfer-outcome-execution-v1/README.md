@@ -1,5 +1,13 @@
 # Fixed outcome-checkpoint transfer comparison
 
+Execution is complete: all six eligible identities returned all 720 questions,
+for 4,320 attempted, received and validated predictions. The
+[full report](report.md), [machine-readable results](report.json),
+[completion summary](completion-summary.json) and unchanged per-identity
+`units/` journals are retained. The report's `partial` status preserves the
+two original ineligible training roles; no eligible evaluation failed.
+See the [results writeup](../../docs/toolsandbox-transfer-outcome-results.md).
+
 These inputs were prepared and published before any cohort inference. Preparation
 loads the cached tokenizer and verifies files; it performs no model forwards.
 The [cohort manifest](../toolsandbox-transfer-outcome-cohort-v1/manifest.json)

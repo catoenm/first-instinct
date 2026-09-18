@@ -1,0 +1,31 @@
+{
+  "schema": "toolsandbox-transfer-completion-summary-v1",
+  "execution_complete": true,
+  "original_cohort_report_status": "partial",
+  "status_note": "All six eligible identities completed; two original hybrid77 roles remain ineligible due to the earlier incomplete training run.",
+  "unique_identities": 6,
+  "eligible_roles": 10,
+  "original_roles": 12,
+  "attempted": 4320,
+  "received": 4320,
+  "validated": 4320,
+  "new_model_seconds": 13819.260290049802,
+  "serial_unit_seconds": 14026.877468042003,
+  "execution_freeze_sha256": "f0036925a79b6ff3ead11d72016963b9ad1429a4c9117874eb18c20a8c45eb6f",
+  "analysis_report_sha256": "1b3b4c71c7bfd82570155f7469bb77f83da18ad5100eb1a484b932b93fe0e037",
+  "demo_restored": true,
+  "demo_model": {
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "checkpoint": {
+      "run_status": "complete",
+      "step": 2742,
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742"
+    },
+    "device": "mps"
+  },
+  "demo_health_choice": "expedite",
+  "new_cloud_compute": false,
+  "checkpoint_promoted": false
+}

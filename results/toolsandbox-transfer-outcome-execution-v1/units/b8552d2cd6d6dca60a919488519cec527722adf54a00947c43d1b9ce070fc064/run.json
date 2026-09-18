@@ -1,0 +1,74 @@
+{
+  "adapter_files_sha256": {
+    "adapter_config.json": "0a3963c25e072b97b992fccc2519d5c9f20166f47b0aac145ce0cd34d44b8cb0",
+    "adapter_model.safetensors": "1cf41a0d6d0a6243aa35733c4e067aee1b8a3f554354350430bbae54e465c190"
+  },
+  "attempted": 720,
+  "completed_at_unix": 1789739259.423558,
+  "freeze_sha256": "f0036925a79b6ff3ead11d72016963b9ad1429a4c9117874eb18c20a8c45eb6f",
+  "identity_sha256": "b8552d2cd6d6dca60a919488519cec527722adf54a00947c43d1b9ce070fc064",
+  "loaded_model": {
+    "device": "mps",
+    "model": {
+      "id": "Qwen/Qwen3.5-9B",
+      "kind": "qwen3_5",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "parameter_dtype": "float32",
+    "parameters": 9453092080,
+    "text_attention_implementation": "sdpa",
+    "training": false,
+    "use_cache": false
+  },
+  "mode": "new_inference",
+  "model_seconds": 2298.0089834559767,
+  "network_guard": {
+    "blocked_attempts": 0,
+    "blocked_probes": 1
+  },
+  "prediction_rows": 720,
+  "provenance_limit": "Disk hashes, loaded configuration and parameter version counters; no full in-memory tensor attestation.",
+  "received": 720,
+  "roles": [
+    "reward-s77/latest"
+  ],
+  "runtime": {
+    "attention_implementation": "sdpa",
+    "device": "mps",
+    "inference_batch_size": 1,
+    "max_options": 36,
+    "max_tokens": 1536,
+    "packages": {
+      "huggingface-hub": "1.31.0",
+      "peft": "0.21.0",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    },
+    "parameter_dtype": "float32",
+    "prediction_path": "scale_lab.infer.Predictor.predict -> scale_lab.model.evaluate(batch_size=1); frozen state/question/options serialization and option order; independent prompts.",
+    "runtime_mismatch": "Refuse execution and reference reuse. No automatic CUDA, dtype, batching, or serialization substitution.",
+    "source_sha256": {
+      "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+      "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+      "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+      "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689"
+    },
+    "tokenizer_files_sha256": {
+      "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    },
+    "training": false,
+    "use_cache": false
+  },
+  "schema": "toolsandbox-transfer-execution-v1",
+  "seconds": 2332.433370333005,
+  "started_at_unix": 1789736927.0156748,
+  "status": "complete",
+  "timing_note": "model_seconds counts new forwards only. Reused response milliseconds are historical service timings; fresh-process synchronized timings are not a controlled latency comparison.",
+  "validated": 720
+}
