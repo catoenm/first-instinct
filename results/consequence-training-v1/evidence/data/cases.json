@@ -1,0 +1,1053 @@
+{
+  "cases": [
+    {
+      "case": "p0-w0",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 0
+    },
+    {
+      "case": "p0-w1",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 1
+    },
+    {
+      "case": "p0-w2",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 2
+    },
+    {
+      "case": "p0-w3",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 3
+    },
+    {
+      "case": "p1-w0",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 0
+    },
+    {
+      "case": "p1-w1",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 1
+    },
+    {
+      "case": "p1-w2",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 2
+    },
+    {
+      "case": "p1-w3",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_queries",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 3
+    },
+    {
+      "case": "p2-w0",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 0
+    },
+    {
+      "case": "p2-w1",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 1
+    },
+    {
+      "case": "p2-w2",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 2
+    },
+    {
+      "case": "p2-w3",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 3
+    },
+    {
+      "case": "p3-w0",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 0
+    },
+    {
+      "case": "p3-w1",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 1
+    },
+    {
+      "case": "p3-w2",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 2
+    },
+    {
+      "case": "p3-w3",
+      "profile": {
+        "cohort": "familiar",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_attempts",
+        "prior": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "weight_within_cohort": 0.0625,
+      "world": 3
+    },
+    {
+      "case": "p4-w4",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_queries",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 4
+    },
+    {
+      "case": "p4-w5",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_queries",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 5
+    },
+    {
+      "case": "p5-w4",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_queries",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 4
+    },
+    {
+      "case": "p5-w5",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          1,
+          1,
+          16,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_queries",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 5
+    },
+    {
+      "case": "p6-w4",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_attempts",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 4
+    },
+    {
+      "case": "p6-w5",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 3,
+        "price": "cheap_attempts",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 5
+    },
+    {
+      "case": "p7-w4",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_attempts",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 4
+    },
+    {
+      "case": "p7-w5",
+      "profile": {
+        "cohort": "combined",
+        "costs": [
+          8,
+          8,
+          4,
+          4,
+          12,
+          12,
+          12,
+          8,
+          0
+        ],
+        "horizon": 6,
+        "price": "cheap_attempts",
+        "prior": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 5
+    },
+    {
+      "case": "fresh0-w0",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          3,
+          5,
+          9,
+          7,
+          11,
+          13,
+          15,
+          6,
+          0
+        ],
+        "horizon": 5,
+        "price": "new",
+        "prior": [
+          1,
+          2,
+          3,
+          2,
+          1,
+          3
+        ]
+      },
+      "weight_within_cohort": 0.041666666666666664,
+      "world": 0
+    },
+    {
+      "case": "fresh0-w1",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          3,
+          5,
+          9,
+          7,
+          11,
+          13,
+          15,
+          6,
+          0
+        ],
+        "horizon": 5,
+        "price": "new",
+        "prior": [
+          1,
+          2,
+          3,
+          2,
+          1,
+          3
+        ]
+      },
+      "weight_within_cohort": 0.08333333333333333,
+      "world": 1
+    },
+    {
+      "case": "fresh0-w2",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          3,
+          5,
+          9,
+          7,
+          11,
+          13,
+          15,
+          6,
+          0
+        ],
+        "horizon": 5,
+        "price": "new",
+        "prior": [
+          1,
+          2,
+          3,
+          2,
+          1,
+          3
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 2
+    },
+    {
+      "case": "fresh0-w3",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          3,
+          5,
+          9,
+          7,
+          11,
+          13,
+          15,
+          6,
+          0
+        ],
+        "horizon": 5,
+        "price": "new",
+        "prior": [
+          1,
+          2,
+          3,
+          2,
+          1,
+          3
+        ]
+      },
+      "weight_within_cohort": 0.08333333333333333,
+      "world": 3
+    },
+    {
+      "case": "fresh0-w4",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          3,
+          5,
+          9,
+          7,
+          11,
+          13,
+          15,
+          6,
+          0
+        ],
+        "horizon": 5,
+        "price": "new",
+        "prior": [
+          1,
+          2,
+          3,
+          2,
+          1,
+          3
+        ]
+      },
+      "weight_within_cohort": 0.041666666666666664,
+      "world": 4
+    },
+    {
+      "case": "fresh0-w5",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          3,
+          5,
+          9,
+          7,
+          11,
+          13,
+          15,
+          6,
+          0
+        ],
+        "horizon": 5,
+        "price": "new",
+        "prior": [
+          1,
+          2,
+          3,
+          2,
+          1,
+          3
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 5
+    },
+    {
+      "case": "fresh1-w0",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          5,
+          3,
+          7,
+          9,
+          15,
+          11,
+          13,
+          6,
+          0
+        ],
+        "horizon": 7,
+        "price": "new",
+        "prior": [
+          3,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 0
+    },
+    {
+      "case": "fresh1-w1",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          5,
+          3,
+          7,
+          9,
+          15,
+          11,
+          13,
+          6,
+          0
+        ],
+        "horizon": 7,
+        "price": "new",
+        "prior": [
+          3,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "weight_within_cohort": 0.041666666666666664,
+      "world": 1
+    },
+    {
+      "case": "fresh1-w2",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          5,
+          3,
+          7,
+          9,
+          15,
+          11,
+          13,
+          6,
+          0
+        ],
+        "horizon": 7,
+        "price": "new",
+        "prior": [
+          3,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "weight_within_cohort": 0.08333333333333333,
+      "world": 2
+    },
+    {
+      "case": "fresh1-w3",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          5,
+          3,
+          7,
+          9,
+          15,
+          11,
+          13,
+          6,
+          0
+        ],
+        "horizon": 7,
+        "price": "new",
+        "prior": [
+          3,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "weight_within_cohort": 0.041666666666666664,
+      "world": 3
+    },
+    {
+      "case": "fresh1-w4",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          5,
+          3,
+          7,
+          9,
+          15,
+          11,
+          13,
+          6,
+          0
+        ],
+        "horizon": 7,
+        "price": "new",
+        "prior": [
+          3,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "weight_within_cohort": 0.125,
+      "world": 4
+    },
+    {
+      "case": "fresh1-w5",
+      "profile": {
+        "cohort": "fresh_mixture",
+        "costs": [
+          5,
+          3,
+          7,
+          9,
+          15,
+          11,
+          13,
+          6,
+          0
+        ],
+        "horizon": 7,
+        "price": "new",
+        "prior": [
+          3,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "weight_within_cohort": 0.08333333333333333,
+      "world": 5
+    }
+  ],
+  "variants": [
+    "original",
+    "reversed",
+    "reworded"
+  ]
+}

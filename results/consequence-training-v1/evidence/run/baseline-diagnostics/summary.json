@@ -1,0 +1,126 @@
+{
+  "forecast_mse": {
+    "False": 0.3238429891163352,
+    "True": 0.2800591945873396
+  },
+  "policy": {
+    "original/combined": {
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 0.25
+        }
+      },
+      "episodes": 8,
+      "mean_return": -0.05062499886844307,
+      "success_rate": 0.125,
+      "total_cohort_weight": 1.0
+    },
+    "original/familiar": {
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.5
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 0.875
+        }
+      },
+      "episodes": 16,
+      "mean_return": 0.6418750021839514,
+      "success_rate": 0.6875,
+      "total_cohort_weight": 1.0
+    },
+    "original/fresh_mixture": {
+      "by_horizon": {},
+      "episodes": 12,
+      "mean_return": 0.31999999928909045,
+      "success_rate": 0.375,
+      "total_cohort_weight": 1.0
+    },
+    "reversed/combined": {
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 0.5
+        }
+      },
+      "episodes": 8,
+      "mean_return": -0.31812499614898115,
+      "success_rate": 0.25,
+      "total_cohort_weight": 1.0
+    },
+    "reversed/familiar": {
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.625
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 0.75
+        }
+      },
+      "episodes": 16,
+      "mean_return": 0.40000000433064997,
+      "success_rate": 0.6875,
+      "total_cohort_weight": 1.0
+    },
+    "reversed/fresh_mixture": {
+      "by_horizon": {},
+      "episodes": 12,
+      "mean_return": 0.43166666582692415,
+      "success_rate": 0.5,
+      "total_cohort_weight": 1.0
+    },
+    "reworded/combined": {
+      "by_horizon": {
+        "3": {
+          "episodes": 4,
+          "success_rate": 0.0
+        },
+        "6": {
+          "episodes": 4,
+          "success_rate": 0.25
+        }
+      },
+      "episodes": 8,
+      "mean_return": -0.06499999854713678,
+      "success_rate": 0.125,
+      "total_cohort_weight": 1.0
+    },
+    "reworded/familiar": {
+      "by_horizon": {
+        "3": {
+          "episodes": 8,
+          "success_rate": 0.625
+        },
+        "6": {
+          "episodes": 8,
+          "success_rate": 0.75
+        }
+      },
+      "episodes": 16,
+      "mean_return": 0.5193750027101487,
+      "success_rate": 0.6875,
+      "total_cohort_weight": 1.0
+    },
+    "reworded/fresh_mixture": {
+      "by_horizon": {},
+      "episodes": 12,
+      "mean_return": 0.13895833282731473,
+      "success_rate": 0.41666666666666663,
+      "total_cohort_weight": 1.0
+    }
+  },
+  "policy_calls": 391
+}

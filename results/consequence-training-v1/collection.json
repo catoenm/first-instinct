@@ -1,0 +1,13 @@
+{
+  "archive_sha256": "131a6e810b3a406d2ef8b7de75331c417e120aa61bf0894c57012464cbe727c8",
+  "archive_bytes": 330908809,
+  "pipeline_status": "complete",
+  "verified_files": 47,
+  "created_at": 1789760508.878551,
+  "stop_requested_at": 1789762296.910593,
+  "deleted_at": 1789762345.874794,
+  "gpu_hourly_rate_usd": 3.49,
+  "estimated_compute_usd_excluding_storage": 1.7808650945107143,
+  "pod_deleted": true,
+  "remaining_pod_count": 0
+}

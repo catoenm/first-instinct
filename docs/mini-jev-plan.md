@@ -19,6 +19,17 @@ not establish an added benefit from the reinforcement step. The study lacks
 an untouched supervised test baseline and a second completed hybrid seed.
 The earlier software model remains a separate, narrower experiment.
 
+The subsequent [verified consequence-learning pilot](consequence-training-v1-results.md)
+updates the 9B language adapters on actual SQLite-derived targets. Immediate
+consequence accuracy rose from 81.25% to 99.65% on withheld public histories in
+one known mechanism. Executed decision gains remained mixed, with regressions
+and presentation sensitivity. A post-hoc audit found exact training-prompt matches
+in 25% of validation rows; the remaining rows improved too, but that does not
+repair checkpoint selection or establish independent transfer. This supplies
+a trained consequence-learning
+reference for a future reward/forecast comparison; it does not establish a
+reinforcement-learning benefit or transfer to unfamiliar mechanisms.
+
 The target is a small, open model that accepts arbitrary supplied state and
 user-defined questions, option descriptions and ordered levels. It should answer
 new questions across domains with constrained probabilities, without generating

@@ -1,0 +1,8 @@
+{
+  "tensor_keys": 496,
+  "changed_tensors": 496,
+  "parameters": 43278336,
+  "root_mean_square_change": 0.0001999159117461476,
+  "maximum_absolute_change": 0.0010642562992870808,
+  "all_changes_in_language_adapters": true
+}

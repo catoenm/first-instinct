@@ -1,0 +1,13 @@
+{
+  "assets": {
+    "consequence-cloud-artifacts-v1.tar.gz": {
+      "bytes": 330908809,
+      "sha256": "131a6e810b3a406d2ef8b7de75331c417e120aa61bf0894c57012464cbe727c8"
+    },
+    "first-instinct-consequence-v1-companion.tar.gz": {
+      "bytes": 342969,
+      "sha256": "8c192acd2a17e1ac25f32e7423dfdd9b8221ef86763074c3b827ab91b1279ee3"
+    }
+  },
+  "required_companion": "first-instinct-consequence-v1-companion.tar.gz"
+}

@@ -4,16 +4,21 @@ This lab connects a fast C simulator to independently executed SQLite
 transactions. It also implements the PufferLib 5.0 environment interface and
 includes a separate local PyTorch trainer using Proximal Policy Optimization.
 
-**The published experiment trains a 7,370-parameter numerical policy, not Qwen.**
-The 9B checkpoint is unchanged. Native CUDA PuffeRL training has not been run.
+The first published experiment trains a 7,370-parameter numerical policy.
+It did not change Qwen. Native CUDA PuffeRL training has not been run.
 Read the [results and limitations](../docs/puffer-reservation-results.md),
 [environment protocol](../docs/puffer-reservation-v1-protocol.md), and
 [learning protocol](../docs/puffer-reservation-learning-v1-protocol.md).
 
 The subsequent [9B language study](../docs/reservation-language-results.md)
 tests complete textual decision trajectories and explicit outcome forecasts.
-It also introduces a verified command-consequence curriculum; those data have
-not yet been used to train the language model.
+It also introduces a verified command-consequence curriculum. The completed
+[9B consequence-training pilot](../docs/consequence-training-v1-results.md) uses
+that curriculum to update 43.3 million internal language-adapter parameters.
+Immediate consequence forecasts improved strongly; executed decision gains
+were mixed and sensitive to presentation. A final audit found exact training
+prompt matches in 25% of validation rows, documented in the results. This later stage is supervised
+learning, not language-model reinforcement learning in this environment.
 
 ## What the agent does
 
@@ -100,5 +105,5 @@ serve the headless interface check only, with their original licenses.
 
 The SQLite executor uses fixed authored commands. It does not generate shell
 commands or use Harbor. The separate [Harbor pilot](../tool_lab/README.md)
-covers actual sandbox command selection. Transfer from this environment to
-language decisions or Harbor has not been measured.
+covers actual sandbox command selection. The consequence pilot measures
+language decisions in this environment; transfer to Harbor remains unmeasured.

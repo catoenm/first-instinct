@@ -177,3 +177,24 @@ mechanisms while retaining general question answering. If the hybrid cannot
 improve on outcome learning alone, we should not credit its reinforcement step.
 If gains disappear with new query semantics, we need broader mechanism coverage.
 More rows and valid output types alone would not answer either question.
+
+The next completed [consequence-learning pilot](consequence-training-v1-results.md)
+provides a useful narrower result. With 2,592 execution-derived training questions,
+the same 9B model's immediate consequence accuracy rose from 81.25% to 99.65% on
+withheld public histories, while probability error fell 90.9%. All 496 internal
+language-adapter tensors changed. General retention accuracy stayed similar,
+although its log loss worsened slightly. Compute cost was approximately $1.78.
+A final audit found exact training-prompt matches in 216 of 864 validation rows
+despite disjoint history groups. The remaining 648 improved from 83.33% to 99.54%
+modal accuracy, but this is a post-hoc slice; the overlap still influenced
+checkpoint selection. Rendered-prompt grouping must be fixed in a subsequent
+study before treating this as generalization evidence.
+
+Sequential control improved unevenly. Fresh parameter mixtures had weighted
+success of 43.06% before and 59.72% after when averaging all three presentations,
+but rewording removed the gain in one presentation. Some existing cases had
+worse return or fewer completions. Full-continuation probability error averaged
+0.20459, almost the 0.20513 error of a constant 50% predictor. This is evidence
+that verified data can teach immediate effects, with much weaker evidence that
+the resulting model can plan from them. It motivates a controlled reinforcement
+comparison with fresh trajectories; it does not already supply that result.
