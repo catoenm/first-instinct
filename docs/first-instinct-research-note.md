@@ -1,8 +1,7 @@
 # First Instinct: a decision interface is the beginning
 
-*Public-facing draft, September 18, 2026. The six-arm outcome-training study and
-the new tool-transfer evaluation are ongoing; this note reports completed work
-only.*
+*Public-facing draft, September 18, 2026. The six-arm outcome-training study is
+ongoing; this note reports completed work only.*
 
 Letting a language model answer new questions from supplied choices is
 straightforward. Making its probabilities useful for decisions across
@@ -89,6 +88,18 @@ and the stated continuation can make mistakes. These probabilities describe
 that continuation; a controller that repeatedly changes its plan needs its own
 executed evaluation. This is verified data from one authored mechanism, not a
 learned calibration result or a realistic estimate of production priors.
+
+A [frozen transfer check](toolsandbox-transfer-supervised-results.md) on this
+mechanism exposed a substantial gap. Using the current supervised model's
+forecasts to choose an action selected **stop at all 48 initial states**, although
+stopping was optimal at only **17**. The resulting expected regret was **20.4
+research credits**, identical to always stopping. All 720 probability questions
+were retained and independently rescored. Those questions share correlated
+contexts; they are not 720 independent tasks. This evaluates choices implied by
+forecasts under the declared continuation, not a new executed policy or the
+model's direct action answers. The outcome-trained checkpoints have yet to face
+this same check. A correct interface and good answers on simpler fixtures did
+not establish useful transfer here.
 
 There is also a concrete efficiency result. Reusing a shared state prefix for
 eight independent questions took **3.50 seconds versus 12.07 seconds for an

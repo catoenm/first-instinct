@@ -1,0 +1,1467 @@
+{
+  "accounting": {
+    "action_forecasts": 432,
+    "contexts": 144,
+    "forecast_model_questions_by_context": {
+      "phone": {
+        "cost": 192,
+        "outcome": 288
+      },
+      "root_state": {
+        "cost": 96,
+        "outcome": 144
+      }
+    },
+    "forecast_model_questions_by_kind": {
+      "cost": 288,
+      "outcome": 432
+    },
+    "marginal_questions": 864,
+    "model_questions": 720,
+    "roots": 48,
+    "singleton_cost_bypasses": 144
+  },
+  "analyzer_sha256": "e91dbbd1baa97e6435807478dfde9f078971b8285e997b0c6e4b615f7b0b0091",
+  "available_provenance": {
+    "adapter": {
+      "files": 4,
+      "status": "verified"
+    },
+    "runtime_note": "The inference package versions are frozen historical provenance. Read-only rescoring does not require model libraries or claim the current environment performed inference.",
+    "runtime_versions": {
+      "huggingface-hub": {
+        "analysis_installed_version": "1.31.0",
+        "recorded_inference_version": "1.31.0"
+      },
+      "peft": {
+        "analysis_installed_version": "0.21.0",
+        "recorded_inference_version": "0.21.0"
+      },
+      "safetensors": {
+        "analysis_installed_version": "0.8.0",
+        "recorded_inference_version": "0.8.0"
+      },
+      "tokenizers": {
+        "analysis_installed_version": "0.23.2",
+        "recorded_inference_version": "0.23.2"
+      },
+      "torch": {
+        "analysis_installed_version": "2.14.0",
+        "recorded_inference_version": "2.14.0"
+      },
+      "transformers": {
+        "analysis_installed_version": "5.17.0",
+        "recorded_inference_version": "5.17.0"
+      }
+    },
+    "tokenizer": {
+      "files": 5,
+      "status": "verified"
+    }
+  },
+  "by_collection_split": {
+    "test": {
+      "decisions": {
+        "equal_context_macro_secondary": {
+          "cheap_continuation": {
+            "expected_regret": 14.787326388888888,
+            "expected_value": 3.101909722222222,
+            "optimal_action_fraction": 0.4583333333333333
+          },
+          "complete_query": {
+            "expected_regret": 55.07552083333333,
+            "expected_value": -37.18628472222222,
+            "optimal_action_fraction": 0.29166666666666663
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 17.88923611111111,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "stop": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "uniform_action": {
+            "expected_regret": 36.352546296296296,
+            "expected_value": -18.463310185185186,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 83.6926265807546,
+            "absolute_future_cost_error": 17.01152945520503,
+            "absolute_terminal_utility_error": 80.31141334131487
+          }
+        },
+        "phone_prior_weighted": {
+          "cheap_continuation": {
+            "expected_regret": 16.3046875,
+            "expected_value": 8.6328125,
+            "optimal_action_fraction": 0.53125
+          },
+          "complete_query": {
+            "expected_regret": 58.3671875,
+            "expected_value": -33.4296875,
+            "optimal_action_fraction": 0.203125
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 24.9375,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "stop": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "uniform_action": {
+            "expected_regret": 40.286458333333336,
+            "expected_value": -15.348958333333334,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 84.67426412098575,
+            "absolute_future_cost_error": 16.653104348863657,
+            "absolute_terminal_utility_error": 81.81670934122242
+          }
+        },
+        "root_state": {
+          "cheap_continuation": {
+            "expected_regret": 9.1796875,
+            "expected_value": -2.6171875,
+            "optimal_action_fraction": 0.375
+          },
+          "complete_query": {
+            "expected_regret": 51.2421875,
+            "expected_value": -44.6796875,
+            "optimal_action_fraction": 0.4375
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 6.5625,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "stop": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "uniform_action": {
+            "expected_regret": 29.411458333333332,
+            "expected_value": -22.848958333333332,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 80.03339487958874,
+            "absolute_future_cost_error": 17.563883752193455,
+            "absolute_terminal_utility_error": 75.66612708025787
+          }
+        }
+      },
+      "forecasts": {
+        "equal_context_macro_secondary": {
+          "cost": {
+            "exact_expected_brier": 1.0138727055210455,
+            "exact_expected_clipped_log_loss": 3.382766351544119,
+            "excess_expected_brier": 0.5357940018173417,
+            "max_absolute_probability_error": 0.5785047031942263,
+            "modal_accuracy": 0.03125,
+            "oracle_expected_brier": 0.47807870370370364,
+            "oracle_expected_clipped_log_loss": 0.7337825362980154,
+            "per_option_mse": 0.03870853127040812,
+            "summed_squared_probability_error": 0.5357940018173417,
+            "total_variation": 0.8681866263517197
+          },
+          "outcome": {
+            "exact_expected_brier": 1.5406917380139167,
+            "exact_expected_clipped_log_loss": 4.9994876800989765,
+            "excess_expected_brier": 1.0773699787546573,
+            "max_absolute_probability_error": 0.782464476896065,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.4633217592592592,
+            "oracle_expected_clipped_log_loss": 0.6774454914164055,
+            "per_option_mse": 0.13467124734433217,
+            "summed_squared_probability_error": 1.0773699787546573,
+            "total_variation": 0.8853904082932583
+          }
+        },
+        "phone_prior_weighted": {
+          "cost": {
+            "exact_expected_brier": 0.9917443971051235,
+            "exact_expected_clipped_log_loss": 3.2140948064808246,
+            "excess_expected_brier": 0.5625777304384569,
+            "max_absolute_probability_error": 0.6084389397146879,
+            "modal_accuracy": 0.05078125,
+            "oracle_expected_brier": 0.4291666666666667,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.040223309514227805,
+            "summed_squared_probability_error": 0.5625777304384569,
+            "total_variation": 0.8825087152745255
+          },
+          "outcome": {
+            "exact_expected_brier": 1.5164973973897355,
+            "exact_expected_clipped_log_loss": 5.407448855202206,
+            "excess_expected_brier": 1.0873307307230689,
+            "max_absolute_probability_error": 0.7679072701897287,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.1359163413403836,
+            "summed_squared_probability_error": 1.0873307307230689,
+            "total_variation": 0.8849518731328772
+          }
+        },
+        "root_state": {
+          "cost": {
+            "exact_expected_brier": 1.056911299870331,
+            "exact_expected_clipped_log_loss": 3.710210837938884,
+            "excess_expected_brier": 0.47878629987033094,
+            "max_absolute_probability_error": 0.5119530100782868,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692479,
+            "per_option_mse": 0.0353701868541101,
+            "summed_squared_probability_error": 0.47878629987033094,
+            "total_variation": 0.8401642266508134
+          },
+          "outcome": {
+            "exact_expected_brier": 1.5810435438585326,
+            "exact_expected_clipped_log_loss": 4.1526034756229055,
+            "excess_expected_brier": 1.047189377191866,
+            "max_absolute_probability_error": 0.8094587412973244,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.5338541666666666,
+            "oracle_expected_clipped_log_loss": 0.7960462805244183,
+            "per_option_mse": 0.13089867214898326,
+            "summed_squared_probability_error": 1.047189377191866,
+            "total_variation": 0.8808730962009577
+          }
+        }
+      },
+      "roots": 16
+    },
+    "train": {
+      "decisions": {
+        "equal_context_macro_secondary": {
+          "cheap_continuation": {
+            "expected_regret": 67.3376736111111,
+            "expected_value": -2.469618055555554,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "complete_query": {
+            "expected_regret": 77.01475694444444,
+            "expected_value": -12.146701388888888,
+            "optimal_action_fraction": 0.10416666666666666
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 64.86805555555556,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 21.270833333333332,
+            "expected_value": 43.59722222222222,
+            "optimal_action_fraction": 0.5625
+          },
+          "stop": {
+            "expected_regret": 21.270833333333332,
+            "expected_value": 43.59722222222222,
+            "optimal_action_fraction": 0.5625
+          },
+          "uniform_action": {
+            "expected_regret": 55.207754629629626,
+            "expected_value": 9.660300925925926,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 54.54625386898319,
+            "absolute_future_cost_error": 16.69308017739914,
+            "absolute_terminal_utility_error": 48.110448363652075
+          }
+        },
+        "phone_prior_weighted": {
+          "cheap_continuation": {
+            "expected_regret": 68.234375,
+            "expected_value": 5.4765625,
+            "optimal_action_fraction": 0.53125
+          },
+          "complete_query": {
+            "expected_regret": 81.296875,
+            "expected_value": -7.5859375,
+            "optimal_action_fraction": 0.0
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 73.7109375,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 30.5859375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.46875
+          },
+          "stop": {
+            "expected_regret": 30.5859375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.46875
+          },
+          "uniform_action": {
+            "expected_regret": 60.0390625,
+            "expected_value": 13.671875,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 56.995198303352176,
+            "absolute_future_cost_error": 16.235055475254434,
+            "absolute_terminal_utility_error": 49.38975365805769
+          }
+        },
+        "root_state": {
+          "cheap_continuation": {
+            "expected_regret": 54.4921875,
+            "expected_value": -5.7734375,
+            "optimal_action_fraction": 0.0
+          },
+          "complete_query": {
+            "expected_regret": 67.5546875,
+            "expected_value": -18.8359375,
+            "optimal_action_fraction": 0.3125
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 48.71875,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 5.59375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.6875
+          },
+          "stop": {
+            "expected_regret": 5.59375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.6875
+          },
+          "uniform_action": {
+            "expected_regret": 42.546875,
+            "expected_value": 6.171875,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 46.99364903407695,
+            "absolute_future_cost_error": 17.52546839178831,
+            "absolute_terminal_utility_error": 42.42998449873994
+          }
+        }
+      },
+      "forecasts": {
+        "equal_context_macro_secondary": {
+          "cost": {
+            "exact_expected_brier": 1.0007846603740678,
+            "exact_expected_clipped_log_loss": 3.0975595848371924,
+            "excess_expected_brier": 0.522705956670364,
+            "max_absolute_probability_error": 0.5621950657323598,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.47807870370370364,
+            "oracle_expected_clipped_log_loss": 0.7337825362980154,
+            "per_option_mse": 0.0382069050514836,
+            "summed_squared_probability_error": 0.522705956670364,
+            "total_variation": 0.8605424881401025
+          },
+          "outcome": {
+            "exact_expected_brier": 0.8701425933030121,
+            "exact_expected_clipped_log_loss": 2.452566184219877,
+            "excess_expected_brier": 0.375570834043753,
+            "max_absolute_probability_error": 0.41466363571084064,
+            "modal_accuracy": 0.7222222222222222,
+            "oracle_expected_brier": 0.4945717592592592,
+            "oracle_expected_clipped_log_loss": 0.7730789537505167,
+            "per_option_mse": 0.04694635425546913,
+            "summed_squared_probability_error": 0.375570834043753,
+            "total_variation": 0.44976285104009917
+          }
+        },
+        "phone_prior_weighted": {
+          "cost": {
+            "exact_expected_brier": 0.9769498117807647,
+            "exact_expected_clipped_log_loss": 2.9347252462890325,
+            "excess_expected_brier": 0.547783145114098,
+            "max_absolute_probability_error": 0.5976308291101304,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.4291666666666667,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.03955192981248295,
+            "summed_squared_probability_error": 0.547783145114098,
+            "total_variation": 0.867598343483678
+          },
+          "outcome": {
+            "exact_expected_brier": 0.8987031132053233,
+            "exact_expected_clipped_log_loss": 2.6739751914079046,
+            "excess_expected_brier": 0.46953644653865667,
+            "max_absolute_probability_error": 0.47498838300968294,
+            "modal_accuracy": 0.6354166666666666,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.058692055817332084,
+            "summed_squared_probability_error": 0.46953644653865667,
+            "total_variation": 0.4932213203094306
+          }
+        },
+        "root_state": {
+          "cost": {
+            "exact_expected_brier": 1.0511481383657881,
+            "exact_expected_clipped_log_loss": 3.442394722327261,
+            "excess_expected_brier": 0.47302313836578824,
+            "max_absolute_probability_error": 0.48777707635599654,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692479,
+            "per_option_mse": 0.03557485163781775,
+            "summed_squared_probability_error": 0.47302313836578824,
+            "total_variation": 0.8497911557169573
+          },
+          "outcome": {
+            "exact_expected_brier": 0.7934266963589923,
+            "exact_expected_clipped_log_loss": 1.92942116107698,
+            "excess_expected_brier": 0.16582252969232567,
+            "max_absolute_probability_error": 0.2819142545437595,
+            "modal_accuracy": 0.9166666666666666,
+            "oracle_expected_brier": 0.6276041666666666,
+            "oracle_expected_clipped_log_loss": 1.082946667526752,
+            "per_option_mse": 0.020727816211540708,
+            "summed_squared_probability_error": 0.16582252969232567,
+            "total_variation": 0.34845458898962534
+          }
+        }
+      },
+      "roots": 16
+    },
+    "validation": {
+      "decisions": {
+        "equal_context_macro_secondary": {
+          "cheap_continuation": {
+            "expected_regret": 14.787326388888888,
+            "expected_value": 3.101909722222222,
+            "optimal_action_fraction": 0.4583333333333333
+          },
+          "complete_query": {
+            "expected_regret": 55.07552083333333,
+            "expected_value": -37.18628472222222,
+            "optimal_action_fraction": 0.29166666666666663
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 17.88923611111111,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "stop": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "uniform_action": {
+            "expected_regret": 36.352546296296296,
+            "expected_value": -18.463310185185186,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 85.07260357217494,
+            "absolute_future_cost_error": 17.071790377756834,
+            "absolute_terminal_utility_error": 81.40626135593392
+          }
+        },
+        "phone_prior_weighted": {
+          "cheap_continuation": {
+            "expected_regret": 16.3046875,
+            "expected_value": 8.6328125,
+            "optimal_action_fraction": 0.53125
+          },
+          "complete_query": {
+            "expected_regret": 58.3671875,
+            "expected_value": -33.4296875,
+            "optimal_action_fraction": 0.203125
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 24.9375,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "stop": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "uniform_action": {
+            "expected_regret": 40.286458333333336,
+            "expected_value": -15.348958333333334,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 86.17465602049128,
+            "absolute_future_cost_error": 16.599924417758302,
+            "absolute_terminal_utility_error": 83.0205790745515
+          }
+        },
+        "root_state": {
+          "cheap_continuation": {
+            "expected_regret": 9.1796875,
+            "expected_value": -2.6171875,
+            "optimal_action_fraction": 0.375
+          },
+          "complete_query": {
+            "expected_regret": 51.2421875,
+            "expected_value": -44.6796875,
+            "optimal_action_fraction": 0.4375
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 6.5625,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "stop": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "uniform_action": {
+            "expected_regret": 29.411458333333332,
+            "expected_value": -22.848958333333332,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 81.08511525158488,
+            "absolute_future_cost_error": 17.864115139743564,
+            "absolute_terminal_utility_error": 76.47350280099393
+          }
+        }
+      },
+      "forecasts": {
+        "equal_context_macro_secondary": {
+          "cost": {
+            "exact_expected_brier": 1.0147317476507787,
+            "exact_expected_clipped_log_loss": 3.4016910203804596,
+            "excess_expected_brier": 0.5366530439470749,
+            "max_absolute_probability_error": 0.5788023807519089,
+            "modal_accuracy": 0.03125,
+            "oracle_expected_brier": 0.47807870370370364,
+            "oracle_expected_clipped_log_loss": 0.7337825362980154,
+            "per_option_mse": 0.03877700837896105,
+            "summed_squared_probability_error": 0.5366530439470749,
+            "total_variation": 0.8686222123584836
+          },
+          "outcome": {
+            "exact_expected_brier": 1.4448722390933646,
+            "exact_expected_clipped_log_loss": 5.453084744364919,
+            "excess_expected_brier": 0.9815504798341053,
+            "max_absolute_probability_error": 0.7285018919309044,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.4633217592592592,
+            "oracle_expected_clipped_log_loss": 0.6774454914164055,
+            "per_option_mse": 0.12269380997926316,
+            "summed_squared_probability_error": 0.9815504798341053,
+            "total_variation": 0.8518193549459484
+          }
+        },
+        "phone_prior_weighted": {
+          "cost": {
+            "exact_expected_brier": 0.991714440616536,
+            "exact_expected_clipped_log_loss": 3.217709054352669,
+            "excess_expected_brier": 0.5625477739498694,
+            "max_absolute_probability_error": 0.6084125484649121,
+            "modal_accuracy": 0.05078125,
+            "oracle_expected_brier": 0.4291666666666667,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.04021716298973752,
+            "summed_squared_probability_error": 0.5625477739498694,
+            "total_variation": 0.8823668132376952
+          },
+          "outcome": {
+            "exact_expected_brier": 1.461367495297129,
+            "exact_expected_clipped_log_loss": 6.292037071165236,
+            "excess_expected_brier": 1.0322008286304623,
+            "max_absolute_probability_error": 0.7378077780086489,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.12902510357880778,
+            "summed_squared_probability_error": 1.0322008286304623,
+            "total_variation": 0.8672416834383748
+          }
+        },
+        "root_state": {
+          "cost": {
+            "exact_expected_brier": 1.0593677369146537,
+            "exact_expected_clipped_log_loss": 3.757899039006558,
+            "excess_expected_brier": 0.4812427369146537,
+            "max_absolute_probability_error": 0.5128259001066908,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692479,
+            "per_option_mse": 0.035572963312122105,
+            "summed_squared_probability_error": 0.4812427369146537,
+            "total_variation": 0.8416261261063482
+          },
+          "outcome": {
+            "exact_expected_brier": 1.398595207058147,
+            "exact_expected_clipped_log_loss": 3.722595787389891,
+            "excess_expected_brier": 0.8647410403914804,
+            "max_absolute_probability_error": 0.7046499041219552,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.5338541666666666,
+            "oracle_expected_clipped_log_loss": 0.7960462805244183,
+            "per_option_mse": 0.10809263004893505,
+            "summed_squared_probability_error": 0.8647410403914804,
+            "total_variation": 0.8133852748445254
+          }
+        }
+      },
+      "roots": 16
+    }
+  },
+  "by_operation": {
+    "create": {
+      "decisions": {
+        "equal_context_macro_secondary": {
+          "cheap_continuation": {
+            "expected_regret": 67.3376736111111,
+            "expected_value": -2.469618055555554,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "complete_query": {
+            "expected_regret": 77.01475694444444,
+            "expected_value": -12.146701388888888,
+            "optimal_action_fraction": 0.10416666666666666
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 64.86805555555556,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 21.270833333333332,
+            "expected_value": 43.59722222222222,
+            "optimal_action_fraction": 0.5625
+          },
+          "stop": {
+            "expected_regret": 21.270833333333332,
+            "expected_value": 43.59722222222222,
+            "optimal_action_fraction": 0.5625
+          },
+          "uniform_action": {
+            "expected_regret": 55.207754629629626,
+            "expected_value": 9.660300925925926,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 54.54625386898319,
+            "absolute_future_cost_error": 16.69308017739914,
+            "absolute_terminal_utility_error": 48.110448363652075
+          }
+        },
+        "phone_prior_weighted": {
+          "cheap_continuation": {
+            "expected_regret": 68.234375,
+            "expected_value": 5.4765625,
+            "optimal_action_fraction": 0.53125
+          },
+          "complete_query": {
+            "expected_regret": 81.296875,
+            "expected_value": -7.5859375,
+            "optimal_action_fraction": 0.0
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 73.7109375,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 30.5859375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.46875
+          },
+          "stop": {
+            "expected_regret": 30.5859375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.46875
+          },
+          "uniform_action": {
+            "expected_regret": 60.0390625,
+            "expected_value": 13.671875,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 56.995198303352176,
+            "absolute_future_cost_error": 16.235055475254434,
+            "absolute_terminal_utility_error": 49.38975365805769
+          }
+        },
+        "root_state": {
+          "cheap_continuation": {
+            "expected_regret": 54.4921875,
+            "expected_value": -5.7734375,
+            "optimal_action_fraction": 0.0
+          },
+          "complete_query": {
+            "expected_regret": 67.5546875,
+            "expected_value": -18.8359375,
+            "optimal_action_fraction": 0.3125
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 48.71875,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 5.59375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.6875
+          },
+          "stop": {
+            "expected_regret": 5.59375,
+            "expected_value": 43.125,
+            "optimal_action_fraction": 0.6875
+          },
+          "uniform_action": {
+            "expected_regret": 42.546875,
+            "expected_value": 6.171875,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 46.99364903407695,
+            "absolute_future_cost_error": 17.52546839178831,
+            "absolute_terminal_utility_error": 42.42998449873994
+          }
+        }
+      },
+      "forecasts": {
+        "equal_context_macro_secondary": {
+          "cost": {
+            "exact_expected_brier": 1.0007846603740678,
+            "exact_expected_clipped_log_loss": 3.0975595848371924,
+            "excess_expected_brier": 0.522705956670364,
+            "max_absolute_probability_error": 0.5621950657323598,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.47807870370370364,
+            "oracle_expected_clipped_log_loss": 0.7337825362980154,
+            "per_option_mse": 0.0382069050514836,
+            "summed_squared_probability_error": 0.522705956670364,
+            "total_variation": 0.8605424881401025
+          },
+          "outcome": {
+            "exact_expected_brier": 0.8701425933030121,
+            "exact_expected_clipped_log_loss": 2.452566184219877,
+            "excess_expected_brier": 0.375570834043753,
+            "max_absolute_probability_error": 0.41466363571084064,
+            "modal_accuracy": 0.7222222222222222,
+            "oracle_expected_brier": 0.4945717592592592,
+            "oracle_expected_clipped_log_loss": 0.7730789537505167,
+            "per_option_mse": 0.04694635425546913,
+            "summed_squared_probability_error": 0.375570834043753,
+            "total_variation": 0.44976285104009917
+          }
+        },
+        "phone_prior_weighted": {
+          "cost": {
+            "exact_expected_brier": 0.9769498117807647,
+            "exact_expected_clipped_log_loss": 2.9347252462890325,
+            "excess_expected_brier": 0.547783145114098,
+            "max_absolute_probability_error": 0.5976308291101304,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.4291666666666667,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.03955192981248295,
+            "summed_squared_probability_error": 0.547783145114098,
+            "total_variation": 0.867598343483678
+          },
+          "outcome": {
+            "exact_expected_brier": 0.8987031132053233,
+            "exact_expected_clipped_log_loss": 2.6739751914079046,
+            "excess_expected_brier": 0.46953644653865667,
+            "max_absolute_probability_error": 0.47498838300968294,
+            "modal_accuracy": 0.6354166666666666,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.058692055817332084,
+            "summed_squared_probability_error": 0.46953644653865667,
+            "total_variation": 0.4932213203094306
+          }
+        },
+        "root_state": {
+          "cost": {
+            "exact_expected_brier": 1.0511481383657881,
+            "exact_expected_clipped_log_loss": 3.442394722327261,
+            "excess_expected_brier": 0.47302313836578824,
+            "max_absolute_probability_error": 0.48777707635599654,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692479,
+            "per_option_mse": 0.03557485163781775,
+            "summed_squared_probability_error": 0.47302313836578824,
+            "total_variation": 0.8497911557169573
+          },
+          "outcome": {
+            "exact_expected_brier": 0.7934266963589923,
+            "exact_expected_clipped_log_loss": 1.92942116107698,
+            "excess_expected_brier": 0.16582252969232567,
+            "max_absolute_probability_error": 0.2819142545437595,
+            "modal_accuracy": 0.9166666666666666,
+            "oracle_expected_brier": 0.6276041666666666,
+            "oracle_expected_clipped_log_loss": 1.082946667526752,
+            "per_option_mse": 0.020727816211540708,
+            "summed_squared_probability_error": 0.16582252969232567,
+            "total_variation": 0.34845458898962534
+          }
+        }
+      },
+      "roots": 16
+    },
+    "delete": {
+      "decisions": {
+        "equal_context_macro_secondary": {
+          "cheap_continuation": {
+            "expected_regret": 14.787326388888888,
+            "expected_value": 3.101909722222222,
+            "optimal_action_fraction": 0.4583333333333333
+          },
+          "complete_query": {
+            "expected_regret": 55.07552083333333,
+            "expected_value": -37.18628472222222,
+            "optimal_action_fraction": 0.29166666666666663
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 17.88923611111111,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "stop": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "uniform_action": {
+            "expected_regret": 36.352546296296296,
+            "expected_value": -18.463310185185186,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 83.6926265807546,
+            "absolute_future_cost_error": 17.01152945520503,
+            "absolute_terminal_utility_error": 80.31141334131487
+          }
+        },
+        "phone_prior_weighted": {
+          "cheap_continuation": {
+            "expected_regret": 16.3046875,
+            "expected_value": 8.6328125,
+            "optimal_action_fraction": 0.53125
+          },
+          "complete_query": {
+            "expected_regret": 58.3671875,
+            "expected_value": -33.4296875,
+            "optimal_action_fraction": 0.203125
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 24.9375,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "stop": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "uniform_action": {
+            "expected_regret": 40.286458333333336,
+            "expected_value": -15.348958333333334,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 84.67426412098575,
+            "absolute_future_cost_error": 16.653104348863657,
+            "absolute_terminal_utility_error": 81.81670934122242
+          }
+        },
+        "root_state": {
+          "cheap_continuation": {
+            "expected_regret": 9.1796875,
+            "expected_value": -2.6171875,
+            "optimal_action_fraction": 0.375
+          },
+          "complete_query": {
+            "expected_regret": 51.2421875,
+            "expected_value": -44.6796875,
+            "optimal_action_fraction": 0.4375
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 6.5625,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "stop": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "uniform_action": {
+            "expected_regret": 29.411458333333332,
+            "expected_value": -22.848958333333332,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 80.03339487958874,
+            "absolute_future_cost_error": 17.563883752193455,
+            "absolute_terminal_utility_error": 75.66612708025787
+          }
+        }
+      },
+      "forecasts": {
+        "equal_context_macro_secondary": {
+          "cost": {
+            "exact_expected_brier": 1.0138727055210455,
+            "exact_expected_clipped_log_loss": 3.382766351544119,
+            "excess_expected_brier": 0.5357940018173417,
+            "max_absolute_probability_error": 0.5785047031942263,
+            "modal_accuracy": 0.03125,
+            "oracle_expected_brier": 0.47807870370370364,
+            "oracle_expected_clipped_log_loss": 0.7337825362980154,
+            "per_option_mse": 0.03870853127040812,
+            "summed_squared_probability_error": 0.5357940018173417,
+            "total_variation": 0.8681866263517197
+          },
+          "outcome": {
+            "exact_expected_brier": 1.5406917380139167,
+            "exact_expected_clipped_log_loss": 4.9994876800989765,
+            "excess_expected_brier": 1.0773699787546573,
+            "max_absolute_probability_error": 0.782464476896065,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.4633217592592592,
+            "oracle_expected_clipped_log_loss": 0.6774454914164055,
+            "per_option_mse": 0.13467124734433217,
+            "summed_squared_probability_error": 1.0773699787546573,
+            "total_variation": 0.8853904082932583
+          }
+        },
+        "phone_prior_weighted": {
+          "cost": {
+            "exact_expected_brier": 0.9917443971051235,
+            "exact_expected_clipped_log_loss": 3.2140948064808246,
+            "excess_expected_brier": 0.5625777304384569,
+            "max_absolute_probability_error": 0.6084389397146879,
+            "modal_accuracy": 0.05078125,
+            "oracle_expected_brier": 0.4291666666666667,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.040223309514227805,
+            "summed_squared_probability_error": 0.5625777304384569,
+            "total_variation": 0.8825087152745255
+          },
+          "outcome": {
+            "exact_expected_brier": 1.5164973973897355,
+            "exact_expected_clipped_log_loss": 5.407448855202206,
+            "excess_expected_brier": 1.0873307307230689,
+            "max_absolute_probability_error": 0.7679072701897287,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.1359163413403836,
+            "summed_squared_probability_error": 1.0873307307230689,
+            "total_variation": 0.8849518731328772
+          }
+        },
+        "root_state": {
+          "cost": {
+            "exact_expected_brier": 1.056911299870331,
+            "exact_expected_clipped_log_loss": 3.710210837938884,
+            "excess_expected_brier": 0.47878629987033094,
+            "max_absolute_probability_error": 0.5119530100782868,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692479,
+            "per_option_mse": 0.0353701868541101,
+            "summed_squared_probability_error": 0.47878629987033094,
+            "total_variation": 0.8401642266508134
+          },
+          "outcome": {
+            "exact_expected_brier": 1.5810435438585326,
+            "exact_expected_clipped_log_loss": 4.1526034756229055,
+            "excess_expected_brier": 1.047189377191866,
+            "max_absolute_probability_error": 0.8094587412973244,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.5338541666666666,
+            "oracle_expected_clipped_log_loss": 0.7960462805244183,
+            "per_option_mse": 0.13089867214898326,
+            "summed_squared_probability_error": 1.047189377191866,
+            "total_variation": 0.8808730962009577
+          }
+        }
+      },
+      "roots": 16
+    },
+    "update": {
+      "decisions": {
+        "equal_context_macro_secondary": {
+          "cheap_continuation": {
+            "expected_regret": 14.787326388888888,
+            "expected_value": 3.101909722222222,
+            "optimal_action_fraction": 0.4583333333333333
+          },
+          "complete_query": {
+            "expected_regret": 55.07552083333333,
+            "expected_value": -37.18628472222222,
+            "optimal_action_fraction": 0.29166666666666663
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 17.88923611111111,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "stop": {
+            "expected_regret": 39.19479166666667,
+            "expected_value": -21.305555555555557,
+            "optimal_action_fraction": 0.25
+          },
+          "uniform_action": {
+            "expected_regret": 36.352546296296296,
+            "expected_value": -18.463310185185186,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 85.07260357217494,
+            "absolute_future_cost_error": 17.071790377756834,
+            "absolute_terminal_utility_error": 81.40626135593392
+          }
+        },
+        "phone_prior_weighted": {
+          "cheap_continuation": {
+            "expected_regret": 16.3046875,
+            "expected_value": 8.6328125,
+            "optimal_action_fraction": 0.53125
+          },
+          "complete_query": {
+            "expected_regret": 58.3671875,
+            "expected_value": -33.4296875,
+            "optimal_action_fraction": 0.203125
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 24.9375,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "stop": {
+            "expected_regret": 46.1875,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.265625
+          },
+          "uniform_action": {
+            "expected_regret": 40.286458333333336,
+            "expected_value": -15.348958333333334,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 86.17465602049128,
+            "absolute_future_cost_error": 16.599924417758302,
+            "absolute_terminal_utility_error": 83.0205790745515
+          }
+        },
+        "root_state": {
+          "cheap_continuation": {
+            "expected_regret": 9.1796875,
+            "expected_value": -2.6171875,
+            "optimal_action_fraction": 0.375
+          },
+          "complete_query": {
+            "expected_regret": 51.2421875,
+            "expected_value": -44.6796875,
+            "optimal_action_fraction": 0.4375
+          },
+          "exact_menu_optimum": {
+            "expected_regret": 0.0,
+            "expected_value": 6.5625,
+            "optimal_action_fraction": 1.0
+          },
+          "forecast_controller": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "stop": {
+            "expected_regret": 27.8125,
+            "expected_value": -21.25,
+            "optimal_action_fraction": 0.1875
+          },
+          "uniform_action": {
+            "expected_regret": 29.411458333333332,
+            "expected_value": -22.848958333333332,
+            "optimal_action_fraction": 0.3333333333333333
+          },
+          "value_errors": {
+            "absolute_action_utility_error": 81.08511525158488,
+            "absolute_future_cost_error": 17.864115139743564,
+            "absolute_terminal_utility_error": 76.47350280099393
+          }
+        }
+      },
+      "forecasts": {
+        "equal_context_macro_secondary": {
+          "cost": {
+            "exact_expected_brier": 1.0147317476507787,
+            "exact_expected_clipped_log_loss": 3.4016910203804596,
+            "excess_expected_brier": 0.5366530439470749,
+            "max_absolute_probability_error": 0.5788023807519089,
+            "modal_accuracy": 0.03125,
+            "oracle_expected_brier": 0.47807870370370364,
+            "oracle_expected_clipped_log_loss": 0.7337825362980154,
+            "per_option_mse": 0.03877700837896105,
+            "summed_squared_probability_error": 0.5366530439470749,
+            "total_variation": 0.8686222123584836
+          },
+          "outcome": {
+            "exact_expected_brier": 1.4448722390933646,
+            "exact_expected_clipped_log_loss": 5.453084744364919,
+            "excess_expected_brier": 0.9815504798341053,
+            "max_absolute_probability_error": 0.7285018919309044,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.4633217592592592,
+            "oracle_expected_clipped_log_loss": 0.6774454914164055,
+            "per_option_mse": 0.12269380997926316,
+            "summed_squared_probability_error": 0.9815504798341053,
+            "total_variation": 0.8518193549459484
+          }
+        },
+        "phone_prior_weighted": {
+          "cost": {
+            "exact_expected_brier": 0.991714440616536,
+            "exact_expected_clipped_log_loss": 3.217709054352669,
+            "excess_expected_brier": 0.5625477739498694,
+            "max_absolute_probability_error": 0.6084125484649121,
+            "modal_accuracy": 0.05078125,
+            "oracle_expected_brier": 0.4291666666666667,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.04021716298973752,
+            "summed_squared_probability_error": 0.5625477739498694,
+            "total_variation": 0.8823668132376952
+          },
+          "outcome": {
+            "exact_expected_brier": 1.461367495297129,
+            "exact_expected_clipped_log_loss": 6.292037071165236,
+            "excess_expected_brier": 1.0322008286304623,
+            "max_absolute_probability_error": 0.7378077780086489,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.42916666666666664,
+            "oracle_expected_clipped_log_loss": 0.6192856436972255,
+            "per_option_mse": 0.12902510357880778,
+            "summed_squared_probability_error": 1.0322008286304623,
+            "total_variation": 0.8672416834383748
+          }
+        },
+        "root_state": {
+          "cost": {
+            "exact_expected_brier": 1.0593677369146537,
+            "exact_expected_clipped_log_loss": 3.757899039006558,
+            "excess_expected_brier": 0.4812427369146537,
+            "max_absolute_probability_error": 0.5128259001066908,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.578125,
+            "oracle_expected_clipped_log_loss": 0.9650574151692479,
+            "per_option_mse": 0.035572963312122105,
+            "summed_squared_probability_error": 0.4812427369146537,
+            "total_variation": 0.8416261261063482
+          },
+          "outcome": {
+            "exact_expected_brier": 1.398595207058147,
+            "exact_expected_clipped_log_loss": 3.722595787389891,
+            "excess_expected_brier": 0.8647410403914804,
+            "max_absolute_probability_error": 0.7046499041219552,
+            "modal_accuracy": 0.0,
+            "oracle_expected_brier": 0.5338541666666666,
+            "oracle_expected_clipped_log_loss": 0.7960462805244183,
+            "per_option_mse": 0.10809263004893505,
+            "summed_squared_probability_error": 0.8647410403914804,
+            "total_variation": 0.8133852748445254
+          }
+        }
+      },
+      "roots": 16
+    }
+  },
+  "corpus_content_sha256": "b40fbc7150147f7e020ad10e4eb81aa16b7a43316681764ff9aebf151b171a5e",
+  "freeze_content_sha256": "5226aa9222813cea65b1ab5535ac92264ebecf21ace790d86e9eeb9600e4434b",
+  "freeze_sha256": "cd83e94da4d800cb2d793a03da3f138a95b4f12a70e5d43fba3708e6b49d4ae0",
+  "input_sha256": {
+    "results/attempts.jsonl": "a2423a8e8072397c56dcd09893712d9925b0c1bf460231377fcd756995c61746",
+    "results/metrics.json": "78c44c41c9603e84b929051933fff5ff6e715db90c490e2c1fdce9edb922059a",
+    "results/report.md": "41581b9f3aaf2aa8363024fbcde512008b4cc416516e84c3191dc444ddb0ce1c",
+    "results/responses.jsonl": "b7cf3d564dd33340888811f6c5d9aedb2431beca6e20d4f2b1b9e5e19143bbcd",
+    "results/run.json": "b585e07eebc6346a1959feb17a7e73612d6e5ce876882bc9e14054d78ca4d2a1"
+  },
+  "log_probability_floor": 1e-12,
+  "mapping_sha256": "8d6ffb8567fd580984004641a93a60527bd8dab291ee10497e3237c0bfbc79c4",
+  "model": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "model_seconds": 2429.265836581253,
+  "provenance_limit": "Frozen source and recorded identity plus available disk hashes, not an attestation of server-resident tensors.",
+  "schema": "toolsandbox-transfer-supervised-analysis-v1",
+  "scope": "No-training supplementary transfer diagnostic on one authored mechanism. Checkpoint locked before predictions; no tuning or promotion from this corpus.",
+  "seconds": 2431.8061577920016,
+  "status": "verified_complete",
+  "summary": {
+    "decisions": {
+      "equal_context_macro_secondary": {
+        "cheap_continuation": {
+          "expected_regret": 32.30410879629629,
+          "expected_value": 1.2447337962962965,
+          "optimal_action_fraction": 0.41666666666666663
+        },
+        "complete_query": {
+          "expected_regret": 62.38859953703703,
+          "expected_value": -28.83975694444444,
+          "optimal_action_fraction": 0.22916666666666666
+        },
+        "exact_menu_optimum": {
+          "expected_regret": 0.0,
+          "expected_value": 33.54884259259259,
+          "optimal_action_fraction": 1.0
+        },
+        "forecast_controller": {
+          "expected_regret": 33.22013888888888,
+          "expected_value": 0.3287037037037037,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "stop": {
+          "expected_regret": 33.22013888888888,
+          "expected_value": 0.3287037037037037,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "uniform_action": {
+          "expected_regret": 42.637615740740735,
+          "expected_value": -9.088773148148148,
+          "optimal_action_fraction": 0.3333333333333333
+        },
+        "value_errors": {
+          "absolute_action_utility_error": 74.43716134063757,
+          "absolute_future_cost_error": 16.925466670120333,
+          "absolute_terminal_utility_error": 69.94270768696695
+        }
+      },
+      "phone_prior_weighted": {
+        "cheap_continuation": {
+          "expected_regret": 33.61458333333333,
+          "expected_value": 7.580729166666666,
+          "optimal_action_fraction": 0.53125
+        },
+        "complete_query": {
+          "expected_regret": 66.01041666666666,
+          "expected_value": -24.815104166666668,
+          "optimal_action_fraction": 0.13541666666666666
+        },
+        "exact_menu_optimum": {
+          "expected_regret": 0.0,
+          "expected_value": 41.1953125,
+          "optimal_action_fraction": 1.0
+        },
+        "forecast_controller": {
+          "expected_regret": 40.986979166666664,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.3333333333333333
+        },
+        "stop": {
+          "expected_regret": 40.986979166666664,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.3333333333333333
+        },
+        "uniform_action": {
+          "expected_regret": 46.87065972222222,
+          "expected_value": -5.675347222222221,
+          "optimal_action_fraction": 0.3333333333333333
+        },
+        "value_errors": {
+          "absolute_action_utility_error": 75.94803948160973,
+          "absolute_future_cost_error": 16.496028080625464,
+          "absolute_terminal_utility_error": 71.40901402461053
+        }
+      },
+      "root_state": {
+        "cheap_continuation": {
+          "expected_regret": 24.283854166666664,
+          "expected_value": -3.669270833333333,
+          "optimal_action_fraction": 0.25
+        },
+        "complete_query": {
+          "expected_regret": 56.6796875,
+          "expected_value": -36.065104166666664,
+          "optimal_action_fraction": 0.3958333333333333
+        },
+        "exact_menu_optimum": {
+          "expected_regret": 0.0,
+          "expected_value": 20.614583333333332,
+          "optimal_action_fraction": 1.0
+        },
+        "forecast_controller": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "stop": {
+          "expected_regret": 20.40625,
+          "expected_value": 0.20833333333333437,
+          "optimal_action_fraction": 0.35416666666666663
+        },
+        "uniform_action": {
+          "expected_regret": 33.78993055555555,
+          "expected_value": -13.175347222222221,
+          "optimal_action_fraction": 0.3333333333333333
+        },
+        "value_errors": {
+          "absolute_action_utility_error": 69.37071972175019,
+          "absolute_future_cost_error": 17.651155761241775,
+          "absolute_terminal_utility_error": 64.8565381266639
+        }
+      }
+    },
+    "forecasts": {
+      "equal_context_macro_secondary": {
+        "cost": {
+          "exact_expected_brier": 1.0097963711819637,
+          "exact_expected_clipped_log_loss": 3.294005652253923,
+          "excess_expected_brier": 0.5317176674782602,
+          "max_absolute_probability_error": 0.573167383226165,
+          "modal_accuracy": 0.020833333333333332,
+          "oracle_expected_brier": 0.47807870370370364,
+          "oracle_expected_clipped_log_loss": 0.7337825362980153,
+          "per_option_mse": 0.03856414823361759,
+          "summed_squared_probability_error": 0.5317176674782602,
+          "total_variation": 0.8657837756167686
+        },
+        "outcome": {
+          "exact_expected_brier": 1.2852355234700976,
+          "exact_expected_clipped_log_loss": 4.301712869561257,
+          "excess_expected_brier": 0.8114970975441719,
+          "max_absolute_probability_error": 0.64187666817927,
+          "modal_accuracy": 0.24074074074074073,
+          "oracle_expected_brier": 0.47373842592592585,
+          "oracle_expected_clipped_log_loss": 0.7093233121944426,
+          "per_option_mse": 0.10143713719302148,
+          "summed_squared_probability_error": 0.8114970975441719,
+          "total_variation": 0.7289908714264353
+        }
+      },
+      "phone_prior_weighted": {
+        "cost": {
+          "exact_expected_brier": 0.9868028831674747,
+          "exact_expected_clipped_log_loss": 3.122176369040842,
+          "excess_expected_brier": 0.5576362165008081,
+          "max_absolute_probability_error": 0.6048274390965768,
+          "modal_accuracy": 0.033854166666666664,
+          "oracle_expected_brier": 0.42916666666666664,
+          "oracle_expected_clipped_log_loss": 0.6192856436972255,
+          "per_option_mse": 0.03999746743881609,
+          "summed_squared_probability_error": 0.5576362165008081,
+          "total_variation": 0.8774912906652995
+        },
+        "outcome": {
+          "exact_expected_brier": 1.2921893352973959,
+          "exact_expected_clipped_log_loss": 4.791153705925115,
+          "excess_expected_brier": 0.8630226686307293,
+          "max_absolute_probability_error": 0.6602344770693535,
+          "modal_accuracy": 0.21180555555555552,
+          "oracle_expected_brier": 0.42916666666666664,
+          "oracle_expected_clipped_log_loss": 0.6192856436972255,
+          "per_option_mse": 0.10787783357884116,
+          "summed_squared_probability_error": 0.8630226686307293,
+          "total_variation": 0.7484716256268942
+        }
+      },
+      "root_state": {
+        "cost": {
+          "exact_expected_brier": 1.0558090583835908,
+          "exact_expected_clipped_log_loss": 3.636834866424234,
+          "excess_expected_brier": 0.47768405838359096,
+          "max_absolute_probability_error": 0.5041853288469913,
+          "modal_accuracy": 0.0,
+          "oracle_expected_brier": 0.578125,
+          "oracle_expected_clipped_log_loss": 0.9650574151692478,
+          "per_option_mse": 0.03550600060134999,
+          "summed_squared_probability_error": 0.47768405838359096,
+          "total_variation": 0.8438605028247063
+        },
+        "outcome": {
+          "exact_expected_brier": 1.257688482425224,
+          "exact_expected_clipped_log_loss": 3.2682068080299254,
+          "excess_expected_brier": 0.6925843157585573,
+          "max_absolute_probability_error": 0.5986742999876797,
+          "modal_accuracy": 0.3055555555555555,
+          "oracle_expected_brier": 0.5651041666666666,
+          "oracle_expected_clipped_log_loss": 0.8916797428585295,
+          "per_option_mse": 0.08657303946981966,
+          "summed_squared_probability_error": 0.6925843157585573,
+          "total_variation": 0.6809043200117028
+        }
+      }
+    },
+    "roots": 48
+  }
+}

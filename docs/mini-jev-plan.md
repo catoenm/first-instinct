@@ -95,6 +95,15 @@ complete query changes the best action when its cost is low enough. These
 forecasts concern a declared continuation and an authored four-world prior.
 They establish a new data mechanism, not learned calibration or transfer.
 
+The [completed supervised transfer reference](toolsandbox-transfer-supervised-results.md)
+then asked all 720 nontrivial forecast questions on that mechanism. Its implied
+selector stopped at every initial state; stopping was optimal at 17 of 48 roots.
+The fixed [checkpoint comparison](toolsandbox-transfer-cohort-v1-protocol.md)
+will retain all outcome/reward/hybrid selected and latest roles, with no selection
+using this diagnostic. The [local executor](toolsandbox-transfer-execute-v1-protocol.md)
+and [read-only report](toolsandbox-transfer-report.md) preserve the same inputs
+and inference contract. They are implemented; that comparison has not run yet.
+
 The [measured shared-prefix prototype](shared-prefix-results.md) preserved
 same-layout answers while reducing eight-question serial latency from 12.69 to
 3.65 seconds locally. All versions missed one of eight questions. A subsequent

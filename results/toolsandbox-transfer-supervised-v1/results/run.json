@@ -1,0 +1,36 @@
+{
+  "adapter_files_sha256": {
+    "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+    "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+    "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472"
+  },
+  "attempted_model_calls": 720,
+  "batching": "Serial single-question loopback HTTP; no retries, input cache, or probability cache.",
+  "completed_at_unix": 1789719348.650377,
+  "expected_server_metadata": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "freeze_content_sha256": "5226aa9222813cea65b1ab5535ac92264ebecf21ace790d86e9eeb9600e4434b",
+  "freeze_sha256": "cd83e94da4d800cb2d793a03da3f138a95b4f12a70e5d43fba3708e6b49d4ae0",
+  "known_singletons": 144,
+  "model_calls_planned": 720,
+  "model_seconds": 2429.2658365812536,
+  "provenance_limit": "Reported server identity plus separately verified disk hashes; not an attestation of in-memory tensors.",
+  "question_mapping_sha256": "5ff7f2623140cccddf7da9549fa870377f989e3f7b478a5e60dcea56c163c454",
+  "received_model_responses": 720,
+  "schema": "toolsandbox-transfer-supervised-local-v1",
+  "scope": "No-training supplementary transfer diagnostic on one authored mechanism. Checkpoint locked before predictions; no tuning or promotion from this corpus.",
+  "seconds": 2431.8061577920016,
+  "started_at_unix": 1789716916.8764522,
+  "status": "complete",
+  "successful_model_calls": 720
+}
