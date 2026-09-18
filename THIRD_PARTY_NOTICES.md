@@ -73,3 +73,16 @@ Synthetic reference actions are not independently verified optimal actions.
 
 All source licenses continue to apply to adapted data. Original authored
 execution tasks are project code under MIT. Data manifests distinguish the two.
+# Software inspection corpus
+
+The `inspection_lab` experiment extracts and mutates functions from
+[TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) at commit
+`a381578994d545e44f26afabbd2303746a2dc358`. The upstream project is MIT licensed;
+its notice is retained in [licenses/TheAlgorithms-Python-MIT.txt](licenses/TheAlgorithms-Python-MIT.txt).
+Generated corpus archives contain derived source code, test excerpts and the
+upstream notice. They are separate from our own experiment code. Source paths,
+the pinned revision, input origins and execution receipts are preserved.
+
+The local execution image is the official Python image pinned by manifest digest
+in `inspection_lab/sandbox.py`. It is downloaded from Docker Hub and is not
+redistributed in the repository or experiment archive.

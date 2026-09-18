@@ -1,0 +1,13 @@
+{
+  "version": "software-inspection-v1",
+  "directory_name": "first-instinct-software-inspection-v1",
+  "archive_bytes": 40509793,
+  "archive_sha256": "24a6bd187d819790b8c23b21211f25deb23be6ffea48ae90b163d93c3e52e31c",
+  "download_url": "https://github.com/catoenm/first-instinct/releases/download/software-inspection-v1/first-instinct-software-inspection-v1.zip",
+  "artifact_manifest_sha256": {
+    "raw": "1a22ada7578232a46c048a13bd231ee52ee0afe1151cf969af5d3c8843e56577",
+    "curated": "2b11de1c825ba61a3d3367b6bb4f5b93da27e079686f1e6ca23bfc8c6c59dc58",
+    "reward": "e838ad2a77585fbe00dae759e098a4964729f195946c10dbe6ecb1c3741c265c",
+    "hybrid": "29446be89788e018e73809d30424cb4d76986b4d0951a9ed6f2f43b498ec505c"
+  }
+}

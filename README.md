@@ -24,7 +24,19 @@ The separate `scale_lab` pipeline adds pinned pretrained models, adapter trainin
 larger public datasets and executable outcome records. The existing released
 model and results below remain the completed experiments.
 
-**Latest: [Executable evidence: auditing the data before reinforcement learning](docs/executable-evidence.md).**
+**Latest: [Learning to inspect software before making a forecast](docs/software-inspection.md).**
+The new data factory verifies **7,793 program variants from 369 open-source
+functions**, with source groups kept separate and about half a million candidate
+test executions. Twenty-four small models test reward-only forecasts and a
+hybrid that learns forecasts from outcomes while using reinforcement learning
+to buy evidence. Inspection helps, but a simple empirical planner remains
+stronger; broader forecast practice does not consistently win. Data, receipts,
+checkpoints and a runnable environment are public. The language-model export
+contains 36,189 training views and 34.6 million input tokens.
+[Read the results and run the inspection demo →](docs/software-inspection.md)
+
+The previous [Executable evidence: auditing the data before reinforcement learning](docs/executable-evidence.md)
+pilot used authored contracts.
 We built 24 authored Python tasks and compared random, coverage and adaptive
 data collection at **100 verified programs per run**. Coverage modestly improved
 forecasts on new tasks, while random sampling did better on new edit mechanisms.

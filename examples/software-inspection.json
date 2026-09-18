@@ -1,0 +1,14 @@
+{
+  "state": "{\"code\": \"from __future__ import annotations\\n\\ndef harmonic_series(n_term: str) -> list:\\n    if n_term == '':\\n        return []\\n    series: list = []\\n    for temp in range(int(n_term)):\\n        series.append(f'{temp + 1}' if series else '1')\\n    return series\\n\", \"contract\": \"Pure Python implementation of Harmonic Series algorithm\\n\\n:param n_term: The last (nth) term of Harmonic Series\\n:return: The Harmonic Series starting from 1 to last (nth) term\\n\\nExamples:\", \"event\": \"The candidate passes the complete fixed suite, including revealed and unrevealed checks.\", \"evidence\": [{\"checks\": [{\"actual\": {\"matches_upstream\": true, \"value\": [\"list\", []]}, \"call\": \"harmonic_series(-5)\", \"expected\": [\"list\", []], \"passed\": true}], \"source\": \"initial\"}], \"function\": \"harmonic_series\", \"inspections\": [{\"action\": \"examples\", \"cost\": 0.01, \"description\": \"Reveal additional upstream example checks.\"}, {\"action\": \"probes\", \"cost\": 0.01, \"description\": \"Reveal checks on perturbed inputs.\"}, {\"action\": \"copy\", \"cost\": 0.01, \"description\": \"Read an exact copy of the initial check. No new test is run.\"}], \"purchases_remaining\": 2, \"report_grid\": [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0]}",
+  "question": "Will this candidate pass the complete fixed test suite, including the unrevealed checks?",
+  "options": [
+    {
+      "id": "passes",
+      "description": "The candidate passes the complete fixed suite."
+    },
+    {
+      "id": "fails",
+      "description": "At least one check in the complete fixed suite fails."
+    }
+  ]
+}

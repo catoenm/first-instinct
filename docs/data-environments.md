@@ -1,5 +1,12 @@
 # What counts as data for a decision model?
 
+The latest [software-inspection study](software-inspection.md) implements this
+workflow using 369 functions from a pinned open-source repository. It adds
+isolated execution, verified mutations, sequential evidence purchases, proper
+forecast rewards and 24 small trained policies. A supervised export also feeds
+the four-billion-parameter pipeline. The sections below retain the progression
+from numeric worlds to authored programs and then external source code.
+
 For the current numeric experiments, we do not need to scrape a larger corpus.
 We need observations, available actions, and outcomes that let us check decisions.
 A local environment generates those observations and scores a sampled action.

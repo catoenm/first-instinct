@@ -65,6 +65,12 @@ python -m pip check
 Building these kernels from source takes several minutes. Do not start a
 training process while the same environment is still being modified.
 
+When reusing a cached `causal-conv1d` wheel with `--no-deps`, install its
+`ninja==1.13.2` dependency too. The software-inspection pilot caught this with
+`pip check` before model evaluation; the pinned accelerator requirements now
+include it. A cached wheel must match the Python, PyTorch and CUDA build it was
+compiled for, and its checksum should be verified before installation.
+
 ## Start with a measured pilot
 
 ```bash
