@@ -77,6 +77,11 @@ selected answers on its small authored fixtures, alongside a 17.6 percentage-poi
 probability error on specified random experiments. That gap is a concrete reason
 to evaluate outcome forecasting separately from ordinary answer accuracy.
 
+A [ToolSandbox data pilot](toolsandbox-pilot-v1.md) now contributes 384 verified
+outcomes from actual contact/reminder tools. It establishes exact labels and
+replayable state changes; these fully observed deterministic fixtures have not
+trained a model and do not yet supply nontrivial conditional probabilities.
+
 ## Revised sequence
 
 1. Establish a general interface and untouched baselines. Allow supplied state,

@@ -1,0 +1,471 @@
+{
+  "schema": 1,
+  "commit": "c8571d7854316d2e1c5f288e59fe1e34e53f6dd1",
+  "family_splits": {
+    "contact_create": "train",
+    "reminder_create": "train",
+    "contact_query_phone": "train",
+    "reminder_query_time": "train",
+    "contact_update_phone": "validation",
+    "reminder_update_time": "validation",
+    "contact_remove": "test",
+    "reminder_remove": "test"
+  },
+  "roots": [
+    {
+      "root_id": "contact_create:1907:0",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "contact_create:1907:1",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "contact_create:1907:2",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "contact_create:1907:3",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "contact_create:1907:4",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "contact_create:1907:5",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "contact_create:1907:6",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "contact_create:1907:7",
+      "family": "contact_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 7
+    },
+    {
+      "root_id": "reminder_create:1907:0",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "reminder_create:1907:1",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "reminder_create:1907:2",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "reminder_create:1907:3",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "reminder_create:1907:4",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "reminder_create:1907:5",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "reminder_create:1907:6",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "reminder_create:1907:7",
+      "family": "reminder_create",
+      "split": "train",
+      "seed": 1907,
+      "index": 7
+    },
+    {
+      "root_id": "contact_query_phone:1907:0",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "contact_query_phone:1907:1",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "contact_query_phone:1907:2",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "contact_query_phone:1907:3",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "contact_query_phone:1907:4",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "contact_query_phone:1907:5",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "contact_query_phone:1907:6",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "contact_query_phone:1907:7",
+      "family": "contact_query_phone",
+      "split": "train",
+      "seed": 1907,
+      "index": 7
+    },
+    {
+      "root_id": "reminder_query_time:1907:0",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "reminder_query_time:1907:1",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "reminder_query_time:1907:2",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "reminder_query_time:1907:3",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "reminder_query_time:1907:4",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "reminder_query_time:1907:5",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "reminder_query_time:1907:6",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "reminder_query_time:1907:7",
+      "family": "reminder_query_time",
+      "split": "train",
+      "seed": 1907,
+      "index": 7
+    },
+    {
+      "root_id": "contact_update_phone:1907:0",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "contact_update_phone:1907:1",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "contact_update_phone:1907:2",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "contact_update_phone:1907:3",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "contact_update_phone:1907:4",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "contact_update_phone:1907:5",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "contact_update_phone:1907:6",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "contact_update_phone:1907:7",
+      "family": "contact_update_phone",
+      "split": "validation",
+      "seed": 1907,
+      "index": 7
+    },
+    {
+      "root_id": "reminder_update_time:1907:0",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "reminder_update_time:1907:1",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "reminder_update_time:1907:2",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "reminder_update_time:1907:3",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "reminder_update_time:1907:4",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "reminder_update_time:1907:5",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "reminder_update_time:1907:6",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "reminder_update_time:1907:7",
+      "family": "reminder_update_time",
+      "split": "validation",
+      "seed": 1907,
+      "index": 7
+    },
+    {
+      "root_id": "contact_remove:1907:0",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "contact_remove:1907:1",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "contact_remove:1907:2",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "contact_remove:1907:3",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "contact_remove:1907:4",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "contact_remove:1907:5",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "contact_remove:1907:6",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "contact_remove:1907:7",
+      "family": "contact_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 7
+    },
+    {
+      "root_id": "reminder_remove:1907:0",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 0
+    },
+    {
+      "root_id": "reminder_remove:1907:1",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 1
+    },
+    {
+      "root_id": "reminder_remove:1907:2",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 2
+    },
+    {
+      "root_id": "reminder_remove:1907:3",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 3
+    },
+    {
+      "root_id": "reminder_remove:1907:4",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 4
+    },
+    {
+      "root_id": "reminder_remove:1907:5",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 5
+    },
+    {
+      "root_id": "reminder_remove:1907:6",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 6
+    },
+    {
+      "root_id": "reminder_remove:1907:7",
+      "family": "reminder_remove",
+      "split": "test",
+      "seed": 1907,
+      "index": 7
+    }
+  ],
+  "candidate_count": 6,
+  "repetitions": 2,
+  "caps": {
+    "roots": 512,
+    "executed_branches": 4096,
+    "calls_per_branch": 8
+  }
+}
