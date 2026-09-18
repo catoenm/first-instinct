@@ -1,0 +1,302 @@
+{
+  "complete_prompt_lengths": {
+    "legacy": [
+      {
+        "question": "dispatch_route",
+        "tokens": 528
+      },
+      {
+        "question": "restock",
+        "tokens": 525
+      },
+      {
+        "question": "urgency",
+        "tokens": 535
+      },
+      {
+        "question": "temperature_safe",
+        "tokens": 524
+      },
+      {
+        "question": "carton",
+        "tokens": 529
+      },
+      {
+        "question": "signed_delivery_guaranteed",
+        "tokens": 528
+      },
+      {
+        "question": "warranty_coverage",
+        "tokens": 532
+      },
+      {
+        "question": "carrier",
+        "tokens": 532
+      }
+    ],
+    "state_first": [
+      {
+        "question": "dispatch_route",
+        "tokens": 531
+      },
+      {
+        "question": "restock",
+        "tokens": 525
+      },
+      {
+        "question": "urgency",
+        "tokens": 538
+      },
+      {
+        "question": "temperature_safe",
+        "tokens": 524
+      },
+      {
+        "question": "carton",
+        "tokens": 532
+      },
+      {
+        "question": "signed_delivery_guaranteed",
+        "tokens": 528
+      },
+      {
+        "question": "warranty_coverage",
+        "tokens": 535
+      },
+      {
+        "question": "carrier",
+        "tokens": 535
+      }
+    ]
+  },
+  "logical_token_note": "Counts all submitted prefix and suffix input tokens, including warmups and checks. This is not FLOPs, attention work, or a latency estimate.",
+  "per_condition": {
+    "1": {
+      "legacy_uncached": {
+        "forward_input_tokens": 528,
+        "independent_input_tokens": 528,
+        "model_calls": 1,
+        "prefix_tokens_used": 0,
+        "questions": 1
+      },
+      "state_first_cached": {
+        "forward_input_tokens": 531,
+        "independent_input_tokens": 531,
+        "model_calls": 1,
+        "prefix_tokens_used": 0,
+        "questions": 1
+      },
+      "state_first_uncached": {
+        "forward_input_tokens": 531,
+        "independent_input_tokens": 531,
+        "model_calls": 1,
+        "prefix_tokens_used": 0,
+        "questions": 1
+      }
+    },
+    "3": {
+      "legacy_uncached": {
+        "forward_input_tokens": 1588,
+        "independent_input_tokens": 1588,
+        "model_calls": 3,
+        "prefix_tokens_used": 0,
+        "questions": 3
+      },
+      "state_first_cached": {
+        "forward_input_tokens": 660,
+        "independent_input_tokens": 1594,
+        "model_calls": 4,
+        "prefix_tokens_used": 467,
+        "questions": 3
+      },
+      "state_first_uncached": {
+        "forward_input_tokens": 1594,
+        "independent_input_tokens": 1594,
+        "model_calls": 3,
+        "prefix_tokens_used": 0,
+        "questions": 3
+      }
+    },
+    "8": {
+      "legacy_uncached": {
+        "forward_input_tokens": 4233,
+        "independent_input_tokens": 4233,
+        "model_calls": 8,
+        "prefix_tokens_used": 0,
+        "questions": 8
+      },
+      "state_first_cached": {
+        "forward_input_tokens": 979,
+        "independent_input_tokens": 4248,
+        "model_calls": 9,
+        "prefix_tokens_used": 467,
+        "questions": 8
+      },
+      "state_first_uncached": {
+        "forward_input_tokens": 4248,
+        "independent_input_tokens": 4248,
+        "model_calls": 8,
+        "prefix_tokens_used": 0,
+        "questions": 8
+      }
+    }
+  },
+  "question_accounting": {
+    "independence": 16,
+    "measurement": 108,
+    "warmup": 24
+  },
+  "schedule": {
+    "independence": [
+      "reverse_eight_cached",
+      "eight_questions_individually"
+    ],
+    "measurements": [
+      {
+        "condition": "state_first_cached",
+        "questions": 3,
+        "repetition": 1
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 8,
+        "repetition": 1
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 8,
+        "repetition": 0
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 1,
+        "repetition": 1
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 8,
+        "repetition": 0
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 3,
+        "repetition": 2
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 8,
+        "repetition": 0
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 3,
+        "repetition": 1
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 3,
+        "repetition": 0
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 1,
+        "repetition": 0
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 8,
+        "repetition": 2
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 1,
+        "repetition": 0
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 3,
+        "repetition": 2
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 8,
+        "repetition": 1
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 8,
+        "repetition": 2
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 8,
+        "repetition": 1
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 1,
+        "repetition": 2
+      },
+      {
+        "condition": "legacy_uncached",
+        "questions": 3,
+        "repetition": 0
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 3,
+        "repetition": 2
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 3,
+        "repetition": 0
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 1,
+        "repetition": 1
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 1,
+        "repetition": 2
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 1,
+        "repetition": 1
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 3,
+        "repetition": 1
+      },
+      {
+        "condition": "state_first_cached",
+        "questions": 8,
+        "repetition": 2
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 1,
+        "repetition": 0
+      },
+      {
+        "condition": "state_first_uncached",
+        "questions": 1,
+        "repetition": 2
+      }
+    ],
+    "warmup": [
+      "state_first_cached",
+      "legacy_uncached",
+      "state_first_uncached"
+    ]
+  },
+  "totals": {
+    "forward_input_tokens": 59363,
+    "model_calls": 156,
+    "questions": 148
+  }
+}

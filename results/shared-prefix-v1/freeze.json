@@ -1,0 +1,57 @@
+{
+  "adapter_files_sha256": {
+    "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+    "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+    "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472"
+  },
+  "adapter_run": "/Users/mitchell/Documents/workspace/ml-data/output/general-supervised-complete-v1/runs/supervised-01",
+  "claim_boundary": "Prospective supplementary mechanics, prompt-order and timing check on one authored state. No training, selection, deployment, or Jev-internals claim.",
+  "code_sha256": {
+    "docs/shared-prefix-v1-protocol.md": "5cb42093e19b84e6603b2f60d563db5d572863070a1c9b97bf3e1052b178aeb3",
+    "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+    "general_lab/prefix_benchmark.py": "86faba3237134147ec028b64363fc16ab085571987d27a728451d1f934e36b66",
+    "general_lab/shared_prefix.py": "1edfdd8c09899696ffcc3d0959f7f7287f4de0f501886481923314d167a3cc8a",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+    "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689",
+    "test_prefix_benchmark.py": "59fc61ee46b1e731991f426e02179c567914185673876c7e11fa060eb3fc2eff"
+  },
+  "content_sha256": "3da5839bd9b086f767d71d12d59271e8ea8bdea2119723e1af0fa54746cf5a2f",
+  "created_at_unix": 1789714998.313347,
+  "files_sha256": {
+    "encoded-inputs.json": "99f7d4368cdaedf7645a390addd77f9b18bda74095d11b46cec765232cc98006",
+    "fixture.json": "d32c3ca9294359d723a88f16845385fc0fe44a37327e0647856e879881575bcb",
+    "plan.json": "371ce78a10eae53052ca3ea41aaebc5fefc5200a942ee2b7ae614ee826f0d885"
+  },
+  "foundation_spec_sha256": "1cf132f4e42f3c9820e96c386acdcd406cd83563081e964d7a4838268996a9e8",
+  "inference_started": false,
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "model_inference": false,
+  "packages": {
+    "huggingface-hub": "1.31.0",
+    "peft": "0.21.0",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.23.2",
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  },
+  "schema": "shared-prefix-benchmark-v1",
+  "selection_role": "none",
+  "settings": {
+    "device": "mps",
+    "max_tokens": 1536,
+    "probability_tolerance": 0.02,
+    "repetitions": 3,
+    "seed": 20260918,
+    "subsets": [
+      1,
+      3,
+      8
+    ]
+  }
+}
