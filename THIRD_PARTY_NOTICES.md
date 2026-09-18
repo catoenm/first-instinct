@@ -4,11 +4,11 @@ Original First Instinct code is released under the [MIT license](LICENSE).
 
 ## Pretrained encoder and tokenizer
 
-The released model is a fine-tuned derivative of
+The earlier encoder releases are fine-tuned derivatives of
 [`microsoft/deberta-v3-small`](https://huggingface.co/microsoft/deberta-v3-small),
 revision `a36c739020e01763fe789b4b85e2df55d6180012`. Its model card declares the MIT
 license. Microsoft's copyright and license are preserved in
-[licenses/DeBERTa-MIT.txt](licenses/DeBERTa-MIT.txt) and in the checkpoint release.
+[licenses/DeBERTa-MIT.txt](https://github.com/catoenm/first-instinct/blob/8754ba84e95f38c4cc8f14d6980fdf8285c31500/licenses/DeBERTa-MIT.txt) and in those checkpoint releases.
 First Instinct adds a learned scoring layer and fine-tunes the encoder on tool
 selection examples. It does not train a language model from scratch.
 
@@ -22,13 +22,13 @@ The source dataset declares Apache-2.0; that license is included in
 The repository includes a 100-row dataset-viewer response for an introductory
 exercise. The larger training source is downloaded from pinned revision
 `6bda777c88d21e5a204703c1ee45597a8fa4f734` and checked against its recorded checksum.
-Derived data changes are documented in [data/decisions/README.md](data/decisions/README.md):
+Derived data changes are documented in [data/decisions/README.md](https://github.com/catoenm/first-instinct/blob/8754ba84e95f38c4cc8f14d6980fdf8285c31500/data/decisions/README.md):
 filtering, conversion to described answer options, question wording, grouping,
 and partition assignment. Recorded reference labels, example inputs, and option
 names in the experiment artifacts come from this public source. Their presence
 does not imply that the authors of this project independently verified them.
 
-The release contains a model trained on this derived data. It includes these
+Those encoder releases contain models trained on this derived data. They include these
 notices and both upstream license texts. Dependencies retain their own licenses;
 they are installed separately, not bundled in the checkpoint.
 
@@ -39,7 +39,7 @@ was created by Samuel R. Bowman, Gabor Angeli, Christopher Potts, and
 Christopher D. Manning (2015), and incorporates caption material from earlier
 datasets acknowledged on the corpus page. It is licensed under Creative Commons
 Attribution-ShareAlike 4.0. The license is preserved in
-[licenses/CC-BY-SA-4.0.txt](licenses/CC-BY-SA-4.0.txt). Downloaded source material
+[licenses/CC-BY-SA-4.0.txt](https://github.com/catoenm/first-instinct/blob/8754ba84e95f38c4cc8f14d6980fdf8285c31500/licenses/CC-BY-SA-4.0.txt). Downloaded source material
 and our adapted question data retain those terms; they are not relicensed as MIT.
 
 [GoEmotions](https://huggingface.co/datasets/google-research-datasets/go_emotions)
@@ -49,10 +49,10 @@ The dataset and research are credited to the GoEmotions authors; see the
 for attribution and annotation details.
 
 Exact versions and checksums are listed in
-[data/multitask/sources.json](data/multitask/sources.json). Changes to the data
+[data/multitask/sources.json](https://github.com/catoenm/first-instinct/blob/8754ba84e95f38c4cc8f14d6980fdf8285c31500/data/multitask/sources.json). Changes to the data
 include sampling, filtering, grouped partition isolation, and adaptation into
 categorical and yes/no questions. These modifications and assumptions are
-documented in [the multi-task report](docs/multitask-experiment.md).
+documented in [the multi-task report](https://github.com/catoenm/first-instinct/blob/8754ba84e95f38c4cc8f14d6980fdf8285c31500/docs/multitask-experiment.md).
 
 ## Larger decision-model experiments
 
@@ -78,7 +78,7 @@ execution tasks are project code under MIT. Data manifests distinguish the two.
 The `inspection_lab` experiment extracts and mutates functions from
 [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) at commit
 `a381578994d545e44f26afabbd2303746a2dc358`. The upstream project is MIT licensed;
-its notice is retained in [licenses/TheAlgorithms-Python-MIT.txt](licenses/TheAlgorithms-Python-MIT.txt).
+its notice is retained in [licenses/TheAlgorithms-Python-MIT.txt](https://github.com/catoenm/first-instinct/blob/8754ba84e95f38c4cc8f14d6980fdf8285c31500/licenses/TheAlgorithms-Python-MIT.txt).
 Generated corpus archives contain derived source code, test excerpts and the
 upstream notice. They are separate from our own experiment code. Source paths,
 the pinned revision, input origins and execution receipts are preserved.

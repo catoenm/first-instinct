@@ -9,9 +9,9 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 
 [![Tests](https://github.com/catoenm/first-instinct/actions/workflows/tests.yml/badge.svg)](https://github.com/catoenm/first-instinct/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Forecaster](https://img.shields.io/badge/forecaster-4B-245b47.svg)](docs/software-outcome-model.md)
+[![Decision model](https://img.shields.io/badge/decision_model-9B-245b47.svg)](docs/general-supervised-results.md)
 
-[Try the evidence room](docs/software-outcome-model.md#try-the-local-evidence-room) · [Results](docs/software-outcome-model.md) · [Data factory](docs/software-inspection.md) · [Research brief](docs/data-research-brief.md)
+[Try the decision demo](docs/general-demo.md) · [Model download](https://github.com/catoenm/first-instinct/releases/tag/general-decisions-v1) · [Reinforcement results](docs/general-reinforcement-results.md) · [Next data](docs/general-rl-data-next.md)
 
 </div>
 
@@ -20,23 +20,38 @@ One supervised pass over 350,857 examples raised accuracy from **63.3% to 78.1%*
 on 17,277 held-out questions under the same constrained-answer interface.
 Gains are strongest on executable reasoning worlds; public text tasks improve
 less, and some tasks regress. Prose-pair accuracy is unchanged. The model
-accepts user-defined questions and choices. Four reinforcement-learning runs
-now compare reward training with and without observed-outcome forecasting in
-the same language network; their results and the combined release are pending.
-The released model and browser demo below remain the earlier software experiment.
-An optional [TensorBoard monitor](docs/training-monitor.md) reads the existing
-logs without restarting the training process.
+accepts user-defined questions and choices.
+
+**The [four completed reinforcement-learning runs](docs/general-reinforcement-results.md)
+did not reliably improve held-out decisions.** Three selected the unchanged
+supervised start; all four latest checkpoints lost reward under shifted
+conditions. Outcome-forecast practice reduced probability drift relative to
+reward-only training, without establishing a better decision policy. The
+[model release](https://github.com/catoenm/first-instinct/releases/tag/general-decisions-v1)
+preserves the supervised adapter, every selected and latest reinforcement
+adapter, raw predictions, receipts, and reports. Foundation weights download
+separately.
+
 The new [general decision demo](docs/general-demo.md) offers four example tabs
 in a compact retro interface. The local version now serves the completed
 supervised checkpoint; the underlying interface accepts your own questions
 and choices.
 
-First Instinct explores a practical question: **when should a model gather more
-evidence before making a decision?** A four-billion-parameter forecaster reads
+The next data should add different mechanisms, not just more wordings of the
+same task. A separate [retry-environment pilot](docs/retry-environment-pilot.md)
+executes real SQLite transactions, delayed receipts, and duplicate side effects.
+All **2,000 trajectories and 7,347 forecast outcomes** were replay-verified.
+It has not trained a model yet. See the [data plan](docs/general-rl-data-next.md)
+for new holdouts, independent outcome draws, and external environment candidates.
+
+## Earlier: software forecasts and learned inspection
+
+First Instinct also explores **when a model should gather more evidence before
+making a decision**. The earlier four-billion-parameter forecaster reads
 code and verified checks. A separate small policy learns whether to inspect
 more evidence or stop. The data, training methods and failure cases are open.
 
-**New: [the local evidence room](docs/software-outcome-model.md).** Choose a
+**[The local evidence room](docs/software-outcome-model.md).** Choose a
 candidate program, reveal checks yourself or follow the trained inspector, and
 watch the forecast change before opening the hidden outcome.
 

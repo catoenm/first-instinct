@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "b749ef3c8604175e9077b3f6b11b4b0bcec328b241f26590e4beeee1931b76c1",
+  "archive_bytes": 1986322460,
+  "pipeline_status": "complete",
+  "verified_files": 413,
+  "created_at": 1789696595.164494,
+  "stop_requested_at": 1789709148.4643662,
+  "deleted_at": 1789709196.503566,
+  "gpu_hourly_rate_usd": 18.36,
+  "estimated_compute_usd_excluding_storage": 64.26682508068085,
+  "pod_deleted": true,
+  "remaining_pod_count": 0,
+  "stop_time_source": "collector_request",
+  "observed_stopped_or_absent_at": 1789709196.5027452,
+  "compute_estimate_time_source": "provider_stopped_or_absent_observation"
+}

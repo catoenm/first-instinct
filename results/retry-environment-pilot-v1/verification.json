@@ -1,0 +1,15 @@
+{
+  "schema": "first-instinct-retry-pilot-replay-verification-v1",
+  "generator_sha256": "b8c18307479c88ee99d730948ff2daa71337f15fc50758eaceeff2e3cb5f5de6",
+  "summary_sha256": "d45c01a1f5fde13dadde64b452ead85693d3f422dc44941569c526103b86dab2",
+  "verification_script_sha256": "9d0f385c25fca009666723a835df34cac45c1afa62a818c8148e1c7ee1910646",
+  "exploration_worlds_replayed": 2000,
+  "decision_steps_replayed": 4039,
+  "forecast_outcomes_replayed": 7347,
+  "audit_worlds_checked": 200,
+  "audit_action_outcomes_replayed": 748,
+  "exact_audit_probabilities_recomputed": 748,
+  "cross_stream_world_overlap": false,
+  "passed": true,
+  "scope": "Reproduction and artifact integrity; semantic invariants are separately tested. No model inference, training or calibration measurement."
+}

@@ -8,8 +8,15 @@ severity questions against the actual trained language model.
 The supervised training pass is complete, and the author's local demo now
 serves its selected checkpoint at step 2,742. See the
 [measured supervised results](https://github.com/catoenm/first-instinct/blob/main/docs/general-supervised-results.md). The
-reinforcement-learning comparisons are still running; this demo does not yet
-serve a reinforcement-trained selection. The combined model release is pending.
+[four completed reinforcement-learning runs](https://github.com/catoenm/first-instinct/blob/main/docs/general-reinforcement-results.md)
+did not reliably improve held-out decisions, so this demo keeps the supervised
+checkpoint. The [combined model release](https://github.com/catoenm/first-instinct/releases/tag/general-decisions-v1)
+includes all selected and latest adapters, predictions, and experiment receipts.
+
+Download the archive and its checksum manifest from that release, check the
+archive's SHA-256, then extract it and run `python verify.py` inside the extracted
+directory. Install `requirements-scale.txt` there and use `--run runs/supervised`
+in the command below. The archive includes this demo; no frontend build is needed.
 
 ## Run a saved checkpoint
 

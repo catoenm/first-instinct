@@ -1,0 +1,113 @@
+{
+  "schema": "first-instinct-general-archive-v1",
+  "archive_name": "first-instinct-general-v1.tar.gz",
+  "directory_name": "first-instinct-general-v1",
+  "archive_bytes": 1645470805,
+  "archive_sha256": "8f9497ca871a65ca4b90cd21d1e45359683818a4d4a9042a31cf55423616abd8",
+  "runs": [
+    {
+      "adapters": {
+        "best": {
+          "tensor_count": 496,
+          "tensor_sha256": "d6ff9b2eb5dd0a63feadea0dc91898a42ffbd0e55964302402d4423dc4557453"
+        },
+        "latest": {
+          "tensor_count": 496,
+          "tensor_sha256": "d6ff9b2eb5dd0a63feadea0dc91898a42ffbd0e55964302402d4423dc4557453"
+        }
+      },
+      "artifact_path": "runs/supervised",
+      "completed_updates": 2742,
+      "parameter_evidence_note": "Gradient/change counts are receipt claims; tensor fingerprints independently compare packaged adapter values.",
+      "run_sha256": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472",
+      "selected_contains_updates": true,
+      "selected_update": 2742,
+      "selection_note": "The selected checkpoint contains training updates.",
+      "status": "complete"
+    },
+    {
+      "adapters": {
+        "best": {
+          "tensor_count": 496,
+          "tensor_sha256": "d6ff9b2eb5dd0a63feadea0dc91898a42ffbd0e55964302402d4423dc4557453"
+        },
+        "latest": {
+          "tensor_count": 496,
+          "tensor_sha256": "ff0c5d366a10c3bb1182d22502998a2c7126bff78930a56e77e85926400358cf"
+        }
+      },
+      "artifact_path": "runs/rl-s47-hybrid",
+      "completed_updates": 100,
+      "parameter_evidence_note": "Gradient/change counts are receipt claims; tensor fingerprints independently compare packaged adapter values.",
+      "run_sha256": "ebcf221cf0513ddc859e334d6b8d1eec00a3a71c9d4da72ac3f6f05cd9859b01",
+      "selected_contains_updates": false,
+      "selected_update": 0,
+      "selection_note": "Selected update zero: best/ is the supervised starting adapter, not an RL-trained selection. latest/ contains the completed reinforcement updates.",
+      "status": "complete"
+    },
+    {
+      "adapters": {
+        "best": {
+          "tensor_count": 496,
+          "tensor_sha256": "d6ff9b2eb5dd0a63feadea0dc91898a42ffbd0e55964302402d4423dc4557453"
+        },
+        "latest": {
+          "tensor_count": 496,
+          "tensor_sha256": "5c01038d363e1fa1e79d1e005c05c1c61d24d44e15169721ec7bdf06a70c8089"
+        }
+      },
+      "artifact_path": "runs/rl-s47-reward",
+      "completed_updates": 100,
+      "parameter_evidence_note": "Gradient/change counts are receipt claims; tensor fingerprints independently compare packaged adapter values.",
+      "run_sha256": "cc411ea170499b902cb418487487be9ef6c988380bc9c35ceb081c5b3903a543",
+      "selected_contains_updates": false,
+      "selected_update": 0,
+      "selection_note": "Selected update zero: best/ is the supervised starting adapter, not an RL-trained selection. latest/ contains the completed reinforcement updates.",
+      "status": "complete"
+    },
+    {
+      "adapters": {
+        "best": {
+          "tensor_count": 496,
+          "tensor_sha256": "d6ff9b2eb5dd0a63feadea0dc91898a42ffbd0e55964302402d4423dc4557453"
+        },
+        "latest": {
+          "tensor_count": 496,
+          "tensor_sha256": "2df5adc798f001b3c1d41d5414a4221b3496803aba9bbc8b53b9290307d958d9"
+        }
+      },
+      "artifact_path": "runs/rl-s53-hybrid",
+      "completed_updates": 100,
+      "parameter_evidence_note": "Gradient/change counts are receipt claims; tensor fingerprints independently compare packaged adapter values.",
+      "run_sha256": "47db25841d48e774fcf8d4b44f242f531a48a36ff0a2eb98560c617ca1054e1c",
+      "selected_contains_updates": false,
+      "selected_update": 0,
+      "selection_note": "Selected update zero: best/ is the supervised starting adapter, not an RL-trained selection. latest/ contains the completed reinforcement updates.",
+      "status": "complete"
+    },
+    {
+      "adapters": {
+        "best": {
+          "tensor_count": 496,
+          "tensor_sha256": "839b9ddb4214a12b50278cbcfbbbab4c95f079069f13b4062d55dc676d35890b"
+        },
+        "latest": {
+          "tensor_count": 496,
+          "tensor_sha256": "839b9ddb4214a12b50278cbcfbbbab4c95f079069f13b4062d55dc676d35890b"
+        }
+      },
+      "artifact_path": "runs/rl-s53-reward",
+      "completed_updates": 100,
+      "parameter_evidence_note": "Gradient/change counts are receipt claims; tensor fingerprints independently compare packaged adapter values.",
+      "run_sha256": "27c8093b7cc94821da30763c0990a96bb58a7ceb806d766e80d6f560d2e2b05d",
+      "selected_contains_updates": true,
+      "selected_update": 100,
+      "selection_note": "The selected checkpoint contains training updates.",
+      "status": "complete"
+    }
+  ],
+  "prepared_manifest_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+  "payload_files": 304,
+  "release_url": "https://github.com/catoenm/first-instinct/releases/tag/general-decisions-v1",
+  "verification": "Archive checksum independently recomputed; extracted verify.py passed; selected supervised adapter and inference/demo runtime byte-match the running local demo."
+}

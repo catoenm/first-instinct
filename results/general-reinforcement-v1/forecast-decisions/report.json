@@ -1,0 +1,2479 @@
+{
+  "analysis_code_sha256": {
+    "general_lab/environments.py": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+    "general_lab/forecast_decisions.py": "988d269b64978489314aa737aced7944f22084f2ee3d0d2b2fc73802b197b9f5",
+    "general_lab/report.py": "8aed6c1dc0540f71e2bdbcc805a13ffcbedc26960927e3f2d1e20c467a874de3"
+  },
+  "bootstrap": {
+    "resamples": 1000,
+    "scope": "Paired world-sampling variation, with all four masks kept together; not training-seed variation or multiplicity-adjusted inference.",
+    "seed": 41
+  },
+  "controller": "Stop immediately; maximize terminal_values(scenario, saved_event_forecast) over affirm, deny, abstain.",
+  "evaluation_seed": 71043,
+  "model_selection_criterion": false,
+  "native_actor_compared": false,
+  "post_hoc": true,
+  "reward_scope": "Exact expected terminal reward conditional on each sampled evidence state; no future inspection, no past inspection charges, equal weight for four masks per world. Not sequential-policy reward.",
+  "runs": [
+    {
+      "best_contains_rl_updates": false,
+      "checkpoint_note": "Selected update zero: best is the supervised baseline, not an RL-trained selection.",
+      "completed_updates": 100,
+      "environment_sha256": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+      "input_sha256": {
+        "baseline-new_domain-forecasts.jsonl": "58dea1d00a4e12bff0493a57a10e49e8061af3985a20345b6b95c4095554f61a",
+        "baseline-shift-forecasts.jsonl": "bff973c4e165249203a7d19c590d546c1f107e8094c5d509450ac8ce299192f4",
+        "baseline-test-forecasts.jsonl": "1a67e167802f893a8e0e8d843b72761be5fe521bd19b174729808ff342772703",
+        "baseline-validation-forecasts.jsonl": "0d97d2cb50a0906ec7d521d4927982d47174ced8f3bcc195c5cbc707d807e08e",
+        "best-new_domain-forecasts.jsonl": "58dea1d00a4e12bff0493a57a10e49e8061af3985a20345b6b95c4095554f61a",
+        "best-shift-forecasts.jsonl": "bff973c4e165249203a7d19c590d546c1f107e8094c5d509450ac8ce299192f4",
+        "best-test-forecasts.jsonl": "1a67e167802f893a8e0e8d843b72761be5fe521bd19b174729808ff342772703",
+        "best-validation-forecasts.jsonl": "0d97d2cb50a0906ec7d521d4927982d47174ced8f3bcc195c5cbc707d807e08e",
+        "latest-new_domain-forecasts.jsonl": "57b7c99c86ee997ce1141df5eb6444ca0644c6dcbe7cdb7ab3449e5ceed6afd4",
+        "latest-shift-forecasts.jsonl": "35d0d5a4ba0e5031458dd2580367039dc2b4f440ab9401b8aa186767b18113ae",
+        "latest-test-forecasts.jsonl": "35ee9750bf8907a9795320573dee5159deca7bb862352ba599cc86a9ccb73ee4",
+        "latest-validation-forecasts.jsonl": "3ba5c53d328869208632c1c97a67c8fa08d783284235c26e2dd0fd8037b433f4",
+        "run.json": "cc411ea170499b902cb418487487be9ef6c988380bc9c35ceb081c5b3903a543"
+      },
+      "model": {
+        "id": "Qwen/Qwen3.5-9B",
+        "kind": "qwen3_5",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+      },
+      "name": "rl-s47-reward",
+      "selected_update": 0,
+      "source": "/Users/mitchell/Documents/workspace/ml-data/output/general-cloud-v1/runs/rl-s47-reward",
+      "splits": {
+        "new_domain": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 18,
+                  "affirm": 1,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 125,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 126,
+                "deny": 107
+              },
+              "mean_expected_terminal_reward": 0.5269633801138751,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.010868197779351732,
+              "oracle_action_mismatch_count": 9,
+              "oracle_action_mismatch_fraction": 0.03515625,
+              "states": 256,
+              "strictly_suboptimal_count": 9,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 18,
+                  "affirm": 1,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 125,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 126,
+                "deny": 107
+              },
+              "mean_expected_terminal_reward": 0.5269633801138751,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.010868197779351732,
+              "oracle_action_mismatch_count": 9,
+              "oracle_action_mismatch_fraction": 0.03515625,
+              "states": 256,
+              "strictly_suboptimal_count": 9,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 7,
+                  "affirm": 12,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 1,
+                  "affirm": 127,
+                  "deny": 1
+                },
+                "deny": {
+                  "abstain": 4,
+                  "affirm": 1,
+                  "deny": 102
+                }
+              },
+              "action_counts": {
+                "abstain": 12,
+                "affirm": 140,
+                "deny": 104
+              },
+              "mean_expected_terminal_reward": 0.5201507529178621,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.01768082497536474,
+              "oracle_action_mismatch_count": 20,
+              "oracle_action_mismatch_fraction": 0.078125,
+              "states": 256,
+              "strictly_suboptimal_count": 20,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 15,
+              "mean_terminal_regret_delta": {
+                "difference": 0.006812627196013008,
+                "groups": 64,
+                "lower_95": -0.0001002194137078236,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.013853117081624363
+              },
+              "oracle_mismatch_count_delta": 11
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "shift": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 109,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 7,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 7,
+                "affirm": 118,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.397548840400269,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03613473608548826,
+              "oracle_action_mismatch_count": 23,
+              "oracle_action_mismatch_fraction": 0.08984375,
+              "states": 256,
+              "strictly_suboptimal_count": 23,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 109,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 7,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 7,
+                "affirm": 118,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.397548840400269,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03613473608548826,
+              "oracle_action_mismatch_count": 23,
+              "oracle_action_mismatch_fraction": 0.08984375,
+              "states": 256,
+              "strictly_suboptimal_count": 23,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 0,
+                  "affirm": 4,
+                  "deny": 8
+                },
+                "affirm": {
+                  "abstain": 1,
+                  "affirm": 106,
+                  "deny": 7
+                },
+                "deny": {
+                  "abstain": 1,
+                  "affirm": 17,
+                  "deny": 112
+                }
+              },
+              "action_counts": {
+                "abstain": 2,
+                "affirm": 127,
+                "deny": 127
+              },
+              "mean_expected_terminal_reward": 0.33588392785709587,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.0977996486286614,
+              "oracle_action_mismatch_count": 38,
+              "oracle_action_mismatch_fraction": 0.1484375,
+              "states": 256,
+              "strictly_suboptimal_count": 38,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 28,
+              "mean_terminal_regret_delta": {
+                "difference": 0.06166491254317313,
+                "groups": 64,
+                "lower_95": 0.024413644626052933,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.10998005673264005
+              },
+              "oracle_mismatch_count_delta": 15
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "test": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 6,
+                  "affirm": 2,
+                  "deny": 120
+                }
+              },
+              "action_counts": {
+                "abstain": 32,
+                "affirm": 102,
+                "deny": 122
+              },
+              "mean_expected_terminal_reward": 0.485001237896294,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.012316867558474418,
+              "oracle_action_mismatch_count": 18,
+              "oracle_action_mismatch_fraction": 0.0703125,
+              "states": 256,
+              "strictly_suboptimal_count": 18,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 6,
+                  "affirm": 2,
+                  "deny": 120
+                }
+              },
+              "action_counts": {
+                "abstain": 32,
+                "affirm": 102,
+                "deny": 122
+              },
+              "mean_expected_terminal_reward": 0.485001237896294,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.012316867558474418,
+              "oracle_action_mismatch_count": 18,
+              "oracle_action_mismatch_fraction": 0.0703125,
+              "states": 256,
+              "strictly_suboptimal_count": 18,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 17,
+                  "affirm": 17,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 4,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 20,
+                "affirm": 113,
+                "deny": 123
+              },
+              "mean_expected_terminal_reward": 0.4740535522101656,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.02326455324460283,
+              "oracle_action_mismatch_count": 26,
+              "oracle_action_mismatch_fraction": 0.1015625,
+              "states": 256,
+              "strictly_suboptimal_count": 26,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 15,
+              "mean_terminal_regret_delta": {
+                "difference": 0.010947685686128413,
+                "groups": 64,
+                "lower_95": 0.0027903341472344974,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.021911794425138822
+              },
+              "oracle_mismatch_count_delta": 8
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "validation": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 32,
+                  "affirm": 6,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 107
+                }
+              },
+              "action_counts": {
+                "abstain": 38,
+                "affirm": 109,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.467893952785356,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.0060654549620895,
+              "oracle_action_mismatch_count": 14,
+              "oracle_action_mismatch_fraction": 0.0546875,
+              "states": 256,
+              "strictly_suboptimal_count": 14,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 32,
+                  "affirm": 6,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 107
+                }
+              },
+              "action_counts": {
+                "abstain": 38,
+                "affirm": 109,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.467893952785356,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.0060654549620895,
+              "oracle_action_mismatch_count": 14,
+              "oracle_action_mismatch_fraction": 0.0546875,
+              "states": 256,
+              "strictly_suboptimal_count": 14,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 22,
+                  "affirm": 16,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 1,
+                  "affirm": 106,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 4,
+                  "affirm": 1,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 27,
+                "affirm": 123,
+                "deny": 106
+              },
+              "mean_expected_terminal_reward": 0.45912035836840537,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.014839049379040183,
+              "oracle_action_mismatch_count": 24,
+              "oracle_action_mismatch_fraction": 0.09375,
+              "states": 256,
+              "strictly_suboptimal_count": 24,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 20,
+              "mean_terminal_regret_delta": {
+                "difference": 0.008773594416950683,
+                "groups": 64,
+                "lower_95": 0.0015179404729114862,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.01708547608309127
+              },
+              "oracle_mismatch_count_delta": 10
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        }
+      },
+      "status": "complete",
+      "training_seed": 47
+    },
+    {
+      "best_contains_rl_updates": false,
+      "checkpoint_note": "Selected update zero: best is the supervised baseline, not an RL-trained selection.",
+      "completed_updates": 100,
+      "environment_sha256": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+      "input_sha256": {
+        "baseline-new_domain-forecasts.jsonl": "58dea1d00a4e12bff0493a57a10e49e8061af3985a20345b6b95c4095554f61a",
+        "baseline-shift-forecasts.jsonl": "bff973c4e165249203a7d19c590d546c1f107e8094c5d509450ac8ce299192f4",
+        "baseline-test-forecasts.jsonl": "1a67e167802f893a8e0e8d843b72761be5fe521bd19b174729808ff342772703",
+        "baseline-validation-forecasts.jsonl": "0d97d2cb50a0906ec7d521d4927982d47174ced8f3bcc195c5cbc707d807e08e",
+        "best-new_domain-forecasts.jsonl": "58dea1d00a4e12bff0493a57a10e49e8061af3985a20345b6b95c4095554f61a",
+        "best-shift-forecasts.jsonl": "bff973c4e165249203a7d19c590d546c1f107e8094c5d509450ac8ce299192f4",
+        "best-test-forecasts.jsonl": "1a67e167802f893a8e0e8d843b72761be5fe521bd19b174729808ff342772703",
+        "best-validation-forecasts.jsonl": "0d97d2cb50a0906ec7d521d4927982d47174ced8f3bcc195c5cbc707d807e08e",
+        "latest-new_domain-forecasts.jsonl": "433843cdd3e2d1d3506d35d5db88863cb1f1120ca699a0fd1e43dab7d297d5c0",
+        "latest-shift-forecasts.jsonl": "8a2d102256ac22edd80e55fef88d6756444dc90a8409535ae94cfb183274ba3b",
+        "latest-test-forecasts.jsonl": "20db0d16a7715a38837a7f3a20e899922b87d23269122ddb80eedad6eef2d114",
+        "latest-validation-forecasts.jsonl": "93f3e05a1e2f210555cb163c61f90905bdc9511379234ce94830b023fa87e779",
+        "run.json": "ebcf221cf0513ddc859e334d6b8d1eec00a3a71c9d4da72ac3f6f05cd9859b01"
+      },
+      "model": {
+        "id": "Qwen/Qwen3.5-9B",
+        "kind": "qwen3_5",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+      },
+      "name": "rl-s47-hybrid",
+      "selected_update": 0,
+      "source": "/Users/mitchell/Documents/workspace/ml-data/output/general-cloud-v1/runs/rl-s47-hybrid",
+      "splits": {
+        "new_domain": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 18,
+                  "affirm": 1,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 125,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 126,
+                "deny": 107
+              },
+              "mean_expected_terminal_reward": 0.5269633801138751,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.010868197779351732,
+              "oracle_action_mismatch_count": 9,
+              "oracle_action_mismatch_fraction": 0.03515625,
+              "states": 256,
+              "strictly_suboptimal_count": 9,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 18,
+                  "affirm": 1,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 125,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 126,
+                "deny": 107
+              },
+              "mean_expected_terminal_reward": 0.5269633801138751,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.010868197779351732,
+              "oracle_action_mismatch_count": 9,
+              "oracle_action_mismatch_fraction": 0.03515625,
+              "states": 256,
+              "strictly_suboptimal_count": 9,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 16,
+                  "affirm": 3,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 126,
+                  "deny": 1
+                },
+                "deny": {
+                  "abstain": 8,
+                  "affirm": 0,
+                  "deny": 99
+                }
+              },
+              "action_counts": {
+                "abstain": 26,
+                "affirm": 129,
+                "deny": 101
+              },
+              "mean_expected_terminal_reward": 0.525486570211142,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.01234500768208482,
+              "oracle_action_mismatch_count": 15,
+              "oracle_action_mismatch_fraction": 0.05859375,
+              "states": 256,
+              "strictly_suboptimal_count": 15,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 14,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0014768099027330883,
+                "groups": 64,
+                "lower_95": -0.00468746766360002,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.007172681813083629
+              },
+              "oracle_mismatch_count_delta": 6
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "shift": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 109,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 7,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 7,
+                "affirm": 118,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.397548840400269,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03613473608548826,
+              "oracle_action_mismatch_count": 23,
+              "oracle_action_mismatch_fraction": 0.08984375,
+              "states": 256,
+              "strictly_suboptimal_count": 23,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 109,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 7,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 7,
+                "affirm": 118,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.397548840400269,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03613473608548826,
+              "oracle_action_mismatch_count": 23,
+              "oracle_action_mismatch_fraction": 0.08984375,
+              "states": 256,
+              "strictly_suboptimal_count": 23,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 3,
+                  "affirm": 109,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 8,
+                  "deny": 119
+                }
+              },
+              "action_counts": {
+                "abstain": 9,
+                "affirm": 119,
+                "deny": 128
+              },
+              "mean_expected_terminal_reward": 0.40447129320875785,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.02921228327699939,
+              "oracle_action_mismatch_count": 25,
+              "oracle_action_mismatch_fraction": 0.09765625,
+              "states": 256,
+              "strictly_suboptimal_count": 25,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 12,
+              "mean_terminal_regret_delta": {
+                "difference": -0.00692245280848887,
+                "groups": 64,
+                "lower_95": -0.034381197898773586,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.011987646074541846
+              },
+              "oracle_mismatch_count_delta": 2
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "test": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 6,
+                  "affirm": 2,
+                  "deny": 120
+                }
+              },
+              "action_counts": {
+                "abstain": 32,
+                "affirm": 102,
+                "deny": 122
+              },
+              "mean_expected_terminal_reward": 0.485001237896294,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.012316867558474418,
+              "oracle_action_mismatch_count": 18,
+              "oracle_action_mismatch_fraction": 0.0703125,
+              "states": 256,
+              "strictly_suboptimal_count": 18,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 6,
+                  "affirm": 2,
+                  "deny": 120
+                }
+              },
+              "action_counts": {
+                "abstain": 32,
+                "affirm": 102,
+                "deny": 122
+              },
+              "mean_expected_terminal_reward": 0.485001237896294,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.012316867558474418,
+              "oracle_action_mismatch_count": 18,
+              "oracle_action_mismatch_fraction": 0.0703125,
+              "states": 256,
+              "strictly_suboptimal_count": 18,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 27,
+                  "affirm": 7,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 88,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 8,
+                  "affirm": 3,
+                  "deny": 117
+                }
+              },
+              "action_counts": {
+                "abstain": 39,
+                "affirm": 98,
+                "deny": 119
+              },
+              "mean_expected_terminal_reward": 0.47517138152557953,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.022146723929188938,
+              "oracle_action_mismatch_count": 24,
+              "oracle_action_mismatch_fraction": 0.09375,
+              "states": 256,
+              "strictly_suboptimal_count": 24,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 15,
+              "mean_terminal_regret_delta": {
+                "difference": 0.009829856370714521,
+                "groups": 64,
+                "lower_95": 0.0022417695597517395,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.019727998659886604
+              },
+              "oracle_mismatch_count_delta": 6
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "validation": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 32,
+                  "affirm": 6,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 107
+                }
+              },
+              "action_counts": {
+                "abstain": 38,
+                "affirm": 109,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.467893952785356,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.0060654549620895,
+              "oracle_action_mismatch_count": 14,
+              "oracle_action_mismatch_fraction": 0.0546875,
+              "states": 256,
+              "strictly_suboptimal_count": 14,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 32,
+                  "affirm": 6,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 107
+                }
+              },
+              "action_counts": {
+                "abstain": 38,
+                "affirm": 109,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.467893952785356,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.0060654549620895,
+              "oracle_action_mismatch_count": 14,
+              "oracle_action_mismatch_fraction": 0.0546875,
+              "states": 256,
+              "strictly_suboptimal_count": 14,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 34,
+                  "affirm": 5,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 5,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 43,
+                "affirm": 108,
+                "deny": 105
+              },
+              "mean_expected_terminal_reward": 0.46839370230268446,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.005565705444761084,
+              "oracle_action_mismatch_count": 15,
+              "oracle_action_mismatch_fraction": 0.05859375,
+              "states": 256,
+              "strictly_suboptimal_count": 15,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 11,
+              "mean_terminal_regret_delta": {
+                "difference": -0.0004997495173284166,
+                "groups": 64,
+                "lower_95": -0.005490210574293708,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0042228542568251756
+              },
+              "oracle_mismatch_count_delta": 1
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        }
+      },
+      "status": "complete",
+      "training_seed": 47
+    },
+    {
+      "best_contains_rl_updates": true,
+      "checkpoint_note": "Best uses the run's original selected update; this diagnostic does not reselect it.",
+      "completed_updates": 100,
+      "environment_sha256": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+      "input_sha256": {
+        "baseline-new_domain-forecasts.jsonl": "58dea1d00a4e12bff0493a57a10e49e8061af3985a20345b6b95c4095554f61a",
+        "baseline-shift-forecasts.jsonl": "bff973c4e165249203a7d19c590d546c1f107e8094c5d509450ac8ce299192f4",
+        "baseline-test-forecasts.jsonl": "1a67e167802f893a8e0e8d843b72761be5fe521bd19b174729808ff342772703",
+        "baseline-validation-forecasts.jsonl": "0d97d2cb50a0906ec7d521d4927982d47174ced8f3bcc195c5cbc707d807e08e",
+        "best-new_domain-forecasts.jsonl": "b8efe52167e81bce2faea4a2c423033bc4d88b13511c0e044cedaf97f0fac2d6",
+        "best-shift-forecasts.jsonl": "4c3b6a935fe858e33ce3b98885465745c2b7b7013ba484a9070a6f13589089db",
+        "best-test-forecasts.jsonl": "9bf3ca46f912fa587573c2d44e90646182e0d1c9856dbde82c38b35e2bc72067",
+        "best-validation-forecasts.jsonl": "12ee3549d3deaa2dbbccd9517e3432aeaf9f80ef3c8c8bd4683d830e9921e8f6",
+        "latest-new_domain-forecasts.jsonl": "b8efe52167e81bce2faea4a2c423033bc4d88b13511c0e044cedaf97f0fac2d6",
+        "latest-shift-forecasts.jsonl": "4c3b6a935fe858e33ce3b98885465745c2b7b7013ba484a9070a6f13589089db",
+        "latest-test-forecasts.jsonl": "9bf3ca46f912fa587573c2d44e90646182e0d1c9856dbde82c38b35e2bc72067",
+        "latest-validation-forecasts.jsonl": "12ee3549d3deaa2dbbccd9517e3432aeaf9f80ef3c8c8bd4683d830e9921e8f6",
+        "run.json": "27c8093b7cc94821da30763c0990a96bb58a7ceb806d766e80d6f560d2e2b05d"
+      },
+      "model": {
+        "id": "Qwen/Qwen3.5-9B",
+        "kind": "qwen3_5",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+      },
+      "name": "rl-s53-reward",
+      "selected_update": 100,
+      "source": "/Users/mitchell/Documents/workspace/ml-data/output/general-cloud-v1/runs/rl-s53-reward",
+      "splits": {
+        "new_domain": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 18,
+                  "affirm": 1,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 125,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 126,
+                "deny": 107
+              },
+              "mean_expected_terminal_reward": 0.5269633801138751,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.010868197779351732,
+              "oracle_action_mismatch_count": 9,
+              "oracle_action_mismatch_fraction": 0.03515625,
+              "states": 256,
+              "strictly_suboptimal_count": 9,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 14,
+                  "affirm": 4,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 1,
+                  "affirm": 126,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 18,
+                "affirm": 130,
+                "deny": 108
+              },
+              "mean_expected_terminal_reward": 0.5289431931136209,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.008888384779605931,
+              "oracle_action_mismatch_count": 12,
+              "oracle_action_mismatch_fraction": 0.046875,
+              "states": 256,
+              "strictly_suboptimal_count": 12,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 14,
+                  "affirm": 4,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 1,
+                  "affirm": 126,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 18,
+                "affirm": 130,
+                "deny": 108
+              },
+              "mean_expected_terminal_reward": 0.5289431931136209,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.008888384779605931,
+              "oracle_action_mismatch_count": 12,
+              "oracle_action_mismatch_fraction": 0.046875,
+              "states": 256,
+              "strictly_suboptimal_count": 12,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 11,
+              "mean_terminal_regret_delta": {
+                "difference": -0.001979812999745802,
+                "groups": 64,
+                "lower_95": -0.00664549854173929,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0017735065365539716
+              },
+              "oracle_mismatch_count_delta": 3
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 11,
+              "mean_terminal_regret_delta": {
+                "difference": -0.001979812999745802,
+                "groups": 64,
+                "lower_95": -0.00664549854173929,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0017735065365539716
+              },
+              "oracle_mismatch_count_delta": 3
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "shift": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 109,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 7,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 7,
+                "affirm": 118,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.397548840400269,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03613473608548826,
+              "oracle_action_mismatch_count": 23,
+              "oracle_action_mismatch_fraction": 0.08984375,
+              "states": 256,
+              "strictly_suboptimal_count": 23,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 2,
+                  "affirm": 2,
+                  "deny": 8
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 105,
+                  "deny": 7
+                },
+                "deny": {
+                  "abstain": 1,
+                  "affirm": 12,
+                  "deny": 117
+                }
+              },
+              "action_counts": {
+                "abstain": 5,
+                "affirm": 119,
+                "deny": 132
+              },
+              "mean_expected_terminal_reward": 0.34940382666475067,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.08427974982100656,
+              "oracle_action_mismatch_count": 32,
+              "oracle_action_mismatch_fraction": 0.125,
+              "states": 256,
+              "strictly_suboptimal_count": 32,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 2,
+                  "affirm": 2,
+                  "deny": 8
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 105,
+                  "deny": 7
+                },
+                "deny": {
+                  "abstain": 1,
+                  "affirm": 12,
+                  "deny": 117
+                }
+              },
+              "action_counts": {
+                "abstain": 5,
+                "affirm": 119,
+                "deny": 132
+              },
+              "mean_expected_terminal_reward": 0.34940382666475067,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.08427974982100656,
+              "oracle_action_mismatch_count": 32,
+              "oracle_action_mismatch_fraction": 0.125,
+              "states": 256,
+              "strictly_suboptimal_count": 32,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 24,
+              "mean_terminal_regret_delta": {
+                "difference": 0.04814501373551829,
+                "groups": 64,
+                "lower_95": 0.01336114766894802,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.09350033372977945
+              },
+              "oracle_mismatch_count_delta": 9
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 24,
+              "mean_terminal_regret_delta": {
+                "difference": 0.04814501373551829,
+                "groups": 64,
+                "lower_95": 0.01336114766894802,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.09350033372977945
+              },
+              "oracle_mismatch_count_delta": 9
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "test": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 6,
+                  "affirm": 2,
+                  "deny": 120
+                }
+              },
+              "action_counts": {
+                "abstain": 32,
+                "affirm": 102,
+                "deny": 122
+              },
+              "mean_expected_terminal_reward": 0.485001237896294,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.012316867558474418,
+              "oracle_action_mismatch_count": 18,
+              "oracle_action_mismatch_fraction": 0.0703125,
+              "states": 256,
+              "strictly_suboptimal_count": 18,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 19,
+                  "affirm": 12,
+                  "deny": 5
+                },
+                "affirm": {
+                  "abstain": 1,
+                  "affirm": 91,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 1,
+                  "affirm": 1,
+                  "deny": 126
+                }
+              },
+              "action_counts": {
+                "abstain": 21,
+                "affirm": 104,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.4823853431568588,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.014932762297909631,
+              "oracle_action_mismatch_count": 20,
+              "oracle_action_mismatch_fraction": 0.078125,
+              "states": 256,
+              "strictly_suboptimal_count": 20,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 19,
+                  "affirm": 12,
+                  "deny": 5
+                },
+                "affirm": {
+                  "abstain": 1,
+                  "affirm": 91,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 1,
+                  "affirm": 1,
+                  "deny": 126
+                }
+              },
+              "action_counts": {
+                "abstain": 21,
+                "affirm": 104,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.4823853431568588,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.014932762297909631,
+              "oracle_action_mismatch_count": 20,
+              "oracle_action_mismatch_fraction": 0.078125,
+              "states": 256,
+              "strictly_suboptimal_count": 20,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 16,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0026158947394352124,
+                "groups": 64,
+                "lower_95": -0.004889171084439894,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.010448917008326869
+              },
+              "oracle_mismatch_count_delta": 2
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 16,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0026158947394352124,
+                "groups": 64,
+                "lower_95": -0.004889171084439894,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.010448917008326869
+              },
+              "oracle_mismatch_count_delta": 2
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "validation": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 32,
+                  "affirm": 6,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 107
+                }
+              },
+              "action_counts": {
+                "abstain": 38,
+                "affirm": 109,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.467893952785356,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.0060654549620895,
+              "oracle_action_mismatch_count": 14,
+              "oracle_action_mismatch_fraction": 0.0546875,
+              "states": 256,
+              "strictly_suboptimal_count": 14,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 6
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 105,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 5,
+                  "affirm": 1,
+                  "deny": 103
+                }
+              },
+              "action_counts": {
+                "abstain": 33,
+                "affirm": 114,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.4643678631480387,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.00959154459940684,
+              "oracle_action_mismatch_count": 22,
+              "oracle_action_mismatch_fraction": 0.0859375,
+              "states": 256,
+              "strictly_suboptimal_count": 22,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 6
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 105,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 5,
+                  "affirm": 1,
+                  "deny": 103
+                }
+              },
+              "action_counts": {
+                "abstain": 33,
+                "affirm": 114,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.4643678631480387,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.00959154459940684,
+              "oracle_action_mismatch_count": 22,
+              "oracle_action_mismatch_fraction": 0.0859375,
+              "states": 256,
+              "strictly_suboptimal_count": 22,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 18,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0035260896373173404,
+                "groups": 64,
+                "lower_95": -0.0031140947610526896,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.011325904141029209
+              },
+              "oracle_mismatch_count_delta": 8
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 18,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0035260896373173404,
+                "groups": 64,
+                "lower_95": -0.0031140947610526896,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.011325904141029209
+              },
+              "oracle_mismatch_count_delta": 8
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        }
+      },
+      "status": "complete",
+      "training_seed": 53
+    },
+    {
+      "best_contains_rl_updates": false,
+      "checkpoint_note": "Selected update zero: best is the supervised baseline, not an RL-trained selection.",
+      "completed_updates": 100,
+      "environment_sha256": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+      "input_sha256": {
+        "baseline-new_domain-forecasts.jsonl": "58dea1d00a4e12bff0493a57a10e49e8061af3985a20345b6b95c4095554f61a",
+        "baseline-shift-forecasts.jsonl": "bff973c4e165249203a7d19c590d546c1f107e8094c5d509450ac8ce299192f4",
+        "baseline-test-forecasts.jsonl": "1a67e167802f893a8e0e8d843b72761be5fe521bd19b174729808ff342772703",
+        "baseline-validation-forecasts.jsonl": "0d97d2cb50a0906ec7d521d4927982d47174ced8f3bcc195c5cbc707d807e08e",
+        "best-new_domain-forecasts.jsonl": "58dea1d00a4e12bff0493a57a10e49e8061af3985a20345b6b95c4095554f61a",
+        "best-shift-forecasts.jsonl": "bff973c4e165249203a7d19c590d546c1f107e8094c5d509450ac8ce299192f4",
+        "best-test-forecasts.jsonl": "1a67e167802f893a8e0e8d843b72761be5fe521bd19b174729808ff342772703",
+        "best-validation-forecasts.jsonl": "0d97d2cb50a0906ec7d521d4927982d47174ced8f3bcc195c5cbc707d807e08e",
+        "latest-new_domain-forecasts.jsonl": "a22c95c5a686dbf3146dab2d1fdd821e6c03f76c905145e5a8258b059471ae45",
+        "latest-shift-forecasts.jsonl": "10735838b316961754768a2d61d4552b3cd8f0c9a34c2e8663cacec70f20d056",
+        "latest-test-forecasts.jsonl": "6c0a049b611973d558f5f9973f266b9881a7684a9f4db8291d86b9f741cd21d7",
+        "latest-validation-forecasts.jsonl": "719ce2d8a4d217869d9b58db05bc2a3cf5fecaf022b810a5b27d1e5b38ef588e",
+        "run.json": "47db25841d48e774fcf8d4b44f242f531a48a36ff0a2eb98560c617ca1054e1c"
+      },
+      "model": {
+        "id": "Qwen/Qwen3.5-9B",
+        "kind": "qwen3_5",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+      },
+      "name": "rl-s53-hybrid",
+      "selected_update": 0,
+      "source": "/Users/mitchell/Documents/workspace/ml-data/output/general-cloud-v1/runs/rl-s53-hybrid",
+      "splits": {
+        "new_domain": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 18,
+                  "affirm": 1,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 125,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 126,
+                "deny": 107
+              },
+              "mean_expected_terminal_reward": 0.5269633801138751,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.010868197779351732,
+              "oracle_action_mismatch_count": 9,
+              "oracle_action_mismatch_fraction": 0.03515625,
+              "states": 256,
+              "strictly_suboptimal_count": 9,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 18,
+                  "affirm": 1,
+                  "deny": 1
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 125,
+                  "deny": 2
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 104
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 126,
+                "deny": 107
+              },
+              "mean_expected_terminal_reward": 0.5269633801138751,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.010868197779351732,
+              "oracle_action_mismatch_count": 9,
+              "oracle_action_mismatch_fraction": 0.03515625,
+              "states": 256,
+              "strictly_suboptimal_count": 9,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 17,
+                  "affirm": 1,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 121,
+                  "deny": 4
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 105
+                }
+              },
+              "action_counts": {
+                "abstain": 23,
+                "affirm": 122,
+                "deny": 111
+              },
+              "mean_expected_terminal_reward": 0.5239001925538168,
+              "mean_terminal_oracle_expected_reward": 0.5378315778932269,
+              "mean_terminal_regret": 0.013931385339409984,
+              "oracle_action_mismatch_count": 13,
+              "oracle_action_mismatch_fraction": 0.05078125,
+              "states": 256,
+              "strictly_suboptimal_count": 13,
+              "terminal_oracle_action_counts": {
+                "abstain": 20,
+                "affirm": 129,
+                "deny": 107
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 6,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0030631875600582517,
+                "groups": 64,
+                "lower_95": 0.0005304374999999985,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.006324660804373376
+              },
+              "oracle_mismatch_count_delta": 4
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "shift": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 109,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 7,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 7,
+                "affirm": 118,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.397548840400269,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03613473608548826,
+              "oracle_action_mismatch_count": 23,
+              "oracle_action_mismatch_fraction": 0.08984375,
+              "states": 256,
+              "strictly_suboptimal_count": 23,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 3,
+                  "affirm": 2,
+                  "deny": 7
+                },
+                "affirm": {
+                  "abstain": 2,
+                  "affirm": 109,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 7,
+                  "deny": 121
+                }
+              },
+              "action_counts": {
+                "abstain": 7,
+                "affirm": 118,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.397548840400269,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03613473608548826,
+              "oracle_action_mismatch_count": 23,
+              "oracle_action_mismatch_fraction": 0.08984375,
+              "states": 256,
+              "strictly_suboptimal_count": 23,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 5,
+                  "affirm": 1,
+                  "deny": 6
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 107,
+                  "deny": 3
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 6,
+                  "deny": 122
+                }
+              },
+              "action_counts": {
+                "abstain": 11,
+                "affirm": 114,
+                "deny": 131
+              },
+              "mean_expected_terminal_reward": 0.4012319998187963,
+              "mean_terminal_oracle_expected_reward": 0.4336835764857573,
+              "mean_terminal_regret": 0.03245157666696096,
+              "oracle_action_mismatch_count": 22,
+              "oracle_action_mismatch_fraction": 0.0859375,
+              "states": 256,
+              "strictly_suboptimal_count": 22,
+              "terminal_oracle_action_counts": {
+                "abstain": 12,
+                "affirm": 114,
+                "deny": 130
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 11,
+              "mean_terminal_regret_delta": {
+                "difference": -0.0036831594185273023,
+                "groups": 64,
+                "lower_95": -0.011145439249253396,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0025784952827529323
+              },
+              "oracle_mismatch_count_delta": -1
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "test": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 6,
+                  "affirm": 2,
+                  "deny": 120
+                }
+              },
+              "action_counts": {
+                "abstain": 32,
+                "affirm": 102,
+                "deny": 122
+              },
+              "mean_expected_terminal_reward": 0.485001237896294,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.012316867558474418,
+              "oracle_action_mismatch_count": 18,
+              "oracle_action_mismatch_fraction": 0.0703125,
+              "states": 256,
+              "strictly_suboptimal_count": 18,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 26,
+                  "affirm": 8,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 0,
+                  "affirm": 92,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 6,
+                  "affirm": 2,
+                  "deny": 120
+                }
+              },
+              "action_counts": {
+                "abstain": 32,
+                "affirm": 102,
+                "deny": 122
+              },
+              "mean_expected_terminal_reward": 0.485001237896294,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.012316867558474418,
+              "oracle_action_mismatch_count": 18,
+              "oracle_action_mismatch_fraction": 0.0703125,
+              "states": 256,
+              "strictly_suboptimal_count": 18,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 27,
+                  "affirm": 6,
+                  "deny": 3
+                },
+                "affirm": {
+                  "abstain": 3,
+                  "affirm": 89,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 125
+                }
+              },
+              "action_counts": {
+                "abstain": 33,
+                "affirm": 95,
+                "deny": 128
+              },
+              "mean_expected_terminal_reward": 0.48643548501680056,
+              "mean_terminal_oracle_expected_reward": 0.49731810545476846,
+              "mean_terminal_regret": 0.010882620437967895,
+              "oracle_action_mismatch_count": 15,
+              "oracle_action_mismatch_fraction": 0.05859375,
+              "states": 256,
+              "strictly_suboptimal_count": 15,
+              "terminal_oracle_action_counts": {
+                "abstain": 36,
+                "affirm": 92,
+                "deny": 128
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 11,
+              "mean_terminal_regret_delta": {
+                "difference": -0.0014342471205065232,
+                "groups": 64,
+                "lower_95": -0.006373980929569145,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.003746828136062581
+              },
+              "oracle_mismatch_count_delta": -3
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        },
+        "validation": {
+          "checkpoints": {
+            "baseline": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 32,
+                  "affirm": 6,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 107
+                }
+              },
+              "action_counts": {
+                "abstain": 38,
+                "affirm": 109,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.467893952785356,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.0060654549620895,
+              "oracle_action_mismatch_count": 14,
+              "oracle_action_mismatch_fraction": 0.0546875,
+              "states": 256,
+              "strictly_suboptimal_count": 14,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "best": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 32,
+                  "affirm": 6,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 4,
+                  "affirm": 103,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 2,
+                  "affirm": 0,
+                  "deny": 107
+                }
+              },
+              "action_counts": {
+                "abstain": 38,
+                "affirm": 109,
+                "deny": 109
+              },
+              "mean_expected_terminal_reward": 0.467893952785356,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.0060654549620895,
+              "oracle_action_mismatch_count": 14,
+              "oracle_action_mismatch_fraction": 0.0546875,
+              "states": 256,
+              "strictly_suboptimal_count": 14,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            },
+            "latest": {
+              "action_confusion_counts": {
+                "abstain": {
+                  "abstain": 35,
+                  "affirm": 3,
+                  "deny": 2
+                },
+                "affirm": {
+                  "abstain": 5,
+                  "affirm": 102,
+                  "deny": 0
+                },
+                "deny": {
+                  "abstain": 3,
+                  "affirm": 0,
+                  "deny": 106
+                }
+              },
+              "action_counts": {
+                "abstain": 43,
+                "affirm": 105,
+                "deny": 108
+              },
+              "mean_expected_terminal_reward": 0.46780231670379924,
+              "mean_terminal_oracle_expected_reward": 0.47395940774744555,
+              "mean_terminal_regret": 0.006157091043646306,
+              "oracle_action_mismatch_count": 13,
+              "oracle_action_mismatch_fraction": 0.05078125,
+              "states": 256,
+              "strictly_suboptimal_count": 13,
+              "terminal_oracle_action_counts": {
+                "abstain": 40,
+                "affirm": 107,
+                "deny": 109
+              },
+              "worlds": 64
+            }
+          },
+          "paired_world_comparisons": {
+            "baseline_to_best": {
+              "action_changed_count": 0,
+              "mean_terminal_regret_delta": {
+                "difference": 0.0,
+                "groups": 64,
+                "lower_95": 0.0,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0
+              },
+              "oracle_mismatch_count_delta": 0
+            },
+            "baseline_to_latest": {
+              "action_changed_count": 7,
+              "mean_terminal_regret_delta": {
+                "difference": 9.163608155680675e-05,
+                "groups": 64,
+                "lower_95": -0.0015447718239398796,
+                "resamples": 1000,
+                "rows": 256,
+                "single_group_interval_is_uninformative": false,
+                "upper_95": 0.0014694969000652262
+              },
+              "oracle_mismatch_count_delta": -1
+            }
+          },
+          "states": 256,
+          "worlds": 64
+        }
+      },
+      "status": "complete",
+      "training_seed": 53
+    }
+  ],
+  "schema": "first-instinct-posthoc-forecast-decisions-v1",
+  "tie_order": [
+    "affirm",
+    "deny",
+    "abstain"
+  ],
+  "world_seed_formula": "evaluation_seed * 100003 + zero_based_world_index"
+}

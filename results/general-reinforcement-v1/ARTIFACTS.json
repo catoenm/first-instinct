@@ -1,0 +1,237 @@
+{
+  "scope": "Compact completed-run evidence; full adapters and raw forecasts are packaged separately. The forecast-decisions directory is an explicitly post-hoc analysis, not a selection criterion.",
+  "files": {
+    "cloud-collection.json": {
+      "sha256": "211c4317e253aba41c2832e11e02322c8487260276110da26b8ab6e42bb9915d",
+      "bytes": 614
+    },
+    "forecast-decisions/report.json": {
+      "sha256": "7291c97719bb281ed33015abf2adaafe8e91ecf7623fcfda43e3bfa46c710323",
+      "bytes": 87055
+    },
+    "forecast-decisions/report.md": {
+      "sha256": "4d98b42cc4beeda1f1307df3f44619e00469d301cd5e792f53c8f96561cbcdbb",
+      "bytes": 8744
+    },
+    "release.json": {
+      "sha256": "5dd8df8468aae34f6f1ff14ff84afeed970b92daa65546a0c1a88eecdbd25bb8",
+      "bytes": 5164
+    },
+    "reports/foundation-to-supervised-test/report.json": {
+      "sha256": "ed73a20c10b68d675e97e983f5eba7b467d53d99298a53f06254372f539cc610",
+      "bytes": 261442
+    },
+    "reports/foundation-to-supervised-test/report.md": {
+      "sha256": "a469cc76de9c00a26b7ad739a6c2892f6bf30047be2d2c1ae0ac109c9cf3d44a",
+      "bytes": 4385
+    },
+    "reports/supervised-to-rl-s47-hybrid-challenge/report.json": {
+      "sha256": "657c3ba8471e43d998a31a61dbf16880bb67e11ee29f1415492c1f9cea24eb55",
+      "bytes": 32044
+    },
+    "reports/supervised-to-rl-s47-hybrid-challenge/report.md": {
+      "sha256": "ae40e644dc78313b1932972c453401d5dfe304fda79ccaf0d8dcc536f21b45cd",
+      "bytes": 1942
+    },
+    "reports/supervised-to-rl-s47-hybrid-probes/report.json": {
+      "sha256": "c82ad52af139a7a7ca402d4e1abd188752701efcce238eb0295d1cfe35324f38",
+      "bytes": 28632
+    },
+    "reports/supervised-to-rl-s47-hybrid-probes/report.md": {
+      "sha256": "83387760379114e067062fd21ae8758110f4cf3d969f958094402501ae6dbff0",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s47-hybrid-probes_reversed/report.json": {
+      "sha256": "b1b93b81d90eebd5181d6e18b3e9397f60d8ab169ed02cafb92d38c9015cf576",
+      "bytes": 28670
+    },
+    "reports/supervised-to-rl-s47-hybrid-probes_reversed/report.md": {
+      "sha256": "4cf0759f4280989c0e37cee5ec06ee9062a5a8740bf5a5249ba946c97f1c2e12",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s47-hybrid-test/report.json": {
+      "sha256": "4ca5fb69a1ae71beab7486964921be0d7705b3ee383b7f76753a5b5e01794531",
+      "bytes": 126726
+    },
+    "reports/supervised-to-rl-s47-hybrid-test/report.md": {
+      "sha256": "130ae160838b645cd695697e354cb15539161a9c49df35a02f8f041345717c8b",
+      "bytes": 1949
+    },
+    "reports/supervised-to-rl-s47-reward-challenge/report.json": {
+      "sha256": "2fc6977ce87728309e4f4193bb552f292b90b1e9892534bf458dd6dd682dcf72",
+      "bytes": 32044
+    },
+    "reports/supervised-to-rl-s47-reward-challenge/report.md": {
+      "sha256": "ae40e644dc78313b1932972c453401d5dfe304fda79ccaf0d8dcc536f21b45cd",
+      "bytes": 1942
+    },
+    "reports/supervised-to-rl-s47-reward-probes/report.json": {
+      "sha256": "211937b688897733ec98b1d8c517b97725867e744e8170acf3d8f03bc98b9988",
+      "bytes": 28632
+    },
+    "reports/supervised-to-rl-s47-reward-probes/report.md": {
+      "sha256": "83387760379114e067062fd21ae8758110f4cf3d969f958094402501ae6dbff0",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s47-reward-probes_reversed/report.json": {
+      "sha256": "c8d126efd6e80b560be9cfa2641849595d78dc878c252fb4384573a56a26381b",
+      "bytes": 28670
+    },
+    "reports/supervised-to-rl-s47-reward-probes_reversed/report.md": {
+      "sha256": "4cf0759f4280989c0e37cee5ec06ee9062a5a8740bf5a5249ba946c97f1c2e12",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s47-reward-test/report.json": {
+      "sha256": "d0c4e53c3fa11dba2d523eeba3e222aa5b2fa5740f95ac89ea46de5cec910306",
+      "bytes": 126726
+    },
+    "reports/supervised-to-rl-s47-reward-test/report.md": {
+      "sha256": "130ae160838b645cd695697e354cb15539161a9c49df35a02f8f041345717c8b",
+      "bytes": 1949
+    },
+    "reports/supervised-to-rl-s53-hybrid-challenge/report.json": {
+      "sha256": "554518542a27495d4f1d457b1ed6fb4ad28be69cdb5d522a5de47abf362d0d83",
+      "bytes": 32044
+    },
+    "reports/supervised-to-rl-s53-hybrid-challenge/report.md": {
+      "sha256": "ae40e644dc78313b1932972c453401d5dfe304fda79ccaf0d8dcc536f21b45cd",
+      "bytes": 1942
+    },
+    "reports/supervised-to-rl-s53-hybrid-probes/report.json": {
+      "sha256": "a797fb3f67b515f5e583b43263cbd7f96f5347a4d700dfda6593e1a7f270e848",
+      "bytes": 28632
+    },
+    "reports/supervised-to-rl-s53-hybrid-probes/report.md": {
+      "sha256": "83387760379114e067062fd21ae8758110f4cf3d969f958094402501ae6dbff0",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s53-hybrid-probes_reversed/report.json": {
+      "sha256": "c8dbce001201bf464f747d7d07a826be15d67a008b876c4e15149993d4568d26",
+      "bytes": 28670
+    },
+    "reports/supervised-to-rl-s53-hybrid-probes_reversed/report.md": {
+      "sha256": "4cf0759f4280989c0e37cee5ec06ee9062a5a8740bf5a5249ba946c97f1c2e12",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s53-hybrid-test/report.json": {
+      "sha256": "6c7e068b97b9e903edee825a345a4000c288b711805e899af18d12ac96a92684",
+      "bytes": 126726
+    },
+    "reports/supervised-to-rl-s53-hybrid-test/report.md": {
+      "sha256": "130ae160838b645cd695697e354cb15539161a9c49df35a02f8f041345717c8b",
+      "bytes": 1949
+    },
+    "reports/supervised-to-rl-s53-reward-challenge/report.json": {
+      "sha256": "515b695bf97bd33ba8ef30d6285036e27390a466a4516b9e7be9b552c991e8bb",
+      "bytes": 34184
+    },
+    "reports/supervised-to-rl-s53-reward-challenge/report.md": {
+      "sha256": "c69ae042785f71aca76bcf63429a6dfbb35061fc5a180b7c429987fc714c9da9",
+      "bytes": 1942
+    },
+    "reports/supervised-to-rl-s53-reward-probes/report.json": {
+      "sha256": "0bdb8509184b4b323abd474386d85f5cdce24d0bb78a15c64620763e5ed7dd12",
+      "bytes": 30078
+    },
+    "reports/supervised-to-rl-s53-reward-probes/report.md": {
+      "sha256": "3296246f92ea3a6bd70b8c5dbc72ae858e3912e3887f44824d50ea83b314495e",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s53-reward-probes_reversed/report.json": {
+      "sha256": "e830992d3ee65802f6d9663c82d695a470c0c12f9d59af2bf61ea3bf101d1d2d",
+      "bytes": 30126
+    },
+    "reports/supervised-to-rl-s53-reward-probes_reversed/report.md": {
+      "sha256": "9e0d28b3be53f5834ead68454d182d3214a135a241ba879d3f988824c0431bfa",
+      "bytes": 1783
+    },
+    "reports/supervised-to-rl-s53-reward-test/report.json": {
+      "sha256": "ff80d9ab763d633391b5f960d8af09de10ffa01e5d6abf0269c2e816984377ad",
+      "bytes": 134461
+    },
+    "reports/supervised-to-rl-s53-reward-test/report.md": {
+      "sha256": "983316b1809bc18f4fe9126f13cfab1e69e5ba20cdefb3d10bb42050ea6ef259",
+      "bytes": 1949
+    },
+    "runs/rl-s47-hybrid/baseline-metrics.json": {
+      "sha256": "7f45ac019082115495b9ce5a1873e1e0362097a813e73749d91e42fdb957f2c7",
+      "bytes": 12983
+    },
+    "runs/rl-s47-hybrid/best-metrics.json": {
+      "sha256": "7f45ac019082115495b9ce5a1873e1e0362097a813e73749d91e42fdb957f2c7",
+      "bytes": 12983
+    },
+    "runs/rl-s47-hybrid/latest-metrics.json": {
+      "sha256": "c7637eb18d5956ecb93411844e41f11282750eceead4ca222c24c68dbf634008",
+      "bytes": 13018
+    },
+    "runs/rl-s47-hybrid/run.json": {
+      "sha256": "ebcf221cf0513ddc859e334d6b8d1eec00a3a71c9d4da72ac3f6f05cd9859b01",
+      "bytes": 45143
+    },
+    "runs/rl-s47-hybrid/training.jsonl": {
+      "sha256": "6beb284c84c64349126c9c25fe3ca5a7427a7da680a86c778d8f9c5cba6c1c9e",
+      "bytes": 87484
+    },
+    "runs/rl-s47-reward/baseline-metrics.json": {
+      "sha256": "7f45ac019082115495b9ce5a1873e1e0362097a813e73749d91e42fdb957f2c7",
+      "bytes": 12983
+    },
+    "runs/rl-s47-reward/best-metrics.json": {
+      "sha256": "7f45ac019082115495b9ce5a1873e1e0362097a813e73749d91e42fdb957f2c7",
+      "bytes": 12983
+    },
+    "runs/rl-s47-reward/latest-metrics.json": {
+      "sha256": "00873ba476311dc13275a380db88baee0e1bdee3595fc844a033f79276e69074",
+      "bytes": 12994
+    },
+    "runs/rl-s47-reward/run.json": {
+      "sha256": "cc411ea170499b902cb418487487be9ef6c988380bc9c35ceb081c5b3903a543",
+      "bytes": 45144
+    },
+    "runs/rl-s47-reward/training.jsonl": {
+      "sha256": "3c4c9df33dedae223df6eeda892b0f1ddbbee56227aab0687b81b9c9c69bdc1c",
+      "bytes": 84319
+    },
+    "runs/rl-s53-hybrid/baseline-metrics.json": {
+      "sha256": "7f45ac019082115495b9ce5a1873e1e0362097a813e73749d91e42fdb957f2c7",
+      "bytes": 12983
+    },
+    "runs/rl-s53-hybrid/best-metrics.json": {
+      "sha256": "7f45ac019082115495b9ce5a1873e1e0362097a813e73749d91e42fdb957f2c7",
+      "bytes": 12983
+    },
+    "runs/rl-s53-hybrid/latest-metrics.json": {
+      "sha256": "b3af62e0ef542eae0a298194a51548f3f6460282b1764f88abe5cdec95a6b4bb",
+      "bytes": 12988
+    },
+    "runs/rl-s53-hybrid/run.json": {
+      "sha256": "47db25841d48e774fcf8d4b44f242f531a48a36ff0a2eb98560c617ca1054e1c",
+      "bytes": 45142
+    },
+    "runs/rl-s53-hybrid/training.jsonl": {
+      "sha256": "424df5802e945f70d49bd6b2e9fdb3848d2ad785954f0a4462f4703c193160a4",
+      "bytes": 87323
+    },
+    "runs/rl-s53-reward/baseline-metrics.json": {
+      "sha256": "7f45ac019082115495b9ce5a1873e1e0362097a813e73749d91e42fdb957f2c7",
+      "bytes": 12983
+    },
+    "runs/rl-s53-reward/best-metrics.json": {
+      "sha256": "7179505b7d6af7074d28a43b28703a4160463a83b351b4591cf62bc60c0fe792",
+      "bytes": 12956
+    },
+    "runs/rl-s53-reward/latest-metrics.json": {
+      "sha256": "7179505b7d6af7074d28a43b28703a4160463a83b351b4591cf62bc60c0fe792",
+      "bytes": 12956
+    },
+    "runs/rl-s53-reward/run.json": {
+      "sha256": "27c8093b7cc94821da30763c0990a96bb58a7ceb806d766e80d6f560d2e2b05d",
+      "bytes": 45139
+    },
+    "runs/rl-s53-reward/training.jsonl": {
+      "sha256": "481379465499aabb583d673b0695e4b81f3544fcfea36c69c290779412f19516",
+      "bytes": 84511
+    }
+  }
+}

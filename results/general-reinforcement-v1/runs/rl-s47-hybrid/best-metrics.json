@@ -1,0 +1,386 @@
+{
+  "new_domain": {
+    "forecast": {
+      "brier": 0.13000297316980575,
+      "calibration_bins": [
+        {
+          "exact_probability": 0.06013619955975215,
+          "forecast": 0.039364722171207754,
+          "lower": 0.0,
+          "n": 41,
+          "observed": 0.024390243902439025
+        },
+        {
+          "exact_probability": 0.1607671915476698,
+          "forecast": 0.1490116637200117,
+          "lower": 0.1,
+          "n": 20,
+          "observed": 0.15
+        },
+        {
+          "exact_probability": 0.2691768337805521,
+          "forecast": 0.24509623114551818,
+          "lower": 0.2,
+          "n": 28,
+          "observed": 0.17857142857142858
+        },
+        {
+          "exact_probability": 0.36915929150186894,
+          "forecast": 0.3577722517343668,
+          "lower": 0.3,
+          "n": 13,
+          "observed": 0.46153846153846156
+        },
+        {
+          "exact_probability": 0.42485260810404263,
+          "forecast": 0.4422089031764439,
+          "lower": 0.4,
+          "n": 7,
+          "observed": 0.5714285714285714
+        },
+        {
+          "exact_probability": 0.552474395707096,
+          "forecast": 0.5492256681124369,
+          "lower": 0.5,
+          "n": 6,
+          "observed": 0.5
+        },
+        {
+          "exact_probability": 0.6165540073295072,
+          "forecast": 0.6411087427820478,
+          "lower": 0.6,
+          "n": 28,
+          "observed": 0.5714285714285714
+        },
+        {
+          "exact_probability": 0.7450164658217433,
+          "forecast": 0.753144404888153,
+          "lower": 0.7,
+          "n": 25,
+          "observed": 0.72
+        },
+        {
+          "exact_probability": 0.8398987043535256,
+          "forecast": 0.8563612332710853,
+          "lower": 0.8,
+          "n": 26,
+          "observed": 0.8076923076923077
+        },
+        {
+          "exact_probability": 0.9511922664740348,
+          "forecast": 0.9534223944910111,
+          "lower": 0.9,
+          "n": 62,
+          "observed": 0.9516129032258065
+        }
+      ],
+      "expected_calibration_error_10_bins": 0.035947276031947674,
+      "log_loss": 0.4032822447503687,
+      "mean_squared_error_to_exact_posterior": 0.0025369694898211485,
+      "n": 256,
+      "note": "Four evidence masks share each episode's outcome; rows are correlated. This is a small diagnostic, not an independent-sample confidence interval.",
+      "oracle_brier": 0.1311024873164303
+    },
+    "policy": {
+      "expected_evidence_cost": 0.1300180415883826,
+      "expected_purchases": 0.6077519491154044,
+      "expected_regret_to_oracle_planner": 0.02657704291362111,
+      "no_inspection_oracle_expected_reward": 0.1851311875,
+      "oracle_planner_expected_reward": 0.3694053273034375,
+      "oracle_planner_realized_reward": 0.465203125,
+      "policy_expected_reward": 0.3428282843898164,
+      "policy_reward": 0.4790531364622593
+    },
+    "policy_evaluation": "policy_expected_reward integrates all actions, latent events and sensor reports exactly for each scenario; selected using validation only. policy_reward integrates actions on common sampled events and reports. Evidence costs are included in both.",
+    "root_episodes": 64,
+    "split": "new_domain"
+  },
+  "shift": {
+    "forecast": {
+      "brier": 0.1680560980173779,
+      "calibration_bins": [
+        {
+          "exact_probability": 0.13371942032648748,
+          "forecast": 0.05549584231856797,
+          "lower": 0.0,
+          "n": 45,
+          "observed": 0.15555555555555556
+        },
+        {
+          "exact_probability": 0.2313670852922241,
+          "forecast": 0.1447707208139556,
+          "lower": 0.1,
+          "n": 35,
+          "observed": 0.17142857142857143
+        },
+        {
+          "exact_probability": 0.31601879271513095,
+          "forecast": 0.2410651576869628,
+          "lower": 0.2,
+          "n": 17,
+          "observed": 0.29411764705882354
+        },
+        {
+          "exact_probability": 0.4652908605282173,
+          "forecast": 0.3546024542301893,
+          "lower": 0.3,
+          "n": 16,
+          "observed": 0.25
+        },
+        {
+          "exact_probability": 0.5192004439717237,
+          "forecast": 0.4403818276795474,
+          "lower": 0.4,
+          "n": 22,
+          "observed": 0.5
+        },
+        {
+          "exact_probability": 0.5288119015219491,
+          "forecast": 0.5507654547691345,
+          "lower": 0.5,
+          "n": 12,
+          "observed": 0.4166666666666667
+        },
+        {
+          "exact_probability": 0.6787302569862947,
+          "forecast": 0.645586801899804,
+          "lower": 0.6,
+          "n": 18,
+          "observed": 0.5555555555555556
+        },
+        {
+          "exact_probability": 0.6911754095625213,
+          "forecast": 0.752256598965875,
+          "lower": 0.7,
+          "n": 29,
+          "observed": 0.7241379310344828
+        },
+        {
+          "exact_probability": 0.8022824997794443,
+          "forecast": 0.8605874274906359,
+          "lower": 0.8,
+          "n": 38,
+          "observed": 0.868421052631579
+        },
+        {
+          "exact_probability": 0.8741027657251154,
+          "forecast": 0.9393989965319633,
+          "lower": 0.9,
+          "n": 24,
+          "observed": 0.9166666666666666
+        }
+      ],
+      "expected_calibration_error_10_bins": 0.05551283663589858,
+      "log_loss": 0.5215500897683208,
+      "mean_squared_error_to_exact_posterior": 0.01509265514489397,
+      "n": 256,
+      "note": "Four evidence masks share each episode's outcome; rows are correlated. This is a small diagnostic, not an independent-sample confidence interval.",
+      "oracle_brier": 0.16515480253206205
+    },
+    "policy": {
+      "expected_evidence_cost": 0.0032285136920023826,
+      "expected_purchases": 0.4246603520836564,
+      "expected_regret_to_oracle_planner": 0.09383516874611407,
+      "no_inspection_oracle_expected_reward": 0.4065266875,
+      "oracle_planner_expected_reward": 0.419062236085875,
+      "oracle_planner_realized_reward": 0.37246874999999996,
+      "policy_expected_reward": 0.3252270673397609,
+      "policy_reward": 0.353294636856375
+    },
+    "policy_evaluation": "policy_expected_reward integrates all actions, latent events and sensor reports exactly for each scenario; selected using validation only. policy_reward integrates actions on common sampled events and reports. Evidence costs are included in both.",
+    "root_episodes": 64,
+    "split": "shift"
+  },
+  "test": {
+    "forecast": {
+      "brier": 0.15338121022386156,
+      "calibration_bins": [
+        {
+          "exact_probability": 0.054737763591762106,
+          "forecast": 0.04863772446546575,
+          "lower": 0.0,
+          "n": 58,
+          "observed": 0.05172413793103448
+        },
+        {
+          "exact_probability": 0.14830201477292412,
+          "forecast": 0.14368705451488495,
+          "lower": 0.1,
+          "n": 22,
+          "observed": 0.09090909090909091
+        },
+        {
+          "exact_probability": 0.19678513850088689,
+          "forecast": 0.24398941132757399,
+          "lower": 0.2,
+          "n": 27,
+          "observed": 0.2962962962962963
+        },
+        {
+          "exact_probability": 0.3540867977156078,
+          "forecast": 0.3513838052749634,
+          "lower": 0.3,
+          "n": 14,
+          "observed": 0.14285714285714285
+        },
+        {
+          "exact_probability": 0.4132574027494108,
+          "forecast": 0.43971583247184753,
+          "lower": 0.4,
+          "n": 17,
+          "observed": 0.29411764705882354
+        },
+        {
+          "exact_probability": 0.5027626253757153,
+          "forecast": 0.5550687776671516,
+          "lower": 0.5,
+          "n": 9,
+          "observed": 0.4444444444444444
+        },
+        {
+          "exact_probability": 0.5777041663262688,
+          "forecast": 0.6427650898694992,
+          "lower": 0.6,
+          "n": 20,
+          "observed": 0.6
+        },
+        {
+          "exact_probability": 0.734643109521055,
+          "forecast": 0.7545975617000035,
+          "lower": 0.7,
+          "n": 21,
+          "observed": 0.5714285714285714
+        },
+        {
+          "exact_probability": 0.831601084922885,
+          "forecast": 0.8485802721977234,
+          "lower": 0.8,
+          "n": 25,
+          "observed": 0.68
+        },
+        {
+          "exact_probability": 0.9514422284660389,
+          "forecast": 0.9504650290622267,
+          "lower": 0.9,
+          "n": 43,
+          "observed": 0.9069767441860465
+        }
+      ],
+      "expected_calibration_error_10_bins": 0.07784737557449262,
+      "log_loss": 0.4665914191468112,
+      "mean_squared_error_to_exact_posterior": 0.002760179715351439,
+      "n": 256,
+      "note": "Four evidence masks share each episode's outcome; rows are correlated. This is a small diagnostic, not an independent-sample confidence interval.",
+      "oracle_brier": 0.1520052799555726
+    },
+    "policy": {
+      "expected_evidence_cost": 0.13997677063088326,
+      "expected_purchases": 0.5343301725330107,
+      "expected_regret_to_oracle_planner": 0.042329219575806376,
+      "no_inspection_oracle_expected_reward": 0.153754125,
+      "oracle_planner_expected_reward": 0.3133287157414375,
+      "oracle_planner_realized_reward": 0.009453124999999984,
+      "policy_expected_reward": 0.2709994961656311,
+      "policy_reward": -0.0012699895592874163
+    },
+    "policy_evaluation": "policy_expected_reward integrates all actions, latent events and sensor reports exactly for each scenario; selected using validation only. policy_reward integrates actions on common sampled events and reports. Evidence costs are included in both.",
+    "root_episodes": 64,
+    "split": "test"
+  },
+  "validation": {
+    "forecast": {
+      "brier": 0.11162594764437483,
+      "calibration_bins": [
+        {
+          "exact_probability": 0.05845296818889556,
+          "forecast": 0.04649201267379887,
+          "lower": 0.0,
+          "n": 49,
+          "observed": 0.04081632653061224
+        },
+        {
+          "exact_probability": 0.16598478139840914,
+          "forecast": 0.14101633535964148,
+          "lower": 0.1,
+          "n": 21,
+          "observed": 0.14285714285714285
+        },
+        {
+          "exact_probability": 0.2616240539203239,
+          "forecast": 0.24494622126221657,
+          "lower": 0.2,
+          "n": 20,
+          "observed": 0.3
+        },
+        {
+          "exact_probability": 0.33506727481678256,
+          "forecast": 0.348963269165584,
+          "lower": 0.3,
+          "n": 21,
+          "observed": 0.3333333333333333
+        },
+        {
+          "exact_probability": 0.4652358759293827,
+          "forecast": 0.4581134294470151,
+          "lower": 0.4,
+          "n": 12,
+          "observed": 0.5833333333333334
+        },
+        {
+          "exact_probability": 0.5428306346690351,
+          "forecast": 0.5581836501757304,
+          "lower": 0.5,
+          "n": 15,
+          "observed": 0.4666666666666667
+        },
+        {
+          "exact_probability": 0.6493871842921861,
+          "forecast": 0.6548215746879578,
+          "lower": 0.6,
+          "n": 18,
+          "observed": 0.7222222222222222
+        },
+        {
+          "exact_probability": 0.7402923118550417,
+          "forecast": 0.7541746407747268,
+          "lower": 0.7,
+          "n": 20,
+          "observed": 0.85
+        },
+        {
+          "exact_probability": 0.8562777569851436,
+          "forecast": 0.8609980594727301,
+          "lower": 0.8,
+          "n": 31,
+          "observed": 0.9354838709677419
+        },
+        {
+          "exact_probability": 0.9612494029812906,
+          "forecast": 0.957615678407708,
+          "lower": 0.9,
+          "n": 49,
+          "observed": 1.0
+        }
+      ],
+      "expected_calibration_error_10_bins": 0.04741044593538389,
+      "log_loss": 0.3589463316534133,
+      "mean_squared_error_to_exact_posterior": 0.0020588952694746963,
+      "n": 256,
+      "note": "Four evidence masks share each episode's outcome; rows are correlated. This is a small diagnostic, not an independent-sample confidence interval.",
+      "oracle_brier": 0.11097297367583102
+    },
+    "policy": {
+      "expected_evidence_cost": 0.12420511274006198,
+      "expected_purchases": 0.49064093369819667,
+      "expected_regret_to_oracle_planner": 0.03796067713795289,
+      "no_inspection_oracle_expected_reward": 0.09717731249999999,
+      "oracle_planner_expected_reward": 0.235674728689375,
+      "oracle_planner_realized_reward": 0.349484375,
+      "policy_expected_reward": 0.19771405155142213,
+      "policy_reward": 0.3460055481796129
+    },
+    "policy_evaluation": "policy_expected_reward integrates all actions, latent events and sensor reports exactly for each scenario; selected using validation only. policy_reward integrates actions on common sampled events and reports. Evidence costs are included in both.",
+    "root_episodes": 64,
+    "split": "validation"
+  }
+}

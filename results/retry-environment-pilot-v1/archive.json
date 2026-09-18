@@ -1,0 +1,42 @@
+{
+  "schema": "first-instinct-retry-pilot-archive-v1",
+  "archive_name": "first-instinct-retry-pilot-v1.tar.gz",
+  "archive_bytes": 1832058,
+  "archive_sha256": "31b3db5a530de3c8da0a95463347b75cb83d2ef95634ad5c94e9a2cd93ef69a6",
+  "directory_name": "retry-environment-pilot-reviewed-v1",
+  "files": {
+    "LICENSE": {
+      "bytes": 1072,
+      "sha256": "fd2cb7d24e58482c5686f1d0123095aab6ad44140d963e464ecd46046e72736c"
+    },
+    "README.md": {
+      "bytes": 1085,
+      "sha256": "749b8e3b5cac7ac3fdfdd20d609552a47847451870da1a6e86f6138079adeffc"
+    },
+    "counterfactual_audit.jsonl": {
+      "bytes": 2142942,
+      "sha256": "5aac92c7ff8f0e564c50c1e75207177642e48ec18efbafd956e03f843b471aa6"
+    },
+    "exploration.jsonl": {
+      "bytes": 11137672,
+      "sha256": "7ad1e37ffabafbf26be74433d640a81db4533898febcac5f3260a2f07c4d1b93"
+    },
+    "forecast_examples.jsonl": {
+      "bytes": 16148445,
+      "sha256": "f52e2b10c1f0d5fbd899038ad2a87bae40bba6b20176a198ec5fc2655759c3fa"
+    },
+    "forecast_replay.jsonl": {
+      "bytes": 7654813,
+      "sha256": "3fb33f962b7f6079773add00973199384ef25c553431a0c04f8c79805017e535"
+    },
+    "summary.json": {
+      "bytes": 1471,
+      "sha256": "d45c01a1f5fde13dadde64b452ead85693d3f422dc44941569c526103b86dab2"
+    },
+    "verification.json": {
+      "bytes": 785,
+      "sha256": "96295d1942358a0c556b994895c05393171f1c4dfa506c323d3024bea6d96351"
+    }
+  },
+  "scope": "Authored synthetic data pilot; no model training or evaluation."
+}

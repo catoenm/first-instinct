@@ -4,8 +4,10 @@ Measured on 18 September 2026. The completed supervised adaptation improves
 the aggregate held-out scores, especially on generated worlds from familiar
 families. Transfer to reserved compositions is weaker, several public sources
 regress, and the small prose probe set gives limited evidence of improvement.
-The reinforcement-learning comparison is still running; this page contains
-only the untouched foundation and the selected supervised checkpoint.
+The [completed reinforcement-learning comparison](general-reinforcement-results.md)
+did not reliably improve held-out decisions. This page contains only the
+untouched foundation and the selected supervised checkpoint, which remains
+the demo's default model.
 
 Both models use the same constrained, single-forward-pass interface: read the
 state, question and supplied options, then score choice labels without generating
@@ -186,7 +188,7 @@ Planner-action agreement alone does not measure achieved reward over an
 interactive episode. Domain wordings share one environment mechanism;
 neither these forecasts nor the prose probes establish calibration across
 arbitrary user questions. Reward and posterior-error comparisons belong to
-the still-pending reinforcement-learning evaluation.
+the [completed reinforcement-learning evaluation](general-reinforcement-results.md).
 
 ## Evidence and reproducibility
 

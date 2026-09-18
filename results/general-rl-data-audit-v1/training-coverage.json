@@ -1,0 +1,67 @@
+{
+  "scope": "Training-world coverage audit; no held-out examples or model inference",
+  "code_sha256": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+  "generation": {
+    "updates": 100,
+    "episodes_per_update": 64,
+    "seed_formula": "training_seed * 10**8 + update * episodes_per_update + index; update starts at 1"
+  },
+  "seeds": {
+    "47": {
+      "worlds": 6400,
+      "optimal_root_action_counts": {
+        "inspect_1": 1725,
+        "deny": 1179,
+        "abstain": 573,
+        "affirm": 1167,
+        "inspect_0": 1756
+      },
+      "domains": {
+        "orchard": 782,
+        "recycling": 831,
+        "greenhouse": 777,
+        "mailroom": 787,
+        "library": 791,
+        "bakery": 850,
+        "maintenance": 788,
+        "warehouse": 794
+      },
+      "positive_information_value_worlds": 3481,
+      "mean_information_value": 0.1512560494080703,
+      "small_top_action_margin_under_0_02": 417,
+      "information_value_over_0_1": 2740,
+      "prior_range": [
+        0.15,
+        0.85
+      ]
+    },
+    "53": {
+      "worlds": 6400,
+      "optimal_root_action_counts": {
+        "inspect_0": 1779,
+        "deny": 1142,
+        "inspect_1": 1719,
+        "affirm": 1152,
+        "abstain": 608
+      },
+      "domains": {
+        "greenhouse": 775,
+        "maintenance": 775,
+        "library": 777,
+        "bakery": 830,
+        "orchard": 777,
+        "recycling": 750,
+        "warehouse": 844,
+        "mailroom": 872
+      },
+      "positive_information_value_worlds": 3498,
+      "mean_information_value": 0.15393842144230951,
+      "small_top_action_margin_under_0_02": 444,
+      "information_value_over_0_1": 2792,
+      "prior_range": [
+        0.15,
+        0.85
+      ]
+    }
+  }
+}

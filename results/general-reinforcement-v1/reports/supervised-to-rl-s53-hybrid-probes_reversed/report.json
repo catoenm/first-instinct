@@ -1,0 +1,836 @@
+{
+  "bootstrap": {
+    "method": "paired percentile cluster bootstrap; complete group/world resampling",
+    "resamples": 1000,
+    "seed": 41
+  },
+  "general": {
+    "contract": {
+      "brier": "Multiclass sum of squared probabilities against a one-hot target, range [0,2]. Only rows with exactly one accepted answer are eligible; this is not binary event Brier.",
+      "log_loss_floor": 1e-12,
+      "paired_on": [
+        "id",
+        "group_id",
+        "task",
+        "target_ids_set",
+        "option_ids_set"
+      ],
+      "probability_note": "Probabilities are conditional on the supplied option set. A multiple-acceptable-answer set does not define a probability distribution over mutually exclusive outcomes."
+    },
+    "overall": {
+      "by_task": {
+        "probe_attribution_scope": {
+          "base": {
+            "acceptable_set_log_loss": 0.3780086072287646,
+            "accuracy": 0.75,
+            "single_label_multiclass_brier": 0.2783920051231521
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.3780086072287646,
+            "accuracy": 0.75,
+            "single_label_multiclass_brier": 0.2783920051231521
+          }
+        },
+        "probe_causal_evidence": {
+          "base": {
+            "acceptable_set_log_loss": 0.008017542066754453,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.00012609178906107413
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.008017542066754453,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.00012609178906107413
+          }
+        },
+        "probe_delegated_authority": {
+          "base": {
+            "acceptable_set_log_loss": 0.016565474364755067,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.001918742420620891
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.016565474364755067,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.001918742420620891
+          }
+        },
+        "probe_document_factchecks": {
+          "base": {
+            "acceptable_set_log_loss": 0.013690793678110288,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.0005864195173113855
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.013690793678110288,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.0005864195173113855
+          }
+        },
+        "probe_evidence_conflicts": {
+          "base": {
+            "acceptable_set_log_loss": 0.003369861966555965,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 2.3943048711834324e-05
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.003369861966555965,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 2.3943048711834324e-05
+          }
+        },
+        "probe_idempotent_actions": {
+          "base": {
+            "acceptable_set_log_loss": 0.024203498591718865,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.0013365885180418276
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.024203498591718865,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.0013365885180418276
+          }
+        },
+        "probe_information_freshness": {
+          "base": {
+            "acceptable_set_log_loss": 0.008373192592234005,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.00032650534106301566
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.008373192592234005,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.00032650534106301566
+          }
+        },
+        "probe_missing_evidence_actions": {
+          "base": {
+            "acceptable_set_log_loss": 0.010097597954339477,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.00039880834512160085
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.010097597954339477,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.00039880834512160085
+          }
+        },
+        "probe_negated_criteria": {
+          "base": {
+            "acceptable_set_log_loss": 1.5280754707248176,
+            "accuracy": 0.75,
+            "single_label_multiclass_brier": 0.4977868814051195
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 1.5280754707248176,
+            "accuracy": 0.75,
+            "single_label_multiclass_brier": 0.4977868814051195
+          }
+        },
+        "probe_novel_categories": {
+          "base": {
+            "acceptable_set_log_loss": 0.05659354613543131,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.018231491832926276
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.05659354613543131,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.018231491832926276
+          }
+        },
+        "probe_ordinal_rubrics": {
+          "base": {
+            "acceptable_set_log_loss": 0.4745351780939179,
+            "accuracy": 0.75,
+            "single_label_multiclass_brier": 0.3228049177130157
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.4745351780939179,
+            "accuracy": 0.75,
+            "single_label_multiclass_brier": 0.3228049177130157
+          }
+        },
+        "probe_policy_exceptions": {
+          "base": {
+            "acceptable_set_log_loss": 0.07144201446631956,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.01517372284833705
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.07144201446631956,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.01517372284833705
+          }
+        },
+        "probe_prose_scheduling": {
+          "base": {
+            "acceptable_set_log_loss": 1.3354819562575935,
+            "accuracy": 0.5,
+            "single_label_multiclass_brier": 0.572210730446436
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 1.3354819562575935,
+            "accuracy": 0.5,
+            "single_label_multiclass_brier": 0.572210730446436
+          }
+        },
+        "probe_quoted_intent": {
+          "base": {
+            "acceptable_set_log_loss": 0.016613862305418076,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.0007297026255416364
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.016613862305418076,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.0007297026255416364
+          }
+        },
+        "probe_resource_plans": {
+          "base": {
+            "acceptable_set_log_loss": 0.1639369062619208,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.08028835830849027
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.1639369062619208,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.08028835830849027
+          }
+        },
+        "probe_tool_prerequisites": {
+          "base": {
+            "acceptable_set_log_loss": 0.04226434779770342,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.006062600235189114
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "groups": 2,
+          "rows": 4,
+          "single_label_rows": 4,
+          "trained": {
+            "acceptable_set_log_loss": 0.04226434779770342,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.006062600235189114
+          }
+        }
+      },
+      "group_complete_accuracy": {
+        "base": 0.84375,
+        "difference": 0.0,
+        "group_size_distribution": {
+          "2": 32
+        },
+        "groups": 32,
+        "note": "A group is correct only when every evaluated row in that group is correct within this report scope. Groups have equal weight; two-row groups measure both members correct.",
+        "trained": 0.84375
+      },
+      "groups": 32,
+      "macro_task": {
+        "base": {
+          "acceptable_set_log_loss": 0.2594543656553972,
+          "accuracy": 0.921875,
+          "single_label_multiclass_brier": 0.1122748443448837
+        },
+        "brier_eligible_tasks": 16,
+        "difference": {
+          "acceptable_set_log_loss": 0.0,
+          "accuracy": 0.0,
+          "single_label_multiclass_brier": 0.0
+        },
+        "note": "Each task has equal weight. These are descriptive means; bootstrap intervals above estimate row-weighted changes.",
+        "trained": {
+          "acceptable_set_log_loss": 0.2594543656553972,
+          "accuracy": 0.921875,
+          "single_label_multiclass_brier": 0.1122748443448837
+        }
+      },
+      "multi_answer_rows": 0,
+      "row_weighted": {
+        "base": {
+          "acceptable_set_log_loss": 0.25945436565539715,
+          "accuracy": 0.921875,
+          "single_label_multiclass_brier": 0.1122748443448837
+        },
+        "paired_group_bootstrap": {
+          "acceptable_set_log_loss": {
+            "difference": 0.0,
+            "groups": 32,
+            "lower_95": 0.0,
+            "resamples": 1000,
+            "rows": 64,
+            "single_group_interval_is_uninformative": false,
+            "upper_95": 0.0
+          },
+          "accuracy": {
+            "difference": 0.0,
+            "groups": 32,
+            "lower_95": 0.0,
+            "resamples": 1000,
+            "rows": 64,
+            "single_group_interval_is_uninformative": false,
+            "upper_95": 0.0
+          },
+          "single_label_multiclass_brier": {
+            "difference": 0.0,
+            "groups": 32,
+            "lower_95": 0.0,
+            "resamples": 1000,
+            "rows": 64,
+            "single_group_interval_is_uninformative": false,
+            "upper_95": 0.0
+          }
+        },
+        "trained": {
+          "acceptable_set_log_loss": 0.25945436565539715,
+          "accuracy": 0.921875,
+          "single_label_multiclass_brier": 0.1122748443448837
+        }
+      },
+      "rows": 64,
+      "single_label_rows": 64,
+      "tasks": 16
+    },
+    "shared_world_audit": {
+      "groups": 32,
+      "groups_spanning_multiple_tasks": 0,
+      "maximum_rows_per_group": 2,
+      "maximum_tasks_per_group": 1
+    },
+    "subgroups": {
+      "other": {
+        "by_task": {
+          "probe_attribution_scope": {
+            "base": {
+              "acceptable_set_log_loss": 0.3780086072287646,
+              "accuracy": 0.75,
+              "single_label_multiclass_brier": 0.2783920051231521
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.3780086072287646,
+              "accuracy": 0.75,
+              "single_label_multiclass_brier": 0.2783920051231521
+            }
+          },
+          "probe_causal_evidence": {
+            "base": {
+              "acceptable_set_log_loss": 0.008017542066754453,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.00012609178906107413
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.008017542066754453,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.00012609178906107413
+            }
+          },
+          "probe_delegated_authority": {
+            "base": {
+              "acceptable_set_log_loss": 0.016565474364755067,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.001918742420620891
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.016565474364755067,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.001918742420620891
+            }
+          },
+          "probe_document_factchecks": {
+            "base": {
+              "acceptable_set_log_loss": 0.013690793678110288,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.0005864195173113855
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.013690793678110288,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.0005864195173113855
+            }
+          },
+          "probe_evidence_conflicts": {
+            "base": {
+              "acceptable_set_log_loss": 0.003369861966555965,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 2.3943048711834324e-05
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.003369861966555965,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 2.3943048711834324e-05
+            }
+          },
+          "probe_idempotent_actions": {
+            "base": {
+              "acceptable_set_log_loss": 0.024203498591718865,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.0013365885180418276
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.024203498591718865,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.0013365885180418276
+            }
+          },
+          "probe_information_freshness": {
+            "base": {
+              "acceptable_set_log_loss": 0.008373192592234005,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.00032650534106301566
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.008373192592234005,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.00032650534106301566
+            }
+          },
+          "probe_missing_evidence_actions": {
+            "base": {
+              "acceptable_set_log_loss": 0.010097597954339477,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.00039880834512160085
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.010097597954339477,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.00039880834512160085
+            }
+          },
+          "probe_negated_criteria": {
+            "base": {
+              "acceptable_set_log_loss": 1.5280754707248176,
+              "accuracy": 0.75,
+              "single_label_multiclass_brier": 0.4977868814051195
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 1.5280754707248176,
+              "accuracy": 0.75,
+              "single_label_multiclass_brier": 0.4977868814051195
+            }
+          },
+          "probe_novel_categories": {
+            "base": {
+              "acceptable_set_log_loss": 0.05659354613543131,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.018231491832926276
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.05659354613543131,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.018231491832926276
+            }
+          },
+          "probe_ordinal_rubrics": {
+            "base": {
+              "acceptable_set_log_loss": 0.4745351780939179,
+              "accuracy": 0.75,
+              "single_label_multiclass_brier": 0.3228049177130157
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.4745351780939179,
+              "accuracy": 0.75,
+              "single_label_multiclass_brier": 0.3228049177130157
+            }
+          },
+          "probe_policy_exceptions": {
+            "base": {
+              "acceptable_set_log_loss": 0.07144201446631956,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.01517372284833705
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.07144201446631956,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.01517372284833705
+            }
+          },
+          "probe_prose_scheduling": {
+            "base": {
+              "acceptable_set_log_loss": 1.3354819562575935,
+              "accuracy": 0.5,
+              "single_label_multiclass_brier": 0.572210730446436
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 1.3354819562575935,
+              "accuracy": 0.5,
+              "single_label_multiclass_brier": 0.572210730446436
+            }
+          },
+          "probe_quoted_intent": {
+            "base": {
+              "acceptable_set_log_loss": 0.016613862305418076,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.0007297026255416364
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.016613862305418076,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.0007297026255416364
+            }
+          },
+          "probe_resource_plans": {
+            "base": {
+              "acceptable_set_log_loss": 0.1639369062619208,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.08028835830849027
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.1639369062619208,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.08028835830849027
+            }
+          },
+          "probe_tool_prerequisites": {
+            "base": {
+              "acceptable_set_log_loss": 0.04226434779770342,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.006062600235189114
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.0,
+              "accuracy": 0.0,
+              "single_label_multiclass_brier": 0.0
+            },
+            "groups": 2,
+            "rows": 4,
+            "single_label_rows": 4,
+            "trained": {
+              "acceptable_set_log_loss": 0.04226434779770342,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.006062600235189114
+            }
+          }
+        },
+        "group_complete_accuracy": {
+          "base": 0.84375,
+          "difference": 0.0,
+          "group_size_distribution": {
+            "2": 32
+          },
+          "groups": 32,
+          "note": "A group is correct only when every evaluated row in that group is correct within this report scope. Groups have equal weight; two-row groups measure both members correct.",
+          "trained": 0.84375
+        },
+        "groups": 32,
+        "macro_task": {
+          "base": {
+            "acceptable_set_log_loss": 0.2594543656553972,
+            "accuracy": 0.921875,
+            "single_label_multiclass_brier": 0.1122748443448837
+          },
+          "brier_eligible_tasks": 16,
+          "difference": {
+            "acceptable_set_log_loss": 0.0,
+            "accuracy": 0.0,
+            "single_label_multiclass_brier": 0.0
+          },
+          "note": "Each task has equal weight. These are descriptive means; bootstrap intervals above estimate row-weighted changes.",
+          "trained": {
+            "acceptable_set_log_loss": 0.2594543656553972,
+            "accuracy": 0.921875,
+            "single_label_multiclass_brier": 0.1122748443448837
+          }
+        },
+        "multi_answer_rows": 0,
+        "row_weighted": {
+          "base": {
+            "acceptable_set_log_loss": 0.25945436565539715,
+            "accuracy": 0.921875,
+            "single_label_multiclass_brier": 0.1122748443448837
+          },
+          "paired_group_bootstrap": {
+            "acceptable_set_log_loss": {
+              "difference": 0.0,
+              "groups": 32,
+              "lower_95": 0.0,
+              "resamples": 1000,
+              "rows": 64,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": 0.0
+            },
+            "accuracy": {
+              "difference": 0.0,
+              "groups": 32,
+              "lower_95": 0.0,
+              "resamples": 1000,
+              "rows": 64,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": 0.0
+            },
+            "single_label_multiclass_brier": {
+              "difference": 0.0,
+              "groups": 32,
+              "lower_95": 0.0,
+              "resamples": 1000,
+              "rows": 64,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": 0.0
+            }
+          },
+          "trained": {
+            "acceptable_set_log_loss": 0.25945436565539715,
+            "accuracy": 0.921875,
+            "single_label_multiclass_brier": 0.1122748443448837
+          }
+        },
+        "rows": 64,
+        "single_label_rows": 64,
+        "tasks": 16
+      }
+    }
+  },
+  "inputs": {
+    "base": "/workspace/general-v1/evaluations/supervised/probes_reversed-predictions.jsonl",
+    "base_sha256": "78f8152cd7ecb30efa09859b053ac333b9eef727b6f17f4217b3c44ea65843a2",
+    "evaluation_receipts": {},
+    "same_data_receipt_verified": false,
+    "trained": "/workspace/general-v1/evaluations/rl-s53-hybrid/probes_reversed-predictions.jsonl",
+    "trained_sha256": "78f8152cd7ecb30efa09859b053ac333b9eef727b6f17f4217b3c44ea65843a2"
+  },
+  "schema": "first-instinct-paired-report-v1"
+}

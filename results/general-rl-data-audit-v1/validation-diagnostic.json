@@ -1,0 +1,117 @@
+{
+  "scope": "Training and validation diagnostics only. No held-out selection or new training.",
+  "observed_at": 1789708479.274391,
+  "snapshot_sha256": "25f018d507e17dad2ca8bc2278e5e3c3302b250135170d85d5ff68ae2ab7711b",
+  "environment_code_sha256": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+  "reinforcement_code_sha256": "ff955479d9ad3138252c96c57ffa9c1b09ac83627c5e51ca4e73a2d5aac9618a",
+  "runs": {
+    "rl-s47-hybrid": {
+      "status": "complete",
+      "selected_update": 0,
+      "recorded_updates": 100,
+      "validation_update": 100,
+      "baseline_validation": {
+        "expected_reward": 0.19771405155142213,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.0020588952694746963,
+        "event_brier": 0.11162594764437483,
+        "event_log_loss": 0.3589463316534133,
+        "root_worlds": 64
+      },
+      "latest_validation": {
+        "expected_reward": 0.17792503255413047,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.002927683853643052,
+        "event_brier": 0.1147919025778187,
+        "event_log_loss": 0.36481050550349886,
+        "root_worlds": 64
+      },
+      "recorded_optimizer_steps": 200,
+      "steps_with_gradient_norm_above_clip_1": 200,
+      "max_approximate_policy_divergence": 0.012367461497584976,
+      "max_clip_fraction": 0.11458333333333334,
+      "nonfinite_training_metrics": 0
+    },
+    "rl-s47-reward": {
+      "status": "complete",
+      "selected_update": 0,
+      "recorded_updates": 100,
+      "validation_update": 100,
+      "baseline_validation": {
+        "expected_reward": 0.19771405155142213,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.0020588952694746963,
+        "event_brier": 0.11162594764437483,
+        "event_log_loss": 0.3589463316534133,
+        "root_worlds": 64
+      },
+      "latest_validation": {
+        "expected_reward": 0.17194420928900836,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.008592994723775173,
+        "event_brier": 0.11371557232369088,
+        "event_log_loss": 0.36651134392412665,
+        "root_worlds": 64
+      },
+      "recorded_optimizer_steps": 200,
+      "steps_with_gradient_norm_above_clip_1": 200,
+      "max_approximate_policy_divergence": 0.013415938442475748,
+      "max_clip_fraction": 0.09375,
+      "nonfinite_training_metrics": 0
+    },
+    "rl-s53-hybrid": {
+      "status": "complete",
+      "selected_update": 0,
+      "recorded_updates": 100,
+      "validation_update": 100,
+      "baseline_validation": {
+        "expected_reward": 0.19771405155142213,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.0020588952694746963,
+        "event_brier": 0.11162594764437483,
+        "event_log_loss": 0.3589463316534133,
+        "root_worlds": 64
+      },
+      "latest_validation": {
+        "expected_reward": 0.18367081727863943,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.002445752927632427,
+        "event_brier": 0.11415017293878253,
+        "event_log_loss": 0.36822515717403026,
+        "root_worlds": 64
+      },
+      "recorded_optimizer_steps": 200,
+      "steps_with_gradient_norm_above_clip_1": 200,
+      "max_approximate_policy_divergence": 0.03169560606513068,
+      "max_clip_fraction": 0.16822429934394692,
+      "nonfinite_training_metrics": 0
+    },
+    "rl-s53-reward": {
+      "status": "complete",
+      "selected_update": 100,
+      "recorded_updates": 100,
+      "validation_update": 100,
+      "baseline_validation": {
+        "expected_reward": 0.19771405155142213,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.0020588952694746963,
+        "event_brier": 0.11162594764437483,
+        "event_log_loss": 0.3589463316534133,
+        "root_worlds": 64
+      },
+      "latest_validation": {
+        "expected_reward": 0.20193201586693663,
+        "oracle_expected_reward": 0.235674728689375,
+        "squared_error_to_exact_posterior": 0.006066697085415903,
+        "event_brier": 0.11620087529061396,
+        "event_log_loss": 0.36902671653960134,
+        "root_worlds": 64
+      },
+      "recorded_optimizer_steps": 200,
+      "steps_with_gradient_norm_above_clip_1": 200,
+      "max_approximate_policy_divergence": 0.03370691633948655,
+      "max_clip_fraction": 0.16822429934394692,
+      "nonfinite_training_metrics": 0
+    }
+  }
+}

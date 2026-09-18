@@ -1,0 +1,44 @@
+{
+  "code_sha256": "b8c18307479c88ee99d730948ff2daa71337f15fc50758eaceeff2e3cb5f5de6",
+  "counterfactual_audit": {
+    "no": 223,
+    "rows": 748,
+    "sum_probabilities_above_one": 194,
+    "worlds": 200,
+    "yes": 525
+  },
+  "exploration_action_counts": {
+    "abstain": 1135,
+    "lookup": 847,
+    "retry": 888,
+    "wait": 1169
+  },
+  "exploration_final_completions": {
+    "one": 1325,
+    "two": 184,
+    "zero": 491
+  },
+  "files": {
+    "counterfactual_audit.jsonl": "5aac92c7ff8f0e564c50c1e75207177642e48ec18efbafd956e03f843b471aa6",
+    "exploration.jsonl": "7ad1e37ffabafbf26be74433d640a81db4533898febcac5f3260a2f07c4d1b93",
+    "forecast_examples.jsonl": "f52e2b10c1f0d5fbd899038ad2a87bae40bba6b20176a198ec5fc2655759c3fa",
+    "forecast_replay.jsonl": "3fb33f962b7f6079773add00973199384ef25c553431a0c04f8c79805017e535"
+  },
+  "forecast_examples": {
+    "no": 2439,
+    "rows": 7347,
+    "yes": 4908
+  },
+  "forecast_target": "Execute the offered action, then no more requests; exactly one completion at the stated deadline.",
+  "grouping": "Public configuration content hash; all hidden draws and actions retain its split ownership.",
+  "labels": "Executed binary outcomes from independent conditional draws; exact probabilities occur only in evaluation-only audit rows.",
+  "seed": 41,
+  "split_worlds": {
+    "test": 180,
+    "train": 1630,
+    "validation": 190
+  },
+  "sqlite_version": "3.53.4",
+  "version": "sqlite-retry-pilot-v1",
+  "worlds": 2000
+}
