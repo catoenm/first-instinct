@@ -23,6 +23,8 @@ with and without an observed-outcome forecasting loss in the same language
 network. The full supervised run is underway; measured held-out results and
 language-model reinforcement-learning results are pending. The released model
 and browser demo below remain the earlier software experiment.
+An optional [TensorBoard monitor](docs/training-monitor.md) reads the existing
+logs without restarting the training process.
 
 First Instinct explores a practical question: **when should a model gather more
 evidence before making a decision?** A four-billion-parameter forecaster reads
