@@ -1,0 +1,89 @@
+{
+  "adapter_files_sha256": {
+    "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+    "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+    "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472"
+  },
+  "adapter_run": "/Users/mitchell/Documents/workspace/ml-data/output/general-supervised-complete-v1/runs/supervised-01",
+  "code_sha256": {
+    "docs/toolsandbox-transfer-local-v1-protocol.md": "5254f4f6be36f88d7e53c3c892266d3d4576c8b2856462d6f00714a747017816",
+    "docs/toolsandbox-transfer-v1-protocol.md": "fb2982236727ecdbba9e46f9ca15e477c11c300807a4dd05e5c6ed9faed99c75",
+    "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+    "general_lab/robustness.py": "653ff8cdc34a1e935638ef40725513c8dde57f5d6223d61acb39d3fcaddcaa8c",
+    "general_lab/robustness_local.py": "586ddecc34828564cf8f2937cdf791a925b39a87ebb4963164e1364743596bd1",
+    "general_lab/serve.py": "5b4956df967bd056dbdbcc16a4beaad41a0d9667133249fef6995e0c98c9ef0d",
+    "general_lab/toolsandbox_transfer.py": "69c824396d758788a3a1439f66de1e17a042e89731efbb5db7781bcacbd13ccc",
+    "general_lab/toolsandbox_transfer_local.py": "aea3585a5c8f66b1473d45c497ee8bf2e91b0e0544332e541fe382bc952f40b1",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+    "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689",
+    "test_toolsandbox_transfer.py": "e3253ff70b7c12a326033dce3d5f9b21bf646af46a47db39726a2cb9b11c84d6",
+    "test_toolsandbox_transfer_local.py": "0e46d44e5f10ce1d29fd963ff15dfaa5b4f43e9d32bf95be2134544bcf05654f"
+  },
+  "content_sha256": "5226aa9222813cea65b1ab5535ac92264ebecf21ace790d86e9eeb9600e4434b",
+  "corpus_folder": "/Users/mitchell/Documents/workspace/ml-data/results/toolsandbox-partial-v1",
+  "corpus_sha256": {
+    "artifact-audit.json": "9e1b2ecfa91a0115a4bf2d9d9c1102c36ea1f226c699e1968f3e01b057651964",
+    "budget-ledger.jsonl": "b184493b6c62da5c5ee0db55fc2b41fb9cdb4c5269c9603c6ca91eb3fae73c75",
+    "collected/executions.jsonl": "64583598336c1872d44a4eee68c511bdb6e92bd0b998947f29c167db6d04158b",
+    "collected/forecasts.jsonl": "1e2866af14d7b1af192ba5533e4f2239ec56d251000e7b243bc24e986ba1e289",
+    "collected/manifest.json": "8f23bdc18ba71f38dbde75cef6231f87585a6716953a249e3f13c481f6e0dc32",
+    "freeze.json": "8dd4cad766f6434cc86034561d245e1f051170cdc425d42aadf1eccb97e1b258",
+    "guards-final.json": "19219ca9dad807bc98f4a042a12d79f3e2d274f8340c35963c5f928f6bb1e589",
+    "post-collection-review.json": "8437a008d03957c1c1ad644bbbcaa3edd8544f43cf1c059c1e460ba50e37b296",
+    "prompt-audit-final.json": "46a7989a0f724a034964e3de7265e8db8af23e11f19bbf4a76766f9c176e44a5",
+    "public-questions.jsonl": "ee94783a131a12857771c0c99f77e010189346bd48ea498cddf949eefff07773",
+    "review.json": "45684a1e09e5094aca9d8d9b84ef9c3d2116f7f0e9fb7ff3c2d94bf4c0da97be"
+  },
+  "created_at_unix": 1789716900.074186,
+  "expected_server_metadata": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "model_inference": false,
+  "packages": {
+    "huggingface-hub": "1.31.0",
+    "peft": "0.21.0",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.23.2",
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  },
+  "prompt_provenance": {
+    "audit_sha256": "46a7989a0f724a034964e3de7265e8db8af23e11f19bbf4a76766f9c176e44a5",
+    "known_singletons": 144,
+    "max_options": 22,
+    "max_tokens": 1458,
+    "min_tokens": 1078,
+    "model_questions": 720,
+    "tokenizer": "/Users/mitchell/.cache/huggingface/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "tokenizer_files": {
+      "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    }
+  },
+  "question_mapping_sha256": "5ff7f2623140cccddf7da9549fa870377f989e3f7b478a5e60dcea56c163c454",
+  "reference_sha256": "cbbc4cd9962f3049a87e43a8eeae811688eaaba9df14edd23c1d9e3a5b91786e",
+  "schema": "toolsandbox-transfer-supervised-local-v1",
+  "scope": "No-training supplementary transfer diagnostic on one authored mechanism. Checkpoint locked before predictions; no tuning or promotion from this corpus.",
+  "selection_role": "none",
+  "settings": {
+    "batch_size": 16,
+    "http_timeout_seconds": 60,
+    "max_wall_seconds": 5400,
+    "model_calls": 720,
+    "port": 8766,
+    "retries": 0
+  }
+}
