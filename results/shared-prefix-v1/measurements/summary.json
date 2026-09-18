@@ -1,0 +1,53 @@
+{
+  "comparisons": {
+    "1": {
+      "uncached_seconds": [
+        1.546076541999355,
+        1.607129291005549,
+        1.6466086669970537
+      ],
+      "cached_seconds": [
+        1.5817388330033282,
+        1.605304333003005,
+        1.6430174580018502
+      ],
+      "median_speedup": 1.0011368299237877
+    },
+    "3": {
+      "uncached_seconds": [
+        4.764693457997055,
+        4.8400065830064705,
+        4.900093916003243
+      ],
+      "cached_seconds": [
+        2.2416476660000626,
+        2.2667323750065407,
+        2.293459292006446
+      ],
+      "median_speedup": 2.1352351236402596
+    },
+    "8": {
+      "uncached_seconds": [
+        12.616606416995637,
+        12.718782666008337,
+        12.687360249998164
+      ],
+      "cached_seconds": [
+        3.65477366700361,
+        3.6118587920063874,
+        3.7649342909862753
+      ],
+      "median_speedup": 3.4714489612704194
+    }
+  },
+  "cache_check_passed": true,
+  "max_cache_probability_delta": 2.3543834686279297e-06,
+  "max_prompt_order_probability_delta": 0.1888774037361145,
+  "hardware": "Apple M5 Max, 128 GiB unified memory; one model instance, float32, MPS",
+  "scope": "Three interleaved serial measurements per condition on one authored state. No batched baseline, concurrency test, or general capability claim.",
+  "files_sha256": {
+    "run.json": "e9dc4d038b2b9572d65a24d2e01c7d2b9c0aaed8324f9b7e5b341635488cd8a3",
+    "observations.jsonl": "d30835248427e1290dd3856de52ffb1058b2d8f5c0d07a9ad17299bce2de5810",
+    "metrics.json": "428cb190a8b340788369d4623a82a256787bab14a9e3ba27bfdb14a3348dcf1f"
+  }
+}

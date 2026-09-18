@@ -1,0 +1,51 @@
+{
+  "actual_totals": {
+    "forward_input_tokens": 59363,
+    "model_calls": 156,
+    "questions": 148
+  },
+  "adapter_files_sha256": {
+    "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+    "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+    "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472"
+  },
+  "cache_check_passed": true,
+  "completed_at_unix": 1789715228.222081,
+  "foundation_spec_sha256": "1cf132f4e42f3c9820e96c386acdcd406cd83563081e964d7a4838268996a9e8",
+  "freeze_content_sha256": "3da5839bd9b086f767d71d12d59271e8ea8bdea2119723e1af0fa54746cf5a2f",
+  "freeze_file_sha256": "e8285c2722710ff8132d40d347ff39721cb6efd1759fa9ddcd166ce155e3fa07",
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "planned_totals": {
+    "forward_input_tokens": 59363,
+    "model_calls": 156,
+    "questions": 148
+  },
+  "runtime": {
+    "cuda_version": null,
+    "device": "mps:0",
+    "device_name": "arm64",
+    "model_parameter_dtype": "torch.float32",
+    "offline_loading": true,
+    "output_head_dtype": "torch.float32",
+    "packages": {
+      "huggingface-hub": "1.31.0",
+      "peft": "0.21.0",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    },
+    "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6",
+    "torch_threads": 6
+  },
+  "schema": "shared-prefix-benchmark-v1",
+  "started_at_unix": 1789715025.967041,
+  "status": "complete",
+  "weights_updated": false
+}

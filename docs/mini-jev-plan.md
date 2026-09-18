@@ -82,6 +82,11 @@ outcomes from actual contact/reminder tools. It establishes exact labels and
 replayable state changes; these fully observed deterministic fixtures have not
 trained a model and do not yet supply nontrivial conditional probabilities.
 
+The [measured shared-prefix prototype](shared-prefix-results.md) preserved
+same-layout answers while reducing eight-question serial latency from 12.69 to
+3.65 seconds locally. All versions missed one of eight questions. A batched
+baseline and broader prompt-order checks remain necessary before deployment.
+
 ## Revised sequence
 
 1. Establish a general interface and untouched baselines. Allow supplied state,
