@@ -1,0 +1,39 @@
+{
+  "adapter_files_sha256": {
+    "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+    "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+    "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472"
+  },
+  "batching": "One question per serial local HTTP request; no input or probability caching.",
+  "completed_at_unix": 1789714395.882345,
+  "corpus": {
+    "questions": 456,
+    "roots": 48,
+    "sha256": "1e9936ffbca4ae6633bea94417fad85fca9eff73494abc45a341dd50037a5119"
+  },
+  "expected_server_metadata": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "freeze_sha256": "cbbc4cd9962f3049a87e43a8eeae811688eaaba9df14edd23c1d9e3a5b91786e",
+  "interface_contracts": {
+    "interpretation": "Serialization guarantees without model inference; not learned semantic robustness or shared-state computation.",
+    "opaque_id_byte_identical_prompts": 96,
+    "question_independence_contracts": 96
+  },
+  "model_seconds": 311.8541340817319,
+  "provenance_limit": "Server reports model and selected step; disk hashes are separately verified, not an attestation of in-memory tensors.",
+  "questions": 456,
+  "scope": "Supplementary supervised-checkpoint diagnostic; no training or current-run checkpoint selection.",
+  "seconds": 312.6061829579994,
+  "started_at_unix": 1789714083.270663,
+  "status": "complete"
+}

@@ -72,6 +72,11 @@ the running experiment's inputs or checkpoint selection. The
 [external data review](executable-data-next.md) identifies actual third-party
 tool environments to broaden the executable mechanisms beyond authored worlds.
 
+The [completed robustness audit](general-robustness-results.md) found perfect
+selected answers on its small authored fixtures, alongside a 17.6 percentage-point
+probability error on specified random experiments. That gap is a concrete reason
+to evaluate outcome forecasting separately from ordinary answer accuracy.
+
 ## Revised sequence
 
 1. Establish a general interface and untouched baselines. Allow supplied state,

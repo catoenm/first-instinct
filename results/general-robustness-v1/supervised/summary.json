@@ -1,0 +1,207 @@
+{
+  "corpus": {
+    "questions": 456,
+    "roots": 48,
+    "sha256": "1e9936ffbca4ae6633bea94417fad85fca9eff73494abc45a341dd50037a5119"
+  },
+  "corpus_file_sha256": "b29dc72997ca14d3d26318769a242fdb5fa8a2eb18fc31cd2ada987c7c2b52be",
+  "families": {
+    "entailment": {
+      "evidence_change": {
+        "both_required_modal_answers_correct": 1.0,
+        "choice_flip": 1.0
+      },
+      "invariance": {
+        "irrelevant_metadata": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0006993578153924318,
+          "total_variation": 0.0006993408104942015
+        },
+        "opaque_ids": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0,
+          "total_variation": 0.0
+        },
+        "reordered": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.00025596427288595197,
+          "total_variation": 0.0002559442153445464
+        },
+        "wording": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0010582920588907048,
+          "total_variation": 0.0010582729712496075
+        }
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 3.901632905936222e-05,
+        "log_loss": 0.0015307357658782786
+      },
+      "questions": 120,
+      "roots": 12
+    },
+    "finite_forecast": {
+      "evidence_change": {
+        "both_required_modal_answers_correct": 1.0,
+        "choice_flip": 1.0
+      },
+      "invariance": {
+        "irrelevant_metadata": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.003564896721703311,
+          "total_variation": 0.0035648738072874644
+        },
+        "opaque_ids": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0,
+          "total_variation": 0.0
+        },
+        "reordered": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.007530567585490644,
+          "total_variation": 0.0075305456994101405
+        },
+        "wording": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.02454798175798108,
+          "total_variation": 0.02454796280168618
+        }
+      },
+      "metrics": {
+        "forecast_distribution_mse": 0.030815839822946983,
+        "forecast_exact_expected_brier": 0.4063537527669805,
+        "forecast_exact_expected_log_loss": 0.7785930724534788,
+        "forecast_expected_choice_accuracy": 0.7757153880070548,
+        "forecast_modal_accuracy": 1.0
+      },
+      "questions": 120,
+      "roots": 12
+    },
+    "ordered_urgency": {
+      "evidence_change": {
+        "both_required_modal_answers_correct": 1.0,
+        "choice_flip": 1.0
+      },
+      "invariance": {
+        "irrelevant_metadata": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.005090773237422279,
+          "total_variation": 0.005090781606933585
+        },
+        "opaque_ids": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0,
+          "total_variation": 0.0
+        },
+        "wording": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0005115888082703653,
+          "total_variation": 0.0005115871515689226
+        }
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.0001595422380452754,
+        "log_loss": 0.002806768487123164
+      },
+      "questions": 96,
+      "roots": 12
+    },
+    "routing": {
+      "evidence_change": {
+        "both_required_modal_answers_correct": 1.0,
+        "choice_flip": 1.0
+      },
+      "invariance": {
+        "irrelevant_metadata": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0025116397737292573,
+          "total_variation": 0.0025116422812629935
+        },
+        "opaque_ids": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.0,
+          "total_variation": 0.0
+        },
+        "reordered": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.004547471798105107,
+          "total_variation": 0.004547469369564776
+        },
+        "wording": {
+          "answer_flip": 0.0,
+          "max_absolute_probability_change": 0.003771497356259109,
+          "total_variation": 0.0037714990910065658
+        }
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.0011302593431330805,
+        "log_loss": 0.01206197514683402
+      },
+      "questions": 120,
+      "roots": 12
+    }
+  },
+  "freeze_sha256": "cbbc4cd9962f3049a87e43a8eeae811688eaaba9df14edd23c1d9e3a5b91786e",
+  "input_sha256": {
+    "metrics.json": "c1382131c6b3c6f54464e861f7a118caf83df34ec726a34aacc40d136d6c2a36",
+    "responses.jsonl": "05a522872e28dccdd05cc0b905097b8d83dfbdbbd7d0d25b4384c184d293a617",
+    "run.json": "54be49d935fe3de5242b9fd083df520bca3f92b5129c6665c30089526c96a449"
+  },
+  "log_probability_floor": 1e-12,
+  "model": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "model_seconds": 311.8541340817319,
+  "seconds": 312.6061829579994,
+  "summary": {
+    "evidence_change": {
+      "both_required_modal_answers_correct": 1.0,
+      "choice_flip": 1.0
+    },
+    "invariance": {
+      "irrelevant_metadata": {
+        "answer_flip": 0.0,
+        "max_absolute_probability_change": 0.0029666668870618196,
+        "total_variation": 0.002966659626494561
+      },
+      "opaque_ids": {
+        "answer_flip": 0.0,
+        "max_absolute_probability_change": 0.0,
+        "total_variation": 0.0
+      },
+      "reordered": {
+        "answer_flip": 0.0,
+        "max_absolute_probability_change": 0.004111334552160568,
+        "total_variation": 0.0041113197614398205
+      },
+      "wording": {
+        "answer_flip": 0.0,
+        "max_absolute_probability_change": 0.007472339995350315,
+        "total_variation": 0.007472330503877818
+      }
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "brier": 0.0004429393034125727,
+      "forecast_distribution_mse": 0.030815839822946983,
+      "forecast_exact_expected_brier": 0.4063537527669805,
+      "forecast_exact_expected_log_loss": 0.7785930724534788,
+      "forecast_expected_choice_accuracy": 0.7757153880070548,
+      "forecast_modal_accuracy": 1.0,
+      "log_loss": 0.005466493133278487
+    },
+    "questions": 456,
+    "roots": 48
+  }
+}
