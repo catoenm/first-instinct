@@ -3,93 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>First Instinct · Decision lab</title>
+  <meta name="description" content="An experiment in training a language model to make decisions and estimate probabilities.">
+  <title>First Instinct</title>
   <link rel="stylesheet" href="/style.css">
   <script src="/app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#state">Skip to workspace</a>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="First Instinct decision lab">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span>First Instinct<span class="brand-divider">/</span><span class="brand-section">Decision lab</span></span>
-    </a>
-    <span class="local-label"><span aria-hidden="true"></span>Local experiment</span>
-  </header>
-
   <main>
-    <section class="workspace-heading" aria-labelledby="page-title">
-      <div>
-        <p class="eyebrow">Your state. Your questions.</p>
-        <h1 id="page-title">Questions over a shared state.</h1>
-        <p class="intro">Supply the context, define possible answers, and inspect a probability distribution for each question.</p>
+    <header>
+      <h1>First Instinct</h1>
+      <p class="intro">A language model that picks an answer instead of writing one.</p>
+    </header>
+    <form id="demo">
+      <label for="example">What should happen to this parcel?</label>
+      <textarea id="example" rows="4" required spellcheck="false" aria-describedby="hint">Expedite a parcel if it is at least two days late. Otherwise, wait.
+
+This parcel is three days late.</textarea>
+      <p id="hint" class="small">Try changing “three” to “one”. The possible answers are <strong>Expedite</strong> or <strong>Wait</strong>.</p>
+      <div class="run-line">
+        <button id="run" type="submit" disabled>Run</button>
+        <p id="status" class="small" role="status" aria-live="polite">Connecting to the model…</p>
       </div>
-      <div class="connection" role="status" aria-live="polite">
-        <span class="connection-dot" id="connection-dot" aria-hidden="true"></span>
-        <span id="connection-text">Connecting to model…</span>
-        <button class="text-button" id="retry-connection" type="button" hidden>Retry</button>
+      <div id="result" hidden>
+        <div class="answer"><span id="expedite-label">Expedite</span><span id="expedite-probability"></span></div>
+        <div class="answer"><span id="wait-label">Wait</span><span id="wait-probability"></span></div>
+        <p class="small note">These are model probabilities, not guarantees.</p>
       </div>
+    </form>
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">What we built</h2>
+      <p>We started with Qwen3.5-9B, a pretrained language model with nine billion parameters. We’re adapting it on 350,857 examples: public instruction tasks, reasoning problems checked by code, and simulated decision scenarios.</p>
+      <p>Small trainable components throughout the language network learn to score the answers you provide. The parcel question is just one example; the underlying interface accepts your own questions and choices.</p>
+      <p>We’re also testing reinforcement learning: letting the model gather evidence, take actions, and learn from what happens. The experiment asks whether training it to forecast outcomes improves its decisions and probability estimates.</p>
+      <p id="model-note" class="small">Loading the current model’s training status…</p>
+      <a href="https://github.com/catoenm/first-instinct">Code &amp; experiments on GitHub</a>
     </section>
-
-    <section class="model-strip" aria-label="Active model">
-      <div class="model-identity"><span class="meta-label">Model</span><strong id="model-name">Waiting for server</strong></div>
-      <div class="checkpoint-identity"><span class="meta-label">Checkpoint</span><span class="checkpoint-label" id="checkpoint-label">—</span></div>
-      <div class="model-runtime"><span class="meta-label">Runtime</span><span id="runtime-label">—</span></div>
-      <details class="model-details"><summary>Model details</summary><dl id="model-details-list"></dl></details>
-    </section>
-    <p class="preview-notice" id="preview-notice" hidden></p>
-
-    <div class="workspace">
-      <form id="decision-form" class="input-column" novalidate>
-        <section class="panel state-panel" aria-labelledby="state-title">
-          <div class="section-heading">
-            <div class="heading-with-number"><span class="section-number" aria-hidden="true">01</span><h2 id="state-title">Shared state</h2></div>
-            <button id="load-example" class="secondary-button compact" type="button">Load example <span aria-hidden="true">↙</span></button>
-          </div>
-          <label for="state" class="field-label">What should the model know?</label>
-          <p id="state-help" class="field-help">Paste facts, a policy, a document excerpt, or JSON. This same state is included in every question.</p>
-          <textarea id="state" name="state" rows="9" spellcheck="false" aria-describedby="state-help state-count" placeholder="Describe the situation and include the information needed to answer your questions."></textarea>
-          <div class="state-footer"><span id="example-message" role="status" aria-live="polite">Start with your own context or load an example.</span><span id="state-count">0 characters</span></div>
-        </section>
-
-        <section class="questions-section" aria-labelledby="questions-title">
-          <div class="section-heading questions-heading">
-            <div class="heading-with-number"><span class="section-number" aria-hidden="true">02</span><h2 id="questions-title">Independent questions</h2><span class="count-badge" id="question-count">1</span></div>
-          </div>
-          <p class="section-description">Each question reads the shared state and its own answer definitions.</p>
-          <div id="question-list"></div>
-          <button type="button" id="add-question" class="add-question"><span aria-hidden="true">＋</span> Add question</button>
-        </section>
-
-        <div class="form-error" id="form-error" role="alert" tabindex="-1" hidden></div>
-        <div class="run-panel">
-          <div><span id="run-summary" class="run-summary">1 independent question</span><p id="input-limit" class="field-help">Input length is checked before inference.</p></div>
-          <button id="run-button" class="primary-button" type="submit" disabled><span class="button-spinner" aria-hidden="true" hidden></span><span id="run-label">Run questions</span><span class="run-arrow" aria-hidden="true">→</span></button>
-        </div>
-        <p class="execution-note">Questions run independently. The model processes the supplied state separately for each question.</p>
-      </form>
-
-      <aside class="results-column" aria-labelledby="results-title">
-        <div class="results-heading"><div class="heading-with-number"><span class="section-number" aria-hidden="true">03</span><h2 id="results-title">Model answers</h2></div><span id="result-count" class="count-badge" hidden></span></div>
-        <p class="section-description">A distribution over the answers you define.</p>
-        <div class="result-state" id="result-state" role="status" aria-live="polite"></div>
-        <div class="stale-notice" id="stale-notice" role="status" hidden><strong>Inputs have changed.</strong> These results belong to the submitted input below. Run again to update them.</div>
-        <div class="empty-results" id="empty-results">
-          <div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span></div>
-          <h3>Make the question yours.</h3>
-          <p>Choose between actions, assess a yes/no proposition, or define an ordered scale.</p>
-          <div class="empty-types"><span>Choice</span><span>Binary</span><span>Ordered score</span></div>
-          <p class="empty-next">Your model’s answers will appear here.</p>
-        </div>
-        <div id="result-metadata" class="result-metadata" hidden></div>
-        <div id="answer-list"></div>
-        <details id="submitted-input" class="submitted-input" hidden><summary>View submitted input</summary><pre id="submitted-json"></pre></details>
-        <div class="probability-note"><span class="note-symbol" aria-hidden="true">i</span><p id="probability-note">Probabilities are conditional on the supplied state and choices. Calibration varies by task and is not established for arbitrary new questions.</p></div>
-      </aside>
-    </div>
-    <noscript><p class="form-error">Enable JavaScript to edit questions and run this local model.</p></noscript>
+    <noscript><p>Enable JavaScript to run the example.</p></noscript>
   </main>
-  <footer><span>First Instinct / Open experiments</span><span>Define the answers. Inspect the distribution.</span></footer>
 </body>
 </html>

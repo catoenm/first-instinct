@@ -25,9 +25,10 @@ language-model reinforcement-learning results are pending. The released model
 and browser demo below remain the earlier software experiment.
 An optional [TensorBoard monitor](docs/training-monitor.md) reads the existing
 logs without restarting the training process.
-The new [general decision demo](docs/general-demo.md) accepts your own state,
-questions, and choices with a saved checkpoint. Training previews are labeled
-explicitly; a completed general-model release is still pending.
+The new [general decision demo](docs/general-demo.md) offers one editable
+example and a short explanation; the underlying interface accepts your own
+questions and choices. Training previews are labeled explicitly, and a
+completed general-model release is still pending.
 
 First Instinct explores a practical question: **when should a model gather more
 evidence before making a decision?** A four-billion-parameter forecaster reads

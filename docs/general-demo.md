@@ -1,9 +1,8 @@
 # General decision demo
 
-Enter your own context, questions, and allowed answers. The local browser demo
-uses the same trained language model for choice, yes/no, and ordered-level
-questions. It scores the supplied answers directly; it does not generate an
-explanation and then classify it.
+The local browser demo presents one editable parcel example and a Run button,
+followed by a short explanation of the experiment. It uses the trained language
+model to score two supplied answers: expedite or wait.
 
 The nine-billion-parameter experiment is still running. A training preview is
 available in the author's workspace; it is a snapshot of supervised training,
@@ -33,29 +32,31 @@ inspection demo can continue on port 8765.
 
 ## Try it
 
-1. Select **Load example**, or write your own shared state.
-2. Define one or more questions. A choice has named answers; a binary question
-   evaluates a yes/no proposition; an ordered score has descriptions from low
-   to high.
-3. Select **Run questions** to inspect each answer distribution. Editing an
-   input marks existing results as belonging to an earlier submission.
+1. Read the parcel policy and situation in the text box.
+2. Select **Run** to see probabilities for expediting or waiting.
+3. Change “three days late” to “one day late” and run again. You can also edit
+   the policy. Editing the example clears the earlier result.
 
-For an ordered score, the selected level is the most probable level. The
-expected score averages zero-based level numbers using the model's
-probabilities. That average is a convenience for the supplied scale, not a
-measurement with an independently learned unit.
-
-The model strip identifies the loaded model and checkpoint. Unfinished runs
-are labeled **Training preview**. If a reinforcement run selects update zero,
-the demo identifies it as the supervised starting checkpoint: completed
-reinforcement updates elsewhere in the run do not change the selected model.
+The note below the explanation identifies the loaded model and its training
+status. Unfinished runs are labeled **Training preview**. If a reinforcement
+run selects update zero, the demo identifies it as the supervised starting
+checkpoint: completed reinforcement updates elsewhere in the run do not change
+the selected model.
 
 ## Limits of this experiment
 
+The browser deliberately shows only one simple choice question. The underlying
+interface also supports user-defined choice, yes/no, and ordered-level
+questions. It scores supplied answers directly, without generating an
+explanation first. Use the command below and edit its input file to explore
+those capabilities.
+
 Each question independently includes the shared state and its own answer
-definitions. The implementation currently repeats state processing for every
-question. It accepts up to 32 questions with 2–36 options each and checks the
-1,536-token limit for every complete prompt before starting inference.
+definitions. The interface accepts up to 32 questions with 2–36 options each
+and checks the 1,536-token limit for every complete prompt before inference.
+An ordered score averages zero-based level numbers using model probabilities;
+that average is a convenience for the supplied scale, not an independently
+learned unit.
 
 Probabilities are conditional on the state and supplied choices. High
 probability is not a guarantee of correctness, and calibration on arbitrary
@@ -64,7 +65,7 @@ different from forecasts of whether an event will happen. This interface is
 inspired by typed decision models; it does not establish Jev parity or reveal
 Jev's private training method.
 
-The same interface is available without a browser:
+The broader interface is available without a browser:
 
 ```bash
 python -m general_lab.interface \
