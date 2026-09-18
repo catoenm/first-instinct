@@ -1,0 +1,111 @@
+{
+  "budget_after": {
+    "by_stage": {
+      "collection": 2304,
+      "guard": 392,
+      "negative_gate": 10,
+      "test": 24
+    },
+    "conservative_combined_debit": 4052,
+    "historical_upper_bound_debit": 1322,
+    "kind": "header",
+    "limit": 4096,
+    "new_branch_attempts": 2730,
+    "remaining": 44,
+    "retained_file_lower_bound": 960,
+    "version": "toolsandbox-partial-v1"
+  },
+  "budget_before": {
+    "by_stage": {
+      "guard": 392,
+      "negative_gate": 10,
+      "test": 24
+    },
+    "conservative_combined_debit": 1748,
+    "historical_upper_bound_debit": 1322,
+    "kind": "header",
+    "limit": 4096,
+    "new_branch_attempts": 426,
+    "remaining": 2348,
+    "retained_file_lower_bound": 960,
+    "version": "toolsandbox-partial-v1"
+  },
+  "concrete_initial_worlds": 192,
+  "counts": {
+    "continuation_calls_including_replays": 1344,
+    "offered_calls_including_replays": 1536,
+    "prefix_calls_including_replays": 1152,
+    "setup_calls_including_replays": 30528,
+    "unique_world_program_labels": 1152
+  },
+  "executed_primitive_exposure": {
+    "test": [
+      "remove_reminder",
+      "search_contacts",
+      "search_reminder"
+    ],
+    "train": [
+      "add_reminder",
+      "search_contacts",
+      "search_reminder"
+    ],
+    "validation": [
+      "modify_reminder",
+      "search_contacts",
+      "search_reminder"
+    ]
+  },
+  "files": {
+    "executions.jsonl": "64583598336c1872d44a4eee68c511bdb6e92bd0b998947f29c167db6d04158b",
+    "forecasts.jsonl": "1e2866af14d7b1af192ba5533e4f2239ec56d251000e7b243bc24e986ba1e289"
+  },
+  "forecast_rows": 432,
+  "freeze_sha256": "8dd4cad766f6434cc86034561d245e1f051170cdc425d42aadf1eccb97e1b258",
+  "known_singleton_costs": 144,
+  "marginal_questions": 864,
+  "model_questions": 720,
+  "network_guard": {
+    "blocked_attempts": [
+      "socket.socket",
+      "socket.create_connection",
+      "socket.getaddrinfo",
+      "subprocess.Popen",
+      "socket.socket"
+    ],
+    "environment_allowlist": [
+      "HF_HUB_OFFLINE",
+      "HOME",
+      "PATH",
+      "PYTHONNOUSERSITE",
+      "TOKENIZERS_PARALLELISM",
+      "TRANSFORMERS_OFFLINE",
+      "TZ"
+    ],
+    "probe_attempt_count": 4,
+    "scope": "Python socket/subprocess interception; not an OS sandbox"
+  },
+  "post_import_attempt_count": 5,
+  "production_branches": 2304,
+  "proposed_write_primitives": {
+    "test": [
+      "remove_reminder"
+    ],
+    "train": [
+      "add_reminder"
+    ],
+    "validation": [
+      "modify_reminder"
+    ]
+  },
+  "public_contexts": 48,
+  "scope": "Authored finite prior; exact conditional execution forecasts, no learned predictor or calibration result",
+  "status": "completed",
+  "version": "toolsandbox-partial-v1",
+  "world_program_outcomes": {
+    "already_satisfied": 160,
+    "completed": 256,
+    "duplicate_created": 32,
+    "justified_abstention": 480,
+    "missed": 224
+  }
+}

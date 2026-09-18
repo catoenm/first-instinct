@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "reviewer": "independent-prefix-review",
+  "tool_executions": 0,
+  "model_inference": false,
+  "execution_rows": 1152,
+  "forecast_rows": 432,
+  "public_questions": 864,
+  "checks": [
+    "File hashes match manifest",
+    "Posterior support from exact complete observed history, with rational prior normalization",
+    "All outcome, cost and joint probabilities and expected utilities independently recomputed",
+    "Actual event costs and visible-before-write reminder IDs checked",
+    "Exported prompts contain only public fields and action-independent public history; metadata root/split/world/labels excluded from model input"
+  ],
+  "scope": "Read-only receipt/arithmetic/public-input audit. Replays and tool semantics are supported by retained earlier execution receipts, not re-executed here. Finite authored prior; no learned calibration or generalization claim.",
+  "files_sha256": {
+    "manifest.json": "8f23bdc18ba71f38dbde75cef6231f87585a6716953a249e3f13c481f6e0dc32",
+    "executions.jsonl": "64583598336c1872d44a4eee68c511bdb6e92bd0b998947f29c167db6d04158b",
+    "forecasts.jsonl": "1e2866af14d7b1af192ba5533e4f2239ec56d251000e7b243bc24e986ba1e289"
+  },
+  "public_questions_sha256": "ee94783a131a12857771c0c99f77e010189346bd48ea498cddf949eefff07773"
+}

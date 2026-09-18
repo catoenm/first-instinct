@@ -1,0 +1,47 @@
+{
+  "approved_production_branches": 2304,
+  "budget": {
+    "by_stage": {
+      "guard": 392,
+      "negative_gate": 10,
+      "test": 24
+    },
+    "conservative_combined_debit": 1748,
+    "historical_upper_bound_debit": 1322,
+    "kind": "header",
+    "limit": 4096,
+    "new_branch_attempts": 426,
+    "remaining": 2348,
+    "retained_file_lower_bound": 960,
+    "version": "toolsandbox-partial-v1"
+  },
+  "checks": [
+    "Reviewed public priors, actual-history conditioning, observation group equivalence, stable IDs and visible-only action construction.",
+    "Independently checked all192 guard rows,48 contexts, exact1/0/0/2 versus9/8/9/10 query counts, strict target-score separation, and all phone-conditioned posteriors.",
+    "Reviewed executable goals and full frame preservation, including every immutable update-target field and the explicitly permitted creation_timestamp reset.",
+    "Verified corrections for imported-base source provenance, frozen runtime/pins, ambiguous/create target preservation, singleton encoder bypass, and executed primitive-split audits.",
+    "Read successful final8-test isolated-runtime log, including real execution/replay, impossible-history debit, negative cases, p=1 utility checks and p=12 repricing reversal.",
+    "Ran six pure-core tests locally; reviewer made zero upstream tool executions and zero model/API calls."
+  ],
+  "code_hashes": {
+    "docs/toolsandbox-partial-v1-protocol.md": "14c9c1692a4b98c269413bdefa7d2c0d662771e3b16fdb7f3953a75186c339c1",
+    "general_lab/toolsandbox_partial.py": "8478b464cf19e7a39d6549c6a0a3f5bbdf7bfcc4aa3b140c53a8b9dd48d68826",
+    "general_lab/toolsandbox_pilot.py": "24c46d17db75d2db14eca2d1f363702f9ea1f8a9041c75d2bbabf63301b982c9",
+    "test_toolsandbox_partial.py": "228d2d7536b064bdee81a3c8917b66379019b23855a9310a027f876275ef70eb"
+  },
+  "guards_file_sha256": "19219ca9dad807bc98f4a042a12d79f3e2d274f8340c35963c5f928f6bb1e589",
+  "historical_count_note": "1322 is a conservative prior-execution debit; retained final artifacts establish960, not an exact historical total.",
+  "limits": [
+    "One authored finite four-world mechanism with declared priors; this is not real-user prior estimation or learned calibration.",
+    "The frozen collection must keep model/API calls at zero and leave active GPU training/demo unchanged.",
+    "Any source/protocol change requires a new version and review; failed attempts remain charged.",
+    "Collection success still requires replay equality, probability conservation, full public-input equality, trace-level primitive isolation and final accounting gates."
+  ],
+  "projected_conservative_combined_debit": 4052,
+  "projected_reserve": 44,
+  "reviewed_at_unix": 1789715939.844396,
+  "reviewer": "independent prefix_review agent",
+  "schema": "toolsandbox-partial-independent-review-v1",
+  "status": "approved_for_frozen_collection",
+  "test_log_sha256": "a04c247455eb6e6469dd7729f3511cb91ed5b46bec3d71e4a36dfa653db1cbfd"
+}

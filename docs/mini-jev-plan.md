@@ -85,6 +85,12 @@ A [ToolSandbox data pilot](toolsandbox-pilot-v1.md) now contributes 384 verified
 outcomes from actual contact/reminder tools. It establishes exact labels and
 replayable state changes; these fully observed deterministic fixtures have not
 trained a model and do not yet supply nontrivial conditional probabilities.
+A subsequent [partially observed pilot](toolsandbox-partial-v1-results.md)
+executes 1,152 world/program cases twice and constructs 432 exact conditional
+forecasts. A bounded search can return empty even when a target exists; a
+complete query changes the best action when its cost is low enough. These
+forecasts concern a declared continuation and an authored four-world prior.
+They establish a new data mechanism, not learned calibration or transfer.
 
 The [measured shared-prefix prototype](shared-prefix-results.md) preserved
 same-layout answers while reducing eight-question serial latency from 12.69 to

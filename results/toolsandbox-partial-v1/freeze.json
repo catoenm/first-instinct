@@ -1,0 +1,902 @@
+{
+  "budget": {
+    "by_stage": {
+      "guard": 392,
+      "negative_gate": 10,
+      "test": 24
+    },
+    "conservative_combined_debit": 1748,
+    "historical_upper_bound_debit": 1322,
+    "kind": "header",
+    "limit": 4096,
+    "new_branch_attempts": 426,
+    "remaining": 2348,
+    "retained_file_lower_bound": 960,
+    "version": "toolsandbox-partial-v1"
+  },
+  "code_hashes": {
+    "docs/toolsandbox-partial-v1-protocol.md": "14c9c1692a4b98c269413bdefa7d2c0d662771e3b16fdb7f3953a75186c339c1",
+    "general_lab/toolsandbox_partial.py": "8478b464cf19e7a39d6549c6a0a3f5bbdf7bfcc4aa3b140c53a8b9dd48d68826",
+    "general_lab/toolsandbox_pilot.py": "24c46d17db75d2db14eca2d1f363702f9ea1f8a9041c75d2bbabf63301b982c9",
+    "test_toolsandbox_partial.py": "228d2d7536b064bdee81a3c8917b66379019b23855a9310a027f876275ef70eb"
+  },
+  "continuation": "fast_then_act/v1: Stop ends immediately. Otherwise look up the exact phone if not already observed; decline unless it returns exactly one contact. Reuse an available reminder result (including an empty list); if none exists, query short content plus the exact time window. Locally filter returned rows by exact full content and timestamp. Create on zero matches, preserve one, decline on multiple; update/delete only one match, otherwise decline. Stop after the write or first exception. An empty truncated query may mislead this policy.",
+  "direct_pins": {
+    "StrEnum": "0.4.15",
+    "ccy": "1.3.1",
+    "decorator": "5.1.1",
+    "dill": "0.3.8",
+    "geopy": "2.4.1",
+    "holidays": "0.51",
+    "phonenumbers": "8.13.39",
+    "pint": "0.23",
+    "polars": "0.20.31",
+    "rapidfuzz": "3.9.3",
+    "requests": "2.32.3",
+    "typing_extensions": "4.12.2"
+  },
+  "guards": "/Users/mitchell/Documents/workspace/ml-data/output/toolsandbox-partial-v1/guards-final.json",
+  "guards_sha256": "19219ca9dad807bc98f4a042a12d79f3e2d274f8340c35963c5f928f6bb1e589",
+  "prices": [
+    1,
+    4,
+    12,
+    20
+  ],
+  "production_branch_count": 2304,
+  "review": "/Users/mitchell/Documents/workspace/ml-data/output/toolsandbox-partial-v1/review.json",
+  "review_sha256": "45684a1e09e5094aca9d8d9b84ef9c3d2116f7f0e9fb7ff3c2d94bf4c0da97be",
+  "runtime": {
+    "packages": {
+      "Pint": "0.23",
+      "StrEnum": "0.4.15",
+      "ccy": "1.3.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "decorator": "5.1.1",
+      "dill": "0.3.8",
+      "geographiclib": "2.1",
+      "geopy": "2.4.1",
+      "holidays": "0.51",
+      "idna": "3.20",
+      "phonenumbers": "8.13.39",
+      "pip": "24.0",
+      "polars": "0.20.31",
+      "python-dateutil": "2.9.0.post0",
+      "pytz": "2026.3.post1",
+      "rapidfuzz": "3.9.3",
+      "requests": "2.32.3",
+      "setuptools": "79.0.1",
+      "six": "1.17.0",
+      "typing_extensions": "4.12.2",
+      "urllib3": "2.8.0"
+    },
+    "python": "3.11.16 (main, Sep  1 2026, 14:08:22) [Clang 22.1.3 ]"
+  },
+  "scenarios": [
+    {
+      "alias_a": "Aster0",
+      "alias_b": "Birch0",
+      "id": "toolsandbox-partial-v1:create:0",
+      "operation": "create",
+      "phone": "+12025551000",
+      "row_price": 1,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster1",
+      "alias_b": "Birch1",
+      "id": "toolsandbox-partial-v1:create:1",
+      "operation": "create",
+      "phone": "+12025551001",
+      "row_price": 4,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster2",
+      "alias_b": "Birch2",
+      "id": "toolsandbox-partial-v1:create:2",
+      "operation": "create",
+      "phone": "+12025551002",
+      "row_price": 12,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster3",
+      "alias_b": "Birch3",
+      "id": "toolsandbox-partial-v1:create:3",
+      "operation": "create",
+      "phone": "+12025551003",
+      "row_price": 20,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster4",
+      "alias_b": "Birch4",
+      "id": "toolsandbox-partial-v1:create:4",
+      "operation": "create",
+      "phone": "+12025551004",
+      "row_price": 1,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster5",
+      "alias_b": "Birch5",
+      "id": "toolsandbox-partial-v1:create:5",
+      "operation": "create",
+      "phone": "+12025551005",
+      "row_price": 4,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster6",
+      "alias_b": "Birch6",
+      "id": "toolsandbox-partial-v1:create:6",
+      "operation": "create",
+      "phone": "+12025551006",
+      "row_price": 12,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster7",
+      "alias_b": "Birch7",
+      "id": "toolsandbox-partial-v1:create:7",
+      "operation": "create",
+      "phone": "+12025551007",
+      "row_price": 20,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster8",
+      "alias_b": "Birch8",
+      "id": "toolsandbox-partial-v1:create:8",
+      "operation": "create",
+      "phone": "+12025551008",
+      "row_price": 1,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster9",
+      "alias_b": "Birch9",
+      "id": "toolsandbox-partial-v1:create:9",
+      "operation": "create",
+      "phone": "+12025551009",
+      "row_price": 4,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster10",
+      "alias_b": "Birch10",
+      "id": "toolsandbox-partial-v1:create:10",
+      "operation": "create",
+      "phone": "+12025551010",
+      "row_price": 12,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster11",
+      "alias_b": "Birch11",
+      "id": "toolsandbox-partial-v1:create:11",
+      "operation": "create",
+      "phone": "+12025551011",
+      "row_price": 20,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster12",
+      "alias_b": "Birch12",
+      "id": "toolsandbox-partial-v1:create:12",
+      "operation": "create",
+      "phone": "+12025551012",
+      "row_price": 1,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster13",
+      "alias_b": "Birch13",
+      "id": "toolsandbox-partial-v1:create:13",
+      "operation": "create",
+      "phone": "+12025551013",
+      "row_price": 4,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster14",
+      "alias_b": "Birch14",
+      "id": "toolsandbox-partial-v1:create:14",
+      "operation": "create",
+      "phone": "+12025551014",
+      "row_price": 12,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster15",
+      "alias_b": "Birch15",
+      "id": "toolsandbox-partial-v1:create:15",
+      "operation": "create",
+      "phone": "+12025551015",
+      "row_price": 20,
+      "split": "train",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster64",
+      "alias_b": "Birch64",
+      "id": "toolsandbox-partial-v1:update:0",
+      "operation": "update",
+      "phone": "+12025551064",
+      "row_price": 1,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster65",
+      "alias_b": "Birch65",
+      "id": "toolsandbox-partial-v1:update:1",
+      "operation": "update",
+      "phone": "+12025551065",
+      "row_price": 4,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster66",
+      "alias_b": "Birch66",
+      "id": "toolsandbox-partial-v1:update:2",
+      "operation": "update",
+      "phone": "+12025551066",
+      "row_price": 12,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster67",
+      "alias_b": "Birch67",
+      "id": "toolsandbox-partial-v1:update:3",
+      "operation": "update",
+      "phone": "+12025551067",
+      "row_price": 20,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster68",
+      "alias_b": "Birch68",
+      "id": "toolsandbox-partial-v1:update:4",
+      "operation": "update",
+      "phone": "+12025551068",
+      "row_price": 1,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster69",
+      "alias_b": "Birch69",
+      "id": "toolsandbox-partial-v1:update:5",
+      "operation": "update",
+      "phone": "+12025551069",
+      "row_price": 4,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster70",
+      "alias_b": "Birch70",
+      "id": "toolsandbox-partial-v1:update:6",
+      "operation": "update",
+      "phone": "+12025551070",
+      "row_price": 12,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster71",
+      "alias_b": "Birch71",
+      "id": "toolsandbox-partial-v1:update:7",
+      "operation": "update",
+      "phone": "+12025551071",
+      "row_price": 20,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster72",
+      "alias_b": "Birch72",
+      "id": "toolsandbox-partial-v1:update:8",
+      "operation": "update",
+      "phone": "+12025551072",
+      "row_price": 1,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster73",
+      "alias_b": "Birch73",
+      "id": "toolsandbox-partial-v1:update:9",
+      "operation": "update",
+      "phone": "+12025551073",
+      "row_price": 4,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster74",
+      "alias_b": "Birch74",
+      "id": "toolsandbox-partial-v1:update:10",
+      "operation": "update",
+      "phone": "+12025551074",
+      "row_price": 12,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster75",
+      "alias_b": "Birch75",
+      "id": "toolsandbox-partial-v1:update:11",
+      "operation": "update",
+      "phone": "+12025551075",
+      "row_price": 20,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster76",
+      "alias_b": "Birch76",
+      "id": "toolsandbox-partial-v1:update:12",
+      "operation": "update",
+      "phone": "+12025551076",
+      "row_price": 1,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster77",
+      "alias_b": "Birch77",
+      "id": "toolsandbox-partial-v1:update:13",
+      "operation": "update",
+      "phone": "+12025551077",
+      "row_price": 4,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster78",
+      "alias_b": "Birch78",
+      "id": "toolsandbox-partial-v1:update:14",
+      "operation": "update",
+      "phone": "+12025551078",
+      "row_price": 12,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster79",
+      "alias_b": "Birch79",
+      "id": "toolsandbox-partial-v1:update:15",
+      "operation": "update",
+      "phone": "+12025551079",
+      "row_price": 20,
+      "split": "validation",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster128",
+      "alias_b": "Birch128",
+      "id": "toolsandbox-partial-v1:delete:0",
+      "operation": "delete",
+      "phone": "+12025551128",
+      "row_price": 1,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster129",
+      "alias_b": "Birch129",
+      "id": "toolsandbox-partial-v1:delete:1",
+      "operation": "delete",
+      "phone": "+12025551129",
+      "row_price": 4,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster130",
+      "alias_b": "Birch130",
+      "id": "toolsandbox-partial-v1:delete:2",
+      "operation": "delete",
+      "phone": "+12025551130",
+      "row_price": 12,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster131",
+      "alias_b": "Birch131",
+      "id": "toolsandbox-partial-v1:delete:3",
+      "operation": "delete",
+      "phone": "+12025551131",
+      "row_price": 20,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster132",
+      "alias_b": "Birch132",
+      "id": "toolsandbox-partial-v1:delete:4",
+      "operation": "delete",
+      "phone": "+12025551132",
+      "row_price": 1,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster133",
+      "alias_b": "Birch133",
+      "id": "toolsandbox-partial-v1:delete:5",
+      "operation": "delete",
+      "phone": "+12025551133",
+      "row_price": 4,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster134",
+      "alias_b": "Birch134",
+      "id": "toolsandbox-partial-v1:delete:6",
+      "operation": "delete",
+      "phone": "+12025551134",
+      "row_price": 12,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster135",
+      "alias_b": "Birch135",
+      "id": "toolsandbox-partial-v1:delete:7",
+      "operation": "delete",
+      "phone": "+12025551135",
+      "row_price": 20,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster136",
+      "alias_b": "Birch136",
+      "id": "toolsandbox-partial-v1:delete:8",
+      "operation": "delete",
+      "phone": "+12025551136",
+      "row_price": 1,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster137",
+      "alias_b": "Birch137",
+      "id": "toolsandbox-partial-v1:delete:9",
+      "operation": "delete",
+      "phone": "+12025551137",
+      "row_price": 4,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster138",
+      "alias_b": "Birch138",
+      "id": "toolsandbox-partial-v1:delete:10",
+      "operation": "delete",
+      "phone": "+12025551138",
+      "row_price": 12,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster139",
+      "alias_b": "Birch139",
+      "id": "toolsandbox-partial-v1:delete:11",
+      "operation": "delete",
+      "phone": "+12025551139",
+      "row_price": 20,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "alias_a": "Aster140",
+      "alias_b": "Birch140",
+      "id": "toolsandbox-partial-v1:delete:12",
+      "operation": "delete",
+      "phone": "+12025551140",
+      "row_price": 1,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster141",
+      "alias_b": "Birch141",
+      "id": "toolsandbox-partial-v1:delete:13",
+      "operation": "delete",
+      "phone": "+12025551141",
+      "row_price": 4,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster142",
+      "alias_b": "Birch142",
+      "id": "toolsandbox-partial-v1:delete:14",
+      "operation": "delete",
+      "phone": "+12025551142",
+      "row_price": 12,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alias_a": "Aster143",
+      "alias_b": "Birch143",
+      "id": "toolsandbox-partial-v1:delete:15",
+      "operation": "delete",
+      "phone": "+12025551143",
+      "row_price": 20,
+      "split": "test",
+      "time": 1800086400.0,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "upstream_hashes": {
+    "ACKNOWLEDGEMENTS": "4586b0107c3f74732b99f791949136a6b32db9b958bdea75f4933aef0302ad92",
+    "LICENSE": "2283d5566b38210fbfb9fcb06619f1d0a8101bff9df974ea8afc3393508e9015",
+    "pyproject.toml": "1374abe6c850da500a4f64534456b25cb029eb6dc1c0e3c3f78431949a2e5ad0",
+    "tool_sandbox/__init__.py": "8dfd7c86f262574bf9638e6697a4c632666765cb040dba17eb192aaaea098cf2",
+    "tool_sandbox/common/__init__.py": "8dfd7c86f262574bf9638e6697a4c632666765cb040dba17eb192aaaea098cf2",
+    "tool_sandbox/common/execution_context.py": "a18f54e157b92fa011e84780bc33941ea0635ad70ab4b38e7408beedc6221437",
+    "tool_sandbox/common/tool_discovery.py": "9f957d1a57e905127547e9508f7dfff3c97a0ef024229ce94b545aa239c673cf",
+    "tool_sandbox/common/utils.py": "27239e40cb1284e23591cb6443d1a899d9a6cabe9d44d26da0f07eefb321487f",
+    "tool_sandbox/common/validators.py": "e283ae3b080179477e103e7357b76611f3a8bb375808afa7b0b84cf01b3dfd4c",
+    "tool_sandbox/tools/__init__.py": "6e050c4c8b16f7552215527ec56d471829e9aaa771cd013ce166aab87ccc4899",
+    "tool_sandbox/tools/contact.py": "af2b97be6b03d1acf44cd2e34465942622a3453d9e052099a1028e0d17361a49",
+    "tool_sandbox/tools/messaging.py": "d992831c735c44167b46f67ff45b11ad37fa70df951ebe9eac283c4b44e5607c",
+    "tool_sandbox/tools/rapid_api_search_tools.py": "2e369320fb6ce3a203e324fe55979ee1dfdb14f5ff9afc3eefeb3aa2a1a86fb1",
+    "tool_sandbox/tools/reminder.py": "4beb01ca7b0706a831f3cf53accdef4f089c08f95fbf2b78acbd7785dccb13a7",
+    "tool_sandbox/tools/setting.py": "01cd0c5f45cc6ceadcd5935369f1260585bbc99852562ca30f81771b56a18e97",
+    "tool_sandbox/tools/user_tools.py": "177a07a48ea319db6e410fa84eb7780ab7ec1d139044ce744c4a7713fa676613",
+    "tool_sandbox/tools/utilities.py": "7133d2cade24c0a5c3bf990d09f685446ff7037ab5062edca0ed7db19cc2b3e7"
+  },
+  "utilities": {
+    "already_satisfied": 100,
+    "completed": 100,
+    "duplicate_created": -150,
+    "invalid_call": -80,
+    "justified_abstention": 0,
+    "missed": -40,
+    "other_failure": -80,
+    "wrong_target_or_collateral": -200
+  },
+  "version": "toolsandbox-partial-v1",
+  "weights": [
+    [
+      3,
+      2,
+      2,
+      1
+    ],
+    [
+      1,
+      3,
+      3,
+      1
+    ],
+    [
+      3,
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ]
+}

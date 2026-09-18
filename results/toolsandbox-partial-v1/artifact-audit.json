@@ -1,0 +1,51 @@
+{
+  "audit_script_sha256": "3f1a7102badcd7d8422cb8298cbb6668fbccebf48034935d6c274f0280bc1643",
+  "budget": {
+    "by_stage": {
+      "collection": 2304,
+      "guard": 392,
+      "negative_gate": 10,
+      "test": 24
+    },
+    "conservative_combined_debit": 4052,
+    "historical_upper_bound_debit": 1322,
+    "kind": "header",
+    "limit": 4096,
+    "new_branch_attempts": 2730,
+    "remaining": 44,
+    "retained_file_lower_bound": 960,
+    "version": "toolsandbox-partial-v1"
+  },
+  "checks": [
+    "hashes and replay digests",
+    "full-state goal/frame predicates independently recomputed",
+    "posterior from actual root query histories",
+    "all exact marginal and joint probabilities",
+    "actual-event cost meter",
+    "all mutation IDs visible before use",
+    "primitive split exposure",
+    "every exported question matches a cached-tokenizer-audited input hash"
+  ],
+  "cost_reversal": {
+    "(1, 'query_fast')": "-88/3",
+    "(1, 'query_window')": "160/3",
+    "(1, 'stop')": "-80/3",
+    "(12, 'query_fast')": "-110/3",
+    "(12, 'query_window')": "-148/3",
+    "(12, 'stop')": "-80/3"
+  },
+  "exact_forecasts_recomputed": 432,
+  "independently_verified_world_programs": 1152,
+  "model_questions": 720,
+  "outcomes": {
+    "already_satisfied": 160,
+    "completed": 256,
+    "duplicate_created": 32,
+    "justified_abstention": 480,
+    "missed": 224
+  },
+  "public_questions": 864,
+  "public_questions_sha256": "ee94783a131a12857771c0c99f77e010189346bd48ea498cddf949eefff07773",
+  "status": "passed",
+  "tool_executions": 0
+}
