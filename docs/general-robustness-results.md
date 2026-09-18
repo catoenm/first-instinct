@@ -1,5 +1,9 @@
 # Correct choices can conceal poor probability forecasts
 
+A subsequent [post-hoc foundation control](general-robustness-foundation-results.md)
+compares these results with untouched Qwen. This page preserves the original
+supervised-only audit and its interpretation.
+
 The supervised nine-billion-parameter model answered all 336 deterministic
 questions in this small audit correctly. It also picked the more likely outcome
 on all 120 questions about specified random experiments. Nevertheless, its

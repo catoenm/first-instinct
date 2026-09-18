@@ -1,0 +1,38 @@
+{
+  "attempted_forwards": 456,
+  "batching": "456 serial single-question forwards; no warmup, batching, cache, or retries.",
+  "completed_at_unix": 1789715973.3550332,
+  "corpus": {
+    "questions": 456,
+    "roots": 48,
+    "sha256": "1e9936ffbca4ae6633bea94417fad85fca9eff73494abc45a341dd50037a5119"
+  },
+  "forward_input_tokens": 99354,
+  "freeze_sha256": "5bb7b0309e9fef998321cd1b86861c1dff7d5b9bf2e45be7a72cafc453ccec45",
+  "interface_contracts": {
+    "interpretation": "Serialization guarantees without model inference; not learned semantic robustness or shared-state computation.",
+    "opaque_id_byte_identical_prompts": 96,
+    "question_independence_contracts": 96
+  },
+  "model_metadata": {
+    "checkpoint": {
+      "adapter": null,
+      "kind": "foundation",
+      "step": null
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "parameter_dtypes": [
+      "torch.float32"
+    ],
+    "parameters": 9409813744
+  },
+  "model_seconds": 306.6808051279513,
+  "provenance_limit": "Pinned cached files and configuration are verified; version counters check mutations, not a full in-memory tensor attestation.",
+  "questions": 456,
+  "scope": "Optional supplementary control planned after viewing the supervised audit results. No checkpoint selection, tuning, new data, or claim of a prespecified model comparison.",
+  "seconds": 325.03850545801106,
+  "started_at_unix": 1789715648.322631,
+  "status": "complete"
+}

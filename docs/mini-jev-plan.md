@@ -76,6 +76,10 @@ The [completed robustness audit](general-robustness-results.md) found perfect
 selected answers on its small authored fixtures, alongside a 17.6 percentage-point
 probability error on specified random experiments. That gap is a concrete reason
 to evaluate outcome forecasting separately from ordinary answer accuracy.
+A later [post-hoc foundation control](general-robustness-foundation-results.md)
+found that adaptation improved deterministic root accuracy from 82.6% to 100%
+and reduced forecast error from 46.9 to 17.6 percentage points on those same
+small fixtures. It does not isolate format learning from reasoning gains.
 
 A [ToolSandbox data pilot](toolsandbox-pilot-v1.md) now contributes 384 verified
 outcomes from actual contact/reminder tools. It establishes exact labels and
