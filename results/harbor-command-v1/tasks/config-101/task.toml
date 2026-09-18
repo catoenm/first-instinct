@@ -1,0 +1,26 @@
+schema_version = "1.4"
+artifacts = ["/app/data"]
+[metadata]
+generator = "harbor-command-selection-v1"
+family = "config"
+group = "config-scoped-nested-update"
+seed = 101
+scope = "engineering_fixture_not_benchmark"
+[agent]
+timeout_sec = 900
+user = "runner"
+network_mode = "no-network"
+[environment]
+cpus = 1
+memory_mb = 512
+build_timeout_sec = 180
+network_mode = "no-network"
+[verifier]
+environment_mode = "separate"
+timeout_sec = 30
+network_mode = "no-network"
+[verifier.environment]
+cpus = 1
+memory_mb = 512
+build_timeout_sec = 180
+network_mode = "no-network"

@@ -1,0 +1,59 @@
+{
+  "files": {
+    "reference.txt": {
+      "kind": "bytes",
+      "sha256": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc"
+    },
+    "orders.db": {
+      "kind": "sqlite",
+      "schema": [
+        [
+          "table",
+          "audit",
+          "audit",
+          "CREATE TABLE audit(id INTEGER PRIMARY KEY, note TEXT NOT NULL)"
+        ],
+        [
+          "table",
+          "orders",
+          "orders",
+          "CREATE TABLE orders(id INTEGER PRIMARY KEY, region TEXT NOT NULL, status TEXT NOT NULL, amount INTEGER NOT NULL CHECK(amount>=0))"
+        ]
+      ],
+      "tables": {
+        "orders": [
+          [
+            1,
+            "east",
+            "ready",
+            7
+          ],
+          [
+            2,
+            "east",
+            "shipped",
+            11
+          ],
+          [
+            3,
+            "other",
+            "pending",
+            13
+          ],
+          [
+            4,
+            "east",
+            "ready",
+            17
+          ]
+        ],
+        "audit": [
+          [
+            1,
+            "preserve"
+          ]
+        ]
+      }
+    }
+  }
+}

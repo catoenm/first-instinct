@@ -1,0 +1,18 @@
+{
+  "request_sha256": "9f671cf07c7c1bf0abeea03513144723c82be055e73cb67d559449d9a30c25bf",
+  "proposer": "Codex account subagent",
+  "candidates": [
+    {
+      "description": "Inspect the current order rows and their column names.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\ncur = con.execute('SELECT * FROM orders')\nprint('Columns:', [column[0] for column in cur.description])\nfor row in cur:\n    print(row)\ncon.close()\nPY"
+    },
+    {
+      "description": "Inspect the database schema and any triggers associated with orders.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\nfor row in con.execute('SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name'):\n    print(row)\ncon.close()\nPY"
+    },
+    {
+      "description": "Inspect directory entries for database sidecars or unexpected extra files.",
+      "command": "ls -la /app/data"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "request_sha256": "9f671cf07c7c1bf0abeea03513144723c82be055e73cb67d559449d9a30c25bf",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "In /app/data/orders.db, change pending orders in region north to ready. Preserve all other rows, amounts, tables, schema, and files.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 2,
+    "steps_remaining": 4,
+    "history": [
+      {
+        "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=rw', uri=True)\ncon.execute('PRAGMA journal_mode=MEMORY')\nwith con:\n    result = con.execute('UPDATE orders SET status = ? WHERE region = ? AND status = ?', ('ready', 'north', 'pending'))\n    print('Rows updated:', result.rowcount)\ncon.close()\nPY",
+        "exit_code": 0,
+        "stdout": "Rows updated: 2\n",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      },
+      {
+        "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\npending = con.execute('SELECT COUNT(*) FROM orders WHERE region = ? AND status = ?', ('north', 'pending')).fetchone()[0]\nprint('Pending north orders:', pending)\nassert pending == 0\nprint('Integrity:', list(con.execute('PRAGMA integrity_check')))\ncon.close()\nPY",
+        "exit_code": 0,
+        "stdout": "Pending north orders: 0\nIntegrity: [('ok',)]\n",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      }
+    ],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}

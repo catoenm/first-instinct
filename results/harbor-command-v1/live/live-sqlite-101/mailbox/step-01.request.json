@@ -1,0 +1,20 @@
+{
+  "request_sha256": "32ec3d53f73d48121984915f115eb45f5d171c9e606c9624339903ecd47a3062",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "In /app/data/orders.db, change pending orders in region north to ready. Preserve all other rows, amounts, tables, schema, and files.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 1,
+    "steps_remaining": 5,
+    "history": [
+      {
+        "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=rw', uri=True)\ncon.execute('PRAGMA journal_mode=MEMORY')\nwith con:\n    result = con.execute('UPDATE orders SET status = ? WHERE region = ? AND status = ?', ('ready', 'north', 'pending'))\n    print('Rows updated:', result.rowcount)\ncon.close()\nPY",
+        "exit_code": 0,
+        "stdout": "Rows updated: 2\n",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      }
+    ],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "request_sha256": "c5dbc1c258e2404edd21f95731f1e11433c555c4c3a7e9ef632b062cef57ae9b",
+  "proposer": "Codex account subagent",
+  "candidates": [
+    {
+      "description": "Read the saved report after validation.",
+      "command": "cat /app/data/report.json"
+    },
+    {
+      "description": "Display the source rows contributing to the north paid total.",
+      "command": "python3 - <<'PY'\nimport csv\nwith open('/app/data/sales.csv', newline='') as source:\n    for row in csv.DictReader(source):\n        if row['region'] == 'north' and row['status'] == 'paid':\n            print(row)\nPY"
+    },
+    {
+      "description": "Inspect directory entries and file metadata after report creation.",
+      "command": "ls -la /app/data"
+    }
+  ]
+}

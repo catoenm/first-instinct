@@ -1,0 +1,41 @@
+{
+  "schema": "harbor-command-report-v1",
+  "trials": [
+    {
+      "trial": "sqlite-101__pfCWpdo",
+      "task": "sqlite-101",
+      "harbor_exception": null,
+      "verified_success": 1.0,
+      "commands": 2,
+      "status": "complete",
+      "total_reward": 0.98,
+      "training_performed": false,
+      "returns": [
+        {
+          "step": 0,
+          "return": 0.98,
+          "selector_input_sha256": "81a35921c5c84b6b6b5335b9db2cfff0c1e96c0a4d945b7604d34d9ed426de95",
+          "selected": "c2",
+          "selected_log_probability": -0.0693518367608427
+        },
+        {
+          "step": 1,
+          "return": 0.99,
+          "selector_input_sha256": "3e4da0f6c6e06b366531596a62ebafbb64f697c7ed123f87997c32571b01b333",
+          "selected": "c2",
+          "selected_log_probability": -0.06412019993433621
+        },
+        {
+          "step": 2,
+          "return": 1.0,
+          "selector_input_sha256": "e1f8c2f5297a75a800fe96b8bf6ce74198c4385fead916ba286e16dc485f2f3d",
+          "selected": "finish",
+          "selected_log_probability": -0.08125299186143856
+        }
+      ],
+      "policy_mode": "argmax",
+      "training_note": "These saved inference traces are not automatically reusable PPO rollouts; training must collect with its current policy and exact input encoding."
+    }
+  ],
+  "scope": "Engineering qualification only. Task and candidate generators contribute to success; this is not a selector benchmark."
+}

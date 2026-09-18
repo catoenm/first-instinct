@@ -1,0 +1,20 @@
+{
+  "services": {
+    "east": {
+      "workers": 1,
+      "timeout": 30,
+      "enabled": true
+    },
+    "west": {
+      "workers": 3,
+      "timeout": 30,
+      "enabled": true
+    },
+    "north": {
+      "workers": 2,
+      "timeout": 30,
+      "enabled": true
+    }
+  },
+  "revision": 101
+}

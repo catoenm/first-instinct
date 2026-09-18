@@ -1,0 +1,19 @@
+{
+  "schema": "harbor-command-qualification-v1",
+  "max_harbor_trials": 16,
+  "max_live_trials": 3,
+  "max_selector_predictions": 18,
+  "harbor_version": "0.23.0",
+  "base_image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+  "task_manifest_sha256": "fcef3213dd0546b575ff619e4b71d033b0883a82306c5ed1b4dda743931b9fd2",
+  "source_sha256": {
+    "tool_lab/harbor_agent.py": "b934fd6d09070b81b1742afff7eb98ad1d4ca6e1203744d1302a1da0ecf6f32c",
+    "tool_lab/generate.py": "fefa9ddd9eabb22f229e582373d17736b0f9fd9c797b38b6085344bf88a96121",
+    "tool_lab/protocol.py": "0b4f266dbf622b2cc57d47bf1b1c4cf05600df7e9073626e76924c8cc827b9a3",
+    "tool_lab/__init__.py": "db42d9a8e8f1266a49ea25baffb8ff970b47fcebffcf54033435965993697383",
+    "tool_lab/report.py": "4c1eef4b91fc4c5307443c6a7fb6200e11d87bbff5320b7eda4368bdec06ba1c",
+    "requirements-harbor.txt": "21f3c530a7888ffb3bba97a541dbcba77ce6beaeaf01d7c453354cae25f68920",
+    "test_harbor_selection.py": "3e65fdf7a23964e7535b4067c063a4e9269770ad2ed6db0c4b7b6b811e211352",
+    "docs/harbor-command-selection.md": "cede0df1e7ced68aea2379c03774060114938ef045088a8a91e7bbdd96e72f58"
+  }
+}

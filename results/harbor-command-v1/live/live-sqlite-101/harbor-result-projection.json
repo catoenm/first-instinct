@@ -1,0 +1,15 @@
+{
+  "task_name": "sqlite-101",
+  "started_at": "2026-09-18T17:54:19.459871Z",
+  "finished_at": "2026-09-18T17:56:18.617006Z",
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "job": "live-sqlite-101",
+  "trial": "sqlite-101__pfCWpdo",
+  "agent": "first-instinct-proposal-choice",
+  "original_result_sha256": "4a524e9f840f781af5d3b2268144c9924ebbbbf6e5c1a25c1ea92852a75773a2"
+}

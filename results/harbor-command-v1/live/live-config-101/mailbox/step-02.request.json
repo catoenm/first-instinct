@@ -1,0 +1,28 @@
+{
+  "request_sha256": "dcfdbd6497aa4a3dcf773bced0e2452e504d609e9491f32a5acf4e99dc387928",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "In /app/data/services.json, set workers for service north to 8. Preserve every other JSON value and all other files.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 2,
+    "steps_remaining": 4,
+    "history": [
+      {
+        "command": "cat /app/data/services.json",
+        "exit_code": 0,
+        "stdout": "{\n  \"services\": {\n    \"east\": {\n      \"workers\": 1,\n      \"timeout\": 30,\n      \"enabled\": true\n    },\n    \"west\": {\n      \"workers\": 3,\n      \"timeout\": 30,\n      \"enabled\": true\n    },\n    \"north\": {\n      \"workers\": 2,\n      \"timeout\": 30,\n      \"enabled\": true\n    }\n  },\n  \"revision\": 101\n}\n",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      },
+      {
+        "command": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\np = Path('/app/data/services.json')\ndata = json.loads(p.read_text())\ndata['services']['north']['workers'] = 8\np.write_text(json.dumps(data, separators=(',', ':')) + '\\n')\nPY",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      }
+    ],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "request_sha256": "b39cb9e45402852d6154219e327fe436345458db28bd49e9ed4ace47d1dec555",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "In /app/data/services.json, set workers for service north to 8. Preserve every other JSON value and all other files.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 3,
+    "steps_remaining": 3,
+    "history": [
+      {
+        "command": "cat /app/data/services.json",
+        "exit_code": 0,
+        "stdout": "{\n  \"services\": {\n    \"east\": {\n      \"workers\": 1,\n      \"timeout\": 30,\n      \"enabled\": true\n    },\n    \"west\": {\n      \"workers\": 3,\n      \"timeout\": 30,\n      \"enabled\": true\n    },\n    \"north\": {\n      \"workers\": 2,\n      \"timeout\": 30,\n      \"enabled\": true\n    }\n  },\n  \"revision\": 101\n}\n",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      },
+      {
+        "command": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\np = Path('/app/data/services.json')\ndata = json.loads(p.read_text())\ndata['services']['north']['workers'] = 8\np.write_text(json.dumps(data, separators=(',', ':')) + '\\n')\nPY",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      },
+      {
+        "command": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\nexpected = {'services': {'east': {'workers': 1, 'timeout': 30, 'enabled': True}, 'west': {'workers': 3, 'timeout': 30, 'enabled': True}, 'north': {'workers': 8, 'timeout': 30, 'enabled': True}}, 'revision': 101}\nactual = json.loads(Path('/app/data/services.json').read_text())\nassert actual == expected, 'Saved configuration differs from the expected values'\nprint('Saved JSON matches the expected values.')\nPY",
+        "exit_code": 0,
+        "stdout": "Saved JSON matches the expected values.\n",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      }
+    ],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}

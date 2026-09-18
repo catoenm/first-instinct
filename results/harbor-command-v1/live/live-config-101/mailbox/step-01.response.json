@@ -1,0 +1,18 @@
+{
+  "request_sha256": "c36d40174d385f93f191495f61fb307d71b27d181307eecc959cd783e0b9feaf",
+  "proposer": "Codex account subagent",
+  "candidates": [
+    {
+      "description": "Set north workers to 8 using the observed nested JSON structure.",
+      "command": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\np = Path('/app/data/services.json')\ndata = json.loads(p.read_text())\ndata['services']['north']['workers'] = 8\np.write_text(json.dumps(data, separators=(',', ':')) + '\\n')\nPY"
+    },
+    {
+      "description": "Inspect the north service and revision before modifying the configuration.",
+      "command": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\ndata = json.loads(Path('/app/data/services.json').read_text())\nprint(json.dumps({'north': data['services']['north'], 'revision': data['revision']}, indent=2))\nPY"
+    },
+    {
+      "description": "Replace the observed north workers text while retaining the rest of the file exactly.",
+      "command": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\np = Path('/app/data/services.json')\noriginal = p.read_bytes()\nold = b'\"north\":{\"workers\":2'\nnew = b'\"north\":{\"workers\":8'\nassert original.count(old) == 1, 'Expected exactly one observed north entry'\nupdated = original.replace(old, new, 1)\nexpected = json.loads(original)\nexpected['services']['north']['workers'] = 8\nassert json.loads(updated) == expected\np.write_bytes(updated)\nPY"
+    }
+  ]
+}

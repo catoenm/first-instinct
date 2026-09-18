@@ -1,0 +1,11 @@
+{
+  "request_sha256": "d99f533d8492b760cee813fd1f601895013979c9c7e78567804635a1bc2ac33c",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "In /app/data/orders.db, change pending orders in region north to ready. Preserve all other rows, amounts, tables, schema, and files.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 0,
+    "steps_remaining": 6,
+    "history": [],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}

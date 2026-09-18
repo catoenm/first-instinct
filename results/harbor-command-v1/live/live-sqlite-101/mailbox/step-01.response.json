@@ -1,0 +1,18 @@
+{
+  "request_sha256": "32ec3d53f73d48121984915f115eb45f5d171c9e606c9624339903ecd47a3062",
+  "proposer": "Codex account subagent",
+  "candidates": [
+    {
+      "description": "Check for remaining pending north orders and run a database integrity check.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\npending = con.execute('SELECT COUNT(*) FROM orders WHERE region = ? AND status = ?', ('north', 'pending')).fetchone()[0]\nprint('Pending north orders:', pending)\nassert pending == 0\nprint('Integrity:', list(con.execute('PRAGMA integrity_check')))\ncon.close()\nPY"
+    },
+    {
+      "description": "Display the orders columns and all current rows for inspection.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\ncur = con.execute('SELECT * FROM orders')\nprint('Columns:', [column[0] for column in cur.description])\nfor row in cur:\n    print(row)\ncon.close()\nPY"
+    },
+    {
+      "description": "Inspect table, index, and trigger definitions after the update.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\nfor row in con.execute('SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name'):\n    print(row)\ncon.close()\nPY"
+    }
+  ]
+}

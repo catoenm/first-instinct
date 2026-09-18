@@ -1,0 +1,31 @@
+{
+  "files": {
+    "reference.txt": {
+      "kind": "bytes",
+      "sha256": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc"
+    },
+    "services.json": {
+      "kind": "json",
+      "value": {
+        "services": {
+          "east": {
+            "workers": 6,
+            "timeout": 30,
+            "enabled": true
+          },
+          "west": {
+            "workers": 3,
+            "timeout": 30,
+            "enabled": true
+          },
+          "north": {
+            "workers": 2,
+            "timeout": 30,
+            "enabled": true
+          }
+        },
+        "revision": 102
+      }
+    }
+  }
+}

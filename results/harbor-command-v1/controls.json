@@ -1,0 +1,182 @@
+[
+  {
+    "task_name": "config-101",
+    "started_at": "2026-09-18T17:48:29.772547Z",
+    "finished_at": "2026-09-18T17:48:46.290133Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 0.0
+      }
+    },
+    "exception_info": null,
+    "job": "noop-controls",
+    "trial": "config-101__BvUFjYm",
+    "agent": "nop",
+    "original_result_sha256": "5c4f633a60ed5ee338f80b45ce52678be47c34753ecdd5ec28902fd3200ae401"
+  },
+  {
+    "task_name": "config-102",
+    "started_at": "2026-09-18T17:48:29.882753Z",
+    "finished_at": "2026-09-18T17:48:46.435113Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 0.0
+      }
+    },
+    "exception_info": null,
+    "job": "noop-controls",
+    "trial": "config-102__9BxbBrb",
+    "agent": "nop",
+    "original_result_sha256": "cea8d4369f57d3917fcbb46b62fc70af51abd740903c24bb0bd4a6d09ec55efb"
+  },
+  {
+    "task_name": "report-101",
+    "started_at": "2026-09-18T17:48:46.294983Z",
+    "finished_at": "2026-09-18T17:49:03.159591Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 0.0
+      }
+    },
+    "exception_info": null,
+    "job": "noop-controls",
+    "trial": "report-101__w6z9pdn",
+    "agent": "nop",
+    "original_result_sha256": "6d9c59739fbf612adcabaddda3ab3b6638925bef2b4f943df3a23a2887b393f4"
+  },
+  {
+    "task_name": "report-102",
+    "started_at": "2026-09-18T17:48:46.440591Z",
+    "finished_at": "2026-09-18T17:49:03.277917Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 0.0
+      }
+    },
+    "exception_info": null,
+    "job": "noop-controls",
+    "trial": "report-102__kNhwfhQ",
+    "agent": "nop",
+    "original_result_sha256": "af401e7933548cbd45d33c6ccc03d5125d833fc2a8e8f3c9815b96ac99dc8a13"
+  },
+  {
+    "task_name": "sqlite-101",
+    "started_at": "2026-09-18T17:49:03.164611Z",
+    "finished_at": "2026-09-18T17:49:19.661322Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 0.0
+      }
+    },
+    "exception_info": null,
+    "job": "noop-controls",
+    "trial": "sqlite-101__3mAudJd",
+    "agent": "nop",
+    "original_result_sha256": "a9cbf7a23ac4da8f38993b9938ea701fe8b4e21c378a6bc5ccbdae8ff43b429f"
+  },
+  {
+    "task_name": "sqlite-102",
+    "started_at": "2026-09-18T17:49:03.282365Z",
+    "finished_at": "2026-09-18T17:49:19.801288Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 0.0
+      }
+    },
+    "exception_info": null,
+    "job": "noop-controls",
+    "trial": "sqlite-102__8SiWEHE",
+    "agent": "nop",
+    "original_result_sha256": "6b9d87d7034c096c1a9978e5c351a75e42161c94bc4281be9fd1c35cae569d68"
+  },
+  {
+    "task_name": "config-101",
+    "started_at": "2026-09-18T17:47:48.944348Z",
+    "finished_at": "2026-09-18T17:48:06.807831Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 1.0
+      }
+    },
+    "exception_info": null,
+    "job": "reference-config-101",
+    "trial": "config-101__CNLXhPV",
+    "agent": "oracle",
+    "original_result_sha256": "351e2843d4e5be2bc0368e3974a8ed68caa3448d747685b7a1754ee211b3a57a"
+  },
+  {
+    "task_name": "config-102",
+    "started_at": "2026-09-18T17:48:28.531963Z",
+    "finished_at": "2026-09-18T17:48:45.772106Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 1.0
+      }
+    },
+    "exception_info": null,
+    "job": "references-rest",
+    "trial": "config-102__Ksf3A4L",
+    "agent": "oracle",
+    "original_result_sha256": "5c9c1dbffbc48486b8993c3ca2d0187be5ee05e01fcc3888e4481d2c20f2f6d5"
+  },
+  {
+    "task_name": "report-101",
+    "started_at": "2026-09-18T17:48:28.635137Z",
+    "finished_at": "2026-09-18T17:48:45.635274Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 1.0
+      }
+    },
+    "exception_info": null,
+    "job": "references-rest",
+    "trial": "report-101__FWymb3s",
+    "agent": "oracle",
+    "original_result_sha256": "db127098c8fe74cabaf8546abde24e4d4ecae6b3e153bd7a35c38482c269856e"
+  },
+  {
+    "task_name": "report-102",
+    "started_at": "2026-09-18T17:48:45.640663Z",
+    "finished_at": "2026-09-18T17:49:02.775307Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 1.0
+      }
+    },
+    "exception_info": null,
+    "job": "references-rest",
+    "trial": "report-102__zqgsFb3",
+    "agent": "oracle",
+    "original_result_sha256": "6847f5f5c6d32d83a9aea1780d8a00e80e901e1d6d5c86e3c74d5bde133bb70b"
+  },
+  {
+    "task_name": "sqlite-101",
+    "started_at": "2026-09-18T17:48:45.777717Z",
+    "finished_at": "2026-09-18T17:49:02.911304Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 1.0
+      }
+    },
+    "exception_info": null,
+    "job": "references-rest",
+    "trial": "sqlite-101__fYFst42",
+    "agent": "oracle",
+    "original_result_sha256": "e40ceae17a53c857032e5eb6d2b70acb22cc213b8c2dd38321996f80539127f5"
+  },
+  {
+    "task_name": "sqlite-102",
+    "started_at": "2026-09-18T17:49:02.780977Z",
+    "finished_at": "2026-09-18T17:49:19.391275Z",
+    "verifier_result": {
+      "rewards": {
+        "reward": 1.0
+      }
+    },
+    "exception_info": null,
+    "job": "references-rest",
+    "trial": "sqlite-102__vgAAsDK",
+    "agent": "oracle",
+    "original_result_sha256": "3d498fab5201cf93e52d29cf53e6f88707928176bf6b0c75cd487e0c73bab4fd"
+  }
+]

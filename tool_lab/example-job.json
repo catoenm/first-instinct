@@ -1,0 +1,23 @@
+{
+  "job_name": "command-selection-example",
+  "jobs_dir": "output/harbor-example/jobs",
+  "n_attempts": 1,
+  "n_concurrent_trials": 1,
+  "retry": {"max_retries": 0},
+  "environment": {"type": "docker", "delete": true},
+  "agents": [
+    {
+      "import_path": "tool_lab.harbor_agent:ProposalChoiceAgent",
+      "model_name": "Qwen/Qwen3.5-9B",
+      "kwargs": {
+        "mailbox": "output/harbor-example/mailbox",
+        "selector_url": "http://127.0.0.1:8766",
+        "mode": "argmax",
+        "seed": 101,
+        "max_steps": 6,
+        "proposal_timeout": 180
+      }
+    }
+  ],
+  "tasks": [{"path": "output/harbor-example/tasks/config-101"}]
+}

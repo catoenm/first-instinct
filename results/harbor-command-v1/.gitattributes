@@ -1,0 +1,3 @@
+# Preserve original experiment bytes, including standard CSV CRLF records.
+* -text
+tasks/report-*/environment/data/sales.csv whitespace=cr-at-eol

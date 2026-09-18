@@ -1,0 +1,2 @@
+# Separate environment: do not change the frozen model runtime.
+harbor==0.23.0

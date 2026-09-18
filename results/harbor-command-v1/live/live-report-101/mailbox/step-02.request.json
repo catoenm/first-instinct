@@ -1,0 +1,28 @@
+{
+  "request_sha256": "c5dbc1c258e2404edd21f95731f1e11433c555c4c3a7e9ef632b062cef57ae9b",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "Read /app/data/sales.csv and write /app/data/report.json with exactly region='north' and paid_total, the integer sum of amount for paid rows in that region. Preserve every existing file.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 2,
+    "steps_remaining": 4,
+    "history": [
+      {
+        "command": "python3 - <<'PY'\nimport csv\nimport json\nwith open('/app/data/sales.csv', newline='') as source:\n    rows = csv.DictReader(source)\n    total = sum(int(row['amount']) for row in rows if row['region'] == 'north' and row['status'] == 'paid')\nwith open('/app/data/report.json', 'x') as report:\n    json.dump({'region': 'north', 'paid_total': total}, report)\n    report.write('\\n')\nPY",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      },
+      {
+        "command": "python3 - <<'PY'\nimport csv\nimport json\nwith open('/app/data/sales.csv', newline='') as source:\n    total = 0\n    for row in csv.DictReader(source):\n        if row['region'] == 'north' and row['status'] == 'paid':\n            total += int(row['amount'])\nwith open('/app/data/report.json') as source:\n    report = json.load(source)\nassert report == {'region': 'north', 'paid_total': total}\nassert type(report['paid_total']) is int\nprint(json.dumps(report))\nPY",
+        "exit_code": 0,
+        "stdout": "{\"region\": \"north\", \"paid_total\": 23}\n",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      }
+    ],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}

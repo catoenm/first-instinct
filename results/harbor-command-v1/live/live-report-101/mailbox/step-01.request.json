@@ -1,0 +1,20 @@
+{
+  "request_sha256": "82b81c177590b7a8f5f762a1c5f9806dc0d61e140afdb9cb8ddcaa28a99ec153",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "Read /app/data/sales.csv and write /app/data/report.json with exactly region='north' and paid_total, the integer sum of amount for paid rows in that region. Preserve every existing file.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 1,
+    "steps_remaining": 5,
+    "history": [
+      {
+        "command": "python3 - <<'PY'\nimport csv\nimport json\nwith open('/app/data/sales.csv', newline='') as source:\n    rows = csv.DictReader(source)\n    total = sum(int(row['amount']) for row in rows if row['region'] == 'north' and row['status'] == 'paid')\nwith open('/app/data/report.json', 'x') as report:\n    json.dump({'region': 'north', 'paid_total': total}, report)\n    report.write('\\n')\nPY",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "stdout_truncated": false,
+        "stderr_truncated": false
+      }
+    ],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}

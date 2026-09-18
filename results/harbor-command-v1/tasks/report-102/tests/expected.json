@@ -1,0 +1,19 @@
+{
+  "files": {
+    "reference.txt": {
+      "kind": "bytes",
+      "sha256": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc"
+    },
+    "sales.csv": {
+      "kind": "bytes",
+      "sha256": "206643309e52657015b5f7eaa569fcce2d791209a255e611fa80e47c65c17421"
+    },
+    "report.json": {
+      "kind": "json",
+      "value": {
+        "region": "east",
+        "paid_total": 28
+      }
+    }
+  }
+}

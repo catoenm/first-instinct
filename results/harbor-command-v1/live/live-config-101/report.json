@@ -1,0 +1,48 @@
+{
+  "schema": "harbor-command-report-v1",
+  "trials": [
+    {
+      "trial": "config-101__F69NcrU",
+      "task": "config-101",
+      "harbor_exception": null,
+      "verified_success": 1.0,
+      "commands": 3,
+      "status": "complete",
+      "total_reward": 0.97,
+      "training_performed": false,
+      "returns": [
+        {
+          "step": 0,
+          "return": 0.97,
+          "selector_input_sha256": "7415b1174a53b0f71894d679336fd7c715b7661b23ba1202ac205c9c926013c8",
+          "selected": "c1",
+          "selected_log_probability": -0.6673655533642732
+        },
+        {
+          "step": 1,
+          "return": 0.98,
+          "selector_input_sha256": "b4a68e8a475d318453c8eab524e8db82b0a0c855ca7758a53b5132cfd74eb741",
+          "selected": "c2",
+          "selected_log_probability": -0.16247437426532663
+        },
+        {
+          "step": 2,
+          "return": 0.99,
+          "selector_input_sha256": "be0228f47ba4b2a465c2ee5b081e4d271454ccee4243a4c326025d959d4767cf",
+          "selected": "c1",
+          "selected_log_probability": -0.03374362006021102
+        },
+        {
+          "step": 3,
+          "return": 1.0,
+          "selector_input_sha256": "6fb40eba285cecf130878e5159aca9124f5d94ef0431e04415177d615a3ac7c4",
+          "selected": "finish",
+          "selected_log_probability": -0.06129759838937826
+        }
+      ],
+      "policy_mode": "argmax",
+      "training_note": "These saved inference traces are not automatically reusable PPO rollouts; training must collect with its current policy and exact input encoding."
+    }
+  ],
+  "scope": "Engineering qualification only. Task and candidate generators contribute to success; this is not a selector benchmark."
+}

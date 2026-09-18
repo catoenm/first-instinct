@@ -1,0 +1,18 @@
+{
+  "request_sha256": "d99f533d8492b760cee813fd1f601895013979c9c7e78567804635a1bc2ac33c",
+  "proposer": "Codex account subagent",
+  "candidates": [
+    {
+      "description": "Inspect the database schema through a read-only connection.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\nfor row in con.execute(\"SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name\"):\n    print(row)\ncon.close()\nPY"
+    },
+    {
+      "description": "Inspect the orders columns and current counts grouped by region and status.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=ro', uri=True)\nprint('Columns:', list(con.execute('PRAGMA table_info(orders)')))\nfor row in con.execute('SELECT region, status, COUNT(*) FROM orders GROUP BY region, status ORDER BY region, status'):\n    print(row)\ncon.close()\nPY"
+    },
+    {
+      "description": "Change pending north orders to ready using an in-memory rollback journal.",
+      "command": "python3 - <<'PY'\nimport sqlite3\ncon = sqlite3.connect('file:/app/data/orders.db?mode=rw', uri=True)\ncon.execute('PRAGMA journal_mode=MEMORY')\nwith con:\n    result = con.execute('UPDATE orders SET status = ? WHERE region = ? AND status = ?', ('ready', 'north', 'pending'))\n    print('Rows updated:', result.rowcount)\ncon.close()\nPY"
+    }
+  ]
+}

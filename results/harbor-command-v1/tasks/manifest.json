@@ -1,0 +1,122 @@
+{
+  "schema": "harbor-command-selection-v1",
+  "scope": "engineering fixtures; no learning or generalization measurement",
+  "seeds": [
+    101,
+    102
+  ],
+  "families": 3,
+  "base_image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+  "tasks": [
+    {
+      "name": "config-101",
+      "family": "config",
+      "group": "config-scoped-nested-update",
+      "seed": 101,
+      "files_sha256": {
+        "environment/Dockerfile": "e60c69aa5d6b60f20e407d153dcbcc177a06c113180344114f988dc5e6e6310e",
+        "environment/data/reference.txt": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc",
+        "environment/data/services.json": "a6ef385fb11e1606f1dec0b50ad4940b7434b7240bbeaa35f3f9214645eb07ca",
+        "instruction.md": "34862c20cebf0f573dad21091c79aff42c44f6378de797f30c8c22e0ae977099",
+        "solution/solve.sh": "0c91a7f9bc85a1b65304993e0075c62b21da6f17ceb99ac9f41136b59e9d7fae",
+        "task.toml": "59ae8528ea2efe07853a051a6644231eeca5e5dbd18239c2266cd9a8544049fb",
+        "tests/Dockerfile": "ff176b1419cc21bf00540abaa8af29816afefa35e4c35405a6b9036e66686c53",
+        "tests/expected.json": "5fa949c0ddc0b15d72f51e87528419ea6d8012ad6b5c0ab5e7e1d6ef1d2c8d4e",
+        "tests/test.sh": "4e7a89fb339996593ff11618d0604833707b6d6eaf169416f4d5e3a9668785c1",
+        "tests/verify.py": "223942fb5afcf63a91076df2d8126e92487e728394ce0a671749b65523b0ea72"
+      }
+    },
+    {
+      "name": "config-102",
+      "family": "config",
+      "group": "config-scoped-nested-update",
+      "seed": 102,
+      "files_sha256": {
+        "environment/Dockerfile": "e60c69aa5d6b60f20e407d153dcbcc177a06c113180344114f988dc5e6e6310e",
+        "environment/data/reference.txt": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc",
+        "environment/data/services.json": "64193334409b0c323a678f72c5d389f7cb030982d51e74ae76ab4d1bd6eaaeec",
+        "instruction.md": "bee379baa135b7a6d17cfcd959a8d530d2cd892fafbea78d96f1073ac5d2813f",
+        "solution/solve.sh": "a31208b20340d3e6fddcb32a964f25fdde0592b82f51d3a0503bc0ef2b7aae6e",
+        "task.toml": "70c134ac1f5ae7f1d796e2e623856516a2906379c660d198164a83b223ccb4cc",
+        "tests/Dockerfile": "ff176b1419cc21bf00540abaa8af29816afefa35e4c35405a6b9036e66686c53",
+        "tests/expected.json": "9971a46bc5a39f1c4550bb5a9eea4ab659a55e94281da5bb7bd28e4a59cceb4c",
+        "tests/test.sh": "4e7a89fb339996593ff11618d0604833707b6d6eaf169416f4d5e3a9668785c1",
+        "tests/verify.py": "223942fb5afcf63a91076df2d8126e92487e728394ce0a671749b65523b0ea72"
+      }
+    },
+    {
+      "name": "sqlite-101",
+      "family": "sqlite",
+      "group": "sqlite-conjunctive-scoped-update",
+      "seed": 101,
+      "files_sha256": {
+        "environment/Dockerfile": "e60c69aa5d6b60f20e407d153dcbcc177a06c113180344114f988dc5e6e6310e",
+        "environment/data/orders.db": "96014f55f500ecc16854f85a66e51b77d668e7f04250c807eb93497c557fa09c",
+        "environment/data/reference.txt": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc",
+        "instruction.md": "3885d3d68da40915ee3cb4341659b8309817bfd77d15fd2657c34f5333fae526",
+        "solution/solve.sh": "53e10b4891b2f239cdaa4fc046f76a7022dc54531bdf949b9588f3ff115e1539",
+        "task.toml": "896b43c7f4eda09512457933a7a3f9742f963aec026da24a277f6db663b2a5b8",
+        "tests/Dockerfile": "ff176b1419cc21bf00540abaa8af29816afefa35e4c35405a6b9036e66686c53",
+        "tests/expected.json": "c49c8b0abe278b2716181549ede178095e7e0f8aaad0671965ffe0aa0e9262d6",
+        "tests/test.sh": "4e7a89fb339996593ff11618d0604833707b6d6eaf169416f4d5e3a9668785c1",
+        "tests/verify.py": "223942fb5afcf63a91076df2d8126e92487e728394ce0a671749b65523b0ea72"
+      }
+    },
+    {
+      "name": "sqlite-102",
+      "family": "sqlite",
+      "group": "sqlite-conjunctive-scoped-update",
+      "seed": 102,
+      "files_sha256": {
+        "environment/Dockerfile": "e60c69aa5d6b60f20e407d153dcbcc177a06c113180344114f988dc5e6e6310e",
+        "environment/data/orders.db": "f3a5aa8bba632221c98df5699d41b9250c43330c817ce9300bf8493b277d5094",
+        "environment/data/reference.txt": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc",
+        "instruction.md": "dcbd9d56e66ee769bf494841fb8fba6bb8993aeed5042a36fa0ee8a5e0281d26",
+        "solution/solve.sh": "a01e8b713a58d253bdfbd77e72a000d73596cf468a1f07e19c6c9aacd154e519",
+        "task.toml": "c45c37cde613a6552b751a9f448b8f3ea5d6d9322dd9524639af661042107a94",
+        "tests/Dockerfile": "ff176b1419cc21bf00540abaa8af29816afefa35e4c35405a6b9036e66686c53",
+        "tests/expected.json": "0e474ae220f2d46013ab33702e9a72cfb0fbe1319176a1b772672dd453ac97d5",
+        "tests/test.sh": "4e7a89fb339996593ff11618d0604833707b6d6eaf169416f4d5e3a9668785c1",
+        "tests/verify.py": "223942fb5afcf63a91076df2d8126e92487e728394ce0a671749b65523b0ea72"
+      }
+    },
+    {
+      "name": "report-101",
+      "family": "report",
+      "group": "csv-filter-and-aggregate",
+      "seed": 101,
+      "files_sha256": {
+        "environment/Dockerfile": "e60c69aa5d6b60f20e407d153dcbcc177a06c113180344114f988dc5e6e6310e",
+        "environment/data/reference.txt": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc",
+        "environment/data/sales.csv": "5c659665be19640a6e8484a3796ef168816568fdb576036777e66fef518e81f3",
+        "instruction.md": "5201c6b76c030f5a837b7a0ed88a4ecb68c7e683c453a96dc8eab194b5f55f94",
+        "solution/solve.sh": "96129ccf51882efe4e081e8eb0e7cd56458b2b4721d657439316112e271b550f",
+        "task.toml": "bccacb1782c761c2d79ab986e687fe31cccdf8734b0f97798e33c59d6c0b8c7e",
+        "tests/Dockerfile": "ff176b1419cc21bf00540abaa8af29816afefa35e4c35405a6b9036e66686c53",
+        "tests/expected.json": "a655f5db820699f1f4573517cbd116602f069b7d2c2c8914177eb6fb963e74b2",
+        "tests/test.sh": "4e7a89fb339996593ff11618d0604833707b6d6eaf169416f4d5e3a9668785c1",
+        "tests/verify.py": "223942fb5afcf63a91076df2d8126e92487e728394ce0a671749b65523b0ea72"
+      }
+    },
+    {
+      "name": "report-102",
+      "family": "report",
+      "group": "csv-filter-and-aggregate",
+      "seed": 102,
+      "files_sha256": {
+        "environment/Dockerfile": "e60c69aa5d6b60f20e407d153dcbcc177a06c113180344114f988dc5e6e6310e",
+        "environment/data/reference.txt": "2995109704c3048770e68ef319299260fbb21d4cfeb8e2effbbb780599bf4bdc",
+        "environment/data/sales.csv": "206643309e52657015b5f7eaa569fcce2d791209a255e611fa80e47c65c17421",
+        "instruction.md": "c42709995e883ee1461bb3225a21c5ea84a66a07e54ffa257f8fbaaab6441197",
+        "solution/solve.sh": "77f57a5d75f27e440b9b1dba6e5c168c1d11d6780d626e9b1e23453ed977f842",
+        "task.toml": "dc0c31757c2f28cf189349c97c24003e5ef1ea29d530b69dcfe6371af86b860c",
+        "tests/Dockerfile": "ff176b1419cc21bf00540abaa8af29816afefa35e4c35405a6b9036e66686c53",
+        "tests/expected.json": "5c319679f5f2a9e566ea9ce442b9ba29b25f098ceb3162ce46bca45cf790bea8",
+        "tests/test.sh": "4e7a89fb339996593ff11618d0604833707b6d6eaf169416f4d5e3a9668785c1",
+        "tests/verify.py": "223942fb5afcf63a91076df2d8126e92487e728394ce0a671749b65523b0ea72"
+      }
+    }
+  ],
+  "evidence_note": "Entity/number changes are variants of three authored mechanisms, not independent new skills.",
+  "content_sha256": "702ab29fd6ab016214a451286c1fada594f6a1195670e550d141582eb4e6345f"
+}

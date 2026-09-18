@@ -1,0 +1,18 @@
+{
+  "request_sha256": "dcfdbd6497aa4a3dcf773bced0e2452e504d609e9491f32a5acf4e99dc387928",
+  "proposer": "Codex account subagent",
+  "candidates": [
+    {
+      "description": "Read the saved configuration after the update.",
+      "command": "cat /app/data/services.json"
+    },
+    {
+      "description": "Check that the saved JSON matches the observed configuration with only north workers changed.",
+      "command": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\nexpected = {'services': {'east': {'workers': 1, 'timeout': 30, 'enabled': True}, 'west': {'workers': 3, 'timeout': 30, 'enabled': True}, 'north': {'workers': 8, 'timeout': 30, 'enabled': True}}, 'revision': 101}\nactual = json.loads(Path('/app/data/services.json').read_text())\nassert actual == expected, 'Saved configuration differs from the expected values'\nprint('Saved JSON matches the expected values.')\nPY"
+    },
+    {
+      "description": "Inspect the data directory entries and file metadata following the write.",
+      "command": "ls -la /app/data"
+    }
+  ]
+}

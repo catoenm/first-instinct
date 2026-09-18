@@ -1,0 +1,41 @@
+{
+  "schema": "harbor-history-audit-v1",
+  "affected_events": [
+    {
+      "job": "live-config-101",
+      "step": 0
+    },
+    {
+      "job": "live-config-101",
+      "step": 1
+    },
+    {
+      "job": "live-config-101",
+      "step": 2
+    },
+    {
+      "job": "live-report-101",
+      "step": 0
+    },
+    {
+      "job": "live-report-101",
+      "step": 1
+    },
+    {
+      "job": "live-sqlite-101",
+      "step": 0
+    },
+    {
+      "job": "live-sqlite-101",
+      "step": 1
+    }
+  ],
+  "cause": "Version 1.0.0 stored a shared mutable history list in redundant receipt request fields. Immutable mailbox requests and serialized model inputs are intact.",
+  "correction": "Restore only event.request from original step request mailbox. Raw receipts and source freeze are preserved. No commands, probabilities, rewards or selection inputs changed; no trials rerun.",
+  "fixed_agent_version": "1.0.1",
+  "fixed_source_sha256": {
+    "tool_lab/protocol.py": "7ed99f3cc4b0e566ee9cf1b995835aac8ea7189a0f384eb23e323a5ffa213d6e",
+    "tool_lab/harbor_agent.py": "bcbdb4fde6504038e47d04eef259c03221cf4b6ca5e3d222701994c9a7ddcc6a",
+    "test_harbor_selection.py": "750e2be220652d9385ddbba8c96b4a744e911ed007aab8d05fa21c28db423e39"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "task_name": "config-101",
+  "started_at": "2026-09-18T17:48:31.009437Z",
+  "finished_at": "2026-09-18T17:52:12.699745Z",
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "job": "live-config-101",
+  "trial": "config-101__F69NcrU",
+  "agent": "first-instinct-proposal-choice",
+  "original_result_sha256": "e3fd7a6b1357a7abae5de0361232e77402281690843f39642926cef8fe1a12b4"
+}

@@ -1,0 +1,15 @@
+{
+  "task_name": "report-101",
+  "started_at": "2026-09-18T17:56:46.994607Z",
+  "finished_at": "2026-09-18T17:58:54.450584Z",
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "job": "live-report-101",
+  "trial": "report-101__vy23E7u",
+  "agent": "first-instinct-proposal-choice",
+  "original_result_sha256": "e99932fb282579665b94c0b2f8bb85dd4deea9c13ca5c002c1c5d4e030a922c5"
+}

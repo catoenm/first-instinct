@@ -1,0 +1,5 @@
+region,status,amount
+north,paid,5
+north,pending,55
+other,paid,71
+north,paid,18

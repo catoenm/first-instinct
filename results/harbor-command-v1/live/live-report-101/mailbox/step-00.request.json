@@ -1,0 +1,11 @@
+{
+  "request_sha256": "7fffbb5d4fc1cc715e67c18dc07e8f741b8fce1031607f8abb85d1c2c27fbfb1",
+  "request": {
+    "schema": "command-proposal-request-v1",
+    "instruction": "Read /app/data/sales.csv and write /app/data/report.json with exactly region='north' and paid_total, the integer sum of amount for paid rows in that region. Preserve every existing file.\n\nYou have Linux shell tools and Python 3 with its standard library. Work in /app. Do not create extra files in /app/data. Success is checked independently after you finish.\n",
+    "step": 0,
+    "steps_remaining": 6,
+    "history": [],
+    "proposal_rules": "Provide 2\u20135 plausible alternative next shell commands as description/command pairs. Do not rank or mark a correct option. Use only the supplied public history. Commands run as an unprivileged user in /app with no network. Python standard library is available. Each description <=160 characters and command <=800 characters. End-of-task is added by the selector harness."
+  }
+}
