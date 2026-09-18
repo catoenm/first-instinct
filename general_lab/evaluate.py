@@ -67,7 +67,7 @@ def main():
     for split, rows in groups.items():
         rows.sort(key=lambda r: (len(r["input_ids"]), r["id"]))
         started = time.monotonic()
-        predictions = evaluate(model, rows, manifest["label_token_ids"], pad, device, args.batch_size)
+        predictions = evaluate(model, rows, manifest["label_token_ids"], pad, device, args.batch_size, 64)
         saved[split] = predictions
         write_rows(args.output / f"{split}-predictions.jsonl", predictions)
         measured = macro_metrics(predictions)

@@ -149,8 +149,10 @@ def task_family(task):
 
 def summarize_pairs(pairs, seed=41, resamples=1000):
     tasks = defaultdict(list)
+    groups = defaultdict(list)
     for pair in pairs:
         tasks[pair[0]["task"]].append(pair)
+        groups[pair[0]["group_id"]].append(pair)
     by_task = {}
     for task, members in sorted(tasks.items()):
         left = average_metrics([a for a, _ in members]); right = average_metrics([b for _, b in members])
@@ -170,9 +172,20 @@ def summarize_pairs(pairs, seed=41, resamples=1000):
         for key in METRICS:
             if ma[key] is not None:
                 differences[key].append((a["group_id"], mb[key] - ma[key]))
+    group_sizes = defaultdict(int)
+    complete = {"base": 0, "trained": 0}
+    for members in groups.values():
+        group_sizes[len(members)] += 1
+        complete["base"] += all(a["choice"] in a["target_ids"] for a, _ in members)
+        complete["trained"] += all(b["choice"] in b["target_ids"] for _, b in members)
+    group_complete = {key: value / len(groups) for key, value in complete.items()}
+    group_complete.update(difference=group_complete["trained"] - group_complete["base"], groups=len(groups),
+                          group_size_distribution={str(size): count for size, count in sorted(group_sizes.items())},
+                          note="A group is correct only when every evaluated row in that group is correct within this report scope. Groups have equal weight; two-row groups measure both members correct.")
     return {"rows": len(pairs), "groups": len({a["group_id"] for a, _ in pairs}), "tasks": len(tasks),
             "single_label_rows": sum(len(a["target_ids"]) == 1 for a, _ in pairs),
             "multi_answer_rows": sum(len(a["target_ids"]) > 1 for a, _ in pairs),
+            "group_complete_accuracy": group_complete,
             "row_weighted": {"base": left, "trained": right,
                              "paired_group_bootstrap": {key: cluster_bootstrap(values, seed=seed, resamples=resamples) for key, values in differences.items()}},
             "macro_task": {**macro, "brier_eligible_tasks": sum(t["single_label_rows"] > 0 for t in by_task.values()),
@@ -384,6 +397,10 @@ def markdown(report):
     for key in METRICS:
         macro = overall["macro_task"]
         lines.append(f"| {key} | {_number(macro['base'][key])} | {_number(macro['trained'][key])} | {_number(macro['difference'][key], True)} |")
+    complete = overall["group_complete_accuracy"]
+    lines += ["", "| Complete-group accuracy: every row correct | Base | Trained | Change | Groups |", "|---|---:|---:|---:|---:|",
+              f"| All evaluated members correct | {_number(complete['base'])} | {_number(complete['trained'])} | {_number(complete['difference'], True)} | {complete['groups']} |",
+              "", "For two-row groups, this measures both members correct. The full group-size distribution is recorded in report.json."]
     lines += ["", "| Subgroup | Rows / groups / tasks | Accuracy, base → trained | Set log loss, base → trained |", "|---|---:|---:|---:|"]
     for name, group in general["subgroups"].items():
         a, b = group["row_weighted"]["base"], group["row_weighted"]["trained"]

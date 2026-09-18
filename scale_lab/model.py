@@ -4,6 +4,7 @@ All described options enter one context. We read the last-position logits for
 the permitted label tokens, without generating an explanation or decoding text.
 """
 
+import math
 import torch
 from torch.nn import functional as F
 
@@ -14,6 +15,22 @@ def device_name(requested="auto"):
     if torch.cuda.is_available():
         return "cuda"
     return "mps" if torch.backends.mps.is_available() else "cpu"
+
+
+def float_output_head(model):
+    """Keep native vocabulary weights, with finer precision for probabilities.
+
+    Casting logits after a BF16 projection cannot undo its rounding. Cast the
+    frozen, untied vocabulary projection and its input before multiplication;
+    gradients still propagate into language features and their adapters.
+    """
+    head = model.get_output_embeddings()
+    if head.weight.dtype == torch.float32:
+        return
+    if head.weight.data_ptr() == model.get_input_embeddings().weight.data_ptr():
+        raise ValueError("Output precision conversion requires an untied vocabulary head")
+    head.float()
+    head.register_forward_pre_hook(lambda module, inputs: (inputs[0].float(), *inputs[1:]))
 
 
 def load_model(spec, device, adapter=None, training=False):
@@ -29,6 +46,7 @@ def load_model(spec, device, adapter=None, training=False):
     model.to(device)
     model.config.use_cache = False
     model.requires_grad_(False)
+    float_output_head(model)
     if adapter is not None:
         from peft import PeftModel
         model = PeftModel.from_pretrained(model, adapter, is_trainable=training)
@@ -47,8 +65,11 @@ def load_model(spec, device, adapter=None, training=False):
     return model
 
 
-def batch(rows, label_ids, pad_id, device):
+def batch(rows, label_ids, pad_id, device, pad_to_multiple=1):
+    if pad_to_multiple <= 0:
+        raise ValueError("Padding multiple must be positive")
     length = max(len(r["input_ids"]) for r in rows)
+    length = math.ceil(length / pad_to_multiple) * pad_to_multiple
     option_count = max(len(r["option_ids"]) for r in rows)
     inputs, attention, options, valid = [], [], [], []
     for row in rows:
@@ -79,14 +100,14 @@ def loss_for(logits, acceptable):
 
 
 @torch.no_grad()
-def evaluate(model, rows, label_ids, pad_id, device, batch_size=4):
+def evaluate(model, rows, label_ids, pad_id, device, batch_size=4, pad_to_multiple=1):
     was_training = model.training
     model.eval()
     predictions = []
     try:
         for start in range(0, len(rows), batch_size):
             chunk = rows[start:start + batch_size]
-            inputs, labels, mask, valid = batch(chunk, label_ids, pad_id, device)
+            inputs, labels, mask, valid = batch(chunk, label_ids, pad_id, device, pad_to_multiple)
             probabilities = score(model, inputs, labels, mask).softmax(-1).cpu().tolist()
             for row, probs in zip(chunk, probabilities):
                 probs = probs[:len(row["option_ids"])]

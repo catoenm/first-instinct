@@ -59,6 +59,24 @@ initially use 16 examples per device and two accumulation steps: effective
 batch 128. A smaller microbatch may be used if measured memory requires it;
 preserve the effective batch and record the actual command.
 
+The hardware check retained gradient checkpointing: at the longest training
+inputs, a 16-row forward/backward used 38.8 GB and a 32-row batch used 58.5 GB.
+Disabling checkpointing exhausted device memory. The full run keeps the
+original 16-row microbatch and effective batch of 128. Inputs are left-padded
+to multiples of 64 to limit compiled shape variants; a training-only numerical
+check compares single and mixed batches before the full run. This runtime
+choice does not use held-out predictions. The pilot is discarded and the full
+run starts from the foundation with seed 41.
+
+The first BF16 scoring check exceeded the predeclared 0.02 absolute-probability
+tolerance (0.02089, with all choices unchanged). The vocabulary projection now
+uses its existing frozen weights in float32; converting logits after BF16
+rounding was insufficient. The diagnostic maximum fell to 0.01032. The language
+trunk remains BF16 on CUDA, and the same scoring precision is used for the
+untouched baseline, training, reinforcement learning and evaluation. This is a
+numerical change, not a newly trained output classifier. The original failed
+check remains part of the experiment record.
+
 Length bucketing changes padding, not row weights. Tail copies have zero loss
 weight; every real row contributes once. Save initial, selected and latest
 adapters. Select the lowest mean per-task validation log loss, on up to twelve

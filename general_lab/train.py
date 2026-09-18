@@ -44,6 +44,19 @@ def partition(indices, world_size, micro_batch):
     return [entries[rank::world_size] for rank in range(world_size)]
 
 
+def microbatch_size(max_tokens, maximum, token_budget, pad_multiple=64):
+    """One globally agreed size; update batch/weights do not depend on length."""
+    if min(max_tokens, maximum, pad_multiple) <= 0 or token_budget < 0:
+        raise ValueError("Invalid microbatch dimensions")
+    padded = math.ceil(max_tokens / pad_multiple) * pad_multiple
+    if not token_budget:
+        return maximum
+    if token_budget < padded:
+        raise ValueError("Microbatch token budget cannot fit one padded example")
+    allowed = min(maximum, token_budget // padded)
+    return 2 ** int(math.log2(allowed))
+
+
 def macro_metrics(predictions):
     result = metrics(predictions)
     grouped = defaultdict(list)
@@ -127,6 +140,8 @@ def train(args):
         dist.barrier()
     # load_model uses the current CUDA device; CUDA BF16 remains the same on every rank.
     raw_model = load_model(spec, "cuda" if device.startswith("cuda") else device, args.adapter, training=True)
+    if args.no_gradient_checkpointing:
+        raw_model.gradient_checkpointing_disable()
     trainable = [p for p in raw_model.parameters() if p.requires_grad]
     model = DistributedDataParallel(raw_model, device_ids=[local_rank], broadcast_buffers=False) if world > 1 else raw_model
     # Shared initialization, independent dropout streams on different data shards.
@@ -144,7 +159,7 @@ def train(args):
             if stopped[0] or time.monotonic() >= deadline:
                 return None
             predictions.extend(evaluate(raw_model, validation[offset:offset + args.eval_batch_size],
-                                        labels, pad, device, args.eval_batch_size))
+                                        labels, pad, device, args.eval_batch_size, args.pad_multiple))
         return predictions
 
     if lead:
@@ -194,16 +209,18 @@ def train(args):
                     dist.all_reduce(stop, op=dist.ReduceOp.MAX)
                 if stop.item():
                     break
-                local = partition(indices, world, args.batch_size)[rank]
+                longest = max(len(rows[i]["input_ids"]) for i in indices)
+                micro = microbatch_size(longest, args.batch_size, args.micro_token_budget, args.pad_multiple)
+                local = partition(indices, world, micro)[rank]
                 optimizer.zero_grad(set_to_none=True)
                 model.train()
                 total_loss = torch.zeros((), device=device)
-                for offset in range(0, len(local), args.batch_size):
-                    items = local[offset:offset + args.batch_size]
+                for offset in range(0, len(local), micro):
+                    items = local[offset:offset + micro]
                     chunk = [rows[i] for i, _ in items]
                     weights = torch.tensor([w for _, w in items], device=device)
-                    inputs, ids, mask, valid = batch(chunk, labels, pad, device)
-                    synchronize = offset + args.batch_size >= len(local)
+                    inputs, ids, mask, valid = batch(chunk, labels, pad, device, args.pad_multiple)
+                    synchronize = offset + micro >= len(local)
                     with model.no_sync() if world > 1 and not synchronize else nullcontext():
                         losses = per_row_loss(score(model, inputs, ids, mask), valid)
                         loss = (losses * weights).sum() * world / len(indices)
@@ -226,7 +243,8 @@ def train(args):
                 if lead:
                     event = {"step": step, "epoch": epoch, "loss": total_loss.item(), "grad_norm": float(norm),
                              "visits": visits, "tokens": tokens, "seconds": time.monotonic() - started,
-                             "learning_rate": optimizer.param_groups[0]["lr"]}
+                             "learning_rate": optimizer.param_groups[0]["lr"], "microbatch_size": micro,
+                             "longest_input": longest, "padding_multiple": args.pad_multiple}
                     if step % args.eval_every == 0 or step == total_steps:
                         event["validation"] = validate_checkpoint()
                     trace.write(json.dumps(event, allow_nan=False) + "\n")
@@ -282,12 +300,20 @@ def main():
     p.add_argument("--validation-per-task", type=int, default=12)
     p.add_argument("--limit", type=int)
     p.add_argument("--seed", type=int, default=41)
+    p.add_argument("--no-gradient-checkpointing", action="store_true",
+                   help="Use only after a worst-length memory benchmark; avoids recomputing activations")
+    p.add_argument("--micro-token-budget", type=int, default=0,
+                   help="Zero disables adaptive microbatches; otherwise cap padded tokens per device forward")
+    p.add_argument("--pad-multiple", type=int, default=64,
+                   help="Round padding to reduce distinct compiled sequence shapes")
     args = p.parse_args()
     for name in ("batch_size", "eval_batch_size", "accumulation", "bucket_batches", "epochs", "max_steps", "max_hours", "learning_rate", "eval_every", "validation_per_task"):
         if getattr(args, name) <= 0:
             p.error(f"{name} must be positive")
     if args.limit is not None and args.limit <= 0:
         p.error("limit must be positive")
+    if args.micro_token_budget < 0 or args.pad_multiple <= 0:
+        p.error("Invalid microbatch budget or padding multiple")
     train(args)
 
 

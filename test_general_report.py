@@ -125,6 +125,18 @@ class GeneralComparisonTests(unittest.TestCase):
         self.assertEqual(first["shared_world_audit"]["groups_spanning_multiple_tasks"], 1)
         self.assertEqual(first["shared_world_audit"]["maximum_rows_per_group"], 2)
 
+    def test_complete_group_requires_both_minimal_pair_members_correct(self):
+        base = [prediction("positive", .8, group="pair"), prediction("negative", .8, target="b", group="pair")]
+        trained = [prediction("positive", .8, group="pair"), prediction("negative", .2, target="b", group="pair")]
+        overall = compare_predictions(base, trained)["overall"]
+        self.assertEqual(overall["row_weighted"]["base"]["accuracy"], .5)
+        complete = overall["group_complete_accuracy"]
+        self.assertEqual(complete["base"], 0.)
+        self.assertEqual(complete["trained"], 1.)
+        self.assertEqual(complete["difference"], 1.)
+        self.assertEqual(complete["groups"], 1)
+        self.assertEqual(complete["group_size_distribution"], {"2": 1})
+
     def test_report_writes_only_observed_results_and_hashes(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

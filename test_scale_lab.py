@@ -11,7 +11,7 @@ from scale_lab.common import epoch_batches, messages, targets, metrics, shuffled
 from scale_lab.data import connected_tool_groups, verify
 from scale_lab.environment import generate, execute
 from scale_lab.glaive import convert
-from scale_lab.model import batch, evaluate, loss_for, score
+from scale_lab.model import batch, evaluate, float_output_head, loss_for, score
 
 
 def example():
@@ -139,6 +139,25 @@ class ModelTests(unittest.TestCase):
     def test_invalid_target_rejected(self):
         with self.assertRaises(ValueError):
             loss_for(torch.ones(1, 2), torch.zeros(1, 2, dtype=torch.bool))
+
+    def test_float_output_projection_preserves_language_gradient(self):
+        self.model.bfloat16()
+        self.model.lm_head.requires_grad_(False)
+        original = self.model.lm_head.weight.detach().float().clone()
+        float_output_head(self.model)
+        self.assertTrue(torch.equal(original, self.model.lm_head.weight))
+        inputs, labels, mask, valid = batch(self.rows, self.labels, 0, "cpu")
+        logits = score(self.model, inputs, labels, mask)
+        self.assertEqual(logits.dtype, torch.float32)
+        loss_for(logits, valid).backward()
+        self.assertIsNone(self.model.lm_head.weight.grad)
+        self.assertGreater(self.model.model.embed_tokens.weight.grad.abs().sum().item(), 0)
+
+    def test_tied_head_precision_cannot_silently_change_embeddings(self):
+        self.model.bfloat16()
+        self.model.lm_head.weight = self.model.model.embed_tokens.weight
+        with self.assertRaisesRegex(ValueError, "untied"):
+            float_output_head(self.model)
 
 
 if __name__ == "__main__":
