@@ -37,12 +37,19 @@ in a compact retro interface. The local version now serves the completed
 supervised checkpoint; the underlying interface accepts your own questions
 and choices.
 
-The next data should add different mechanisms, not just more wordings of the
-same task. A separate [retry-environment pilot](docs/retry-environment-pilot.md)
-executes real SQLite transactions, delayed receipts, and duplicate side effects.
-All **2,000 trajectories and 7,347 forecast outcomes** were replay-verified.
-It has not trained a model yet. See the [data plan](docs/general-rl-data-next.md)
-for new holdouts, independent outcome draws, and external environment candidates.
+**Next experiment: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
+Two environments cover SQLite retries and a workshop with prerequisites,
+replacement parts and irreversible damage. They supply **59,993 training
+questions from 8,192 root worlds**. Execution provides the labels; related
+mechanisms stay in the same split. The planned comparison tests outcome learning,
+reward learning, and both together from the same 9B start. A controller uses
+predicted outcome and cost distributions to choose its next action. This is a
+prospective protocol, **not a new positive result or a recovered Jev recipe**.
+
+The earlier [retry-environment pilot](docs/retry-environment-pilot.md) remains
+separate and unchanged: all 2,000 trajectories and 7,347 forecast outcomes were
+replay-verified. See the [data plan](docs/general-rl-data-next.md) and
+[public-evidence audit](docs/mini-jev-next-research.md) for the rationale and limits.
 
 ## Earlier: software forecasts and learned inspection
 

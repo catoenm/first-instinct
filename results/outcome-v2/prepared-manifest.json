@@ -1,0 +1,125 @@
+{
+  "by_task": {
+    "test": {
+      "retry/cost": 290,
+      "retry/outcome": 467,
+      "workflow/cost": 442,
+      "workflow/outcome": 701
+    },
+    "train": {
+      "retry/cost": 8480,
+      "retry/outcome": 15065,
+      "workflow/cost": 14029,
+      "workflow/outcome": 22419
+    },
+    "validation": {
+      "retry/cost": 126,
+      "retry/outcome": 239,
+      "workflow/cost": 220,
+      "workflow/outcome": 348
+    }
+  },
+  "counts": {
+    "test": 1900,
+    "train": 59993,
+    "validation": 933
+  },
+  "label_token_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "max_tokens": 1536,
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "options": "Independent deterministic shuffle using outcome-v2:<row-id>; singleton costs omitted before tokenization.",
+  "outputs": {
+    "replay.jsonl": "fed9b835b45ece38e745f65de5c7b23d227ac16b0ee348e781cef0364edfbc9d",
+    "retention.jsonl": "89ac4706ec0da8c363be18c5a3ed21c91c864bbff625034e8f07506fa27e2d26",
+    "test.jsonl": "e9480a8a480287731f72bde8857c3692c6b20462a1716068d75945b714e0f81c",
+    "train.jsonl": "558093c8819f446fdfdb27f84a2926b39ce29329fb94e0d94b25a267a1e89f6d",
+    "validation.jsonl": "0ba78c22f8c5494821f2456778d7b5e67e37f9df69d1134ac4721db904612f7f"
+  },
+  "raw_manifest_sha256": "ef9bf77ae27bf2cfdccb712f502b1801efc1c2a675fd445138d4ae6d259dc4c1",
+  "replay": {
+    "manifest_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+    "model": {
+      "id": "Qwen/Qwen3.5-9B",
+      "kind": "qwen3_5",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "reservoir_rows": 4096,
+    "rows": 350857,
+    "sha256": "93acf412bfac0440759b62cf0f5e526834e2b2cadf2b45995162d72f83df203d",
+    "split": "train"
+  },
+  "replay_rows": 4096,
+  "retention": {
+    "rows": 622,
+    "rows_per_task_maximum": 4,
+    "seed": 84073,
+    "source_sha256": "3966e92cca71acbbb7e5a6d165d08959fda512b6995028dcdac8cabfce89fba2",
+    "split": "validation",
+    "tasks": 157
+  },
+  "roots": {
+    "test": 256,
+    "train": 8192,
+    "validation": 128
+  },
+  "schema": "first-instinct-outcome-prepared-v2",
+  "source_sha256": "16093e267faa8cbde23871c39ffa30f015345db356a7067c4c863653ba72ad2a",
+  "tokens": {
+    "test": {
+      "max_tokens": 932,
+      "rows": 1900,
+      "tokens": 1370220
+    },
+    "train": {
+      "max_tokens": 933,
+      "rows": 59993,
+      "tokens": 42897203
+    },
+    "validation": {
+      "max_tokens": 923,
+      "rows": 933,
+      "tokens": 660911
+    }
+  }
+}

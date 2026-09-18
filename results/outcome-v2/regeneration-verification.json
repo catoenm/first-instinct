@@ -1,0 +1,9 @@
+{
+  "all_file_hashes_reproduced": true,
+  "files": 12,
+  "manifest_sha256": "ef9bf77ae27bf2cfdccb712f502b1801efc1c2a675fd445138d4ae6d259dc4c1",
+  "passed": true,
+  "root_worlds_replayed": 8576,
+  "schema": "outcome-full-generation-replay-v2",
+  "scope": "Reexecuted every generated trajectory and independent counterfactual rollout; recomputed all evaluation exact distributions. Semantic tests separately check correctness."
+}

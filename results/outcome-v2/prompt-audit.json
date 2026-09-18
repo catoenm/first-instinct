@@ -1,0 +1,276 @@
+{
+  "elapsed_seconds": 8.60304349999933,
+  "errors": [],
+  "local_files_only": true,
+  "max_tokens_limit": 1536,
+  "model_tokenizer": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "no_model_predictions": true,
+  "no_optimizer": true,
+  "questions": {
+    "retry/test/action": {
+      "encoded": 507,
+      "max_example": {
+        "identity": "retry:test:7:uniform_random:2",
+        "input_sha256": "1a25cec126443701cd9b4da83f2a98180c804126c60927e7296aff3dc800fe72"
+      },
+      "max_options": 4,
+      "max_tokens": 602,
+      "questions": 507,
+      "singleton_skipped": 0,
+      "tokens": 270080
+    },
+    "retry/test/cost": {
+      "encoded": 926,
+      "max_example": {
+        "identity": "retry:test:31:uniform_random:0:wait",
+        "input_sha256": "a62b197ee74331c8470f62d282ee553967994445623fed682b90941e77ba1236"
+      },
+      "max_options": 8,
+      "max_tokens": 712,
+      "questions": 1678,
+      "singleton_skipped": 752,
+      "tokens": 601483
+    },
+    "retry/test/outcome": {
+      "encoded": 1678,
+      "max_example": {
+        "identity": "retry:test:7:fixed_continuation:2:abstain",
+        "input_sha256": "c98a607c7f7d96569f67bec9e12665b9ac353e26db73a2dd37740877f85f5f34"
+      },
+      "max_options": 3,
+      "max_tokens": 725,
+      "questions": 1678,
+      "singleton_skipped": 0,
+      "tokens": 1059383
+    },
+    "retry/train/action": {
+      "encoded": 426,
+      "max_example": {
+        "identity": "retry:train:18:longer_visible_paths:2",
+        "input_sha256": "98f6ee6eed1087b1f09f80c7430552c202bdc814d6faee267261efac1f0867dc"
+      },
+      "max_options": 4,
+      "max_tokens": 594,
+      "questions": 426,
+      "singleton_skipped": 0,
+      "tokens": 226509
+    },
+    "retry/train/cost": {
+      "encoded": 755,
+      "max_example": {
+        "identity": "retry:train:19:uniform_random:0:wait",
+        "input_sha256": "7885ae805668d06a741ce665cfbb60c81e9aeef51545e90dfc030c66375c754f"
+      },
+      "max_options": 8,
+      "max_tokens": 713,
+      "questions": 1475,
+      "singleton_skipped": 720,
+      "tokens": 480887
+    },
+    "retry/train/outcome": {
+      "encoded": 1475,
+      "max_example": {
+        "identity": "retry:train:63:fixed_continuation:2:abstain",
+        "input_sha256": "ee92a5091f564867375f77441eb511988c3790e8dd33d040894d36534c2a95db"
+      },
+      "max_options": 3,
+      "max_tokens": 720,
+      "questions": 1475,
+      "singleton_skipped": 0,
+      "tokens": 925505
+    },
+    "retry/validation/action": {
+      "encoded": 373,
+      "max_example": {
+        "identity": "retry:validation:49:uniform_random:1",
+        "input_sha256": "37d9ecaa22d11df1bb93695b87de76f04aaadd00c99e466ec18f65beabca3139"
+      },
+      "max_options": 4,
+      "max_tokens": 583,
+      "questions": 373,
+      "singleton_skipped": 0,
+      "tokens": 197317
+    },
+    "retry/validation/cost": {
+      "encoded": 576,
+      "max_example": {
+        "identity": "retry:validation:13:uniform_random:0:wait",
+        "input_sha256": "023514378630027a82998eaa031bcf1b30c23793b16f3cce60f0de2400553ee7"
+      },
+      "max_options": 4,
+      "max_tokens": 641,
+      "questions": 1349,
+      "singleton_skipped": 773,
+      "tokens": 357486
+    },
+    "retry/validation/outcome": {
+      "encoded": 1349,
+      "max_example": {
+        "identity": "retry:validation:49:uniform_random:1:abstain",
+        "input_sha256": "60f961bec40e9458e873e579b1f2709c0bf8bb9314d34e9dcc60c5eae4d0366d"
+      },
+      "max_options": 3,
+      "max_tokens": 698,
+      "questions": 1349,
+      "singleton_skipped": 0,
+      "tokens": 840262
+    },
+    "workflow/test/action": {
+      "encoded": 592,
+      "max_example": {
+        "identity": "workflow:test:14:longer_visible_paths:4",
+        "input_sha256": "4e96eb4f2c88f729db65eec9a9f9acfc800254e1ad46675f4e980bc7e6dddb4d"
+      },
+      "max_options": 6,
+      "max_tokens": 744,
+      "questions": 592,
+      "singleton_skipped": 0,
+      "tokens": 395891
+    },
+    "workflow/test/cost": {
+      "encoded": 1619,
+      "max_example": {
+        "identity": "workflow:test:24:uniform_random:0:assemble",
+        "input_sha256": "c1a58aa3b68c3df0f263ba7e26cbc4118799ba65e7035be08d0134836dc1fa47"
+      },
+      "max_options": 12,
+      "max_tokens": 932,
+      "questions": 2934,
+      "singleton_skipped": 1315,
+      "tokens": 1352113
+    },
+    "workflow/test/outcome": {
+      "encoded": 2934,
+      "max_example": {
+        "identity": "workflow:test:5:longer_visible_paths:4:abstain",
+        "input_sha256": "bcdfbc922987977359a2e5d6087857528af66fc77e53114fab9903950b26b37f"
+      },
+      "max_options": 3,
+      "max_tokens": 810,
+      "questions": 2934,
+      "singleton_skipped": 0,
+      "tokens": 2196704
+    },
+    "workflow/train/action": {
+      "encoded": 571,
+      "max_example": {
+        "identity": "workflow:train:59:longer_visible_paths:4",
+        "input_sha256": "bbad7b415d1741d1785f157bcad0957a5cd573375d744dac7445ef59185cb054"
+      },
+      "max_options": 6,
+      "max_tokens": 721,
+      "questions": 571,
+      "singleton_skipped": 0,
+      "tokens": 375760
+    },
+    "workflow/train/cost": {
+      "encoded": 1534,
+      "max_example": {
+        "identity": "workflow:train:15:uniform_random:0:assemble",
+        "input_sha256": "9fccfbf575714cbe36bc2d91dd00a86313661c71efb3a752754e847d9d3b838f"
+      },
+      "max_options": 12,
+      "max_tokens": 932,
+      "questions": 2735,
+      "singleton_skipped": 1201,
+      "tokens": 1274443
+    },
+    "workflow/train/outcome": {
+      "encoded": 2735,
+      "max_example": {
+        "identity": "workflow:train:59:longer_visible_paths:4:abstain",
+        "input_sha256": "7aab67bb942bcf0892f1b7ee1f0e5876a9af7e67442c8933a9904c335fa6898b"
+      },
+      "max_options": 3,
+      "max_tokens": 809,
+      "questions": 2735,
+      "singleton_skipped": 0,
+      "tokens": 2026129
+    },
+    "workflow/validation/action": {
+      "encoded": 585,
+      "max_example": {
+        "identity": "workflow:validation:57:longer_visible_paths:3",
+        "input_sha256": "82d637c334e923578091c1fa1e46b02a0d97e3bf20a4169ec8e9e7fa645812b7"
+      },
+      "max_options": 6,
+      "max_tokens": 716,
+      "questions": 585,
+      "singleton_skipped": 0,
+      "tokens": 382167
+    },
+    "workflow/validation/cost": {
+      "encoded": 1523,
+      "max_example": {
+        "identity": "workflow:validation:29:uniform_random:0:assemble",
+        "input_sha256": "200d4f91e7de649b16dc4cb9948d2dd0e9c0699a948e100f2266fe828f9431d9"
+      },
+      "max_options": 12,
+      "max_tokens": 923,
+      "questions": 2757,
+      "singleton_skipped": 1234,
+      "tokens": 1253608
+    },
+    "workflow/validation/outcome": {
+      "encoded": 2757,
+      "max_example": {
+        "identity": "workflow:validation:39:longer_visible_paths:4:abstain",
+        "input_sha256": "70cff5149203f0f773e6d191d9f5e97bc213f785efd2bd0c23fa4cea399d22c4"
+      },
+      "max_options": 3,
+      "max_tokens": 799,
+      "questions": 2757,
+      "singleton_skipped": 0,
+      "tokens": 2032673
+    }
+  },
+  "result": "passed",
+  "roots": {
+    "retry/test": 64,
+    "retry/train": 64,
+    "retry/validation": 64,
+    "workflow/test": 64,
+    "workflow/train": 64,
+    "workflow/validation": 64
+  },
+  "schema": "first-instinct-outcome-prompt-audit-v2",
+  "selection": "Three actual executed paths per common root tape; every nonterminal visited state contributes the action question and both forecast questions for every legal offered action. Long-path policy avoids publicly terminal submit/abstain while alternatives exist; it never observes hidden outcomes.",
+  "source_changed_during_audit": [],
+  "source_sha256": {
+    "general_lab/outcome_data.py": "0613bc1b5ca97b69a264b6bcee3369ff91b3d8f386dfba2afcc1c59fdd1b9022",
+    "general_lab/outcome_train.py": "e795657dba8ca1a377df3e7ccf713cc6eb9923ce111debb7659afe1a6a36d119",
+    "general_lab/retry_environment.py": "b8c18307479c88ee99d730948ff2daa71337f15fc50758eaceeff2e3cb5f5de6",
+    "general_lab/retry_v2.py": "849c9b1232aeceb518ad299e1b74d24e2ec89db396888ca1e0e36c99b58085c3",
+    "general_lab/rl.py": "ff955479d9ad3138252c96c57ffa9c1b09ac83627c5e51ca4e73a2d5aac9618a",
+    "general_lab/workflow_environment.py": "34a4a5f60a215cf034b83cedc30ec4c9a695d3a72ff8df1467b38bde39421b1a",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e"
+  },
+  "tokenizer_only": true,
+  "trajectories": {
+    "retry/test": 192,
+    "retry/train": 192,
+    "retry/validation": 192,
+    "workflow/test": 192,
+    "workflow/train": 192,
+    "workflow/validation": 192
+  },
+  "trajectory_policies": [
+    "uniform_random",
+    "fixed_continuation",
+    "longer_visible_paths"
+  ],
+  "unique_encoded_public_inputs": 13713,
+  "visited_states": {
+    "retry/test": 507,
+    "retry/train": 426,
+    "retry/validation": 373,
+    "workflow/test": 592,
+    "workflow/train": 571,
+    "workflow/validation": 585
+  },
+  "worlds_per_environment_per_split": 64
+}
