@@ -117,6 +117,20 @@ class NumericalTests(unittest.TestCase):
 
 
 class ReportTests(unittest.TestCase):
+    def test_missing_provenance_does_not_count_as_matching(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for arm in ('reward', 'hybrid'):
+                run(root, arm, 77)
+                path = root / f'runs/{arm}-s77/run.json'
+                receipt = json.loads(path.read_text())
+                receipt.pop('freeze_sha256')
+                path.write_text(json.dumps(receipt))
+            result = report.build_report(root, resamples=20)
+            compared = result['comparisons']['hybrid-minus-reward/best']['per_seed']['77']
+            self.assertEqual(compared['status'], 'refused')
+            self.assertIn('Missing run provenance', compared['reason'])
+
     def test_six_runs_joint_root_sampling_and_independent_audit(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

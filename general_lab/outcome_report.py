@@ -310,6 +310,8 @@ def build_report(root, resamples=2000, seed=101):
                     continue
                 try:
                     for key in ('freeze_sha256', 'prepared_manifest_sha256', 'starting_adapter_sha256'):
+                        if not runs[a].get(key) or not runs[b].get(key):
+                            raise ValueError('Missing run provenance: ' + key)
                         if runs[a].get(key) != runs[b].get(key):
                             raise ValueError('Different run provenance: ' + key)
                     differences[training_seed] = paired_differences(left, right)
