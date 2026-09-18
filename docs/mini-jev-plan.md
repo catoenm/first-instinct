@@ -10,12 +10,14 @@ runs did not reliably improve decisions; the demo therefore retains the
 supervised checkpoint. See the [supervised results](general-supervised-results.md)
 and [reinforcement results](general-reinforcement-results.md).
 
-A new [executable-outcome comparison](outcome-v2-protocol.md) is running from
-that same supervised checkpoint. Outcome-only, reward-only and combined
-training each have two seeds. Its 59,993 verified questions concern action
-consequences and future costs in two sequential environments. No improvement
-from this new experiment has yet been established. The earlier software model
-remains a separate, narrower experiment.
+A new [executable-outcome comparison](outcome-v2-results.md) has recovered five
+finalized runs and one cancelled run from that same supervised checkpoint.
+Its 59,993 prepared questions concern action consequences and future costs in
+two sequential environments. Outcome-only and combined training have better
+forecasts than reward-only training, but the completed seed comparison does
+not establish an added benefit from the reinforcement step. The study lacks
+an untouched supervised test baseline and a second completed hybrid seed.
+The earlier software model remains a separate, narrower experiment.
 
 The target is a small, open model that accepts arbitrary supplied state and
 user-defined questions, option descriptions and ordered levels. It should answer
@@ -102,7 +104,10 @@ The fixed [checkpoint comparison](toolsandbox-transfer-cohort-v1-protocol.md)
 will retain all outcome/reward/hybrid selected and latest roles, with no selection
 using this diagnostic. The [local executor](toolsandbox-transfer-execute-v1-protocol.md)
 and [read-only report](toolsandbox-transfer-report.md) preserve the same inputs
-and inference contract. They are implemented; that comparison has not run yet.
+and inference contract. Its [published execution freeze](../results/toolsandbox-transfer-outcome-execution-v1/)
+retains twelve roles, ten eligible roles and six exact unique adapter identities.
+The two cancelled hybrid-77 roles remain unavailable. The local comparison
+is running, with 4,320 new questions planned; no transfer result is claimed yet.
 A separate [completed post-hoc answer-order audit](toolsandbox-transfer-order-results.md)
 reversed all 240 nontrivial initial-state forecast menus once, reusing their
 original reference predictions. The most likely cost changed on 69 of 96 cost
@@ -149,6 +154,15 @@ prompt-order checks remain necessary before deployment.
    pretraining on raw text is a separate intervention, justified by measured
    representation gaps. Starting from a pretrained foundation is compatible with
    genuine backbone learning and reinforcement learning.
+
+The recovered [first-divergence diagnostic](outcome-v2-divergence-results.md)
+points toward terminal-outcome prediction as a training-data priority. Local
+substitution of exact terminal expectations removes much more of the first
+decision gap than substitution of exact costs. This does not measure an
+improved executed policy. Finish the fixed transfer comparison before deciding
+whether fresh training mechanisms should emphasize hidden tool state,
+information gathering, or another gap; do not turn these diagnostic roots into
+training examples or select a checkpoint from them.
 
 ## What would count as progress
 

@@ -1,0 +1,190 @@
+{
+  "source_report_sha256": "d3cb611be8519263243d8d3093f90b6eee949d3e31810cd653daddf79694787b",
+  "rows": [
+    {
+      "run": "outcome-s77",
+      "role": "best",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": 0.244765625,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.20554687500000002
+      },
+      "exact_excess_brier": {
+        "cost": 0.23452613016038049,
+        "outcome": 0.06995594068149613
+      }
+    },
+    {
+      "run": "outcome-s77",
+      "role": "latest",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": 0.244765625,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.20554687500000002
+      },
+      "exact_excess_brier": {
+        "cost": 0.23452613016038049,
+        "outcome": 0.06995594068149613
+      }
+    },
+    {
+      "run": "outcome-s83",
+      "role": "best",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": 0.26859374999999996,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.1980859375
+      },
+      "exact_excess_brier": {
+        "cost": 0.2345848578040069,
+        "outcome": 0.07189339341556182
+      }
+    },
+    {
+      "run": "outcome-s83",
+      "role": "latest",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": 0.26859374999999996,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.1980859375
+      },
+      "exact_excess_brier": {
+        "cost": 0.2345848578040069,
+        "outcome": 0.07189339341556182
+      }
+    },
+    {
+      "run": "reward-s77",
+      "role": "best",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 40,
+      "reward": {
+        "controller": -0.08351562500000001,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.21195312500000002
+      },
+      "exact_excess_brier": {
+        "cost": 0.3825830057726122,
+        "outcome": 0.33620975290964095
+      }
+    },
+    {
+      "run": "reward-s77",
+      "role": "latest",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": -0.12156249999999999,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.1709375
+      },
+      "exact_excess_brier": {
+        "cost": 0.39332939966181624,
+        "outcome": 0.36359712753640583
+      }
+    },
+    {
+      "run": "reward-s83",
+      "role": "best",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": -0.13429687499999998,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.1960546875
+      },
+      "exact_excess_brier": {
+        "cost": 0.41485408843508226,
+        "outcome": 0.35046614449753943
+      }
+    },
+    {
+      "run": "reward-s83",
+      "role": "latest",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": -0.13429687499999998,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.1960546875
+      },
+      "exact_excess_brier": {
+        "cost": 0.41485408843508226,
+        "outcome": 0.35046614449753943
+      }
+    },
+    {
+      "run": "hybrid-s77",
+      "role": "best",
+      "run_status": "bounded_stop",
+      "status": "missing",
+      "update": 40
+    },
+    {
+      "run": "hybrid-s77",
+      "role": "latest",
+      "run_status": "bounded_stop",
+      "status": "missing",
+      "update": 58
+    },
+    {
+      "run": "hybrid-s83",
+      "role": "best",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": 0.2099609375,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.2826953125
+      },
+      "exact_excess_brier": {
+        "cost": 0.24257558025823645,
+        "outcome": 0.08683458631457888
+      }
+    },
+    {
+      "run": "hybrid-s83",
+      "role": "latest",
+      "run_status": "complete",
+      "status": "complete",
+      "update": 60,
+      "reward": {
+        "controller": 0.2099609375,
+        "exact_controller": 0.431953125,
+        "fixed_continuation": 0.2264453125,
+        "native_actor": 0.2826953125
+      },
+      "exact_excess_brier": {
+        "cost": 0.24257558025823645,
+        "outcome": 0.08683458631457888
+      }
+    }
+  ],
+  "scope": "Descriptive means; all 12 roles. Identical best/latest weights are aliases, not replicates. Realized policy reward and independent fixed-continuation forecast errors have different meanings. Audit cost means include known singleton distributions."
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "first-instinct-outcome-release-v2",
+  "status": "partial_research_experiment",
+  "assets": {
+    "outcome-cloud-artifacts-v2.tar.gz": {
+      "bytes": 2007606015,
+      "sha256": "54c35c5a98b83a1311f4ece94c52c95ea03948cf94d1980477eadc815eafd78e"
+    },
+    "first-instinct-outcome-v2-companion.tar.gz": {
+      "bytes": 318227,
+      "sha256": "cfc4a9ee5084e797713b7461c22e6f61976cbd92fffd92121df912ad7ccbfe83"
+    }
+  },
+  "raw_archive_member_manifest_sha256": "33ba8bb4c887f426edcf6ca5cc292e1b57c4bb78bd1f5f9120db31b8ec9c847b",
+  "companion_member_manifest_sha256": "19a8285b99b7b4738a87e9659f30441c524c5b0f09347ad72b80f76fd6d57143",
+  "companion_required": true,
+  "raw_archive_unchanged": true,
+  "includes_foundation_weights": false,
+  "demo_promoted": false
+}

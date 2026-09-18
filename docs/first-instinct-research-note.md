@@ -1,7 +1,7 @@
 # First Instinct: a decision interface is the beginning
 
-*Public-facing draft, September 18, 2026. The six-arm outcome-training study is
-ongoing; this note reports completed work only.*
+*Public-facing draft, September 18, 2026. Outcome-training results are recovered;
+the separate tool-transfer comparison is not yet complete.*
 
 Letting a language model answer new questions from supplied choices is
 straightforward. Making its probabilities useful for decisions across
@@ -121,11 +121,41 @@ used three trials per condition, float32 weights and reference kernels. It is
 a local implementation measurement, not a claim about optimized graphics
 servers or Jev's speed.
 
-The [ongoing six-arm study](outcome-v2-protocol.md) compares outcome learning,
-reward learning and their combination across two seeds, starting from the same
-supervised model. Executable retry and workshop environments provide outcomes
-and future costs; we will report differing data and computation. No interim
-validation numbers establish its final result.
+The [six-arm study](outcome-v2-results.md) now has five finalized runs and one
+cancelled run. In the complete seed-83 comparison, mean executed reward using
+forecast-driven decisions was **0.269 for outcome-only, 0.210 for combined,
+and −0.134 for reward-only training**. Outcome-only and combined training also
+produced substantially better outcome forecasts than reward-only training.
+The reward-trained direct actor behaved differently from the controller that
+used its forecasts: learning to take useful actions did not automatically make
+its separate outcome reports useful.
+
+The combined controller beat reward-only by 0.344, with a paired-root 95%
+interval of [0.229, 0.461]. Its difference from outcome-only was −0.059,
+with interval [−0.129, 0.005]. This does **not establish an added benefit from
+the reinforcement step**. The combination also consumed extra forecast labels
+and computation. These intervals resample roots within two fixed mechanisms;
+they do not estimate variation across training seeds or unseen mechanisms.
+No untouched supervised test baseline was saved for this study, so these are
+comparisons between its training arms, not measured gains over the starting
+checkpoint.
+
+The launcher timed out hybrid seed 83, whose trainer nevertheless completed
+60 updates and all final artifacts, and propagated cancellation to hybrid seed
+77 at 58 updates. The pipeline remains failed and the report partial; the
+missing second hybrid test cannot be filled with validation results. All twelve
+selected/latest roles remain visible. The rental was deleted after archive
+verification; estimated compute for this experiment was $33.22 before storage.
+
+A [first-divergence analysis](outcome-v2-divergence-results.md) gives a more
+specific data hypothesis. At the first shared state where model and exact-menu
+choices differed, substituting exact terminal expectations nearly removed the
+local value gap. Substituting exact costs did much less. These are arithmetic
+re-rankings of stored traces, not improvements measured by rerunning a policy.
+They motivate better training coverage of action consequences and information
+gathering. Held-out traces remain evaluation data. The next comparison checks
+every eligible checkpoint on the same unfamiliar ToolSandbox questions used
+for the supervised reference, without choosing a checkpoint from its results.
 
 Progress would mean better forecasts and executed decisions on held-out
 mechanisms while retaining general question answering. If the hybrid cannot

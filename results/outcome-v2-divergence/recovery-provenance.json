@@ -1,0 +1,24 @@
+{
+  "analysis_source_sha256": {
+    "docs/outcome-first-divergence.md": "672e03dbe266940d643e625d92df62a642df46004263b2a75734edee16f562be",
+    "general_lab/outcome_divergence.py": "ba1042f1a9c0b35e9a6dbff68af8c4b9ea5bf217b465aa9d3c5fbf3245fff1ba",
+    "general_lab/outcome_report.py": "63e2040833e3cc06e2ce87096bf6b0b73fad1c1cc8c38b8ff51348beff3aa763"
+  },
+  "archive_bytes": 2007606015,
+  "archive_sha256": "54c35c5a98b83a1311f4ece94c52c95ea03948cf94d1980477eadc815eafd78e",
+  "artifact_manifest_sha256": "33ba8bb4c887f426edcf6ca5cc292e1b57c4bb78bd1f5f9120db31b8ec9c847b",
+  "cohort_content_sha256": "6f9f1f73fa19e7ea0f32860afd9c18ed1575fde46f92cbb42b2c881d80b9d3b0",
+  "cohort_manifest_sha256": "2bcc770c4037fcd82fe1551faab1be11b9f209ead577f5d00679f70ba3adbf56",
+  "collection_sha256": "f4aacbd22b83d8578cae9214baee1dc8febaac48e4de85ed910272ae7a279939",
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "model_specification_sha256": "1cf132f4e42f3c9820e96c386acdcd406cd83563081e964d7a4838268996a9e8",
+  "pod_deleted": true,
+  "schema": "outcome-divergence-recovered-provenance-v2",
+  "training_freeze_sha256": "22d68712a79054b7f87227de7383d8ec3954d4eb649612f79823ae4c2b364daa",
+  "verification_scope": "Archive byte SHA rechecked; cohort content, artifact-manifest and collection hashes rechecked; every selected role adapter, run receipt and used trace rehashed against the verified recovered manifest. Parent recovery already verified all 294 archive members. No model or environment run.",
+  "verified_recovered_files": 294
+}

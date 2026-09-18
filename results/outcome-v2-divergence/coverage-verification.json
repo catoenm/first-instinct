@@ -1,0 +1,13 @@
+{
+  "all_pairs_exact_both_components_mean_gap_cents": 0.0,
+  "common_root_identity_map_sha256": "0cd4bfe550513fc4cce6b4c064a8ca9e9c5a300cce77342a7277c15c027e6560",
+  "eligible_roles": 10,
+  "no_extra_inference_or_environment_executions": true,
+  "note": "These six reports reuse the same 256 evaluation roots; they are not 1536 independent tasks.",
+  "roles_retained": 12,
+  "roots_per_pair": 256,
+  "same_root_scenario_tape_ids_across_all_pairs": true,
+  "schema": "outcome-divergence-coverage-v2",
+  "status": "verified",
+  "unique_checkpoint_trace_pairs": 6
+}

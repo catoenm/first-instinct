@@ -1,0 +1,104 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "general_lab.outcome_divergence",
+      "--traces",
+      "output/outcome-cloud-v2/runs/outcome-s77/best-test-trajectories.jsonl",
+      "--provenance",
+      "output/outcome-divergence-v2/provenance/464079deadf2491dc1bf86748c5e61d44a0967e53bf866e3fc8ef433b6c4150e.json",
+      "--output",
+      "output/outcome-divergence-v2/464079deadf2491dc1bf86748c5e61d44a0967e53bf866e3fc8ef433b6c4150e"
+    ],
+    "group_id": "464079deadf2491dc1bf86748c5e61d44a0967e53bf866e3fc8ef433b6c4150e",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "general_lab.outcome_divergence",
+      "--traces",
+      "output/outcome-cloud-v2/runs/outcome-s83/best-test-trajectories.jsonl",
+      "--provenance",
+      "output/outcome-divergence-v2/provenance/8354e6301be9581cf9ab9e57eb27d40fec75e2a0cb00f6bc539fe9205f1e01ef.json",
+      "--output",
+      "output/outcome-divergence-v2/8354e6301be9581cf9ab9e57eb27d40fec75e2a0cb00f6bc539fe9205f1e01ef"
+    ],
+    "group_id": "8354e6301be9581cf9ab9e57eb27d40fec75e2a0cb00f6bc539fe9205f1e01ef",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "general_lab.outcome_divergence",
+      "--traces",
+      "output/outcome-cloud-v2/runs/reward-s77/best-test-trajectories.jsonl",
+      "--provenance",
+      "output/outcome-divergence-v2/provenance/4898253af4d3571a49be42c47ac3ac4e26765a78365600360657bdda9eeded8e.json",
+      "--output",
+      "output/outcome-divergence-v2/4898253af4d3571a49be42c47ac3ac4e26765a78365600360657bdda9eeded8e"
+    ],
+    "group_id": "4898253af4d3571a49be42c47ac3ac4e26765a78365600360657bdda9eeded8e",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "general_lab.outcome_divergence",
+      "--traces",
+      "output/outcome-cloud-v2/runs/reward-s77/latest-test-trajectories.jsonl",
+      "--provenance",
+      "output/outcome-divergence-v2/provenance/3fce14520813a57ae3d4bf9a158512d72680040baef0ba31d0c0e51d096115f0.json",
+      "--output",
+      "output/outcome-divergence-v2/3fce14520813a57ae3d4bf9a158512d72680040baef0ba31d0c0e51d096115f0"
+    ],
+    "group_id": "3fce14520813a57ae3d4bf9a158512d72680040baef0ba31d0c0e51d096115f0",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "general_lab.outcome_divergence",
+      "--traces",
+      "output/outcome-cloud-v2/runs/reward-s83/best-test-trajectories.jsonl",
+      "--provenance",
+      "output/outcome-divergence-v2/provenance/86e4ac2c4dd36216fbaf7164bc4137f6db7a708d73d9a74267ce4fea358b08ac.json",
+      "--output",
+      "output/outcome-divergence-v2/86e4ac2c4dd36216fbaf7164bc4137f6db7a708d73d9a74267ce4fea358b08ac"
+    ],
+    "group_id": "86e4ac2c4dd36216fbaf7164bc4137f6db7a708d73d9a74267ce4fea358b08ac",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "general_lab.outcome_divergence",
+      "--traces",
+      "output/outcome-cloud-v2/runs/hybrid-s83/best-test-trajectories.jsonl",
+      "--provenance",
+      "output/outcome-divergence-v2/provenance/f055d5309664125277f984e5918f420bf84629d3d5177e3e4a22debf8796b138.json",
+      "--output",
+      "output/outcome-divergence-v2/f055d5309664125277f984e5918f420bf84629d3d5177e3e4a22debf8796b138"
+    ],
+    "group_id": "f055d5309664125277f984e5918f420bf84629d3d5177e3e4a22debf8796b138",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  }
+]
