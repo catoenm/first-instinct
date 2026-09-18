@@ -1,0 +1,68 @@
+{
+  "adapter_files_sha256": {
+    "best/README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+    "best/adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+    "best/adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472"
+  },
+  "adapter_run": "/Users/mitchell/Documents/workspace/ml-data/output/general-supervised-complete-v1/runs/supervised-01",
+  "claim_boundary": "Post-hoc batched performance control on the exact already published fixture; no independent quality, training, deployment, or Jev-internals claim.",
+  "code_sha256": {
+    "docs/shared-prefix-batch-control-v1-protocol.md": "f450306911666b127b558a593b83601eeebfa23d26b88dcd7e7327b71d5a86ed",
+    "docs/shared-prefix-v1-protocol.md": "5cb42093e19b84e6603b2f60d563db5d572863070a1c9b97bf3e1052b178aeb3",
+    "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+    "general_lab/prefix_batch_control.py": "d39eb4840271b9fa59cf04db0b4d7ba8dd75a52ddf0bd87bd1e2576b2c89b858",
+    "general_lab/prefix_benchmark.py": "86faba3237134147ec028b64363fc16ab085571987d27a728451d1f934e36b66",
+    "general_lab/shared_prefix.py": "1edfdd8c09899696ffcc3d0959f7f7287f4de0f501886481923314d167a3cc8a",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+    "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689",
+    "test_prefix_batch_control.py": "e74c796bc27583e09feaec0a8fa265796228556ee5d2baffe4ba85f72b5ed1f7",
+    "test_prefix_benchmark.py": "59fc61ee46b1e731991f426e02179c567914185673876c7e11fa060eb3fc2eff",
+    "test_shared_prefix.py": "bbe5d939562b9904008e8ef90d3d80894e34b50c793b662efc6b4a337fe33c63"
+  },
+  "content_sha256": "951e5fe59bbec09d156eaf27916b23c8f3c3dcc614fe56244d71e4a41da7053e",
+  "created_at_unix": 1789716463.924963,
+  "files_sha256": {
+    "encoded-inputs.json": "99f7d4368cdaedf7645a390addd77f9b18bda74095d11b46cec765232cc98006",
+    "fixture.json": "d32c3ca9294359d723a88f16845385fc0fe44a37327e0647856e879881575bcb",
+    "plan.json": "9fb8d78d2684abdd685e715831f3ae84954bfaddadb29e79dd2e2251d86b7eea"
+  },
+  "foundation_spec_sha256": "1cf132f4e42f3c9820e96c386acdcd406cd83563081e964d7a4838268996a9e8",
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "model_inference": false,
+  "packages": {
+    "huggingface-hub": "1.31.0",
+    "peft": "0.21.0",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.23.2",
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  },
+  "published_folder": "/Users/mitchell/Documents/workspace/ml-data/results/shared-prefix-v1",
+  "published_sha256": {
+    "encoded-inputs.json": "99f7d4368cdaedf7645a390addd77f9b18bda74095d11b46cec765232cc98006",
+    "fixture.json": "d32c3ca9294359d723a88f16845385fc0fe44a37327e0647856e879881575bcb",
+    "freeze.json": "e8285c2722710ff8132d40d347ff39721cb6efd1759fa9ddcd166ce155e3fa07",
+    "measurements/summary.json": "87dd3fba666cba7f1210411c96f3119481fde74b8697cc0e003b97d2b297f624"
+  },
+  "schema": "shared-prefix-batch-control-v1",
+  "selection_role": "none",
+  "settings": {
+    "device": "mps",
+    "max_tokens": 1536,
+    "pad_to_multiple": 1,
+    "probability_tolerance": 0.0001,
+    "repetitions": 3,
+    "seed": 20260919,
+    "subsets": [
+      1,
+      3,
+      8
+    ]
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "complete_prompt_lengths": [
+    {
+      "question": "dispatch_route",
+      "tokens": 531
+    },
+    {
+      "question": "restock",
+      "tokens": 525
+    },
+    {
+      "question": "urgency",
+      "tokens": 538
+    },
+    {
+      "question": "temperature_safe",
+      "tokens": 524
+    },
+    {
+      "question": "carton",
+      "tokens": 532
+    },
+    {
+      "question": "signed_delivery_guaranteed",
+      "tokens": 528
+    },
+    {
+      "question": "warranty_coverage",
+      "tokens": 535
+    },
+    {
+      "question": "carrier",
+      "tokens": 535
+    }
+  ],
+  "per_condition": {
+    "1": {
+      "batched_complete": {
+        "forward_input_tokens": 531,
+        "independent_input_tokens": 531,
+        "model_calls": 1,
+        "padded_input_tokens": 531,
+        "padding_tokens": 0,
+        "prefix_tokens_used": 0,
+        "questions": 1
+      },
+      "serial_complete": {
+        "forward_input_tokens": 531,
+        "independent_input_tokens": 531,
+        "model_calls": 1,
+        "padded_input_tokens": 531,
+        "padding_tokens": 0,
+        "prefix_tokens_used": 0,
+        "questions": 1
+      },
+      "serial_shared_prefix": {
+        "forward_input_tokens": 531,
+        "independent_input_tokens": 531,
+        "model_calls": 1,
+        "padded_input_tokens": 531,
+        "padding_tokens": 0,
+        "prefix_tokens_used": 0,
+        "questions": 1
+      }
+    },
+    "3": {
+      "batched_complete": {
+        "forward_input_tokens": 1594,
+        "independent_input_tokens": 1594,
+        "model_calls": 1,
+        "padded_input_tokens": 1614,
+        "padding_tokens": 20,
+        "prefix_tokens_used": 0,
+        "questions": 3
+      },
+      "serial_complete": {
+        "forward_input_tokens": 1594,
+        "independent_input_tokens": 1594,
+        "model_calls": 3,
+        "padded_input_tokens": 1594,
+        "padding_tokens": 0,
+        "prefix_tokens_used": 0,
+        "questions": 3
+      },
+      "serial_shared_prefix": {
+        "forward_input_tokens": 660,
+        "independent_input_tokens": 1594,
+        "model_calls": 4,
+        "padded_input_tokens": 660,
+        "padding_tokens": 0,
+        "prefix_tokens_used": 467,
+        "questions": 3
+      }
+    },
+    "8": {
+      "batched_complete": {
+        "forward_input_tokens": 4248,
+        "independent_input_tokens": 4248,
+        "model_calls": 1,
+        "padded_input_tokens": 4304,
+        "padding_tokens": 56,
+        "prefix_tokens_used": 0,
+        "questions": 8
+      },
+      "serial_complete": {
+        "forward_input_tokens": 4248,
+        "independent_input_tokens": 4248,
+        "model_calls": 8,
+        "padded_input_tokens": 4248,
+        "padding_tokens": 0,
+        "prefix_tokens_used": 0,
+        "questions": 8
+      },
+      "serial_shared_prefix": {
+        "forward_input_tokens": 979,
+        "independent_input_tokens": 4248,
+        "model_calls": 9,
+        "padded_input_tokens": 979,
+        "padding_tokens": 0,
+        "prefix_tokens_used": 467,
+        "questions": 8
+      }
+    }
+  },
+  "question_accounting": {
+    "checks": 24,
+    "measurement": 108,
+    "warmup": 24
+  },
+  "schedule": {
+    "checks": [
+      "reverse_batched_eight",
+      "reverse_cached_eight",
+      "each_question_batched_alone"
+    ],
+    "measurements": [
+      {
+        "condition": "serial_complete",
+        "questions": 8,
+        "repetition": 2
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 3,
+        "repetition": 1
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 8,
+        "repetition": 1
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 1,
+        "repetition": 2
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 3,
+        "repetition": 0
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 3,
+        "repetition": 2
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 8,
+        "repetition": 0
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 8,
+        "repetition": 2
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 8,
+        "repetition": 0
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 8,
+        "repetition": 1
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 3,
+        "repetition": 2
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 1,
+        "repetition": 1
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 3,
+        "repetition": 0
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 1,
+        "repetition": 0
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 1,
+        "repetition": 2
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 3,
+        "repetition": 2
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 3,
+        "repetition": 1
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 1,
+        "repetition": 0
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 1,
+        "repetition": 0
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 8,
+        "repetition": 0
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 8,
+        "repetition": 1
+      },
+      {
+        "condition": "serial_complete",
+        "questions": 3,
+        "repetition": 1
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 1,
+        "repetition": 1
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 1,
+        "repetition": 2
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 3,
+        "repetition": 0
+      },
+      {
+        "condition": "serial_shared_prefix",
+        "questions": 1,
+        "repetition": 1
+      },
+      {
+        "condition": "batched_complete",
+        "questions": 8,
+        "repetition": 2
+      }
+    ],
+    "warmup": [
+      "batched_complete",
+      "serial_complete",
+      "serial_shared_prefix"
+    ]
+  },
+  "token_note": "forward_input_tokens counts real submitted tokens after cache reuse; padded_input_tokens also counts batch padding. Neither measures FLOPs.",
+  "totals": {
+    "forward_input_tokens": 63698,
+    "model_calls": 123,
+    "padded_input_tokens": 64038,
+    "questions": 156
+  }
+}

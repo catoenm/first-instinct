@@ -1,0 +1,126 @@
+{
+  "id": "authored-shipment-eight-questions-v1",
+  "scope": "One authored state; eight different questions. Not eight independent worlds or a general capability benchmark.",
+  "payload": {
+    "state": {
+      "shipment": {
+        "payment_status": "settled",
+        "seal_intact": true,
+        "destination": "remote",
+        "fragile": true,
+        "days_late": 3,
+        "temperature_c": 24,
+        "item_length_cm": 18,
+        "maximum_delivery_days": 2
+      },
+      "inventory": {
+        "in_stock": 7,
+        "reserved": 2,
+        "restock_threshold": 6
+      },
+      "cartons": {
+        "small": 16,
+        "medium": 20,
+        "large": 30
+      },
+      "warranty": {
+        "days_since_purchase": 45
+      },
+      "evidence": {
+        "delivery_signed": null
+      },
+      "carriers": {
+        "economy": {
+          "cost_cents": 600,
+          "delivery_days": 5
+        },
+        "priority": {
+          "cost_cents": 900,
+          "delivery_days": 2
+        },
+        "courier": {
+          "cost_cents": 1400,
+          "delivery_days": 1
+        }
+      },
+      "rules": [
+        "Dispatch: Hold if payment is not settled or the seal is not intact. Otherwise use Protected for a remote, fragile shipment; otherwise Standard.",
+        "Available inventory equals in_stock minus reserved. Restock exactly when available inventory is below restock_threshold.",
+        "Urgency: Urgent if at least 5 days late or temperature exceeds 30 Celsius; otherwise Elevated if at least 2 days late; otherwise Routine.",
+        "A temperature at or below 30 Celsius is safe. Carton values are inside lengths in centimeters; choose the smallest carton that fits the item.",
+        "Warranty: Premium through day 30 inclusive, Basic from day 31 through day 90 inclusive, then Expired. Coverage is ordered Expired < Basic < Premium.",
+        "Null evidence means unknown: both true and false completions are possible, with no assigned probabilities.",
+        "Choose the cheapest carrier whose delivery_days is no greater than maximum_delivery_days. No other fees, constraints, or evidence apply."
+      ]
+    },
+    "questions": {
+      "dispatch_route": {
+        "type": "choice",
+        "instructions": "Which dispatch route follows the stated rule?",
+        "criteria": {
+          "hold": "Hold for review.",
+          "standard": "Standard dispatch.",
+          "protected": "Protected dispatch."
+        }
+      },
+      "restock": {
+        "type": "binary",
+        "instructions": "Should this inventory be restocked under the stated rule?"
+      },
+      "urgency": {
+        "type": "score",
+        "instructions": "Which ordered urgency level applies?",
+        "criteria": [
+          "Routine: lowest urgency.",
+          "Elevated: middle urgency.",
+          "Urgent: highest urgency."
+        ]
+      },
+      "temperature_safe": {
+        "type": "binary",
+        "instructions": "Is the recorded temperature safe under the stated rule?"
+      },
+      "carton": {
+        "type": "choice",
+        "instructions": "Which is the smallest carton that fits the item?",
+        "criteria": {
+          "small": "Small carton.",
+          "medium": "Medium carton.",
+          "large": "Large carton."
+        }
+      },
+      "signed_delivery_guaranteed": {
+        "type": "binary",
+        "instructions": "Does the evidence guarantee that delivery_signed is true in every permitted completion?"
+      },
+      "warranty_coverage": {
+        "type": "score",
+        "instructions": "Which ordered warranty coverage level applies?",
+        "criteria": [
+          "Expired: no coverage.",
+          "Basic: basic coverage.",
+          "Premium: highest coverage."
+        ]
+      },
+      "carrier": {
+        "type": "choice",
+        "instructions": "Which eligible carrier has the lowest cost under the stated rule?",
+        "criteria": {
+          "economy": "Economy carrier.",
+          "priority": "Priority carrier.",
+          "courier": "Courier carrier."
+        }
+      }
+    }
+  },
+  "targets": {
+    "dispatch_route": "protected",
+    "restock": "yes",
+    "urgency": "1",
+    "temperature_safe": "yes",
+    "carton": "medium",
+    "signed_delivery_guaranteed": "no",
+    "warranty_coverage": "1",
+    "carrier": "priority"
+  }
+}
