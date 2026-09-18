@@ -103,6 +103,11 @@ will retain all outcome/reward/hybrid selected and latest roles, with no selecti
 using this diagnostic. The [local executor](toolsandbox-transfer-execute-v1-protocol.md)
 and [read-only report](toolsandbox-transfer-report.md) preserve the same inputs
 and inference contract. They are implemented; that comparison has not run yet.
+A separate [post-hoc answer-order audit](toolsandbox-transfer-order-v1-protocol.md)
+will reverse all 240 nontrivial initial-state forecast menus once, reusing their
+original reference predictions. Its protocol and inputs are frozen before new
+inference; no ordering will be selected and the primary transfer result remains.
+
 
 The [measured shared-prefix prototype](shared-prefix-results.md) preserved
 same-layout answers while reducing eight-question serial latency from 12.69 to
