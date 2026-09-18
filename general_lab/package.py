@@ -40,7 +40,7 @@ TOKENIZER = (
 )
 RUN_FILES = ("run.json", "training.jsonl", "optimizer-steps.jsonl", "rollouts.jsonl",
              "baseline-metrics.json", "baseline-predictions.jsonl", "best-metrics.json", "latest-metrics.json")
-RUN_PATTERN = re.compile(r"(?:validation-step-[0-9]+|(?:baseline|best|latest)-(?:validation|test|shift|challenge)-(?:forecasts|policy)|validation-update-[0-9]+-(?:forecasts|policy))\.jsonl$")
+RUN_PATTERN = re.compile(r"(?:validation-step-[0-9]+|(?:baseline|best|latest)-(?:validation|test|shift|challenge|new_domain)-(?:forecasts|policy)|validation-update-[0-9]+-(?:forecasts|policy))\.jsonl$")
 SPLITS = {"validation", "test", "challenge", "probes", "probes_reversed"}
 SHA = re.compile(r"[0-9a-f]{64}$")
 NAME = re.compile(r"[a-zA-Z0-9][a-zA-Z0-9._-]{0,79}$")
@@ -226,6 +226,30 @@ def add_run(files, source, destination, spec, manifest_sha, allow_bounded_stop, 
             "parameter_evidence_note": "Gradient/change counts are receipt claims; tensor fingerprints independently compare packaged adapter values."}
 
 
+def validate_report_rl_inputs(report, files, runs):
+    if "reinforcement_learning" not in report:
+        return
+    section = report["reinforcement_learning"]
+    require(isinstance(section, dict) and isinstance(section.get("runs"), list),
+            "Invalid report reinforcement run references")
+    for reference in section["runs"]:
+        hashes = reference.get("input_sha256") if isinstance(reference, dict) else None
+        require(isinstance(hashes, dict) and SHA.fullmatch(str(hashes.get("run.json", ""))),
+                "Report reinforcement run receipt hash is missing or invalid")
+        candidates = [run for run in runs if run["run_sha256"] == hashes["run.json"]]
+        require(candidates, "Report reinforcement run is not included in this release")
+        require(all(isinstance(filename, str) and PurePosixPath(filename).name == filename
+                    and not filename.startswith(".") and SHA.fullmatch(str(checksum))
+                    for filename, checksum in hashes.items()),
+                "Invalid report reinforcement input filename or checksum")
+        # Receipt identity determines the bundled run; historical source paths
+        # in a report are not trusted or used to read additional files.
+        require(any(all((entry := files.entries.get(run["artifact_path"] + "/" + filename))
+                        is not None and entry.sha256 == checksum for filename, checksum in hashes.items())
+                    for run in candidates),
+                "Report reinforcement input is missing or checksum mismatched in its bundled run")
+
+
 def prediction_count(path):
     count = 0
     with safe_path(path).open() as stream:
@@ -362,6 +386,7 @@ def package(supervised_run, data, output, *, rl_runs=None, evaluations=None, rep
         predictions = {entry.sha256 for path, entry in files.entries.items() if path.startswith("evaluations/") and path.endswith("-predictions.jsonl")}
         require(all(report.get("inputs", {}).get(key) in predictions for key in ("base_sha256", "trained_sha256")),
                 "Report input predictions are not included in this release")
+        validate_report_rl_inputs(report, files, runs[1:])
         for filename in ("report.json", "report.md"):
             files.add("reports/" + label + "/" + filename, directory / filename)
     # Preserve receipt bytes, but do not publish packaging-host absolute paths in the new index.

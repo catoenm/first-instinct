@@ -182,6 +182,30 @@ class PackageTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Latest reinforcement adapter is unchanged"):
             self.build("unchanged.tar.gz", rl_runs={"hybrid": path})
 
+    def test_rl_new_domain_traces_survive_without_widening_allowlist(self):
+        path, _ = self.rl()
+        included = [f"{checkpoint}-new_domain-{kind}.jsonl"
+                    for checkpoint in ("baseline", "best", "latest")
+                    for kind in ("forecasts", "policy")]
+        excluded = ["best-new_domain-predictions.jsonl", "best-new_domain-policy.jsonl.bak",
+                    "best-new_domain_extra-policy.jsonl", "candidate-new_domain-policy.jsonl",
+                    "private/best-new_domain-policy.jsonl", "optimizer.pt", "credentials.json"]
+        for name in included + excluded:
+            write_json(path / name, {"fixture": name})
+        result = self.build(rl_runs={"hybrid": path})
+        destination = "runs/rl-hybrid/"
+        for name in included:
+            self.assertIn(destination + name, result["files"])
+        for name in excluded:
+            self.assertNotIn(destination + name, result["files"])
+        with tarfile.open(self.root / "release.tar.gz") as archive:
+            prefix = "first-instinct-general-v1/" + destination
+            for name in included:
+                with archive.extractfile(prefix + name) as stream:
+                    self.assertEqual(stream.read(), (path / name).read_bytes())
+            for name in excluded:
+                self.assertNotIn(prefix + name, archive.getnames())
+
     def test_rl_parent_and_policy_gradient_evidence_are_required(self):
         path, receipt = self.rl(selected=1)
         receipt["starting_adapter_sha256"]["adapter_model.safetensors"] = "f" * 64
@@ -209,6 +233,56 @@ class PackageTests(unittest.TestCase):
         (self.project / FROZEN[0]).write_text("changed after freeze")
         with self.assertRaisesRegex(ValueError, "Frozen documentation mismatch"):
             self.build("changed-docs.tar.gz", freeze=freeze)
+
+    def test_report_rl_inputs_match_the_same_bundled_run(self):
+        path, _ = self.rl()
+        traces = [f"{checkpoint}-new_domain-{kind}.jsonl"
+                  for checkpoint in ("baseline", "best", "latest")
+                  for kind in ("forecasts", "policy")]
+        for name in traces:
+            write_json(path / name, {"fixture": name})
+        other = self.root / "other-rl"
+        shutil.copytree(path, other)
+        other_receipt = json.loads((other / "run.json").read_text())
+        other_receipt["config"] = {"seed": 53}
+        write_json(other / "run.json", other_receipt)
+        write_json(other / "best-new_domain-policy.jsonl", {"fixture": "different run"})
+        write_json(other / "best-shift-policy.jsonl", {"fixture": "only in the other run"})
+        base, trained = self.evaluation(True), self.evaluation()
+        report = self.root / "report"
+        names = ["run.json", "baseline-metrics.json", "best-metrics.json", "latest-metrics.json", *traces]
+        hashes = {name: file_hash(path / name) for name in names}
+        document = {"schema": "first-instinct-paired-report-v1", "inputs": {
+            "base_sha256": file_hash(base / "test-predictions.jsonl"),
+            "trained_sha256": file_hash(trained / "test-predictions.jsonl")},
+            "reinforcement_learning": {"runs": [{"path": "/nonexistent/historical/source",
+                                                   "input_sha256": hashes}]}}
+        write_json(report / "report.json", document)
+        (report / "report.md").write_text("# Measured report\n")
+        options = {"rl_runs": {"hybrid": path, "other": other},
+                   "evaluations": {"base": base, "trained": trained}, "reports": {"general": report}}
+        result = self.build(**options)
+        self.assertIn("reports/general/report.json", result["files"])
+        invalid = {
+            "missing-file": {**hashes, "latest-shift-forecasts.jsonl": "a" * 64},
+            "wrong-hash": {**hashes, traces[0]: "a" * 64},
+            "wrong-run": {**hashes, "run.json": "f" * 64},
+            "missing-run": {name: checksum for name, checksum in hashes.items() if name != "run.json"},
+            "other-run-file": {**hashes, "best-shift-policy.jsonl": file_hash(other / "best-shift-policy.jsonl")},
+            "other-run-hash": {**hashes, "best-new_domain-policy.jsonl": file_hash(other / "best-new_domain-policy.jsonl")},
+            "unsafe-path": {**hashes, "../supervised/run.json": file_hash(self.run / "run.json")},
+        }
+        for label, references in invalid.items():
+            with self.subTest(label=label):
+                document["reinforcement_learning"]["runs"][0]["input_sha256"] = references
+                write_json(report / "report.json", document)
+                with self.assertRaisesRegex(ValueError, "[Rr]eport reinforcement"):
+                    self.build(label + ".tar.gz", **options)
+                self.assertFalse((self.root / (label + ".tar.gz")).exists())
+        document["reinforcement_learning"]["runs"][0]["input_sha256"] = hashes
+        write_json(report / "report.json", document)
+        with self.assertRaisesRegex(ValueError, "Report reinforcement run is not included"):
+            self.build("unbundled-run.tar.gz", **{**options, "rl_runs": {"other": other}})
 
     def test_unrelated_partial_or_raw_evaluation_outputs_rejected(self):
         path = self.evaluation()
