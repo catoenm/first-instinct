@@ -39,14 +39,18 @@ first-instinct-general-v1/
     [public-source-audit.json, runtime-freeze.json]
   evaluations/NAME/[metrics.json, named predictions]
   reports/NAME/[report.json, report.md]
-  docs/[training protocol, public sources, probe documentation]
+  docs/[training protocol, public sources, probe documentation, general-demo.md]
   data/general/probes.jsonl
+  examples/general-decisions.json
   scale_lab/[minimal inference modules]
-  general_lab/[typed question interface]
+  general_lab/[typed question interface, serve.py]
+    web/index.html, web/app.js, web/style.css
   [pinned requirements, license, notices]
 ```
 
-`best/` is the selected checkpoint and `latest/` is the final trained checkpoint. Both are preserved. Each directory remains compatible with the existing `scale_lab.infer.Predictor(run=...)` layout. The supplied tokenizer is included as a reproducibility snapshot; the existing Predictor downloads/loads its tokenizer and foundation from the exact revision in `run.json`. Base weights are therefore still required separately. The generated README includes an inference command and explains how to load latest weights without relabeling them as the selected model.
+`best/` is the selected checkpoint and `latest/` is the final trained checkpoint. Both are preserved. Each directory remains compatible with the existing `scale_lab.infer.Predictor(run=...)` layout. The supplied tokenizer is included as a reproducibility snapshot; the existing Predictor downloads/loads its tokenizer and foundation from the exact revision in `run.json`. Base weights are therefore still required separately. The generated README includes inference and browser-demo commands and explains how to load latest weights without relabeling them as the selected model.
+
+After installing the requirements, run `python -m general_lab.serve --run runs/supervised --device auto --max-tokens 1536` from the extracted directory and open [the local decision lab](http://127.0.0.1:8766/). Use the token limit recorded in the generated README if it differs from this example. The browser assets, example questions, and [demo guide](general-demo.md) are included; no checkout or frontend build is required. The demo additions are packaging-time files and do not change the frozen training protocol or core inference hashes.
 
 The companion `first-instinct-general-v1.tar.gz.manifest.json` records the archive's SHA-256, size, run selections, and every included file's checksum. Archive paths, ordering, ownership, permissions, and compression timestamp are deterministic. The helper reopens the completed temporary archive and checks its contents before moving it into place. Existing archives and sidecars are not overwritten. After independently checking the archive checksum and extracting it, `python verify.py` checks payload files against the internal manifest.
 

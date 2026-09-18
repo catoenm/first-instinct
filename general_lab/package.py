@@ -23,7 +23,9 @@ from scale_lab.common import MODELS, ROOT, file_hash
 
 RUNTIME = (
     "scale_lab/__init__.py", "scale_lab/common.py", "scale_lab/model.py", "scale_lab/infer.py",
-    "general_lab/__init__.py", "general_lab/interface.py",
+    "general_lab/__init__.py", "general_lab/interface.py", "general_lab/serve.py",
+    "general_lab/web/index.html", "general_lab/web/app.js", "general_lab/web/style.css",
+    "examples/general-decisions.json", "docs/general-demo.md",
     "requirements-scale.txt", "requirements-scale-cuda.txt", "requirements-multitask.txt",
     "requirements-decision-lock.txt", "LICENSE", "THIRD_PARTY_NOTICES.md",
     "licenses/Apache-2.0.txt", "licenses/CC-BY-4.0.txt", "licenses/CC0-1.0.txt",
@@ -292,6 +294,10 @@ def readme(spec, manifest, runs, freeze):
              "```", "", f"The prepared training input limit was {manifest['max_tokens']} tokens. Supply `--max-tokens {manifest['max_tokens']}` to enforce the same limit.",
              "`Predictor(run=...)` reads `run.json` and `best/`. Reinforcement run directories have the same layout. The bundled tokenizer is a reproducibility snapshot; the existing Predictor loads the tokenizer from the pinned foundation revision.",
              "To inspect latest weights without changing the selection, use `load_model(spec, device, adapter=Path(run) / 'latest')` from `scale_lab.model`. Latest is not necessarily the validation-selected checkpoint.", "",
+             "Run the browser demo from this extracted directory:", "", "```sh",
+             f"python -m general_lab.serve --run runs/supervised --device auto --max-tokens {manifest['max_tokens']}",
+             "```", "",
+             "Open [the local decision lab](http://127.0.0.1:8766/) and select **Load example**, or enter your own state and questions. The example is bundled at `examples/general-decisions.json`. See the [demo guide](docs/general-demo.md) for the typed questions and limitations.", "",
              "## Included runs", ""]
     for run in runs:
         lines.append(f"- `{run['artifact_path']}`: {run['status']}; {run['completed_updates']} updates; selected {run['selected_update']}. {run['selection_note']}")

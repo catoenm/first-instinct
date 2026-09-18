@@ -111,11 +111,17 @@ class PackageTests(unittest.TestCase):
         self.assertIn("runs/supervised/best/adapter_model.safetensors", names)
         self.assertIn("runs/supervised/latest/adapter_model.safetensors", names)
         self.assertIn("runs/supervised/tokenizer/tokenizer.json", names)
+        for relative in ("general_lab/serve.py", "general_lab/web/index.html", "general_lab/web/app.js",
+                         "general_lab/web/style.css", "examples/general-decisions.json", "docs/general-demo.md"):
+            self.assertIn(relative, names)
         self.assertFalse(any("optimizer.pt" in x or "credentials" in x or x.endswith("train.jsonl") or x.endswith("/model.safetensors") for x in names))
         extracted = self.root / "extracted"
         with tarfile.open(self.root / "release.tar.gz") as archive:
             self.assertTrue(all(member.isfile() and not member.issym() for member in archive))
             archive.extractall(extracted, filter="data")
+        readme = (extracted / "first-instinct-general-v1/README.md").read_text()
+        self.assertIn("python -m general_lab.serve --run runs/supervised --device auto --max-tokens 1536", readme)
+        self.assertIn("[demo guide](docs/general-demo.md)", readme)
         result = subprocess.run([sys.executable, "verify.py"], cwd=extracted / "first-instinct-general-v1", capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("Verified", result.stdout)
