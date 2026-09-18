@@ -1,5 +1,14 @@
 # Scaling the verified outcome experiment
 
+**Status: paused before training began.** The user clarified that the primary
+goal is a general model for dynamically supplied questions and constrained
+outputs, with reinforcement learning updating the language network. The new
+rental was deleted before its bootstrap completed. Both model sizes' prepared
+inputs were verified identical, and the SWE-smith source data was downloaded;
+neither a full-pass scaling run nor a new nine-billion-parameter run was trained.
+The [mini-Jev research plan](mini-jev-plan.md) supersedes this as the immediate
+direction. This document preserves the proposed narrow comparison for later use.
+
 This protocol was written before starting the next cloud run. The current
 GitHub release remains the reference and the local demo remains on that model.
 The authorized experiment budget is US$100 including a reserve for storage;
