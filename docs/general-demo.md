@@ -4,10 +4,11 @@ The local browser demo presents one editable parcel example and a Run button,
 followed by a short explanation of the experiment. It uses the trained language
 model to score two supplied answers: expedite or wait.
 
-The nine-billion-parameter experiment is still running. A training preview is
-available in the author's workspace; it is a snapshot of supervised training,
-not a completed release or a reinforcement-trained selection. Held-out results
-and reinforcement-learning comparisons are pending.
+The supervised training pass is complete, and the author's local demo now
+serves its selected checkpoint at step 2,742. See the
+[measured supervised results](https://github.com/catoenm/first-instinct/blob/main/docs/general-supervised-results.md). The
+reinforcement-learning comparisons are still running; this demo does not yet
+serve a reinforcement-trained selection. The combined model release is pending.
 
 ## Run a saved checkpoint
 

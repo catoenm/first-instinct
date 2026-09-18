@@ -1,0 +1,701 @@
+{
+  "checkpoint": "best",
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "prepared_manifest_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+  "probe_note": "Agent-authored, independently agent-reviewed before predictions; not an executed verifier. Reversed options reuse the same cases.",
+  "probe_option_order": {
+    "choice_agreement": 0.984375,
+    "mean_probability_total_variation": 0.04052236883999427,
+    "note": "One reversed ordering on the same authored cases, not proof of permutation invariance."
+  },
+  "probes_sha256": "db653c41bc715fe89b1fe5d2eaba8348d94e6af32df1b9117d367c05bbbb5bcf",
+  "run_sha256": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472",
+  "splits": {
+    "challenge": {
+      "acceptable_set_log_loss": 0.6218171386945676,
+      "accuracy": 0.7765323496027242,
+      "by_task": {
+        "environment_action": {
+          "acceptable_set_log_loss": 0.5669607914951855,
+          "accuracy": 0.83,
+          "n": 500
+        },
+        "environment_forecast": {
+          "acceptable_set_log_loss": 0.4908090034163163,
+          "accuracy": 0.76,
+          "n": 500
+        },
+        "task065_timetravel_consistent_sentence_classification": {
+          "acceptable_set_log_loss": 0.15624800965476962,
+          "accuracy": 0.94140625,
+          "n": 512
+        },
+        "task066_timetravel_binary_consistency_classification": {
+          "acceptable_set_log_loss": 0.08378300055153658,
+          "accuracy": 0.9609375,
+          "n": 512
+        },
+        "task1418_bless_semantic_relation_classification": {
+          "acceptable_set_log_loss": 0.693578138174133,
+          "accuracy": 0.779296875,
+          "n": 512
+        },
+        "task1583_bless_meronym_classification": {
+          "acceptable_set_log_loss": 0.3999779002447816,
+          "accuracy": 0.85546875,
+          "n": 512
+        },
+        "verified_constrained_route_check": {
+          "acceptable_set_log_loss": 0.5431110189060198,
+          "accuracy": 0.742,
+          "n": 500
+        },
+        "verified_constrained_route_choice": {
+          "acceptable_set_log_loss": 0.8676708822423869,
+          "accuracy": 0.692,
+          "n": 500
+        },
+        "verified_inventory_policy_check": {
+          "acceptable_set_log_loss": 0.4837697479668765,
+          "accuracy": 0.786,
+          "n": 500
+        },
+        "verified_inventory_policy_choice": {
+          "acceptable_set_log_loss": 1.255299758077993,
+          "accuracy": 0.582,
+          "n": 500
+        },
+        "verified_joined_access_check": {
+          "acceptable_set_log_loss": 0.8176258271239315,
+          "accuracy": 0.768,
+          "n": 500
+        },
+        "verified_joined_access_choice": {
+          "acceptable_set_log_loss": 0.7419353953066007,
+          "accuracy": 0.806,
+          "n": 500
+        },
+        "verified_temporal_evidence_check": {
+          "acceptable_set_log_loss": 0.802074539809987,
+          "accuracy": 0.688,
+          "n": 500
+        },
+        "verified_temporal_evidence_choice": {
+          "acceptable_set_log_loss": 0.8302842849011022,
+          "accuracy": 0.67,
+          "n": 500
+        }
+      },
+      "groups": 5048,
+      "input_tokens": 3100211,
+      "macro_accuracy": 0.7757935267857142,
+      "macro_log_loss": 0.6237948784194014,
+      "n": 7048,
+      "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success.",
+      "seconds": 157.7479646820575
+    },
+    "probes": {
+      "acceptable_set_log_loss": 0.2858356487774431,
+      "accuracy": 0.90625,
+      "by_task": {
+        "probe_attribution_scope": {
+          "acceptable_set_log_loss": 0.4622290053198722,
+          "accuracy": 0.75,
+          "n": 4
+        },
+        "probe_causal_evidence": {
+          "acceptable_set_log_loss": 0.012720805520764714,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_delegated_authority": {
+          "acceptable_set_log_loss": 0.25037704729995364,
+          "accuracy": 0.75,
+          "n": 4
+        },
+        "probe_document_factchecks": {
+          "acceptable_set_log_loss": 0.017242261415332635,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_evidence_conflicts": {
+          "acceptable_set_log_loss": 0.0026341646724684876,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_idempotent_actions": {
+          "acceptable_set_log_loss": 0.007573514561240216,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_information_freshness": {
+          "acceptable_set_log_loss": 0.006004985232816528,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_missing_evidence_actions": {
+          "acceptable_set_log_loss": 0.005595007094663976,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_negated_criteria": {
+          "acceptable_set_log_loss": 1.0973788791830807,
+          "accuracy": 0.75,
+          "n": 4
+        },
+        "probe_novel_categories": {
+          "acceptable_set_log_loss": 0.08644923391005525,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_ordinal_rubrics": {
+          "acceptable_set_log_loss": 0.4738708685497681,
+          "accuracy": 0.75,
+          "n": 4
+        },
+        "probe_policy_exceptions": {
+          "acceptable_set_log_loss": 0.08422758280614699,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_prose_scheduling": {
+          "acceptable_set_log_loss": 1.791826327429539,
+          "accuracy": 0.5,
+          "n": 4
+        },
+        "probe_quoted_intent": {
+          "acceptable_set_log_loss": 0.01830035417213674,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_resource_plans": {
+          "acceptable_set_log_loss": 0.19368950259570036,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_tool_prerequisites": {
+          "acceptable_set_log_loss": 0.06325084067554988,
+          "accuracy": 1.0,
+          "n": 4
+        }
+      },
+      "groups": 32,
+      "input_tokens": 11025,
+      "macro_accuracy": 0.90625,
+      "macro_log_loss": 0.2858356487774431,
+      "n": 64,
+      "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success.",
+      "seconds": 0.6964164150413126
+    },
+    "probes_reversed": {
+      "acceptable_set_log_loss": 0.25945436565539715,
+      "accuracy": 0.921875,
+      "by_task": {
+        "probe_attribution_scope": {
+          "acceptable_set_log_loss": 0.3780086072287646,
+          "accuracy": 0.75,
+          "n": 4
+        },
+        "probe_causal_evidence": {
+          "acceptable_set_log_loss": 0.008017542066754453,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_delegated_authority": {
+          "acceptable_set_log_loss": 0.016565474364755067,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_document_factchecks": {
+          "acceptable_set_log_loss": 0.013690793678110288,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_evidence_conflicts": {
+          "acceptable_set_log_loss": 0.003369861966555965,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_idempotent_actions": {
+          "acceptable_set_log_loss": 0.024203498591718865,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_information_freshness": {
+          "acceptable_set_log_loss": 0.008373192592234005,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_missing_evidence_actions": {
+          "acceptable_set_log_loss": 0.010097597954339477,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_negated_criteria": {
+          "acceptable_set_log_loss": 1.5280754707248176,
+          "accuracy": 0.75,
+          "n": 4
+        },
+        "probe_novel_categories": {
+          "acceptable_set_log_loss": 0.05659354613543131,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_ordinal_rubrics": {
+          "acceptable_set_log_loss": 0.4745351780939179,
+          "accuracy": 0.75,
+          "n": 4
+        },
+        "probe_policy_exceptions": {
+          "acceptable_set_log_loss": 0.07144201446631956,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_prose_scheduling": {
+          "acceptable_set_log_loss": 1.3354819562575935,
+          "accuracy": 0.5,
+          "n": 4
+        },
+        "probe_quoted_intent": {
+          "acceptable_set_log_loss": 0.016613862305418076,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_resource_plans": {
+          "acceptable_set_log_loss": 0.1639369062619208,
+          "accuracy": 1.0,
+          "n": 4
+        },
+        "probe_tool_prerequisites": {
+          "acceptable_set_log_loss": 0.04226434779770342,
+          "accuracy": 1.0,
+          "n": 4
+        }
+      },
+      "groups": 32,
+      "input_tokens": 11025,
+      "macro_accuracy": 0.921875,
+      "macro_log_loss": 0.2594543656553972,
+      "n": 64,
+      "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success.",
+      "seconds": 0.6954098530113697
+    },
+    "test": {
+      "acceptable_set_log_loss": 0.47747648030625145,
+      "accuracy": 0.7812120159749957,
+      "by_task": {
+        "environment_action": {
+          "acceptable_set_log_loss": 0.1792903115510712,
+          "accuracy": 0.934,
+          "n": 500
+        },
+        "environment_forecast": {
+          "acceptable_set_log_loss": 0.38099428946778374,
+          "accuracy": 0.818,
+          "n": 500
+        },
+        "task1196_atomic_classification_oeffect": {
+          "acceptable_set_log_loss": 1.2273535678991943,
+          "accuracy": 0.48502994011976047,
+          "n": 167
+        },
+        "task1197_atomic_classification_oreact": {
+          "acceptable_set_log_loss": 1.4116351311933726,
+          "accuracy": 0.5314685314685315,
+          "n": 143
+        },
+        "task1198_atomic_classification_owant": {
+          "acceptable_set_log_loss": 1.081584504302609,
+          "accuracy": 0.5808383233532934,
+          "n": 167
+        },
+        "task1199_atomic_classification_xattr": {
+          "acceptable_set_log_loss": 0.6498275714987087,
+          "accuracy": 0.6866666666666666,
+          "n": 150
+        },
+        "task1200_atomic_classification_xeffect": {
+          "acceptable_set_log_loss": 0.762119345177057,
+          "accuracy": 0.6289308176100629,
+          "n": 159
+        },
+        "task1201_atomic_classification_xintent": {
+          "acceptable_set_log_loss": 0.7736342268107552,
+          "accuracy": 0.64375,
+          "n": 160
+        },
+        "task1202_atomic_classification_xneed": {
+          "acceptable_set_log_loss": 0.694023595123537,
+          "accuracy": 0.7058823529411765,
+          "n": 153
+        },
+        "task1203_atomic_classification_xreact": {
+          "acceptable_set_log_loss": 0.5089749893505495,
+          "accuracy": 0.7722222222222223,
+          "n": 180
+        },
+        "task1204_atomic_classification_hinderedby": {
+          "acceptable_set_log_loss": 0.38439741130830773,
+          "accuracy": 0.8275862068965517,
+          "n": 174
+        },
+        "task1205_atomic_classification_isafter": {
+          "acceptable_set_log_loss": 0.7893407247391551,
+          "accuracy": 0.506578947368421,
+          "n": 152
+        },
+        "task1206_atomic_classification_isbefore": {
+          "acceptable_set_log_loss": 0.9007829832495984,
+          "accuracy": 0.5283018867924528,
+          "n": 159
+        },
+        "task1207_atomic_classification_atlocation": {
+          "acceptable_set_log_loss": 0.6286618835714582,
+          "accuracy": 0.6981132075471698,
+          "n": 159
+        },
+        "task1208_atomic_classification_xreason": {
+          "acceptable_set_log_loss": 0.74094167981048,
+          "accuracy": 0.6013071895424836,
+          "n": 153
+        },
+        "task1209_atomic_classification_objectuse": {
+          "acceptable_set_log_loss": 0.8127428455032714,
+          "accuracy": 0.6025641025641025,
+          "n": 156
+        },
+        "task1210_atomic_classification_madeupof": {
+          "acceptable_set_log_loss": 0.6276624055355233,
+          "accuracy": 0.6705882352941176,
+          "n": 170
+        },
+        "task1211_atomic_classification_hassubevent": {
+          "acceptable_set_log_loss": 0.6246697226180856,
+          "accuracy": 0.6851851851851852,
+          "n": 162
+        },
+        "task1212_atomic_classification_hasproperty": {
+          "acceptable_set_log_loss": 0.5233132284763857,
+          "accuracy": 0.7257142857142858,
+          "n": 175
+        },
+        "task1213_atomic_classification_desires": {
+          "acceptable_set_log_loss": 0.7986805302222649,
+          "accuracy": 0.5886075949367089,
+          "n": 158
+        },
+        "task1214_atomic_classification_xwant": {
+          "acceptable_set_log_loss": 0.5997352213062558,
+          "accuracy": 0.7041420118343196,
+          "n": 169
+        },
+        "task1215_atomic_classification_capableof": {
+          "acceptable_set_log_loss": 0.993558878860164,
+          "accuracy": 0.58125,
+          "n": 160
+        },
+        "task1216_atomic_classification_causes": {
+          "acceptable_set_log_loss": 0.7663658911636531,
+          "accuracy": 0.6466666666666666,
+          "n": 150
+        },
+        "task133_winowhy_reason_plausibility_detection": {
+          "acceptable_set_log_loss": 0.6489282725150096,
+          "accuracy": 0.6796875,
+          "n": 512
+        },
+        "task1390_wscfixed_coreference": {
+          "acceptable_set_log_loss": 0.4638891520810312,
+          "accuracy": 0.80078125,
+          "n": 512
+        },
+        "task1391_winogrande_easy_answer_generation": {
+          "acceptable_set_log_loss": 0.2923578315777731,
+          "accuracy": 0.890625,
+          "n": 512
+        },
+        "task1393_superglue_copa_text_completion": {
+          "acceptable_set_log_loss": 0.1371686725176382,
+          "accuracy": 0.9536290322580645,
+          "n": 496
+        },
+        "task1529_scitail1.1_classification": {
+          "acceptable_set_log_loss": 0.5072204329717913,
+          "accuracy": 0.76171875,
+          "n": 512
+        },
+        "task1554_scitail_classification": {
+          "acceptable_set_log_loss": 0.6124118276397573,
+          "accuracy": 0.71484375,
+          "n": 512
+        },
+        "task1624_disfl_qa_question_yesno_classification": {
+          "acceptable_set_log_loss": 0.6824727994148335,
+          "accuracy": 0.67578125,
+          "n": 512
+        },
+        "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+          "acceptable_set_log_loss": 0.6955557728350164,
+          "accuracy": 0.720703125,
+          "n": 512
+        },
+        "task232_iirc_link_number_classification": {
+          "acceptable_set_log_loss": 0.6654630952842671,
+          "accuracy": 0.626953125,
+          "n": 512
+        },
+        "task233_iirc_link_exists_classification": {
+          "acceptable_set_log_loss": 0.7603488158823706,
+          "accuracy": 0.5390625,
+          "n": 512
+        },
+        "task276_enhanced_wsc_classification": {
+          "acceptable_set_log_loss": 0.2316298788874562,
+          "accuracy": 0.91796875,
+          "n": 512
+        },
+        "task329_gap_classification": {
+          "acceptable_set_log_loss": 0.5306502906865714,
+          "accuracy": 0.8359375,
+          "n": 512
+        },
+        "task391_causal_relationship": {
+          "acceptable_set_log_loss": 0.5362428845067044,
+          "accuracy": 0.724609375,
+          "n": 512
+        },
+        "task392_inverse_causal_relationship": {
+          "acceptable_set_log_loss": 0.4439556183815038,
+          "accuracy": 0.783203125,
+          "n": 512
+        },
+        "task640_esnli_classification": {
+          "acceptable_set_log_loss": 0.9470343413557806,
+          "accuracy": 0.6571428571428571,
+          "n": 35
+        },
+        "task641_esnli_classification": {
+          "acceptable_set_log_loss": 1.6270553525008706,
+          "accuracy": 0.34375,
+          "n": 64
+        },
+        "task642_esnli_classification": {
+          "acceptable_set_log_loss": 1.1879557338066524,
+          "accuracy": 0.5660377358490566,
+          "n": 106
+        },
+        "task827_copa_commonsense_reasoning": {
+          "acceptable_set_log_loss": 0.15352805298707464,
+          "accuracy": 0.951171875,
+          "n": 512
+        },
+        "task828_copa_commonsense_cause_effect": {
+          "acceptable_set_log_loss": 0.3274581072503423,
+          "accuracy": 0.837890625,
+          "n": 512
+        },
+        "task892_gap_reverse_coreference_resolution": {
+          "acceptable_set_log_loss": 0.8989503744920301,
+          "accuracy": 0.7564766839378239,
+          "n": 193
+        },
+        "task893_gap_fill_the_blank_coreference_resolution": {
+          "acceptable_set_log_loss": 1.0490883040501309,
+          "accuracy": 0.58,
+          "n": 100
+        },
+        "task935_defeasible_nli_atomic_classification": {
+          "acceptable_set_log_loss": 0.3585847663109987,
+          "accuracy": 0.8563829787234043,
+          "n": 188
+        },
+        "task936_defeasible_nli_snli_classification": {
+          "acceptable_set_log_loss": 0.3448530287766558,
+          "accuracy": 0.8571428571428571,
+          "n": 168
+        },
+        "task937_defeasible_nli_social_classification": {
+          "acceptable_set_log_loss": 0.24814954583604343,
+          "accuracy": 0.9308176100628931,
+          "n": 159
+        },
+        "task970_sherliic_causal_relationship": {
+          "acceptable_set_log_loss": 0.6620571518371567,
+          "accuracy": 0.6640625,
+          "n": 512
+        },
+        "verified_access_control_check": {
+          "acceptable_set_log_loss": 0.000928754769163453,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_access_control_choice": {
+          "acceptable_set_log_loss": 0.06417169550994099,
+          "accuracy": 0.99,
+          "n": 100
+        },
+        "verified_date_deadline_check": {
+          "acceptable_set_log_loss": 0.5549000527243305,
+          "accuracy": 0.71,
+          "n": 100
+        },
+        "verified_date_deadline_choice": {
+          "acceptable_set_log_loss": 0.4029373148258128,
+          "accuracy": 0.79,
+          "n": 100
+        },
+        "verified_evidence_consistency_check": {
+          "acceptable_set_log_loss": 0.00012710696880199868,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_evidence_consistency_choice": {
+          "acceptable_set_log_loss": 4.573922885963886e-05,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_graph_reachability_check": {
+          "acceptable_set_log_loss": 0.00017081615006749856,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_graph_reachability_choice": {
+          "acceptable_set_log_loss": 0.00018565458985354434,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_incident_priority_check": {
+          "acceptable_set_log_loss": 0.00020958509231541446,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_incident_priority_choice": {
+          "acceptable_set_log_loss": 2.8433475253196233e-05,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_interval_scheduling_check": {
+          "acceptable_set_log_loss": 0.07241644551872892,
+          "accuracy": 0.97,
+          "n": 100
+        },
+        "verified_interval_scheduling_choice": {
+          "acceptable_set_log_loss": 0.09111460071371191,
+          "accuracy": 0.97,
+          "n": 100
+        },
+        "verified_inventory_ledger_check": {
+          "acceptable_set_log_loss": 0.6324132333134829,
+          "accuracy": 0.59,
+          "n": 100
+        },
+        "verified_inventory_ledger_choice": {
+          "acceptable_set_log_loss": 0.65737100991498,
+          "accuracy": 0.71,
+          "n": 100
+        },
+        "verified_ordered_rules_check": {
+          "acceptable_set_log_loss": 0.06089833259178648,
+          "accuracy": 0.99,
+          "n": 100
+        },
+        "verified_ordered_rules_choice": {
+          "acceptable_set_log_loss": 0.14602467710704858,
+          "accuracy": 0.97,
+          "n": 100
+        },
+        "verified_propositional_logic_check": {
+          "acceptable_set_log_loss": 0.00047605615291508834,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_propositional_logic_choice": {
+          "acceptable_set_log_loss": 0.0029114262807980102,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_route_cost_check": {
+          "acceptable_set_log_loss": 0.09956144568725435,
+          "accuracy": 0.95,
+          "n": 100
+        },
+        "verified_route_cost_choice": {
+          "acceptable_set_log_loss": 0.22751427437578464,
+          "accuracy": 0.91,
+          "n": 100
+        },
+        "verified_set_operations_check": {
+          "acceptable_set_log_loss": 0.018650852996247615,
+          "accuracy": 0.98,
+          "n": 100
+        },
+        "verified_set_operations_choice": {
+          "acceptable_set_log_loss": 0.000503208717144178,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_state_machine_check": {
+          "acceptable_set_log_loss": 0.2705770234792438,
+          "accuracy": 0.83,
+          "n": 100
+        },
+        "verified_state_machine_choice": {
+          "acceptable_set_log_loss": 0.4987505058371459,
+          "accuracy": 0.82,
+          "n": 100
+        },
+        "verified_table_join_check": {
+          "acceptable_set_log_loss": 5.957002628645295e-06,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_table_join_choice": {
+          "acceptable_set_log_loss": 6.110723820369264e-06,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_tool_prerequisites_check": {
+          "acceptable_set_log_loss": 2.1947187576132312e-05,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_tool_prerequisites_choice": {
+          "acceptable_set_log_loss": 1.3589129519008367e-05,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_unit_conversion_check": {
+          "acceptable_set_log_loss": 0.004507164956003441,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_unit_conversion_choice": {
+          "acceptable_set_log_loss": 0.0109207149498565,
+          "accuracy": 1.0,
+          "n": 100
+        },
+        "verified_weighted_choice_check": {
+          "acceptable_set_log_loss": 0.04745526861396247,
+          "accuracy": 0.98,
+          "n": 100
+        },
+        "verified_weighted_choice_choice": {
+          "acceptable_set_log_loss": 0.036951166947901036,
+          "accuracy": 0.99,
+          "n": 100
+        }
+      },
+      "groups": 15048,
+      "input_tokens": 4864642,
+      "macro_accuracy": 0.7991221766230142,
+      "macro_log_loss": 0.44720089010820796,
+      "n": 17277,
+      "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success.",
+      "seconds": 259.1938913939521
+    }
+  }
+}

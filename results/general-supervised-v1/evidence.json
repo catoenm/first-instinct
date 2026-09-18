@@ -1,0 +1,35 @@
+{
+  "status": "supervised_complete_reinforcement_pending",
+  "supervised_selected_step": 2742,
+  "prepared_manifest_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+  "recovered_archive": {
+    "path": "/workspace/general-v1/snapshots/supervised-complete-v1.tar.gz",
+    "bytes": 333545634,
+    "sha256": "9e37bb46b9698b4be76ff342143f2c26cbf3e804e412cee96fb463f83786e3ef",
+    "files": 29,
+    "captured_at": 1789706656.547918,
+    "selected_step": 2742
+  },
+  "evaluation_receipt_checks": {
+    "foundation_matches_prepared_manifest_and_model": true,
+    "supervised_matches_prepared_manifest_and_model": true,
+    "supervised_run_hash_matches_completed_run": true
+  },
+  "report_receipt_note": "Pairing checks and cluster intervals come from general_lab.report. Its same_data_receipt_verified flag only recognizes an earlier single-split receipt schema; the new-format manifest, model, and supervised run checks above were performed separately during recovery.",
+  "raw_predictions_and_adapters": "Verified locally; publication planned with completed reinforcement comparison. They are not included in this Git directory.",
+  "files": {
+    "supervised-metrics.json": "4186c00cb0338cc2d2795e2e9f74822f31ea08f490ad0f03154522a6e25891ae",
+    "training.jsonl": "7f7f2ff2a25f5c661ad34248ad71ef5cb4398a92a6794b9dd09724f2f00ca2bf",
+    "runtime-freeze.json": "306fed90780ab36d590428c947a7b2e0affe588440f6dd3bec0b3bebb2bcf218",
+    "foundation-metrics.json": "65a75e84048f9b3cb787f4c9251584bdc73f0839b86dc9b2a8ca68b810e130ad",
+    "run.json": "82808deffb36b311ebeed2d7ea30e3e2aa8df6f27cb6fa0207c63238fc512472",
+    "reports/probes_reversed/report.json": "f5245402de84b6bdf9a5480c4d28eefb863a4e119d0620b4ee9772376fee478f",
+    "reports/probes_reversed/report.md": "e4fe125366652d9e868c4bd2f0f0b3c83b95affeb28833a8bd3666bfae916899",
+    "reports/probes/report.json": "002dab6029fdd6347f4b3caeea902ab55af6af4c6198b07a435b2f6405bfb959",
+    "reports/probes/report.md": "b5cb27837187280d789dde223d181fd4f17c8e0945da007f3657ebcb049ab17c",
+    "reports/test/report.json": "7b7d11c4e74abe1279d1605b7c20084beb060527fd5fafed8156d663bff17079",
+    "reports/test/report.md": "af1191a59c652f41f561079e9115b17d0d26df298cb35a0a3514fc61502cc9da",
+    "reports/challenge/report.json": "13640e0a4b10854ba2e775fdca799c473e8e12a857ec18da2223bd78c33a7f2d",
+    "reports/challenge/report.md": "649a3322eed46a83a880979975dd43cf91a04eed7481d7c28c7418b0b7c7253c"
+  }
+}

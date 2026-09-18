@@ -1,0 +1,43 @@
+{
+  "recorded_at_unix": 1789697841.4039528,
+  "git_commit": "f157861fad0e82b938cdcb88238820d492230d94",
+  "prepared_manifest_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+  "documentation_sha256": {
+    "docs/general-training-v1-protocol.md": "12d3942f90460bd5b0256fe7600b98c8fcfa5be4d0ebe23b9454617b7b56032f",
+    "docs/general-data-sources.md": "155be46f4e712ddda317bd26a3fef5d19bb860b452521d03bc57e5ac77bbd7fd",
+    "docs/general-probes.md": "45c47774917982cda1903526ff2bb20df62974559f7bb25a13d197d192d5a8ba"
+  },
+  "code_sha256": {
+    "general_lab/__init__.py": "ac9c37492ada25d81aada54ecf869a84e01e78d59f220b603bb74a6fac635df6",
+    "general_lab/benchmark.py": "2b06c1039d4dcb09adc1a458f4c332e3c2c25a75015baf1f2627c9b816feb8e5",
+    "general_lab/curate.py": "943bbe4b2c9b07c80226059450f4f76a26737a5c26eee14431678cd3ea328e52",
+    "general_lab/data.py": "fc2b4659ecef1a0df609d728e947839e174f6bf9899547a2cc227509a31710e3",
+    "general_lab/environments.py": "1ecae545a421ea909f6c2853c1fba8a585c59b7dc38331617a743e4493a290cf",
+    "general_lab/evaluate.py": "7b08d439852acaa1aecb9adc8db28809155b7f1c009651fc3eb59111ce0ce39b",
+    "general_lab/interface.py": "decd78f6b2ccbd288276435c7dd5368bf2e64a3276f4e47434c22aec75217a2f",
+    "general_lab/padding_check.py": "ef172cf79a2541d7b24d24835d7a5df9dd38d9042374e288b0181840ccf9f7c0",
+    "general_lab/prepare.py": "a77eb9ce14f6c5237a19f1bf47fc08634961e5914b9f547a56383b8c9049b428",
+    "general_lab/report.py": "8aed6c1dc0540f71e2bdbcc805a13ffcbedc26960927e3f2d1e20c467a874de3",
+    "general_lab/rl.py": "050496118622359d96031477317e862a3eab786923b5a3c7c1f5168789a83bd5",
+    "general_lab/sources.py": "94ce38ab22f50d0922acb838d0830737d7bdd2a705f940d3d5b91fadc5e09af3",
+    "general_lab/train.py": "92c8bd390472f36c2cf2aa698c383e966bce673a81023ce5b185594736e63607",
+    "general_lab/verified.py": "4dae4bbb16bf97bcdafeb213983dac972b06ce79c41f8b5a5c7e413e0020ea30",
+    "scale_lab/__init__.py": "15300119a8f9c724a4dadf4e9dea98796469f39c779963947022d01c23bbc46e",
+    "scale_lab/bundle.py": "7e93756177a7230239021cb2619223e7f6bde929a608fa803e7dd11f3a503d79",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "scale_lab/data.py": "93071b2efa6ea449f63c4a0be3d9f7cda10a11dbf39064cc22ad6b969fb2be6d",
+    "scale_lab/download.py": "680d4fc0545d8d481c1f06ae3312573b0176daa96ffc02a0fd943080eab50262",
+    "scale_lab/environment.py": "e5284407408698e9a73fa117304eb8548aa1bb963e0215f4afa14436ed41ec63",
+    "scale_lab/eval.py": "cb14a6ff31be719ef32dc5da3cc1a4ed80720bf1d2ed8ad86f45d458dc1ff070",
+    "scale_lab/glaive.py": "971c01b3cca1e5cb5bc431b4b07f94a572eea99a3ccc3cc2a2c5cab54fa0ee29",
+    "scale_lab/infer.py": "29fb7e9f677701d3ba04875a319ab231ed7aef0fa6616301ab3c83cba610cb87",
+    "scale_lab/model.py": "91b65b1578daa1831c8918284290731c36a92ed3fe3b95b44a3bb5d755437689",
+    "scale_lab/order_audit.py": "3fa906d5d339be501b883fc6b223793f3f4130eb43858533775b3afe3d6878c9",
+    "scale_lab/prepare.py": "d51d13581315c965071fc7642219e44f50d447aa5245c5fb41cddcb6228417fc",
+    "scale_lab/toucan_audit.py": "973adda469fff4bde272866033837f746d227a227f2829dcd52e1ba372858681",
+    "scale_lab/toucan_compare.py": "a943f95cfbb349a147e762529c4ef677682cc5b091888edd115e3366052df261",
+    "scale_lab/train.py": "26d68637e89d7f23e3017426eb5fe408fbbbf80e21d7040cc3891a55b8cacbe9"
+  },
+  "supervised_command": "#!/bin/bash\nset -euo pipefail\nsource /opt/first-instinct-venv/bin/activate\nexport HF_HOME=/opt/hf-cache\nexport TOKENIZERS_PARALLELISM=false\ncd /workspace/general-v1\npython - <<'PY'\nimport json\nfrom pathlib import Path\nr=json.loads(Path('padding-check.json').read_text())\nassert r['status']=='passed', r['status']\nassert r['data_manifest_sha256']=='59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42'\nPY\npython -m torch.distributed.run --standalone --nproc_per_node=4 -m general_lab.train --data data --output runs/supervised-01 --device cuda --batch-size 16 --eval-batch-size 16 --accumulation 2 --epochs 1 --max-hours 6 --eval-every 500 --validation-per-task 12 --pad-multiple 64 --seed 41\n",
+  "note": "Locally recorded pre-full-run receipt; no external timestamp guarantee. No heldout results inspected."
+}

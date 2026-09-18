@@ -1,0 +1,3564 @@
+{
+  "bootstrap": {
+    "method": "paired percentile cluster bootstrap; complete group/world resampling",
+    "resamples": 1000,
+    "seed": 41
+  },
+  "general": {
+    "contract": {
+      "brier": "Multiclass sum of squared probabilities against a one-hot target, range [0,2]. Only rows with exactly one accepted answer are eligible; this is not binary event Brier.",
+      "log_loss_floor": 1e-12,
+      "paired_on": [
+        "id",
+        "group_id",
+        "task",
+        "target_ids_set",
+        "option_ids_set"
+      ],
+      "probability_note": "Probabilities are conditional on the supplied option set. A multiple-acceptable-answer set does not define a probability distribution over mutually exclusive outcomes."
+    },
+    "overall": {
+      "by_task": {
+        "environment_action": {
+          "base": {
+            "acceptable_set_log_loss": 1.5851320895168015,
+            "accuracy": 0.354,
+            "single_label_multiclass_brier": 0.7560418080674858
+          },
+          "difference": {
+            "acceptable_set_log_loss": -1.4058417779657304,
+            "accuracy": 0.5800000000000001,
+            "single_label_multiclass_brier": -0.654563954209294
+          },
+          "groups": 500,
+          "rows": 500,
+          "single_label_rows": 498,
+          "trained": {
+            "acceptable_set_log_loss": 0.1792903115510712,
+            "accuracy": 0.934,
+            "single_label_multiclass_brier": 0.10147785385819175
+          }
+        },
+        "environment_forecast": {
+          "base": {
+            "acceptable_set_log_loss": 0.73991888449512,
+            "accuracy": 0.568,
+            "single_label_multiclass_brier": 0.53331133929375
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.35892459502733626,
+            "accuracy": 0.25,
+            "single_label_multiclass_brier": -0.2881320878098568
+          },
+          "groups": 500,
+          "rows": 500,
+          "single_label_rows": 500,
+          "trained": {
+            "acceptable_set_log_loss": 0.38099428946778374,
+            "accuracy": 0.818,
+            "single_label_multiclass_brier": 0.2451792514838932
+          }
+        },
+        "task1196_atomic_classification_oeffect": {
+          "base": {
+            "acceptable_set_log_loss": 1.1565221106516221,
+            "accuracy": 0.41916167664670656,
+            "single_label_multiclass_brier": 0.7903579649589102
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.07083145724757212,
+            "accuracy": 0.06586826347305391,
+            "single_label_multiclass_brier": -0.03274732825130655
+          },
+          "groups": 167,
+          "rows": 167,
+          "single_label_rows": 167,
+          "trained": {
+            "acceptable_set_log_loss": 1.2273535678991943,
+            "accuracy": 0.48502994011976047,
+            "single_label_multiclass_brier": 0.7576106367076036
+          }
+        },
+        "task1197_atomic_classification_oreact": {
+          "base": {
+            "acceptable_set_log_loss": 0.8923553773937336,
+            "accuracy": 0.5174825174825175,
+            "single_label_multiclass_brier": 0.6358326175303991
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.519279753799639,
+            "accuracy": 0.013986013986013957,
+            "single_label_multiclass_brier": 0.13792736236066838
+          },
+          "groups": 143,
+          "rows": 143,
+          "single_label_rows": 143,
+          "trained": {
+            "acceptable_set_log_loss": 1.4116351311933726,
+            "accuracy": 0.5314685314685315,
+            "single_label_multiclass_brier": 0.7737599798910675
+          }
+        },
+        "task1198_atomic_classification_owant": {
+          "base": {
+            "acceptable_set_log_loss": 0.9136092426268508,
+            "accuracy": 0.47305389221556887,
+            "single_label_multiclass_brier": 0.6647719137855409
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.16797526167575827,
+            "accuracy": 0.10778443113772457,
+            "single_label_multiclass_brier": -0.03894379802797454
+          },
+          "groups": 167,
+          "rows": 167,
+          "single_label_rows": 167,
+          "trained": {
+            "acceptable_set_log_loss": 1.081584504302609,
+            "accuracy": 0.5808383233532934,
+            "single_label_multiclass_brier": 0.6258281157575664
+          }
+        },
+        "task1199_atomic_classification_xattr": {
+          "base": {
+            "acceptable_set_log_loss": 0.8311166333629232,
+            "accuracy": 0.58,
+            "single_label_multiclass_brier": 0.5300646637412458
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.18128906186421445,
+            "accuracy": 0.10666666666666669,
+            "single_label_multiclass_brier": -0.092039895171659
+          },
+          "groups": 150,
+          "rows": 150,
+          "single_label_rows": 150,
+          "trained": {
+            "acceptable_set_log_loss": 0.6498275714987087,
+            "accuracy": 0.6866666666666666,
+            "single_label_multiclass_brier": 0.43802476856958683
+          }
+        },
+        "task1200_atomic_classification_xeffect": {
+          "base": {
+            "acceptable_set_log_loss": 0.8957445118069353,
+            "accuracy": 0.6226415094339622,
+            "single_label_multiclass_brier": 0.5618500670678004
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.13362516662987822,
+            "accuracy": 0.0062893081761006275,
+            "single_label_multiclass_brier": -0.03140715811490313
+          },
+          "groups": 159,
+          "rows": 159,
+          "single_label_rows": 159,
+          "trained": {
+            "acceptable_set_log_loss": 0.762119345177057,
+            "accuracy": 0.6289308176100629,
+            "single_label_multiclass_brier": 0.5304429089528973
+          }
+        },
+        "task1201_atomic_classification_xintent": {
+          "base": {
+            "acceptable_set_log_loss": 0.7839590337451205,
+            "accuracy": 0.60625,
+            "single_label_multiclass_brier": 0.5302593432834419
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.010324806934365327,
+            "accuracy": 0.03750000000000009,
+            "single_label_multiclass_brier": -0.008735803873770376
+          },
+          "groups": 160,
+          "rows": 160,
+          "single_label_rows": 160,
+          "trained": {
+            "acceptable_set_log_loss": 0.7736342268107552,
+            "accuracy": 0.64375,
+            "single_label_multiclass_brier": 0.5215235394096716
+          }
+        },
+        "task1202_atomic_classification_xneed": {
+          "base": {
+            "acceptable_set_log_loss": 0.8949876060300542,
+            "accuracy": 0.5359477124183006,
+            "single_label_multiclass_brier": 0.6208177445453636
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.20096401090651728,
+            "accuracy": 0.16993464052287588,
+            "single_label_multiclass_brier": -0.18433421567955088
+          },
+          "groups": 153,
+          "rows": 153,
+          "single_label_rows": 153,
+          "trained": {
+            "acceptable_set_log_loss": 0.694023595123537,
+            "accuracy": 0.7058823529411765,
+            "single_label_multiclass_brier": 0.43648352886581276
+          }
+        },
+        "task1203_atomic_classification_xreact": {
+          "base": {
+            "acceptable_set_log_loss": 0.6331973566801703,
+            "accuracy": 0.7055555555555556,
+            "single_label_multiclass_brier": 0.40945611252082026
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.12422236732962078,
+            "accuracy": 0.06666666666666665,
+            "single_label_multiclass_brier": -0.07624307398853675
+          },
+          "groups": 180,
+          "rows": 180,
+          "single_label_rows": 180,
+          "trained": {
+            "acceptable_set_log_loss": 0.5089749893505495,
+            "accuracy": 0.7722222222222223,
+            "single_label_multiclass_brier": 0.3332130385322835
+          }
+        },
+        "task1204_atomic_classification_hinderedby": {
+          "base": {
+            "acceptable_set_log_loss": 0.5712852172004131,
+            "accuracy": 0.6724137931034483,
+            "single_label_multiclass_brier": 0.3933347837488137
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.1868878058921054,
+            "accuracy": 0.15517241379310343,
+            "single_label_multiclass_brier": -0.14568753184118957
+          },
+          "groups": 174,
+          "rows": 174,
+          "single_label_rows": 174,
+          "trained": {
+            "acceptable_set_log_loss": 0.38439741130830773,
+            "accuracy": 0.8275862068965517,
+            "single_label_multiclass_brier": 0.24764725190762413
+          }
+        },
+        "task1205_atomic_classification_isafter": {
+          "base": {
+            "acceptable_set_log_loss": 0.883410865966348,
+            "accuracy": 0.5328947368421053,
+            "single_label_multiclass_brier": 0.6300518656555307
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.09407014122719293,
+            "accuracy": -0.026315789473684292,
+            "single_label_multiclass_brier": -0.05001632423589264
+          },
+          "groups": 152,
+          "rows": 152,
+          "single_label_rows": 152,
+          "trained": {
+            "acceptable_set_log_loss": 0.7893407247391551,
+            "accuracy": 0.506578947368421,
+            "single_label_multiclass_brier": 0.5800355414196381
+          }
+        },
+        "task1206_atomic_classification_isbefore": {
+          "base": {
+            "acceptable_set_log_loss": 0.873002357993126,
+            "accuracy": 0.5911949685534591,
+            "single_label_multiclass_brier": 0.5809712888233924
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.027780625256472402,
+            "accuracy": -0.06289308176100628,
+            "single_label_multiclass_brier": 0.04456710579078993
+          },
+          "groups": 159,
+          "rows": 159,
+          "single_label_rows": 159,
+          "trained": {
+            "acceptable_set_log_loss": 0.9007829832495984,
+            "accuracy": 0.5283018867924528,
+            "single_label_multiclass_brier": 0.6255383946141824
+          }
+        },
+        "task1207_atomic_classification_atlocation": {
+          "base": {
+            "acceptable_set_log_loss": 0.46503807485679316,
+            "accuracy": 0.8050314465408805,
+            "single_label_multiclass_brier": 0.2911198817995059
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.1636238087146651,
+            "accuracy": -0.10691823899371078,
+            "single_label_multiclass_brier": 0.12443972015755633
+          },
+          "groups": 159,
+          "rows": 159,
+          "single_label_rows": 159,
+          "trained": {
+            "acceptable_set_log_loss": 0.6286618835714582,
+            "accuracy": 0.6981132075471698,
+            "single_label_multiclass_brier": 0.4155596019570622
+          }
+        },
+        "task1208_atomic_classification_xreason": {
+          "base": {
+            "acceptable_set_log_loss": 0.5879235018215999,
+            "accuracy": 0.6862745098039216,
+            "single_label_multiclass_brier": 0.39239109747138445
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.15301817798888007,
+            "accuracy": -0.08496732026143794,
+            "single_label_multiclass_brier": 0.13601086417926145
+          },
+          "groups": 153,
+          "rows": 153,
+          "single_label_rows": 153,
+          "trained": {
+            "acceptable_set_log_loss": 0.74094167981048,
+            "accuracy": 0.6013071895424836,
+            "single_label_multiclass_brier": 0.5284019616506459
+          }
+        },
+        "task1209_atomic_classification_objectuse": {
+          "base": {
+            "acceptable_set_log_loss": 0.7312024287712956,
+            "accuracy": 0.6282051282051282,
+            "single_label_multiclass_brier": 0.4951417649282101
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.08154041673197576,
+            "accuracy": -0.02564102564102566,
+            "single_label_multiclass_brier": 0.04694501245900434
+          },
+          "groups": 156,
+          "rows": 156,
+          "single_label_rows": 156,
+          "trained": {
+            "acceptable_set_log_loss": 0.8127428455032714,
+            "accuracy": 0.6025641025641025,
+            "single_label_multiclass_brier": 0.5420867773872144
+          }
+        },
+        "task1210_atomic_classification_madeupof": {
+          "base": {
+            "acceptable_set_log_loss": 0.45757991520991653,
+            "accuracy": 0.7705882352941177,
+            "single_label_multiclass_brier": 0.30627563719768597
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.1700824903256068,
+            "accuracy": -0.10000000000000009,
+            "single_label_multiclass_brier": 0.11229868919053188
+          },
+          "groups": 170,
+          "rows": 170,
+          "single_label_rows": 170,
+          "trained": {
+            "acceptable_set_log_loss": 0.6276624055355233,
+            "accuracy": 0.6705882352941176,
+            "single_label_multiclass_brier": 0.41857432638821784
+          }
+        },
+        "task1211_atomic_classification_hassubevent": {
+          "base": {
+            "acceptable_set_log_loss": 0.8222481930494104,
+            "accuracy": 0.6358024691358025,
+            "single_label_multiclass_brier": 0.5326482607811516
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.19757847043132482,
+            "accuracy": 0.04938271604938271,
+            "single_label_multiclass_brier": -0.11103185368841234
+          },
+          "groups": 162,
+          "rows": 162,
+          "single_label_rows": 162,
+          "trained": {
+            "acceptable_set_log_loss": 0.6246697226180856,
+            "accuracy": 0.6851851851851852,
+            "single_label_multiclass_brier": 0.42161640709273923
+          }
+        },
+        "task1212_atomic_classification_hasproperty": {
+          "base": {
+            "acceptable_set_log_loss": 0.4523296678913347,
+            "accuracy": 0.7542857142857143,
+            "single_label_multiclass_brier": 0.3041990499132246
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.07098356058505101,
+            "accuracy": -0.02857142857142858,
+            "single_label_multiclass_brier": 0.048382406424602176
+          },
+          "groups": 175,
+          "rows": 175,
+          "single_label_rows": 175,
+          "trained": {
+            "acceptable_set_log_loss": 0.5233132284763857,
+            "accuracy": 0.7257142857142858,
+            "single_label_multiclass_brier": 0.3525814563378268
+          }
+        },
+        "task1213_atomic_classification_desires": {
+          "base": {
+            "acceptable_set_log_loss": 0.8868786026448859,
+            "accuracy": 0.620253164556962,
+            "single_label_multiclass_brier": 0.5567882590186297
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.08819807242262101,
+            "accuracy": -0.03164556962025311,
+            "single_label_multiclass_brier": -0.01868635349729275
+          },
+          "groups": 158,
+          "rows": 158,
+          "single_label_rows": 158,
+          "trained": {
+            "acceptable_set_log_loss": 0.7986805302222649,
+            "accuracy": 0.5886075949367089,
+            "single_label_multiclass_brier": 0.538101905521337
+          }
+        },
+        "task1214_atomic_classification_xwant": {
+          "base": {
+            "acceptable_set_log_loss": 0.8061257796202302,
+            "accuracy": 0.591715976331361,
+            "single_label_multiclass_brier": 0.5393856900430948
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.20639055831397446,
+            "accuracy": 0.1124260355029586,
+            "single_label_multiclass_brier": -0.13174859425051966
+          },
+          "groups": 169,
+          "rows": 169,
+          "single_label_rows": 169,
+          "trained": {
+            "acceptable_set_log_loss": 0.5997352213062558,
+            "accuracy": 0.7041420118343196,
+            "single_label_multiclass_brier": 0.4076370957925751
+          }
+        },
+        "task1215_atomic_classification_capableof": {
+          "base": {
+            "acceptable_set_log_loss": 0.8505823575205952,
+            "accuracy": 0.6,
+            "single_label_multiclass_brier": 0.5385718379587436
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.14297652133956884,
+            "accuracy": -0.018749999999999933,
+            "single_label_multiclass_brier": 0.1050727580121481
+          },
+          "groups": 160,
+          "rows": 160,
+          "single_label_rows": 160,
+          "trained": {
+            "acceptable_set_log_loss": 0.993558878860164,
+            "accuracy": 0.58125,
+            "single_label_multiclass_brier": 0.6436445959708917
+          }
+        },
+        "task1216_atomic_classification_causes": {
+          "base": {
+            "acceptable_set_log_loss": 0.8876699608341864,
+            "accuracy": 0.6333333333333333,
+            "single_label_multiclass_brier": 0.5402743835707915
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.12130406967053331,
+            "accuracy": 0.013333333333333308,
+            "single_label_multiclass_brier": -0.027758902316457945
+          },
+          "groups": 150,
+          "rows": 150,
+          "single_label_rows": 150,
+          "trained": {
+            "acceptable_set_log_loss": 0.7663658911636531,
+            "accuracy": 0.6466666666666666,
+            "single_label_multiclass_brier": 0.5125154812543335
+          }
+        },
+        "task133_winowhy_reason_plausibility_detection": {
+          "base": {
+            "acceptable_set_log_loss": 0.5710759417132886,
+            "accuracy": 0.75390625,
+            "single_label_multiclass_brier": 0.36726472170551466
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.07785233080172105,
+            "accuracy": -0.07421875,
+            "single_label_multiclass_brier": 0.04902584735665705
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.6489282725150096,
+            "accuracy": 0.6796875,
+            "single_label_multiclass_brier": 0.4162905690621717
+          }
+        },
+        "task1390_wscfixed_coreference": {
+          "base": {
+            "acceptable_set_log_loss": 0.9050452434670051,
+            "accuracy": 0.62890625,
+            "single_label_multiclass_brier": 0.5486049863320427
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.4411560913859739,
+            "accuracy": 0.171875,
+            "single_label_multiclass_brier": -0.2522794402896866
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.4638891520810312,
+            "accuracy": 0.80078125,
+            "single_label_multiclass_brier": 0.2963255460423561
+          }
+        },
+        "task1391_winogrande_easy_answer_generation": {
+          "base": {
+            "acceptable_set_log_loss": 0.639434966368963,
+            "accuracy": 0.650390625,
+            "single_label_multiclass_brier": 0.4576777792673004
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.3470771347911899,
+            "accuracy": 0.240234375,
+            "single_label_multiclass_brier": -0.28608008705668164
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.2923578315777731,
+            "accuracy": 0.890625,
+            "single_label_multiclass_brier": 0.17159769221061877
+          }
+        },
+        "task1393_superglue_copa_text_completion": {
+          "base": {
+            "acceptable_set_log_loss": 0.6537611675115796,
+            "accuracy": 0.5483870967741935,
+            "single_label_multiclass_brier": 0.48434923051041967
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.5165924949939414,
+            "accuracy": 0.405241935483871,
+            "single_label_multiclass_brier": -0.4133870527770032
+          },
+          "groups": 496,
+          "rows": 496,
+          "single_label_rows": 496,
+          "trained": {
+            "acceptable_set_log_loss": 0.1371686725176382,
+            "accuracy": 0.9536290322580645,
+            "single_label_multiclass_brier": 0.07096217773341645
+          }
+        },
+        "task1529_scitail1.1_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.37952196612963907,
+            "accuracy": 0.84375,
+            "single_label_multiclass_brier": 0.23138479888997276
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.12769846684215225,
+            "accuracy": -0.08203125,
+            "single_label_multiclass_brier": 0.10191453277495871
+          },
+          "groups": 510,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.5072204329717913,
+            "accuracy": 0.76171875,
+            "single_label_multiclass_brier": 0.3332993316649315
+          }
+        },
+        "task1554_scitail_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.4336029579724891,
+            "accuracy": 0.76953125,
+            "single_label_multiclass_brier": 0.2865734153679774
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.17880886966726822,
+            "accuracy": -0.0546875,
+            "single_label_multiclass_brier": 0.12225179372966782
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.6124118276397573,
+            "accuracy": 0.71484375,
+            "single_label_multiclass_brier": 0.40882520909764525
+          }
+        },
+        "task1624_disfl_qa_question_yesno_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.704961586501904,
+            "accuracy": 0.626953125,
+            "single_label_multiclass_brier": 0.48071409063433806
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.022488787087070472,
+            "accuracy": 0.048828125,
+            "single_label_multiclass_brier": -0.03301561204884346
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.6824727994148335,
+            "accuracy": 0.67578125,
+            "single_label_multiclass_brier": 0.4476984785854946
+          }
+        },
+        "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.5409290637365247,
+            "accuracy": 0.775390625,
+            "single_label_multiclass_brier": 0.3320909867880387
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.15462670909849163,
+            "accuracy": -0.0546875,
+            "single_label_multiclass_brier": 0.06315577884221402
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.6955557728350164,
+            "accuracy": 0.720703125,
+            "single_label_multiclass_brier": 0.39524676563025274
+          }
+        },
+        "task232_iirc_link_number_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.6850875634055285,
+            "accuracy": 0.59765625,
+            "single_label_multiclass_brier": 0.47805576946740247
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.019624468121261396,
+            "accuracy": 0.029296875,
+            "single_label_multiclass_brier": -0.011262145547119407
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.6654630952842671,
+            "accuracy": 0.626953125,
+            "single_label_multiclass_brier": 0.46679362392028306
+          }
+        },
+        "task233_iirc_link_exists_classification": {
+          "base": {
+            "acceptable_set_log_loss": 1.057637730749157,
+            "accuracy": 0.5546875,
+            "single_label_multiclass_brier": 0.666677713252435
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.2972889148667863,
+            "accuracy": -0.015625,
+            "single_label_multiclass_brier": -0.1243377007648081
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.7603488158823706,
+            "accuracy": 0.5390625,
+            "single_label_multiclass_brier": 0.5423400124876269
+          }
+        },
+        "task276_enhanced_wsc_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.47238590138942294,
+            "accuracy": 0.853515625,
+            "single_label_multiclass_brier": 0.21667192058847792
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.24075602250196673,
+            "accuracy": 0.064453125,
+            "single_label_multiclass_brier": -0.09917289436453344
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.2316298788874562,
+            "accuracy": 0.91796875,
+            "single_label_multiclass_brier": 0.11749902622394448
+          }
+        },
+        "task329_gap_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.8880205304616937,
+            "accuracy": 0.533203125,
+            "single_label_multiclass_brier": 0.5418919527209053
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.3573702397751223,
+            "accuracy": 0.302734375,
+            "single_label_multiclass_brier": -0.29924124809362496
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.5306502906865714,
+            "accuracy": 0.8359375,
+            "single_label_multiclass_brier": 0.24265070462728036
+          }
+        },
+        "task391_causal_relationship": {
+          "base": {
+            "acceptable_set_log_loss": 0.4863056257969572,
+            "accuracy": 0.765625,
+            "single_label_multiclass_brier": 0.32419510196552676
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.049937258709747245,
+            "accuracy": -0.041015625,
+            "single_label_multiclass_brier": 0.04425038139203763
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.5362428845067044,
+            "accuracy": 0.724609375,
+            "single_label_multiclass_brier": 0.3684454833575644
+          }
+        },
+        "task392_inverse_causal_relationship": {
+          "base": {
+            "acceptable_set_log_loss": 0.4789727947938558,
+            "accuracy": 0.779296875,
+            "single_label_multiclass_brier": 0.3088886266770418
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.03501717641235197,
+            "accuracy": 0.00390625,
+            "single_label_multiclass_brier": -0.017636033436747633
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.4439556183815038,
+            "accuracy": 0.783203125,
+            "single_label_multiclass_brier": 0.2912525932402942
+          }
+        },
+        "task640_esnli_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.787144616017383,
+            "accuracy": 0.6,
+            "single_label_multiclass_brier": 0.4723719460797616
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.15988972533839763,
+            "accuracy": 0.05714285714285716,
+            "single_label_multiclass_brier": 0.05422364295075505
+          },
+          "groups": 35,
+          "rows": 35,
+          "single_label_rows": 35,
+          "trained": {
+            "acceptable_set_log_loss": 0.9470343413557806,
+            "accuracy": 0.6571428571428571,
+            "single_label_multiclass_brier": 0.5265955890305166
+          }
+        },
+        "task641_esnli_classification": {
+          "base": {
+            "acceptable_set_log_loss": 1.2471600059242456,
+            "accuracy": 0.140625,
+            "single_label_multiclass_brier": 0.7649838137872998
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.37989534657662505,
+            "accuracy": 0.203125,
+            "single_label_multiclass_brier": 0.13034589130144547
+          },
+          "groups": 64,
+          "rows": 64,
+          "single_label_rows": 64,
+          "trained": {
+            "acceptable_set_log_loss": 1.6270553525008706,
+            "accuracy": 0.34375,
+            "single_label_multiclass_brier": 0.8953297050887453
+          }
+        },
+        "task642_esnli_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.779436290827157,
+            "accuracy": 0.6698113207547169,
+            "single_label_multiclass_brier": 0.4910287770658724
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.4085194429794954,
+            "accuracy": -0.10377358490566035,
+            "single_label_multiclass_brier": 0.19044741271607507
+          },
+          "groups": 106,
+          "rows": 106,
+          "single_label_rows": 106,
+          "trained": {
+            "acceptable_set_log_loss": 1.1879557338066524,
+            "accuracy": 0.5660377358490566,
+            "single_label_multiclass_brier": 0.6814761897819475
+          }
+        },
+        "task827_copa_commonsense_reasoning": {
+          "base": {
+            "acceptable_set_log_loss": 0.8864679230418785,
+            "accuracy": 0.5390625,
+            "single_label_multiclass_brier": 0.6177795383228492
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7329398700548039,
+            "accuracy": 0.412109375,
+            "single_label_multiclass_brier": -0.5333070792709909
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.15352805298707464,
+            "accuracy": 0.951171875,
+            "single_label_multiclass_brier": 0.08447245905185835
+          }
+        },
+        "task828_copa_commonsense_cause_effect": {
+          "base": {
+            "acceptable_set_log_loss": 0.6379036783143565,
+            "accuracy": 0.638671875,
+            "single_label_multiclass_brier": 0.44821750555211237
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.31044557106401416,
+            "accuracy": 0.19921875,
+            "single_label_multiclass_brier": -0.24437124124981538
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.3274581072503423,
+            "accuracy": 0.837890625,
+            "single_label_multiclass_brier": 0.203846264302297
+          }
+        },
+        "task892_gap_reverse_coreference_resolution": {
+          "base": {
+            "acceptable_set_log_loss": 1.3641323171528965,
+            "accuracy": 0.5284974093264249,
+            "single_label_multiclass_brier": 0.6579550387739987
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.46518194266086643,
+            "accuracy": 0.227979274611399,
+            "single_label_multiclass_brier": -0.27406235587840433
+          },
+          "groups": 193,
+          "rows": 193,
+          "single_label_rows": 193,
+          "trained": {
+            "acceptable_set_log_loss": 0.8989503744920301,
+            "accuracy": 0.7564766839378239,
+            "single_label_multiclass_brier": 0.3838926828955944
+          }
+        },
+        "task893_gap_fill_the_blank_coreference_resolution": {
+          "base": {
+            "acceptable_set_log_loss": 1.2634188530277823,
+            "accuracy": 0.44,
+            "single_label_multiclass_brier": 0.6503171212610481
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.21433054897765147,
+            "accuracy": 0.13999999999999996,
+            "single_label_multiclass_brier": -0.06405211286574009
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 1.0490883040501309,
+            "accuracy": 0.58,
+            "single_label_multiclass_brier": 0.586265008395308
+          }
+        },
+        "task935_defeasible_nli_atomic_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.4664901764344384,
+            "accuracy": 0.7553191489361702,
+            "single_label_multiclass_brier": 0.3149286736090562
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.10790541012343968,
+            "accuracy": 0.10106382978723405,
+            "single_label_multiclass_brier": -0.09691676491744758
+          },
+          "groups": 188,
+          "rows": 188,
+          "single_label_rows": 188,
+          "trained": {
+            "acceptable_set_log_loss": 0.3585847663109987,
+            "accuracy": 0.8563829787234043,
+            "single_label_multiclass_brier": 0.2180119086916086
+          }
+        },
+        "task936_defeasible_nli_snli_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.37240746593397656,
+            "accuracy": 0.8333333333333334,
+            "single_label_multiclass_brier": 0.23915489652027153
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.027554437157320755,
+            "accuracy": 0.023809523809523725,
+            "single_label_multiclass_brier": -0.02663928880246816
+          },
+          "groups": 157,
+          "rows": 168,
+          "single_label_rows": 168,
+          "trained": {
+            "acceptable_set_log_loss": 0.3448530287766558,
+            "accuracy": 0.8571428571428571,
+            "single_label_multiclass_brier": 0.21251560771780337
+          }
+        },
+        "task937_defeasible_nli_social_classification": {
+          "base": {
+            "acceptable_set_log_loss": 0.43864027637461755,
+            "accuracy": 0.8050314465408805,
+            "single_label_multiclass_brier": 0.28673834175535734
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.19049073053857413,
+            "accuracy": 0.12578616352201255,
+            "single_label_multiclass_brier": -0.149723901900139
+          },
+          "groups": 159,
+          "rows": 159,
+          "single_label_rows": 159,
+          "trained": {
+            "acceptable_set_log_loss": 0.24814954583604343,
+            "accuracy": 0.9308176100628931,
+            "single_label_multiclass_brier": 0.13701443985521833
+          }
+        },
+        "task970_sherliic_causal_relationship": {
+          "base": {
+            "acceptable_set_log_loss": 0.6388383235646411,
+            "accuracy": 0.689453125,
+            "single_label_multiclass_brier": 0.42430222343853297
+          },
+          "difference": {
+            "acceptable_set_log_loss": 0.023218828272515646,
+            "accuracy": -0.025390625,
+            "single_label_multiclass_brier": 0.036575177571319895
+          },
+          "groups": 512,
+          "rows": 512,
+          "single_label_rows": 512,
+          "trained": {
+            "acceptable_set_log_loss": 0.6620571518371567,
+            "accuracy": 0.6640625,
+            "single_label_multiclass_brier": 0.46087740100985286
+          }
+        },
+        "verified_access_control_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.6783372895625469,
+            "accuracy": 0.6,
+            "single_label_multiclass_brier": 0.4855403043500573
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.6774085347933835,
+            "accuracy": 0.4,
+            "single_label_multiclass_brier": -0.4854941252110475
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.000928754769163453,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 4.617913900980603e-05
+          }
+        },
+        "verified_access_control_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.8200991042704706,
+            "accuracy": 0.69,
+            "single_label_multiclass_brier": 0.42793590809587645
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7559274087605297,
+            "accuracy": 0.30000000000000004,
+            "single_label_multiclass_brier": -0.4010406775925401
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 80,
+          "trained": {
+            "acceptable_set_log_loss": 0.06417169550994099,
+            "accuracy": 0.99,
+            "single_label_multiclass_brier": 0.026895230503336344
+          }
+        },
+        "verified_date_deadline_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.7590749862669867,
+            "accuracy": 0.56,
+            "single_label_multiclass_brier": 0.5515157067008619
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.20417493354265615,
+            "accuracy": 0.1499999999999999,
+            "single_label_multiclass_brier": -0.16799063934916236
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.5549000527243305,
+            "accuracy": 0.71,
+            "single_label_multiclass_brier": 0.38352506735169956
+          }
+        },
+        "verified_date_deadline_choice": {
+          "base": {
+            "acceptable_set_log_loss": 1.5053658336303402,
+            "accuracy": 0.33,
+            "single_label_multiclass_brier": 0.7409741055288321
+          },
+          "difference": {
+            "acceptable_set_log_loss": -1.1024285188045273,
+            "accuracy": 0.46,
+            "single_label_multiclass_brier": -0.5038807064835344
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.4029373148258128,
+            "accuracy": 0.79,
+            "single_label_multiclass_brier": 0.23709339904529764
+          }
+        },
+        "verified_evidence_consistency_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.7456786814415665,
+            "accuracy": 0.59,
+            "single_label_multiclass_brier": 0.5313944065993524
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7455515744727644,
+            "accuracy": 0.41000000000000003,
+            "single_label_multiclass_brier": -0.5313938899676854
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.00012710696880199868,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 5.166316670211633e-07
+          }
+        },
+        "verified_evidence_consistency_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.819799667634515,
+            "accuracy": 0.56,
+            "single_label_multiclass_brier": 0.49567891665156344
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.8197539284056553,
+            "accuracy": 0.43999999999999995,
+            "single_label_multiclass_brier": -0.4956789041696713
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 4.573922885963886e-05,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 1.2481892152317411e-08
+          }
+        },
+        "verified_graph_reachability_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.7122707417050823,
+            "accuracy": 0.6,
+            "single_label_multiclass_brier": 0.5120299100352238
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7120999255550148,
+            "accuracy": 0.4,
+            "single_label_multiclass_brier": -0.512028646580448
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.00017081615006749856,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 1.2634547757815493e-06
+          }
+        },
+        "verified_graph_reachability_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.2579580521569013,
+            "accuracy": 0.91,
+            "single_label_multiclass_brier": 0.12955251248980276
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.2577723975670478,
+            "accuracy": 0.08999999999999997,
+            "single_label_multiclass_brier": -0.1295491705940749
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 73,
+          "trained": {
+            "acceptable_set_log_loss": 0.00018565458985354434,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 3.3418957278846077e-06
+          }
+        },
+        "verified_incident_priority_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.726856422942812,
+            "accuracy": 0.51,
+            "single_label_multiclass_brier": 0.5341698000587697
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7266468378504967,
+            "accuracy": 0.49,
+            "single_label_multiclass_brier": -0.5341665805381197
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.00020958509231541446,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 3.2195206500205177e-06
+          }
+        },
+        "verified_incident_priority_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.7030493004840132,
+            "accuracy": 0.7,
+            "single_label_multiclass_brier": 0.40484089263889667
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.70302086700876,
+            "accuracy": 0.30000000000000004,
+            "single_label_multiclass_brier": -0.4048408880116526
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 2.8433475253196233e-05,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 4.627244075100309e-09
+          }
+        },
+        "verified_interval_scheduling_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.745492076106731,
+            "accuracy": 0.51,
+            "single_label_multiclass_brier": 0.5462938515933304
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.673075630588002,
+            "accuracy": 0.45999999999999996,
+            "single_label_multiclass_brier": -0.4970715182150696
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.07241644551872892,
+            "accuracy": 0.97,
+            "single_label_multiclass_brier": 0.04922233337826084
+          }
+        },
+        "verified_interval_scheduling_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.7795121889134471,
+            "accuracy": 0.56,
+            "single_label_multiclass_brier": 0.6386106117215022
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.6883975881997352,
+            "accuracy": 0.4099999999999999,
+            "single_label_multiclass_brier": -0.5460693312619894
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 44,
+          "trained": {
+            "acceptable_set_log_loss": 0.09111460071371191,
+            "accuracy": 0.97,
+            "single_label_multiclass_brier": 0.0925412804595128
+          }
+        },
+        "verified_inventory_ledger_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.8000773802231816,
+            "accuracy": 0.54,
+            "single_label_multiclass_brier": 0.583576009826662
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.16766414690969877,
+            "accuracy": 0.04999999999999993,
+            "single_label_multiclass_brier": -0.12932281387558692
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.6324132333134829,
+            "accuracy": 0.59,
+            "single_label_multiclass_brier": 0.4542531959510751
+          }
+        },
+        "verified_inventory_ledger_choice": {
+          "base": {
+            "acceptable_set_log_loss": 1.5853399617118813,
+            "accuracy": 0.3,
+            "single_label_multiclass_brier": 0.7802172224447261
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.9279689517969013,
+            "accuracy": 0.41,
+            "single_label_multiclass_brier": -0.37485232489099657
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.65737100991498,
+            "accuracy": 0.71,
+            "single_label_multiclass_brier": 0.40536489755372956
+          }
+        },
+        "verified_ordered_rules_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.621872308596927,
+            "accuracy": 0.65,
+            "single_label_multiclass_brier": 0.433567838831512
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.5609739760051405,
+            "accuracy": 0.33999999999999997,
+            "single_label_multiclass_brier": -0.4087466964123947
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.06089833259178648,
+            "accuracy": 0.99,
+            "single_label_multiclass_brier": 0.024821142419117287
+          }
+        },
+        "verified_ordered_rules_choice": {
+          "base": {
+            "acceptable_set_log_loss": 1.045017449579586,
+            "accuracy": 0.45,
+            "single_label_multiclass_brier": 0.6493309973357568
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.8989927724725375,
+            "accuracy": 0.52,
+            "single_label_multiclass_brier": -0.5905129785222732
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.14602467710704858,
+            "accuracy": 0.97,
+            "single_label_multiclass_brier": 0.05881801881348357
+          }
+        },
+        "verified_propositional_logic_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.697759604640218,
+            "accuracy": 0.57,
+            "single_label_multiclass_brier": 0.5008334225254584
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.6972835484873029,
+            "accuracy": 0.43000000000000005,
+            "single_label_multiclass_brier": -0.5008258806830537
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.00047605615291508834,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 7.541842404648726e-06
+          }
+        },
+        "verified_propositional_logic_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.9525486935112153,
+            "accuracy": 0.57,
+            "single_label_multiclass_brier": 0.5328329012849118
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.9496372672304173,
+            "accuracy": 0.43000000000000005,
+            "single_label_multiclass_brier": -0.5317852679168922
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.0029114262807980102,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.001047633368019616
+          }
+        },
+        "verified_route_cost_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.715883088075437,
+            "accuracy": 0.61,
+            "single_label_multiclass_brier": 0.5051349730007272
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.6163216423881827,
+            "accuracy": 0.33999999999999997,
+            "single_label_multiclass_brier": -0.4367352110894138
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.09956144568725435,
+            "accuracy": 0.95,
+            "single_label_multiclass_brier": 0.06839976191131336
+          }
+        },
+        "verified_route_cost_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.9539340999586768,
+            "accuracy": 0.57,
+            "single_label_multiclass_brier": 0.4824719622822142
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7264198255828922,
+            "accuracy": 0.3400000000000001,
+            "single_label_multiclass_brier": -0.3638009919103442
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.22751427437578464,
+            "accuracy": 0.91,
+            "single_label_multiclass_brier": 0.11867097037186994
+          }
+        },
+        "verified_set_operations_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.6533000401606397,
+            "accuracy": 0.61,
+            "single_label_multiclass_brier": 0.4655472829163853
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.6346491871643921,
+            "accuracy": 0.37,
+            "single_label_multiclass_brier": -0.45116887696081204
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.018650852996247615,
+            "accuracy": 0.98,
+            "single_label_multiclass_brier": 0.01437840595557328
+          }
+        },
+        "verified_set_operations_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.7368784592234651,
+            "accuracy": 0.63,
+            "single_label_multiclass_brier": 0.43881132814830176
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7363752505063209,
+            "accuracy": 0.37,
+            "single_label_multiclass_brier": -0.4387688649288992
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 73,
+          "trained": {
+            "acceptable_set_log_loss": 0.000503208717144178,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 4.246321940254044e-05
+          }
+        },
+        "verified_state_machine_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.7317336305510276,
+            "accuracy": 0.56,
+            "single_label_multiclass_brier": 0.5298052334364722
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.4611566070717838,
+            "accuracy": 0.2699999999999999,
+            "single_label_multiclass_brier": -0.3467008694920083
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.2705770234792438,
+            "accuracy": 0.83,
+            "single_label_multiclass_brier": 0.18310436394446394
+          }
+        },
+        "verified_state_machine_choice": {
+          "base": {
+            "acceptable_set_log_loss": 1.167797221741898,
+            "accuracy": 0.43,
+            "single_label_multiclass_brier": 0.6726438224825627
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.669046715904752,
+            "accuracy": 0.38999999999999996,
+            "single_label_multiclass_brier": -0.3999531466016635
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.4987505058371459,
+            "accuracy": 0.82,
+            "single_label_multiclass_brier": 0.27269067588089924
+          }
+        },
+        "verified_table_join_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.7791142003386896,
+            "accuracy": 0.67,
+            "single_label_multiclass_brier": 0.5107696108888092
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.779108243336061,
+            "accuracy": 0.32999999999999996,
+            "single_label_multiclass_brier": -0.5107696104311087
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 5.957002628645295e-06,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 4.5770050287704345e-10
+          }
+        },
+        "verified_table_join_choice": {
+          "base": {
+            "acceptable_set_log_loss": 1.6130721769390481,
+            "accuracy": 0.51,
+            "single_label_multiclass_brier": 0.7274616550331118
+          },
+          "difference": {
+            "acceptable_set_log_loss": -1.6130660662152279,
+            "accuracy": 0.49,
+            "single_label_multiclass_brier": -0.7274616548678886
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 6.110723820369264e-06,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 1.652232017521053e-10
+          }
+        },
+        "verified_tool_prerequisites_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.5613889856033223,
+            "accuracy": 0.67,
+            "single_label_multiclass_brier": 0.37974644278548886
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.5613670384157462,
+            "accuracy": 0.32999999999999996,
+            "single_label_multiclass_brier": -0.3797464302225205
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 2.1947187576132312e-05,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 1.2562968349423245e-08
+          }
+        },
+        "verified_tool_prerequisites_choice": {
+          "base": {
+            "acceptable_set_log_loss": 0.956896172802125,
+            "accuracy": 0.54,
+            "single_label_multiclass_brier": 0.5474955546382662
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.956882583672606,
+            "accuracy": 0.45999999999999996,
+            "single_label_multiclass_brier": -0.5474955539671155
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 85,
+          "trained": {
+            "acceptable_set_log_loss": 1.3589129519008367e-05,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 6.711506689823002e-10
+          }
+        },
+        "verified_unit_conversion_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.7449146630213599,
+            "accuracy": 0.61,
+            "single_label_multiclass_brier": 0.5272638488007876
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.7404074980653564,
+            "accuracy": 0.39,
+            "single_label_multiclass_brier": -0.5264792472250279
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.004507164956003441,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.0007846015757596775
+          }
+        },
+        "verified_unit_conversion_choice": {
+          "base": {
+            "acceptable_set_log_loss": 1.1911165321357267,
+            "accuracy": 0.54,
+            "single_label_multiclass_brier": 0.6202793462301662
+          },
+          "difference": {
+            "acceptable_set_log_loss": -1.1801958171858702,
+            "accuracy": 0.45999999999999996,
+            "single_label_multiclass_brier": -0.6156016009232171
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.0109207149498565,
+            "accuracy": 1.0,
+            "single_label_multiclass_brier": 0.004677745306949132
+          }
+        },
+        "verified_weighted_choice_check": {
+          "base": {
+            "acceptable_set_log_loss": 0.676864376359199,
+            "accuracy": 0.59,
+            "single_label_multiclass_brier": 0.4833594753105044
+          },
+          "difference": {
+            "acceptable_set_log_loss": -0.6294091077452366,
+            "accuracy": 0.39,
+            "single_label_multiclass_brier": -0.4519239883557669
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.04745526861396247,
+            "accuracy": 0.98,
+            "single_label_multiclass_brier": 0.03143548695473746
+          }
+        },
+        "verified_weighted_choice_choice": {
+          "base": {
+            "acceptable_set_log_loss": 1.183882613291316,
+            "accuracy": 0.53,
+            "single_label_multiclass_brier": 0.6108023341750678
+          },
+          "difference": {
+            "acceptable_set_log_loss": -1.146931446343415,
+            "accuracy": 0.45999999999999996,
+            "single_label_multiclass_brier": -0.5904089487911235
+          },
+          "groups": 100,
+          "rows": 100,
+          "single_label_rows": 100,
+          "trained": {
+            "acceptable_set_log_loss": 0.036951166947901036,
+            "accuracy": 0.99,
+            "single_label_multiclass_brier": 0.020393385383944338
+          }
+        }
+      },
+      "group_complete_accuracy": {
+        "base": 0.614300903774588,
+        "difference": 0.15231259968102073,
+        "group_size_distribution": {
+          "1": 13010,
+          "2": 1900,
+          "3": 95,
+          "4": 34,
+          "5": 8,
+          "6": 1
+        },
+        "groups": 15048,
+        "note": "A group is correct only when every evaluated row in that group is correct within this report scope. Groups have equal weight; two-row groups measure both members correct.",
+        "trained": 0.7666135034556087
+      },
+      "groups": 15048,
+      "macro_task": {
+        "base": {
+          "acceptable_set_log_loss": 0.800043609248515,
+          "accuracy": 0.606188638692557,
+          "single_label_multiclass_brier": 0.5025903066860054
+        },
+        "brier_eligible_tasks": 80,
+        "difference": {
+          "acceptable_set_log_loss": -0.352842719140307,
+          "accuracy": 0.19293353793045714,
+          "single_label_multiclass_brier": -0.222524918663176
+        },
+        "note": "Each task has equal weight. These are descriptive means; bootstrap intervals above estimate row-weighted changes.",
+        "trained": {
+          "acceptable_set_log_loss": 0.44720089010820796,
+          "accuracy": 0.7991221766230142,
+          "single_label_multiclass_brier": 0.28006538802282943
+        }
+      },
+      "multi_answer_rows": 147,
+      "row_weighted": {
+        "base": {
+          "acceptable_set_log_loss": 0.7512661066745777,
+          "accuracy": 0.6333275452914279,
+          "single_label_multiclass_brier": 0.47570092771897526
+        },
+        "paired_group_bootstrap": {
+          "acceptable_set_log_loss": {
+            "difference": -0.2737896263683263,
+            "groups": 15048,
+            "lower_95": -0.2887740890277889,
+            "resamples": 1000,
+            "rows": 17277,
+            "single_group_interval_is_uninformative": false,
+            "upper_95": -0.26015409279371216
+          },
+          "accuracy": {
+            "difference": 0.14788447068356775,
+            "groups": 15048,
+            "lower_95": 0.13977081680800388,
+            "resamples": 1000,
+            "rows": 17277,
+            "single_group_interval_is_uninformative": false,
+            "upper_95": 0.15619473953376373
+          },
+          "single_label_multiclass_brier": {
+            "difference": -0.17141906077663113,
+            "groups": 15046,
+            "lower_95": -0.17945391456112092,
+            "resamples": 1000,
+            "rows": 17130,
+            "single_group_interval_is_uninformative": false,
+            "upper_95": -0.16267411624248262
+          }
+        },
+        "trained": {
+          "acceptable_set_log_loss": 0.47747648030625145,
+          "accuracy": 0.7812120159749957,
+          "single_label_multiclass_brier": 0.3042818669423441
+        }
+      },
+      "rows": 17277,
+      "single_label_rows": 17130,
+      "tasks": 80
+    },
+    "shared_world_audit": {
+      "groups": 15048,
+      "groups_spanning_multiple_tasks": 2027,
+      "maximum_rows_per_group": 6,
+      "maximum_tasks_per_group": 6
+    },
+    "subgroups": {
+      "environment": {
+        "by_task": {
+          "environment_action": {
+            "base": {
+              "acceptable_set_log_loss": 1.5851320895168015,
+              "accuracy": 0.354,
+              "single_label_multiclass_brier": 0.7560418080674858
+            },
+            "difference": {
+              "acceptable_set_log_loss": -1.4058417779657304,
+              "accuracy": 0.5800000000000001,
+              "single_label_multiclass_brier": -0.654563954209294
+            },
+            "groups": 500,
+            "rows": 500,
+            "single_label_rows": 498,
+            "trained": {
+              "acceptable_set_log_loss": 0.1792903115510712,
+              "accuracy": 0.934,
+              "single_label_multiclass_brier": 0.10147785385819175
+            }
+          },
+          "environment_forecast": {
+            "base": {
+              "acceptable_set_log_loss": 0.73991888449512,
+              "accuracy": 0.568,
+              "single_label_multiclass_brier": 0.53331133929375
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.35892459502733626,
+              "accuracy": 0.25,
+              "single_label_multiclass_brier": -0.2881320878098568
+            },
+            "groups": 500,
+            "rows": 500,
+            "single_label_rows": 500,
+            "trained": {
+              "acceptable_set_log_loss": 0.38099428946778374,
+              "accuracy": 0.818,
+              "single_label_multiclass_brier": 0.2451792514838932
+            }
+          }
+        },
+        "group_complete_accuracy": {
+          "base": 0.461,
+          "difference": 0.415,
+          "group_size_distribution": {
+            "1": 1000
+          },
+          "groups": 1000,
+          "note": "A group is correct only when every evaluated row in that group is correct within this report scope. Groups have equal weight; two-row groups measure both members correct.",
+          "trained": 0.876
+        },
+        "groups": 1000,
+        "macro_task": {
+          "base": {
+            "acceptable_set_log_loss": 1.1625254870059607,
+            "accuracy": 0.46099999999999997,
+            "single_label_multiclass_brier": 0.6446765736806179
+          },
+          "brier_eligible_tasks": 2,
+          "difference": {
+            "acceptable_set_log_loss": -0.8823831864965334,
+            "accuracy": 0.41500000000000004,
+            "single_label_multiclass_brier": -0.4713480210095754
+          },
+          "note": "Each task has equal weight. These are descriptive means; bootstrap intervals above estimate row-weighted changes.",
+          "trained": {
+            "acceptable_set_log_loss": 0.28014230050942746,
+            "accuracy": 0.876,
+            "single_label_multiclass_brier": 0.17332855267104247
+          }
+        },
+        "multi_answer_rows": 2,
+        "row_weighted": {
+          "base": {
+            "acceptable_set_log_loss": 1.1625254870059607,
+            "accuracy": 0.461,
+            "single_label_multiclass_brier": 0.6444533968581992
+          },
+          "paired_group_bootstrap": {
+            "acceptable_set_log_loss": {
+              "difference": -0.8823831864965334,
+              "groups": 1000,
+              "lower_95": -0.9509548048458559,
+              "resamples": 1000,
+              "rows": 1000,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": -0.8153270746290409
+            },
+            "accuracy": {
+              "difference": 0.415,
+              "groups": 1000,
+              "lower_95": 0.378,
+              "resamples": 1000,
+              "rows": 1000,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": 0.451
+            },
+            "single_label_multiclass_brier": {
+              "difference": -0.47098085481077834,
+              "groups": 998,
+              "lower_95": -0.5035801010825051,
+              "resamples": 1000,
+              "rows": 998,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": -0.4386769613842269
+            }
+          },
+          "trained": {
+            "acceptable_set_log_loss": 0.28014230050942746,
+            "accuracy": 0.876,
+            "single_label_multiclass_brier": 0.1734725420474209
+          }
+        },
+        "rows": 1000,
+        "single_label_rows": 998,
+        "tasks": 2
+      },
+      "public": {
+        "by_task": {
+          "task1196_atomic_classification_oeffect": {
+            "base": {
+              "acceptable_set_log_loss": 1.1565221106516221,
+              "accuracy": 0.41916167664670656,
+              "single_label_multiclass_brier": 0.7903579649589102
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.07083145724757212,
+              "accuracy": 0.06586826347305391,
+              "single_label_multiclass_brier": -0.03274732825130655
+            },
+            "groups": 167,
+            "rows": 167,
+            "single_label_rows": 167,
+            "trained": {
+              "acceptable_set_log_loss": 1.2273535678991943,
+              "accuracy": 0.48502994011976047,
+              "single_label_multiclass_brier": 0.7576106367076036
+            }
+          },
+          "task1197_atomic_classification_oreact": {
+            "base": {
+              "acceptable_set_log_loss": 0.8923553773937336,
+              "accuracy": 0.5174825174825175,
+              "single_label_multiclass_brier": 0.6358326175303991
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.519279753799639,
+              "accuracy": 0.013986013986013957,
+              "single_label_multiclass_brier": 0.13792736236066838
+            },
+            "groups": 143,
+            "rows": 143,
+            "single_label_rows": 143,
+            "trained": {
+              "acceptable_set_log_loss": 1.4116351311933726,
+              "accuracy": 0.5314685314685315,
+              "single_label_multiclass_brier": 0.7737599798910675
+            }
+          },
+          "task1198_atomic_classification_owant": {
+            "base": {
+              "acceptable_set_log_loss": 0.9136092426268508,
+              "accuracy": 0.47305389221556887,
+              "single_label_multiclass_brier": 0.6647719137855409
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.16797526167575827,
+              "accuracy": 0.10778443113772457,
+              "single_label_multiclass_brier": -0.03894379802797454
+            },
+            "groups": 167,
+            "rows": 167,
+            "single_label_rows": 167,
+            "trained": {
+              "acceptable_set_log_loss": 1.081584504302609,
+              "accuracy": 0.5808383233532934,
+              "single_label_multiclass_brier": 0.6258281157575664
+            }
+          },
+          "task1199_atomic_classification_xattr": {
+            "base": {
+              "acceptable_set_log_loss": 0.8311166333629232,
+              "accuracy": 0.58,
+              "single_label_multiclass_brier": 0.5300646637412458
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.18128906186421445,
+              "accuracy": 0.10666666666666669,
+              "single_label_multiclass_brier": -0.092039895171659
+            },
+            "groups": 150,
+            "rows": 150,
+            "single_label_rows": 150,
+            "trained": {
+              "acceptable_set_log_loss": 0.6498275714987087,
+              "accuracy": 0.6866666666666666,
+              "single_label_multiclass_brier": 0.43802476856958683
+            }
+          },
+          "task1200_atomic_classification_xeffect": {
+            "base": {
+              "acceptable_set_log_loss": 0.8957445118069353,
+              "accuracy": 0.6226415094339622,
+              "single_label_multiclass_brier": 0.5618500670678004
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.13362516662987822,
+              "accuracy": 0.0062893081761006275,
+              "single_label_multiclass_brier": -0.03140715811490313
+            },
+            "groups": 159,
+            "rows": 159,
+            "single_label_rows": 159,
+            "trained": {
+              "acceptable_set_log_loss": 0.762119345177057,
+              "accuracy": 0.6289308176100629,
+              "single_label_multiclass_brier": 0.5304429089528973
+            }
+          },
+          "task1201_atomic_classification_xintent": {
+            "base": {
+              "acceptable_set_log_loss": 0.7839590337451205,
+              "accuracy": 0.60625,
+              "single_label_multiclass_brier": 0.5302593432834419
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.010324806934365327,
+              "accuracy": 0.03750000000000009,
+              "single_label_multiclass_brier": -0.008735803873770376
+            },
+            "groups": 160,
+            "rows": 160,
+            "single_label_rows": 160,
+            "trained": {
+              "acceptable_set_log_loss": 0.7736342268107552,
+              "accuracy": 0.64375,
+              "single_label_multiclass_brier": 0.5215235394096716
+            }
+          },
+          "task1202_atomic_classification_xneed": {
+            "base": {
+              "acceptable_set_log_loss": 0.8949876060300542,
+              "accuracy": 0.5359477124183006,
+              "single_label_multiclass_brier": 0.6208177445453636
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.20096401090651728,
+              "accuracy": 0.16993464052287588,
+              "single_label_multiclass_brier": -0.18433421567955088
+            },
+            "groups": 153,
+            "rows": 153,
+            "single_label_rows": 153,
+            "trained": {
+              "acceptable_set_log_loss": 0.694023595123537,
+              "accuracy": 0.7058823529411765,
+              "single_label_multiclass_brier": 0.43648352886581276
+            }
+          },
+          "task1203_atomic_classification_xreact": {
+            "base": {
+              "acceptable_set_log_loss": 0.6331973566801703,
+              "accuracy": 0.7055555555555556,
+              "single_label_multiclass_brier": 0.40945611252082026
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.12422236732962078,
+              "accuracy": 0.06666666666666665,
+              "single_label_multiclass_brier": -0.07624307398853675
+            },
+            "groups": 180,
+            "rows": 180,
+            "single_label_rows": 180,
+            "trained": {
+              "acceptable_set_log_loss": 0.5089749893505495,
+              "accuracy": 0.7722222222222223,
+              "single_label_multiclass_brier": 0.3332130385322835
+            }
+          },
+          "task1204_atomic_classification_hinderedby": {
+            "base": {
+              "acceptable_set_log_loss": 0.5712852172004131,
+              "accuracy": 0.6724137931034483,
+              "single_label_multiclass_brier": 0.3933347837488137
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.1868878058921054,
+              "accuracy": 0.15517241379310343,
+              "single_label_multiclass_brier": -0.14568753184118957
+            },
+            "groups": 174,
+            "rows": 174,
+            "single_label_rows": 174,
+            "trained": {
+              "acceptable_set_log_loss": 0.38439741130830773,
+              "accuracy": 0.8275862068965517,
+              "single_label_multiclass_brier": 0.24764725190762413
+            }
+          },
+          "task1205_atomic_classification_isafter": {
+            "base": {
+              "acceptable_set_log_loss": 0.883410865966348,
+              "accuracy": 0.5328947368421053,
+              "single_label_multiclass_brier": 0.6300518656555307
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.09407014122719293,
+              "accuracy": -0.026315789473684292,
+              "single_label_multiclass_brier": -0.05001632423589264
+            },
+            "groups": 152,
+            "rows": 152,
+            "single_label_rows": 152,
+            "trained": {
+              "acceptable_set_log_loss": 0.7893407247391551,
+              "accuracy": 0.506578947368421,
+              "single_label_multiclass_brier": 0.5800355414196381
+            }
+          },
+          "task1206_atomic_classification_isbefore": {
+            "base": {
+              "acceptable_set_log_loss": 0.873002357993126,
+              "accuracy": 0.5911949685534591,
+              "single_label_multiclass_brier": 0.5809712888233924
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.027780625256472402,
+              "accuracy": -0.06289308176100628,
+              "single_label_multiclass_brier": 0.04456710579078993
+            },
+            "groups": 159,
+            "rows": 159,
+            "single_label_rows": 159,
+            "trained": {
+              "acceptable_set_log_loss": 0.9007829832495984,
+              "accuracy": 0.5283018867924528,
+              "single_label_multiclass_brier": 0.6255383946141824
+            }
+          },
+          "task1207_atomic_classification_atlocation": {
+            "base": {
+              "acceptable_set_log_loss": 0.46503807485679316,
+              "accuracy": 0.8050314465408805,
+              "single_label_multiclass_brier": 0.2911198817995059
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.1636238087146651,
+              "accuracy": -0.10691823899371078,
+              "single_label_multiclass_brier": 0.12443972015755633
+            },
+            "groups": 159,
+            "rows": 159,
+            "single_label_rows": 159,
+            "trained": {
+              "acceptable_set_log_loss": 0.6286618835714582,
+              "accuracy": 0.6981132075471698,
+              "single_label_multiclass_brier": 0.4155596019570622
+            }
+          },
+          "task1208_atomic_classification_xreason": {
+            "base": {
+              "acceptable_set_log_loss": 0.5879235018215999,
+              "accuracy": 0.6862745098039216,
+              "single_label_multiclass_brier": 0.39239109747138445
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.15301817798888007,
+              "accuracy": -0.08496732026143794,
+              "single_label_multiclass_brier": 0.13601086417926145
+            },
+            "groups": 153,
+            "rows": 153,
+            "single_label_rows": 153,
+            "trained": {
+              "acceptable_set_log_loss": 0.74094167981048,
+              "accuracy": 0.6013071895424836,
+              "single_label_multiclass_brier": 0.5284019616506459
+            }
+          },
+          "task1209_atomic_classification_objectuse": {
+            "base": {
+              "acceptable_set_log_loss": 0.7312024287712956,
+              "accuracy": 0.6282051282051282,
+              "single_label_multiclass_brier": 0.4951417649282101
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.08154041673197576,
+              "accuracy": -0.02564102564102566,
+              "single_label_multiclass_brier": 0.04694501245900434
+            },
+            "groups": 156,
+            "rows": 156,
+            "single_label_rows": 156,
+            "trained": {
+              "acceptable_set_log_loss": 0.8127428455032714,
+              "accuracy": 0.6025641025641025,
+              "single_label_multiclass_brier": 0.5420867773872144
+            }
+          },
+          "task1210_atomic_classification_madeupof": {
+            "base": {
+              "acceptable_set_log_loss": 0.45757991520991653,
+              "accuracy": 0.7705882352941177,
+              "single_label_multiclass_brier": 0.30627563719768597
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.1700824903256068,
+              "accuracy": -0.10000000000000009,
+              "single_label_multiclass_brier": 0.11229868919053188
+            },
+            "groups": 170,
+            "rows": 170,
+            "single_label_rows": 170,
+            "trained": {
+              "acceptable_set_log_loss": 0.6276624055355233,
+              "accuracy": 0.6705882352941176,
+              "single_label_multiclass_brier": 0.41857432638821784
+            }
+          },
+          "task1211_atomic_classification_hassubevent": {
+            "base": {
+              "acceptable_set_log_loss": 0.8222481930494104,
+              "accuracy": 0.6358024691358025,
+              "single_label_multiclass_brier": 0.5326482607811516
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.19757847043132482,
+              "accuracy": 0.04938271604938271,
+              "single_label_multiclass_brier": -0.11103185368841234
+            },
+            "groups": 162,
+            "rows": 162,
+            "single_label_rows": 162,
+            "trained": {
+              "acceptable_set_log_loss": 0.6246697226180856,
+              "accuracy": 0.6851851851851852,
+              "single_label_multiclass_brier": 0.42161640709273923
+            }
+          },
+          "task1212_atomic_classification_hasproperty": {
+            "base": {
+              "acceptable_set_log_loss": 0.4523296678913347,
+              "accuracy": 0.7542857142857143,
+              "single_label_multiclass_brier": 0.3041990499132246
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.07098356058505101,
+              "accuracy": -0.02857142857142858,
+              "single_label_multiclass_brier": 0.048382406424602176
+            },
+            "groups": 175,
+            "rows": 175,
+            "single_label_rows": 175,
+            "trained": {
+              "acceptable_set_log_loss": 0.5233132284763857,
+              "accuracy": 0.7257142857142858,
+              "single_label_multiclass_brier": 0.3525814563378268
+            }
+          },
+          "task1213_atomic_classification_desires": {
+            "base": {
+              "acceptable_set_log_loss": 0.8868786026448859,
+              "accuracy": 0.620253164556962,
+              "single_label_multiclass_brier": 0.5567882590186297
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.08819807242262101,
+              "accuracy": -0.03164556962025311,
+              "single_label_multiclass_brier": -0.01868635349729275
+            },
+            "groups": 158,
+            "rows": 158,
+            "single_label_rows": 158,
+            "trained": {
+              "acceptable_set_log_loss": 0.7986805302222649,
+              "accuracy": 0.5886075949367089,
+              "single_label_multiclass_brier": 0.538101905521337
+            }
+          },
+          "task1214_atomic_classification_xwant": {
+            "base": {
+              "acceptable_set_log_loss": 0.8061257796202302,
+              "accuracy": 0.591715976331361,
+              "single_label_multiclass_brier": 0.5393856900430948
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.20639055831397446,
+              "accuracy": 0.1124260355029586,
+              "single_label_multiclass_brier": -0.13174859425051966
+            },
+            "groups": 169,
+            "rows": 169,
+            "single_label_rows": 169,
+            "trained": {
+              "acceptable_set_log_loss": 0.5997352213062558,
+              "accuracy": 0.7041420118343196,
+              "single_label_multiclass_brier": 0.4076370957925751
+            }
+          },
+          "task1215_atomic_classification_capableof": {
+            "base": {
+              "acceptable_set_log_loss": 0.8505823575205952,
+              "accuracy": 0.6,
+              "single_label_multiclass_brier": 0.5385718379587436
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.14297652133956884,
+              "accuracy": -0.018749999999999933,
+              "single_label_multiclass_brier": 0.1050727580121481
+            },
+            "groups": 160,
+            "rows": 160,
+            "single_label_rows": 160,
+            "trained": {
+              "acceptable_set_log_loss": 0.993558878860164,
+              "accuracy": 0.58125,
+              "single_label_multiclass_brier": 0.6436445959708917
+            }
+          },
+          "task1216_atomic_classification_causes": {
+            "base": {
+              "acceptable_set_log_loss": 0.8876699608341864,
+              "accuracy": 0.6333333333333333,
+              "single_label_multiclass_brier": 0.5402743835707915
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.12130406967053331,
+              "accuracy": 0.013333333333333308,
+              "single_label_multiclass_brier": -0.027758902316457945
+            },
+            "groups": 150,
+            "rows": 150,
+            "single_label_rows": 150,
+            "trained": {
+              "acceptable_set_log_loss": 0.7663658911636531,
+              "accuracy": 0.6466666666666666,
+              "single_label_multiclass_brier": 0.5125154812543335
+            }
+          },
+          "task133_winowhy_reason_plausibility_detection": {
+            "base": {
+              "acceptable_set_log_loss": 0.5710759417132886,
+              "accuracy": 0.75390625,
+              "single_label_multiclass_brier": 0.36726472170551466
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.07785233080172105,
+              "accuracy": -0.07421875,
+              "single_label_multiclass_brier": 0.04902584735665705
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.6489282725150096,
+              "accuracy": 0.6796875,
+              "single_label_multiclass_brier": 0.4162905690621717
+            }
+          },
+          "task1390_wscfixed_coreference": {
+            "base": {
+              "acceptable_set_log_loss": 0.9050452434670051,
+              "accuracy": 0.62890625,
+              "single_label_multiclass_brier": 0.5486049863320427
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.4411560913859739,
+              "accuracy": 0.171875,
+              "single_label_multiclass_brier": -0.2522794402896866
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.4638891520810312,
+              "accuracy": 0.80078125,
+              "single_label_multiclass_brier": 0.2963255460423561
+            }
+          },
+          "task1391_winogrande_easy_answer_generation": {
+            "base": {
+              "acceptable_set_log_loss": 0.639434966368963,
+              "accuracy": 0.650390625,
+              "single_label_multiclass_brier": 0.4576777792673004
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.3470771347911899,
+              "accuracy": 0.240234375,
+              "single_label_multiclass_brier": -0.28608008705668164
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.2923578315777731,
+              "accuracy": 0.890625,
+              "single_label_multiclass_brier": 0.17159769221061877
+            }
+          },
+          "task1393_superglue_copa_text_completion": {
+            "base": {
+              "acceptable_set_log_loss": 0.6537611675115796,
+              "accuracy": 0.5483870967741935,
+              "single_label_multiclass_brier": 0.48434923051041967
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.5165924949939414,
+              "accuracy": 0.405241935483871,
+              "single_label_multiclass_brier": -0.4133870527770032
+            },
+            "groups": 496,
+            "rows": 496,
+            "single_label_rows": 496,
+            "trained": {
+              "acceptable_set_log_loss": 0.1371686725176382,
+              "accuracy": 0.9536290322580645,
+              "single_label_multiclass_brier": 0.07096217773341645
+            }
+          },
+          "task1529_scitail1.1_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.37952196612963907,
+              "accuracy": 0.84375,
+              "single_label_multiclass_brier": 0.23138479888997276
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.12769846684215225,
+              "accuracy": -0.08203125,
+              "single_label_multiclass_brier": 0.10191453277495871
+            },
+            "groups": 510,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.5072204329717913,
+              "accuracy": 0.76171875,
+              "single_label_multiclass_brier": 0.3332993316649315
+            }
+          },
+          "task1554_scitail_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.4336029579724891,
+              "accuracy": 0.76953125,
+              "single_label_multiclass_brier": 0.2865734153679774
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.17880886966726822,
+              "accuracy": -0.0546875,
+              "single_label_multiclass_brier": 0.12225179372966782
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.6124118276397573,
+              "accuracy": 0.71484375,
+              "single_label_multiclass_brier": 0.40882520909764525
+            }
+          },
+          "task1624_disfl_qa_question_yesno_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.704961586501904,
+              "accuracy": 0.626953125,
+              "single_label_multiclass_brier": 0.48071409063433806
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.022488787087070472,
+              "accuracy": 0.048828125,
+              "single_label_multiclass_brier": -0.03301561204884346
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.6824727994148335,
+              "accuracy": 0.67578125,
+              "single_label_multiclass_brier": 0.4476984785854946
+            }
+          },
+          "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.5409290637365247,
+              "accuracy": 0.775390625,
+              "single_label_multiclass_brier": 0.3320909867880387
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.15462670909849163,
+              "accuracy": -0.0546875,
+              "single_label_multiclass_brier": 0.06315577884221402
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.6955557728350164,
+              "accuracy": 0.720703125,
+              "single_label_multiclass_brier": 0.39524676563025274
+            }
+          },
+          "task232_iirc_link_number_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.6850875634055285,
+              "accuracy": 0.59765625,
+              "single_label_multiclass_brier": 0.47805576946740247
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.019624468121261396,
+              "accuracy": 0.029296875,
+              "single_label_multiclass_brier": -0.011262145547119407
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.6654630952842671,
+              "accuracy": 0.626953125,
+              "single_label_multiclass_brier": 0.46679362392028306
+            }
+          },
+          "task233_iirc_link_exists_classification": {
+            "base": {
+              "acceptable_set_log_loss": 1.057637730749157,
+              "accuracy": 0.5546875,
+              "single_label_multiclass_brier": 0.666677713252435
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.2972889148667863,
+              "accuracy": -0.015625,
+              "single_label_multiclass_brier": -0.1243377007648081
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.7603488158823706,
+              "accuracy": 0.5390625,
+              "single_label_multiclass_brier": 0.5423400124876269
+            }
+          },
+          "task276_enhanced_wsc_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.47238590138942294,
+              "accuracy": 0.853515625,
+              "single_label_multiclass_brier": 0.21667192058847792
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.24075602250196673,
+              "accuracy": 0.064453125,
+              "single_label_multiclass_brier": -0.09917289436453344
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.2316298788874562,
+              "accuracy": 0.91796875,
+              "single_label_multiclass_brier": 0.11749902622394448
+            }
+          },
+          "task329_gap_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.8880205304616937,
+              "accuracy": 0.533203125,
+              "single_label_multiclass_brier": 0.5418919527209053
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.3573702397751223,
+              "accuracy": 0.302734375,
+              "single_label_multiclass_brier": -0.29924124809362496
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.5306502906865714,
+              "accuracy": 0.8359375,
+              "single_label_multiclass_brier": 0.24265070462728036
+            }
+          },
+          "task391_causal_relationship": {
+            "base": {
+              "acceptable_set_log_loss": 0.4863056257969572,
+              "accuracy": 0.765625,
+              "single_label_multiclass_brier": 0.32419510196552676
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.049937258709747245,
+              "accuracy": -0.041015625,
+              "single_label_multiclass_brier": 0.04425038139203763
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.5362428845067044,
+              "accuracy": 0.724609375,
+              "single_label_multiclass_brier": 0.3684454833575644
+            }
+          },
+          "task392_inverse_causal_relationship": {
+            "base": {
+              "acceptable_set_log_loss": 0.4789727947938558,
+              "accuracy": 0.779296875,
+              "single_label_multiclass_brier": 0.3088886266770418
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.03501717641235197,
+              "accuracy": 0.00390625,
+              "single_label_multiclass_brier": -0.017636033436747633
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.4439556183815038,
+              "accuracy": 0.783203125,
+              "single_label_multiclass_brier": 0.2912525932402942
+            }
+          },
+          "task640_esnli_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.787144616017383,
+              "accuracy": 0.6,
+              "single_label_multiclass_brier": 0.4723719460797616
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.15988972533839763,
+              "accuracy": 0.05714285714285716,
+              "single_label_multiclass_brier": 0.05422364295075505
+            },
+            "groups": 35,
+            "rows": 35,
+            "single_label_rows": 35,
+            "trained": {
+              "acceptable_set_log_loss": 0.9470343413557806,
+              "accuracy": 0.6571428571428571,
+              "single_label_multiclass_brier": 0.5265955890305166
+            }
+          },
+          "task641_esnli_classification": {
+            "base": {
+              "acceptable_set_log_loss": 1.2471600059242456,
+              "accuracy": 0.140625,
+              "single_label_multiclass_brier": 0.7649838137872998
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.37989534657662505,
+              "accuracy": 0.203125,
+              "single_label_multiclass_brier": 0.13034589130144547
+            },
+            "groups": 64,
+            "rows": 64,
+            "single_label_rows": 64,
+            "trained": {
+              "acceptable_set_log_loss": 1.6270553525008706,
+              "accuracy": 0.34375,
+              "single_label_multiclass_brier": 0.8953297050887453
+            }
+          },
+          "task642_esnli_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.779436290827157,
+              "accuracy": 0.6698113207547169,
+              "single_label_multiclass_brier": 0.4910287770658724
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.4085194429794954,
+              "accuracy": -0.10377358490566035,
+              "single_label_multiclass_brier": 0.19044741271607507
+            },
+            "groups": 106,
+            "rows": 106,
+            "single_label_rows": 106,
+            "trained": {
+              "acceptable_set_log_loss": 1.1879557338066524,
+              "accuracy": 0.5660377358490566,
+              "single_label_multiclass_brier": 0.6814761897819475
+            }
+          },
+          "task827_copa_commonsense_reasoning": {
+            "base": {
+              "acceptable_set_log_loss": 0.8864679230418785,
+              "accuracy": 0.5390625,
+              "single_label_multiclass_brier": 0.6177795383228492
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7329398700548039,
+              "accuracy": 0.412109375,
+              "single_label_multiclass_brier": -0.5333070792709909
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.15352805298707464,
+              "accuracy": 0.951171875,
+              "single_label_multiclass_brier": 0.08447245905185835
+            }
+          },
+          "task828_copa_commonsense_cause_effect": {
+            "base": {
+              "acceptable_set_log_loss": 0.6379036783143565,
+              "accuracy": 0.638671875,
+              "single_label_multiclass_brier": 0.44821750555211237
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.31044557106401416,
+              "accuracy": 0.19921875,
+              "single_label_multiclass_brier": -0.24437124124981538
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.3274581072503423,
+              "accuracy": 0.837890625,
+              "single_label_multiclass_brier": 0.203846264302297
+            }
+          },
+          "task892_gap_reverse_coreference_resolution": {
+            "base": {
+              "acceptable_set_log_loss": 1.3641323171528965,
+              "accuracy": 0.5284974093264249,
+              "single_label_multiclass_brier": 0.6579550387739987
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.46518194266086643,
+              "accuracy": 0.227979274611399,
+              "single_label_multiclass_brier": -0.27406235587840433
+            },
+            "groups": 193,
+            "rows": 193,
+            "single_label_rows": 193,
+            "trained": {
+              "acceptable_set_log_loss": 0.8989503744920301,
+              "accuracy": 0.7564766839378239,
+              "single_label_multiclass_brier": 0.3838926828955944
+            }
+          },
+          "task893_gap_fill_the_blank_coreference_resolution": {
+            "base": {
+              "acceptable_set_log_loss": 1.2634188530277823,
+              "accuracy": 0.44,
+              "single_label_multiclass_brier": 0.6503171212610481
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.21433054897765147,
+              "accuracy": 0.13999999999999996,
+              "single_label_multiclass_brier": -0.06405211286574009
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 1.0490883040501309,
+              "accuracy": 0.58,
+              "single_label_multiclass_brier": 0.586265008395308
+            }
+          },
+          "task935_defeasible_nli_atomic_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.4664901764344384,
+              "accuracy": 0.7553191489361702,
+              "single_label_multiclass_brier": 0.3149286736090562
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.10790541012343968,
+              "accuracy": 0.10106382978723405,
+              "single_label_multiclass_brier": -0.09691676491744758
+            },
+            "groups": 188,
+            "rows": 188,
+            "single_label_rows": 188,
+            "trained": {
+              "acceptable_set_log_loss": 0.3585847663109987,
+              "accuracy": 0.8563829787234043,
+              "single_label_multiclass_brier": 0.2180119086916086
+            }
+          },
+          "task936_defeasible_nli_snli_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.37240746593397656,
+              "accuracy": 0.8333333333333334,
+              "single_label_multiclass_brier": 0.23915489652027153
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.027554437157320755,
+              "accuracy": 0.023809523809523725,
+              "single_label_multiclass_brier": -0.02663928880246816
+            },
+            "groups": 157,
+            "rows": 168,
+            "single_label_rows": 168,
+            "trained": {
+              "acceptable_set_log_loss": 0.3448530287766558,
+              "accuracy": 0.8571428571428571,
+              "single_label_multiclass_brier": 0.21251560771780337
+            }
+          },
+          "task937_defeasible_nli_social_classification": {
+            "base": {
+              "acceptable_set_log_loss": 0.43864027637461755,
+              "accuracy": 0.8050314465408805,
+              "single_label_multiclass_brier": 0.28673834175535734
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.19049073053857413,
+              "accuracy": 0.12578616352201255,
+              "single_label_multiclass_brier": -0.149723901900139
+            },
+            "groups": 159,
+            "rows": 159,
+            "single_label_rows": 159,
+            "trained": {
+              "acceptable_set_log_loss": 0.24814954583604343,
+              "accuracy": 0.9308176100628931,
+              "single_label_multiclass_brier": 0.13701443985521833
+            }
+          },
+          "task970_sherliic_causal_relationship": {
+            "base": {
+              "acceptable_set_log_loss": 0.6388383235646411,
+              "accuracy": 0.689453125,
+              "single_label_multiclass_brier": 0.42430222343853297
+            },
+            "difference": {
+              "acceptable_set_log_loss": 0.023218828272515646,
+              "accuracy": -0.025390625,
+              "single_label_multiclass_brier": 0.036575177571319895
+            },
+            "groups": 512,
+            "rows": 512,
+            "single_label_rows": 512,
+            "trained": {
+              "acceptable_set_log_loss": 0.6620571518371567,
+              "accuracy": 0.6640625,
+              "single_label_multiclass_brier": 0.46087740100985286
+            }
+          }
+        },
+        "group_complete_accuracy": {
+          "base": 0.6633997429305912,
+          "difference": 0.07655848329048842,
+          "group_size_distribution": {
+            "1": 12010,
+            "2": 300,
+            "3": 95,
+            "4": 34,
+            "5": 8,
+            "6": 1
+          },
+          "groups": 12448,
+          "note": "A group is correct only when every evaluated row in that group is correct within this report scope. Groups have equal weight; two-row groups measure both members correct.",
+          "trained": 0.7399582262210797
+        },
+        "groups": 12448,
+        "macro_task": {
+          "base": {
+            "acceptable_set_log_loss": 0.7403380817888897,
+            "accuracy": 0.6370237194653167,
+            "single_label_multiclass_brier": 0.47689963475385294
+          },
+          "brier_eligible_tasks": 46,
+          "difference": {
+            "acceptable_set_log_loss": -0.05962033304745824,
+            "accuracy": 0.05923223987905588,
+            "single_label_multiclass_brier": -0.050587639456344057
+          },
+          "note": "Each task has equal weight. These are descriptive means; bootstrap intervals above estimate row-weighted changes.",
+          "trained": {
+            "acceptable_set_log_loss": 0.6807177487414314,
+            "accuracy": 0.6962559593443725,
+            "single_label_multiclass_brier": 0.4263119952975089
+          }
+        },
+        "multi_answer_rows": 0,
+        "row_weighted": {
+          "base": {
+            "acceptable_set_log_loss": 0.6924226074522202,
+            "accuracy": 0.6617725778083658,
+            "single_label_multiclass_brier": 0.4492943910921841
+          },
+          "paired_group_bootstrap": {
+            "acceptable_set_log_loss": {
+              "difference": -0.11285987645975366,
+              "groups": 12448,
+              "lower_95": -0.12968659749721334,
+              "resamples": 1000,
+              "rows": 13077,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": -0.0968468309694029
+            },
+            "accuracy": {
+              "difference": 0.0727995717672249,
+              "groups": 12448,
+              "lower_95": 0.06385877203398001,
+              "resamples": 1000,
+              "rows": 13077,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": 0.08257990042036104
+            },
+            "single_label_multiclass_brier": {
+              "difference": -0.08222839571533026,
+              "groups": 12448,
+              "lower_95": -0.09195510916585506,
+              "resamples": 1000,
+              "rows": 13077,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": -0.07260469978036363
+            }
+          },
+          "trained": {
+            "acceptable_set_log_loss": 0.5795627309924665,
+            "accuracy": 0.7345721495755907,
+            "single_label_multiclass_brier": 0.36706599537685386
+          }
+        },
+        "rows": 13077,
+        "single_label_rows": 13077,
+        "tasks": 46
+      },
+      "verified": {
+        "by_task": {
+          "verified_access_control_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.6783372895625469,
+              "accuracy": 0.6,
+              "single_label_multiclass_brier": 0.4855403043500573
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.6774085347933835,
+              "accuracy": 0.4,
+              "single_label_multiclass_brier": -0.4854941252110475
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.000928754769163453,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 4.617913900980603e-05
+            }
+          },
+          "verified_access_control_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.8200991042704706,
+              "accuracy": 0.69,
+              "single_label_multiclass_brier": 0.42793590809587645
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7559274087605297,
+              "accuracy": 0.30000000000000004,
+              "single_label_multiclass_brier": -0.4010406775925401
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 80,
+            "trained": {
+              "acceptable_set_log_loss": 0.06417169550994099,
+              "accuracy": 0.99,
+              "single_label_multiclass_brier": 0.026895230503336344
+            }
+          },
+          "verified_date_deadline_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.7590749862669867,
+              "accuracy": 0.56,
+              "single_label_multiclass_brier": 0.5515157067008619
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.20417493354265615,
+              "accuracy": 0.1499999999999999,
+              "single_label_multiclass_brier": -0.16799063934916236
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.5549000527243305,
+              "accuracy": 0.71,
+              "single_label_multiclass_brier": 0.38352506735169956
+            }
+          },
+          "verified_date_deadline_choice": {
+            "base": {
+              "acceptable_set_log_loss": 1.5053658336303402,
+              "accuracy": 0.33,
+              "single_label_multiclass_brier": 0.7409741055288321
+            },
+            "difference": {
+              "acceptable_set_log_loss": -1.1024285188045273,
+              "accuracy": 0.46,
+              "single_label_multiclass_brier": -0.5038807064835344
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.4029373148258128,
+              "accuracy": 0.79,
+              "single_label_multiclass_brier": 0.23709339904529764
+            }
+          },
+          "verified_evidence_consistency_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.7456786814415665,
+              "accuracy": 0.59,
+              "single_label_multiclass_brier": 0.5313944065993524
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7455515744727644,
+              "accuracy": 0.41000000000000003,
+              "single_label_multiclass_brier": -0.5313938899676854
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.00012710696880199868,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 5.166316670211633e-07
+            }
+          },
+          "verified_evidence_consistency_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.819799667634515,
+              "accuracy": 0.56,
+              "single_label_multiclass_brier": 0.49567891665156344
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.8197539284056553,
+              "accuracy": 0.43999999999999995,
+              "single_label_multiclass_brier": -0.4956789041696713
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 4.573922885963886e-05,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 1.2481892152317411e-08
+            }
+          },
+          "verified_graph_reachability_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.7122707417050823,
+              "accuracy": 0.6,
+              "single_label_multiclass_brier": 0.5120299100352238
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7120999255550148,
+              "accuracy": 0.4,
+              "single_label_multiclass_brier": -0.512028646580448
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.00017081615006749856,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 1.2634547757815493e-06
+            }
+          },
+          "verified_graph_reachability_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.2579580521569013,
+              "accuracy": 0.91,
+              "single_label_multiclass_brier": 0.12955251248980276
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.2577723975670478,
+              "accuracy": 0.08999999999999997,
+              "single_label_multiclass_brier": -0.1295491705940749
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 73,
+            "trained": {
+              "acceptable_set_log_loss": 0.00018565458985354434,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 3.3418957278846077e-06
+            }
+          },
+          "verified_incident_priority_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.726856422942812,
+              "accuracy": 0.51,
+              "single_label_multiclass_brier": 0.5341698000587697
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7266468378504967,
+              "accuracy": 0.49,
+              "single_label_multiclass_brier": -0.5341665805381197
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.00020958509231541446,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 3.2195206500205177e-06
+            }
+          },
+          "verified_incident_priority_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.7030493004840132,
+              "accuracy": 0.7,
+              "single_label_multiclass_brier": 0.40484089263889667
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.70302086700876,
+              "accuracy": 0.30000000000000004,
+              "single_label_multiclass_brier": -0.4048408880116526
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 2.8433475253196233e-05,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 4.627244075100309e-09
+            }
+          },
+          "verified_interval_scheduling_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.745492076106731,
+              "accuracy": 0.51,
+              "single_label_multiclass_brier": 0.5462938515933304
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.673075630588002,
+              "accuracy": 0.45999999999999996,
+              "single_label_multiclass_brier": -0.4970715182150696
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.07241644551872892,
+              "accuracy": 0.97,
+              "single_label_multiclass_brier": 0.04922233337826084
+            }
+          },
+          "verified_interval_scheduling_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.7795121889134471,
+              "accuracy": 0.56,
+              "single_label_multiclass_brier": 0.6386106117215022
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.6883975881997352,
+              "accuracy": 0.4099999999999999,
+              "single_label_multiclass_brier": -0.5460693312619894
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 44,
+            "trained": {
+              "acceptable_set_log_loss": 0.09111460071371191,
+              "accuracy": 0.97,
+              "single_label_multiclass_brier": 0.0925412804595128
+            }
+          },
+          "verified_inventory_ledger_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.8000773802231816,
+              "accuracy": 0.54,
+              "single_label_multiclass_brier": 0.583576009826662
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.16766414690969877,
+              "accuracy": 0.04999999999999993,
+              "single_label_multiclass_brier": -0.12932281387558692
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.6324132333134829,
+              "accuracy": 0.59,
+              "single_label_multiclass_brier": 0.4542531959510751
+            }
+          },
+          "verified_inventory_ledger_choice": {
+            "base": {
+              "acceptable_set_log_loss": 1.5853399617118813,
+              "accuracy": 0.3,
+              "single_label_multiclass_brier": 0.7802172224447261
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.9279689517969013,
+              "accuracy": 0.41,
+              "single_label_multiclass_brier": -0.37485232489099657
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.65737100991498,
+              "accuracy": 0.71,
+              "single_label_multiclass_brier": 0.40536489755372956
+            }
+          },
+          "verified_ordered_rules_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.621872308596927,
+              "accuracy": 0.65,
+              "single_label_multiclass_brier": 0.433567838831512
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.5609739760051405,
+              "accuracy": 0.33999999999999997,
+              "single_label_multiclass_brier": -0.4087466964123947
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.06089833259178648,
+              "accuracy": 0.99,
+              "single_label_multiclass_brier": 0.024821142419117287
+            }
+          },
+          "verified_ordered_rules_choice": {
+            "base": {
+              "acceptable_set_log_loss": 1.045017449579586,
+              "accuracy": 0.45,
+              "single_label_multiclass_brier": 0.6493309973357568
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.8989927724725375,
+              "accuracy": 0.52,
+              "single_label_multiclass_brier": -0.5905129785222732
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.14602467710704858,
+              "accuracy": 0.97,
+              "single_label_multiclass_brier": 0.05881801881348357
+            }
+          },
+          "verified_propositional_logic_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.697759604640218,
+              "accuracy": 0.57,
+              "single_label_multiclass_brier": 0.5008334225254584
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.6972835484873029,
+              "accuracy": 0.43000000000000005,
+              "single_label_multiclass_brier": -0.5008258806830537
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.00047605615291508834,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 7.541842404648726e-06
+            }
+          },
+          "verified_propositional_logic_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.9525486935112153,
+              "accuracy": 0.57,
+              "single_label_multiclass_brier": 0.5328329012849118
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.9496372672304173,
+              "accuracy": 0.43000000000000005,
+              "single_label_multiclass_brier": -0.5317852679168922
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.0029114262807980102,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.001047633368019616
+            }
+          },
+          "verified_route_cost_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.715883088075437,
+              "accuracy": 0.61,
+              "single_label_multiclass_brier": 0.5051349730007272
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.6163216423881827,
+              "accuracy": 0.33999999999999997,
+              "single_label_multiclass_brier": -0.4367352110894138
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.09956144568725435,
+              "accuracy": 0.95,
+              "single_label_multiclass_brier": 0.06839976191131336
+            }
+          },
+          "verified_route_cost_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.9539340999586768,
+              "accuracy": 0.57,
+              "single_label_multiclass_brier": 0.4824719622822142
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7264198255828922,
+              "accuracy": 0.3400000000000001,
+              "single_label_multiclass_brier": -0.3638009919103442
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.22751427437578464,
+              "accuracy": 0.91,
+              "single_label_multiclass_brier": 0.11867097037186994
+            }
+          },
+          "verified_set_operations_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.6533000401606397,
+              "accuracy": 0.61,
+              "single_label_multiclass_brier": 0.4655472829163853
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.6346491871643921,
+              "accuracy": 0.37,
+              "single_label_multiclass_brier": -0.45116887696081204
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.018650852996247615,
+              "accuracy": 0.98,
+              "single_label_multiclass_brier": 0.01437840595557328
+            }
+          },
+          "verified_set_operations_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.7368784592234651,
+              "accuracy": 0.63,
+              "single_label_multiclass_brier": 0.43881132814830176
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7363752505063209,
+              "accuracy": 0.37,
+              "single_label_multiclass_brier": -0.4387688649288992
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 73,
+            "trained": {
+              "acceptable_set_log_loss": 0.000503208717144178,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 4.246321940254044e-05
+            }
+          },
+          "verified_state_machine_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.7317336305510276,
+              "accuracy": 0.56,
+              "single_label_multiclass_brier": 0.5298052334364722
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.4611566070717838,
+              "accuracy": 0.2699999999999999,
+              "single_label_multiclass_brier": -0.3467008694920083
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.2705770234792438,
+              "accuracy": 0.83,
+              "single_label_multiclass_brier": 0.18310436394446394
+            }
+          },
+          "verified_state_machine_choice": {
+            "base": {
+              "acceptable_set_log_loss": 1.167797221741898,
+              "accuracy": 0.43,
+              "single_label_multiclass_brier": 0.6726438224825627
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.669046715904752,
+              "accuracy": 0.38999999999999996,
+              "single_label_multiclass_brier": -0.3999531466016635
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.4987505058371459,
+              "accuracy": 0.82,
+              "single_label_multiclass_brier": 0.27269067588089924
+            }
+          },
+          "verified_table_join_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.7791142003386896,
+              "accuracy": 0.67,
+              "single_label_multiclass_brier": 0.5107696108888092
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.779108243336061,
+              "accuracy": 0.32999999999999996,
+              "single_label_multiclass_brier": -0.5107696104311087
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 5.957002628645295e-06,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 4.5770050287704345e-10
+            }
+          },
+          "verified_table_join_choice": {
+            "base": {
+              "acceptable_set_log_loss": 1.6130721769390481,
+              "accuracy": 0.51,
+              "single_label_multiclass_brier": 0.7274616550331118
+            },
+            "difference": {
+              "acceptable_set_log_loss": -1.6130660662152279,
+              "accuracy": 0.49,
+              "single_label_multiclass_brier": -0.7274616548678886
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 6.110723820369264e-06,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 1.652232017521053e-10
+            }
+          },
+          "verified_tool_prerequisites_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.5613889856033223,
+              "accuracy": 0.67,
+              "single_label_multiclass_brier": 0.37974644278548886
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.5613670384157462,
+              "accuracy": 0.32999999999999996,
+              "single_label_multiclass_brier": -0.3797464302225205
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 2.1947187576132312e-05,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 1.2562968349423245e-08
+            }
+          },
+          "verified_tool_prerequisites_choice": {
+            "base": {
+              "acceptable_set_log_loss": 0.956896172802125,
+              "accuracy": 0.54,
+              "single_label_multiclass_brier": 0.5474955546382662
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.956882583672606,
+              "accuracy": 0.45999999999999996,
+              "single_label_multiclass_brier": -0.5474955539671155
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 85,
+            "trained": {
+              "acceptable_set_log_loss": 1.3589129519008367e-05,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 6.711506689823002e-10
+            }
+          },
+          "verified_unit_conversion_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.7449146630213599,
+              "accuracy": 0.61,
+              "single_label_multiclass_brier": 0.5272638488007876
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.7404074980653564,
+              "accuracy": 0.39,
+              "single_label_multiclass_brier": -0.5264792472250279
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.004507164956003441,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.0007846015757596775
+            }
+          },
+          "verified_unit_conversion_choice": {
+            "base": {
+              "acceptable_set_log_loss": 1.1911165321357267,
+              "accuracy": 0.54,
+              "single_label_multiclass_brier": 0.6202793462301662
+            },
+            "difference": {
+              "acceptable_set_log_loss": -1.1801958171858702,
+              "accuracy": 0.45999999999999996,
+              "single_label_multiclass_brier": -0.6156016009232171
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.0109207149498565,
+              "accuracy": 1.0,
+              "single_label_multiclass_brier": 0.004677745306949132
+            }
+          },
+          "verified_weighted_choice_check": {
+            "base": {
+              "acceptable_set_log_loss": 0.676864376359199,
+              "accuracy": 0.59,
+              "single_label_multiclass_brier": 0.4833594753105044
+            },
+            "difference": {
+              "acceptable_set_log_loss": -0.6294091077452366,
+              "accuracy": 0.39,
+              "single_label_multiclass_brier": -0.4519239883557669
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.04745526861396247,
+              "accuracy": 0.98,
+              "single_label_multiclass_brier": 0.03143548695473746
+            }
+          },
+          "verified_weighted_choice_choice": {
+            "base": {
+              "acceptable_set_log_loss": 1.183882613291316,
+              "accuracy": 0.53,
+              "single_label_multiclass_brier": 0.6108023341750678
+            },
+            "difference": {
+              "acceptable_set_log_loss": -1.146931446343415,
+              "accuracy": 0.45999999999999996,
+              "single_label_multiclass_brier": -0.5904089487911235
+            },
+            "groups": 100,
+            "rows": 100,
+            "single_label_rows": 100,
+            "trained": {
+              "acceptable_set_log_loss": 0.036951166947901036,
+              "accuracy": 0.99,
+              "single_label_multiclass_brier": 0.020393385383944338
+            }
+          }
+        },
+        "group_complete_accuracy": {
+          "base": 0.328125,
+          "difference": 0.5775,
+          "group_size_distribution": {
+            "2": 1600
+          },
+          "groups": 1600,
+          "note": "A group is correct only when every evaluated row in that group is correct within this report scope. Groups have equal weight; two-row groups measure both members correct.",
+          "trained": 0.905625
+        },
+        "groups": 1600,
+        "macro_task": {
+          "base": {
+            "acceptable_set_log_loss": 0.863215187611886,
+            "accuracy": 0.5709375,
+            "single_label_multiclass_brier": 0.5306402559013113
+          },
+          "brier_eligible_tasks": 32,
+          "difference": {
+            "acceptable_set_log_loss": -0.741253619939013,
+            "accuracy": 0.37124999999999997,
+            "single_label_multiclass_brier": -0.45413331362634696
+          },
+          "note": "Each task has equal weight. These are descriptive means; bootstrap intervals above estimate row-weighted changes.",
+          "trained": {
+            "acceptable_set_log_loss": 0.1219615676728731,
+            "accuracy": 0.9421875,
+            "single_label_multiclass_brier": 0.07650694227496435
+          }
+        },
+        "multi_answer_rows": 145,
+        "row_weighted": {
+          "base": {
+            "acceptable_set_log_loss": 0.863215187611886,
+            "accuracy": 0.5709375,
+            "single_label_multiclass_brier": 0.5336070865627076
+          },
+          "paired_group_bootstrap": {
+            "acceptable_set_log_loss": {
+              "difference": -0.741253619939013,
+              "groups": 1600,
+              "lower_95": -0.7719899573966517,
+              "resamples": 1000,
+              "rows": 3200,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": -0.7117305735386857
+            },
+            "accuracy": {
+              "difference": 0.37125,
+              "groups": 1600,
+              "lower_95": 0.3521796875,
+              "resamples": 1000,
+              "rows": 3200,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": 0.3890625
+            },
+            "single_label_multiclass_brier": {
+              "difference": -0.4553416979486616,
+              "groups": 1600,
+              "lower_95": -0.473236838517684,
+              "resamples": 1000,
+              "rows": 3055,
+              "single_group_interval_is_uninformative": false,
+              "upper_95": -0.4370338369175331
+            }
+          },
+          "trained": {
+            "acceptable_set_log_loss": 0.1219615676728731,
+            "accuracy": 0.9421875,
+            "single_label_multiclass_brier": 0.07826538861404606
+          }
+        },
+        "rows": 3200,
+        "single_label_rows": 3055,
+        "tasks": 32
+      }
+    }
+  },
+  "inputs": {
+    "base": "/Users/mitchell/Documents/workspace/ml-data/output/general-supervised-complete-v1/evaluations/foundation/test-predictions.jsonl",
+    "base_sha256": "0b312bdc4ca13700b7b3e39472d26f72f5af6ef80bff5663e8f18b575bb208ed",
+    "evaluation_receipts": {},
+    "same_data_receipt_verified": false,
+    "trained": "/Users/mitchell/Documents/workspace/ml-data/output/general-supervised-complete-v1/evaluations/supervised/test-predictions.jsonl",
+    "trained_sha256": "207de834bc2975eb9e9de30c53dd355f4e0e8aeb426ac509d6ad953ede1bea7b"
+  },
+  "schema": "first-instinct-paired-report-v1"
+}

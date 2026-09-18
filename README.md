@@ -15,20 +15,21 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 
 </div>
 
-**In progress: [general decisions with a nine-billion-parameter model](docs/general-training-v1-protocol.md).**
-The new experiment trains on 350,857 examples: licensed public instruction
-tasks, executable reasoning worlds, and evidence-acquisition environments.
-It accepts user-defined questions and choices, then compares reward training
-with and without an observed-outcome forecasting loss in the same language
-network. The full supervised run is underway; measured held-out results and
-language-model reinforcement-learning results are pending. The released model
-and browser demo below remain the earlier software experiment.
+**New: [measured results for the nine-billion-parameter decision model](docs/general-supervised-results.md).**
+One supervised pass over 350,857 examples raised accuracy from **63.3% to 78.1%**
+on 17,277 held-out questions under the same constrained-answer interface.
+Gains are strongest on executable reasoning worlds; public text tasks improve
+less, and some tasks regress. Prose-pair accuracy is unchanged. The model
+accepts user-defined questions and choices. Four reinforcement-learning runs
+now compare reward training with and without observed-outcome forecasting in
+the same language network; their results and the combined release are pending.
+The released model and browser demo below remain the earlier software experiment.
 An optional [TensorBoard monitor](docs/training-monitor.md) reads the existing
 logs without restarting the training process.
 The new [general decision demo](docs/general-demo.md) offers one editable
-example and a short explanation; the underlying interface accepts your own
-questions and choices. Training previews are labeled explicitly, and a
-completed general-model release is still pending.
+example and a short explanation. The local version now serves the completed
+supervised checkpoint; the underlying interface accepts your own questions
+and choices.
 
 First Instinct explores a practical question: **when should a model gather more
 evidence before making a decision?** A four-billion-parameter forecaster reads
