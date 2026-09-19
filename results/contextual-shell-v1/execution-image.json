@@ -1,0 +1,8 @@
+{
+  "Id": "sha256:4f8d1afed6d58037c680221ca6dd9fb4737b7ecfa7d4809ca809fdc0c7d9b786",
+  "Architecture": "arm64",
+  "Os": "linux",
+  "RepoDigests": [
+    "python@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea"
+  ]
+}

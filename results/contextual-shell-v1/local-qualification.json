@@ -1,0 +1,24 @@
+{
+  "scope": "Engineering probe of 24 forecasts from 6 validation quartets through the original MPS demo; not a held-out test or generalization estimate.",
+  "correct": 14,
+  "n": 24,
+  "by_family": {
+    "report": {
+      "correct": 4,
+      "n": 8,
+      "log_loss": 0.6316282848065343
+    },
+    "config": {
+      "correct": 6,
+      "n": 8,
+      "log_loss": 0.4932777152637719
+    },
+    "sqlite": {
+      "correct": 4,
+      "n": 8,
+      "log_loss": 0.7785489478966133
+    }
+  },
+  "entire_quartets_correct": 0,
+  "quartets": 6
+}

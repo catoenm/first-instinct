@@ -1,0 +1,37 @@
+{
+  "by_task": {
+    "contextual-shell/config/completion_choice": {
+      "accuracy": 0.5,
+      "n": 64
+    },
+    "contextual-shell/config/completion_forecast": {
+      "accuracy": 0.5,
+      "n": 256
+    },
+    "contextual-shell/report/completion_choice": {
+      "accuracy": 0.5,
+      "n": 64
+    },
+    "contextual-shell/report/completion_forecast": {
+      "accuracy": 0.5,
+      "n": 256
+    },
+    "contextual-shell/sqlite/completion_choice": {
+      "accuracy": 0.5,
+      "n": 64
+    },
+    "contextual-shell/sqlite/completion_forecast": {
+      "accuracy": 0.5,
+      "n": 256
+    }
+  },
+  "files": {
+    "train.jsonl": "e2b6609ee6b14225a4dc17531b135b3cbfcd8a06b3c79b08a4fd9617bd422194",
+    "validation.jsonl": "65b367f322cfca995705feb5601059617352f33bcda724fafd1bf17cb8bc75fb"
+  },
+  "macro_accuracy": 0.5,
+  "scope": "Post-freeze train/validation diagnostic, no test read or training changes. Frequencies ignore goal and current state. Normalize integer literals and api/worker/scheduler names; Laplace smoothing. Choice takes highest frequency, lexicographic tie, none if available and all below one-half.",
+  "training_command_templates": 24,
+  "validation_commands_seen_in_train_after_normalization": 1536,
+  "validation_commands_total": 1536
+}

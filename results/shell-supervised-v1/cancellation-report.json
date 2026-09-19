@@ -1,0 +1,29 @@
+{
+  "absent": [
+    "original",
+    "control-907",
+    "shell-907",
+    "control-1709",
+    "shell-1709"
+  ],
+  "collection": {
+    "archive_bytes": 44869344,
+    "archive_sha256": "1b1f22059a2f36f6b7e01f6e16830b4a58cc760a02137f68f65f00fd37361fdd",
+    "compute_estimate_time_source": "provider_stopped_or_absent_observation",
+    "created_at": 1789821521.189947,
+    "deleted_at": 1789821970.707789,
+    "estimated_compute_usd_excluding_storage": 0.573134268271923,
+    "gpu_hourly_rate_usd": 4.59,
+    "observed_stopped_or_absent_at": 1789821970.70702,
+    "pipeline_status": "failed",
+    "pod_deleted": true,
+    "remaining_pod_count": 0,
+    "stop_requested_at": 1789821922.573401,
+    "stop_time_source": "collector_request",
+    "verified_files": 16
+  },
+  "comparisons": {},
+  "interpretation": "Two seeds of supervised shell-data versus matched-count general replay. No on-policy reinforcement learning. Shell test has six authored feature-combination groups, not hundreds of independent mechanisms.",
+  "models": {},
+  "pipeline_status": "cancelled_data_quality"
+}

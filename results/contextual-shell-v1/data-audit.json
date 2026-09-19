@@ -1,0 +1,329 @@
+{
+  "ablation_ceilings_by_task": {
+    "test": {
+      "contextual-shell/config/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 16,
+          "rows": 64
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        }
+      },
+      "contextual-shell/config/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 12,
+          "rows": 256
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 104,
+          "rows": 256
+        }
+      },
+      "contextual-shell/report/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 16,
+          "rows": 64
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        }
+      },
+      "contextual-shell/report/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 12,
+          "rows": 256
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 112,
+          "rows": 256
+        }
+      },
+      "contextual-shell/sqlite/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 16,
+          "rows": 64
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        }
+      },
+      "contextual-shell/sqlite/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 64,
+          "rows": 256
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        }
+      }
+    },
+    "train": {
+      "contextual-shell/config/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 120,
+          "rows": 512
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 256,
+          "rows": 512
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 240,
+          "rows": 512
+        }
+      },
+      "contextual-shell/config/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 12,
+          "rows": 2048
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 1024,
+          "rows": 2048
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 240,
+          "rows": 2048
+        }
+      },
+      "contextual-shell/report/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 114,
+          "rows": 512
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 256,
+          "rows": 512
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 228,
+          "rows": 512
+        }
+      },
+      "contextual-shell/report/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 12,
+          "rows": 2048
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 1024,
+          "rows": 2048
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 232,
+          "rows": 2048
+        }
+      },
+      "contextual-shell/sqlite/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 512
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 256,
+          "rows": 512
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 256,
+          "rows": 512
+        }
+      },
+      "contextual-shell/sqlite/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 474,
+          "rows": 2048
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 1024,
+          "rows": 2048
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 948,
+          "rows": 2048
+        }
+      }
+    },
+    "validation": {
+      "contextual-shell/config/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 16,
+          "rows": 64
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        }
+      },
+      "contextual-shell/config/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 12,
+          "rows": 256
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 120,
+          "rows": 256
+        }
+      },
+      "contextual-shell/report/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 16,
+          "rows": 64
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        }
+      },
+      "contextual-shell/report/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 12,
+          "rows": 256
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 80,
+          "rows": 256
+        }
+      },
+      "contextual-shell/sqlite/completion_choice": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 16,
+          "rows": 64
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 32,
+          "rows": 64
+        }
+      },
+      "contextual-shell/sqlite/completion_forecast": {
+        "both": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 64,
+          "rows": 256
+        },
+        "goal": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        },
+        "state": {
+          "accuracy_ceiling": 0.5,
+          "distinct_ablated_inputs": 128,
+          "rows": 256
+        }
+      }
+    }
+  },
+  "checksums_verified": 8,
+  "executed_branches": 9600,
+  "fixtures": 1920,
+  "groups": 24,
+  "labels": {
+    "failure": 5760,
+    "success": 3840
+  },
+  "manifest_sha256": "4834c2659e3db08960572d350e5ff09436732bb5d7c2c9f271a1f1b126f0eaca",
+  "quartets": 480,
+  "rows": 9600,
+  "source_sha256": "1d7aa7369d54e06d5f2b6af1a89fdec3f1330e35fba42d85cd34a80ba49d1f45",
+  "status": "verified"
+}

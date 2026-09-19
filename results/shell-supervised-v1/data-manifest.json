@@ -1,0 +1,35 @@
+{
+  "branches": 10368,
+  "cases": 1728,
+  "counts": {
+    "challenge": 0,
+    "test": 768,
+    "train": 12288,
+    "validation": 768
+  },
+  "execution_sha256": "8e92774bfee198e9680998f4f677f6baf8759838e6c32179f726942c3b9eb005",
+  "fixtures_sha256": "279fff691e5d6f9b14c1945549f06e7dd4e139b98006df415c247221f9e9981d",
+  "groups": {
+    "challenge": 0,
+    "test": 6,
+    "train": 12,
+    "validation": 6
+  },
+  "image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+  "jobs_sha256": "ade025336deb3c536c3f7d3163e305f71d42b10a25383ccdb61c0dc261cf742c",
+  "labels": {
+    "failure": 6048,
+    "success": 4320
+  },
+  "outputs": {
+    "challenge.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test.jsonl": "36ee8f91073cd3a1d0d4ea9f6d8994092ebde421c09a10764d55ab9f24e4e6f8",
+    "train.jsonl": "332aba891202d3ea201b65a363102ca9713d1dce967f7852a25db032f04ba9a9",
+    "validation.jsonl": "6dca32f2acd52ea8d8f04938f20e743b7c7d25570669a0aa2378e1a2bce28a9f"
+  },
+  "scope": "Authored one-command completion choices and deterministic forecasts. Not on-policy RL, live Harbor rollouts, or a calibrated long-horizon success dataset.",
+  "source_sha256": "0b88a66806e8e8abf9cebb389b6cafe905ad5a8ebd069492ef76544c98e5e875",
+  "splits": "Whole three-feature combinations; four training, two validation, two test combinations per family. Seeds and all action branches remain together.",
+  "version": "shell-supervision-v1",
+  "worker_sha256": "315e0f66ca9ce21bf5e3309e0353ecfd12cf6f5d584c13739affa02e8059e293"
+}

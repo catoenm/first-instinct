@@ -1,0 +1,22 @@
+{
+  "schema": "contextual-shell-compute-v1",
+  "currency": "USD",
+  "rate_per_hour": 4.59,
+  "created_at": 1789822464.662066,
+  "stop_requested_at": 1789836351.294393,
+  "observed_stopped_or_absent_at": 1789836399.565123,
+  "deleted_at": 1789836399.565928,
+  "estimated_hours_to_provider_absence": 3.8708064047495525,
+  "corrected_run_estimated_compute_usd_excluding_storage": 17.767001397800446,
+  "cancelled_pilot_estimated_compute_usd_excluding_storage": 0.573134268271923,
+  "both_shell_pilots_estimated_compute_usd_excluding_storage": 18.340135666072367,
+  "storage_reserve_usd": 10,
+  "both_pilots_estimate_plus_storage_reserve_usd": 28.340135666072367,
+  "both_pilots_budget_usd": 65,
+  "prior_cumulative_estimated_compute_usd_excluding_storage": 133.65440256827193,
+  "cumulative_estimated_compute_usd_excluding_storage": 151.42140396607238,
+  "cumulative_authorization_usd": 500,
+  "provider_remaining_pod_count_confirmed": 0,
+  "pod_deleted": true,
+  "note": "Elapsed-time estimate at the quoted GPU rate, ending at provider stop/absence observation. Not a provider invoice. Actual storage charges and provider billing adjustments are not included; the storage figure is a reserve, not measured spend."
+}

@@ -1,0 +1,94 @@
+{
+  "branches": 9600,
+  "bundles": {
+    "challenge": 0,
+    "test": 48,
+    "train": 384,
+    "validation": 48
+  },
+  "cases": 1920,
+  "context_ablation_ceilings": {
+    "test": {
+      "both": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 136,
+        "rows": 960
+      },
+      "goal": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 480,
+        "rows": 960
+      },
+      "state": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 440,
+        "rows": 960
+      }
+    },
+    "train": {
+      "both": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 860,
+        "rows": 7680
+      },
+      "goal": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 3840,
+        "rows": 7680
+      },
+      "state": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 2144,
+        "rows": 7680
+      }
+    },
+    "validation": {
+      "both": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 136,
+        "rows": 960
+      },
+      "goal": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 480,
+        "rows": 960
+      },
+      "state": {
+        "accuracy_ceiling": 0.5,
+        "distinct_ablated_inputs": 424,
+        "rows": 960
+      }
+    }
+  },
+  "counts": {
+    "challenge": 0,
+    "test": 960,
+    "train": 7680,
+    "validation": 960
+  },
+  "execution_sha256": "de431d4ddba746ccbf78e3f93193c0c5aa38972a32f749510c719714f6fff4f8",
+  "fixtures_sha256": "9d02f3a001d75774d61a2cc575b5254635ebab33da27265eb2405121184e619d",
+  "groups": {
+    "challenge": 0,
+    "test": 6,
+    "train": 12,
+    "validation": 6
+  },
+  "image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+  "jobs_sha256": "bace169307cef7d68cb5c3a167e3a480640d1000dc34b9a9caa6741cb8991371",
+  "labels": {
+    "failure": 5760,
+    "success": 3840
+  },
+  "outputs": {
+    "challenge.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test.jsonl": "6a573702db4b9e9abb6fe1d6f6ebf1c711b661e2d7bd6083fa94f695492217c8",
+    "train.jsonl": "e2b6609ee6b14225a4dc17531b135b3cbfcd8a06b3c79b08a4fd9617bd422194",
+    "validation.jsonl": "65b367f322cfca995705feb5601059617352f33bcda724fafd1bf17cb8bc75fb"
+  },
+  "scope": "Authored contextual one-command supervision in three mechanisms, not live Harbor rollouts or reinforcement learning. Identical candidates in each state/goal quartet; no-goal and no-state accuracy ceilings are 50%. Feature combinations held out, not unseen task families.",
+  "source_sha256": "c3874760d9c3b65468273ef2c187a22987dd5e0a52451d16f063c3e0752a8bf6",
+  "verifier_sha256": "0b88a66806e8e8abf9cebb389b6cafe905ad5a8ebd069492ef76544c98e5e875",
+  "version": "contextual-shell-v1",
+  "worker_sha256": "315e0f66ca9ce21bf5e3309e0353ecfd12cf6f5d584c13739affa02e8059e293"
+}

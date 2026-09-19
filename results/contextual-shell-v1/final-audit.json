@@ -1,0 +1,51 @@
+{
+  "schema": "contextual-shell-final-audit-v1",
+  "created_at": 1789836781.258925,
+  "archive_sha256": "a3a0947af6bbbaeb6f342899047030e0cc3c13508e4a9c70ae2f8848ab5454c5",
+  "archive_bytes": 3270014007,
+  "verified_recovered_artifacts": 158,
+  "local_sources_match_freeze": 85,
+  "checkpoint_selection_replayed": {
+    "control-907": {
+      "selected_step": 0,
+      "adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "scheduled_checks_verified": 3,
+      "validation_prediction_rows_verified": 10408,
+      "stop_reason": "validation_patience",
+      "final_parameter_hash_differs": true,
+      "finite_training_trace": true
+    },
+    "shell-907": {
+      "selected_step": 500,
+      "adapter_sha256": "c9be3151fa44674c03a8cbefdcae4f6e98665570d308dbff7c8534940fae7679",
+      "scheduled_checks_verified": 8,
+      "validation_prediction_rows_verified": 23418,
+      "stop_reason": "validation_patience",
+      "final_parameter_hash_differs": true,
+      "finite_training_trace": true
+    },
+    "control-1709": {
+      "selected_step": 0,
+      "adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "scheduled_checks_verified": 3,
+      "validation_prediction_rows_verified": 10408,
+      "stop_reason": "validation_patience",
+      "final_parameter_hash_differs": true,
+      "finite_training_trace": true
+    },
+    "shell-1709": {
+      "selected_step": 500,
+      "adapter_sha256": "56cd8952dee1c05ddb658275a71bc90ba6ad73c52e8455a184cce226fa447bcc",
+      "scheduled_checks_verified": 8,
+      "validation_prediction_rows_verified": 23418,
+      "stop_reason": "validation_patience",
+      "final_parameter_hash_differs": true,
+      "finite_training_trace": true
+    }
+  },
+  "pipeline_complete": true,
+  "provider_list_empty_independently_confirmed": true,
+  "metric_absolute_tolerance": 1e-12,
+  "maximum_recomputed_macro_log_loss_difference": 5.551115123125783e-17,
+  "note": "Validation selection fully replayed from recovered predictions and immutable hashes. No inference or new training was run."
+}

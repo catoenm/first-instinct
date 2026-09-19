@@ -1,0 +1,14 @@
+{
+  "checksums_verified": 8,
+  "executed_branches": 10368,
+  "fixtures": 1728,
+  "groups": 24,
+  "labels": {
+    "failure": 6048,
+    "success": 4320
+  },
+  "manifest_sha256": "941b0e399620749f89a981afdefbea0aed71b2530ea9592fabf5be63e35b906f",
+  "rows": 13824,
+  "source_sha256": "d7d71b01c77925454df44572df3efa681402ab225da088adef28359feb8f2e63",
+  "status": "verified"
+}

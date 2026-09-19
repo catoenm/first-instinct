@@ -1,0 +1,3689 @@
+{
+  "absent": [],
+  "collection": {
+    "archive_bytes": 3270014007,
+    "archive_sha256": "a3a0947af6bbbaeb6f342899047030e0cc3c13508e4a9c70ae2f8848ab5454c5",
+    "compute_estimate_time_source": "provider_stopped_or_absent_observation",
+    "created_at": 1789822464.662066,
+    "deleted_at": 1789836399.565928,
+    "estimated_compute_usd_excluding_storage": 17.767001397800446,
+    "gpu_hourly_rate_usd": 4.59,
+    "observed_stopped_or_absent_at": 1789836399.565123,
+    "pipeline_status": "complete",
+    "pod_deleted": true,
+    "remaining_pod_count": 0,
+    "stop_requested_at": 1789836351.294393,
+    "stop_time_source": "collector_request",
+    "verified_files": 158
+  },
+  "comparisons": {
+    "control-1709_minus_original": {
+      "general-transfer": {
+        "accuracy_delta_interval_95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap": {
+          "groups": 1100,
+          "omitted_task_draws_resampled": 0,
+          "repeats": 2000,
+          "scope": "Post-run descriptive paired group bootstrap on a fixed, previously opened benchmark; no training-seed uncertainty.",
+          "seed": 190907
+        },
+        "corrected_questions": 0,
+        "delta_macro_accuracy": 0.0,
+        "delta_macro_log_loss": 0.0,
+        "log_loss_delta_interval_95": [
+          0.0,
+          0.0
+        ],
+        "newly_wrong_questions": 0
+      },
+      "shell-test": {
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          }
+        },
+        "delta_macro_accuracy": 0.0,
+        "delta_macro_log_loss": 0.0,
+        "uncertainty": "No precision claim: six held-out composition groups within three authored families; compare both training seeds separately."
+      }
+    },
+    "control-907_minus_original": {
+      "general-transfer": {
+        "accuracy_delta_interval_95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap": {
+          "groups": 1100,
+          "omitted_task_draws_resampled": 0,
+          "repeats": 2000,
+          "scope": "Post-run descriptive paired group bootstrap on a fixed, previously opened benchmark; no training-seed uncertainty.",
+          "seed": 190907
+        },
+        "corrected_questions": 0,
+        "delta_macro_accuracy": 0.0,
+        "delta_macro_log_loss": 0.0,
+        "log_loss_delta_interval_95": [
+          0.0,
+          0.0
+        ],
+        "newly_wrong_questions": 0
+      },
+      "shell-test": {
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.0,
+            "log_loss": 0.0
+          }
+        },
+        "delta_macro_accuracy": 0.0,
+        "delta_macro_log_loss": 0.0,
+        "uncertainty": "No precision claim: six held-out composition groups within three authored families; compare both training seeds separately."
+      }
+    },
+    "shell-1709_minus_control-1709": {
+      "general-transfer": {
+        "accuracy_delta_interval_95": [
+          -0.0031367671916744805,
+          0.016886742161226022
+        ],
+        "bootstrap": {
+          "groups": 1100,
+          "omitted_task_draws_resampled": 0,
+          "repeats": 2000,
+          "scope": "Post-run descriptive paired group bootstrap on a fixed, previously opened benchmark; no training-seed uncertainty.",
+          "seed": 190907
+        },
+        "corrected_questions": 22,
+        "delta_macro_accuracy": 0.006793478260869565,
+        "delta_macro_log_loss": 0.03888628355988297,
+        "log_loss_delta_interval_95": [
+          0.022752741554593676,
+          0.057409484886032744
+        ],
+        "newly_wrong_questions": 13
+      },
+      "shell-test": {
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.203125,
+            "log_loss": -0.4620641214759696
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.3359375,
+            "log_loss": -0.5753537701739152
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.40625,
+            "log_loss": -0.6525573609384724
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.4765625,
+            "log_loss": -0.7070749628177349
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.140625,
+            "log_loss": -1.0061833572519308
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.1171875,
+            "log_loss": -0.1495546855497497
+          }
+        },
+        "delta_macro_accuracy": 0.27994791666666674,
+        "delta_macro_log_loss": -0.592131376367962,
+        "uncertainty": "No precision claim: six held-out composition groups within three authored families; compare both training seeds separately."
+      }
+    },
+    "shell-1709_minus_original": {
+      "general-transfer": {
+        "accuracy_delta_interval_95": [
+          -0.0031367671916744805,
+          0.016886742161226022
+        ],
+        "bootstrap": {
+          "groups": 1100,
+          "omitted_task_draws_resampled": 0,
+          "repeats": 2000,
+          "scope": "Post-run descriptive paired group bootstrap on a fixed, previously opened benchmark; no training-seed uncertainty.",
+          "seed": 190907
+        },
+        "corrected_questions": 22,
+        "delta_macro_accuracy": 0.006793478260869565,
+        "delta_macro_log_loss": 0.03888628355988297,
+        "log_loss_delta_interval_95": [
+          0.022752741554593676,
+          0.057409484886032744
+        ],
+        "newly_wrong_questions": 13
+      },
+      "shell-test": {
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.203125,
+            "log_loss": -0.4620641214759696
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.3359375,
+            "log_loss": -0.5753537701739152
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.40625,
+            "log_loss": -0.6525573609384724
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.4765625,
+            "log_loss": -0.7070749628177349
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.140625,
+            "log_loss": -1.0061833572519308
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.1171875,
+            "log_loss": -0.1495546855497497
+          }
+        },
+        "delta_macro_accuracy": 0.27994791666666674,
+        "delta_macro_log_loss": -0.592131376367962,
+        "uncertainty": "No precision claim: six held-out composition groups within three authored families; compare both training seeds separately."
+      }
+    },
+    "shell-907_minus_control-907": {
+      "general-transfer": {
+        "accuracy_delta_interval_95": [
+          -0.006148010841105467,
+          0.010880314799918933
+        ],
+        "bootstrap": {
+          "groups": 1100,
+          "omitted_task_draws_resampled": 0,
+          "repeats": 2000,
+          "scope": "Post-run descriptive paired group bootstrap on a fixed, previously opened benchmark; no training-seed uncertainty.",
+          "seed": 190907
+        },
+        "corrected_questions": 15,
+        "delta_macro_accuracy": 0.002264492753623188,
+        "delta_macro_log_loss": 0.04870354552909344,
+        "log_loss_delta_interval_95": [
+          0.029803635923418104,
+          0.0703702401720684
+        ],
+        "newly_wrong_questions": 11
+      },
+      "shell-test": {
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.1875,
+            "log_loss": -0.46368715680401246
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.33984375,
+            "log_loss": -0.5808754282469744
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.421875,
+            "log_loss": -0.6899446472615424
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.453125,
+            "log_loss": -0.6576799875790951
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.109375,
+            "log_loss": -0.9383763122686295
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.06640625,
+            "log_loss": -0.09578796444874504
+          }
+        },
+        "delta_macro_accuracy": 0.26302083333333337,
+        "delta_macro_log_loss": -0.5710585827681663,
+        "uncertainty": "No precision claim: six held-out composition groups within three authored families; compare both training seeds separately."
+      }
+    },
+    "shell-907_minus_original": {
+      "general-transfer": {
+        "accuracy_delta_interval_95": [
+          -0.006148010841105467,
+          0.010880314799918933
+        ],
+        "bootstrap": {
+          "groups": 1100,
+          "omitted_task_draws_resampled": 0,
+          "repeats": 2000,
+          "scope": "Post-run descriptive paired group bootstrap on a fixed, previously opened benchmark; no training-seed uncertainty.",
+          "seed": 190907
+        },
+        "corrected_questions": 15,
+        "delta_macro_accuracy": 0.002264492753623188,
+        "delta_macro_log_loss": 0.04870354552909344,
+        "log_loss_delta_interval_95": [
+          0.029803635923418104,
+          0.0703702401720684
+        ],
+        "newly_wrong_questions": 11
+      },
+      "shell-test": {
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.1875,
+            "log_loss": -0.46368715680401246
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.33984375,
+            "log_loss": -0.5808754282469744
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.421875,
+            "log_loss": -0.6899446472615424
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.453125,
+            "log_loss": -0.6576799875790951
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.109375,
+            "log_loss": -0.9383763122686295
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.06640625,
+            "log_loss": -0.09578796444874504
+          }
+        },
+        "delta_macro_accuracy": 0.26302083333333337,
+        "delta_macro_log_loss": -0.5710585827681663,
+        "uncertainty": "No precision claim: six held-out composition groups within three authored families; compare both training seeds separately."
+      }
+    }
+  },
+  "interpretation": "Two seeds of supervised shell-data versus matched-count general replay. No on-policy reinforcement learning. Shell test has six authored feature-combination groups, not hundreds of independent mechanisms.",
+  "models": {
+    "control-1709": {
+      "adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "context_quartets": {
+        "binary_forecast_brier": 0.2557174335995218,
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.125,
+            "entirely_correct": 2,
+            "quartets": 16
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.03125,
+            "entirely_correct": 2,
+            "quartets": 64
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.0625,
+            "entirely_correct": 1,
+            "quartets": 16
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.03125,
+            "entirely_correct": 2,
+            "quartets": 64
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.0,
+            "entirely_correct": 0,
+            "quartets": 16
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.0,
+            "entirely_correct": 0,
+            "quartets": 64
+          }
+        },
+        "decision_quartets": 240,
+        "entire_quartet_accuracy": 0.029166666666666667,
+        "entire_quartets_correct": 7,
+        "interpretation": "Complete-quartet consistency on six authored held-out feature groups. Binary Brier score uses probability_yes against deterministic execution labels; no long-horizon calibration claim or population uncertainty estimate."
+      },
+      "evaluations": {
+        "general-transfer": {
+          "by_task": {
+            "environment_action": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5552376953322319,
+              "n": 24
+            },
+            "environment_forecast": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5629731596363938,
+              "n": 24
+            },
+            "task065_timetravel_consistent_sentence_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3790555864831528,
+              "n": 12
+            },
+            "task066_timetravel_binary_consistency_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.009554672278471772,
+              "n": 12
+            },
+            "task1196_atomic_classification_oeffect": {
+              "accuracy": 0.5,
+              "log_loss": 1.1456871387398015,
+              "n": 12
+            },
+            "task1197_atomic_classification_oreact": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.4921292511183772,
+              "n": 12
+            },
+            "task1198_atomic_classification_owant": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1720283214221536,
+              "n": 12
+            },
+            "task1199_atomic_classification_xattr": {
+              "accuracy": 0.75,
+              "log_loss": 0.7736904584938111,
+              "n": 12
+            },
+            "task1200_atomic_classification_xeffect": {
+              "accuracy": 0.75,
+              "log_loss": 0.6047293744592257,
+              "n": 12
+            },
+            "task1201_atomic_classification_xintent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7134341119511922,
+              "n": 12
+            },
+            "task1202_atomic_classification_xneed": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5463437350677597,
+              "n": 12
+            },
+            "task1203_atomic_classification_xreact": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9189856188892245,
+              "n": 12
+            },
+            "task1204_atomic_classification_hinderedby": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.426974740595828,
+              "n": 12
+            },
+            "task1205_atomic_classification_isafter": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 0.8551194450820335,
+              "n": 12
+            },
+            "task1206_atomic_classification_isbefore": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.1134113396901746,
+              "n": 12
+            },
+            "task1207_atomic_classification_atlocation": {
+              "accuracy": 1.0,
+              "log_loss": 0.18557188314525183,
+              "n": 12
+            },
+            "task1208_atomic_classification_xreason": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.6858662625634441,
+              "n": 12
+            },
+            "task1209_atomic_classification_objectuse": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.5605305114276823,
+              "n": 12
+            },
+            "task1210_atomic_classification_madeupof": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.4981010011257472,
+              "n": 12
+            },
+            "task1211_atomic_classification_hassubevent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8005741210714356,
+              "n": 12
+            },
+            "task1212_atomic_classification_hasproperty": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.35267068520156203,
+              "n": 12
+            },
+            "task1213_atomic_classification_desires": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8720321626728557,
+              "n": 12
+            },
+            "task1214_atomic_classification_xwant": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.622238532432605,
+              "n": 12
+            },
+            "task1215_atomic_classification_capableof": {
+              "accuracy": 0.5,
+              "log_loss": 1.329648892575049,
+              "n": 12
+            },
+            "task1216_atomic_classification_causes": {
+              "accuracy": 0.5,
+              "log_loss": 0.8933037618898315,
+              "n": 12
+            },
+            "task133_winowhy_reason_plausibility_detection": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.20850406144650144,
+              "n": 12
+            },
+            "task1390_wscfixed_coreference": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3706663880551509,
+              "n": 12
+            },
+            "task1391_winogrande_easy_answer_generation": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.14124177976755514,
+              "n": 12
+            },
+            "task1393_superglue_copa_text_completion": {
+              "accuracy": 1.0,
+              "log_loss": 0.07309281500245189,
+              "n": 12
+            },
+            "task1418_bless_semantic_relation_classification": {
+              "accuracy": 0.5,
+              "log_loss": 1.4339867007719767,
+              "n": 12
+            },
+            "task1529_scitail1.1_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6927708181568585,
+              "n": 12
+            },
+            "task1554_scitail_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.1637604433038702,
+              "n": 12
+            },
+            "task1583_bless_meronym_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6232682071866954,
+              "n": 12
+            },
+            "task1624_disfl_qa_question_yesno_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.91935143466613,
+              "n": 12
+            },
+            "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2640236291999798,
+              "n": 12
+            },
+            "task232_iirc_link_number_classification": {
+              "accuracy": 0.3333333333333333,
+              "log_loss": 0.826328075394485,
+              "n": 12
+            },
+            "task233_iirc_link_exists_classification": {
+              "accuracy": 0.75,
+              "log_loss": 0.6614663423458605,
+              "n": 12
+            },
+            "task276_enhanced_wsc_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5170684291131985,
+              "n": 12
+            },
+            "task329_gap_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.7880420123672054,
+              "n": 12
+            },
+            "task391_causal_relationship": {
+              "accuracy": 0.75,
+              "log_loss": 0.3982920704253901,
+              "n": 12
+            },
+            "task392_inverse_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5484280301969813,
+              "n": 12
+            },
+            "task640_esnli_classification": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.2838906801049819,
+              "n": 12
+            },
+            "task641_esnli_classification": {
+              "accuracy": 0.3333333333333333,
+              "log_loss": 1.4324619276798778,
+              "n": 12
+            },
+            "task642_esnli_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1552323755235534,
+              "n": 12
+            },
+            "task827_copa_commonsense_reasoning": {
+              "accuracy": 1.0,
+              "log_loss": 0.06876346744017554,
+              "n": 12
+            },
+            "task828_copa_commonsense_cause_effect": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2774661753669897,
+              "n": 12
+            },
+            "task892_gap_reverse_coreference_resolution": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.41711823450089885,
+              "n": 12
+            },
+            "task893_gap_fill_the_blank_coreference_resolution": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9802961298776434,
+              "n": 12
+            },
+            "task935_defeasible_nli_atomic_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.26343466985794345,
+              "n": 12
+            },
+            "task936_defeasible_nli_snli_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.22218257618142356,
+              "n": 12
+            },
+            "task937_defeasible_nli_social_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.17307850804103223,
+              "n": 12
+            },
+            "task970_sherliic_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8285337679710437,
+              "n": 12
+            },
+            "verified_access_control_check": {
+              "accuracy": 1.0,
+              "log_loss": 8.246740652157105e-05,
+              "n": 12
+            },
+            "verified_access_control_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.4754562850172765,
+              "n": 12
+            },
+            "verified_constrained_route_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.4891694337972135,
+              "n": 12
+            },
+            "verified_constrained_route_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.4322414800366445,
+              "n": 12
+            },
+            "verified_date_deadline_check": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6510316944633042,
+              "n": 12
+            },
+            "verified_date_deadline_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.3906935189496892,
+              "n": 12
+            },
+            "verified_evidence_consistency_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0006103670424251664,
+              "n": 12
+            },
+            "verified_evidence_consistency_choice": {
+              "accuracy": 1.0,
+              "log_loss": 7.230773382360973e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.290138924706307e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0007711519644931115,
+              "n": 12
+            },
+            "verified_incident_priority_check": {
+              "accuracy": 1.0,
+              "log_loss": 8.145072297525139e-05,
+              "n": 12
+            },
+            "verified_incident_priority_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.731964819959092e-05,
+              "n": 12
+            },
+            "verified_interval_scheduling_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.01318240759135214,
+              "n": 12
+            },
+            "verified_interval_scheduling_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0014999743624940448,
+              "n": 12
+            },
+            "verified_inventory_ledger_check": {
+              "accuracy": 0.5,
+              "log_loss": 0.697052728958619,
+              "n": 12
+            },
+            "verified_inventory_ledger_choice": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.7083080118049702,
+              "n": 12
+            },
+            "verified_inventory_policy_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.7018593803743958,
+              "n": 12
+            },
+            "verified_inventory_policy_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.484547986904351,
+              "n": 12
+            },
+            "verified_joined_access_check": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.774383468281998,
+              "n": 12
+            },
+            "verified_joined_access_choice": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.7320341725549362,
+              "n": 12
+            },
+            "verified_ordered_rules_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0025912914208532176,
+              "n": 12
+            },
+            "verified_ordered_rules_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.6331579966811743,
+              "n": 12
+            },
+            "verified_propositional_logic_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00019255508218421252,
+              "n": 12
+            },
+            "verified_propositional_logic_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00020783950207999046,
+              "n": 12
+            },
+            "verified_route_cost_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.14223630733000797,
+              "n": 12
+            },
+            "verified_route_cost_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.9195476597584088,
+              "n": 12
+            },
+            "verified_set_operations_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.07308568977277365,
+              "n": 12
+            },
+            "verified_set_operations_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00019260813630415927,
+              "n": 12
+            },
+            "verified_state_machine_check": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.19811667019177437,
+              "n": 12
+            },
+            "verified_state_machine_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.27599740887266117,
+              "n": 12
+            },
+            "verified_table_join_check": {
+              "accuracy": 1.0,
+              "log_loss": 6.328122129178936e-06,
+              "n": 12
+            },
+            "verified_table_join_choice": {
+              "accuracy": 1.0,
+              "log_loss": 7.629457781269939e-06,
+              "n": 12
+            },
+            "verified_temporal_evidence_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.6037279601644875,
+              "n": 12
+            },
+            "verified_temporal_evidence_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.7651651703556467,
+              "n": 12
+            },
+            "verified_tool_prerequisites_check": {
+              "accuracy": 1.0,
+              "log_loss": 2.8709637778483085e-06,
+              "n": 12
+            },
+            "verified_tool_prerequisites_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.453242524188157e-06,
+              "n": 12
+            },
+            "verified_unit_conversion_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0028488842081077445,
+              "n": 12
+            },
+            "verified_unit_conversion_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0010531933863286325,
+              "n": 12
+            },
+            "verified_weighted_choice_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00017968912185495353,
+              "n": 12
+            },
+            "verified_weighted_choice_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00026709981559451356,
+              "n": 12
+            }
+          },
+          "groups": 1100,
+          "macro_accuracy": 0.779891304347826,
+          "macro_log_loss": 0.4997218589987232,
+          "n": 1128,
+          "tasks": 92
+        },
+        "shell-test": {
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "accuracy": 0.765625,
+              "log_loss": 0.5190790856313869,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "accuracy": 0.63671875,
+              "log_loss": 0.6243917057788033,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "accuracy": 0.5625,
+              "log_loss": 0.7452827939086445,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "accuracy": 0.51953125,
+              "log_loss": 0.7181365839395244,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.648955480804767,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "accuracy": 0.51171875,
+              "log_loss": 0.7731709286775852,
+              "n": 256
+            }
+          },
+          "groups": 6,
+          "macro_accuracy": 0.5826822916666666,
+          "macro_log_loss": 0.8381694297901184,
+          "n": 960,
+          "tasks": 6
+        }
+      },
+      "selection": {
+        "adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+        "baseline": {
+          "acceptable_set_log_loss": 0.44769626992212275,
+          "accuracy": 0.7671022290545734,
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "acceptable_set_log_loss": 0.4932445486356913,
+              "accuracy": 0.71875,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "acceptable_set_log_loss": 0.6052343818521215,
+              "accuracy": 0.6328125,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "acceptable_set_log_loss": 0.7790638706044846,
+              "accuracy": 0.5625,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "acceptable_set_log_loss": 0.6979285417613111,
+              "accuracy": 0.5234375,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "acceptable_set_log_loss": 0.8916651088145021,
+              "accuracy": 0.46875,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "acceptable_set_log_loss": 0.7958052320392486,
+              "accuracy": 0.5,
+              "n": 256
+            },
+            "general-retention": {
+              "acceptable_set_log_loss": 0.297853557061375,
+              "accuracy": 0.8891595615103532,
+              "n": 1642
+            }
+          },
+          "macro_accuracy": 0.6136299373586219,
+          "macro_log_loss": 0.6515421772526764,
+          "n": 2602,
+          "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+        },
+        "checks": [
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3140257703480272,
+              "accuracy": 0.8824604141291108,
+              "n": 1642
+            },
+            "macro_log_loss": 0.7371333755982424,
+            "selected": false,
+            "step": 100
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3133285668472948,
+              "accuracy": 0.8861144945188795,
+              "n": 1642
+            },
+            "macro_log_loss": 0.722937524795624,
+            "selected": false,
+            "step": 200
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.31409057289582654,
+              "accuracy": 0.8861144945188795,
+              "n": 1642
+            },
+            "macro_log_loss": 0.7193740937167155,
+            "selected": false,
+            "step": 300
+          }
+        ],
+        "exit_code": 0,
+        "status": "complete",
+        "step": 0,
+        "stop_reason": "validation_patience"
+      },
+      "training": {
+        "last_complete_validation_step": 300,
+        "seconds": 1531.1072911669617,
+        "status": "bounded_stop",
+        "steps": 301,
+        "tokens": 6000879,
+        "visits": 19264
+      }
+    },
+    "control-907": {
+      "adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "context_quartets": {
+        "binary_forecast_brier": 0.2557174335995218,
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.125,
+            "entirely_correct": 2,
+            "quartets": 16
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.03125,
+            "entirely_correct": 2,
+            "quartets": 64
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.0625,
+            "entirely_correct": 1,
+            "quartets": 16
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.03125,
+            "entirely_correct": 2,
+            "quartets": 64
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.0,
+            "entirely_correct": 0,
+            "quartets": 16
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.0,
+            "entirely_correct": 0,
+            "quartets": 64
+          }
+        },
+        "decision_quartets": 240,
+        "entire_quartet_accuracy": 0.029166666666666667,
+        "entire_quartets_correct": 7,
+        "interpretation": "Complete-quartet consistency on six authored held-out feature groups. Binary Brier score uses probability_yes against deterministic execution labels; no long-horizon calibration claim or population uncertainty estimate."
+      },
+      "evaluations": {
+        "general-transfer": {
+          "by_task": {
+            "environment_action": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5552376953322319,
+              "n": 24
+            },
+            "environment_forecast": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5629731596363938,
+              "n": 24
+            },
+            "task065_timetravel_consistent_sentence_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3790555864831528,
+              "n": 12
+            },
+            "task066_timetravel_binary_consistency_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.009554672278471772,
+              "n": 12
+            },
+            "task1196_atomic_classification_oeffect": {
+              "accuracy": 0.5,
+              "log_loss": 1.1456871387398015,
+              "n": 12
+            },
+            "task1197_atomic_classification_oreact": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.4921292511183772,
+              "n": 12
+            },
+            "task1198_atomic_classification_owant": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1720283214221536,
+              "n": 12
+            },
+            "task1199_atomic_classification_xattr": {
+              "accuracy": 0.75,
+              "log_loss": 0.7736904584938111,
+              "n": 12
+            },
+            "task1200_atomic_classification_xeffect": {
+              "accuracy": 0.75,
+              "log_loss": 0.6047293744592257,
+              "n": 12
+            },
+            "task1201_atomic_classification_xintent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7134341119511922,
+              "n": 12
+            },
+            "task1202_atomic_classification_xneed": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5463437350677597,
+              "n": 12
+            },
+            "task1203_atomic_classification_xreact": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9189856188892245,
+              "n": 12
+            },
+            "task1204_atomic_classification_hinderedby": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.426974740595828,
+              "n": 12
+            },
+            "task1205_atomic_classification_isafter": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 0.8551194450820335,
+              "n": 12
+            },
+            "task1206_atomic_classification_isbefore": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.1134113396901746,
+              "n": 12
+            },
+            "task1207_atomic_classification_atlocation": {
+              "accuracy": 1.0,
+              "log_loss": 0.18557188314525183,
+              "n": 12
+            },
+            "task1208_atomic_classification_xreason": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.6858662625634441,
+              "n": 12
+            },
+            "task1209_atomic_classification_objectuse": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.5605305114276823,
+              "n": 12
+            },
+            "task1210_atomic_classification_madeupof": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.4981010011257472,
+              "n": 12
+            },
+            "task1211_atomic_classification_hassubevent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8005741210714356,
+              "n": 12
+            },
+            "task1212_atomic_classification_hasproperty": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.35267068520156203,
+              "n": 12
+            },
+            "task1213_atomic_classification_desires": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8720321626728557,
+              "n": 12
+            },
+            "task1214_atomic_classification_xwant": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.622238532432605,
+              "n": 12
+            },
+            "task1215_atomic_classification_capableof": {
+              "accuracy": 0.5,
+              "log_loss": 1.329648892575049,
+              "n": 12
+            },
+            "task1216_atomic_classification_causes": {
+              "accuracy": 0.5,
+              "log_loss": 0.8933037618898315,
+              "n": 12
+            },
+            "task133_winowhy_reason_plausibility_detection": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.20850406144650144,
+              "n": 12
+            },
+            "task1390_wscfixed_coreference": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3706663880551509,
+              "n": 12
+            },
+            "task1391_winogrande_easy_answer_generation": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.14124177976755514,
+              "n": 12
+            },
+            "task1393_superglue_copa_text_completion": {
+              "accuracy": 1.0,
+              "log_loss": 0.07309281500245189,
+              "n": 12
+            },
+            "task1418_bless_semantic_relation_classification": {
+              "accuracy": 0.5,
+              "log_loss": 1.4339867007719767,
+              "n": 12
+            },
+            "task1529_scitail1.1_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6927708181568585,
+              "n": 12
+            },
+            "task1554_scitail_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.1637604433038702,
+              "n": 12
+            },
+            "task1583_bless_meronym_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6232682071866954,
+              "n": 12
+            },
+            "task1624_disfl_qa_question_yesno_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.91935143466613,
+              "n": 12
+            },
+            "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2640236291999798,
+              "n": 12
+            },
+            "task232_iirc_link_number_classification": {
+              "accuracy": 0.3333333333333333,
+              "log_loss": 0.826328075394485,
+              "n": 12
+            },
+            "task233_iirc_link_exists_classification": {
+              "accuracy": 0.75,
+              "log_loss": 0.6614663423458605,
+              "n": 12
+            },
+            "task276_enhanced_wsc_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5170684291131985,
+              "n": 12
+            },
+            "task329_gap_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.7880420123672054,
+              "n": 12
+            },
+            "task391_causal_relationship": {
+              "accuracy": 0.75,
+              "log_loss": 0.3982920704253901,
+              "n": 12
+            },
+            "task392_inverse_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5484280301969813,
+              "n": 12
+            },
+            "task640_esnli_classification": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.2838906801049819,
+              "n": 12
+            },
+            "task641_esnli_classification": {
+              "accuracy": 0.3333333333333333,
+              "log_loss": 1.4324619276798778,
+              "n": 12
+            },
+            "task642_esnli_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1552323755235534,
+              "n": 12
+            },
+            "task827_copa_commonsense_reasoning": {
+              "accuracy": 1.0,
+              "log_loss": 0.06876346744017554,
+              "n": 12
+            },
+            "task828_copa_commonsense_cause_effect": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2774661753669897,
+              "n": 12
+            },
+            "task892_gap_reverse_coreference_resolution": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.41711823450089885,
+              "n": 12
+            },
+            "task893_gap_fill_the_blank_coreference_resolution": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9802961298776434,
+              "n": 12
+            },
+            "task935_defeasible_nli_atomic_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.26343466985794345,
+              "n": 12
+            },
+            "task936_defeasible_nli_snli_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.22218257618142356,
+              "n": 12
+            },
+            "task937_defeasible_nli_social_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.17307850804103223,
+              "n": 12
+            },
+            "task970_sherliic_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8285337679710437,
+              "n": 12
+            },
+            "verified_access_control_check": {
+              "accuracy": 1.0,
+              "log_loss": 8.246740652157105e-05,
+              "n": 12
+            },
+            "verified_access_control_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.4754562850172765,
+              "n": 12
+            },
+            "verified_constrained_route_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.4891694337972135,
+              "n": 12
+            },
+            "verified_constrained_route_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.4322414800366445,
+              "n": 12
+            },
+            "verified_date_deadline_check": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6510316944633042,
+              "n": 12
+            },
+            "verified_date_deadline_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.3906935189496892,
+              "n": 12
+            },
+            "verified_evidence_consistency_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0006103670424251664,
+              "n": 12
+            },
+            "verified_evidence_consistency_choice": {
+              "accuracy": 1.0,
+              "log_loss": 7.230773382360973e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.290138924706307e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0007711519644931115,
+              "n": 12
+            },
+            "verified_incident_priority_check": {
+              "accuracy": 1.0,
+              "log_loss": 8.145072297525139e-05,
+              "n": 12
+            },
+            "verified_incident_priority_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.731964819959092e-05,
+              "n": 12
+            },
+            "verified_interval_scheduling_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.01318240759135214,
+              "n": 12
+            },
+            "verified_interval_scheduling_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0014999743624940448,
+              "n": 12
+            },
+            "verified_inventory_ledger_check": {
+              "accuracy": 0.5,
+              "log_loss": 0.697052728958619,
+              "n": 12
+            },
+            "verified_inventory_ledger_choice": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.7083080118049702,
+              "n": 12
+            },
+            "verified_inventory_policy_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.7018593803743958,
+              "n": 12
+            },
+            "verified_inventory_policy_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.484547986904351,
+              "n": 12
+            },
+            "verified_joined_access_check": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.774383468281998,
+              "n": 12
+            },
+            "verified_joined_access_choice": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.7320341725549362,
+              "n": 12
+            },
+            "verified_ordered_rules_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0025912914208532176,
+              "n": 12
+            },
+            "verified_ordered_rules_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.6331579966811743,
+              "n": 12
+            },
+            "verified_propositional_logic_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00019255508218421252,
+              "n": 12
+            },
+            "verified_propositional_logic_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00020783950207999046,
+              "n": 12
+            },
+            "verified_route_cost_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.14223630733000797,
+              "n": 12
+            },
+            "verified_route_cost_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.9195476597584088,
+              "n": 12
+            },
+            "verified_set_operations_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.07308568977277365,
+              "n": 12
+            },
+            "verified_set_operations_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00019260813630415927,
+              "n": 12
+            },
+            "verified_state_machine_check": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.19811667019177437,
+              "n": 12
+            },
+            "verified_state_machine_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.27599740887266117,
+              "n": 12
+            },
+            "verified_table_join_check": {
+              "accuracy": 1.0,
+              "log_loss": 6.328122129178936e-06,
+              "n": 12
+            },
+            "verified_table_join_choice": {
+              "accuracy": 1.0,
+              "log_loss": 7.629457781269939e-06,
+              "n": 12
+            },
+            "verified_temporal_evidence_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.6037279601644875,
+              "n": 12
+            },
+            "verified_temporal_evidence_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.7651651703556467,
+              "n": 12
+            },
+            "verified_tool_prerequisites_check": {
+              "accuracy": 1.0,
+              "log_loss": 2.8709637778483085e-06,
+              "n": 12
+            },
+            "verified_tool_prerequisites_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.453242524188157e-06,
+              "n": 12
+            },
+            "verified_unit_conversion_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0028488842081077445,
+              "n": 12
+            },
+            "verified_unit_conversion_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0010531933863286325,
+              "n": 12
+            },
+            "verified_weighted_choice_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00017968912185495353,
+              "n": 12
+            },
+            "verified_weighted_choice_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00026709981559451356,
+              "n": 12
+            }
+          },
+          "groups": 1100,
+          "macro_accuracy": 0.779891304347826,
+          "macro_log_loss": 0.4997218589987232,
+          "n": 1128,
+          "tasks": 92
+        },
+        "shell-test": {
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "accuracy": 0.765625,
+              "log_loss": 0.5190790856313869,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "accuracy": 0.63671875,
+              "log_loss": 0.6243917057788033,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "accuracy": 0.5625,
+              "log_loss": 0.7452827939086445,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "accuracy": 0.51953125,
+              "log_loss": 0.7181365839395244,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.648955480804767,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "accuracy": 0.51171875,
+              "log_loss": 0.7731709286775852,
+              "n": 256
+            }
+          },
+          "groups": 6,
+          "macro_accuracy": 0.5826822916666666,
+          "macro_log_loss": 0.8381694297901184,
+          "n": 960,
+          "tasks": 6
+        }
+      },
+      "selection": {
+        "adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+        "baseline": {
+          "acceptable_set_log_loss": 0.44769626992212275,
+          "accuracy": 0.7671022290545734,
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "acceptable_set_log_loss": 0.4932445486356913,
+              "accuracy": 0.71875,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "acceptable_set_log_loss": 0.6052343818521215,
+              "accuracy": 0.6328125,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "acceptable_set_log_loss": 0.7790638706044846,
+              "accuracy": 0.5625,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "acceptable_set_log_loss": 0.6979285417613111,
+              "accuracy": 0.5234375,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "acceptable_set_log_loss": 0.8916651088145021,
+              "accuracy": 0.46875,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "acceptable_set_log_loss": 0.7958052320392486,
+              "accuracy": 0.5,
+              "n": 256
+            },
+            "general-retention": {
+              "acceptable_set_log_loss": 0.297853557061375,
+              "accuracy": 0.8891595615103532,
+              "n": 1642
+            }
+          },
+          "macro_accuracy": 0.6136299373586219,
+          "macro_log_loss": 0.6515421772526764,
+          "n": 2602,
+          "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+        },
+        "checks": [
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.30884389426000347,
+              "accuracy": 0.8891595615103532,
+              "n": 1642
+            },
+            "macro_log_loss": 0.7101678320736726,
+            "selected": false,
+            "step": 100
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.31420500587090094,
+              "accuracy": 0.8824604141291108,
+              "n": 1642
+            },
+            "macro_log_loss": 0.7026157865387377,
+            "selected": false,
+            "step": 200
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3180816265646531,
+              "accuracy": 0.8867235079171741,
+              "n": 1642
+            },
+            "macro_log_loss": 0.7091823023687167,
+            "selected": false,
+            "step": 300
+          }
+        ],
+        "exit_code": 0,
+        "status": "complete",
+        "step": 0,
+        "stop_reason": "validation_patience"
+      },
+      "training": {
+        "last_complete_validation_step": 300,
+        "seconds": 1704.8664567570086,
+        "status": "bounded_stop",
+        "steps": 301,
+        "tokens": 6203175,
+        "visits": 19264
+      }
+    },
+    "original": {
+      "adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "context_quartets": {
+        "binary_forecast_brier": 0.2557174335995218,
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.125,
+            "entirely_correct": 2,
+            "quartets": 16
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.03125,
+            "entirely_correct": 2,
+            "quartets": 64
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.0625,
+            "entirely_correct": 1,
+            "quartets": 16
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.03125,
+            "entirely_correct": 2,
+            "quartets": 64
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.0,
+            "entirely_correct": 0,
+            "quartets": 16
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.0,
+            "entirely_correct": 0,
+            "quartets": 64
+          }
+        },
+        "decision_quartets": 240,
+        "entire_quartet_accuracy": 0.029166666666666667,
+        "entire_quartets_correct": 7,
+        "interpretation": "Complete-quartet consistency on six authored held-out feature groups. Binary Brier score uses probability_yes against deterministic execution labels; no long-horizon calibration claim or population uncertainty estimate."
+      },
+      "evaluations": {
+        "general-transfer": {
+          "by_task": {
+            "environment_action": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5552376953322319,
+              "n": 24
+            },
+            "environment_forecast": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5629731596363938,
+              "n": 24
+            },
+            "task065_timetravel_consistent_sentence_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3790555864831528,
+              "n": 12
+            },
+            "task066_timetravel_binary_consistency_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.009554672278471772,
+              "n": 12
+            },
+            "task1196_atomic_classification_oeffect": {
+              "accuracy": 0.5,
+              "log_loss": 1.1456871387398015,
+              "n": 12
+            },
+            "task1197_atomic_classification_oreact": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.4921292511183772,
+              "n": 12
+            },
+            "task1198_atomic_classification_owant": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1720283214221536,
+              "n": 12
+            },
+            "task1199_atomic_classification_xattr": {
+              "accuracy": 0.75,
+              "log_loss": 0.7736904584938111,
+              "n": 12
+            },
+            "task1200_atomic_classification_xeffect": {
+              "accuracy": 0.75,
+              "log_loss": 0.6047293744592257,
+              "n": 12
+            },
+            "task1201_atomic_classification_xintent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7134341119511922,
+              "n": 12
+            },
+            "task1202_atomic_classification_xneed": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5463437350677597,
+              "n": 12
+            },
+            "task1203_atomic_classification_xreact": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9189856188892245,
+              "n": 12
+            },
+            "task1204_atomic_classification_hinderedby": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.426974740595828,
+              "n": 12
+            },
+            "task1205_atomic_classification_isafter": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 0.8551194450820335,
+              "n": 12
+            },
+            "task1206_atomic_classification_isbefore": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.1134113396901746,
+              "n": 12
+            },
+            "task1207_atomic_classification_atlocation": {
+              "accuracy": 1.0,
+              "log_loss": 0.18557188314525183,
+              "n": 12
+            },
+            "task1208_atomic_classification_xreason": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.6858662625634441,
+              "n": 12
+            },
+            "task1209_atomic_classification_objectuse": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.5605305114276823,
+              "n": 12
+            },
+            "task1210_atomic_classification_madeupof": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.4981010011257472,
+              "n": 12
+            },
+            "task1211_atomic_classification_hassubevent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8005741210714356,
+              "n": 12
+            },
+            "task1212_atomic_classification_hasproperty": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.35267068520156203,
+              "n": 12
+            },
+            "task1213_atomic_classification_desires": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8720321626728557,
+              "n": 12
+            },
+            "task1214_atomic_classification_xwant": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.622238532432605,
+              "n": 12
+            },
+            "task1215_atomic_classification_capableof": {
+              "accuracy": 0.5,
+              "log_loss": 1.329648892575049,
+              "n": 12
+            },
+            "task1216_atomic_classification_causes": {
+              "accuracy": 0.5,
+              "log_loss": 0.8933037618898315,
+              "n": 12
+            },
+            "task133_winowhy_reason_plausibility_detection": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.20850406144650144,
+              "n": 12
+            },
+            "task1390_wscfixed_coreference": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3706663880551509,
+              "n": 12
+            },
+            "task1391_winogrande_easy_answer_generation": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.14124177976755514,
+              "n": 12
+            },
+            "task1393_superglue_copa_text_completion": {
+              "accuracy": 1.0,
+              "log_loss": 0.07309281500245189,
+              "n": 12
+            },
+            "task1418_bless_semantic_relation_classification": {
+              "accuracy": 0.5,
+              "log_loss": 1.4339867007719767,
+              "n": 12
+            },
+            "task1529_scitail1.1_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6927708181568585,
+              "n": 12
+            },
+            "task1554_scitail_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.1637604433038702,
+              "n": 12
+            },
+            "task1583_bless_meronym_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6232682071866954,
+              "n": 12
+            },
+            "task1624_disfl_qa_question_yesno_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.91935143466613,
+              "n": 12
+            },
+            "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2640236291999798,
+              "n": 12
+            },
+            "task232_iirc_link_number_classification": {
+              "accuracy": 0.3333333333333333,
+              "log_loss": 0.826328075394485,
+              "n": 12
+            },
+            "task233_iirc_link_exists_classification": {
+              "accuracy": 0.75,
+              "log_loss": 0.6614663423458605,
+              "n": 12
+            },
+            "task276_enhanced_wsc_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5170684291131985,
+              "n": 12
+            },
+            "task329_gap_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.7880420123672054,
+              "n": 12
+            },
+            "task391_causal_relationship": {
+              "accuracy": 0.75,
+              "log_loss": 0.3982920704253901,
+              "n": 12
+            },
+            "task392_inverse_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5484280301969813,
+              "n": 12
+            },
+            "task640_esnli_classification": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.2838906801049819,
+              "n": 12
+            },
+            "task641_esnli_classification": {
+              "accuracy": 0.3333333333333333,
+              "log_loss": 1.4324619276798778,
+              "n": 12
+            },
+            "task642_esnli_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1552323755235534,
+              "n": 12
+            },
+            "task827_copa_commonsense_reasoning": {
+              "accuracy": 1.0,
+              "log_loss": 0.06876346744017554,
+              "n": 12
+            },
+            "task828_copa_commonsense_cause_effect": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2774661753669897,
+              "n": 12
+            },
+            "task892_gap_reverse_coreference_resolution": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.41711823450089885,
+              "n": 12
+            },
+            "task893_gap_fill_the_blank_coreference_resolution": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9802961298776434,
+              "n": 12
+            },
+            "task935_defeasible_nli_atomic_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.26343466985794345,
+              "n": 12
+            },
+            "task936_defeasible_nli_snli_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.22218257618142356,
+              "n": 12
+            },
+            "task937_defeasible_nli_social_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.17307850804103223,
+              "n": 12
+            },
+            "task970_sherliic_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8285337679710437,
+              "n": 12
+            },
+            "verified_access_control_check": {
+              "accuracy": 1.0,
+              "log_loss": 8.246740652157105e-05,
+              "n": 12
+            },
+            "verified_access_control_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.4754562850172765,
+              "n": 12
+            },
+            "verified_constrained_route_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.4891694337972135,
+              "n": 12
+            },
+            "verified_constrained_route_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.4322414800366445,
+              "n": 12
+            },
+            "verified_date_deadline_check": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6510316944633042,
+              "n": 12
+            },
+            "verified_date_deadline_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.3906935189496892,
+              "n": 12
+            },
+            "verified_evidence_consistency_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0006103670424251664,
+              "n": 12
+            },
+            "verified_evidence_consistency_choice": {
+              "accuracy": 1.0,
+              "log_loss": 7.230773382360973e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.290138924706307e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0007711519644931115,
+              "n": 12
+            },
+            "verified_incident_priority_check": {
+              "accuracy": 1.0,
+              "log_loss": 8.145072297525139e-05,
+              "n": 12
+            },
+            "verified_incident_priority_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.731964819959092e-05,
+              "n": 12
+            },
+            "verified_interval_scheduling_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.01318240759135214,
+              "n": 12
+            },
+            "verified_interval_scheduling_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0014999743624940448,
+              "n": 12
+            },
+            "verified_inventory_ledger_check": {
+              "accuracy": 0.5,
+              "log_loss": 0.697052728958619,
+              "n": 12
+            },
+            "verified_inventory_ledger_choice": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.7083080118049702,
+              "n": 12
+            },
+            "verified_inventory_policy_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.7018593803743958,
+              "n": 12
+            },
+            "verified_inventory_policy_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.484547986904351,
+              "n": 12
+            },
+            "verified_joined_access_check": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.774383468281998,
+              "n": 12
+            },
+            "verified_joined_access_choice": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.7320341725549362,
+              "n": 12
+            },
+            "verified_ordered_rules_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0025912914208532176,
+              "n": 12
+            },
+            "verified_ordered_rules_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.6331579966811743,
+              "n": 12
+            },
+            "verified_propositional_logic_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00019255508218421252,
+              "n": 12
+            },
+            "verified_propositional_logic_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00020783950207999046,
+              "n": 12
+            },
+            "verified_route_cost_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.14223630733000797,
+              "n": 12
+            },
+            "verified_route_cost_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.9195476597584088,
+              "n": 12
+            },
+            "verified_set_operations_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.07308568977277365,
+              "n": 12
+            },
+            "verified_set_operations_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00019260813630415927,
+              "n": 12
+            },
+            "verified_state_machine_check": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.19811667019177437,
+              "n": 12
+            },
+            "verified_state_machine_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.27599740887266117,
+              "n": 12
+            },
+            "verified_table_join_check": {
+              "accuracy": 1.0,
+              "log_loss": 6.328122129178936e-06,
+              "n": 12
+            },
+            "verified_table_join_choice": {
+              "accuracy": 1.0,
+              "log_loss": 7.629457781269939e-06,
+              "n": 12
+            },
+            "verified_temporal_evidence_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.6037279601644875,
+              "n": 12
+            },
+            "verified_temporal_evidence_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.7651651703556467,
+              "n": 12
+            },
+            "verified_tool_prerequisites_check": {
+              "accuracy": 1.0,
+              "log_loss": 2.8709637778483085e-06,
+              "n": 12
+            },
+            "verified_tool_prerequisites_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.453242524188157e-06,
+              "n": 12
+            },
+            "verified_unit_conversion_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0028488842081077445,
+              "n": 12
+            },
+            "verified_unit_conversion_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0010531933863286325,
+              "n": 12
+            },
+            "verified_weighted_choice_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00017968912185495353,
+              "n": 12
+            },
+            "verified_weighted_choice_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00026709981559451356,
+              "n": 12
+            }
+          },
+          "groups": 1100,
+          "macro_accuracy": 0.779891304347826,
+          "macro_log_loss": 0.4997218589987232,
+          "n": 1128,
+          "tasks": 92
+        },
+        "shell-test": {
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "accuracy": 0.765625,
+              "log_loss": 0.5190790856313869,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "accuracy": 0.63671875,
+              "log_loss": 0.6243917057788033,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "accuracy": 0.5625,
+              "log_loss": 0.7452827939086445,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "accuracy": 0.51953125,
+              "log_loss": 0.7181365839395244,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.648955480804767,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "accuracy": 0.51171875,
+              "log_loss": 0.7731709286775852,
+              "n": 256
+            }
+          },
+          "groups": 6,
+          "macro_accuracy": 0.5826822916666666,
+          "macro_log_loss": 0.8381694297901184,
+          "n": 960,
+          "tasks": 6
+        }
+      }
+    },
+    "shell-1709": {
+      "adapter_sha256": "56cd8952dee1c05ddb658275a71bc90ba6ad73c52e8455a184cce226fa447bcc",
+      "context_quartets": {
+        "binary_forecast_brier": 0.07899248007811621,
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.875,
+            "entirely_correct": 14,
+            "quartets": 16
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.90625,
+            "entirely_correct": 58,
+            "quartets": 64
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.9375,
+            "entirely_correct": 15,
+            "quartets": 16
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.984375,
+            "entirely_correct": 63,
+            "quartets": 64
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.125,
+            "entirely_correct": 2,
+            "quartets": 16
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.015625,
+            "entirely_correct": 1,
+            "quartets": 64
+          }
+        },
+        "decision_quartets": 240,
+        "entire_quartet_accuracy": 0.6375,
+        "entire_quartets_correct": 153,
+        "interpretation": "Complete-quartet consistency on six authored held-out feature groups. Binary Brier score uses probability_yes against deterministic execution labels; no long-horizon calibration claim or population uncertainty estimate."
+      },
+      "evaluations": {
+        "general-transfer": {
+          "by_task": {
+            "environment_action": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.5430833852197533,
+              "n": 24
+            },
+            "environment_forecast": {
+              "accuracy": 0.7083333333333334,
+              "log_loss": 0.5552363719410586,
+              "n": 24
+            },
+            "task065_timetravel_consistent_sentence_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5140649424640814,
+              "n": 12
+            },
+            "task066_timetravel_binary_consistency_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.0048505479639560515,
+              "n": 12
+            },
+            "task1196_atomic_classification_oeffect": {
+              "accuracy": 0.5,
+              "log_loss": 1.2233974358525137,
+              "n": 12
+            },
+            "task1197_atomic_classification_oreact": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.6383009399173956,
+              "n": 12
+            },
+            "task1198_atomic_classification_owant": {
+              "accuracy": 0.5,
+              "log_loss": 1.2790031574752214,
+              "n": 12
+            },
+            "task1199_atomic_classification_xattr": {
+              "accuracy": 0.75,
+              "log_loss": 0.7884810026180284,
+              "n": 12
+            },
+            "task1200_atomic_classification_xeffect": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.664289451130493,
+              "n": 12
+            },
+            "task1201_atomic_classification_xintent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7794539812423954,
+              "n": 12
+            },
+            "task1202_atomic_classification_xneed": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.5345177372492528,
+              "n": 12
+            },
+            "task1203_atomic_classification_xreact": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1109335722731823,
+              "n": 12
+            },
+            "task1204_atomic_classification_hinderedby": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.4440082002832775,
+              "n": 12
+            },
+            "task1205_atomic_classification_isafter": {
+              "accuracy": 0.5,
+              "log_loss": 0.926976538804984,
+              "n": 12
+            },
+            "task1206_atomic_classification_isbefore": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.2654247272419046,
+              "n": 12
+            },
+            "task1207_atomic_classification_atlocation": {
+              "accuracy": 1.0,
+              "log_loss": 0.1500348795414087,
+              "n": 12
+            },
+            "task1208_atomic_classification_xreason": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.7421317682922037,
+              "n": 12
+            },
+            "task1209_atomic_classification_objectuse": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.5976762291846291,
+              "n": 12
+            },
+            "task1210_atomic_classification_madeupof": {
+              "accuracy": 0.75,
+              "log_loss": 0.47400096084869237,
+              "n": 12
+            },
+            "task1211_atomic_classification_hassubevent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8548424995331564,
+              "n": 12
+            },
+            "task1212_atomic_classification_hasproperty": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3630880639621719,
+              "n": 12
+            },
+            "task1213_atomic_classification_desires": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.915772059413173,
+              "n": 12
+            },
+            "task1214_atomic_classification_xwant": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7343722000060491,
+              "n": 12
+            },
+            "task1215_atomic_classification_capableof": {
+              "accuracy": 0.5,
+              "log_loss": 1.476368520528256,
+              "n": 12
+            },
+            "task1216_atomic_classification_causes": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9224024659036335,
+              "n": 12
+            },
+            "task133_winowhy_reason_plausibility_detection": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.19346435988392754,
+              "n": 12
+            },
+            "task1390_wscfixed_coreference": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3682346741863123,
+              "n": 12
+            },
+            "task1391_winogrande_easy_answer_generation": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.16229137838171348,
+              "n": 12
+            },
+            "task1393_superglue_copa_text_completion": {
+              "accuracy": 1.0,
+              "log_loss": 0.035710828363502235,
+              "n": 12
+            },
+            "task1418_bless_semantic_relation_classification": {
+              "accuracy": 0.5,
+              "log_loss": 1.5429974606313612,
+              "n": 12
+            },
+            "task1529_scitail1.1_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8021351415492993,
+              "n": 12
+            },
+            "task1554_scitail_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.16472929937098665,
+              "n": 12
+            },
+            "task1583_bless_meronym_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.64366887051865,
+              "n": 12
+            },
+            "task1624_disfl_qa_question_yesno_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.0252472600602796,
+              "n": 12
+            },
+            "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2450671289851587,
+              "n": 12
+            },
+            "task232_iirc_link_number_classification": {
+              "accuracy": 0.5,
+              "log_loss": 0.7970415155263085,
+              "n": 12
+            },
+            "task233_iirc_link_exists_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.70750061230553,
+              "n": 12
+            },
+            "task276_enhanced_wsc_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.40474824871369414,
+              "n": 12
+            },
+            "task329_gap_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.8834085110187306,
+              "n": 12
+            },
+            "task391_causal_relationship": {
+              "accuracy": 0.75,
+              "log_loss": 0.3818596264401379,
+              "n": 12
+            },
+            "task392_inverse_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5751719319818841,
+              "n": 12
+            },
+            "task640_esnli_classification": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.27967532326966,
+              "n": 12
+            },
+            "task641_esnli_classification": {
+              "accuracy": 0.25,
+              "log_loss": 1.6484468093205027,
+              "n": 12
+            },
+            "task642_esnli_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.2163335615551263,
+              "n": 12
+            },
+            "task827_copa_commonsense_reasoning": {
+              "accuracy": 1.0,
+              "log_loss": 0.03529116845302254,
+              "n": 12
+            },
+            "task828_copa_commonsense_cause_effect": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.24326922088920697,
+              "n": 12
+            },
+            "task892_gap_reverse_coreference_resolution": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.4733719466240043,
+              "n": 12
+            },
+            "task893_gap_fill_the_blank_coreference_resolution": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.1890719202607,
+              "n": 12
+            },
+            "task935_defeasible_nli_atomic_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2568236490157294,
+              "n": 12
+            },
+            "task936_defeasible_nli_snli_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.20894764395560608,
+              "n": 12
+            },
+            "task937_defeasible_nli_social_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.1351993564360004,
+              "n": 12
+            },
+            "task970_sherliic_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8397210342168911,
+              "n": 12
+            },
+            "verified_access_control_check": {
+              "accuracy": 1.0,
+              "log_loss": 6.288377958745062e-06,
+              "n": 12
+            },
+            "verified_access_control_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.6881766315413356,
+              "n": 12
+            },
+            "verified_constrained_route_check": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.43649124526014815,
+              "n": 12
+            },
+            "verified_constrained_route_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.757877243635116,
+              "n": 12
+            },
+            "verified_date_deadline_check": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.6877055626795797,
+              "n": 12
+            },
+            "verified_date_deadline_choice": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.41445048841328336,
+              "n": 12
+            },
+            "verified_evidence_consistency_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00014380862294469405,
+              "n": 12
+            },
+            "verified_evidence_consistency_choice": {
+              "accuracy": 1.0,
+              "log_loss": 2.2312947576326875e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_check": {
+              "accuracy": 1.0,
+              "log_loss": 9.49729300709912e-06,
+              "n": 12
+            },
+            "verified_graph_reachability_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.00019759248855897544,
+              "n": 12
+            },
+            "verified_incident_priority_check": {
+              "accuracy": 1.0,
+              "log_loss": 8.89115956424738e-06,
+              "n": 12
+            },
+            "verified_incident_priority_choice": {
+              "accuracy": 1.0,
+              "log_loss": 9.358078414390863e-06,
+              "n": 12
+            },
+            "verified_interval_scheduling_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.02560551400841042,
+              "n": 12
+            },
+            "verified_interval_scheduling_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0003742964849496758,
+              "n": 12
+            },
+            "verified_inventory_ledger_check": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6622822852910967,
+              "n": 12
+            },
+            "verified_inventory_ledger_choice": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.778236954600472,
+              "n": 12
+            },
+            "verified_inventory_policy_check": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7052360622323923,
+              "n": 12
+            },
+            "verified_inventory_policy_choice": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.3891351457121741,
+              "n": 12
+            },
+            "verified_joined_access_check": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8172682989552197,
+              "n": 12
+            },
+            "verified_joined_access_choice": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 1.1379639076122903,
+              "n": 12
+            },
+            "verified_ordered_rules_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0003478318280821208,
+              "n": 12
+            },
+            "verified_ordered_rules_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.8107869454935109,
+              "n": 12
+            },
+            "verified_propositional_logic_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.397315725347291e-05,
+              "n": 12
+            },
+            "verified_propositional_logic_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.5057572538093966e-05,
+              "n": 12
+            },
+            "verified_route_cost_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.1324788793617376,
+              "n": 12
+            },
+            "verified_route_cost_choice": {
+              "accuracy": 0.75,
+              "log_loss": 1.0109203461915082,
+              "n": 12
+            },
+            "verified_set_operations_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00020823016032894232,
+              "n": 12
+            },
+            "verified_set_operations_choice": {
+              "accuracy": 1.0,
+              "log_loss": 3.080613183477973e-05,
+              "n": 12
+            },
+            "verified_state_machine_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.19291416075306286,
+              "n": 12
+            },
+            "verified_state_machine_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.17729111945215326,
+              "n": 12
+            },
+            "verified_table_join_check": {
+              "accuracy": 1.0,
+              "log_loss": 1.6987383180535662e-06,
+              "n": 12
+            },
+            "verified_table_join_choice": {
+              "accuracy": 1.0,
+              "log_loss": 2.3047171318209326e-06,
+              "n": 12
+            },
+            "verified_temporal_evidence_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.7723073461801077,
+              "n": 12
+            },
+            "verified_temporal_evidence_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.990170028309001,
+              "n": 12
+            },
+            "verified_tool_prerequisites_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.5696913867737785e-07,
+              "n": 12
+            },
+            "verified_tool_prerequisites_choice": {
+              "accuracy": 1.0,
+              "log_loss": 1.9937349718562563e-06,
+              "n": 12
+            },
+            "verified_unit_conversion_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00045687532583964566,
+              "n": 12
+            },
+            "verified_unit_conversion_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0003873349746224084,
+              "n": 12
+            },
+            "verified_weighted_choice_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.624208861414002e-05,
+              "n": 12
+            },
+            "verified_weighted_choice_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0001559780527194526,
+              "n": 12
+            }
+          },
+          "groups": 1100,
+          "macro_accuracy": 0.7866847826086957,
+          "macro_log_loss": 0.5386081425586061,
+          "n": 1128,
+          "tasks": 92
+        },
+        "shell-test": {
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "accuracy": 0.96875,
+              "log_loss": 0.05701496415541735,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "accuracy": 0.97265625,
+              "log_loss": 0.04903793560488809,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "accuracy": 0.96875,
+              "log_loss": 0.09272543297017212,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "accuracy": 0.99609375,
+              "log_loss": 0.011061621121789579,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "accuracy": 0.640625,
+              "log_loss": 0.6427721235528362,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "accuracy": 0.62890625,
+              "log_loss": 0.6236162431278355,
+              "n": 256
+            }
+          },
+          "groups": 6,
+          "macro_accuracy": 0.8626302083333334,
+          "macro_log_loss": 0.24603805342215646,
+          "n": 960,
+          "tasks": 6
+        }
+      },
+      "selection": {
+        "adapter_sha256": "56cd8952dee1c05ddb658275a71bc90ba6ad73c52e8455a184cce226fa447bcc",
+        "baseline": {
+          "acceptable_set_log_loss": 0.44769626992212275,
+          "accuracy": 0.7671022290545734,
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "acceptable_set_log_loss": 0.4932445486356913,
+              "accuracy": 0.71875,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "acceptable_set_log_loss": 0.6052343818521215,
+              "accuracy": 0.6328125,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "acceptable_set_log_loss": 0.7790638706044846,
+              "accuracy": 0.5625,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "acceptable_set_log_loss": 0.6979285417613111,
+              "accuracy": 0.5234375,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "acceptable_set_log_loss": 0.8916651088145021,
+              "accuracy": 0.46875,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "acceptable_set_log_loss": 0.7958052320392486,
+              "accuracy": 0.5,
+              "n": 256
+            },
+            "general-retention": {
+              "acceptable_set_log_loss": 0.297853557061375,
+              "accuracy": 0.8891595615103532,
+              "n": 1642
+            }
+          },
+          "macro_accuracy": 0.6136299373586219,
+          "macro_log_loss": 0.6515421772526764,
+          "n": 2602,
+          "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+        },
+        "checks": [
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3116569727503133,
+              "accuracy": 0.8848964677222899,
+              "n": 1642
+            },
+            "macro_log_loss": 0.4514216796711778,
+            "selected": true,
+            "step": 100
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3181049255222979,
+              "accuracy": 0.8830694275274056,
+              "n": 1642
+            },
+            "macro_log_loss": 0.36032154054828025,
+            "selected": true,
+            "step": 200
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3171459964171378,
+              "accuracy": 0.8836784409257004,
+              "n": 1642
+            },
+            "macro_log_loss": 0.315129592114769,
+            "selected": true,
+            "step": 300
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.32180578695801915,
+              "accuracy": 0.8824604141291108,
+              "n": 1642
+            },
+            "macro_log_loss": 0.2709703962912623,
+            "selected": true,
+            "step": 400
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3163115320658351,
+              "accuracy": 0.8830694275274056,
+              "n": 1642
+            },
+            "macro_log_loss": 0.26729566104874397,
+            "selected": true,
+            "step": 500
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3172361235519591,
+              "accuracy": 0.8830694275274056,
+              "n": 1642
+            },
+            "macro_log_loss": 0.2821578820242225,
+            "selected": false,
+            "step": 600
+          },
+          {
+            "eligible": false,
+            "general": {
+              "acceptable_set_log_loss": 0.3408145844003427,
+              "accuracy": 0.881851400730816,
+              "n": 1642
+            },
+            "macro_log_loss": 0.27736868719436,
+            "selected": false,
+            "step": 700
+          },
+          {
+            "eligible": false,
+            "general": {
+              "acceptable_set_log_loss": 0.3464386125430798,
+              "accuracy": 0.8836784409257004,
+              "n": 1642
+            },
+            "macro_log_loss": 0.31209077455057554,
+            "selected": false,
+            "step": 800
+          }
+        ],
+        "exit_code": 0,
+        "selected_validation": {
+          "acceptable_set_log_loss": 0.2935850498769505,
+          "accuracy": 0.8677940046118371,
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "acceptable_set_log_loss": 0.006121732753526618,
+              "accuracy": 1.0,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "acceptable_set_log_loss": 0.0003399358204702151,
+              "accuracy": 1.0,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "acceptable_set_log_loss": 0.07033374942172378,
+              "accuracy": 0.984375,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "acceptable_set_log_loss": 0.06915684045472689,
+              "accuracy": 0.98046875,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "acceptable_set_log_loss": 0.7229888316933513,
+              "accuracy": 0.5,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "acceptable_set_log_loss": 0.6858170051315742,
+              "accuracy": 0.5546875,
+              "n": 256
+            },
+            "general-retention": {
+              "acceptable_set_log_loss": 0.3163115320658351,
+              "accuracy": 0.8830694275274056,
+              "n": 1642
+            }
+          },
+          "macro_accuracy": 0.8432286682182007,
+          "macro_log_loss": 0.26729566104874397,
+          "n": 2602,
+          "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+        },
+        "status": "complete",
+        "step": 500,
+        "stop_reason": "validation_patience"
+      },
+      "training": {
+        "last_complete_validation_step": 800,
+        "seconds": 4498.4505418600165,
+        "status": "bounded_stop",
+        "steps": 801,
+        "tokens": 19771028,
+        "visits": 51232
+      }
+    },
+    "shell-907": {
+      "adapter_sha256": "c9be3151fa44674c03a8cbefdcae4f6e98665570d308dbff7c8534940fae7679",
+      "context_quartets": {
+        "binary_forecast_brier": 0.09202779324718273,
+        "by_task": {
+          "contextual-shell/config/completion_choice": {
+            "accuracy": 0.8125,
+            "entirely_correct": 13,
+            "quartets": 16
+          },
+          "contextual-shell/config/completion_forecast": {
+            "accuracy": 0.90625,
+            "entirely_correct": 58,
+            "quartets": 64
+          },
+          "contextual-shell/report/completion_choice": {
+            "accuracy": 0.9375,
+            "entirely_correct": 15,
+            "quartets": 16
+          },
+          "contextual-shell/report/completion_forecast": {
+            "accuracy": 0.921875,
+            "entirely_correct": 59,
+            "quartets": 64
+          },
+          "contextual-shell/sqlite/completion_choice": {
+            "accuracy": 0.125,
+            "entirely_correct": 2,
+            "quartets": 16
+          },
+          "contextual-shell/sqlite/completion_forecast": {
+            "accuracy": 0.03125,
+            "entirely_correct": 2,
+            "quartets": 64
+          }
+        },
+        "decision_quartets": 240,
+        "entire_quartet_accuracy": 0.6208333333333333,
+        "entire_quartets_correct": 149,
+        "interpretation": "Complete-quartet consistency on six authored held-out feature groups. Binary Brier score uses probability_yes against deterministic execution labels; no long-horizon calibration claim or population uncertainty estimate."
+      },
+      "evaluations": {
+        "general-transfer": {
+          "by_task": {
+            "environment_action": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.5500479153480861,
+              "n": 24
+            },
+            "environment_forecast": {
+              "accuracy": 0.7083333333333334,
+              "log_loss": 0.5503354351176134,
+              "n": 24
+            },
+            "task065_timetravel_consistent_sentence_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.5014430960966395,
+              "n": 12
+            },
+            "task066_timetravel_binary_consistency_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.005151815586578227,
+              "n": 12
+            },
+            "task1196_atomic_classification_oeffect": {
+              "accuracy": 0.5,
+              "log_loss": 1.200107357727404,
+              "n": 12
+            },
+            "task1197_atomic_classification_oreact": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.615741689041994,
+              "n": 12
+            },
+            "task1198_atomic_classification_owant": {
+              "accuracy": 0.5,
+              "log_loss": 1.2561743766406677,
+              "n": 12
+            },
+            "task1199_atomic_classification_xattr": {
+              "accuracy": 0.75,
+              "log_loss": 0.8182852997598276,
+              "n": 12
+            },
+            "task1200_atomic_classification_xeffect": {
+              "accuracy": 0.75,
+              "log_loss": 0.625259438107422,
+              "n": 12
+            },
+            "task1201_atomic_classification_xintent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7589651810617232,
+              "n": 12
+            },
+            "task1202_atomic_classification_xneed": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5267238885004659,
+              "n": 12
+            },
+            "task1203_atomic_classification_xreact": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.0970630485025368,
+              "n": 12
+            },
+            "task1204_atomic_classification_hinderedby": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.424958275932873,
+              "n": 12
+            },
+            "task1205_atomic_classification_isafter": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 0.9514859907468379,
+              "n": 12
+            },
+            "task1206_atomic_classification_isbefore": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.2854748147295656,
+              "n": 12
+            },
+            "task1207_atomic_classification_atlocation": {
+              "accuracy": 1.0,
+              "log_loss": 0.15522385495536328,
+              "n": 12
+            },
+            "task1208_atomic_classification_xreason": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.7234906040406338,
+              "n": 12
+            },
+            "task1209_atomic_classification_objectuse": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.603506623403791,
+              "n": 12
+            },
+            "task1210_atomic_classification_madeupof": {
+              "accuracy": 0.75,
+              "log_loss": 0.464374946485087,
+              "n": 12
+            },
+            "task1211_atomic_classification_hassubevent": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8633297050904947,
+              "n": 12
+            },
+            "task1212_atomic_classification_hasproperty": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.36613031996370005,
+              "n": 12
+            },
+            "task1213_atomic_classification_desires": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.954839697178782,
+              "n": 12
+            },
+            "task1214_atomic_classification_xwant": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7098426552689382,
+              "n": 12
+            },
+            "task1215_atomic_classification_capableof": {
+              "accuracy": 0.5,
+              "log_loss": 1.5247947457690028,
+              "n": 12
+            },
+            "task1216_atomic_classification_causes": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9160693341288474,
+              "n": 12
+            },
+            "task133_winowhy_reason_plausibility_detection": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.16433921784897823,
+              "n": 12
+            },
+            "task1390_wscfixed_coreference": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.3827490042224475,
+              "n": 12
+            },
+            "task1391_winogrande_easy_answer_generation": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.15328480517201457,
+              "n": 12
+            },
+            "task1393_superglue_copa_text_completion": {
+              "accuracy": 1.0,
+              "log_loss": 0.03571540336051421,
+              "n": 12
+            },
+            "task1418_bless_semantic_relation_classification": {
+              "accuracy": 0.5,
+              "log_loss": 1.5918600654062083,
+              "n": 12
+            },
+            "task1529_scitail1.1_classification": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.775816550539861,
+              "n": 12
+            },
+            "task1554_scitail_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.17338102573984668,
+              "n": 12
+            },
+            "task1583_bless_meronym_classification": {
+              "accuracy": 0.75,
+              "log_loss": 0.6313631978435449,
+              "n": 12
+            },
+            "task1624_disfl_qa_question_yesno_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.0570366871727128,
+              "n": 12
+            },
+            "task1640_aqa1.0_answerable_unanswerable_question_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.249386644213097,
+              "n": 12
+            },
+            "task232_iirc_link_number_classification": {
+              "accuracy": 0.25,
+              "log_loss": 0.853394774724804,
+              "n": 12
+            },
+            "task233_iirc_link_exists_classification": {
+              "accuracy": 0.75,
+              "log_loss": 0.650123700446227,
+              "n": 12
+            },
+            "task276_enhanced_wsc_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.47126913428592715,
+              "n": 12
+            },
+            "task329_gap_classification": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.8915994960412755,
+              "n": 12
+            },
+            "task391_causal_relationship": {
+              "accuracy": 0.75,
+              "log_loss": 0.3794403049626786,
+              "n": 12
+            },
+            "task392_inverse_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.5586952611603683,
+              "n": 12
+            },
+            "task640_esnli_classification": {
+              "accuracy": 0.4166666666666667,
+              "log_loss": 1.2951914511723168,
+              "n": 12
+            },
+            "task641_esnli_classification": {
+              "accuracy": 0.25,
+              "log_loss": 1.6335575876106156,
+              "n": 12
+            },
+            "task642_esnli_classification": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.2169302150557089,
+              "n": 12
+            },
+            "task827_copa_commonsense_reasoning": {
+              "accuracy": 1.0,
+              "log_loss": 0.03647807194875095,
+              "n": 12
+            },
+            "task828_copa_commonsense_cause_effect": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2715680466556655,
+              "n": 12
+            },
+            "task892_gap_reverse_coreference_resolution": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 0.46015597092095967,
+              "n": 12
+            },
+            "task893_gap_fill_the_blank_coreference_resolution": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.0763715112325836,
+              "n": 12
+            },
+            "task935_defeasible_nli_atomic_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.2477138058522864,
+              "n": 12
+            },
+            "task936_defeasible_nli_snli_classification": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.20962651892150633,
+              "n": 12
+            },
+            "task937_defeasible_nli_social_classification": {
+              "accuracy": 1.0,
+              "log_loss": 0.1422760663466284,
+              "n": 12
+            },
+            "task970_sherliic_causal_relationship": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.8513887638768406,
+              "n": 12
+            },
+            "verified_access_control_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.2617801273980886e-06,
+              "n": 12
+            },
+            "verified_access_control_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.9402418274410015,
+              "n": 12
+            },
+            "verified_constrained_route_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.5391826886556336,
+              "n": 12
+            },
+            "verified_constrained_route_choice": {
+              "accuracy": 0.5,
+              "log_loss": 1.9148482223741181,
+              "n": 12
+            },
+            "verified_date_deadline_check": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.7454703068606386,
+              "n": 12
+            },
+            "verified_date_deadline_choice": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.3513771143818319,
+              "n": 12
+            },
+            "verified_evidence_consistency_check": {
+              "accuracy": 1.0,
+              "log_loss": 2.169740670012348e-05,
+              "n": 12
+            },
+            "verified_evidence_consistency_choice": {
+              "accuracy": 1.0,
+              "log_loss": 1.6143707314419706e-05,
+              "n": 12
+            },
+            "verified_graph_reachability_check": {
+              "accuracy": 1.0,
+              "log_loss": 4.688963667560657e-06,
+              "n": 12
+            },
+            "verified_graph_reachability_choice": {
+              "accuracy": 1.0,
+              "log_loss": 5.384127999215311e-05,
+              "n": 12
+            },
+            "verified_incident_priority_check": {
+              "accuracy": 1.0,
+              "log_loss": 3.85445531395668e-06,
+              "n": 12
+            },
+            "verified_incident_priority_choice": {
+              "accuracy": 1.0,
+              "log_loss": 3.993544489441894e-06,
+              "n": 12
+            },
+            "verified_interval_scheduling_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.1840586011075198,
+              "n": 12
+            },
+            "verified_interval_scheduling_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0003849618589367486,
+              "n": 12
+            },
+            "verified_inventory_ledger_check": {
+              "accuracy": 0.5,
+              "log_loss": 0.6864719230450159,
+              "n": 12
+            },
+            "verified_inventory_ledger_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.6495741076799663,
+              "n": 12
+            },
+            "verified_inventory_policy_check": {
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.7748582457253179,
+              "n": 12
+            },
+            "verified_inventory_policy_choice": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 1.4495879394382725,
+              "n": 12
+            },
+            "verified_joined_access_check": {
+              "accuracy": 0.5833333333333334,
+              "log_loss": 0.9036275390931846,
+              "n": 12
+            },
+            "verified_joined_access_choice": {
+              "accuracy": 0.8333333333333334,
+              "log_loss": 1.258442372276095,
+              "n": 12
+            },
+            "verified_ordered_rules_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00022229987042631592,
+              "n": 12
+            },
+            "verified_ordered_rules_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.810300146292839,
+              "n": 12
+            },
+            "verified_propositional_logic_check": {
+              "accuracy": 1.0,
+              "log_loss": 3.1399163640557595e-05,
+              "n": 12
+            },
+            "verified_propositional_logic_choice": {
+              "accuracy": 1.0,
+              "log_loss": 3.311138282020157e-05,
+              "n": 12
+            },
+            "verified_route_cost_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.12908823538659478,
+              "n": 12
+            },
+            "verified_route_cost_choice": {
+              "accuracy": 0.75,
+              "log_loss": 1.1437977574031457,
+              "n": 12
+            },
+            "verified_set_operations_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.0015959652070269045,
+              "n": 12
+            },
+            "verified_set_operations_choice": {
+              "accuracy": 1.0,
+              "log_loss": 2.2134086722006165e-05,
+              "n": 12
+            },
+            "verified_state_machine_check": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.18732828903702936,
+              "n": 12
+            },
+            "verified_state_machine_choice": {
+              "accuracy": 0.9166666666666666,
+              "log_loss": 0.12809253339901336,
+              "n": 12
+            },
+            "verified_table_join_check": {
+              "accuracy": 1.0,
+              "log_loss": 7.450591628131345e-07,
+              "n": 12
+            },
+            "verified_table_join_choice": {
+              "accuracy": 1.0,
+              "log_loss": 9.139384727543467e-07,
+              "n": 12
+            },
+            "verified_temporal_evidence_check": {
+              "accuracy": 0.75,
+              "log_loss": 0.7831485330732617,
+              "n": 12
+            },
+            "verified_temporal_evidence_choice": {
+              "accuracy": 0.75,
+              "log_loss": 0.9626961468781611,
+              "n": 12
+            },
+            "verified_tool_prerequisites_check": {
+              "accuracy": 1.0,
+              "log_loss": 1.6887986061439742e-07,
+              "n": 12
+            },
+            "verified_tool_prerequisites_choice": {
+              "accuracy": 1.0,
+              "log_loss": 8.913545032451837e-07,
+              "n": 12
+            },
+            "verified_unit_conversion_check": {
+              "accuracy": 1.0,
+              "log_loss": 0.00039750127067081186,
+              "n": 12
+            },
+            "verified_unit_conversion_choice": {
+              "accuracy": 1.0,
+              "log_loss": 0.0005140236649703304,
+              "n": 12
+            },
+            "verified_weighted_choice_check": {
+              "accuracy": 1.0,
+              "log_loss": 3.163712007607747e-05,
+              "n": 12
+            },
+            "verified_weighted_choice_choice": {
+              "accuracy": 1.0,
+              "log_loss": 6.706109635306076e-05,
+              "n": 12
+            }
+          },
+          "groups": 1100,
+          "macro_accuracy": 0.7821557971014493,
+          "macro_log_loss": 0.5484254045278165,
+          "n": 1128,
+          "tasks": 92
+        },
+        "shell-test": {
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "accuracy": 0.953125,
+              "log_loss": 0.055391928827374474,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "accuracy": 0.9765625,
+              "log_loss": 0.043516277531828976,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "accuracy": 0.984375,
+              "log_loss": 0.0553381466471021,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "accuracy": 0.97265625,
+              "log_loss": 0.06045659636042932,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "accuracy": 0.609375,
+              "log_loss": 0.7105791685361376,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "accuracy": 0.578125,
+              "log_loss": 0.6773829642288401,
+              "n": 256
+            }
+          },
+          "groups": 6,
+          "macro_accuracy": 0.845703125,
+          "macro_log_loss": 0.2671108470219521,
+          "n": 960,
+          "tasks": 6
+        }
+      },
+      "selection": {
+        "adapter_sha256": "c9be3151fa44674c03a8cbefdcae4f6e98665570d308dbff7c8534940fae7679",
+        "baseline": {
+          "acceptable_set_log_loss": 0.44769626992212275,
+          "accuracy": 0.7671022290545734,
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "acceptable_set_log_loss": 0.4932445486356913,
+              "accuracy": 0.71875,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "acceptable_set_log_loss": 0.6052343818521215,
+              "accuracy": 0.6328125,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "acceptable_set_log_loss": 0.7790638706044846,
+              "accuracy": 0.5625,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "acceptable_set_log_loss": 0.6979285417613111,
+              "accuracy": 0.5234375,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "acceptable_set_log_loss": 0.8916651088145021,
+              "accuracy": 0.46875,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "acceptable_set_log_loss": 0.7958052320392486,
+              "accuracy": 0.5,
+              "n": 256
+            },
+            "general-retention": {
+              "acceptable_set_log_loss": 0.297853557061375,
+              "accuracy": 0.8891595615103532,
+              "n": 1642
+            }
+          },
+          "macro_accuracy": 0.6136299373586219,
+          "macro_log_loss": 0.6515421772526764,
+          "n": 2602,
+          "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+        },
+        "checks": [
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.30683513057776346,
+              "accuracy": 0.8861144945188795,
+              "n": 1642
+            },
+            "macro_log_loss": 0.35350205026075215,
+            "selected": true,
+            "step": 100
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3212786550697573,
+              "accuracy": 0.8824604141291108,
+              "n": 1642
+            },
+            "macro_log_loss": 0.294038406603653,
+            "selected": true,
+            "step": 200
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.313808444920209,
+              "accuracy": 0.8855054811205847,
+              "n": 1642
+            },
+            "macro_log_loss": 0.270525799364339,
+            "selected": true,
+            "step": 300
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.31763756856861225,
+              "accuracy": 0.8824604141291108,
+              "n": 1642
+            },
+            "macro_log_loss": 0.2782823477179454,
+            "selected": false,
+            "step": 400
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3165634536730514,
+              "accuracy": 0.8861144945188795,
+              "n": 1642
+            },
+            "macro_log_loss": 0.26774413830322924,
+            "selected": true,
+            "step": 500
+          },
+          {
+            "eligible": true,
+            "general": {
+              "acceptable_set_log_loss": 0.3234710587663124,
+              "accuracy": 0.881851400730816,
+              "n": 1642
+            },
+            "macro_log_loss": 0.27383367238555967,
+            "selected": false,
+            "step": 600
+          },
+          {
+            "eligible": false,
+            "general": {
+              "acceptable_set_log_loss": 0.3437625477151382,
+              "accuracy": 0.8830694275274056,
+              "n": 1642
+            },
+            "macro_log_loss": 0.29410029916591335,
+            "selected": false,
+            "step": 700
+          },
+          {
+            "eligible": false,
+            "general": {
+              "acceptable_set_log_loss": 0.3475256942285572,
+              "accuracy": 0.8836784409257004,
+              "n": 1642
+            },
+            "macro_log_loss": 0.2741886165403967,
+            "selected": false,
+            "step": 800
+          }
+        ],
+        "exit_code": 0,
+        "selected_validation": {
+          "acceptable_set_log_loss": 0.29547178779413913,
+          "accuracy": 0.8651037663335895,
+          "by_task": {
+            "contextual-shell/config/completion_choice": {
+              "acceptable_set_log_loss": 0.00573501662480104,
+              "accuracy": 1.0,
+              "n": 64
+            },
+            "contextual-shell/config/completion_forecast": {
+              "acceptable_set_log_loss": 0.00042069275744092624,
+              "accuracy": 1.0,
+              "n": 256
+            },
+            "contextual-shell/report/completion_choice": {
+              "acceptable_set_log_loss": 0.0422026952958766,
+              "accuracy": 0.984375,
+              "n": 64
+            },
+            "contextual-shell/report/completion_forecast": {
+              "acceptable_set_log_loss": 0.08723066092366281,
+              "accuracy": 0.97265625,
+              "n": 256
+            },
+            "contextual-shell/sqlite/completion_choice": {
+              "acceptable_set_log_loss": 0.7319417192766445,
+              "accuracy": 0.515625,
+              "n": 64
+            },
+            "contextual-shell/sqlite/completion_forecast": {
+              "acceptable_set_log_loss": 0.6901147295711273,
+              "accuracy": 0.51171875,
+              "n": 256
+            },
+            "general-retention": {
+              "acceptable_set_log_loss": 0.3165634536730514,
+              "accuracy": 0.8861144945188795,
+              "n": 1642
+            }
+          },
+          "macro_accuracy": 0.8386413563598399,
+          "macro_log_loss": 0.26774413830322924,
+          "n": 2602,
+          "note": "Option probabilities are conditional on the offered choices and are not calibrated probabilities of success."
+        },
+        "status": "complete",
+        "step": 500,
+        "stop_reason": "validation_patience"
+      },
+      "training": {
+        "last_complete_validation_step": 800,
+        "seconds": 4448.891369476973,
+        "status": "bounded_stop",
+        "steps": 801,
+        "tokens": 19567680,
+        "visits": 51248
+      }
+    }
+  },
+  "pipeline_status": "complete"
+}

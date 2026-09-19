@@ -1,0 +1,7 @@
+{
+  "reason": "Command-only normalized template lookup achieved 0.9366319444444444 macro validation accuracy without the goal or current state. Abort flawed data pilot before training, preserve artifacts, improve context dependence before renting again.",
+  "at": 1789821869.3674443,
+  "optimizer_updates_observed": 0,
+  "pipeline_pid": 1720,
+  "diagnostic": "Training/validation only; no held-out model scores inspected."
+}
