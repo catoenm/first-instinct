@@ -1,0 +1,121 @@
+{
+  "arms": {
+    "hybrid": {
+      "status": "local_mechanics",
+      "selected_update": null,
+      "initial_trainable_sha256": null,
+      "freeze_sha256": null,
+      "actual_learning": {
+        "physical_optimizer_attempts": 1,
+        "accepted_transactions": 1,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 16,
+            "unique_question_ids": 16,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 16,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "policy": {
+            "completed_backward_presentations": 13,
+            "unique_question_ids": 13,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 13,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 4,
+            "unique_question_ids": 4,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 4,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations."
+      },
+      "collected_training_trajectories": 4,
+      "unique_collected_case_ids": 4,
+      "collected_actor_transitions": 13,
+      "limits": "Collected trajectories are not necessarily consumed by an optimizer. Evaluation and qualification executions are excluded from these counts."
+    },
+    "outcome": {
+      "status": "local_mechanics",
+      "selected_update": null,
+      "initial_trainable_sha256": null,
+      "freeze_sha256": null,
+      "actual_learning": {
+        "physical_optimizer_attempts": 1,
+        "accepted_transactions": 1,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 16,
+            "unique_question_ids": 16,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 16,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 4,
+            "unique_question_ids": 4,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 4,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations."
+      },
+      "collected_training_trajectories": 0,
+      "unique_collected_case_ids": 0,
+      "collected_actor_transitions": 0,
+      "limits": "Collected trajectories are not necessarily consumed by an optimizer. Evaluation and qualification executions are excluded from these counts."
+    },
+    "reward": {
+      "status": "local_mechanics",
+      "selected_update": null,
+      "initial_trainable_sha256": null,
+      "freeze_sha256": null,
+      "actual_learning": {
+        "physical_optimizer_attempts": 1,
+        "accepted_transactions": 1,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "policy": {
+            "completed_backward_presentations": 13,
+            "unique_question_ids": 13,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 13,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 4,
+            "unique_question_ids": 4,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 4,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations."
+      },
+      "collected_training_trajectories": 4,
+      "unique_collected_case_ids": 4,
+      "collected_actor_transitions": 13,
+      "limits": "Collected trajectories are not necessarily consumed by an optimizer. Evaluation and qualification executions are excluded from these counts."
+    }
+  },
+  "scope": "Accounting only; no performance or promotion decision."
+}

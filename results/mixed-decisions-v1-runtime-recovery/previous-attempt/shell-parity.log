@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/first-instinct/tool_lab/decision_backend_parity.py", line 33, in <module>
+    a=p.parse_args();print(json.dumps(run(a.cases,a.references,a.output),indent=2))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/first-instinct/tool_lab/decision_backend_parity.py", line 21, in run
+    if actual!=reference:raise ValueError('Linux catalog/Docker receipt mismatch: '+reference['id'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Linux catalog/Docker receipt mismatch: 6a49468d85bbe6a13bbf518bbab37472cce2ade5d1c91b545dd9c162d8875a92

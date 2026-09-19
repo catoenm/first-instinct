@@ -1,0 +1,8 @@
+{
+  "actual_commands": 108,
+  "branches": 36,
+  "contract": "Exact observations/outcomes and protected bytes. After a SQLite mutation only, a copy with writer-version bytes96..99 normalized must reproduce the reference file checksum; schema, tables, integrity and every other database byte remain exact. The real database is never altered.",
+  "error": null,
+  "sqlite_writer_version_differences": 32,
+  "status": "passed"
+}

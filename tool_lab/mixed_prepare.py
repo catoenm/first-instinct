@@ -13,7 +13,7 @@ from tool_lab.decision_rl import actor_input
 from tool_lab.mixed_curriculum import VERSION,RECIPE,SEEDS,schedule,selected_probes
 from tool_lab.mixed_train import ORIGINAL_ADAPTER_SHA256
 
-STARTUP_TESTS = ('test_mixed_learning','test_decision_rl','test_guarded_update')
+STARTUP_TESTS = ('test_mixed_learning','test_decision_rl','test_guarded_update','test_sqlite_backend_parity')
 
 
 def prepare_data(output,adapter,shell,application):

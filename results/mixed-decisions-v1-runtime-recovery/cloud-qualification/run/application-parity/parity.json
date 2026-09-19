@@ -1,0 +1,15 @@
+{
+  "limits": "Cross-runtime parity with frozen local receipts; zero model inference or new training examples.",
+  "matched_alternatives": 138,
+  "status": "passed",
+  "tail_stops": 30,
+  "top_level_tool_calls": 1062,
+  "worker_budget": {
+    "branch_calls": 322,
+    "episodes_completed": 138,
+    "episodes_started": 138,
+    "prefix_calls": 84,
+    "setup_calls": 656,
+    "steps": 380
+  }
+}

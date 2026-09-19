@@ -1,0 +1,20 @@
+test_forecast_guard_and_replay_have_actual_consumption (test_mixed_learning.MixedLearningTests.test_forecast_guard_and_replay_have_actual_consumption) ... ok
+test_rejected_attempt_keeps_presentations_but_restores_state (test_mixed_learning.MixedLearningTests.test_rejected_attempt_keeps_presentations_but_restores_state) ... ok
+test_schedule_groups_uncertain_labels_and_balances_families (test_mixed_learning.MixedLearningTests.test_schedule_groups_uncertain_labels_and_balances_families) ... ok
+test_schedule_rejects_transfer_leakage (test_mixed_learning.MixedLearningTests.test_schedule_rejects_transfer_leakage) ... ok
+test_actor_does_not_promise_a_fixed_continuation (test_decision_rl.DecisionLearningContracts.test_actor_does_not_promise_a_fixed_continuation) ... ok
+test_multiclass_probability_metric_has_explicit_scale (test_decision_rl.DecisionLearningContracts.test_multiclass_probability_metric_has_explicit_scale) ... ok
+test_stopping_on_initially_satisfied_goal_earns_terminal_reward (test_decision_rl.DecisionLearningContracts.test_stopping_on_initially_satisfied_goal_earns_terminal_reward) ... ok
+test_accepted_attempt_changes_parameters_once (test_guarded_update.GuardedUpdateTest.test_accepted_attempt_changes_parameters_once) ... ok
+test_post_step_interruption_restores_empty_optimizer (test_guarded_update.GuardedUpdateTest.test_post_step_interruption_restores_empty_optimizer) ... ok
+test_rejection_restores_adam_moments_weights_and_rng (test_guarded_update.GuardedUpdateTest.test_rejection_restores_adam_moments_weights_and_rng) ... ok
+test_small_mean_does_not_hide_extreme_individual_change (test_guarded_update.GuardedUpdateTest.test_small_mean_does_not_hide_extreme_individual_change) ... ok
+test_metadata_outside_writer_version_is_not_ignored (test_sqlite_backend_parity.SQLiteParityTests.test_metadata_outside_writer_version_is_not_ignored) ... ok
+test_only_writer_version_differs_and_audit_does_not_modify_bytes (test_sqlite_backend_parity.SQLiteParityTests.test_only_writer_version_differs_and_audit_does_not_modify_bytes) ... ok
+test_read_only_branches_cannot_normalize_database (test_sqlite_backend_parity.SQLiteParityTests.test_read_only_branches_cannot_normalize_database) ... ok
+test_wrong_rows_or_protected_files_do_not_pass (test_sqlite_backend_parity.SQLiteParityTests.test_wrong_rows_or_protected_files_do_not_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.029s
+
+OK

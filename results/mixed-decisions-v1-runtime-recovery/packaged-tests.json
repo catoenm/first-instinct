@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "archive_sha256": "89801f3c6258126b40786142ed3637642ba83437eaab384a1d0e430e9fcbdb5e",
+  "files_verified": 213,
+  "tests": {
+    "modules": [
+      "test_mixed_learning",
+      "test_decision_rl",
+      "test_guarded_update",
+      "test_sqlite_backend_parity"
+    ],
+    "support_files": [
+      "test_general_rl.py"
+    ]
+  },
+  "exit_code": 0,
+  "scope": "Exact packaged startup tests under localTorch; changed SQLite parity separately qualified on36actualLinuxbranches/108commands. NoGPU."
+}

@@ -1,0 +1,12 @@
+{
+  "attempt": 3,
+  "change": "Permit only SQLite writer-version bytes96..99 to differ after mutation, with exact normalized full-file checksum and all observations, decoded values and protected bytes unchanged. Preserve mismatch receipts and counters on any failure. Learning recipe and data unchanged.",
+  "original_pilot_deadline": 1789877964.8810408,
+  "previous_archive_sha256": "5164d602ce492455d3790bb60aad4da4eb48bb8c0156b336480534695522e02f",
+  "previous_freeze_sha256": "25d152681ffd669c3f9c5548e35a288793e04e455ceabea5d756fb603dea9815",
+  "previous_pod": "3rklzrmj4aduso",
+  "previous_stage": "strict_sqlite_storage_parity_failed_before_training",
+  "prior_attempts_estimated_compute_usd": 0.8994115461051464,
+  "prior_attempts_reserve_usd": 2,
+  "qualification_sha256": "106a10beb5176d11365640e54a505cf8752bca428315383324e23475cb5a7384"
+}

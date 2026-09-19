@@ -129,3 +129,27 @@ Each arm is bounded to 0.7 hours; reserve setup, control evaluation, archive and
 recovery time. Install a provider-side stop guard before training. Archive even
 failures; verify downloaded hashes before deleting the owned pod. No Phantom
 resources or paid model APIs. A failed local qualification means no rental.
+
+### Cross-version SQLite qualification, before any 9B updates
+
+Two startup attempts ended before 9B learning. The first omitted two startup
+test modules; the second passed those tests but rejected a database checksum
+during shell parity. A local replay across SQLite 3.46.1 and 3.53.1 reproduced
+that mismatch: all observations, rewards, schema and rows agreed.
+
+SQLite stores its writer-library version at byte offsets 96–99.
+[SQLite file-format specification](https://www.sqlite.org/fileformat.html#the_database_header)
+The revised qualification permits only those four bytes to differ after an
+actual database mutation. The auditor reads the real database, checks its raw
+checksum against the execution receipt, and hashes a copy with those four bytes
+set to the reference writer version. That checksum must exactly match the
+reference file. Every other byte, decoded database value, public observation,
+reward, initial file and protected file remains exact. The real database is
+never altered. Read-only branches receive no exception. Negative controls for
+other metadata, changed rows, protected files and rewards must fail.
+
+This changes runtime qualification, not training labels or the learning recipe.
+It is recorded in a new execution-attempt freeze. Both failed rentals were
+recovered and deleted; their combined estimated compute was $0.8994, excluding
+storage. Reserve $2 for those attempts and at most $38 for the corrected attempt,
+keeping the original pilot's $40 allocation and original shutdown deadline.

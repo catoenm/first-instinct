@@ -1,0 +1,14 @@
+{
+  "completed_at": 1789857415.5480165,
+  "detail": "Command '['/opt/first-instinct-venv/bin/python', '-m', 'tool_lab.decision_backend_parity', '--cases', 'data/shell-parity-cases.jsonl', '--references', 'data/shell-parity-references.jsonl', '--output', 'run/shell-parity']' returned non-zero exit status 1.",
+  "error": "CalledProcessError",
+  "stages": [
+    {
+      "name": "shell-parity",
+      "started_at": 1789857409.4709902,
+      "status": "running"
+    }
+  ],
+  "started_at": 1789857409.4683187,
+  "status": "failed"
+}

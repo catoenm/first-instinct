@@ -1,0 +1,22 @@
+{
+  "cloud-qualification/download-manifest.json": "6c9741de94d0332d83ea06cb12f6cef377f3c3bb80a97c45fc85d0a5e18261b3",
+  "cloud-qualification/run/application-parity/parity.json": "b0f65a7f178549a52743896f43364fb8cbc6e19883c28bc87cfa2ab17f44ba1c",
+  "cloud-qualification/run/application-parity/plan.json": "e9a8902ff9a22630d9723755170697bc268af1f752defe893824b355f805e436",
+  "cloud-qualification/run/shell-parity/checks.jsonl": "6785d51c51a4658114c599e5464bbf01c09e3befc20ee81530d6b382aa14c91d",
+  "cloud-qualification/run/shell-parity/parity.json": "8fa9f4dd5b60a4452326b391a0077de53071a2949762e974329449316a12aa0a",
+  "cloud-qualification/run/shell-parity/plan.json": "1bc5880a4c6b78cd596ab240fe9b57be76931e5d522e95d8e6cf18471411f05a",
+  "cloud-qualification/startup-tests.log": "440fba1c3442e2d6659ad252114e72794e4ea0704c21014de44ddf0ac3db0516",
+  "execution-attempt.json": "05a055015be77da24923a887eefc89b050286500d87ce0d7eb5d07cfc626aa26",
+  "freeze.json": "db54e5a76c3bd0a1c3e44281ce8674b7a0501c25a9ccd0a71b0848c5fa089a99",
+  "local-mechanics-accounting.json": "aa0321b38dc037d3bd090cd40a5786be34133f51fddc37c4ff67cbdd7fa5919b",
+  "local-qualification/checks.jsonl": "1d3d64c2bb549b56e064663b40ba3db93ee062cd3ecab9e0e388e4120d6df3c6",
+  "local-qualification/diagnostic-receipt.json.gz": "4765f516194fbe210403099aa0dd4df51144abbf00707484625dc51b0fd26f9c",
+  "local-qualification/parity.json": "106a10beb5176d11365640e54a505cf8752bca428315383324e23475cb5a7384",
+  "local-qualification/versions.json": "ee9b013a9b960a1d1176b46ed3bc4948f428617f5bedc66e87d11fe78f4bca62",
+  "packaged-tests.json": "ccb492938f53d92211428acc6f8fe76d055de266823fafb79e796f5150dd1514",
+  "packaged-tests.log": "05af26b81a5c5c67cf1278cccc75d9c3e32701e877544cee81ffc6eccd870f6f",
+  "previous-attempt/failed-pipeline.json": "ac9f78e914657a8a7e0c994f745abb3236cb6d4a1c42e8750200754878a9d80b",
+  "previous-attempt/shell-parity.log": "704399ff2421694af7564e0cd1da5efc347f69baef77110cc36ea745558a05a5",
+  "previous-attempt/startup-tests.log": "d1871de671bfc5667ffd14237384cd3aa24f7820b5872255a2a8190e33388d73",
+  "previous-attempt/verified-recovery.json": "f9e5ce8cf13bbe3d03b62eee6e33ff3b1ff6dda222b6a4d1165a8cbdd6ccdcfc"
+}
