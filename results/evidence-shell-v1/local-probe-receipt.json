@@ -1,0 +1,28 @@
+{
+  "completed_at": 1789842674.361494,
+  "episodes_sha256": "b27eb183d798873cda85d814a606cbbd79c9e2755c2ec33565504ca599eea2c9",
+  "forecasts_sha256": "0229cbf634320640a3cf16a7445258803f73a618d3213b5c1f5ad9afd667a8d0",
+  "http_requests": 48,
+  "maximum_action_predictions": 36,
+  "maximum_forecast_predictions": 48,
+  "maximum_http_requests": 60,
+  "maximum_model_episodes": 12,
+  "model": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "qualification_sha256": "b944c8748704dd90cc9f73e79e8233b36cdbf4fe3664f1790083b1274abed30e",
+  "report_sha256": "ceffe223d307aa55474d7ef6bf3955805c73ed7fe8923d204cf62ccdddf836bd",
+  "scope": "Opened engineering fixtures, original resident MPS model. No training or cloud rental; no in-memory parameter attestation.",
+  "source_sha256": "18ee7798b4bac9d75b9489a1b00532f23b2663e854451cfdda5a29a0ccca536e",
+  "started_at": 1789842497.532066,
+  "status": "complete",
+  "typed_questions": 72
+}

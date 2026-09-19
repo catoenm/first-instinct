@@ -1,0 +1,10 @@
+{
+  "control_episodes": 72,
+  "forecasts_bound_to_executed_branches": 48,
+  "independent_terminal_verifications": 84,
+  "model_episodes": 12,
+  "note": "Offline audit. No new commands, model calls, training, or retries.",
+  "public_decisions_reconstructed": 132,
+  "source_sha256": "d0375615ba87b4df66b62e54f01ee8c31b149b3a960192879854795935546c5c",
+  "status": "passed"
+}

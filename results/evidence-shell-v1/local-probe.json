@@ -1,0 +1,56 @@
+{
+  "by_family": {
+    "config": {
+      "episodes": 4,
+      "first_actions": [
+        "raw",
+        "raw",
+        "raw",
+        "raw"
+      ],
+      "successes": 3
+    },
+    "report": {
+      "episodes": 4,
+      "first_actions": [
+        "summary",
+        "summary",
+        "summary",
+        "summary"
+      ],
+      "successes": 4
+    },
+    "sqlite": {
+      "episodes": 4,
+      "first_actions": [
+        "summary",
+        "summary",
+        "summary",
+        "summary"
+      ],
+      "successes": 4
+    }
+  },
+  "episodes": 12,
+  "forecasts": {
+    "after_inspection": {
+      "accuracy": 0.5416666666666666,
+      "brier": 0.2671585674753461,
+      "n": 24
+    },
+    "before_inspection": {
+      "accuracy": 0.5,
+      "brier": 0.2831218678729611,
+      "n": 24
+    }
+  },
+  "fully_observed_deterministic_oracle_brier": 0.0,
+  "http_requests": 48,
+  "initial_mean_absolute_distance_from_known_half_probability": 0.13976848870515823,
+  "mean_reward": 0.8766666666666666,
+  "note": "Twelve opened engineering contexts, not a held-out generalization benchmark. Forecasts use actual executed candidate branches. No model updates.",
+  "prior_only_optimal_brier": 0.25,
+  "status": "complete",
+  "successes": 11,
+  "typed_questions": 72
+}

@@ -11,6 +11,12 @@ See the [design and bounds](../docs/harbor-command-selection.md),
 [qualification results](../docs/harbor-command-results.md), and
 [richer task proposals](../docs/harbor-task-families.md).
 
+The newer [inspect-then-act qualification](../docs/evidence-shell-v1.md) measures
+what the original 9B model does before and after seeing useful tool output. Its
+direct Docker backend and authored menus are separate from the Harbor adapter.
+It records real trajectories and finds strong action selection alongside weak
+outcome forecasts; no new model training or GPU rental is involved.
+
 ## Run an example
 
 Prerequisites: Python 3.12 or later, Docker, the repository's resident selector

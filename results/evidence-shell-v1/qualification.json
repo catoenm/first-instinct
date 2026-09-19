@@ -1,0 +1,43 @@
+{
+  "actual_model_training": false,
+  "by_policy": {
+    "blind_left": {
+      "episodes": 12,
+      "mean_reward": 0.48,
+      "successes": 6
+    },
+    "blind_right": {
+      "episodes": 12,
+      "mean_reward": 0.48,
+      "successes": 6
+    },
+    "evidence_reference": {
+      "episodes": 12,
+      "mean_reward": 0.96,
+      "successes": 12
+    },
+    "finish": {
+      "episodes": 12,
+      "mean_reward": 0.0,
+      "successes": 0
+    },
+    "irrelevant_then_finish": {
+      "episodes": 12,
+      "mean_reward": -0.02,
+      "successes": 0
+    },
+    "wrong_after_evidence": {
+      "episodes": 12,
+      "mean_reward": -0.04,
+      "successes": 0
+    }
+  },
+  "episodes": 72,
+  "episodes_sha256": "2de0f3596a00c80090f601a07161dc10e2c466bc495da65ef1ef5baaa47fec40",
+  "executed_commands": 84,
+  "indistinguishable_initial_forecast_groups": 12,
+  "initial_group_success_frequency": 0.5,
+  "note": "Scripted reference/control policies qualify the environment. Their performance is not model performance. Forecasts concern a specified immediate terminal command; action probabilities are separate.",
+  "schema": "evidence-shell-v1",
+  "status": "qualified"
+}
