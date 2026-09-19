@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "scope": "Eight opened engineering cases outside frozen train/validation/test bundles; no model updates",
+  "model": {
+    "checkpoint": {
+      "kind": "supervised",
+      "label": "Supervised checkpoint, step 2742",
+      "run_status": "complete",
+      "step": 2742
+    },
+    "device": "mps",
+    "model": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "successes": 3,
+  "mean_reward": -0.28625,
+  "forecast_brier": 0.3198667076511088,
+  "http_requests": 12,
+  "typed_questions": 28,
+  "environment_source": "3de48b6c1da7c2a660d5d27b56ab968e08d29b69d95e295c33b4b2f094b0dcd9",
+  "episodes": 8,
+  "training_started": false
+}

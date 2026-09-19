@@ -1,0 +1,7 @@
+{
+  "control_episodes": 2304,
+  "independent_forecast_verifications": 4608,
+  "public_decisions_reconstructed": 13536,
+  "raw_manifest_sha256": "09c73b7ac2b37a66b15f48664bb6bc1b95cea54ef6e7954dc6c56abbf817ee64",
+  "status": "passed"
+}

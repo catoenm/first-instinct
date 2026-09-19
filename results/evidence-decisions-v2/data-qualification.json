@@ -1,0 +1,103 @@
+{
+  "aggregate_gate_correction": "Group paired outcomes within bundle and regime; equal immediate-command questions may recur across inspection-cost regimes and independent bundles. No executions or labels changed.",
+  "controls": {
+    "test/always_inspect": {
+      "episodes": 192,
+      "reward": 0.63875,
+      "successes": 192
+    },
+    "test/blind_left": {
+      "episodes": 192,
+      "reward": -0.02000000000000001,
+      "successes": 60
+    },
+    "test/reference": {
+      "episodes": 192,
+      "reward": 0.8262499999999999,
+      "successes": 168
+    },
+    "train/always_inspect": {
+      "episodes": 384,
+      "reward": 0.63875,
+      "successes": 384
+    },
+    "train/blind_left": {
+      "episodes": 384,
+      "reward": -0.02000000000000001,
+      "successes": 120
+    },
+    "train/reference": {
+      "episodes": 384,
+      "reward": 0.8262499999999999,
+      "successes": 336
+    },
+    "validation/always_inspect": {
+      "episodes": 192,
+      "reward": 0.63875,
+      "successes": 192
+    },
+    "validation/blind_left": {
+      "episodes": 192,
+      "reward": -0.02000000000000001,
+      "successes": 60
+    },
+    "validation/reference": {
+      "episodes": 192,
+      "reward": 0.8262499999999999,
+      "successes": 168
+    }
+  },
+  "counts": {
+    "test": {
+      "cases": 192,
+      "forecasts": 1152
+    },
+    "train": {
+      "cases": 384,
+      "forecasts": 2304
+    },
+    "validation": {
+      "cases": 192,
+      "forecasts": 1152
+    }
+  },
+  "executed_commands": 17472,
+  "files": {
+    "generation-builder.py": "258749c6b745601f947fa69d7072614a080af5b640e4340af3d8aa457d8797c8",
+    "test-cases.jsonl": "576926ff8416f41b6dc6361a50909422531b343e5ca37aac32baaafe2cab3816",
+    "test-controls.jsonl": "da1f55f2717930234d73421bb7da154448d9da01262e947c1a566f3706403f11",
+    "test-executions.jsonl": "d4cc0319d0a25c9439160fb4cb3de164cc4f5721e50e79434f8f21c761481302",
+    "test-forecasts.jsonl": "6eb888a2fc3ef967f4a57fa643b410af9031b64ffdab377143fe7856e09f9e65",
+    "train-cases.jsonl": "08452770a16ffbd9e9139569ccbfb21b3c84762cbee0f97417731c2557c47edf",
+    "train-controls.jsonl": "7828c29f58d5eb92d06122b3a02a8cf052f7921fd59a3dcf8568acade133f1f0",
+    "train-executions.jsonl": "25c32e972ae9dcf2503386bdb7ebf31ef820733667409985ee94914de270c39f",
+    "train-forecasts.jsonl": "3bdfba369bbbf25786ac9e64c8eb263d44667832dd6b9edbe1f6103c4ee88622",
+    "validation-cases.jsonl": "77479f2a7df3aceeec912408f9e51ea246e7ded71e0b56bc8e33f82a24a12128",
+    "validation-controls.jsonl": "0c564dd824b95355cb565893907fc1458f5efb2393a76a3beca438c04458fd90",
+    "validation-executions.jsonl": "fa004fe886fce6968207a2fb7d8db3ee4b10f55644e8d1cfeaa667a7a96a5563",
+    "validation-forecasts.jsonl": "453b5ac2460d82f5ac2945541508f6c53a75718a26f8847a01af88e9bdac5198"
+  },
+  "generation_builder_snapshot": "generation-builder.py",
+  "generation_sources": {
+    "tool_lab/contextual_shell.py": "c3874760d9c3b65468273ef2c187a22987dd5e0a52451d16f063c3e0752a8bf6",
+    "tool_lab/evidence_data.py": "258749c6b745601f947fa69d7072614a080af5b640e4340af3d8aa457d8797c8",
+    "tool_lab/evidence_env.py": "3de48b6c1da7c2a660d5d27b56ab968e08d29b69d95e295c33b4b2f094b0dcd9",
+    "tool_lab/evidence_shell.py": "6fe2e8cc272915619df0b3c1800898c0b26687cf5f6dfd95c12c5c6d2c13ecf0",
+    "tool_lab/shell_supervision.py": "0b88a66806e8e8abf9cebb389b6cafe905ad5a8ebd069492ef76544c98e5e875"
+  },
+  "paired_uncertain_input_groups": {
+    "test": 72,
+    "train": 144,
+    "validation": 72
+  },
+  "schema": "evidence-decisions-v2",
+  "scope": "Authored executed tasks; recovered completed generation after aggregate-only grouping correction. No model training.",
+  "sources": {
+    "tool_lab/contextual_shell.py": "c3874760d9c3b65468273ef2c187a22987dd5e0a52451d16f063c3e0752a8bf6",
+    "tool_lab/evidence_data.py": "9834322b176747b50b11007307f941747ce3178a185d104dce3c2d8528fdc621",
+    "tool_lab/evidence_env.py": "3de48b6c1da7c2a660d5d27b56ab968e08d29b69d95e295c33b4b2f094b0dcd9",
+    "tool_lab/evidence_shell.py": "6fe2e8cc272915619df0b3c1800898c0b26687cf5f6dfd95c12c5c6d2c13ecf0",
+    "tool_lab/shell_supervision.py": "0b88a66806e8e8abf9cebb389b6cafe905ad5a8ebd069492ef76544c98e5e875"
+  },
+  "status": "qualified"
+}

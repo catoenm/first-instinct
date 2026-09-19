@@ -1,0 +1,82 @@
+{
+  "actual_commands": 95,
+  "episodes": 4,
+  "gradient_diagnostic": {
+    "components": {
+      "actor": {
+        "critic_l2": 0.0,
+        "language_l2": 0.12235834449529648,
+        "loss": -1.3245476576662085e-08,
+        "rows": 9
+      },
+      "outcome": {
+        "critic_l2": 0.0,
+        "language_l2": 0.12881794571876526,
+        "loss": 0.6901680926481882,
+        "rows": 24
+      },
+      "replay": {
+        "critic_l2": 0.0,
+        "language_l2": 0.02178269624710083,
+        "loss": 0.6935129761695862,
+        "rows": 4
+      },
+      "value": {
+        "critic_l2": 1.5399773120880127,
+        "language_l2": 0.0,
+        "loss": 0.6155777904722426,
+        "rows": 9
+      }
+    },
+    "cosines": {
+      "actor:outcome": -0.38418623295095927,
+      "actor:replay": 0.3805800345285063,
+      "outcome:replay": -0.9871632919803434
+    },
+    "critic_backbone_connection": "detached",
+    "optimizer_steps": 0,
+    "unchanged_policy": {
+      "gradient_enabled": true,
+      "max_absolute_probability_delta": 1.4901161193847656e-08,
+      "maximum_sampled_ratio": 1.0,
+      "minimum_sampled_ratio": 1.0,
+      "sampled_ratios_inside_clip": true,
+      "transitions": 9
+    },
+    "weights_unchanged": true
+  },
+  "optimizer": {
+    "actor_loss": -1.3245476576662085e-08,
+    "critic_clip_coefficient": 1.0,
+    "critic_gradient_norm": 0.7699886560440063,
+    "entropy": 1.60805078347524,
+    "language_clip_coefficient": 1.0,
+    "language_gradient_norm": 0.13355571031570435,
+    "outcome_loss": 0.6901680926481882,
+    "post_step": {
+      "max_full_kl": 1.2665987014770508e-05,
+      "mean_full_kl": 1.209312015109592e-05,
+      "mean_sampled_action_ratio": 0.9993573957019382,
+      "transitions": 9
+    },
+    "replay_loss": 0.6935129761695862,
+    "value_loss": 0.6155777904722426
+  },
+  "parameter_audit": {
+    "changed_elements": 3344,
+    "changed_tensors": 4,
+    "examples": [
+      "embedding.weight",
+      "transform.weight",
+      "transform.bias",
+      "lm_head.weight"
+    ],
+    "interpretation": "Randomly initialized tiny contract-test network; this is not a 9B training result.",
+    "l2_delta": 0.03093874283056245,
+    "max_absolute_delta": 0.0010259151458740234,
+    "trainable_elements": 3344
+  },
+  "status": "passed",
+  "test_network_only": true,
+  "transitions": 9
+}
