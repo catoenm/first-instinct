@@ -51,19 +51,20 @@ Local qualification adds artifact staging, hash validation and atomic publicatio
 alongside costly evidence and recoverable failures. All 3,024 counterfactual
 branches were executed and audited. They represent four fixture roots, not
 thousands of independent tasks. Whole families are reserved for validation and
-transfer; the data has not yet been used for 9B training.
+transfer; prepared counts are recorded separately from actual training consumption.
 
 The [application extension](docs/application-curriculum-v1-results.md) adds real
 ToolSandbox dependency chains, duplicate prevention and already-completed tasks.
 Its 2,268 distinct alternatives were each replayed once, producing 1,564 paired
 questions from one new root. An independent audit passed, and a prospective
-training guard now rejects and rolls back over-limit updates. This data is
-prepared, not yet consumed by a 9B training run.
+training guard now rejects and rolls back over-limit updates.
 
 The [mixed-mechanism pilot](docs/mixed-decisions-v1-preflight.md) now has a qualified
 live learning path across shell and application workflows. It compares forecasts,
 executed rewards, and both together from identical 9B weights, with whole-family
 holdouts and automatic rollback of unstable updates.
+The bounded run has [launched on one H200](results/mixed-decisions-v1-launch.json);
+the preflight snapshot is not a training-performance result.
 
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,

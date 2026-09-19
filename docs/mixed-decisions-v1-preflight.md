@@ -1,6 +1,8 @@
 # A qualified live learning path across mechanisms
 
-The next controlled 9B experiment is ready to run. The new application worker
+A bounded H200 run has been [launched](../results/mixed-decisions-v1-launch.json)
+for the next controlled 9B experiment. This page records its local preflight,
+before any 9B optimizer updates. The new application worker
 executes the model's chosen tool, returns its actual observation, and independently
 checks the resulting database and reward. It supports failed-send recovery,
 prerequisites, duplicate prevention, and stopping when the goal is already met.

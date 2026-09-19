@@ -1,0 +1,17 @@
+{
+  "experiment": "mixed-decisions-v1",
+  "status": "autonomous_cloud_setup",
+  "nine_billion_parameter_optimizer_update_confirmed": false,
+  "foundation": "Qwen/Qwen3.5-9B",
+  "source_commit": "9c9640f",
+  "freeze_sha256": "8577b894c35dad29a876d24231c373b94ab9f1b5656a7137a416349664fdfaa9",
+  "uploaded_files_verified": 206,
+  "gpus": 1,
+  "gpu_model": "H200",
+  "quoted_hourly_usd": 4.59,
+  "pilot_allocation_from_original_budget_usd": 40,
+  "original_cumulative_authorization_usd": 500,
+  "provider_deadline_utc": "2026-09-20T04:19:24.881041+00:00",
+  "stage": "Detached runner waiting for foundation download; environment parity and learning follow automatically.",
+  "demo_checkpoint_changed": false
+}
