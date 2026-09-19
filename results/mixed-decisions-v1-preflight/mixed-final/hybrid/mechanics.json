@@ -1,0 +1,92 @@
+{
+  "application_top_level_calls": 19,
+  "arm": "hybrid",
+  "diagnostic": {
+    "components": {
+      "actor": {
+        "critic_l2": 0.0,
+        "language_l2": 0.20572292804718018,
+        "loss": 4.584972679300137e-09,
+        "rows": 13
+      },
+      "outcome": {
+        "critic_l2": 0.0,
+        "language_l2": 0.33306869864463806,
+        "loss": 1.1086376011371613,
+        "rows": 16
+      },
+      "replay": {
+        "critic_l2": 0.0,
+        "language_l2": 0.004779508337378502,
+        "loss": 0.6928983330726624,
+        "rows": 4
+      },
+      "value": {
+        "critic_l2": 0.527197539806366,
+        "language_l2": 0.0,
+        "loss": 0.1651692122507554,
+        "rows": 13
+      }
+    },
+    "cosines": {
+      "actor:outcome": 0.8471872318636676,
+      "actor:replay": 0.7152211597057148,
+      "outcome:replay": 0.8248413435454406
+    },
+    "critic_backbone_connection": "detached",
+    "optimizer_steps": 0,
+    "unchanged_policy": {
+      "gradient_enabled": true,
+      "max_absolute_probability_delta": 2.2351741790771484e-08,
+      "maximum_sampled_ratio": 1.0,
+      "minimum_sampled_ratio": 0.9999997615814209,
+      "sampled_ratios_inside_clip": true,
+      "transitions": 13
+    },
+    "weights_unchanged": true
+  },
+  "episodes": 4,
+  "optimizer_presentations": {
+    "outcome": 16,
+    "policy": 13,
+    "replay": 4
+  },
+  "parameter_audit": {
+    "changed_elements": 3344,
+    "changed_tensors": 4,
+    "examples": [
+      "embedding.weight",
+      "transform.weight",
+      "transform.bias",
+      "lm_head.weight"
+    ],
+    "interpretation": "Random tiny network only; no pretrained weights were updated.",
+    "l2_delta": 0.03224966304294905,
+    "max_absolute_delta": 0.0010285377502441406,
+    "trainable_elements": 3344
+  },
+  "shell_commands": 6,
+  "status": "passed",
+  "step": {
+    "accepted": true,
+    "checkpoint_eligible": true,
+    "diagnostic": {
+      "max_full_kl": 1.1235475540161133e-05,
+      "mean_full_kl": 9.641051292419434e-06,
+      "mean_sampled_action_ratio": 1.002229662502513,
+      "transitions": 17
+    },
+    "metrics": {
+      "critic_gradient_norm": 0.263598769903183,
+      "language_gradient_norm": 0.5209733843803406,
+      "outcome_loss": 1.1086376011371613,
+      "policy_loss": 0.06159637524531436,
+      "replay_loss": 0.6928983330726624
+    },
+    "parameters_and_optimizer_restored": false,
+    "phase": "accepted",
+    "physical_steps": 1,
+    "reason": null
+  },
+  "transitions": 13
+}

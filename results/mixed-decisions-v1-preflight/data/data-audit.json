@@ -1,0 +1,120 @@
+{
+  "application": {
+    "aggregate_float_tolerance": 1e-12,
+    "auditor_sha256": "21318498310eb94f198751336c3098afde31e20f2c3347fdf0b371a64a358cb5",
+    "base_world_goal_tasks": 18,
+    "branch_calls": 6940,
+    "concrete_initial_database_snapshots": 9,
+    "distinct_executed_alternatives": 2268,
+    "exact_question_and_label_match": true,
+    "fresh_context_shortcut_ceilings": {
+      "fresh_contexts": 18,
+      "goal_without_observations": 0.3333333333333333,
+      "menu_only": 0.3333333333333333,
+      "observations_without_goal": 0.6111111111111112
+    },
+    "optimizer_presentations": 0,
+    "prefix_calls": 4536,
+    "production_and_replay_branches": 4536,
+    "public_contexts": 26,
+    "questions": {
+      "decision": 26,
+      "forecast": 1512,
+      "observation_value": 26
+    },
+    "replay_executions": 2268,
+    "root_fixtures": 1,
+    "scope": "Labels, frame conditions, visible inputs, full counterfactual menus and counts independently rechecked. Two deterministic executions per label; nine concrete initial databases. No learned performance claim.",
+    "semantic_world_configurations": 9,
+    "setup_calls": 22788,
+    "status": "passed",
+    "token_audit": null,
+    "total_top_level_tool_calls": 34264,
+    "trained_questions": 0,
+    "world_goal_context_cases": 84
+  },
+  "shell": {
+    "audit_dependencies_sha256": {
+      "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+      "tool_lab/contextual_shell_audit.py": "1d7aa7369d54e06d5f2b6af1a89fdec3f1330e35fba42d85cd34a80ba49d1f45",
+      "tool_lab/decision_collect.py": "d3caf1e53a0af0ec26c366701409658996c097406114a240225f8f29f0796773",
+      "tool_lab/decision_curriculum.py": "b212c1f630367ad680142f1a651872150ee0e3212777266e7647ffc416156725"
+    },
+    "auditor_source_sha256": "bdf85fae2ed566a9580de982911ba048be621214ea55cd13243f34aedf5bfaee",
+    "collection_qualification_sha256": "4a183525f5e433fc632c1ac685302cd211d8a8a5eade1b753911a230c4dbabfc",
+    "family_ownership": {
+      "config": [
+        "train"
+      ],
+      "publish": [
+        "transfer"
+      ],
+      "report": [
+        "validation"
+      ],
+      "sqlite": [
+        "train"
+      ]
+    },
+    "fresh_context_shortcut_ceilings": {
+      "goal_without_observations": {
+        "contexts": 16,
+        "maximum_accuracy": 0.5
+      },
+      "menu_only": {
+        "contexts": 16,
+        "maximum_accuracy": 0.5
+      },
+      "observations_without_goal": {
+        "contexts": 16,
+        "maximum_accuracy": 0.5
+      }
+    },
+    "limits": "Four authored mechanisms and one fixture root per family in the initial qualification. Historical contradictions have explicitly obsolete provenance; noisy current-source reliability is not yet covered.",
+    "model_inference": false,
+    "optimizer_steps": 0,
+    "prepared_by_split": {
+      "train": {
+        "decision": 44,
+        "forecast": 1008,
+        "observation_value": 44
+      },
+      "transfer": {
+        "decision": 22,
+        "forecast": 504,
+        "observation_value": 22
+      },
+      "validation": {
+        "decision": 22,
+        "forecast": 504,
+        "observation_value": 22
+      }
+    },
+    "questions_reconstructed": 2192,
+    "reference_controls": {
+      "config": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.8277777777777778
+      },
+      "publish": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.7961111111111111
+      },
+      "report": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.8277777777777778
+      },
+      "sqlite": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.8277777777777778
+      }
+    },
+    "status": "passed",
+    "token_audit": null,
+    "trained_questions": 0
+  }
+}

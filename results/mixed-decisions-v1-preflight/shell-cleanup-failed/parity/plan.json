@@ -1,0 +1,6 @@
+{
+  "cases_sha256": "8963fa03ae11d7d3ce66dc258d503130f3587cf8b827fcf4abc8ed48ddaffdce",
+  "maximum_branches": 252,
+  "maximum_commands": 2400,
+  "references_sha256": "ed8957187c9b4d43268928c1acfcaf41998c449ca531ee90e5be06a4fb617541"
+}

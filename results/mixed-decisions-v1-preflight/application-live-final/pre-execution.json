@@ -1,0 +1,21 @@
+{
+  "case_ids": [
+    "740a7a98c7492e498cba1f67c1e704cc406ff865d4f11b198df7b3407b14e0fb",
+    "de4a7da77348378e0d323ac2eb8dd3be4e03d2a562aad45d3ddc27c091faebf9",
+    "30ea9067c2489cbd37fde543698789eca235cb9acb6fd0b5b97d74ce12f7d192",
+    "e817a4f0aff8fd7313ea0690e4aaee6d166713ece4ffb5fee4f3e5be7752f5d5"
+  ],
+  "corpus_qualification_sha256": "50109ba4629d2b0c778dba7abcf506361573921f8fc90bedffe3c9a357d1bcb4",
+  "max_episodes_per_worker": 2,
+  "max_tool_calls_per_worker": 100,
+  "seed": 283,
+  "sources": {
+    "tool_lab/application_live.py": "14c40304a5a1e34bd47a4af062444cd623d181fea46196e88d040439999ab03b",
+    "tool_lab/application_mechanics.py": "0f64a0067acc82ea55b29b43fce05eaa40ade446f7f363f7dff0b3c4869bfe70",
+    "tool_lab/application_worker.py": "1d34546b22c1359555e82f56766cab28079beb2f31215f410d347b526ebb48c9",
+    "tool_lab/decision_rl.py": "74adbe855b975e3cb5c8f2e96bdafdb9c335180bf202018e0fa82dc517087513",
+    "tool_lab/guarded_update.py": "b8123198902fd8fd7aeff1af9c38d2d4dd9e7bde523fd40c2db5b63ebc7e22ac"
+  },
+  "training_network": "random tiny language network only",
+  "workers": 2
+}

@@ -1,0 +1,8 @@
+{
+  "cases_sha256": "8a0378fb8671674f7704a257faa3efbdf409fe5a8342d2f0aa666e26047035df",
+  "interpretation": "Compare exact existing receipts, not collect new training labels. A free terminal stop may close an immediate nonterminal branch.",
+  "max_calls": 4000,
+  "max_episodes": 138,
+  "max_seconds": 900,
+  "references_sha256": "7ef232275ba852e7df31e019dbd24bb75bf4b35eeb25074d6d023b3ee717dc76"
+}

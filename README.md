@@ -60,6 +60,11 @@ questions from one new root. An independent audit passed, and a prospective
 training guard now rejects and rolls back over-limit updates. This data is
 prepared, not yet consumed by a 9B training run.
 
+The [mixed-mechanism pilot](docs/mixed-decisions-v1-preflight.md) now has a qualified
+live learning path across shell and application workflows. It compares forecasts,
+executed rewards, and both together from identical 9B weights, with whole-family
+holdouts and automatic rollback of unstable updates.
+
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,
 replacement parts and irreversible damage. They supply **59,993 training

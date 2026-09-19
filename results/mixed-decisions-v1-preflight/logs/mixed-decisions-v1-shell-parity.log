@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/shutil.py", line 674, in _rmtree_safe_fd
+    topfd = os.open(name, os.O_RDONLY | os.O_NONBLOCK, dir_fd=dirfd)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/tmp/evidence-worker-d3fz0h3t'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/assets/tool_lab/decision_backend_parity.py", line 33, in <module>
+    a=p.parse_args();print(json.dumps(run(a.cases,a.references,a.output),indent=2))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/assets/tool_lab/decision_backend_parity.py", line 27, in run
+    finally:engine.close()
+            ^^^^^^^^^^^^^^
+  File "/assets/tool_lab/evidence_env.py", line 193, in close
+    self.folder.cleanup()
+  File "/usr/local/lib/python3.12/tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "/usr/local/lib/python3.12/tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "/usr/local/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/usr/local/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/usr/local/lib/python3.12/tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "/usr/local/lib/python3.12/tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "/usr/local/lib/python3.12/tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/evidence-worker-d3fz0h3t'

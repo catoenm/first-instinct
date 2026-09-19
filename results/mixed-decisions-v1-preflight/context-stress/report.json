@@ -1,0 +1,20 @@
+{
+  "actor_inputs": 52,
+  "application_calls": 57,
+  "by_family": {
+    "application_delivery": 2134,
+    "config": 1191,
+    "publish": 1121,
+    "report": 1181,
+    "sqlite": 1501
+  },
+  "episodes": 8,
+  "limits": "Actual deliberately repeated-read trajectories; not an exhaustive reachable-state proof. Runtime encoding must reject any over-limit history without truncating it.",
+  "maximum_tokens": 2134,
+  "model_inference": false,
+  "over_1536": 10,
+  "over_2048": 2,
+  "proposed_runtime_limit": 4096,
+  "shell_commands": 32,
+  "status": "completed"
+}

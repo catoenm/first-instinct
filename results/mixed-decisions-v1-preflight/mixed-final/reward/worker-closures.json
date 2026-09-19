@@ -1,0 +1,84 @@
+[
+  {
+    "closure": {
+      "budget": {
+        "branch_calls": 7,
+        "episodes_completed": 1,
+        "episodes_started": 1,
+        "prefix_calls": 0,
+        "setup_calls": 4,
+        "steps": 7
+      },
+      "guard": {
+        "blocked_attempts": [
+          "socket.socket",
+          "socket.create_connection",
+          "socket.getaddrinfo",
+          "subprocess.Popen",
+          "socket.socket"
+        ],
+        "environment_allowlist": [
+          "HF_HUB_OFFLINE",
+          "HOME",
+          "LANG",
+          "PATH",
+          "PYTHONNOUSERSITE",
+          "TMPDIR",
+          "TOKENIZERS_PARALLELISM",
+          "TRANSFORMERS_OFFLINE",
+          "TZ"
+        ],
+        "import_blocked_attempts": [
+          "socket.socket"
+        ],
+        "post_import_attempt_count": 5,
+        "probe_attempt_count": 4,
+        "scope": "Python socket/subprocess interception; not an OS sandbox"
+      },
+      "incomplete_episode": false,
+      "type": "closed"
+    },
+    "journal": "worker-0.jsonl"
+  },
+  {
+    "closure": {
+      "budget": {
+        "branch_calls": 1,
+        "episodes_completed": 1,
+        "episodes_started": 1,
+        "prefix_calls": 3,
+        "setup_calls": 4,
+        "steps": 1
+      },
+      "guard": {
+        "blocked_attempts": [
+          "socket.socket",
+          "socket.create_connection",
+          "socket.getaddrinfo",
+          "subprocess.Popen",
+          "socket.socket"
+        ],
+        "environment_allowlist": [
+          "HF_HUB_OFFLINE",
+          "HOME",
+          "LANG",
+          "PATH",
+          "PYTHONNOUSERSITE",
+          "TMPDIR",
+          "TOKENIZERS_PARALLELISM",
+          "TRANSFORMERS_OFFLINE",
+          "TZ"
+        ],
+        "import_blocked_attempts": [
+          "socket.socket"
+        ],
+        "post_import_attempt_count": 5,
+        "probe_attempt_count": 4,
+        "scope": "Python socket/subprocess interception; not an OS sandbox"
+      },
+      "incomplete_episode": false,
+      "type": "closed"
+    },
+    "journal": "worker-1.jsonl"
+  }
+]

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/mitchell/Documents/workspace/ml-data/tool_lab/mixed_prepare.py", line 134, in <module>
+    a=p.parse_args();r=prepare_data(a.output,a.adapter,a.shell,a.application)
+                       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchell/Documents/workspace/ml-data/tool_lab/mixed_prepare.py", line 59, in prepare_data
+    'report':['validation'],'publish':['test']}:raise ValueError('Mechanism holdout differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Mechanism holdout differs

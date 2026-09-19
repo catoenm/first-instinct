@@ -1,0 +1,128 @@
+{
+  "actual_database_and_actor_return_audits": "passed",
+  "consumed_presentations": {
+    "forecast": 16,
+    "policy": 9,
+    "replay": 4
+  },
+  "episodes": 4,
+  "forecast_metric_smoke": {
+    "accuracy": 0.5625,
+    "brier": 0.6351845906982002,
+    "contract": "Multiclass Brier sums squared errors across all three outcomes; not directly comparable with v2 binary-component Brier.",
+    "log_loss": 1.0512830936102604,
+    "n": 16
+  },
+  "gradient_diagnostic": {
+    "components": {
+      "actor": {
+        "critic_l2": 0.0,
+        "language_l2": 0.23061615228652954,
+        "loss": 6.6227383022088304e-09,
+        "rows": 9
+      },
+      "outcome": {
+        "critic_l2": 0.0,
+        "language_l2": 0.5544428825378418,
+        "loss": 1.0575472712516785,
+        "rows": 16
+      },
+      "replay": {
+        "critic_l2": 0.0,
+        "language_l2": 0.09597652405500412,
+        "loss": 0.6973670721054077,
+        "rows": 4
+      },
+      "value": {
+        "critic_l2": 0.5596638917922974,
+        "language_l2": 0.0,
+        "loss": 0.4523555371496412,
+        "rows": 9
+      }
+    },
+    "cosines": {
+      "actor:outcome": -0.4384691216047785,
+      "actor:replay": 0.22414703273822623,
+      "outcome:replay": -0.9234989383515851
+    },
+    "critic_backbone_connection": "detached",
+    "optimizer_steps": 0,
+    "unchanged_policy": {
+      "gradient_enabled": true,
+      "max_absolute_probability_delta": 2.2351741790771484e-08,
+      "maximum_sampled_ratio": 1.000000238418579,
+      "minimum_sampled_ratio": 1.0,
+      "sampled_ratios_inside_clip": true,
+      "transitions": 9
+    },
+    "weights_unchanged": true
+  },
+  "limits": "Four tiny-network application episodes and one accepted gradient step. Arithmetic replay tests the replay component only. No9B training or learned-quality result.",
+  "optimizer_attempts": [
+    {
+      "metrics": {
+        "actor_loss": 6.6227383022088304e-09,
+        "critic_clip_coefficient": 1.0,
+        "critic_gradient_norm": 0.2798319458961487,
+        "entropy": 2.1933543417188854,
+        "language_clip_coefficient": 1.0,
+        "language_gradient_norm": 0.4543144702911377,
+        "outcome_loss": 1.0575472712516785,
+        "replay_loss": 0.6973670721054077,
+        "value_loss": 0.4523555371496412
+      },
+      "phase": "optimizer_attempt",
+      "physical_steps": 1
+    },
+    {
+      "accepted": true,
+      "checkpoint_eligible": true,
+      "diagnostic": {
+        "max_full_kl": 1.971423625946045e-05,
+        "mean_full_kl": 1.8773807419670953e-05,
+        "mean_sampled_action_ratio": 0.9994958175553216,
+        "transitions": 9
+      },
+      "metrics": {
+        "actor_loss": 6.6227383022088304e-09,
+        "critic_clip_coefficient": 1.0,
+        "critic_gradient_norm": 0.2798319458961487,
+        "entropy": 2.1933543417188854,
+        "language_clip_coefficient": 1.0,
+        "language_gradient_norm": 0.4543144702911377,
+        "outcome_loss": 1.0575472712516785,
+        "post_step": {
+          "max_full_kl": 1.971423625946045e-05,
+          "mean_full_kl": 1.8773807419670953e-05,
+          "mean_sampled_action_ratio": 0.9994958175553216,
+          "transitions": 9
+        },
+        "replay_loss": 0.6973670721054077,
+        "value_loss": 0.4523555371496412
+      },
+      "parameters_and_optimizer_restored": false,
+      "phase": "accepted",
+      "physical_steps": 1,
+      "reason": null
+    }
+  ],
+  "parameter_audit": {
+    "changed_elements": 3344,
+    "changed_tensors": 4,
+    "examples": [
+      "embedding.weight",
+      "transform.weight",
+      "transform.bias",
+      "lm_head.weight"
+    ],
+    "interpretation": "Original pretrained matrices stay frozen; the trained adapters change the effective language-network transformations.",
+    "l2_delta": 0.03225178830798665,
+    "max_absolute_delta": 0.0010271072387695312,
+    "trainable_elements": 3344
+  },
+  "private_state_excluded_from_model_tokens": true,
+  "status": "passed",
+  "test_network_only": true,
+  "top_level_tool_calls": 27,
+  "transitions": 9
+}

@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "branches": 252,
+  "actual_commands": 744,
+  "contract": "Exact reference inputs, commands, observations, files and outcomes; no new labels or model inference."
+}

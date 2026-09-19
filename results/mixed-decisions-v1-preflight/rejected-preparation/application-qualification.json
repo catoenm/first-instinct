@@ -1,0 +1,55 @@
+{
+  "base_database_worlds": 9,
+  "base_world_goal_tasks": 18,
+  "branch_calls": 6940,
+  "branches": 4536,
+  "distinct_executed_alternatives": 2268,
+  "files": {
+    "cases.jsonl": "8a0378fb8671674f7704a257faa3efbdf409fe5a8342d2f0aa666e26047035df",
+    "contexts-private.jsonl": "667e4e269bdc4d514de9c32e3ab6e997b1db1da1661102dfef10e8affa31aa39",
+    "executions.jsonl": "84affe0538c1bdb77ee2683162ee180292a5ad4e967482ffd4ac8283c424f110",
+    "questions.jsonl": "4683144e7e242309b5ae652cfab84c0630a20118aeb3dd6fe4bf1353f8269847"
+  },
+  "guard": {
+    "blocked_attempts": [
+      "socket.socket",
+      "socket.create_connection",
+      "socket.getaddrinfo",
+      "subprocess.Popen",
+      "socket.socket"
+    ],
+    "environment_allowlist": [
+      "HF_HUB_OFFLINE",
+      "HOME",
+      "LANG",
+      "PATH",
+      "PYTHONNOUSERSITE",
+      "TMPDIR",
+      "TOKENIZERS_PARALLELISM",
+      "TRANSFORMERS_OFFLINE",
+      "TZ"
+    ],
+    "import_blocked_attempts": [
+      "socket.socket"
+    ],
+    "post_import_attempt_count": 5,
+    "probe_attempt_count": 4,
+    "scope": "Python socket/subprocess interception; not an OS sandbox"
+  },
+  "limits": "One authored application mechanism and one root. Actual upstream local simulated database tools, fixed menus, specified continuations. Two executions per branch, not twice as many independent labels. No Harbor, model call or 9B training.",
+  "optimizer_presentations": 0,
+  "prefix_calls": 4536,
+  "public_contexts": 26,
+  "questions": {
+    "decision": 26,
+    "forecast": 1512,
+    "observation_value": 26
+  },
+  "root_fixtures": 1,
+  "setup_calls": 22788,
+  "status": "qualified",
+  "top_level_tool_calls": 34264,
+  "training_questions_consumed": 0,
+  "uncertain_forecast_inputs": 108,
+  "world_goal_context_cases": 84
+}

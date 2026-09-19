@@ -1,0 +1,18 @@
+{
+  "arms": [
+    "outcome",
+    "reward",
+    "hybrid"
+  ],
+  "cases": [
+    "3884eeb71308c3370a94ba72a85850bc7191cdff141665609e6e8531ae2de53c",
+    "80503e44507662ab99f480734f3450b7310cfc57150f448e676caf4165d1733f",
+    "740a7a98c7492e498cba1f67c1e704cc406ff865d4f11b198df7b3407b14e0fb",
+    "de4a7da77348378e0d323ac2eb8dd3be4e03d2a562aad45d3ddc27c091faebf9"
+  ],
+  "interpretation": "Learning mechanics only. No pretrained model, paid GPU or general-capability measurement.",
+  "maximum_live_episodes": 8,
+  "seed": 349,
+  "tiny_model": true,
+  "workers_per_mechanism": 2
+}

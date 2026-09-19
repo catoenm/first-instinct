@@ -1,0 +1,38 @@
+{
+  "budget": {
+    "branch_calls": 6,
+    "episodes_completed": 1,
+    "episodes_started": 1,
+    "prefix_calls": 0,
+    "setup_calls": 4,
+    "steps": 6
+  },
+  "guard": {
+    "blocked_attempts": [
+      "socket.socket",
+      "socket.create_connection",
+      "socket.getaddrinfo",
+      "subprocess.Popen",
+      "socket.socket"
+    ],
+    "environment_allowlist": [
+      "HF_HUB_OFFLINE",
+      "HOME",
+      "LANG",
+      "PATH",
+      "PYTHONNOUSERSITE",
+      "TMPDIR",
+      "TOKENIZERS_PARALLELISM",
+      "TRANSFORMERS_OFFLINE",
+      "TZ"
+    ],
+    "import_blocked_attempts": [
+      "socket.socket"
+    ],
+    "post_import_attempt_count": 5,
+    "probe_attempt_count": 4,
+    "scope": "Python socket/subprocess interception; not an OS sandbox"
+  },
+  "incomplete_episode": false,
+  "type": "closed"
+}

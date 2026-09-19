@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "application-worker.jsonl": "98d75dd4cb923bb9671cf006924dabbc0d00cb3b762a552d1f8574883a5263d2",
+    "application-worker.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs.jsonl": "c0ce71a7df65118131e2be96e838f1770a818b5180b6f8765323a51dff5a8a87",
+    "report.json": "80d7da132818d246b6ececc89886bb11b6e72916e32fd2f2b47dbcaecd046863",
+    "traces.jsonl": "ca3a2a14b966d6944421e4796b1649d288e78090c31d57a91cb1105b866c7d81",
+    "worker-closure.json": "12800e1aa370b4b9889a17be9b84d86420b09ca46fa5dc35c07366e941b84a06"
+  },
+  "limit": "A measured stress set, not an exhaustive upper bound; runtime encoding rejects longer histories.",
+  "report": {
+    "actor_inputs": 52,
+    "application_calls": 57,
+    "by_family": {
+      "application_delivery": 2134,
+      "config": 1191,
+      "publish": 1121,
+      "report": 1181,
+      "sqlite": 1501
+    },
+    "episodes": 8,
+    "limits": "Actual deliberately repeated-read trajectories; not an exhaustive reachable-state proof. Runtime encoding must reject any over-limit history without truncating it.",
+    "maximum_tokens": 2134,
+    "model_inference": false,
+    "over_1536": 10,
+    "over_2048": 2,
+    "proposed_runtime_limit": 4096,
+    "shell_commands": 32,
+    "status": "completed"
+  }
+}

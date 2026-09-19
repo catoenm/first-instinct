@@ -1,0 +1,1009 @@
+{
+  "after": {
+    "contact": [
+      {
+        "is_self": false,
+        "name": "Contact a",
+        "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+        "phone_number": "+12025550101",
+        "relationship": null
+      },
+      {
+        "is_self": false,
+        "name": "Contact b",
+        "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+        "phone_number": "+12025550102",
+        "relationship": null
+      },
+      {
+        "is_self": true,
+        "name": "Contact self",
+        "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+        "phone_number": "+12025550100",
+        "relationship": null
+      }
+    ],
+    "messaging": [
+      {
+        "content": "Order Cedar is ready for collection.",
+        "creation_timestamp": 1800000000.0,
+        "message_id": "f9ed7cf3-7037-5f22-a2ed-5f8cff46c453",
+        "recipient_person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+        "recipient_phone_number": "+12025550101",
+        "sender_person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+        "sender_phone_number": "+12025550100"
+      }
+    ],
+    "reminder": [],
+    "sandbox": [],
+    "setting": [
+      {
+        "cellular": true,
+        "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+        "latitude": 37.334606,
+        "location_service": false,
+        "longitude": -122.009102,
+        "low_battery_mode": false,
+        "wifi": false
+      }
+    ]
+  },
+  "before": {
+    "contact": [
+      {
+        "is_self": false,
+        "name": "Contact a",
+        "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+        "phone_number": "+12025550101",
+        "relationship": null
+      },
+      {
+        "is_self": false,
+        "name": "Contact b",
+        "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+        "phone_number": "+12025550102",
+        "relationship": null
+      },
+      {
+        "is_self": true,
+        "name": "Contact self",
+        "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+        "phone_number": "+12025550100",
+        "relationship": null
+      }
+    ],
+    "messaging": [],
+    "reminder": [],
+    "sandbox": [],
+    "setting": [
+      {
+        "cellular": false,
+        "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+        "latitude": 37.334606,
+        "location_service": false,
+        "longitude": -122.009102,
+        "low_battery_mode": true,
+        "wifi": false
+      }
+    ]
+  },
+  "case_id": "740a7a98c7492e498cba1f67c1e704cc406ff865d4f11b198df7b3407b14e0fb",
+  "cost": 0.12000000000000001,
+  "events": [
+    {
+      "action": "messages",
+      "after": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": true,
+            "wifi": false
+          }
+        ]
+      },
+      "before": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": true,
+            "wifi": false
+          }
+        ]
+      },
+      "cost": 0.02,
+      "input": {
+        "options": [
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"}",
+            "id": "messages"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_cellular_service_status\"}",
+            "id": "cellular_status"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"}",
+            "id": "battery_status"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_off"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"}",
+            "id": "cellular_on"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_on"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550101\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_a"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550102\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_b"
+          },
+          {
+            "description": "Stop without further calls.",
+            "id": "finish"
+          }
+        ],
+        "question": "Which next action has greatest expected verified reward minus future costs under this continuation? Use only this request and visible history. Stop when current message evidence proves completion. Otherwise query the current message ledger unless a query costs at least 1; if it does, stop while the ledger is unknown. With known missing delivery, obtain cellular status and, when cellular is off, low-battery status; disable low-battery mode if needed, then enable cellular and send the requested message. Stop after a successful send or an irreversible mistake. At most seven total decisions including the offered action.",
+        "state": "{\"costs\":{\"battery_off\":0.02,\"battery_on\":0.02,\"battery_status\":0.02,\"cellular_on\":0.02,\"cellular_status\":0.02,\"finish\":0.0,\"messages\":0.02,\"send_a\":0.02,\"send_b\":0.02},\"goal\":{\"content\":\"Order Cedar is ready for collection.\",\"recipient_phone\":\"+12025550101\",\"requirement\":\"Exactly one matching message; preserve all existing rows and unrelated settings throughout. Only cellular and low-battery settings may change.\"},\"history\":[],\"prior\":\"Equal prior: no matching messages, message to first recipient, or message to second recipient; independently, cellular ready, cellular disabled, or low-battery mode. Historical rows are not current evidence.\",\"remaining_decisions\":7,\"tool_contract\":\"Cellular must be enabled to send. Low-battery mode blocks enabling cellular. Disabling low-battery mode does not re-enable cellular. Enabling low-battery mode disables cellular, Wi-Fi and location.\"}"
+      },
+      "input_sha256": "eeb04e4af576c0a8f5c65dacf38c5dee9c50fabc6d659b779a6be37498dbde85",
+      "observation": {
+        "call": {
+          "arguments": {
+            "content": "Order Cedar is ready for collection."
+          },
+          "tool": "search_messages"
+        },
+        "result": []
+      },
+      "terminal": false
+    },
+    {
+      "action": "cellular_status",
+      "after": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": true,
+            "wifi": false
+          }
+        ]
+      },
+      "before": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": true,
+            "wifi": false
+          }
+        ]
+      },
+      "cost": 0.02,
+      "input": {
+        "options": [
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"}",
+            "id": "messages"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_cellular_service_status\"}",
+            "id": "cellular_status"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"}",
+            "id": "battery_status"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_off"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"}",
+            "id": "cellular_on"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_on"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550101\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_a"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550102\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_b"
+          },
+          {
+            "description": "Stop without further calls.",
+            "id": "finish"
+          }
+        ],
+        "question": "Which next action has greatest expected verified reward minus future costs under this continuation? Use only this request and visible history. Stop when current message evidence proves completion. Otherwise query the current message ledger unless a query costs at least 1; if it does, stop while the ledger is unknown. With known missing delivery, obtain cellular status and, when cellular is off, low-battery status; disable low-battery mode if needed, then enable cellular and send the requested message. Stop after a successful send or an irreversible mistake. At most seven total decisions including the offered action.",
+        "state": "{\"costs\":{\"battery_off\":0.02,\"battery_on\":0.02,\"battery_status\":0.02,\"cellular_on\":0.02,\"cellular_status\":0.02,\"finish\":0.0,\"messages\":0.02,\"send_a\":0.02,\"send_b\":0.02},\"goal\":{\"content\":\"Order Cedar is ready for collection.\",\"recipient_phone\":\"+12025550101\",\"requirement\":\"Exactly one matching message; preserve all existing rows and unrelated settings throughout. Only cellular and low-battery settings may change.\"},\"history\":[{\"action\":\"messages\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"},\"result\":[]}}],\"prior\":\"Equal prior: no matching messages, message to first recipient, or message to second recipient; independently, cellular ready, cellular disabled, or low-battery mode. Historical rows are not current evidence.\",\"remaining_decisions\":6,\"tool_contract\":\"Cellular must be enabled to send. Low-battery mode blocks enabling cellular. Disabling low-battery mode does not re-enable cellular. Enabling low-battery mode disables cellular, Wi-Fi and location.\"}"
+      },
+      "input_sha256": "99980ec0fe374c05b8ceb285e9489cc0ccfc08e7087e9b26b4dfaebaaf7cd8c9",
+      "observation": {
+        "call": {
+          "arguments": {},
+          "tool": "get_cellular_service_status"
+        },
+        "result": false
+      },
+      "terminal": false
+    },
+    {
+      "action": "battery_status",
+      "after": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": true,
+            "wifi": false
+          }
+        ]
+      },
+      "before": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": true,
+            "wifi": false
+          }
+        ]
+      },
+      "cost": 0.02,
+      "input": {
+        "options": [
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"}",
+            "id": "messages"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_cellular_service_status\"}",
+            "id": "cellular_status"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"}",
+            "id": "battery_status"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_off"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"}",
+            "id": "cellular_on"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_on"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550101\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_a"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550102\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_b"
+          },
+          {
+            "description": "Stop without further calls.",
+            "id": "finish"
+          }
+        ],
+        "question": "Which next action has greatest expected verified reward minus future costs under this continuation? Use only this request and visible history. Stop when current message evidence proves completion. Otherwise query the current message ledger unless a query costs at least 1; if it does, stop while the ledger is unknown. With known missing delivery, obtain cellular status and, when cellular is off, low-battery status; disable low-battery mode if needed, then enable cellular and send the requested message. Stop after a successful send or an irreversible mistake. At most seven total decisions including the offered action.",
+        "state": "{\"costs\":{\"battery_off\":0.02,\"battery_on\":0.02,\"battery_status\":0.02,\"cellular_on\":0.02,\"cellular_status\":0.02,\"finish\":0.0,\"messages\":0.02,\"send_a\":0.02,\"send_b\":0.02},\"goal\":{\"content\":\"Order Cedar is ready for collection.\",\"recipient_phone\":\"+12025550101\",\"requirement\":\"Exactly one matching message; preserve all existing rows and unrelated settings throughout. Only cellular and low-battery settings may change.\"},\"history\":[{\"action\":\"messages\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"},\"result\":[]}},{\"action\":\"cellular_status\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{},\"tool\":\"get_cellular_service_status\"},\"result\":false}}],\"prior\":\"Equal prior: no matching messages, message to first recipient, or message to second recipient; independently, cellular ready, cellular disabled, or low-battery mode. Historical rows are not current evidence.\",\"remaining_decisions\":5,\"tool_contract\":\"Cellular must be enabled to send. Low-battery mode blocks enabling cellular. Disabling low-battery mode does not re-enable cellular. Enabling low-battery mode disables cellular, Wi-Fi and location.\"}"
+      },
+      "input_sha256": "6eb8f8ce5a897cff94094eb77ce05d5678dc365d41cb3a07c6c98b30a8e47b4b",
+      "observation": {
+        "call": {
+          "arguments": {},
+          "tool": "get_low_battery_mode_status"
+        },
+        "result": true
+      },
+      "terminal": false
+    },
+    {
+      "action": "battery_off",
+      "after": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": false,
+            "wifi": false
+          }
+        ]
+      },
+      "before": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": true,
+            "wifi": false
+          }
+        ]
+      },
+      "cost": 0.02,
+      "input": {
+        "options": [
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"}",
+            "id": "messages"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_cellular_service_status\"}",
+            "id": "cellular_status"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"}",
+            "id": "battery_status"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_off"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"}",
+            "id": "cellular_on"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_on"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550101\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_a"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550102\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_b"
+          },
+          {
+            "description": "Stop without further calls.",
+            "id": "finish"
+          }
+        ],
+        "question": "Which next action has greatest expected verified reward minus future costs under this continuation? Use only this request and visible history. Stop when current message evidence proves completion. Otherwise query the current message ledger unless a query costs at least 1; if it does, stop while the ledger is unknown. With known missing delivery, obtain cellular status and, when cellular is off, low-battery status; disable low-battery mode if needed, then enable cellular and send the requested message. Stop after a successful send or an irreversible mistake. At most seven total decisions including the offered action.",
+        "state": "{\"costs\":{\"battery_off\":0.02,\"battery_on\":0.02,\"battery_status\":0.02,\"cellular_on\":0.02,\"cellular_status\":0.02,\"finish\":0.0,\"messages\":0.02,\"send_a\":0.02,\"send_b\":0.02},\"goal\":{\"content\":\"Order Cedar is ready for collection.\",\"recipient_phone\":\"+12025550101\",\"requirement\":\"Exactly one matching message; preserve all existing rows and unrelated settings throughout. Only cellular and low-battery settings may change.\"},\"history\":[{\"action\":\"messages\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"},\"result\":[]}},{\"action\":\"cellular_status\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{},\"tool\":\"get_cellular_service_status\"},\"result\":false}},{\"action\":\"battery_status\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"},\"result\":true}}],\"prior\":\"Equal prior: no matching messages, message to first recipient, or message to second recipient; independently, cellular ready, cellular disabled, or low-battery mode. Historical rows are not current evidence.\",\"remaining_decisions\":4,\"tool_contract\":\"Cellular must be enabled to send. Low-battery mode blocks enabling cellular. Disabling low-battery mode does not re-enable cellular. Enabling low-battery mode disables cellular, Wi-Fi and location.\"}"
+      },
+      "input_sha256": "5c9c0858cf6b091ccaa3026dac0be649efe548e163c0126d1578c653d3644127",
+      "observation": {
+        "call": {
+          "arguments": {
+            "on": false
+          },
+          "tool": "set_low_battery_mode_status"
+        },
+        "result": null
+      },
+      "terminal": false
+    },
+    {
+      "action": "cellular_on",
+      "after": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": true,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": false,
+            "wifi": false
+          }
+        ]
+      },
+      "before": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": false,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": false,
+            "wifi": false
+          }
+        ]
+      },
+      "cost": 0.02,
+      "input": {
+        "options": [
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"}",
+            "id": "messages"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_cellular_service_status\"}",
+            "id": "cellular_status"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"}",
+            "id": "battery_status"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_off"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"}",
+            "id": "cellular_on"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_on"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550101\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_a"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550102\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_b"
+          },
+          {
+            "description": "Stop without further calls.",
+            "id": "finish"
+          }
+        ],
+        "question": "Which next action has greatest expected verified reward minus future costs under this continuation? Use only this request and visible history. Stop when current message evidence proves completion. Otherwise query the current message ledger unless a query costs at least 1; if it does, stop while the ledger is unknown. With known missing delivery, obtain cellular status and, when cellular is off, low-battery status; disable low-battery mode if needed, then enable cellular and send the requested message. Stop after a successful send or an irreversible mistake. At most seven total decisions including the offered action.",
+        "state": "{\"costs\":{\"battery_off\":0.02,\"battery_on\":0.02,\"battery_status\":0.02,\"cellular_on\":0.02,\"cellular_status\":0.02,\"finish\":0.0,\"messages\":0.02,\"send_a\":0.02,\"send_b\":0.02},\"goal\":{\"content\":\"Order Cedar is ready for collection.\",\"recipient_phone\":\"+12025550101\",\"requirement\":\"Exactly one matching message; preserve all existing rows and unrelated settings throughout. Only cellular and low-battery settings may change.\"},\"history\":[{\"action\":\"messages\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"},\"result\":[]}},{\"action\":\"cellular_status\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{},\"tool\":\"get_cellular_service_status\"},\"result\":false}},{\"action\":\"battery_status\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"},\"result\":true}},{\"action\":\"battery_off\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"},\"result\":null}}],\"prior\":\"Equal prior: no matching messages, message to first recipient, or message to second recipient; independently, cellular ready, cellular disabled, or low-battery mode. Historical rows are not current evidence.\",\"remaining_decisions\":3,\"tool_contract\":\"Cellular must be enabled to send. Low-battery mode blocks enabling cellular. Disabling low-battery mode does not re-enable cellular. Enabling low-battery mode disables cellular, Wi-Fi and location.\"}"
+      },
+      "input_sha256": "3675f18bbe58bb1d141053e016383c06ecd5ba276cf7b0c6b873c173c58c42ab",
+      "observation": {
+        "call": {
+          "arguments": {
+            "on": true
+          },
+          "tool": "set_cellular_service_status"
+        },
+        "result": null
+      },
+      "terminal": false
+    },
+    {
+      "action": "send_a",
+      "after": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [
+          {
+            "content": "Order Cedar is ready for collection.",
+            "creation_timestamp": 1800000000.0,
+            "message_id": "f9ed7cf3-7037-5f22-a2ed-5f8cff46c453",
+            "recipient_person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "recipient_phone_number": "+12025550101",
+            "sender_person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "sender_phone_number": "+12025550100"
+          }
+        ],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": true,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": false,
+            "wifi": false
+          }
+        ]
+      },
+      "before": {
+        "contact": [
+          {
+            "is_self": false,
+            "name": "Contact a",
+            "person_id": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6",
+            "phone_number": "+12025550101",
+            "relationship": null
+          },
+          {
+            "is_self": false,
+            "name": "Contact b",
+            "person_id": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706",
+            "phone_number": "+12025550102",
+            "relationship": null
+          },
+          {
+            "is_self": true,
+            "name": "Contact self",
+            "person_id": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6",
+            "phone_number": "+12025550100",
+            "relationship": null
+          }
+        ],
+        "messaging": [],
+        "reminder": [],
+        "sandbox": [],
+        "setting": [
+          {
+            "cellular": true,
+            "device_id": "04640c30-ec89-5a3c-9fb4-4af3101c8e04",
+            "latitude": 37.334606,
+            "location_service": false,
+            "longitude": -122.009102,
+            "low_battery_mode": false,
+            "wifi": false
+          }
+        ]
+      },
+      "cost": 0.02,
+      "input": {
+        "options": [
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"}",
+            "id": "messages"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_cellular_service_status\"}",
+            "id": "cellular_status"
+          },
+          {
+            "description": "{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"}",
+            "id": "battery_status"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_off"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"}",
+            "id": "cellular_on"
+          },
+          {
+            "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_low_battery_mode_status\"}",
+            "id": "battery_on"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550101\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_a"
+          },
+          {
+            "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550102\"},\"tool\":\"send_message_with_phone_number\"}",
+            "id": "send_b"
+          },
+          {
+            "description": "Stop without further calls.",
+            "id": "finish"
+          }
+        ],
+        "question": "Which next action has greatest expected verified reward minus future costs under this continuation? Use only this request and visible history. Stop when current message evidence proves completion. Otherwise query the current message ledger unless a query costs at least 1; if it does, stop while the ledger is unknown. With known missing delivery, obtain cellular status and, when cellular is off, low-battery status; disable low-battery mode if needed, then enable cellular and send the requested message. Stop after a successful send or an irreversible mistake. At most seven total decisions including the offered action.",
+        "state": "{\"costs\":{\"battery_off\":0.02,\"battery_on\":0.02,\"battery_status\":0.02,\"cellular_on\":0.02,\"cellular_status\":0.02,\"finish\":0.0,\"messages\":0.02,\"send_a\":0.02,\"send_b\":0.02},\"goal\":{\"content\":\"Order Cedar is ready for collection.\",\"recipient_phone\":\"+12025550101\",\"requirement\":\"Exactly one matching message; preserve all existing rows and unrelated settings throughout. Only cellular and low-battery settings may change.\"},\"history\":[{\"action\":\"messages\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"},\"result\":[]}},{\"action\":\"cellular_status\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{},\"tool\":\"get_cellular_service_status\"},\"result\":false}},{\"action\":\"battery_status\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"},\"result\":true}},{\"action\":\"battery_off\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"},\"result\":null}},{\"action\":\"cellular_on\",\"historical\":false,\"observation\":{\"call\":{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"},\"result\":null}}],\"prior\":\"Equal prior: no matching messages, message to first recipient, or message to second recipient; independently, cellular ready, cellular disabled, or low-battery mode. Historical rows are not current evidence.\",\"remaining_decisions\":2,\"tool_contract\":\"Cellular must be enabled to send. Low-battery mode blocks enabling cellular. Disabling low-battery mode does not re-enable cellular. Enabling low-battery mode disables cellular, Wi-Fi and location.\"}"
+      },
+      "input_sha256": "f1aa5f0222eb8dd6a4cfb93672f162d279512f796a17292785b94ff4cb355977",
+      "observation": {
+        "call": {
+          "arguments": {
+            "content": "Order Cedar is ready for collection.",
+            "phone_number": "+12025550101"
+          },
+          "tool": "send_message_with_phone_number"
+        },
+        "result": "f9ed7cf3-7037-5f22-a2ed-5f8cff46c453"
+      },
+      "terminal": true
+    }
+  ],
+  "family": "application_delivery",
+  "group_id": "message-connectivity:0",
+  "input": {
+    "options": [
+      {
+        "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\"},\"tool\":\"search_messages\"}",
+        "id": "messages"
+      },
+      {
+        "description": "{\"arguments\":{},\"tool\":\"get_cellular_service_status\"}",
+        "id": "cellular_status"
+      },
+      {
+        "description": "{\"arguments\":{},\"tool\":\"get_low_battery_mode_status\"}",
+        "id": "battery_status"
+      },
+      {
+        "description": "{\"arguments\":{\"on\":false},\"tool\":\"set_low_battery_mode_status\"}",
+        "id": "battery_off"
+      },
+      {
+        "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_cellular_service_status\"}",
+        "id": "cellular_on"
+      },
+      {
+        "description": "{\"arguments\":{\"on\":true},\"tool\":\"set_low_battery_mode_status\"}",
+        "id": "battery_on"
+      },
+      {
+        "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550101\"},\"tool\":\"send_message_with_phone_number\"}",
+        "id": "send_a"
+      },
+      {
+        "description": "{\"arguments\":{\"content\":\"Order Cedar is ready for collection.\",\"phone_number\":\"+12025550102\"},\"tool\":\"send_message_with_phone_number\"}",
+        "id": "send_b"
+      },
+      {
+        "description": "Stop without further calls.",
+        "id": "finish"
+      }
+    ],
+    "question": "Which next action has greatest expected verified reward minus future costs under this continuation? Use only this request and visible history. Stop when current message evidence proves completion. Otherwise query the current message ledger unless a query costs at least 1; if it does, stop while the ledger is unknown. With known missing delivery, obtain cellular status and, when cellular is off, low-battery status; disable low-battery mode if needed, then enable cellular and send the requested message. Stop after a successful send or an irreversible mistake. At most seven total decisions including the offered action.",
+    "state": "{\"costs\":{\"battery_off\":0.02,\"battery_on\":0.02,\"battery_status\":0.02,\"cellular_on\":0.02,\"cellular_status\":0.02,\"finish\":0.0,\"messages\":0.02,\"send_a\":0.02,\"send_b\":0.02},\"goal\":{\"content\":\"Order Cedar is ready for collection.\",\"recipient_phone\":\"+12025550101\",\"requirement\":\"Exactly one matching message; preserve all existing rows and unrelated settings throughout. Only cellular and low-battery settings may change.\"},\"history\":[],\"prior\":\"Equal prior: no matching messages, message to first recipient, or message to second recipient; independently, cellular ready, cellular disabled, or low-battery mode. Historical rows are not current evidence.\",\"remaining_decisions\":7,\"tool_contract\":\"Cellular must be enabled to send. Low-battery mode blocks enabling cellular. Disabling low-battery mode does not re-enable cellular. Enabling low-battery mode disables cellular, Wi-Fi and location.\"}"
+  },
+  "outcome": "completed",
+  "prefix": [],
+  "regime": "hidden",
+  "reward": 0.88,
+  "setup": [
+    {
+      "call": {
+        "arguments": {
+          "is_self": true,
+          "name": "Contact self",
+          "phone_number": "+12025550100"
+        },
+        "tool": "add_contact"
+      },
+      "result": "12243fab-c1ab-5c93-b914-c83c3f6cc0b6"
+    },
+    {
+      "call": {
+        "arguments": {
+          "is_self": false,
+          "name": "Contact a",
+          "phone_number": "+12025550101"
+        },
+        "tool": "add_contact"
+      },
+      "result": "c3a26768-7c75-50b4-b279-6bcb9bcde0d6"
+    },
+    {
+      "call": {
+        "arguments": {
+          "is_self": false,
+          "name": "Contact b",
+          "phone_number": "+12025550102"
+        },
+        "tool": "add_contact"
+      },
+      "result": "b6a56ac6-a313-5c42-90ec-d33a4fe2f706"
+    },
+    {
+      "call": {
+        "arguments": {
+          "on": true
+        },
+        "tool": "set_low_battery_mode_status"
+      },
+      "result": null
+    }
+  ],
+  "split": "train",
+  "verdict": {
+    "completed": true,
+    "frame_preserved": true,
+    "incorrect": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "arms": [
+    "outcome",
+    "reward",
+    "hybrid"
+  ],
+  "cases": [
+    "3884eeb71308c3370a94ba72a85850bc7191cdff141665609e6e8531ae2de53c",
+    "80503e44507662ab99f480734f3450b7310cfc57150f448e676caf4165d1733f",
+    "740a7a98c7492e498cba1f67c1e704cc406ff865d4f11b198df7b3407b14e0fb",
+    "de4a7da77348378e0d323ac2eb8dd3be4e03d2a562aad45d3ddc27c091faebf9"
+  ],
+  "interpretation": "Learning mechanics only. No pretrained model, paid GPU or general-capability measurement.",
+  "maximum_live_episodes": 8,
+  "seed": 349,
+  "sources": {
+    "tool_lab/application_curriculum.py": "ba06514a6b63c8c351e2ec582212bb06f7d09085ecfbdce3c603083268316025",
+    "tool_lab/application_live.py": "14c40304a5a1e34bd47a4af062444cd623d181fea46196e88d040439999ab03b",
+    "tool_lab/application_worker.py": "1d34546b22c1359555e82f56766cab28079beb2f31215f410d347b526ebb48c9",
+    "tool_lab/decision_curriculum.py": "b212c1f630367ad680142f1a651872150ee0e3212777266e7647ffc416156725",
+    "tool_lab/decision_rl.py": "74adbe855b975e3cb5c8f2e96bdafdb9c335180bf202018e0fa82dc517087513",
+    "tool_lab/guarded_update.py": "b8123198902fd8fd7aeff1af9c38d2d4dd9e7bde523fd40c2db5b63ebc7e22ac",
+    "tool_lab/mixed_curriculum.py": "d47b7f1ddb211b00f3ab567895c25d4f33bddd65c2e27a8260a05bbdd1b23346",
+    "tool_lab/mixed_mechanics.py": "a0604a06f27a796780fc1cccdeb6dd951082e5b0c5ecf436f83c053979aec338",
+    "tool_lab/mixed_runtime.py": "366e2fa5205de7a08c6281b2e1359ae8df5e339853365acdb0235cac8fdc1d46",
+    "tool_lab/mixed_update.py": "caf3c9283e05ec6dd890577fa51a7d668577a65127a4d8107275ededd4d2f8b5"
+  },
+  "tiny_model": true,
+  "workers_per_mechanism": 2
+}

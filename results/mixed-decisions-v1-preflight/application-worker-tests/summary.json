@@ -1,0 +1,170 @@
+{
+  "top_level_tool_calls": 25,
+  "workers": [
+    {
+      "closure": {
+        "budget": {
+          "branch_calls": 0,
+          "episodes_completed": 0,
+          "episodes_started": 1,
+          "prefix_calls": 0,
+          "setup_calls": 3,
+          "steps": 0
+        },
+        "type": "aborted"
+      },
+      "journal": "fixed-menu.jsonl"
+    },
+    {
+      "closure": {
+        "budget": {
+          "branch_calls": 0,
+          "episodes_completed": 0,
+          "episodes_started": 0,
+          "prefix_calls": 0,
+          "setup_calls": 2,
+          "steps": 0
+        },
+        "type": "aborted"
+      },
+      "journal": "call-cap.jsonl"
+    },
+    {
+      "closure": {
+        "budget": {
+          "branch_calls": 0,
+          "episodes_completed": 1,
+          "episodes_started": 1,
+          "prefix_calls": 0,
+          "setup_calls": 3,
+          "steps": 1
+        },
+        "type": "aborted"
+      },
+      "journal": "episode-cap.jsonl"
+    },
+    {
+      "closure": {
+        "budget": {
+          "branch_calls": 5,
+          "episodes_completed": 1,
+          "episodes_started": 1,
+          "prefix_calls": 1,
+          "setup_calls": 4,
+          "steps": 5
+        },
+        "guard": {
+          "blocked_attempts": [
+            "socket.socket",
+            "socket.create_connection",
+            "socket.getaddrinfo",
+            "subprocess.Popen",
+            "socket.socket"
+          ],
+          "environment_allowlist": [
+            "HF_HUB_OFFLINE",
+            "HOME",
+            "LANG",
+            "PATH",
+            "PYTHONNOUSERSITE",
+            "TMPDIR",
+            "TOKENIZERS_PARALLELISM",
+            "TRANSFORMERS_OFFLINE",
+            "TZ"
+          ],
+          "import_blocked_attempts": [
+            "socket.socket"
+          ],
+          "post_import_attempt_count": 5,
+          "probe_attempt_count": 4,
+          "scope": "Python socket/subprocess interception; not an OS sandbox"
+        },
+        "incomplete_episode": false,
+        "type": "closed"
+      },
+      "journal": "recovery.jsonl"
+    },
+    {
+      "closure": {
+        "budget": {
+          "branch_calls": 1,
+          "episodes_completed": 1,
+          "episodes_started": 1,
+          "prefix_calls": 0,
+          "setup_calls": 3,
+          "steps": 1
+        },
+        "guard": {
+          "blocked_attempts": [
+            "socket.socket",
+            "socket.create_connection",
+            "socket.getaddrinfo",
+            "subprocess.Popen",
+            "socket.socket"
+          ],
+          "environment_allowlist": [
+            "HF_HUB_OFFLINE",
+            "HOME",
+            "LANG",
+            "PATH",
+            "PYTHONNOUSERSITE",
+            "TMPDIR",
+            "TOKENIZERS_PARALLELISM",
+            "TRANSFORMERS_OFFLINE",
+            "TZ"
+          ],
+          "import_blocked_attempts": [
+            "socket.socket"
+          ],
+          "post_import_attempt_count": 5,
+          "probe_attempt_count": 4,
+          "scope": "Python socket/subprocess interception; not an OS sandbox"
+        },
+        "incomplete_episode": false,
+        "type": "closed"
+      },
+      "journal": "isolation-one.jsonl"
+    },
+    {
+      "closure": {
+        "budget": {
+          "branch_calls": 0,
+          "episodes_completed": 1,
+          "episodes_started": 1,
+          "prefix_calls": 0,
+          "setup_calls": 3,
+          "steps": 1
+        },
+        "guard": {
+          "blocked_attempts": [
+            "socket.socket",
+            "socket.create_connection",
+            "socket.getaddrinfo",
+            "subprocess.Popen",
+            "socket.socket"
+          ],
+          "environment_allowlist": [
+            "HF_HUB_OFFLINE",
+            "HOME",
+            "LANG",
+            "PATH",
+            "PYTHONNOUSERSITE",
+            "TMPDIR",
+            "TOKENIZERS_PARALLELISM",
+            "TRANSFORMERS_OFFLINE",
+            "TZ"
+          ],
+          "import_blocked_attempts": [
+            "socket.socket"
+          ],
+          "post_import_attempt_count": 5,
+          "probe_attempt_count": 4,
+          "scope": "Python socket/subprocess interception; not an OS sandbox"
+        },
+        "incomplete_episode": false,
+        "type": "closed"
+      },
+      "journal": "isolation-two.jsonl"
+    }
+  ]
+}

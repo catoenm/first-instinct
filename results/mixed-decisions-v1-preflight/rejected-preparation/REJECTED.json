@@ -1,0 +1,5 @@
+{
+  "reason": "Preparation expected test rather than the accepted corpus transfer split name. Rejected before encoding or training. Ownership is preserved as transfer in the corrected preparer.",
+  "training_presentations": 0,
+  "new_environment_executions": 0
+}

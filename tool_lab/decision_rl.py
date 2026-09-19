@@ -24,16 +24,19 @@ def actor_input(item):
 
 
 @torch.no_grad()
-def collect(policy,tokenizer,cases,executors,max_tokens,check,sample=True):
+def collect(policy,tokenizer,cases,executors,max_tokens,check,sample=True,*,episode_factory=None,horizon=None):
+    if not executors:raise ValueError('At least one executor is required')
+    factory=episode_factory or Episode;limit=HORIZON if horizon is None else horizon
+    if not 1<=limit<=16:raise ValueError('Invalid rollout horizon')
     policy.eval();records=[];traces=[]
     for start in range(0,len(cases),len(executors)):
-        active=[Episode(c,e) for c,e in zip(cases[start:start+len(executors)],executors)]
+        active=[factory(c,e) for c,e in zip(cases[start:start+len(executors)],executors)]
         episode_records=[[] for _ in active];actor_events=[[] for _ in active]
-        for depth in range(HORIZON):
+        for depth in range(limit):
             check();pending=[(i,e) for i,e in enumerate(active) if not e.done]
             if not pending:break
             inputs=[actor_input(e.input()) for _,e in pending]
-            rows=[prepare(tokenizer,item,digest([e.case['id'],depth,'live-policy']),max_tokens)
+            rows=[prepare(tokenizer,item,digest([e.case['id'],depth,'live-policy',digest(item)]),max_tokens)
                   for item,(_,e) in zip(inputs,pending)]
             for row in rows:row['task']='shell_action'
             logits,values,_=policy(rows);distribution=torch.distributions.Categorical(logits=logits)
