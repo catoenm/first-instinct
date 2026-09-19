@@ -1,0 +1,33 @@
+{
+  "revision": "6ffa5b10dbbbe4d1e8288367c7d9d3acd3bad4a2",
+  "files": {
+    "g2048.h": {
+      "url": "https://raw.githubusercontent.com/PufferAI/PufferLib/6ffa5b10dbbbe4d1e8288367c7d9d3acd3bad4a2/ocean/g2048/g2048.h",
+      "sha256": "4652672939fc60ffb02753c1d089688d25242d6fe762f0c6d2fc7b6bbad9f7d7"
+    },
+    "lightsout.h": {
+      "url": "https://raw.githubusercontent.com/PufferAI/PufferLib/6ffa5b10dbbbe4d1e8288367c7d9d3acd3bad4a2/ocean/lightsout/lightsout.h",
+      "sha256": "1b16996540239e8aae6391abc8faab4af4d0eeed273ac5008081cd3a6cde28fc"
+    },
+    "pufferenv.h": {
+      "source": "existing pinned qualification reference",
+      "sha256": "3324a670791e2b3e46cbe7d10d9233d52fbc258e0d7e37d5b0c470e580de880c"
+    },
+    "ini.h": {
+      "source": "existing pinned qualification reference",
+      "sha256": "cd4c83ba12ba40a7bef03ad810246cc0a5880f81e8566f6ac5a089b5c598859f"
+    },
+    "raylib.h": {
+      "source": "existing pinned qualification reference",
+      "sha256": "afb287ecd313de61e0000921375190b7e1cc35cd381ad6caf914489473a3c871"
+    },
+    "LICENSE.pufferlib": {
+      "source": "existing pinned qualification reference",
+      "sha256": "24dae53fbe9da4b15693499b043783c7572b894ac9a5dbc6889856a409c24dee"
+    },
+    "LICENSE.raylib": {
+      "source": "existing pinned qualification reference",
+      "sha256": "355bdd50936805f62f091da289f7ba467ea0711586a464ad755dcc73dcfb52a8"
+    }
+  }
+}
