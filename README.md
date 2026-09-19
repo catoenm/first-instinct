@@ -37,14 +37,23 @@ in a compact retro interface. The local version now serves the completed
 supervised checkpoint; the underlying interface accepts your own questions
 and choices.
 
-**Next experiment: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
+**Active pilot: [costly evidence and recoverable commands](docs/evidence-decisions-v2-protocol.md).**
+The 9B model chooses whether to inspect, act, unlock and retry, or abandon an
+expensive attempt. The data contains 4,608 execution-verified forecasts across
+768 authored cases. A bounded comparison of forecast supervision, reward-only
+reinforcement learning, and both together has launched with two seeds per method.
+Training results are pending; [data and mechanics checks](results/evidence-decisions-v2/)
+are available now.
+
+**Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,
 replacement parts and irreversible damage. They supply **59,993 training
 questions from 8,192 root worlds**. Execution provides the labels; related
 mechanisms stay in the same split. The planned comparison tests outcome learning,
 reward learning, and both together from the same 9B start. A controller uses
 predicted outcome and cost distributions to choose its next action. This is a
-prospective protocol, **not a new positive result or a recovered Jev recipe**.
+protocol description; see the [completed results](docs/outcome-v2-results.md).
+It is **not a recovered Jev recipe**.
 
 The earlier [retry-environment pilot](docs/retry-environment-pilot.md) remains
 separate and unchanged: all 2,000 trajectories and 7,347 forecast outcomes were

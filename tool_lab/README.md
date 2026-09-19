@@ -17,6 +17,13 @@ direct Docker backend and authored menus are separate from the Harbor adapter.
 It records real trajectories and finds strong action selection alongside weak
 outcome forecasts; no new model training or GPU rental is involved.
 
+The subsequent [costly-evidence pilot](../docs/evidence-decisions-v2-protocol.md)
+adds stale readings, inspection costs and recoverable write failures. Its data
+passed 4,608 executed forecast checks and 2,304 control episodes. A bounded
+three-method, two-seed training comparison has been launched; results are pending.
+The policy collector executes its current choices and preserves the exact inputs
+and sampling probabilities needed for Proximal Policy Optimization.
+
 ## Run an example
 
 Prerequisites: Python 3.12 or later, Docker, the repository's resident selector
