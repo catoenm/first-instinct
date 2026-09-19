@@ -12,7 +12,7 @@
   "pilot_allocation_from_original_budget_usd": 40,
   "original_cumulative_authorization_usd": 500,
   "provider_deadline_utc": "2026-09-20T04:19:24.881041+00:00",
-  "stage": "Forecast-only seed1507 has 15 confirmed accepted optimizer updates in the latest snapshot. Update10 passed validation and retention gates: Brier0.651769 to0.595166, reward0.262222 to0.263333, general macroaccuracy0.870488 to0.869958. This is early validation, not transfer evidence. Remaining arms run autonomously from identical starting weights.",
+  "stage": "First forecast-only and reward-only seed1507 arms completed, each40acceptedupdates and0rejections; selected updates20and40. Combined arm running; second seed and original transfer control pending. Two completed-arm metadata/trajectory snapshots contain76verifiedfiles. Offline outcome, probability, consumed-data and selection audit passed; this is not full-run checkpoint recovery.",
   "demo_checkpoint_changed": false,
   "execution_attempt": 3,
   "prior_failed_attempts": 2,
@@ -20,7 +20,8 @@
   "active_attempt_allocation_usd": 38,
   "failed_attempts_reserve_usd": 2,
   "qualification_evidence": "results/mixed-decisions-v1-runtime-recovery",
-  "snapshot_utc": "2026-09-19T23:03:09.997168+00:00",
+  "snapshot_utc": "2026-09-19T23:44:18.233333+00:00",
   "source_commit_note": "Uploaded training source matches the third-attempt freeze; standalone reporting was added after upload.",
-  "early_evidence": "results/mixed-decisions-v1-runtime-recovery/early-training/progress.json"
+  "early_evidence": "results/mixed-decisions-v1-runtime-recovery/early-training/progress.json",
+  "interim_evidence": "docs/mixed-decisions-v1-interim.md"
 }
