@@ -1,9 +1,9 @@
 {
   "experiment": "mixed-decisions-v1",
-  "status": "cloud_qualified_baseline_measured",
-  "nine_billion_parameter_optimizer_update_confirmed": false,
+  "status": "training",
+  "nine_billion_parameter_optimizer_update_confirmed": true,
   "foundation": "Qwen/Qwen3.5-9B",
-  "source_commit": "aa6405f plus source hashes in the third-attempt freeze",
+  "source_commit": "25a3e54",
   "freeze_sha256": "db54e5a76c3bd0a1c3e44281ce8674b7a0501c25a9ccd0a71b0848c5fa089a99",
   "uploaded_files_verified": 213,
   "gpus": 1,
@@ -12,7 +12,7 @@
   "pilot_allocation_from_original_budget_usd": 40,
   "original_cumulative_authorization_usd": 500,
   "provider_deadline_utc": "2026-09-20T04:19:24.881041+00:00",
-  "stage": "Third attempt passed all 15 cloud startup tests, 252 shell branch replays and 138 application alternatives. Original supervised 9B weights verified and baseline validation measured. Learning-loop entry confirmed; optimizer update not yet confirmed in this snapshot.",
+  "stage": "Forecast-only seed1507 has 15 confirmed accepted optimizer updates in the latest snapshot. Update10 passed validation and retention gates: Brier0.651769 to0.595166, reward0.262222 to0.263333, general macroaccuracy0.870488 to0.869958. This is early validation, not transfer evidence. Remaining arms run autonomously from identical starting weights.",
   "demo_checkpoint_changed": false,
   "execution_attempt": 3,
   "prior_failed_attempts": 2,
@@ -20,5 +20,7 @@
   "active_attempt_allocation_usd": 38,
   "failed_attempts_reserve_usd": 2,
   "qualification_evidence": "results/mixed-decisions-v1-runtime-recovery",
-  "snapshot_utc": "2026-09-19T22:57:35.067783+00:00"
+  "snapshot_utc": "2026-09-19T23:03:09.997168+00:00",
+  "source_commit_note": "Uploaded training source matches the third-attempt freeze; standalone reporting was added after upload.",
+  "early_evidence": "results/mixed-decisions-v1-runtime-recovery/early-training/progress.json"
 }

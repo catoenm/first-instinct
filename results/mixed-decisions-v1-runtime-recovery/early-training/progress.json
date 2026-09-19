@@ -1,0 +1,47 @@
+{
+  "arm": "outcome-1507",
+  "update": 10,
+  "baseline": {
+    "reward": 0.2622222222222222,
+    "success_rate": 0.5833333333333334,
+    "forecast_brier": 0.6517688921064774,
+    "general_macro_accuracy": 0.870488322717622,
+    "general_macro_log_loss": 0.35221356615736266
+  },
+  "validation": {
+    "reward": 0.2633333333333333,
+    "success_rate": 0.6111111111111112,
+    "forecast_brier": 0.5951662426947041,
+    "general_macro_accuracy": 0.8699575371549895,
+    "general_macro_log_loss": 0.3522731136955676
+  },
+  "eligible": true,
+  "selected": true,
+  "actual_learning_through_update_10": {
+    "physical_optimizer_attempts": 10,
+    "accepted_transactions": 10,
+    "rejected_transactions": 0,
+    "attempted_updates_without_closure": [],
+    "started_but_unconfirmed_backward_presentations": 0,
+    "components": {
+      "outcome": {
+        "completed_backward_presentations": 274,
+        "unique_question_ids": 274,
+        "repeated_presentations": 0,
+        "presentations_in_accepted_transactions": 274,
+        "presentations_in_rejected_transactions": 0,
+        "presentations_awaiting_transaction_outcome": 0
+      },
+      "replay": {
+        "completed_backward_presentations": 160,
+        "unique_question_ids": 157,
+        "repeated_presentations": 3,
+        "presentations_in_accepted_transactions": 160,
+        "presentations_in_rejected_transactions": 0,
+        "presentations_awaiting_transaction_outcome": 0
+      }
+    },
+    "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations."
+  },
+  "interpretation": "Early forecast-only validation, not reserved transfer. Reward barely changed; forecast Brier improved. Reward-only and hybrid results are still pending. No broad-generalization or successful-method claim."
+}

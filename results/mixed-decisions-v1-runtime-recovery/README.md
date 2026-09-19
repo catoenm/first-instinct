@@ -53,3 +53,12 @@ repeated presentations, partial batches and missing or duplicated receipts.
 network experiment: one accepted update per arm. These are local engineering
 counts, not 9B training counts. Run the reporter against recovered cloud artifacts
 to obtain the latter; prepared schedules are never substituted for actual use.
+
+An early live snapshot now confirms actual 9B learning in `early-training`.
+The forecast-only arm's first 10 updates reduced validation Brier from 0.65177
+to 0.59517, while return barely changed (0.26222 to 0.26333) and general macro
+accuracy stayed close (0.87049 to 0.86996). All 10 updates passed their guards;
+the validation checkpoint passed the predefined retention gates. This is early
+validation evidence from one arm, not the reserved transfer evaluation or a
+successful comparison. The copied ledger includes a later in-progress update;
+`progress.json` restricts its accounting to the first 10 closed transactions.
