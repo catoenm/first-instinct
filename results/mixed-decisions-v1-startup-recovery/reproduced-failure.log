@@ -1,0 +1,31 @@
+test_forecast_guard_and_replay_have_actual_consumption (test_mixed_learning.MixedLearningTests.test_forecast_guard_and_replay_have_actual_consumption) ... ok
+test_rejected_attempt_keeps_presentations_but_restores_state (test_mixed_learning.MixedLearningTests.test_rejected_attempt_keeps_presentations_but_restores_state) ... ok
+test_schedule_groups_uncertain_labels_and_balances_families (test_mixed_learning.MixedLearningTests.test_schedule_groups_uncertain_labels_and_balances_families) ... ok
+test_schedule_rejects_transfer_leakage (test_mixed_learning.MixedLearningTests.test_schedule_rejects_transfer_leakage) ... ok
+test_decision_rl (unittest.loader._FailedTest.test_decision_rl) ... ERROR
+test_guarded_update (unittest.loader._FailedTest.test_guarded_update) ... ERROR
+
+======================================================================
+ERROR: test_decision_rl (unittest.loader._FailedTest.test_decision_rl)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_decision_rl
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'test_decision_rl'
+
+
+======================================================================
+ERROR: test_guarded_update (unittest.loader._FailedTest.test_guarded_update)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_guarded_update
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'test_guarded_update'
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.025s
+
+FAILED (errors=2)

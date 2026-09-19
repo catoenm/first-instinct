@@ -1,6 +1,6 @@
 {
   "experiment": "mixed-decisions-v1",
-  "status": "autonomous_cloud_setup",
+  "status": "startup_failed_recovered_retry_qualified",
   "nine_billion_parameter_optimizer_update_confirmed": false,
   "foundation": "Qwen/Qwen3.5-9B",
   "source_commit": "9c9640f",
@@ -12,6 +12,6 @@
   "pilot_allocation_from_original_budget_usd": 40,
   "original_cumulative_authorization_usd": 500,
   "provider_deadline_utc": "2026-09-20T04:19:24.881041+00:00",
-  "stage": "Detached runner waiting for foundation download; environment parity and learning follow automatically.",
+  "stage": "First rental failed before9Btraining. Two startup test modules were omitted from its bundle. Exact recovered source reproduced the failure; corrected packaged code passes all11startup tests. All153artifacts recovered and verified, poddeleted, computeestimate$0.37065excludingstorage. Retry keeps scientific data/recipe and originalpilotdeadline, remainingallocation$39 with$1reservedforfailedattempt.",
   "demo_checkpoint_changed": false
 }

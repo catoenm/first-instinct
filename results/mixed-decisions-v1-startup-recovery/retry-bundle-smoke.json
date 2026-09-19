@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "archive_sha256": "f68fbf8b2a1aa53839c1acc5b0032fc1923d2ee5aa322ad2d78043ce0e752472",
+  "files_verified": 210,
+  "tests": {
+    "modules": [
+      "test_mixed_learning",
+      "test_decision_rl",
+      "test_guarded_update"
+    ],
+    "support_files": [
+      "test_general_rl.py"
+    ]
+  },
+  "exit_code": 0,
+  "scope": "Exact packaged code and startup tests under local Torch; Linux environments qualified separately. NoGPUornewexecutions."
+}

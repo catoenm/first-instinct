@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "pod_id": "cloz053h1qu3g2",
+  "stage": "complete",
+  "receipt": {
+    "pod": {
+      "id": "cloz053h1qu3g2",
+      "costPerHr": 4.59
+    },
+    "created_at": 1789856364.8810408,
+    "hard_stop_at": 1789877964.8810408
+  },
+  "last_error": {
+    "stage": "Readiness check",
+    "type": "CalledProcessError",
+    "at": 1789856465.729218
+  },
+  "ready": {
+    "path": "/workspace/mixed-decisions-artifacts-v1.tar.gz",
+    "bytes": 5390522,
+    "sha256": "a259786101b908416bccd50420eafe6f6a497e21659f5f5012859e5093223523",
+    "pipeline_status": "failed"
+  },
+  "download_attempt": 1,
+  "verified_files": 153,
+  "local_verified_at": 1789856607.028112,
+  "last_provider_observation": {
+    "status": "absent",
+    "at": 1789856655.585587
+  },
+  "stop_requested_at": 1789856607.8234408,
+  "stop_time_source": "collector_request",
+  "actions": {
+    "stop": {
+      "status": "response_received",
+      "at": 1789856607.823444,
+      "attempt": 1,
+      "response_at": 1789856608.512845
+    },
+    "delete": {
+      "status": "response_received",
+      "at": 1789856624.2904608,
+      "attempt": 1,
+      "response_at": 1789856624.878979
+    }
+  },
+  "observed_stopped_or_absent_at": 1789856655.587262,
+  "deleted_at": 1789856655.588133,
+  "remaining_pod_count": 0,
+  "collection": {
+    "archive_sha256": "a259786101b908416bccd50420eafe6f6a497e21659f5f5012859e5093223523",
+    "archive_bytes": 5390522,
+    "pipeline_status": "failed",
+    "verified_files": 153,
+    "created_at": 1789856364.8810408,
+    "stop_requested_at": 1789856607.8234408,
+    "deleted_at": 1789856655.588133,
+    "gpu_hourly_rate_usd": 4.59,
+    "estimated_compute_usd_excluding_storage": 0.37065043190717695,
+    "pod_deleted": true,
+    "remaining_pod_count": 0,
+    "stop_time_source": "collector_request",
+    "observed_stopped_or_absent_at": 1789856655.587262,
+    "compute_estimate_time_source": "provider_stopped_or_absent_observation"
+  }
+}

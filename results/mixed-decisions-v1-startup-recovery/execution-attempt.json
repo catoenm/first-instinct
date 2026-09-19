@@ -1,0 +1,10 @@
+{
+  "attempt": 2,
+  "change": "Include two omitted startup test modules and capture startup-test and outer launcher logs. Scientific data, recipe, seeds and training code unchanged.",
+  "pending_failed_setup_reserve_usd": 1,
+  "previous_freeze_sha256": "8577b894c35dad29a876d24231c373b94ab9f1b5656a7137a416349664fdfaa9",
+  "previous_pod": "cloz053h1qu3g2",
+  "previous_stage": "startup_tests_failed_before_training",
+  "prior_archive_sha256": "a259786101b908416bccd50420eafe6f6a497e21659f5f5012859e5093223523",
+  "prior_estimated_compute_usd": 0.37065043190717695
+}

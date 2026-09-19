@@ -1,0 +1,9 @@
+{
+  "started_at": 1789856553.286334,
+  "status": "failed",
+  "error": {
+    "type": "CalledProcessError",
+    "detail": "Command '['/opt/first-instinct-venv/bin/python', '-m', 'unittest', 'test_mixed_learning', 'test_decision_rl', 'test_guarded_update', '-v']' returned non-zero exit status 1."
+  },
+  "completed_at": 1789856588.0108182
+}
