@@ -86,4 +86,7 @@ def report(root):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
-    a=p.parse_args();result=report(a.root);write_json(a.output,result);print(json.dumps(result,indent=2))
+    a=p.parse_args();result=report(a.root);write_json(a.output,result)
+    print(json.dumps(dict(status=result['status'],output=str(a.output),
+                          arms={name:{k:v for k,v in r.items() if k not in ('consumption','by_regime')}
+                                for name,r in result['results'].items()}),indent=2))

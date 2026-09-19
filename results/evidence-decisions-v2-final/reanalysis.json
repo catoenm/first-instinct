@@ -1,0 +1,274 @@
+{
+  "metrics": {
+    "hybrid-1507": {
+      "forecast_brier": 0.1073737594180824,
+      "forecast_log_loss": 0.35634819611289303,
+      "general_macro_accuracy": 0.7794384057971014,
+      "general_macro_log_loss": 0.5071472754059423,
+      "reward": 0.6870833333333333,
+      "success_rate": 0.875
+    },
+    "hybrid-1609": {
+      "forecast_brier": 0.2745130659702441,
+      "forecast_log_loss": 0.7440528670437614,
+      "general_macro_accuracy": 0.7785326086956522,
+      "general_macro_log_loss": 0.4957052845221764,
+      "reward": 0.30104166666666665,
+      "success_rate": 0.6822916666666666
+    },
+    "original-test": {
+      "forecast_brier": 0.3114880172111319,
+      "forecast_log_loss": 0.8403742224140165,
+      "general_macro_accuracy": 0.779891304347826,
+      "general_macro_log_loss": 0.4997218589987232,
+      "reward": 0.31635416666666666,
+      "success_rate": 0.703125
+    },
+    "outcome-1507": {
+      "forecast_brier": 0.0963928624059877,
+      "forecast_log_loss": 0.32779943751485513,
+      "general_macro_accuracy": 0.7785326086956522,
+      "general_macro_log_loss": 0.499243525476507,
+      "reward": 0.48322916666666665,
+      "success_rate": 0.78125
+    },
+    "outcome-1609": {
+      "forecast_brier": 0.06831572805459225,
+      "forecast_log_loss": 0.22671975505159261,
+      "general_macro_accuracy": 0.7771739130434783,
+      "general_macro_log_loss": 0.5210229942832327,
+      "reward": 0.5021875,
+      "success_rate": 0.796875
+    },
+    "reward-1507": {
+      "forecast_brier": 0.30204268142905205,
+      "forecast_log_loss": 0.8250767940425212,
+      "general_macro_accuracy": 0.779891304347826,
+      "general_macro_log_loss": 0.5191732127398154,
+      "reward": 0.6154166666666666,
+      "success_rate": 0.8489583333333334
+    },
+    "reward-1609": {
+      "forecast_brier": 0.3114880172111319,
+      "forecast_log_loss": 0.8403742224140165,
+      "general_macro_accuracy": 0.779891304347826,
+      "general_macro_log_loss": 0.4997218589987232,
+      "reward": 0.31635416666666666,
+      "success_rate": 0.703125
+    }
+  },
+  "paired_roots": {
+    "24ff2e6e79d4eb62867e06c533b794603a2e8c7cff84c3a0e6a1f379bf60d2c5": {
+      "arms": {
+        "hybrid-1507": {
+          "difference_from_original": 0.4912500000000001,
+          "mean_return": 0.64
+        },
+        "hybrid-1609": {
+          "difference_from_original": 0.06312500000000001,
+          "mean_return": 0.21187499999999998
+        },
+        "original-test": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.14874999999999997
+        },
+        "outcome-1507": {
+          "difference_from_original": 0.308125,
+          "mean_return": 0.456875
+        },
+        "outcome-1609": {
+          "difference_from_original": 0.433125,
+          "mean_return": 0.5818749999999999
+        },
+        "reward-1507": {
+          "difference_from_original": 0.48187500000000005,
+          "mean_return": 0.630625
+        },
+        "reward-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.14874999999999997
+        }
+      },
+      "baseline_return": 0.14874999999999997,
+      "family": "sqlite",
+      "n": 32
+    },
+    "7715a71223f6b466b11ca78b036ea376f9bfa2931c75a471c9a535ec632b0ea5": {
+      "arms": {
+        "hybrid-1507": {
+          "difference_from_original": 0.18062500000000004,
+          "mean_return": 0.701875
+        },
+        "hybrid-1609": {
+          "difference_from_original": -0.06,
+          "mean_return": 0.46125
+        },
+        "original-test": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.52125
+        },
+        "outcome-1507": {
+          "difference_from_original": 0.0625,
+          "mean_return": 0.58375
+        },
+        "outcome-1609": {
+          "difference_from_original": 0.0625,
+          "mean_return": 0.58375
+        },
+        "reward-1507": {
+          "difference_from_original": 0.1825,
+          "mean_return": 0.70375
+        },
+        "reward-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.52125
+        }
+      },
+      "baseline_return": 0.52125,
+      "family": "config",
+      "n": 32
+    },
+    "a80e4b1d271ee6b160b0ac8dd7034d7e43537f98b589aaa140ab2d4159f1bac9": {
+      "arms": {
+        "hybrid-1507": {
+          "difference_from_original": 0.24,
+          "mean_return": 0.70375
+        },
+        "hybrid-1609": {
+          "difference_from_original": -0.12,
+          "mean_return": 0.34375
+        },
+        "original-test": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.46375
+        },
+        "outcome-1507": {
+          "difference_from_original": 0.12,
+          "mean_return": 0.58375
+        },
+        "outcome-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.46375
+        },
+        "reward-1507": {
+          "difference_from_original": 0.24,
+          "mean_return": 0.70375
+        },
+        "reward-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.46375
+        }
+      },
+      "baseline_return": 0.46375,
+      "family": "config",
+      "n": 32
+    },
+    "adb353487f28d6e5282d124845bd7032a7a579b6980fe2de812daeddf499def3": {
+      "arms": {
+        "hybrid-1507": {
+          "difference_from_original": 0.6131249999999999,
+          "mean_return": 0.7006249999999999
+        },
+        "hybrid-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.08749999999999997
+        },
+        "original-test": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.08749999999999997
+        },
+        "outcome-1507": {
+          "difference_from_original": 0.3125,
+          "mean_return": 0.39999999999999997
+        },
+        "outcome-1609": {
+          "difference_from_original": 0.36,
+          "mean_return": 0.44749999999999995
+        },
+        "reward-1507": {
+          "difference_from_original": 0.49625,
+          "mean_return": 0.58375
+        },
+        "reward-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.08749999999999997
+        }
+      },
+      "baseline_return": 0.08749999999999997,
+      "family": "sqlite",
+      "n": 32
+    },
+    "e4b39ee8efbb2aa78bb36cca6b82e91c4420a1da61b9584e8132c398f615d88e": {
+      "arms": {
+        "hybrid-1507": {
+          "difference_from_original": 0.11749999999999994,
+          "mean_return": 0.674375
+        },
+        "hybrid-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.556875
+        },
+        "original-test": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.556875
+        },
+        "outcome-1507": {
+          "difference_from_original": -0.0006249999999999867,
+          "mean_return": 0.55625
+        },
+        "outcome-1609": {
+          "difference_from_original": -0.001875000000000071,
+          "mean_return": 0.5549999999999999
+        },
+        "reward-1507": {
+          "difference_from_original": 0.11937500000000001,
+          "mean_return": 0.67625
+        },
+        "reward-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.556875
+        }
+      },
+      "baseline_return": 0.556875,
+      "family": "report",
+      "n": 32
+    },
+    "ebe350c211114ff0a1feb20460f33e4cb7fb52a4a44df80a5c5ef32f601f3063": {
+      "arms": {
+        "hybrid-1507": {
+          "difference_from_original": 0.581875,
+          "mean_return": 0.701875
+        },
+        "hybrid-1609": {
+          "difference_from_original": 0.02499999999999998,
+          "mean_return": 0.14499999999999996
+        },
+        "original-test": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.11999999999999998
+        },
+        "outcome-1507": {
+          "difference_from_original": 0.19874999999999998,
+          "mean_return": 0.31875
+        },
+        "outcome-1609": {
+          "difference_from_original": 0.26125,
+          "mean_return": 0.38125
+        },
+        "reward-1507": {
+          "difference_from_original": 0.274375,
+          "mean_return": 0.394375
+        },
+        "reward-1609": {
+          "difference_from_original": 0.0,
+          "mean_return": 0.11999999999999998
+        }
+      },
+      "baseline_return": 0.11999999999999998,
+      "family": "report",
+      "n": 32
+    }
+  },
+  "scope": "Recalculate v2 held-out metrics from the small public receipt bundle.\n\nThis checks hashes, prediction cohorts and arithmetic. It does not rerun shell\ncommands or load model weights; the full recovery audit is evidence_report.py.",
+  "status": "passed"
+}

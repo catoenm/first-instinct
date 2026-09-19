@@ -37,13 +37,14 @@ in a compact retro interface. The local version now serves the completed
 supervised checkpoint; the underlying interface accepts your own questions
 and choices.
 
-**Active pilot: [costly evidence and recoverable commands](docs/evidence-decisions-v2-protocol.md).**
-The 9B model chooses whether to inspect, act, unlock and retry, or abandon an
-expensive attempt. The data contains 4,608 execution-verified forecasts across
-768 authored cases. A bounded comparison of forecast supervision, reward-only
-reinforcement learning, and both together has launched with two seeds per method.
-Training results are pending; [data and mechanics checks](results/evidence-decisions-v2/)
-are available now.
+**Completed pilot: [costly evidence and recoverable commands](docs/evidence-decisions-v2-results.md).**
+Consequence supervision improved execution return from 0.316 to 0.483–0.502
+and forecast Brier from 0.311 to 0.068–0.096 across two seeds. Reward learning
+was less stable: three of four reinforcement arms stopped at the policy-change
+limit. Stale evidence remains unsolved, and broader-task accuracy is essentially
+flat. These are held-out combinations in three authored mechanisms, not broad
+tool-use generalization. [All arms, receipts and training counts](results/evidence-decisions-v2-final/)
+are published; the demo checkpoint remains unchanged.
 
 **Next data stage: [paired decisions and consequences](docs/decision-curriculum-v3-results.md).**
 Local qualification adds artifact staging, hash validation and atomic publication,

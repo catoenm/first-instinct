@@ -1,0 +1,822 @@
+{
+  "limits": "Two seeds; held-out combinations in three authored mechanisms. Related observations are not independent samples. No open-ended proposer or Jev recipe claim.",
+  "results": {
+    "hybrid-1507": {
+      "actual_commands": 3603,
+      "by_regime": {
+        "costly_hidden": {
+          "n": 24,
+          "reward": -0.05916666666666668,
+          "success_rate": 0.5416666666666666
+        },
+        "costly_ready": {
+          "n": 24,
+          "reward": 0.8966666666666666,
+          "success_rate": 0.9583333333333334
+        },
+        "failed_write": {
+          "n": 24,
+          "reward": 0.91,
+          "success_rate": 1.0
+        },
+        "hidden": {
+          "n": 24,
+          "reward": 0.94,
+          "success_rate": 1.0
+        },
+        "locked_hidden": {
+          "n": 24,
+          "reward": 0.91,
+          "success_rate": 1.0
+        },
+        "locked_ready": {
+          "n": 24,
+          "reward": 0.9416666666666665,
+          "success_rate": 1.0
+        },
+        "ready": {
+          "n": 24,
+          "reward": 0.98,
+          "success_rate": 1.0
+        },
+        "stale": {
+          "n": 24,
+          "reward": -0.02250000000000002,
+          "success_rate": 0.5
+        }
+      },
+      "consumption": {
+        "collected_policy_episodes": 320,
+        "collected_transitions": 609,
+        "consumed": {
+          "forecasts": {
+            "optimizer_presentations": 1920,
+            "unique_ids": 960
+          },
+          "general_replay": {
+            "optimizer_presentations": 1280,
+            "unique_ids": 603
+          },
+          "policy_transitions": {
+            "optimizer_presentations": 1218,
+            "unique_ids": 609
+          }
+        },
+        "lineage": {
+          "committed_optimizer_steps": 80,
+          "foundation": {
+            "id": "Qwen/Qwen3.5-9B",
+            "kind": "qwen3_5",
+            "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+          },
+          "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "selected_adapter_sha256": "371cdd8641f6d0927cc8a6111ac5bdab46f8f0019f931161b850a3543f4ffae0",
+          "selected_optimizer_steps": 80,
+          "selected_update": 40,
+          "starting_adapter": {
+            "README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+            "adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+            "adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+          }
+        },
+        "prepared": {
+          "base_world_goal_tasks": 48,
+          "families": 3,
+          "forecast_questions": 2304,
+          "general_replay_pool": 4096,
+          "root_fixtures": 12,
+          "world_goal_regime_variants": 384
+        },
+        "schema": "evidence-decisions-v2-consumption",
+        "scope": "Counts committed gradient presentations. Forward-only evaluation and gradient diagnostics are excluded. A rollout collected before interruption need not have reached an optimizer step. Counts describe the full run, not only the selected checkpoint; selected step count is explicit.",
+        "sources": {
+          "optimizer-steps.jsonl": "11a005ce56f7a59b39a36a52fcc0bca49258a8688a01d5b4a7326b8a9e1a1b93",
+          "rollouts.jsonl": "037c0caff5e43453712e48ae79ae255170629d1fb50f6c4822d17b7e430337ad",
+          "run.json": "136a546c57d48657b683aa16f89e3c30a5b6f5776eb5f15c37b5e8587b2fcfd2",
+          "training.jsonl": "a6f866e5a60e8f946e2954c2d60fa2eb3b3a9c7fe23021beb91d8dea30c84351"
+        },
+        "status": "complete",
+        "unique_collected_case_variants": 320
+      },
+      "difference_from_original": {
+        "forecast_brier": -0.20411425779304948,
+        "forecast_log_loss": -0.48402602630112346,
+        "general_macro_accuracy": -0.00045289855072461194,
+        "general_macro_log_loss": 0.00742541640721911,
+        "reward": 0.3707291666666666,
+        "success_rate": 0.171875
+      },
+      "forecast_brier": 0.1073737594180824,
+      "forecast_log_loss": 0.35634819611289303,
+      "general_macro_accuracy": 0.7794384057971014,
+      "general_macro_log_loss": 0.5071472754059423,
+      "optimizer_steps": 80,
+      "reward": 0.6870833333333333,
+      "seconds": 1045.4837834597565,
+      "selected_update": 40,
+      "status": "complete",
+      "stop_reason": null,
+      "success_rate": 0.875,
+      "updates": 40
+    },
+    "hybrid-1609": {
+      "actual_commands": 1335,
+      "by_regime": {
+        "costly_hidden": {
+          "n": 24,
+          "reward": -0.053333333333333344,
+          "success_rate": 0.5833333333333334
+        },
+        "costly_ready": {
+          "n": 24,
+          "reward": 0.6466666666666666,
+          "success_rate": 0.8333333333333334
+        },
+        "failed_write": {
+          "n": 24,
+          "reward": -0.050000000000000044,
+          "success_rate": 0.5
+        },
+        "hidden": {
+          "n": 24,
+          "reward": 0.20666666666666664,
+          "success_rate": 0.625
+        },
+        "locked_hidden": {
+          "n": 24,
+          "reward": 0.34,
+          "success_rate": 0.7083333333333334
+        },
+        "locked_ready": {
+          "n": 24,
+          "reward": 0.6083333333333333,
+          "success_rate": 0.8333333333333334
+        },
+        "ready": {
+          "n": 24,
+          "reward": 0.73,
+          "success_rate": 0.875
+        },
+        "stale": {
+          "n": 24,
+          "reward": -0.020000000000000018,
+          "success_rate": 0.5
+        }
+      },
+      "consumption": {
+        "collected_policy_episodes": 16,
+        "collected_transitions": 26,
+        "consumed": {
+          "forecasts": {
+            "optimizer_presentations": 96,
+            "unique_ids": 48
+          },
+          "general_replay": {
+            "optimizer_presentations": 64,
+            "unique_ids": 32
+          },
+          "policy_transitions": {
+            "optimizer_presentations": 52,
+            "unique_ids": 26
+          }
+        },
+        "lineage": {
+          "committed_optimizer_steps": 4,
+          "foundation": {
+            "id": "Qwen/Qwen3.5-9B",
+            "kind": "qwen3_5",
+            "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+          },
+          "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "selected_adapter_sha256": "61c764a66c82e7fb6f1daba1bc33f0f954b344eebf37ae8dd792ae48daea051c",
+          "selected_optimizer_steps": 4,
+          "selected_update": 2,
+          "starting_adapter": {
+            "README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+            "adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+            "adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+          }
+        },
+        "prepared": {
+          "base_world_goal_tasks": 48,
+          "families": 3,
+          "forecast_questions": 2304,
+          "general_replay_pool": 4096,
+          "root_fixtures": 12,
+          "world_goal_regime_variants": 384
+        },
+        "schema": "evidence-decisions-v2-consumption",
+        "scope": "Counts committed gradient presentations. Forward-only evaluation and gradient diagnostics are excluded. A rollout collected before interruption need not have reached an optimizer step. Counts describe the full run, not only the selected checkpoint; selected step count is explicit.",
+        "sources": {
+          "optimizer-steps.jsonl": "383952e7ab2e5b55613f29a12d0b462145208d61449103b5e010e028c9621d5a",
+          "rollouts.jsonl": "be56861aaec7d69363f73a93f7e30bccf334cd71d961a239056931aed29d6ffc",
+          "run.json": "cc9ec4ff44b2da4343ea72ee06ebaf7f834fce0886f2cb913aafd08d04081564",
+          "training.jsonl": "9a9dbb0470fabb013ff614db447195b7a3ebe2cf8649ce0e3ee09696fd2c9cf8"
+        },
+        "status": "complete",
+        "unique_collected_case_variants": 16
+      },
+      "difference_from_original": {
+        "forecast_brier": -0.03697495124088779,
+        "forecast_log_loss": -0.0963213553702551,
+        "general_macro_accuracy": -0.0013586956521738358,
+        "general_macro_log_loss": -0.0040165744765467415,
+        "reward": -0.015312500000000007,
+        "success_rate": -0.02083333333333337
+      },
+      "forecast_brier": 0.2745130659702441,
+      "forecast_log_loss": 0.7440528670437614,
+      "general_macro_accuracy": 0.7785326086956522,
+      "general_macro_log_loss": 0.49570528452217644,
+      "optimizer_steps": 4,
+      "reward": 0.30104166666666665,
+      "seconds": 295.5347309228964,
+      "selected_update": 2,
+      "status": "complete",
+      "stop_reason": "policy_divergence",
+      "success_rate": 0.6822916666666666,
+      "updates": 2
+    },
+    "original-test": {
+      "actual_commands": 439,
+      "by_regime": {
+        "costly_hidden": {
+          "n": 24,
+          "reward": -0.17,
+          "success_rate": 0.625
+        },
+        "costly_ready": {
+          "n": 24,
+          "reward": 0.6466666666666666,
+          "success_rate": 0.8333333333333334
+        },
+        "failed_write": {
+          "n": 24,
+          "reward": -0.050000000000000044,
+          "success_rate": 0.5
+        },
+        "hidden": {
+          "n": 24,
+          "reward": 0.36999999999999994,
+          "success_rate": 0.7083333333333334
+        },
+        "locked_hidden": {
+          "n": 24,
+          "reward": 0.4166666666666667,
+          "success_rate": 0.75
+        },
+        "locked_ready": {
+          "n": 24,
+          "reward": 0.6074999999999999,
+          "success_rate": 0.8333333333333334
+        },
+        "ready": {
+          "n": 24,
+          "reward": 0.73,
+          "success_rate": 0.875
+        },
+        "stale": {
+          "n": 24,
+          "reward": -0.020000000000000018,
+          "success_rate": 0.5
+        }
+      },
+      "consumption": {
+        "collected_policy_episodes": 0,
+        "collected_transitions": 0,
+        "consumed": {
+          "forecasts": {
+            "optimizer_presentations": 0,
+            "unique_ids": 0
+          },
+          "general_replay": {
+            "optimizer_presentations": 0,
+            "unique_ids": 0
+          },
+          "policy_transitions": {
+            "optimizer_presentations": 0,
+            "unique_ids": 0
+          }
+        },
+        "lineage": {
+          "committed_optimizer_steps": 0,
+          "foundation": {
+            "id": "Qwen/Qwen3.5-9B",
+            "kind": "qwen3_5",
+            "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+          },
+          "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "selected_adapter_sha256": null,
+          "selected_optimizer_steps": 0,
+          "selected_update": 0,
+          "starting_adapter": {
+            "README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+            "adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+            "adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+          }
+        },
+        "prepared": {
+          "base_world_goal_tasks": 48,
+          "families": 3,
+          "forecast_questions": 2304,
+          "general_replay_pool": 4096,
+          "root_fixtures": 12,
+          "world_goal_regime_variants": 384
+        },
+        "schema": "evidence-decisions-v2-consumption",
+        "scope": "Counts committed gradient presentations. Forward-only evaluation and gradient diagnostics are excluded. A rollout collected before interruption need not have reached an optimizer step. Counts describe the full run, not only the selected checkpoint; selected step count is explicit.",
+        "sources": {
+          "run.json": "13abec10d0f4df431b08be2d433130881cfa11326f1ece03db1422ebe6ac42f2"
+        },
+        "status": "complete",
+        "unique_collected_case_variants": 0
+      },
+      "forecast_brier": 0.3114880172111319,
+      "forecast_log_loss": 0.8403742224140165,
+      "general_macro_accuracy": 0.779891304347826,
+      "general_macro_log_loss": 0.4997218589987232,
+      "optimizer_steps": 0,
+      "reward": 0.31635416666666666,
+      "seconds": 108.86117445025593,
+      "selected_update": 0,
+      "status": "complete",
+      "stop_reason": null,
+      "success_rate": 0.703125,
+      "updates": 0
+    },
+    "outcome-1507": {
+      "actual_commands": 2698,
+      "by_regime": {
+        "costly_hidden": {
+          "n": 24,
+          "reward": -0.07,
+          "success_rate": 0.625
+        },
+        "costly_ready": {
+          "n": 24,
+          "reward": 0.73,
+          "success_rate": 0.875
+        },
+        "failed_write": {
+          "n": 24,
+          "reward": -0.050000000000000044,
+          "success_rate": 0.5
+        },
+        "hidden": {
+          "n": 24,
+          "reward": 0.8566666666666666,
+          "success_rate": 0.9583333333333334
+        },
+        "locked_hidden": {
+          "n": 24,
+          "reward": 0.6666666666666666,
+          "success_rate": 0.875
+        },
+        "locked_ready": {
+          "n": 24,
+          "reward": 0.7725,
+          "success_rate": 0.9166666666666666
+        },
+        "ready": {
+          "n": 24,
+          "reward": 0.98,
+          "success_rate": 1.0
+        },
+        "stale": {
+          "n": 24,
+          "reward": -0.020000000000000018,
+          "success_rate": 0.5
+        }
+      },
+      "consumption": {
+        "collected_policy_episodes": 0,
+        "collected_transitions": 0,
+        "consumed": {
+          "forecasts": {
+            "optimizer_presentations": 1920,
+            "unique_ids": 960
+          },
+          "general_replay": {
+            "optimizer_presentations": 1280,
+            "unique_ids": 603
+          },
+          "policy_transitions": {
+            "optimizer_presentations": 0,
+            "unique_ids": 0
+          }
+        },
+        "lineage": {
+          "committed_optimizer_steps": 80,
+          "foundation": {
+            "id": "Qwen/Qwen3.5-9B",
+            "kind": "qwen3_5",
+            "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+          },
+          "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "selected_adapter_sha256": "9bc8ce0b0bfec925ccd0f38ba3ef177f43076d186c291feaa49745e94e3b2c80",
+          "selected_optimizer_steps": 80,
+          "selected_update": 40,
+          "starting_adapter": {
+            "README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+            "adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+            "adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+          }
+        },
+        "prepared": {
+          "base_world_goal_tasks": 48,
+          "families": 3,
+          "forecast_questions": 2304,
+          "general_replay_pool": 4096,
+          "root_fixtures": 12,
+          "world_goal_regime_variants": 384
+        },
+        "schema": "evidence-decisions-v2-consumption",
+        "scope": "Counts committed gradient presentations. Forward-only evaluation and gradient diagnostics are excluded. A rollout collected before interruption need not have reached an optimizer step. Counts describe the full run, not only the selected checkpoint; selected step count is explicit.",
+        "sources": {
+          "optimizer-steps.jsonl": "e5113984540be70c4b810eeb0327439b3b40908843ba35c2afd40056ab009049",
+          "rollouts.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "run.json": "15ea378d7483ea3b225f0f3d8dd3048042e2666157540fcd56d1338ae8fff6a0",
+          "training.jsonl": "42e6f1065ee56435e24b54198f2667f9f98f9282ca2cf3648bc942a00e4414a7"
+        },
+        "status": "complete",
+        "unique_collected_case_variants": 0
+      },
+      "difference_from_original": {
+        "forecast_brier": -0.21509515480514418,
+        "forecast_log_loss": -0.5125747848991613,
+        "general_macro_accuracy": -0.0013586956521738358,
+        "general_macro_log_loss": -0.00047833352221615666,
+        "reward": 0.166875,
+        "success_rate": 0.078125
+      },
+      "forecast_brier": 0.09639286240598771,
+      "forecast_log_loss": 0.32779943751485513,
+      "general_macro_accuracy": 0.7785326086956522,
+      "general_macro_log_loss": 0.499243525476507,
+      "optimizer_steps": 80,
+      "reward": 0.48322916666666665,
+      "seconds": 945.0037757931277,
+      "selected_update": 40,
+      "status": "complete",
+      "stop_reason": null,
+      "success_rate": 0.78125,
+      "updates": 40
+    },
+    "outcome-1609": {
+      "actual_commands": 2698,
+      "by_regime": {
+        "costly_hidden": {
+          "n": 24,
+          "reward": -0.08916666666666667,
+          "success_rate": 0.6666666666666666
+        },
+        "costly_ready": {
+          "n": 24,
+          "reward": 0.98,
+          "success_rate": 1.0
+        },
+        "failed_write": {
+          "n": 24,
+          "reward": -0.050000000000000044,
+          "success_rate": 0.5
+        },
+        "hidden": {
+          "n": 24,
+          "reward": 0.7766666666666667,
+          "success_rate": 0.9166666666666666
+        },
+        "locked_hidden": {
+          "n": 24,
+          "reward": 0.5850000000000001,
+          "success_rate": 0.8333333333333334
+        },
+        "locked_ready": {
+          "n": 24,
+          "reward": 0.855,
+          "success_rate": 0.9583333333333334
+        },
+        "ready": {
+          "n": 24,
+          "reward": 0.98,
+          "success_rate": 1.0
+        },
+        "stale": {
+          "n": 24,
+          "reward": -0.020000000000000018,
+          "success_rate": 0.5
+        }
+      },
+      "consumption": {
+        "collected_policy_episodes": 0,
+        "collected_transitions": 0,
+        "consumed": {
+          "forecasts": {
+            "optimizer_presentations": 1920,
+            "unique_ids": 960
+          },
+          "general_replay": {
+            "optimizer_presentations": 1280,
+            "unique_ids": 591
+          },
+          "policy_transitions": {
+            "optimizer_presentations": 0,
+            "unique_ids": 0
+          }
+        },
+        "lineage": {
+          "committed_optimizer_steps": 80,
+          "foundation": {
+            "id": "Qwen/Qwen3.5-9B",
+            "kind": "qwen3_5",
+            "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+          },
+          "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "selected_adapter_sha256": "69554cefddb7c6b118e9bf38f2775d0a3d18b7ac15d6449ca9ab97bc82be663b",
+          "selected_optimizer_steps": 80,
+          "selected_update": 40,
+          "starting_adapter": {
+            "README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+            "adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+            "adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+          }
+        },
+        "prepared": {
+          "base_world_goal_tasks": 48,
+          "families": 3,
+          "forecast_questions": 2304,
+          "general_replay_pool": 4096,
+          "root_fixtures": 12,
+          "world_goal_regime_variants": 384
+        },
+        "schema": "evidence-decisions-v2-consumption",
+        "scope": "Counts committed gradient presentations. Forward-only evaluation and gradient diagnostics are excluded. A rollout collected before interruption need not have reached an optimizer step. Counts describe the full run, not only the selected checkpoint; selected step count is explicit.",
+        "sources": {
+          "optimizer-steps.jsonl": "604beb70746fe4009f3b3732f5d34283134ccf9bab6b21418552559ee1bf83d3",
+          "rollouts.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "run.json": "a8f59d92902e5e840674090d4cc0c2da594e2ef41947345d9fc6124228d0501c",
+          "training.jsonl": "df6ec6a1f5720c9ebe853a86ffe000b8a40dfc5bd62727b00474957c78650f23"
+        },
+        "status": "complete",
+        "unique_collected_case_variants": 0
+      },
+      "difference_from_original": {
+        "forecast_brier": -0.24317228915653966,
+        "forecast_log_loss": -0.6136544673624239,
+        "general_macro_accuracy": -0.0027173913043477826,
+        "general_macro_log_loss": 0.021301135284509554,
+        "reward": 0.18583333333333335,
+        "success_rate": 0.09375
+      },
+      "forecast_brier": 0.06831572805459225,
+      "forecast_log_loss": 0.22671975505159261,
+      "general_macro_accuracy": 0.7771739130434783,
+      "general_macro_log_loss": 0.5210229942832327,
+      "optimizer_steps": 80,
+      "reward": 0.5021875,
+      "seconds": 777.077037349809,
+      "selected_update": 40,
+      "status": "complete",
+      "stop_reason": null,
+      "success_rate": 0.796875,
+      "updates": 40
+    },
+    "reward-1507": {
+      "actual_commands": 3367,
+      "by_regime": {
+        "costly_hidden": {
+          "n": 24,
+          "reward": -0.07,
+          "success_rate": 0.625
+        },
+        "costly_ready": {
+          "n": 24,
+          "reward": 0.98,
+          "success_rate": 1.0
+        },
+        "failed_write": {
+          "n": 24,
+          "reward": 0.51,
+          "success_rate": 0.7916666666666666
+        },
+        "hidden": {
+          "n": 24,
+          "reward": 0.8566666666666666,
+          "success_rate": 0.9583333333333334
+        },
+        "locked_hidden": {
+          "n": 24,
+          "reward": 0.8266666666666667,
+          "success_rate": 0.9583333333333334
+        },
+        "locked_ready": {
+          "n": 24,
+          "reward": 0.86,
+          "success_rate": 0.9583333333333334
+        },
+        "ready": {
+          "n": 24,
+          "reward": 0.98,
+          "success_rate": 1.0
+        },
+        "stale": {
+          "n": 24,
+          "reward": -0.020000000000000018,
+          "success_rate": 0.5
+        }
+      },
+      "consumption": {
+        "collected_policy_episodes": 248,
+        "collected_transitions": 463,
+        "consumed": {
+          "forecasts": {
+            "optimizer_presentations": 0,
+            "unique_ids": 0
+          },
+          "general_replay": {
+            "optimizer_presentations": 992,
+            "unique_ids": 474
+          },
+          "policy_transitions": {
+            "optimizer_presentations": 926,
+            "unique_ids": 463
+          }
+        },
+        "lineage": {
+          "committed_optimizer_steps": 62,
+          "foundation": {
+            "id": "Qwen/Qwen3.5-9B",
+            "kind": "qwen3_5",
+            "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+          },
+          "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "selected_adapter_sha256": "53993e4ae8b3e9044822d9cbd8422decd71fdcb1af95f47f6cd5e6232f767bba",
+          "selected_optimizer_steps": 62,
+          "selected_update": 31,
+          "starting_adapter": {
+            "README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+            "adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+            "adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+          }
+        },
+        "prepared": {
+          "base_world_goal_tasks": 48,
+          "families": 3,
+          "forecast_questions": 2304,
+          "general_replay_pool": 4096,
+          "root_fixtures": 12,
+          "world_goal_regime_variants": 384
+        },
+        "schema": "evidence-decisions-v2-consumption",
+        "scope": "Counts committed gradient presentations. Forward-only evaluation and gradient diagnostics are excluded. A rollout collected before interruption need not have reached an optimizer step. Counts describe the full run, not only the selected checkpoint; selected step count is explicit.",
+        "sources": {
+          "optimizer-steps.jsonl": "3659ebaa35b20971fc46629f8af36e5826a35521da7fb2c8c518e6567634bfbb",
+          "rollouts.jsonl": "dd8eae8bdeb012266d27563a8c25a898737d12cb2f8eb3fe0e1c647bb5c2c04a",
+          "run.json": "d380e3ccc8d0baf36e8f191bbd63a0bc2ae02095d4f7a77ce959281569dfb172",
+          "training.jsonl": "0989761c36dbbe4204db0b5cb73595edb07e3d355fb6f4f450a9c2235e872b70"
+        },
+        "status": "complete",
+        "unique_collected_case_variants": 248
+      },
+      "difference_from_original": {
+        "forecast_brier": -0.009445335782079844,
+        "forecast_log_loss": -0.01529742837149528,
+        "general_macro_accuracy": 0.0,
+        "general_macro_log_loss": 0.019451353741092137,
+        "reward": 0.29906249999999995,
+        "success_rate": 0.14583333333333337
+      },
+      "forecast_brier": 0.30204268142905205,
+      "forecast_log_loss": 0.8250767940425212,
+      "general_macro_accuracy": 0.779891304347826,
+      "general_macro_log_loss": 0.5191732127398153,
+      "optimizer_steps": 62,
+      "reward": 0.6154166666666666,
+      "seconds": 813.3790690540336,
+      "selected_update": 31,
+      "status": "complete",
+      "stop_reason": "policy_divergence",
+      "success_rate": 0.8489583333333334,
+      "updates": 31
+    },
+    "reward-1609": {
+      "actual_commands": 1334,
+      "by_regime": {
+        "costly_hidden": {
+          "n": 24,
+          "reward": -0.17,
+          "success_rate": 0.625
+        },
+        "costly_ready": {
+          "n": 24,
+          "reward": 0.6466666666666666,
+          "success_rate": 0.8333333333333334
+        },
+        "failed_write": {
+          "n": 24,
+          "reward": -0.050000000000000044,
+          "success_rate": 0.5
+        },
+        "hidden": {
+          "n": 24,
+          "reward": 0.36999999999999994,
+          "success_rate": 0.7083333333333334
+        },
+        "locked_hidden": {
+          "n": 24,
+          "reward": 0.4166666666666667,
+          "success_rate": 0.75
+        },
+        "locked_ready": {
+          "n": 24,
+          "reward": 0.6074999999999999,
+          "success_rate": 0.8333333333333334
+        },
+        "ready": {
+          "n": 24,
+          "reward": 0.73,
+          "success_rate": 0.875
+        },
+        "stale": {
+          "n": 24,
+          "reward": -0.020000000000000018,
+          "success_rate": 0.5
+        }
+      },
+      "consumption": {
+        "collected_policy_episodes": 16,
+        "collected_transitions": 26,
+        "consumed": {
+          "forecasts": {
+            "optimizer_presentations": 0,
+            "unique_ids": 0
+          },
+          "general_replay": {
+            "optimizer_presentations": 64,
+            "unique_ids": 32
+          },
+          "policy_transitions": {
+            "optimizer_presentations": 52,
+            "unique_ids": 26
+          }
+        },
+        "lineage": {
+          "committed_optimizer_steps": 4,
+          "foundation": {
+            "id": "Qwen/Qwen3.5-9B",
+            "kind": "qwen3_5",
+            "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+          },
+          "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "selected_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+          "selected_optimizer_steps": 0,
+          "selected_update": 0,
+          "starting_adapter": {
+            "README.md": "bb29528044c9409e183ce924e4ea6f29f2b705d749287781b8ff2777b5209a55",
+            "adapter_config.json": "ce6c978b3dbf3f3a6393d5c7c5305b34363bf84e86bffbcebfba651a2291818c",
+            "adapter_model.safetensors": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+          }
+        },
+        "prepared": {
+          "base_world_goal_tasks": 48,
+          "families": 3,
+          "forecast_questions": 2304,
+          "general_replay_pool": 4096,
+          "root_fixtures": 12,
+          "world_goal_regime_variants": 384
+        },
+        "schema": "evidence-decisions-v2-consumption",
+        "scope": "Counts committed gradient presentations. Forward-only evaluation and gradient diagnostics are excluded. A rollout collected before interruption need not have reached an optimizer step. Counts describe the full run, not only the selected checkpoint; selected step count is explicit.",
+        "sources": {
+          "optimizer-steps.jsonl": "d4677261ccac18089d335d737a66e638f918f6b4af2832c27b7a8be269c2fe6f",
+          "rollouts.jsonl": "bcf7ded5cf847c95d718cd36f20d395742ce58f260497121a24ace79f9b7601e",
+          "run.json": "491a6c9097d37392ca7f934b211836273069342c53cace668fe66475a8871b73",
+          "training.jsonl": "fca6f2477e8e7d672a878422c67f1d8522085bfdea1668d66f45ba8e4112363a"
+        },
+        "status": "complete",
+        "unique_collected_case_variants": 16
+      },
+      "difference_from_original": {
+        "forecast_brier": 0.0,
+        "forecast_log_loss": 0.0,
+        "general_macro_accuracy": 0.0,
+        "general_macro_log_loss": 0.0,
+        "reward": 0.0,
+        "success_rate": 0.0
+      },
+      "forecast_brier": 0.3114880172111319,
+      "forecast_log_loss": 0.8403742224140165,
+      "general_macro_accuracy": 0.779891304347826,
+      "general_macro_log_loss": 0.4997218589987232,
+      "optimizer_steps": 4,
+      "reward": 0.31635416666666666,
+      "seconds": 285.11649130890146,
+      "selected_update": 0,
+      "status": "complete",
+      "stop_reason": "policy_divergence",
+      "success_rate": 0.703125,
+      "updates": 2
+    }
+  },
+  "schema": "evidence-decisions-v2",
+  "status": "complete"
+}
