@@ -1,0 +1,160 @@
+{
+  "accepted_presentations": {
+    "forecast": 8,
+    "policy": 7,
+    "replay": 4
+  },
+  "accepted_steps": 1,
+  "actual_commands": 36,
+  "episodes": 4,
+  "exact_parameter_and_optimizer_restoration": true,
+  "gradient_diagnostic": {
+    "components": {
+      "actor": {
+        "critic_l2": 0.0,
+        "language_l2": 0.3657975196838379,
+        "loss": -4.257474628399649e-08,
+        "rows": 7
+      },
+      "outcome": {
+        "critic_l2": 0.0,
+        "language_l2": 0.46211063861846924,
+        "loss": 1.0836496949195862,
+        "rows": 8
+      },
+      "replay": {
+        "critic_l2": 0.0,
+        "language_l2": 0.4614902138710022,
+        "loss": 1.0871449708938599,
+        "rows": 4
+      },
+      "value": {
+        "critic_l2": 1.5681461095809937,
+        "language_l2": 0.0,
+        "loss": 0.9314427886690412,
+        "rows": 7
+      }
+    },
+    "cosines": {
+      "actor:outcome": 0.6208662986016409,
+      "actor:replay": 0.6202096783590113,
+      "outcome:replay": 0.9990660027299524
+    },
+    "critic_backbone_connection": "detached",
+    "optimizer_steps": 0,
+    "unchanged_policy": {
+      "gradient_enabled": true,
+      "max_absolute_probability_delta": 2.9802322387695312e-08,
+      "maximum_sampled_ratio": 1.0000001192092896,
+      "minimum_sampled_ratio": 0.9999998807907104,
+      "sampled_ratios_inside_clip": true,
+      "transitions": 7
+    },
+    "weights_unchanged": true
+  },
+  "ledger": [
+    {
+      "metrics": {
+        "actor_loss": -4.257474628399649e-08,
+        "critic_clip_coefficient": 1.0,
+        "critic_gradient_norm": 0.7840730547904968,
+        "entropy": 1.9441112790788921,
+        "language_clip_coefficient": 1.0,
+        "language_gradient_norm": 0.9633989334106445,
+        "outcome_loss": 1.0836496949195862,
+        "replay_loss": 1.0871449708938599,
+        "value_loss": 0.9314427886690412
+      },
+      "phase": "optimizer_attempt",
+      "physical_steps": 1
+    },
+    {
+      "accepted": true,
+      "checkpoint_eligible": true,
+      "diagnostic": {
+        "max_full_kl": 1.290440559387207e-05,
+        "mean_full_kl": 1.1946473802839006e-05,
+        "mean_sampled_action_ratio": 0.9997426952634539,
+        "transitions": 7
+      },
+      "metrics": {
+        "actor_loss": -4.257474628399649e-08,
+        "critic_clip_coefficient": 1.0,
+        "critic_gradient_norm": 0.7840730547904968,
+        "entropy": 1.9441112790788921,
+        "language_clip_coefficient": 1.0,
+        "language_gradient_norm": 0.9633989334106445,
+        "outcome_loss": 1.0836496949195862,
+        "post_step": {
+          "max_full_kl": 1.290440559387207e-05,
+          "mean_full_kl": 1.1946473802839006e-05,
+          "mean_sampled_action_ratio": 0.9997426952634539,
+          "transitions": 7
+        },
+        "replay_loss": 1.0871449708938599,
+        "value_loss": 0.9314427886690412
+      },
+      "parameters_and_optimizer_restored": false,
+      "phase": "accepted",
+      "physical_steps": 1,
+      "reason": null
+    },
+    {
+      "metrics": {
+        "actor_loss": -0.004055908748081705,
+        "critic_clip_coefficient": 1.0,
+        "critic_gradient_norm": 0.7823312282562256,
+        "entropy": 1.9440199817929948,
+        "language_clip_coefficient": 1.0,
+        "language_gradient_norm": 0.9603665471076965,
+        "outcome_loss": 1.0780308246612549,
+        "replay_loss": 1.0815664529800415,
+        "value_loss": 0.9268521070480347
+      },
+      "phase": "optimizer_attempt",
+      "physical_steps": 1
+    },
+    {
+      "accepted": false,
+      "checkpoint_eligible": false,
+      "diagnostic": {
+        "max_full_kl": 0.7969892024993896,
+        "mean_full_kl": 0.7891572713851929,
+        "mean_sampled_action_ratio": 1.3768955022096634,
+        "transitions": 7
+      },
+      "metrics": {
+        "actor_loss": -0.004055908748081705,
+        "critic_clip_coefficient": 1.0,
+        "critic_gradient_norm": 0.7823312282562256,
+        "entropy": 1.9440199817929948,
+        "language_clip_coefficient": 1.0,
+        "language_gradient_norm": 0.9603665471076965,
+        "outcome_loss": 1.0780308246612549,
+        "post_step": {
+          "max_full_kl": 0.7969892024993896,
+          "mean_full_kl": 0.7891572713851929,
+          "mean_sampled_action_ratio": 1.3768955022096634,
+          "transitions": 7
+        },
+        "replay_loss": 1.0815664529800415,
+        "value_loss": 0.9268521070480347
+      },
+      "parameters_and_optimizer_restored": true,
+      "phase": "rejected",
+      "physical_steps": 1,
+      "reason": "mean_policy_divergence"
+    }
+  ],
+  "limits": "Tiny random model and adversarial high learning rate for rollback verification only. No 9B run, selected checkpoint or performance claim. Existing v2 recipe unchanged.",
+  "physical_optimizer_attempts": 2,
+  "rejected_presentations": {
+    "forecast": 8,
+    "policy": 7,
+    "replay": 4
+  },
+  "rejected_steps": 1,
+  "status": "passed",
+  "test_network_only": true,
+  "transitions": 7
+}

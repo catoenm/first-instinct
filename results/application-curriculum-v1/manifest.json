@@ -1,0 +1,31 @@
+{
+  "audit_source_sha256": "21318498310eb94f198751336c3098afde31e20f2c3347fdf0b371a64a358cb5",
+  "files": {
+    "audit.json": "00a91fa42c6c10c3c162c4401d2fd2ac2fb5a5bacdb022a2a19ea338b41b7360",
+    "cases.jsonl.gz": "a7be32a6abfec2f7cce78c503fa3760b46099b1f72aa0b61271da15e8b50d29a",
+    "contexts-private.jsonl.gz": "9b2bd245b43b8f84f78f8f5c095ccf807d5d6a66bda7a1a88346db84193a98e6",
+    "executed-source.tar.gz": "3c69fe7c857b045efac072315b9eee64b627dbff5e4e0b3f9b54f8e6162721c8",
+    "execution-progress.json": "997b5a1337452c9552a3558807be184e6106607ab894782660a89447d4c29b2c",
+    "executions.jsonl.gz": "5aa593c4aa886c83ea820303f1d1c87029cb49fc566d885a3ffddcf87e7d848b",
+    "guard-mechanics-before-terminal-fix.json": "2081d539b996e9d6d8320bc1b0187fab5521e5aee1424bea64f90853e937e1bf",
+    "guard-mechanics.json": "2081d539b996e9d6d8320bc1b0187fab5521e5aee1424bea64f90853e937e1bf",
+    "import-guard-diagnostic.json": "cf81638f547a2f6f1e890105308b1bb2f5dcebbb778492f4c6b15b38ca85e97f",
+    "initial-integration-tests.json.gz": "50020833ecc525d649c29feedcf41ba0d2b6101d237d8666e3b9e7b27dd85f3b",
+    "pre-execution-freeze.json": "8a5ea46d9ad9cfb4e423837b473cfe6a3801fd359339f2e7e639e300e3336617",
+    "qualification.json": "50109ba4629d2b0c778dba7abcf506361573921f8fc90bedffe3c9a357d1bcb4",
+    "questions.jsonl.gz": "1962d7bf423292b0b69a9bf49218ffa0418714421bc8a2e5bfd701454e4ca33f",
+    "rejected-first-collection.json": "71cf4b948b2a7dfa6b92a38be8675d1cbcbd93d327941aafb6839be2c753dadf",
+    "rejected-source.tar.gz": "587b0e7c535002e92507ba02361a1f0e42694b9effe106a7a8bfe5b1750c0cc2",
+    "revised-integration-tests.json.gz": "5f3b3f9f545f152ae8e0570c4edabd80057e331499ccc40aa60816e6ca38f30c"
+  },
+  "learning_source_sha256": {
+    "test_decision_rl.py": "235d95db81dc2f52475f009a15f2e0f64795c926aab3f9ab0477acae801146b6",
+    "test_guarded_update.py": "a1ec10278e4de4f36fd23508d29c848d8625ff83129055c10826580cc0826ece",
+    "tool_lab/decision_rl.py": "85ee3c9bf33dfb2081013937dbc55dc43afebcfc933b3f6757d258063b1e6721",
+    "tool_lab/guarded_mechanics.py": "4ceaf18f3f5ebb1226d5efc6fdd6f9dce4ebbf0c52314452d37bb58f17da26e1",
+    "tool_lab/guarded_update.py": "b8123198902fd8fd7aeff1af9c38d2d4dd9e7bde523fd40c2db5b63ebc7e22ac"
+  },
+  "limits": "One additional authored mechanism/root; production and exact replay counted separately. First collection rejected and not trained. Dataset collection has zero model inference or optimizer presentations; tiny shell-learning mechanics are separate.",
+  "schema": "application-decisions-v1-public",
+  "training_questions_consumed": 0
+}

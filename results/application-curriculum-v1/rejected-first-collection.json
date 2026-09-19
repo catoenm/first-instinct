@@ -1,0 +1,18 @@
+{
+  "status": "rejected_for_qualification",
+  "reason": "Collector counted a blocked urllib3 IPv6 import capability probe as an execution-phase network attempt. Full isolation phase receipt was not persisted; preserve rather than silently accept. A separately instrumented replay will distinguish import and actual task execution.",
+  "production_and_replay_branches": 4536,
+  "distinct_executed_alternatives": 2268,
+  "setup_calls": 22788,
+  "prefix_calls": 4536,
+  "branch_calls": 6940,
+  "total_top_level_tool_calls": 34264,
+  "trained_questions": 0,
+  "optimizer_presentations": 0,
+  "files": {
+    "cases.jsonl": "8a0378fb8671674f7704a257faa3efbdf409fe5a8342d2f0aa666e26047035df",
+    "unqualified-questions.jsonl": "9107e238510139583883dd29c3bbbcf13aaf82e2f4c9f5ee6bb470285e723471",
+    "executions.jsonl": "f43f5d60836b29a0a4eba0212dc3533819edc154eef7029a3bd82658519fc0f7",
+    "unqualified-contexts.jsonl": "e4c2a1e31317cb36b7320ac67714cc2f332e6eeb7045b405a3cac6ef9dc28ac9"
+  }
+}

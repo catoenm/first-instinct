@@ -1,0 +1,40 @@
+{
+  "aggregate_float_tolerance": 1e-12,
+  "auditor_sha256": "21318498310eb94f198751336c3098afde31e20f2c3347fdf0b371a64a358cb5",
+  "base_world_goal_tasks": 18,
+  "branch_calls": 6940,
+  "concrete_initial_database_snapshots": 9,
+  "distinct_executed_alternatives": 2268,
+  "exact_question_and_label_match": true,
+  "fresh_context_shortcut_ceilings": {
+    "fresh_contexts": 18,
+    "goal_without_observations": 0.3333333333333333,
+    "menu_only": 0.3333333333333333,
+    "observations_without_goal": 0.6111111111111112
+  },
+  "optimizer_presentations": 0,
+  "prefix_calls": 4536,
+  "production_and_replay_branches": 4536,
+  "public_contexts": 26,
+  "questions": {
+    "decision": 26,
+    "forecast": 1512,
+    "observation_value": 26
+  },
+  "replay_executions": 2268,
+  "root_fixtures": 1,
+  "scope": "Labels, frame conditions, visible inputs, full counterfactual menus and counts independently rechecked. Two deterministic executions per label; nine concrete initial databases. No learned performance claim.",
+  "semantic_world_configurations": 9,
+  "setup_calls": 22788,
+  "status": "passed",
+  "token_audit": {
+    "max_actor": 1181,
+    "max_question": 947,
+    "max_tokens": 1536,
+    "questions": 1564,
+    "unique_actor_histories": 1094
+  },
+  "total_top_level_tool_calls": 34264,
+  "trained_questions": 0,
+  "world_goal_context_cases": 84
+}

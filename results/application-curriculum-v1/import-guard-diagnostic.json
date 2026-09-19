@@ -1,0 +1,42 @@
+{
+  "proof": {
+    "scope": "Python socket/subprocess interception; not an OS sandbox",
+    "blocked_attempts": [
+      "socket.socket",
+      "socket.create_connection",
+      "socket.getaddrinfo",
+      "subprocess.Popen",
+      "socket.socket"
+    ],
+    "environment_allowlist": [
+      "HF_HUB_OFFLINE",
+      "HOME",
+      "LANG",
+      "PATH",
+      "PYTHONNOUSERSITE",
+      "TMPDIR",
+      "TOKENIZERS_PARALLELISM",
+      "TRANSFORMERS_OFFLINE",
+      "TZ"
+    ],
+    "probe_attempt_count": 4
+  },
+  "stack": [
+    {
+      "arguments": [
+        30
+      ],
+      "stack": [
+        "  File \"<repository>/.local/toolsandbox-venv/lib/python3.11/site-packages/urllib3/util/__init__.py\", line 4, in <module>\n    from .connection import is_connection_dropped\n",
+        "  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n",
+        "  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n",
+        "  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n",
+        "  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n",
+        "  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n",
+        "  File \"<repository>/.local/toolsandbox-venv/lib/python3.11/site-packages/urllib3/util/connection.py\", line 137, in <module>\n    HAS_IPV6 = _has_ipv6(\"::1\")\n",
+        "  File \"<repository>/.local/toolsandbox-venv/lib/python3.11/site-packages/urllib3/util/connection.py\", line 126, in _has_ipv6\n    sock = socket.socket(socket.AF_INET6)\n",
+        "  File \"<stdin>\", line 10, in __init__\n"
+      ]
+    }
+  ]
+}

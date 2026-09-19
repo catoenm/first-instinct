@@ -1,0 +1,34 @@
+{
+  "budget": {
+    "branch_calls": 6940,
+    "branches": 4536,
+    "prefix_calls": 4536,
+    "setup_calls": 22788
+  },
+  "guard": {
+    "blocked_attempts": [
+      "socket.socket",
+      "socket.create_connection",
+      "socket.getaddrinfo",
+      "subprocess.Popen",
+      "socket.socket"
+    ],
+    "environment_allowlist": [
+      "HF_HUB_OFFLINE",
+      "HOME",
+      "LANG",
+      "PATH",
+      "PYTHONNOUSERSITE",
+      "TMPDIR",
+      "TOKENIZERS_PARALLELISM",
+      "TRANSFORMERS_OFFLINE",
+      "TZ"
+    ],
+    "import_blocked_attempts": [
+      "socket.socket"
+    ],
+    "post_import_attempt_count": 5,
+    "probe_attempt_count": 4,
+    "scope": "Python socket/subprocess interception; not an OS sandbox"
+  }
+}

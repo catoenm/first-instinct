@@ -53,6 +53,13 @@ branches were executed and audited. They represent four fixture roots, not
 thousands of independent tasks. Whole families are reserved for validation and
 transfer; the data has not yet been used for 9B training.
 
+The [application extension](docs/application-curriculum-v1-results.md) adds real
+ToolSandbox dependency chains, duplicate prevention and already-completed tasks.
+Its 2,268 distinct alternatives were each replayed once, producing 1,564 paired
+questions from one new root. An independent audit passed, and a prospective
+training guard now rejects and rolls back over-limit updates. This data is
+prepared, not yet consumed by a 9B training run.
+
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,
 replacement parts and irreversible damage. They supply **59,993 training

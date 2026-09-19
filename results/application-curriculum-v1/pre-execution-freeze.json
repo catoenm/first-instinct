@@ -1,0 +1,43 @@
+{
+  "base_database_worlds": 9,
+  "base_world_goal_tasks": 18,
+  "case_count": 84,
+  "cases_sha256": "8a0378fb8671674f7704a257faa3efbdf409fe5a8342d2f0aa666e26047035df",
+  "max_branches": 4536,
+  "max_calls": 80000,
+  "plans": [
+    "stop_now",
+    "evidence_then_complete",
+    "no_more_observations"
+  ],
+  "root_fixtures": 1,
+  "schema": "application-decisions-v1",
+  "sources": {
+    "/Users/mitchell/Documents/workspace/ml-data/tool_lab/application_curriculum.py": "ba06514a6b63c8c351e2ec582212bb06f7d09085ecfbdce3c603083268316025",
+    "docs/application-curriculum-v1-protocol.md": "a021bf38f88555aa2616f43ddbfabc2d12423234f32507356991586c36ed59e2",
+    "general_lab/toolsandbox_pilot.py": "24c46d17db75d2db14eca2d1f363702f9ea1f8a9041c75d2bbabf63301b982c9",
+    "test_application_curriculum.py": "69cac7d5f202a18dfc2e99c548fc2a81efb89ad32f2df58c6626be9b254aceff"
+  },
+  "split": "train",
+  "trained_questions": 0,
+  "upstream_commit": "c8571d7854316d2e1c5f288e59fe1e34e53f6dd1",
+  "upstream_hashes": {
+    "ACKNOWLEDGEMENTS": "4586b0107c3f74732b99f791949136a6b32db9b958bdea75f4933aef0302ad92",
+    "LICENSE": "2283d5566b38210fbfb9fcb06619f1d0a8101bff9df974ea8afc3393508e9015",
+    "pyproject.toml": "1374abe6c850da500a4f64534456b25cb029eb6dc1c0e3c3f78431949a2e5ad0",
+    "tool_sandbox/__init__.py": "8dfd7c86f262574bf9638e6697a4c632666765cb040dba17eb192aaaea098cf2",
+    "tool_sandbox/common/__init__.py": "8dfd7c86f262574bf9638e6697a4c632666765cb040dba17eb192aaaea098cf2",
+    "tool_sandbox/common/execution_context.py": "a18f54e157b92fa011e84780bc33941ea0635ad70ab4b38e7408beedc6221437",
+    "tool_sandbox/common/tool_discovery.py": "9f957d1a57e905127547e9508f7dfff3c97a0ef024229ce94b545aa239c673cf",
+    "tool_sandbox/common/utils.py": "27239e40cb1284e23591cb6443d1a899d9a6cabe9d44d26da0f07eefb321487f",
+    "tool_sandbox/common/validators.py": "e283ae3b080179477e103e7357b76611f3a8bb375808afa7b0b84cf01b3dfd4c",
+    "tool_sandbox/tools/__init__.py": "6e050c4c8b16f7552215527ec56d471829e9aaa771cd013ce166aab87ccc4899",
+    "tool_sandbox/tools/contact.py": "af2b97be6b03d1acf44cd2e34465942622a3453d9e052099a1028e0d17361a49",
+    "tool_sandbox/tools/messaging.py": "d992831c735c44167b46f67ff45b11ad37fa70df951ebe9eac283c4b44e5607c",
+    "tool_sandbox/tools/rapid_api_search_tools.py": "2e369320fb6ce3a203e324fe55979ee1dfdb14f5ff9afc3eefeb3aa2a1a86fb1",
+    "tool_sandbox/tools/reminder.py": "4beb01ca7b0706a831f3cf53accdef4f089c08f95fbf2b78acbd7785dccb13a7",
+    "tool_sandbox/tools/setting.py": "01cd0c5f45cc6ceadcd5935369f1260585bbc99852562ca30f81771b56a18e97",
+    "tool_sandbox/tools/user_tools.py": "177a07a48ea319db6e410fa84eb7780ab7ec1d139044ce744c4a7713fa676613",
+    "tool_sandbox/tools/utilities.py": "7133d2cade24c0a5c3bf990d09f685446ff7037ab5062edca0ed7db19cc2b3e7"
+  }
+}

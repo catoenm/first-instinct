@@ -1,9 +1,15 @@
 # A qualified data stage, not another trained model
 
 The next local curriculum passed execution, read-back and tokenizer audits.
-The active `evidence-decisions-v2` 9B comparison remains unchanged. No v3
+The [completed `evidence-decisions-v2` comparison](evidence-decisions-v2-results.md) remains unchanged. No v3
 questions have reached that run or any other 9B optimizer, and no additional
 graphics processor was rented for this work.
+
+A subsequent [application-workflow qualification](application-curriculum-v1-results.md)
+adds actual ToolSandbox messaging and device-setting dependencies, duplicate
+prevention and stopping on already-satisfied goals. Its 1,564 additional questions
+represent one new root fixture and remain untrained. The counts below describe
+the earlier shell/publication qualification only.
 
 The useful addition is an actual filesystem publication workflow: stage an
 artifact, validate its bytes, then atomically replace the live artifact.

@@ -41,8 +41,14 @@ def collect(policy,tokenizer,cases,executors,max_tokens,check,sample=True):
             logps=distribution.log_prob(choices).cpu().tolist();probs=distribution.probs.cpu().tolist()
             for j,((i,ep),row,index) in enumerate(zip(pending,rows,choices.cpu().tolist())):
                 if actor_input(ep.input())!=inputs[j]:raise ValueError('Actor observation changed')
-                before_reward=ep.receipt()['reward'];ep.step(row['option_ids'][index])
-                reward=ep.receipt()['reward']-before_reward
+                ep.step(row['option_ids'][index])
+                # Pay costs as they occur, and terminal utility exactly once.
+                # A world can already satisfy its goal before the first action:
+                # stopping there must earn +1, not a zero difference from an
+                # initial potential that the actor was never actually paid.
+                reward=-ep.events[-1]['cost']
+                if ep.done:
+                    reward+={'completed':1.,'incorrect':-1.,'unfinished':0.}[ep.receipt()['outcome']]
                 event=dict(input=inputs[j],input_sha256=digest(inputs[j]),encoded_input=row,
                     action=row['option_ids'][index],old_probabilities=probs[j][:len(row['option_ids'])],
                     sampled_log_probability=logps[j],value=float(values[j]),reward=reward,
@@ -92,6 +98,9 @@ def audit_actor_trace(trace):
             raise ValueError('Actual actor prompt differs from its declared contract')
         if actor['action']!=original['action'] or actor['observation']!=original['observation']:
             raise ValueError('Actor choice was not executed')
+        expected=-original['cost']+({'completed':1.,'incorrect':-1.,'unfinished':0.}[trace['outcome']]
+                                   if original['terminal'] else 0.)
+        if abs(actor['reward']-expected)>1e-9:raise ValueError('Incorrect terminal utility or per-action cost')
         ids=actor['encoded_input']['option_ids'];p=actor['old_probabilities']
         if ids!=[o['id'] for o in actor['input']['options']] or len(ids)!=len(p):raise ValueError('Changed action menu')
         if any(not math.isfinite(v) or v<0 or v>1 for v in p) or abs(sum(p)-1)>1e-5:raise ValueError('Invalid actor probabilities')
