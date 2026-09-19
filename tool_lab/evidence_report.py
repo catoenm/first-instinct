@@ -7,6 +7,7 @@ from pathlib import Path
 from general_lab.train import macro_metrics
 from scale_lab.common import file_hash, read_rows, write_json
 from tool_lab.evidence_prepare import audit_trajectory
+from tool_lab.evidence_consumption import consumption
 
 
 def close(a,b):
@@ -29,7 +30,8 @@ def report(root):
             results[name]={'status':'not_run'};continue
         run=json.loads((folder/'run.json').read_text())
         if run['status']!='complete':
-            results[name]={'status':run['status'],'detail':run.get('detail'),'optimizer_steps':run['optimizer_steps']};continue
+            results[name]={'status':run['status'],'detail':run.get('detail'),'optimizer_steps':run.get('optimizer_steps'),
+                           'consumption':consumption(data,folder)};continue
         starts.add(run['initial_trainable_sha256'])
         traces=read_rows(folder/'selected-test-trajectories.jsonl')
         if len(traces)!=len(cases) or {t['id'] for t in traces}!=set(cases):raise ValueError('Changed test cohort')
@@ -70,6 +72,7 @@ def report(root):
             forecast_brier=brier,forecast_log_loss=log_loss,
             general_macro_accuracy=transfer['macro_accuracy'],general_macro_log_loss=transfer['macro_log_loss'],
             by_regime=metrics['by_regime'],actual_commands=run['actual_commands'],seconds=run['seconds'])
+        results[name]['consumption']=consumption(data,folder)
     if len(starts)>1:raise ValueError('Arms did not start from identical language parameters')
     baseline=results['original-test']
     if baseline['status']=='complete':

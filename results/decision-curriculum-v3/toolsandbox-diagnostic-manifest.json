@@ -1,0 +1,36 @@
+{
+  "adapter_source_sha256": "a5c0247ef0ab07b141d13e914fa9947c9c29c3bd62c6ec07991806e88f5cfbc9",
+  "decision_questions": 144,
+  "existing_database_worlds": 192,
+  "existing_distinct_world_program_labels": 1152,
+  "existing_replay_verified_production_branches": 2304,
+  "existing_roots": 48,
+  "files": {
+    "contexts-private.jsonl": "8a810524db9b6457e835ba2f3f18896e1bb341ce46bd1c055b356311aa82bb2e",
+    "questions.jsonl": "f0769126a9aab6d950458ffd7de636529780e8356208b69c8b0d03a4c5429af6"
+  },
+  "forecast_questions": 720,
+  "limits": "Previously examined four-world reminder mechanism. Collection split names never authorize training. Values concern the specified continuation. Extra questions reuse evidence; they are not new executed tasks.",
+  "model_predictions": 0,
+  "new_executed_branches": 0,
+  "new_tool_calls": 0,
+  "observation_value_questions": 144,
+  "optimizer_presentations": 0,
+  "questions": 1008,
+  "source_corpus_content_sha256": "b40fbc7150147f7e020ad10e4eb81aa16b7a43316681764ff9aebf151b171a5e",
+  "source_files_sha256": {
+    "artifact-audit.json": "9e1b2ecfa91a0115a4bf2d9d9c1102c36ea1f226c699e1968f3e01b057651964",
+    "collected/executions.jsonl": "64583598336c1872d44a4eee68c511bdb6e92bd0b998947f29c167db6d04158b",
+    "collected/forecasts.jsonl": "1e2866af14d7b1af192ba5533e4f2239ec56d251000e7b243bc24e986ba1e289",
+    "collected/manifest.json": "8f23bdc18ba71f38dbde75cef6231f87585a6716953a249e3f13c481f6e0dc32",
+    "freeze.json": "8dd4cad766f6434cc86034561d245e1f051170cdc425d42aadf1eccb97e1b258",
+    "guards-final.json": "19219ca9dad807bc98f4a042a12d79f3e2d274f8340c35963c5f928f6bb1e589",
+    "post-collection-review.json": "8437a008d03957c1c1ad644bbbcaa3edd8544f43cf1c059c1e460ba50e37b296",
+    "prompt-audit-final.json": "46a7989a0f724a034964e3de7265e8db8af23e11f19bbf4a76766f9c176e44a5",
+    "public-questions.jsonl": "ee94783a131a12857771c0c99f77e010189346bd48ea498cddf949eefff07773",
+    "review.json": "45684a1e09e5094aca9d8d9b84ef9c3d2116f7f0e9fb7ff3c2d94bf4c0da97be"
+  },
+  "status": "prepared_diagnostic_only",
+  "trained_questions": 0,
+  "underlying_authored_mechanisms": 1
+}

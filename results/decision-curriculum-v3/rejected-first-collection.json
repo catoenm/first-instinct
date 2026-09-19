@@ -1,0 +1,11 @@
+{
+  "status": "rejected_before_training",
+  "reason": [
+    "Saved fixture mapping order changed public menus on read-back.",
+    "Publication base-file metadata aliased the environment file mapping; preservation verification must cover scripts too."
+  ],
+  "executed_branches": 3024,
+  "actual_commands": 8892,
+  "training_rows_consumed": 0,
+  "preserve_receipts": true
+}

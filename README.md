@@ -45,6 +45,13 @@ reinforcement learning, and both together has launched with two seeds per method
 Training results are pending; [data and mechanics checks](results/evidence-decisions-v2/)
 are available now.
 
+**Next data stage: [paired decisions and consequences](docs/decision-curriculum-v3-results.md).**
+Local qualification adds artifact staging, hash validation and atomic publication,
+alongside costly evidence and recoverable failures. All 3,024 counterfactual
+branches were executed and audited. They represent four fixture roots, not
+thousands of independent tasks. Whole families are reserved for validation and
+transfer; the data has not yet been used for 9B training.
+
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,
 replacement parts and irreversible damage. They supply **59,993 training

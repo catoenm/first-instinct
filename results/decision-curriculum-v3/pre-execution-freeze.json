@@ -1,0 +1,32 @@
+{
+  "cases_sha256": "8963fa03ae11d7d3ce66dc258d503130f3587cf8b827fcf4abc8ed48ddaffdce",
+  "family_ownership": {
+    "config": "train",
+    "publish": "transfer",
+    "report": "validation",
+    "sqlite": "train"
+  },
+  "maximum_branches": 3024,
+  "model_inference": false,
+  "plans": [
+    "stop_now",
+    "evidence_then_commit",
+    "no_more_observations"
+  ],
+  "roots_per_family": 1,
+  "schema": "decision-curriculum-v3",
+  "sources": {
+    "docs/decision-curriculum-v3-protocol.md": "3bf7a5192a463afb0228be596acbf6bcce38f0c502f5d7796c48d40ca421f355",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "test_decision_curriculum.py": "f332be77975b238ef5cffa5b7162f691f72fbddad8d8903b2d192b1d428e7bec",
+    "tool_lab/contextual_shell.py": "c3874760d9c3b65468273ef2c187a22987dd5e0a52451d16f063c3e0752a8bf6",
+    "tool_lab/contextual_shell_audit.py": "1d7aa7369d54e06d5f2b6af1a89fdec3f1330e35fba42d85cd34a80ba49d1f45",
+    "tool_lab/decision_collect.py": "d3caf1e53a0af0ec26c366701409658996c097406114a240225f8f29f0796773",
+    "tool_lab/decision_curriculum.py": "b212c1f630367ad680142f1a651872150ee0e3212777266e7647ffc416156725",
+    "tool_lab/evidence_env.py": "3de48b6c1da7c2a660d5d27b56ab968e08d29b69d95e295c33b4b2f094b0dcd9",
+    "tool_lab/evidence_shell.py": "6fe2e8cc272915619df0b3c1800898c0b26687cf5f6dfd95c12c5c6d2c13ecf0",
+    "tool_lab/shell_supervision.py": "0b88a66806e8e8abf9cebb389b6cafe905ad5a8ebd069492ef76544c98e5e875"
+  },
+  "training": false,
+  "workers": 2
+}

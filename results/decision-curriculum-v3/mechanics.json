@@ -1,0 +1,90 @@
+{
+  "actual_commands": 36,
+  "episodes": 4,
+  "forecast_metric_smoke": {
+    "accuracy": 0.5,
+    "brier": 0.6523322651674783,
+    "contract": "Multiclass Brier sums squared errors across all three outcomes; not directly comparable with v2 binary-component Brier.",
+    "log_loss": 1.0780308637994698,
+    "n": 8
+  },
+  "gradient_diagnostic": {
+    "components": {
+      "actor": {
+        "critic_l2": 0.0,
+        "language_l2": 0.3657975196838379,
+        "loss": -4.257474628399649e-08,
+        "rows": 7
+      },
+      "outcome": {
+        "critic_l2": 0.0,
+        "language_l2": 0.46211063861846924,
+        "loss": 1.0836496949195862,
+        "rows": 8
+      },
+      "replay": {
+        "critic_l2": 0.0,
+        "language_l2": 0.4614902138710022,
+        "loss": 1.0871449708938599,
+        "rows": 4
+      },
+      "value": {
+        "critic_l2": 1.5681461095809937,
+        "language_l2": 0.0,
+        "loss": 0.9314427886690412,
+        "rows": 7
+      }
+    },
+    "cosines": {
+      "actor:outcome": 0.6208662986016409,
+      "actor:replay": 0.6202096783590113,
+      "outcome:replay": 0.9990660027299524
+    },
+    "critic_backbone_connection": "detached",
+    "optimizer_steps": 0,
+    "unchanged_policy": {
+      "gradient_enabled": true,
+      "max_absolute_probability_delta": 2.9802322387695312e-08,
+      "maximum_sampled_ratio": 1.0000001192092896,
+      "minimum_sampled_ratio": 0.9999998807907104,
+      "sampled_ratios_inside_clip": true,
+      "transitions": 7
+    },
+    "weights_unchanged": true
+  },
+  "limits": "Random tiny network mechanics only. No 9B training or learned quality claim. Actor replans; forecasts retain their fixed continuation.",
+  "optimizer": {
+    "actor_loss": -4.257474628399649e-08,
+    "critic_clip_coefficient": 1.0,
+    "critic_gradient_norm": 0.7840730547904968,
+    "entropy": 1.9441112790788921,
+    "language_clip_coefficient": 1.0,
+    "language_gradient_norm": 0.9633989334106445,
+    "outcome_loss": 1.0836496949195862,
+    "post_step": {
+      "max_full_kl": 1.290440559387207e-05,
+      "mean_full_kl": 1.1946473802839006e-05,
+      "mean_sampled_action_ratio": 0.9997426952634539,
+      "transitions": 7
+    },
+    "replay_loss": 1.0871449708938599,
+    "value_loss": 0.9314427886690412
+  },
+  "parameter_audit": {
+    "changed_elements": 3344,
+    "changed_tensors": 4,
+    "examples": [
+      "embedding.weight",
+      "transform.weight",
+      "transform.bias",
+      "lm_head.weight"
+    ],
+    "interpretation": "Original pretrained matrices stay frozen; the trained adapters change the effective language-network transformations.",
+    "l2_delta": 0.03174409460622936,
+    "max_absolute_delta": 0.0010259151458740234,
+    "trainable_elements": 3344
+  },
+  "status": "passed",
+  "test_network_only": true,
+  "transitions": 7
+}
