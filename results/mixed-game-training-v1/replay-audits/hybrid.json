@@ -1,0 +1,409 @@
+{
+  "status": "verified",
+  "platform": "Linux-6.8.0-111-generic-x86_64-with-glibc2.35",
+  "python": "3.12.13",
+  "auditor_sha256": "91a776f17e12c134519e36e3cdb58f0db063c4a790de920af45676510da43651",
+  "freeze_sha256": "45bbe0296528e75409ca72ad54e5f57626c3bd2ea7a36f924cfb4ed68abd1b4a",
+  "files": {
+    "baseline-test-episodes.jsonl": {
+      "sha256": "ee02834d2d6aa4955209bef29b483314b063b7bf993b100893325749a23608fc",
+      "episodes": 192,
+      "transitions": 1448,
+      "policy": {
+        "mean_return": -0.636941915119467,
+        "mean_steps": 13.153752010063284,
+        "episodes": 192,
+        "by_family": {
+          "reservation": {
+            "mean_return": -0.11460075605097768,
+            "mean_steps": 4.252922696856521,
+            "episodes": 144,
+            "success_rate": 0.3658039604730781,
+            "partial_failure_rate": 0.39226384998443825
+          },
+          "lightsout": {
+            "mean_return": -1.006641645450145,
+            "mean_steps": 12.0,
+            "episodes": 24,
+            "success_rate": 0.0,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.7895833438572785,
+            "mean_steps": 23.208333333333332,
+            "episodes": 24,
+            "mean_merge_score": 29.0,
+            "game_over_rate": 0.041666666666666664
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.5792060632984048,
+            "mean_steps": 13.431975568004981,
+            "episodes": 64
+          },
+          "reversed": {
+            "mean_return": -0.6726624283608543,
+            "mean_steps": 12.615575396825397,
+            "episodes": 64
+          },
+          "reworded": {
+            "mean_return": -0.658957253699142,
+            "mean_steps": 13.413705065359476,
+            "episodes": 64
+          }
+        }
+      }
+    },
+    "baseline-validation-episodes.jsonl": {
+      "sha256": "004fc4308a584fc663c5506fe1da2ebb26904bc5884b07200cd3c4fdbe9690ce",
+      "episodes": 96,
+      "transitions": 702,
+      "policy": {
+        "mean_return": -0.6512236578086334,
+        "mean_steps": 13.291143895091263,
+        "episodes": 96,
+        "by_family": {
+          "reservation": {
+            "mean_return": -0.0984876528402623,
+            "mean_steps": 3.8734316852737907,
+            "episodes": 72,
+            "success_rate": 0.33300262688807586,
+            "partial_failure_rate": 0.35438596491228075
+          },
+          "lightsout": {
+            "mean_return": -1.026016642494748,
+            "mean_steps": 12.0,
+            "episodes": 12,
+            "success_rate": 0.0,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.8291666780908902,
+            "mean_steps": 24.0,
+            "episodes": 12,
+            "mean_merge_score": 26.666666666666668,
+            "game_over_rate": 0.0
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.637364258917214,
+            "mean_steps": 13.309743722050223,
+            "episodes": 32
+          },
+          "reversed": {
+            "mean_return": -0.6654413807766355,
+            "mean_steps": 13.345464709009601,
+            "episodes": 32
+          },
+          "reworded": {
+            "mean_return": -0.6508653337320511,
+            "mean_steps": 13.218223254213965,
+            "episodes": 32
+          }
+        }
+      }
+    },
+    "selected-test-episodes.jsonl": {
+      "sha256": "d00a5083512b378e474b17dc2f649d65edeb30b2278f6eab2f338efb852f643e",
+      "episodes": 192,
+      "transitions": 1473,
+      "policy": {
+        "mean_return": -0.16170196045951862,
+        "mean_steps": 12.900628306878307,
+        "episodes": 192,
+        "by_family": {
+          "reservation": {
+            "mean_return": 0.6171524466982067,
+            "mean_steps": 4.660218253968254,
+            "episodes": 144,
+            "success_rate": 0.8288544584500467,
+            "partial_failure_rate": 0.06539351851851852
+          },
+          "lightsout": {
+            "mean_return": -0.8314249931912249,
+            "mean_steps": 11.875,
+            "episodes": 24,
+            "success_rate": 0.041666666666666664,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.2708333348855376,
+            "mean_steps": 22.166666666666668,
+            "episodes": 24,
+            "mean_merge_score": 92.0,
+            "game_over_rate": 0.08333333333333333
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.0017975834420583014,
+            "mean_steps": 12.47415285558668,
+            "episodes": 64
+          },
+          "reversed": {
+            "mean_return": -0.30079326497386627,
+            "mean_steps": 13.57927268129474,
+            "episodes": 64
+          },
+          "reworded": {
+            "mean_return": -0.18251503296263127,
+            "mean_steps": 12.648459383753503,
+            "episodes": 64
+          }
+        }
+      }
+    },
+    "update-016-validation-episodes.jsonl": {
+      "sha256": "4c97606d10eb972175c803f011e8c832590487101d21249a0ef04a78fe543e3e",
+      "episodes": 96,
+      "transitions": 694,
+      "policy": {
+        "mean_return": -0.6330002255787326,
+        "mean_steps": 13.251175323930742,
+        "episodes": 96,
+        "by_family": {
+          "reservation": {
+            "mean_return": -0.11506733841507341,
+            "mean_steps": 3.753525971792226,
+            "episodes": 72,
+            "success_rate": 0.31294915095224696,
+            "partial_failure_rate": 0.35438596491228075
+          },
+          "lightsout": {
+            "mean_return": -0.9714333271452537,
+            "mean_steps": 12.0,
+            "episodes": 12,
+            "success_rate": 0.0,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.8125000111758709,
+            "mean_steps": 24.0,
+            "episodes": 12,
+            "mean_merge_score": 27.333333333333332,
+            "game_over_rate": 0.0
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.6183549608023368,
+            "mean_steps": 13.234889920880633,
+            "episodes": 32
+          },
+          "reversed": {
+            "mean_return": -0.6709748198615025,
+            "mean_steps": 13.216916064671482,
+            "episodes": 32
+          },
+          "reworded": {
+            "mean_return": -0.6096708960723586,
+            "mean_steps": 13.30171998624011,
+            "episodes": 32
+          }
+        }
+      }
+    },
+    "update-032-validation-episodes.jsonl": {
+      "sha256": "0e674aa13e89020de912d7b89f9a0d94eca8eeebe60a4d0506b6d01c0e9dec57",
+      "episodes": 96,
+      "transitions": 697,
+      "policy": {
+        "mean_return": -0.5275009538255999,
+        "mean_steps": 13.266741199403738,
+        "episodes": 96,
+        "by_family": {
+          "reservation": {
+            "mean_return": -0.05481953248442303,
+            "mean_steps": 3.8002235982112142,
+            "episodes": 72,
+            "success_rate": 0.34007333395878286,
+            "partial_failure_rate": 0.31549707602339183
+          },
+          "lightsout": {
+            "mean_return": -0.9526833216659725,
+            "mean_steps": 12.0,
+            "episodes": 12,
+            "success_rate": 0.0,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.5750000073264042,
+            "mean_steps": 24.0,
+            "episodes": 12,
+            "mean_merge_score": 37.33333333333333,
+            "game_over_rate": 0.0
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.4561254282831666,
+            "mean_steps": 13.26997764017888,
+            "episodes": 32
+          },
+          "reversed": {
+            "mean_return": -0.5518500740096739,
+            "mean_steps": 13.230073959408324,
+            "episodes": 32
+          },
+          "reworded": {
+            "mean_return": -0.5745273591839593,
+            "mean_steps": 13.30017199862401,
+            "episodes": 32
+          }
+        }
+      }
+    },
+    "update-048-validation-episodes.jsonl": {
+      "sha256": "d20718ed13bb2ce1d9c2481f2416dd0471bd5fa0c66e420330398aa83bdfb29e",
+      "episodes": 96,
+      "transitions": 721,
+      "policy": {
+        "mean_return": -0.494525104254103,
+        "mean_steps": 13.374959085175803,
+        "episodes": 96,
+        "by_family": {
+          "reservation": {
+            "mean_return": 0.11702468615636334,
+            "mean_steps": 4.1248772555274105,
+            "episodes": 72,
+            "success_rate": 0.4678065484567033,
+            "partial_failure_rate": 0.24883040935672512
+          },
+          "lightsout": {
+            "mean_return": -0.9505999901642402,
+            "mean_steps": 12.0,
+            "episodes": 12,
+            "success_rate": 0.0,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.6500000087544322,
+            "mean_steps": 24.0,
+            "episodes": 12,
+            "mean_merge_score": 41.333333333333336,
+            "game_over_rate": 0.0
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.4366753652203178,
+            "mean_steps": 13.41764705882353,
+            "episodes": 32
+          },
+          "reversed": {
+            "mean_return": -0.5440997736473813,
+            "mean_steps": 13.330512555899553,
+            "episodes": 32
+          },
+          "reworded": {
+            "mean_return": -0.50280017389461,
+            "mean_steps": 13.376717640804326,
+            "episodes": 32
+          }
+        }
+      }
+    },
+    "update-064-validation-episodes.jsonl": {
+      "sha256": "f4904eff7bbe98b4236e9e87ea33819e5e21d020006f424e4edf24fb8ab8b527",
+      "episodes": 96,
+      "transitions": 727,
+      "policy": {
+        "mean_return": -0.38578457180782155,
+        "mean_steps": 13.403584607686774,
+        "episodes": 96,
+        "by_family": {
+          "reservation": {
+            "mean_return": 0.3386629472996096,
+            "mean_steps": 4.210753823060325,
+            "episodes": 72,
+            "success_rate": 0.6261727178909842,
+            "partial_failure_rate": 0.16198830409356726
+          },
+          "lightsout": {
+            "mean_return": -0.9626833223737775,
+            "mean_steps": 12.0,
+            "episodes": 12,
+            "success_rate": 0.0,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.5333333403492967,
+            "mean_steps": 24.0,
+            "episodes": 12,
+            "mean_merge_score": 60.333333333333336,
+            "game_over_rate": 0.0
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.2871976013979355,
+            "mean_steps": 13.453624480095069,
+            "episodes": 32
+          },
+          "reversed": {
+            "mean_return": -0.4776977296344225,
+            "mean_steps": 13.415346968133345,
+            "episodes": 32
+          },
+          "reworded": {
+            "mean_return": -0.3924583843911068,
+            "mean_steps": 13.34178237483191,
+            "episodes": 32
+          }
+        }
+      }
+    },
+    "update-080-validation-episodes.jsonl": {
+      "sha256": "9dd175ac923d0402436f1d859d0acbfe4c68bc99c09d9c4591e47747528d9b0b",
+      "episodes": 96,
+      "transitions": 737,
+      "policy": {
+        "mean_return": -0.3467818798933567,
+        "mean_steps": 13.444657618496628,
+        "episodes": 96,
+        "by_family": {
+          "reservation": {
+            "mean_return": 0.5590043495652652,
+            "mean_steps": 4.3339728554898835,
+            "episodes": 72,
+            "success_rate": 0.7983144134846921,
+            "partial_failure_rate": 0.09678362573099414
+          },
+          "lightsout": {
+            "mean_return": -0.9993499824777246,
+            "mean_steps": 12.0,
+            "episodes": 12,
+            "success_rate": 0.0,
+            "partial_failure_rate": 0.0
+          },
+          "g2048": {
+            "mean_return": -0.6000000067676107,
+            "mean_steps": 24.0,
+            "episodes": 12,
+            "mean_merge_score": 60.0,
+            "game_over_rate": 0.0
+          }
+        },
+        "by_variant": {
+          "original": {
+            "mean_return": -0.28820121495960216,
+            "mean_steps": 13.45801044500735,
+            "episodes": 32
+          },
+          "reversed": {
+            "mean_return": -0.36564638636758706,
+            "mean_steps": 13.457425649685712,
+            "episodes": 32
+          },
+          "reworded": {
+            "mean_return": -0.38649803835288077,
+            "mean_steps": 13.418536760796822,
+            "episodes": 32
+          }
+        }
+      }
+    }
+  }
+}

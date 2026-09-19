@@ -1,0 +1,703 @@
+{
+  "arms": {
+    "hybrid": {
+      "evaluation": {
+        "baseline-test": {
+          "forecasts": {
+            "by_task": {
+              "puffer/g2048/merge_score": {
+                "brier": 0.6692162688480173,
+                "excess_log_loss": 1.1973753183113534,
+                "log_loss": 1.1973753183113534,
+                "modal_accuracy": 0.3
+              },
+              "puffer/g2048/stochastic_spawn": {
+                "brier": 0.2258300333661424,
+                "excess_log_loss": 0.2882783268465991,
+                "log_loss": 0.7167145646456888,
+                "modal_accuracy": 0.7708333333333334
+              },
+              "puffer/g2048/will_change": {
+                "brier": 0.24548934432509953,
+                "excess_log_loss": 0.4372708497451254,
+                "log_loss": 0.4372708497451254,
+                "modal_accuracy": 0.8666666666666667
+              },
+              "puffer/g2048/will_merge": {
+                "brier": 0.3756251623545636,
+                "excess_log_loss": 0.5456269140975247,
+                "log_loss": 0.5456269140975247,
+                "modal_accuracy": 0.6428571428571429
+              },
+              "puffer/lightsout/closer": {
+                "brier": 0.39200650307675383,
+                "excess_log_loss": 0.5780498404781026,
+                "log_loss": 0.5780498404781026,
+                "modal_accuracy": 0.7222222222222222
+              },
+              "puffer/lightsout/light_count": {
+                "brier": 0.8166480440926641,
+                "excess_log_loss": 1.4997549456006571,
+                "log_loss": 1.4997549456006571,
+                "modal_accuracy": 0.2
+              },
+              "puffer/lightsout/solves_now": {
+                "brier": 0.0006147273428733722,
+                "excess_log_loss": 0.011643563402924582,
+                "log_loss": 0.011643563402924582,
+                "modal_accuracy": 1.0
+              },
+              "reservation/account": {
+                "brier": 0.1621838721071747,
+                "excess_log_loss": 0.25667785669019894,
+                "log_loss": 0.5476640185228863,
+                "modal_accuracy": 0.8571428571428571
+              },
+              "reservation/request": {
+                "brier": 0.043594569716685336,
+                "excess_log_loss": 0.11541274206621455,
+                "log_loss": 0.21325519116991318,
+                "modal_accuracy": 1.0
+              },
+              "reservation/stock_a": {
+                "brier": 0.1656251462027217,
+                "excess_log_loss": 0.2505122911914854,
+                "log_loss": 0.6126771002813948,
+                "modal_accuracy": 0.8205128205128205
+              },
+              "reservation/stock_b": {
+                "brier": 0.39898862297104604,
+                "excess_log_loss": 0.6469703978840916,
+                "log_loss": 0.9659868801480859,
+                "modal_accuracy": 0.6727272727272727
+              }
+            },
+            "macro_brier": 0.3178020267639765,
+            "macro_excess_log_loss": 0.5297793678467525,
+            "macro_log_loss": 0.6660017442185142,
+            "macro_modal_accuracy": 0.7139056650420287,
+            "n": 384
+          },
+          "policy": {
+            "by_family": {
+              "g2048": {
+                "episodes": 24,
+                "game_over_rate": 0.041666666666666664,
+                "mean_merge_score": 29.0,
+                "mean_return": -0.7895833438572785,
+                "mean_steps": 23.208333333333332
+              },
+              "lightsout": {
+                "episodes": 24,
+                "mean_return": -1.006641645450145,
+                "mean_steps": 12.0,
+                "partial_failure_rate": 0.0,
+                "success_rate": 0.0
+              },
+              "reservation": {
+                "episodes": 144,
+                "mean_return": -0.11460075605097768,
+                "mean_steps": 4.252922696856521,
+                "partial_failure_rate": 0.39226384998443825,
+                "success_rate": 0.3658039604730781
+              }
+            },
+            "by_variant": {
+              "original": {
+                "episodes": 64,
+                "mean_return": -0.5792060632984048,
+                "mean_steps": 13.431975568004981
+              },
+              "reversed": {
+                "episodes": 64,
+                "mean_return": -0.6726624283608543,
+                "mean_steps": 12.615575396825397
+              },
+              "reworded": {
+                "episodes": 64,
+                "mean_return": -0.658957253699142,
+                "mean_steps": 13.413705065359476
+              }
+            },
+            "episodes": 192,
+            "mean_return": -0.636941915119467,
+            "mean_steps": 13.153752010063284
+          },
+          "timing": {
+            "encountered_training_prompt_count": 0,
+            "environment_seconds": 0.019936902448534966,
+            "inference_seconds": 46.568505465984344,
+            "render_tokenize_seconds": 1.614549608901143
+          }
+        },
+        "selected-test": {
+          "forecasts": {
+            "by_task": {
+              "puffer/g2048/merge_score": {
+                "brier": 0.609907137417986,
+                "excess_log_loss": 1.0481735839628634,
+                "log_loss": 1.0481735839628634,
+                "modal_accuracy": 0.55
+              },
+              "puffer/g2048/stochastic_spawn": {
+                "brier": 0.09411282780996526,
+                "excess_log_loss": 0.13827305171400886,
+                "log_loss": 0.5667092895130985,
+                "modal_accuracy": 0.7604166666666666
+              },
+              "puffer/g2048/will_change": {
+                "brier": 0.24723405049254116,
+                "excess_log_loss": 0.4354557289015149,
+                "log_loss": 0.4354557289015149,
+                "modal_accuracy": 0.8666666666666667
+              },
+              "puffer/g2048/will_merge": {
+                "brier": 0.23497806335221225,
+                "excess_log_loss": 0.37616321031332894,
+                "log_loss": 0.37616321031332894,
+                "modal_accuracy": 0.8571428571428571
+              },
+              "puffer/lightsout/closer": {
+                "brier": 0.3634958445986659,
+                "excess_log_loss": 0.5484847765230579,
+                "log_loss": 0.5484847765230579,
+                "modal_accuracy": 0.7222222222222222
+              },
+              "puffer/lightsout/light_count": {
+                "brier": 0.7147133734478529,
+                "excess_log_loss": 1.3985326856290492,
+                "log_loss": 1.3985326856290492,
+                "modal_accuracy": 0.5
+              },
+              "puffer/lightsout/solves_now": {
+                "brier": 6.299232524396075e-05,
+                "excess_log_loss": 0.003687559066472352,
+                "log_loss": 0.003687559066472352,
+                "modal_accuracy": 1.0
+              },
+              "reservation/account": {
+                "brier": 0.012485871676639284,
+                "excess_log_loss": 0.02490936128799198,
+                "log_loss": 0.31589552312067926,
+                "modal_accuracy": 0.8367346938775511
+              },
+              "reservation/request": {
+                "brier": 0.02318207315016614,
+                "excess_log_loss": 0.06790893976004363,
+                "log_loss": 0.16575138886374224,
+                "modal_accuracy": 0.9795918367346939
+              },
+              "reservation/stock_a": {
+                "brier": 0.10439261187765524,
+                "excess_log_loss": 0.15709553299201348,
+                "log_loss": 0.5192603420819228,
+                "modal_accuracy": 0.9487179487179487
+              },
+              "reservation/stock_b": {
+                "brier": 0.07874962743933697,
+                "excess_log_loss": 0.11958363343776927,
+                "log_loss": 0.4386001157017635,
+                "modal_accuracy": 0.9090909090909091
+              }
+            },
+            "macro_brier": 0.2257558612352968,
+            "macro_excess_log_loss": 0.39256982396255585,
+            "macro_log_loss": 0.5287922003343175,
+            "macro_modal_accuracy": 0.8118712546472288,
+            "n": 384
+          },
+          "policy": {
+            "by_family": {
+              "g2048": {
+                "episodes": 24,
+                "game_over_rate": 0.08333333333333333,
+                "mean_merge_score": 92.0,
+                "mean_return": -0.2708333348855376,
+                "mean_steps": 22.166666666666668
+              },
+              "lightsout": {
+                "episodes": 24,
+                "mean_return": -0.8314249931912249,
+                "mean_steps": 11.875,
+                "partial_failure_rate": 0.0,
+                "success_rate": 0.041666666666666664
+              },
+              "reservation": {
+                "episodes": 144,
+                "mean_return": 0.6171524466982067,
+                "mean_steps": 4.660218253968254,
+                "partial_failure_rate": 0.06539351851851852,
+                "success_rate": 0.8288544584500467
+              }
+            },
+            "by_variant": {
+              "original": {
+                "episodes": 64,
+                "mean_return": -0.0017975834420583014,
+                "mean_steps": 12.47415285558668
+              },
+              "reversed": {
+                "episodes": 64,
+                "mean_return": -0.30079326497386627,
+                "mean_steps": 13.57927268129474
+              },
+              "reworded": {
+                "episodes": 64,
+                "mean_return": -0.18251503296263127,
+                "mean_steps": 12.648459383753503
+              }
+            },
+            "episodes": 192,
+            "mean_return": -0.16170196045951862,
+            "mean_steps": 12.900628306878307
+          },
+          "timing": {
+            "encountered_training_prompt_count": 0,
+            "environment_seconds": 0.02067534439265728,
+            "inference_seconds": 48.268268287181854,
+            "render_tokenize_seconds": 1.6841287519782782
+          }
+        }
+      },
+      "native_replay_audit": {
+        "episodes": 960,
+        "files": 8,
+        "status": "verified",
+        "transitions": 7199
+      },
+      "parameter_audit": {
+        "changed_elements": 43278265,
+        "changed_tensors": 496,
+        "examples": [
+          "base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_B.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_qkv.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_qkv.lora_B.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_z.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_z.lora_B.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_b.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_b.lora_B.default.weight"
+        ],
+        "interpretation": "Original pretrained matrices stay frozen; the trained adapters change the effective language-network transformations.",
+        "l2_delta": 0.7047523446551787,
+        "max_absolute_delta": 0.0005920734256505966,
+        "trainable_elements": 43278336
+      },
+      "run": {
+        "active_update": 87,
+        "arm": "hybrid",
+        "completed_at": 1789818927.9530172,
+        "config": {
+          "batch_size": 8,
+          "clip": 0.2,
+          "entropy_weight": 0.02,
+          "episodes_per_update": 24,
+          "epochs_per_update": 2,
+          "eval_every": 16,
+          "forecast_rows": 32,
+          "forecast_weight": 0.5,
+          "learning_rate": 5e-06,
+          "max_arm_seconds": 9600,
+          "max_kl": 0.03,
+          "max_tokens": 1536,
+          "max_updates": 96,
+          "minimum_improvement": 0.002,
+          "patience": 3,
+          "replay_rows": 16,
+          "replay_weight": 0.25,
+          "retention_accuracy_drop": 0.02,
+          "retention_log_loss_increase": 0.05,
+          "seed": 307,
+          "value_learning_rate": 0.001,
+          "value_weight": 0.5
+        },
+        "first_updated_trainable_sha256": "06d398636e5b7cfddb82810e988b1c83278beaab859df2a64054c7c469697cfe",
+        "forecast_presentations": 5568,
+        "freeze_sha256": "45bbe0296528e75409ca72ad54e5f57626c3bd2ea7a36f924cfb4ed68abd1b4a",
+        "initial_trainable_sha256": "6a688dac4c389312fc195409f4b766417b5fee0206a308fea0b3283d9b7718d7",
+        "no_improvement": 0,
+        "optimizer_steps": 174,
+        "peak_gpu_memory_bytes": 30605881856,
+        "replay_presentations": 2784,
+        "retention_eligible": true,
+        "seconds": 8862.68518647924,
+        "selected_trainable_sha256": "f9eae8b7a507ce36010ea9b5032f208e2de51786114f3a7342e908f4a0c6b617",
+        "selected_update": 80,
+        "started_at": 1789810065.2678545,
+        "starting_adapter_sha256": "8112343b445bec3f22b8048fa7b7dc992d3d26b43b943e8ca114df65805e10d2",
+        "status": "complete",
+        "stop_reason": "training_time_cap",
+        "trainable_parameters": 43278336,
+        "training_episodes": 2088,
+        "training_transitions": 27104,
+        "updates": 87,
+        "validation_return": -0.3467818798933567
+      },
+      "selected_checkpoint_consumed": {
+        "episodes": 1920,
+        "transitions": 24908
+      },
+      "unchanged_policy_check": {
+        "gradient_enabled": true,
+        "max_absolute_probability_delta": 0.013339012861251831,
+        "maximum_sampled_ratio": 1.0792921781539917,
+        "minimum_sampled_ratio": 0.9328441023826599,
+        "sampled_ratios_inside_clip": true,
+        "transitions": 320
+      }
+    },
+    "reward": {
+      "evaluation": {
+        "baseline-test": {
+          "forecasts": {
+            "by_task": {
+              "puffer/g2048/merge_score": {
+                "brier": 0.6692162688480173,
+                "excess_log_loss": 1.1973753183113534,
+                "log_loss": 1.1973753183113534,
+                "modal_accuracy": 0.3
+              },
+              "puffer/g2048/stochastic_spawn": {
+                "brier": 0.2258300333661424,
+                "excess_log_loss": 0.2882783268465991,
+                "log_loss": 0.7167145646456888,
+                "modal_accuracy": 0.7708333333333334
+              },
+              "puffer/g2048/will_change": {
+                "brier": 0.24548934432509953,
+                "excess_log_loss": 0.4372708497451254,
+                "log_loss": 0.4372708497451254,
+                "modal_accuracy": 0.8666666666666667
+              },
+              "puffer/g2048/will_merge": {
+                "brier": 0.3756251623545636,
+                "excess_log_loss": 0.5456269140975247,
+                "log_loss": 0.5456269140975247,
+                "modal_accuracy": 0.6428571428571429
+              },
+              "puffer/lightsout/closer": {
+                "brier": 0.39200650307675383,
+                "excess_log_loss": 0.5780498404781026,
+                "log_loss": 0.5780498404781026,
+                "modal_accuracy": 0.7222222222222222
+              },
+              "puffer/lightsout/light_count": {
+                "brier": 0.8166480440926641,
+                "excess_log_loss": 1.4997549456006571,
+                "log_loss": 1.4997549456006571,
+                "modal_accuracy": 0.2
+              },
+              "puffer/lightsout/solves_now": {
+                "brier": 0.0006147273428733722,
+                "excess_log_loss": 0.011643563402924582,
+                "log_loss": 0.011643563402924582,
+                "modal_accuracy": 1.0
+              },
+              "reservation/account": {
+                "brier": 0.1621838721071747,
+                "excess_log_loss": 0.25667785669019894,
+                "log_loss": 0.5476640185228863,
+                "modal_accuracy": 0.8571428571428571
+              },
+              "reservation/request": {
+                "brier": 0.043594569716685336,
+                "excess_log_loss": 0.11541274206621455,
+                "log_loss": 0.21325519116991318,
+                "modal_accuracy": 1.0
+              },
+              "reservation/stock_a": {
+                "brier": 0.1656251462027217,
+                "excess_log_loss": 0.2505122911914854,
+                "log_loss": 0.6126771002813948,
+                "modal_accuracy": 0.8205128205128205
+              },
+              "reservation/stock_b": {
+                "brier": 0.39898862297104604,
+                "excess_log_loss": 0.6469703978840916,
+                "log_loss": 0.9659868801480859,
+                "modal_accuracy": 0.6727272727272727
+              }
+            },
+            "macro_brier": 0.3178020267639765,
+            "macro_excess_log_loss": 0.5297793678467525,
+            "macro_log_loss": 0.6660017442185142,
+            "macro_modal_accuracy": 0.7139056650420287,
+            "n": 384
+          },
+          "policy": {
+            "by_family": {
+              "g2048": {
+                "episodes": 24,
+                "game_over_rate": 0.041666666666666664,
+                "mean_merge_score": 29.0,
+                "mean_return": -0.7895833438572785,
+                "mean_steps": 23.208333333333332
+              },
+              "lightsout": {
+                "episodes": 24,
+                "mean_return": -1.006641645450145,
+                "mean_steps": 12.0,
+                "partial_failure_rate": 0.0,
+                "success_rate": 0.0
+              },
+              "reservation": {
+                "episodes": 144,
+                "mean_return": -0.11460075605097768,
+                "mean_steps": 4.252922696856521,
+                "partial_failure_rate": 0.39226384998443825,
+                "success_rate": 0.3658039604730781
+              }
+            },
+            "by_variant": {
+              "original": {
+                "episodes": 64,
+                "mean_return": -0.5792060632984048,
+                "mean_steps": 13.431975568004981
+              },
+              "reversed": {
+                "episodes": 64,
+                "mean_return": -0.6726624283608543,
+                "mean_steps": 12.615575396825397
+              },
+              "reworded": {
+                "episodes": 64,
+                "mean_return": -0.658957253699142,
+                "mean_steps": 13.413705065359476
+              }
+            },
+            "episodes": 192,
+            "mean_return": -0.636941915119467,
+            "mean_steps": 13.153752010063284
+          },
+          "timing": {
+            "encountered_training_prompt_count": 0,
+            "environment_seconds": 0.019612271338701248,
+            "inference_seconds": 46.55724813602865,
+            "render_tokenize_seconds": 1.6481659729033709
+          }
+        },
+        "selected-test": {
+          "forecasts": {
+            "by_task": {
+              "puffer/g2048/merge_score": {
+                "brier": 0.6839083940857638,
+                "excess_log_loss": 1.2216947370910982,
+                "log_loss": 1.2216947370910982,
+                "modal_accuracy": 0.3
+              },
+              "puffer/g2048/stochastic_spawn": {
+                "brier": 0.22643760334384164,
+                "excess_log_loss": 0.2874141547481021,
+                "log_loss": 0.7158503925471917,
+                "modal_accuracy": 0.6875
+              },
+              "puffer/g2048/will_change": {
+                "brier": 0.24177566087423996,
+                "excess_log_loss": 0.42264126927171286,
+                "log_loss": 0.42264126927171286,
+                "modal_accuracy": 0.8666666666666667
+              },
+              "puffer/g2048/will_merge": {
+                "brier": 0.32737433191195525,
+                "excess_log_loss": 0.49916009143741047,
+                "log_loss": 0.49916009143741047,
+                "modal_accuracy": 0.8571428571428571
+              },
+              "puffer/lightsout/closer": {
+                "brier": 0.38717838524465786,
+                "excess_log_loss": 0.5746564404583747,
+                "log_loss": 0.5746564404583747,
+                "modal_accuracy": 0.7222222222222222
+              },
+              "puffer/lightsout/light_count": {
+                "brier": 0.8126902400563658,
+                "excess_log_loss": 1.5021620671343503,
+                "log_loss": 1.5021620671343503,
+                "modal_accuracy": 0.2
+              },
+              "puffer/lightsout/solves_now": {
+                "brier": 0.0005124247619358722,
+                "excess_log_loss": 0.010744232451355194,
+                "log_loss": 0.010744232451355194,
+                "modal_accuracy": 1.0
+              },
+              "reservation/account": {
+                "brier": 0.18671581578610394,
+                "excess_log_loss": 0.3315682567190639,
+                "log_loss": 0.6225544185517512,
+                "modal_accuracy": 0.8571428571428571
+              },
+              "reservation/request": {
+                "brier": 0.04700352105271703,
+                "excess_log_loss": 0.1188416592954267,
+                "log_loss": 0.21668410839912533,
+                "modal_accuracy": 1.0
+              },
+              "reservation/stock_a": {
+                "brier": 0.16614823242400698,
+                "excess_log_loss": 0.24321175478652274,
+                "log_loss": 0.6053765638764321,
+                "modal_accuracy": 0.7435897435897436
+              },
+              "reservation/stock_b": {
+                "brier": 0.431800884286537,
+                "excess_log_loss": 0.7040973127786879,
+                "log_loss": 1.023113795042682,
+                "modal_accuracy": 0.6909090909090909
+              }
+            },
+            "macro_brier": 0.31923140852982956,
+            "macro_excess_log_loss": 0.5378356341974642,
+            "macro_log_loss": 0.6740580105692259,
+            "macro_modal_accuracy": 0.7204703125157671,
+            "n": 384
+          },
+          "policy": {
+            "by_family": {
+              "g2048": {
+                "episodes": 24,
+                "game_over_rate": 0.041666666666666664,
+                "mean_merge_score": 47.666666666666664,
+                "mean_return": -0.6395833414668839,
+                "mean_steps": 23.208333333333332
+              },
+              "lightsout": {
+                "episodes": 24,
+                "mean_return": -0.9739333175045128,
+                "mean_steps": 12.0,
+                "partial_failure_rate": 0.0,
+                "success_rate": 0.0
+              },
+              "reservation": {
+                "episodes": 144,
+                "mean_return": 0.812972032149165,
+                "mean_steps": 4.455838585434174,
+                "partial_failure_rate": 0.015625000000000003,
+                "success_rate": 0.984375
+              }
+            },
+            "by_variant": {
+              "original": {
+                "episodes": 64,
+                "mean_return": -0.3161682975413252,
+                "mean_steps": 13.458907173980704
+              },
+              "reversed": {
+                "episodes": 64,
+                "mean_return": -0.1978421397391971,
+                "mean_steps": 12.737078859321505
+              },
+              "reworded": {
+                "episodes": 64,
+                "mean_return": -0.2865341895417094,
+                "mean_steps": 13.468185885465296
+              }
+            },
+            "episodes": 192,
+            "mean_return": -0.26684820894074385,
+            "mean_steps": 13.221390639589169
+          },
+          "timing": {
+            "encountered_training_prompt_count": 0,
+            "environment_seconds": 0.01953952945768833,
+            "inference_seconds": 47.01929008960724,
+            "render_tokenize_seconds": 1.6560481637716293
+          }
+        }
+      },
+      "native_replay_audit": {
+        "episodes": 960,
+        "files": 8,
+        "status": "verified",
+        "transitions": 7138
+      },
+      "parameter_audit": {
+        "changed_elements": 43278245,
+        "changed_tensors": 496,
+        "examples": [
+          "base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_B.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_qkv.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_qkv.lora_B.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_z.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_z.lora_B.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_b.lora_A.default.weight",
+          "base_model.model.model.language_model.layers.0.linear_attn.in_proj_b.lora_B.default.weight"
+        ],
+        "interpretation": "Original pretrained matrices stay frozen; the trained adapters change the effective language-network transformations.",
+        "l2_delta": 0.6255269094287998,
+        "max_absolute_delta": 0.0005252482369542122,
+        "trainable_elements": 43278336
+      },
+      "run": {
+        "active_update": 94,
+        "arm": "reward",
+        "completed_at": 1789810002.7505317,
+        "config": {
+          "batch_size": 8,
+          "clip": 0.2,
+          "entropy_weight": 0.02,
+          "episodes_per_update": 24,
+          "epochs_per_update": 2,
+          "eval_every": 16,
+          "forecast_rows": 32,
+          "forecast_weight": 0.5,
+          "learning_rate": 5e-06,
+          "max_arm_seconds": 9600,
+          "max_kl": 0.03,
+          "max_tokens": 1536,
+          "max_updates": 96,
+          "minimum_improvement": 0.002,
+          "patience": 3,
+          "replay_rows": 16,
+          "replay_weight": 0.25,
+          "retention_accuracy_drop": 0.02,
+          "retention_log_loss_increase": 0.05,
+          "seed": 307,
+          "value_learning_rate": 0.001,
+          "value_weight": 0.5
+        },
+        "first_updated_trainable_sha256": "802ce9c0d1d7f9b7e1506b8e3d3470a222644bae53a4f768b06fe21ddfd3ebf1",
+        "forecast_presentations": 0,
+        "freeze_sha256": "45bbe0296528e75409ca72ad54e5f57626c3bd2ea7a36f924cfb4ed68abd1b4a",
+        "initial_trainable_sha256": "6a688dac4c389312fc195409f4b766417b5fee0206a308fea0b3283d9b7718d7",
+        "no_improvement": 0,
+        "optimizer_steps": 188,
+        "peak_gpu_memory_bytes": 30605880832,
+        "replay_presentations": 3008,
+        "retention_eligible": true,
+        "seconds": 8917.60992333293,
+        "selected_trainable_sha256": "30ecb34da6272c4462d5d9971ffa8faa500573fcd042ca77dbf97bed8cf1826e",
+        "selected_update": 80,
+        "started_at": 1789801085.140648,
+        "starting_adapter_sha256": "8112343b445bec3f22b8048fa7b7dc992d3d26b43b943e8ca114df65805e10d2",
+        "status": "complete",
+        "stop_reason": "training_time_cap",
+        "trainable_parameters": 43278336,
+        "training_episodes": 2256,
+        "training_transitions": 29310,
+        "updates": 94,
+        "validation_return": -0.31375440613099703
+      },
+      "selected_checkpoint_consumed": {
+        "episodes": 1920,
+        "transitions": 24928
+      },
+      "unchanged_policy_check": {
+        "gradient_enabled": true,
+        "max_absolute_probability_delta": 0.013339012861251831,
+        "maximum_sampled_ratio": 1.0792921781539917,
+        "minimum_sampled_ratio": 0.9328441023826599,
+        "sampled_ratios_inside_clip": true,
+        "transitions": 320
+      }
+    }
+  },
+  "forecast_test_counts": {
+    "groups": 91,
+    "presentations": 384,
+    "tasks": 11,
+    "unique_ids": 240
+  },
+  "schema": "mixed-game-outcomes-v1"
+}

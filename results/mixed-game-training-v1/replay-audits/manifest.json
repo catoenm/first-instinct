@@ -1,0 +1,12 @@
+{
+  "files": {
+    "auditor.py": "91a776f17e12c134519e36e3cdb58f0db063c4a790de920af45676510da43651",
+    "audit-runner.py": "5991d77b0ec8031a51ce679b55a9da8fbbc7e5dff2c64400a8da9a9f06a0f203",
+    "reward.json": "4cb9b539200bd95e91260fc5d6ef8a9f5daa01eb1aab57e47a8bf9f62ad50453",
+    "hybrid.json": "20ec2254a1980037d614755964f994f709d8f674818ef9556a17b5c663587a4d"
+  },
+  "statuses": {
+    "reward": "verified",
+    "hybrid": "verified"
+  }
+}
