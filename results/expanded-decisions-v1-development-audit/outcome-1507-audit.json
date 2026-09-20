@@ -1,0 +1,473 @@
+{
+  "status": "passed",
+  "scope": "Development, training consumption and selection only; final transfer scores are unopened.",
+  "arm": "outcome",
+  "seed": 1507,
+  "selected_update": 40,
+  "actual_learning": {
+    "physical_optimizer_attempts": 40,
+    "accepted_transactions": 40,
+    "rejected_transactions": 0,
+    "attempted_updates_without_closure": [],
+    "started_but_unconfirmed_backward_presentations": 0,
+    "components": {
+      "outcome": {
+        "completed_backward_presentations": 800,
+        "unique_question_ids": 800,
+        "repeated_presentations": 0,
+        "presentations_in_accepted_transactions": 800,
+        "presentations_in_rejected_transactions": 0,
+        "presentations_awaiting_transaction_outcome": 0
+      },
+      "replay": {
+        "completed_backward_presentations": 640,
+        "unique_question_ids": 589,
+        "repeated_presentations": 51,
+        "presentations_in_accepted_transactions": 640,
+        "presentations_in_rejected_transactions": 0,
+        "presentations_awaiting_transaction_outcome": 0
+      }
+    },
+    "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+    "diagnostics": {
+      "completed_backward_presentations": 36,
+      "started_but_unconfirmed_backward_presentations": 0,
+      "components": {
+        "outcome": {
+          "completed_backward_presentations": 20,
+          "unique_question_ids": 20,
+          "repeated_presentations": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 16,
+          "unique_question_ids": 16,
+          "repeated_presentations": 0
+        }
+      },
+      "note": "Component-gradient measurements; no optimizer steps. Excluded from optimizer-objective presentations."
+    }
+  },
+  "training_episodes": 0,
+  "training_tasks": {
+    "actor_transitions": 0,
+    "context_cases": 0,
+    "authored_root_groups": 0,
+    "world_goal_tasks": 0,
+    "mechanisms": 0
+  },
+  "evaluation_executions": {
+    "baseline-validation": {
+      "actor_transitions": 86,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-10-validation": {
+      "actor_transitions": 85,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-20-validation": {
+      "actor_transitions": 83,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-30-validation": {
+      "actor_transitions": 82,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-40-validation": {
+      "actor_transitions": 83,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    }
+  },
+  "consumed_forecast_provenance": {
+    "filesystem_scope": {
+      "inputs": 160,
+      "questions": 409,
+      "branches": 409,
+      "ambiguous": 20
+    },
+    "reservation": {
+      "inputs": 160,
+      "questions": 191,
+      "branches": 262,
+      "ambiguous": 29
+    },
+    "config": {
+      "inputs": 160,
+      "questions": 268,
+      "branches": 268,
+      "ambiguous": 23
+    },
+    "sqlite": {
+      "inputs": 160,
+      "questions": 262,
+      "branches": 262,
+      "ambiguous": 23
+    },
+    "application_delivery": {
+      "inputs": 160,
+      "questions": 501,
+      "branches": 501,
+      "ambiguous": 35
+    }
+  },
+  "measurements": {
+    "baseline-validation": {
+      "reward": 0.2622222222222222,
+      "success_rate": 0.5833333333333334,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 1.087066210284795,
+          "excess_log_loss": 0.9970470959263605,
+          "expected_brier": 0.6410978476397308,
+          "excess_brier": 0.5761627827046658,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5194805194805194
+        },
+        "input_weighted": {
+          "log_loss": 1.087066210284795,
+          "excess_log_loss": 0.9970470959263605,
+          "expected_brier": 0.6410978476397308,
+          "excess_brier": 0.5761627827046658,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5194805194805194
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 1.087066210284795,
+            "excess_log_loss": 0.9970470959263605,
+            "expected_brier": 0.6410978476397308,
+            "excess_brier": 0.5761627827046658,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5194805194805194
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 1.087066210284795,
+            "excess_log_loss": 0.9970470959263605,
+            "expected_brier": 0.6410978476397308,
+            "excess_brier": 0.5761627827046658,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5194805194805194
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 2.0963274356471673,
+          "excess_log_loss": 1.4031802550872219,
+          "expected_brier": 1.3080469921489375,
+          "excess_brier": 0.8080469921489375,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.0
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.9364302064993663,
+          "excess_log_loss": 0.9364302064993663,
+          "expected_brier": 0.5415531992055208,
+          "excess_brier": 0.5415531992055208,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.5970149253731343
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.870488322717622,
+        "macro_log_loss": 0.35221356615736266
+      }
+    },
+    "update-10-validation": {
+      "reward": 0.2905555555555555,
+      "success_rate": 0.6111111111111112,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 0.9673259875120467,
+          "excess_log_loss": 0.8773068731536122,
+          "expected_brier": 0.5768245576021125,
+          "excess_brier": 0.5118894926670475,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.547077922077922
+        },
+        "input_weighted": {
+          "log_loss": 0.9673259875120467,
+          "excess_log_loss": 0.8773068731536122,
+          "expected_brier": 0.5768245576021125,
+          "excess_brier": 0.5118894926670475,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.547077922077922
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9673259875120467,
+            "excess_log_loss": 0.8773068731536122,
+            "expected_brier": 0.5768245576021125,
+            "excess_brier": 0.5118894926670475,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.547077922077922
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9673259875120467,
+            "excess_log_loss": 0.8773068731536122,
+            "expected_brier": 0.5768245576021125,
+            "excess_brier": 0.5118894926670475,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.547077922077922
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.8038640850931098,
+          "excess_log_loss": 1.1107169045331644,
+          "expected_brier": 1.1217707952009295,
+          "excess_brier": 0.6217707952009295,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.0625
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.8424695550372612,
+          "excess_log_loss": 0.8424695550372612,
+          "expected_brier": 0.4954892982590055,
+          "excess_brier": 0.4954892982590055,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.6194029850746269
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8699575371549895,
+        "macro_log_loss": 0.3520546560991616
+      }
+    },
+    "update-20-validation": {
+      "reward": 0.31888888888888883,
+      "success_rate": 0.6666666666666666,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 0.9003135404046432,
+          "excess_log_loss": 0.8102944260462088,
+          "expected_brier": 0.5343317173167916,
+          "excess_brier": 0.46939665238172673,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5714285714285714
+        },
+        "input_weighted": {
+          "log_loss": 0.9003135404046432,
+          "excess_log_loss": 0.8102944260462088,
+          "expected_brier": 0.5343317173167916,
+          "excess_brier": 0.46939665238172673,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5714285714285714
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9003135404046432,
+            "excess_log_loss": 0.8102944260462088,
+            "expected_brier": 0.5343317173167916,
+            "excess_brier": 0.46939665238172673,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5714285714285714
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9003135404046432,
+            "excess_log_loss": 0.8102944260462088,
+            "expected_brier": 0.5343317173167916,
+            "excess_brier": 0.46939665238172673,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5714285714285714
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.6395533903017374,
+          "excess_log_loss": 0.9464062097417921,
+          "expected_brier": 1.0008525778929478,
+          "excess_brier": 0.5008525778929478,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.1
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.7899792344498531,
+          "excess_log_loss": 0.7899792344498531,
+          "expected_brier": 0.46470173812632054,
+          "excess_brier": 0.46470173812632054,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.6417910447761194
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8651804670912951,
+        "macro_log_loss": 0.35178449216131286
+      }
+    },
+    "update-30-validation": {
+      "reward": 0.2644444444444444,
+      "success_rate": 0.6388888888888888,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 0.8631866324296948,
+          "excess_log_loss": 0.7731675180712603,
+          "expected_brier": 0.5089232652496172,
+          "excess_brier": 0.4439882003145523,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.586038961038961
+        },
+        "input_weighted": {
+          "log_loss": 0.8631866324296948,
+          "excess_log_loss": 0.7731675180712603,
+          "expected_brier": 0.5089232652496172,
+          "excess_brier": 0.4439882003145523,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.586038961038961
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.8631866324296948,
+            "excess_log_loss": 0.7731675180712603,
+            "expected_brier": 0.5089232652496172,
+            "excess_brier": 0.4439882003145523,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.586038961038961
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.8631866324296948,
+            "excess_log_loss": 0.7731675180712603,
+            "expected_brier": 0.5089232652496172,
+            "excess_brier": 0.4439882003145523,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.586038961038961
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.5668814744881607,
+          "excess_log_loss": 0.8737342939282154,
+          "expected_brier": 0.9484677580621357,
+          "excess_brier": 0.4484677580621358,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.1125
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.7581575515254461,
+          "excess_log_loss": 0.7581575515254461,
+          "expected_brier": 0.4433196096059578,
+          "excess_brier": 0.4433196096059578,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.6567164179104478
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8667728237791933,
+        "macro_log_loss": 0.35210722322846205
+      }
+    },
+    "update-40-validation": {
+      "reward": 0.31888888888888883,
+      "success_rate": 0.6666666666666666,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 0.8378691919691698,
+          "excess_log_loss": 0.7478500776107353,
+          "expected_brier": 0.4909402181293152,
+          "excess_brier": 0.42600515319425025,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.612012987012987
+        },
+        "input_weighted": {
+          "log_loss": 0.8378691919691698,
+          "excess_log_loss": 0.7478500776107353,
+          "expected_brier": 0.4909402181293152,
+          "excess_brier": 0.42600515319425025,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.612012987012987
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.8378691919691698,
+            "excess_log_loss": 0.7478500776107353,
+            "expected_brier": 0.4909402181293152,
+            "excess_brier": 0.42600515319425025,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.612012987012987
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.8378691919691698,
+            "excess_log_loss": 0.7478500776107353,
+            "expected_brier": 0.4909402181293152,
+            "excess_brier": 0.42600515319425025,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.612012987012987
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.5284681851699085,
+          "excess_log_loss": 0.8353210046099632,
+          "expected_brier": 0.9216292318212101,
+          "excess_brier": 0.42162923182121015,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.1375
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.7347947153720447,
+          "excess_log_loss": 0.7347947153720447,
+          "expected_brier": 0.42665827578724136,
+          "excess_brier": 0.42665827578724136,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.6828358208955224
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8673036093418258,
+        "macro_log_loss": 0.3524986742730783
+      }
+    }
+  },
+  "source_sha256": "1dc805b150239ae1e4a96736468ff7ae5b995045a2ddef36f6930f9f9703af70",
+  "new_model_calls": 0,
+  "new_environment_executions": 0,
+  "limits": "Independent receipt reconstruction, not a checkpoint recovery audit or final transfer conclusion."
+}
