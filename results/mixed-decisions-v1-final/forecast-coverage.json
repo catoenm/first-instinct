@@ -1,0 +1,62 @@
+{
+  "train": {
+    "application_delivery": {
+      "questions": 1512,
+      "public_inputs": 468,
+      "ambiguous_public_inputs": 108,
+      "ambiguous_questions": 906,
+      "labels": {
+        "unfinished": 560,
+        "completed": 780,
+        "incorrect": 172
+      }
+    },
+    "config": {
+      "questions": 504,
+      "public_inputs": 308,
+      "ambiguous_public_inputs": 40,
+      "ambiguous_questions": 80,
+      "labels": {
+        "unfinished": 244,
+        "completed": 204,
+        "incorrect": 56
+      }
+    },
+    "sqlite": {
+      "questions": 504,
+      "public_inputs": 308,
+      "ambiguous_public_inputs": 40,
+      "ambiguous_questions": 80,
+      "labels": {
+        "unfinished": 244,
+        "completed": 204,
+        "incorrect": 56
+      }
+    }
+  },
+  "validation": {
+    "report": {
+      "questions": 504,
+      "public_inputs": 308,
+      "ambiguous_public_inputs": 40,
+      "ambiguous_questions": 80,
+      "labels": {
+        "unfinished": 244,
+        "completed": 204,
+        "incorrect": 56
+      }
+    }
+  },
+  "transfer": {
+    "publish": {
+      "questions": 504,
+      "public_inputs": 308,
+      "ambiguous_public_inputs": 0,
+      "ambiguous_questions": 0,
+      "labels": {
+        "unfinished": 308,
+        "completed": 196
+      }
+    }
+  }
+}

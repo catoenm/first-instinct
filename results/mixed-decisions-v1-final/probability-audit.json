@@ -1,0 +1,378 @@
+{
+  "hybrid-1507": {
+    "transfer": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.4786753859606325,
+        "log_loss": 0.820680855923872,
+        "accuracy": 0.6587301587301587
+      },
+      "subsets": {
+        "deterministic": {
+          "questions": 504,
+          "brier": 0.478675385960632
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5329402872260006,
+      "enumerated_world_frequency_brier": 0.0,
+      "mean_prediction_distance_from_world_frequencies": 0.47867457985490297,
+      "maximum_probability_spread_for_identical_inputs": 0.013462662696838379,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    },
+    "validation": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.5277285592594861,
+        "log_loss": 0.8860747039123401,
+        "accuracy": 0.5734126984126984
+      },
+      "subsets": {
+        "ambiguous": {
+          "questions": 80,
+          "brier": 1.0111967914503928
+        },
+        "deterministic": {
+          "questions": 424,
+          "brier": 0.43650813809139005
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5985487528344675,
+      "enumerated_world_frequency_brier": 0.07936507936507936,
+      "mean_prediction_distance_from_world_frequencies": 0.44836358018215156,
+      "maximum_probability_spread_for_identical_inputs": 0.015484273433685303,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    }
+  },
+  "hybrid-1609": {
+    "transfer": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.4729006488309097,
+        "log_loss": 0.8062444197134112,
+        "accuracy": 0.6626984126984127
+      },
+      "subsets": {
+        "deterministic": {
+          "questions": 504,
+          "brier": 0.4729006488309092
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5329402872260006,
+      "enumerated_world_frequency_brier": 0.0,
+      "mean_prediction_distance_from_world_frequencies": 0.4729003113314408,
+      "maximum_probability_spread_for_identical_inputs": 0.010831475257873535,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    },
+    "validation": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.5218284695028308,
+        "log_loss": 0.877193953260056,
+        "accuracy": 0.5654761904761905
+      },
+      "subsets": {
+        "ambiguous": {
+          "questions": 80,
+          "brier": 0.9910144506636132
+        },
+        "deterministic": {
+          "questions": 424,
+          "brier": 0.4333028126800412
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5985487528344675,
+      "enumerated_world_frequency_brier": 0.07936507936507936,
+      "mean_prediction_distance_from_world_frequencies": 0.4424749254657953,
+      "maximum_probability_spread_for_identical_inputs": 0.016010046005249023,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    }
+  },
+  "original-test": {
+    "transfer": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.5511471142769052,
+        "log_loss": 1.0251999277110646,
+        "accuracy": 0.6349206349206349
+      },
+      "subsets": {
+        "deterministic": {
+          "questions": 504,
+          "brier": 0.551147114276905
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5329402872260006,
+      "enumerated_world_frequency_brier": 0.0,
+      "mean_prediction_distance_from_world_frequencies": 0.5511468192542123,
+      "maximum_probability_spread_for_identical_inputs": 0.008972465991973877,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    }
+  },
+  "outcome-1507": {
+    "transfer": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.47893972689905284,
+        "log_loss": 0.8201704329620725,
+        "accuracy": 0.6567460317460317
+      },
+      "subsets": {
+        "deterministic": {
+          "questions": 504,
+          "brier": 0.47893972689905273
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5329402872260006,
+      "enumerated_world_frequency_brier": 0.0,
+      "mean_prediction_distance_from_world_frequencies": 0.47893900650557697,
+      "maximum_probability_spread_for_identical_inputs": 0.0121002197265625,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    },
+    "validation": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.5286014530549841,
+        "log_loss": 0.8869392809792701,
+        "accuracy": 0.5674603174603174
+      },
+      "subsets": {
+        "ambiguous": {
+          "questions": 80,
+          "brier": 1.0106904060234687
+        },
+        "deterministic": {
+          "questions": 424,
+          "brier": 0.4376412732496098
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5985487528344675,
+      "enumerated_world_frequency_brier": 0.07936507936507936,
+      "mean_prediction_distance_from_world_frequencies": 0.44922208249402057,
+      "maximum_probability_spread_for_identical_inputs": 0.01361951231956482,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    }
+  },
+  "outcome-1609": {
+    "transfer": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.43895764518730307,
+        "log_loss": 0.7373580389889519,
+        "accuracy": 0.6865079365079365
+      },
+      "subsets": {
+        "deterministic": {
+          "questions": 504,
+          "brier": 0.4389576451873032
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5329402872260006,
+      "enumerated_world_frequency_brier": 0.0,
+      "mean_prediction_distance_from_world_frequencies": 0.4389561570141931,
+      "maximum_probability_spread_for_identical_inputs": 0.014440864324569702,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    },
+    "validation": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.4843684510296115,
+        "log_loss": 0.8263120449314374,
+        "accuracy": 0.6190476190476191
+      },
+      "subsets": {
+        "ambiguous": {
+          "questions": 80,
+          "brier": 0.8890541968344821
+        },
+        "deterministic": {
+          "questions": 424,
+          "brier": 0.40801264993435277
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5985487528344675,
+      "enumerated_world_frequency_brier": 0.07936507936507936,
+      "mean_prediction_distance_from_world_frequencies": 0.4049837348353553,
+      "maximum_probability_spread_for_identical_inputs": 0.00879138708114624,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    }
+  },
+  "reward-1507": {
+    "transfer": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.5513448491915666,
+        "log_loss": 1.0301836051889357,
+        "accuracy": 0.6428571428571429
+      },
+      "subsets": {
+        "deterministic": {
+          "questions": 504,
+          "brier": 0.5513448491915659
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5329402872260006,
+      "enumerated_world_frequency_brier": 0.0,
+      "mean_prediction_distance_from_world_frequencies": 0.5513443583999388,
+      "maximum_probability_spread_for_identical_inputs": 0.011427730321884155,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    },
+    "validation": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.6528513241718205,
+        "log_loss": 1.1104596140758372,
+        "accuracy": 0.5138888888888888
+      },
+      "subsets": {
+        "ambiguous": {
+          "questions": 80,
+          "brier": 1.3238495773775152
+        },
+        "deterministic": {
+          "questions": 424,
+          "brier": 0.5262478801707454
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5985487528344675,
+      "enumerated_world_frequency_brier": 0.07936507936507936,
+      "mean_prediction_distance_from_world_frequencies": 0.5734672535251578,
+      "maximum_probability_spread_for_identical_inputs": 0.013348400592803955,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    }
+  },
+  "reward-1609": {
+    "transfer": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.5528366611473245,
+        "log_loss": 1.0399916184562121,
+        "accuracy": 0.6428571428571429
+      },
+      "subsets": {
+        "deterministic": {
+          "questions": 504,
+          "brier": 0.5528366611473249
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5329402872260006,
+      "enumerated_world_frequency_brier": 0.0,
+      "mean_prediction_distance_from_world_frequencies": 0.5528361513170166,
+      "maximum_probability_spread_for_identical_inputs": 0.012605905532836914,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    },
+    "validation": {
+      "questions": 504,
+      "distinct_public_inputs": 308,
+      "model": {
+        "n": 504,
+        "brier": 0.6515398158915706,
+        "log_loss": 1.112705657546782,
+        "accuracy": 0.5178571428571429
+      },
+      "subsets": {
+        "ambiguous": {
+          "questions": 80,
+          "brier": 1.3096722411928692
+        },
+        "deterministic": {
+          "questions": 424,
+          "brier": 0.5273638865894394
+        }
+      },
+      "training_label_prior": {
+        "unfinished": 0.4158730158730159,
+        "completed": 0.4714285714285714,
+        "incorrect": 0.1126984126984127
+      },
+      "constant_training_prior_brier": 0.5985487528344675,
+      "enumerated_world_frequency_brier": 0.07936507936507936,
+      "mean_prediction_distance_from_world_frequencies": 0.5721634886583045,
+      "maximum_probability_spread_for_identical_inputs": 0.011037647724151611,
+      "interpretation": "Ambiguity comes from different executed outcomes under identical public inputs, not model confidence. World frequencies describe this authored corpus only. The frequency reference uses evaluation labels for analysis, never for training or checkpoint selection. Nonidentical predictions across equal inputs can reflect batch-dependent numerical differences; no exact Brier decomposition is claimed."
+    }
+  }
+}

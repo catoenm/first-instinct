@@ -1,0 +1,6 @@
+{
+  "files": 226,
+  "bytes": 23713753,
+  "sha256": "948904daf5045a28634deab61cc4838480c65e71e3ce72c19d5385d69ab2694e",
+  "scope": "Execution/learning/evaluation receipts without weights; file hashes in receipt-hashes.json. Full recovery is a separate verified local archive identified in cloud-collection.json. Frozen source/input identities in freeze.json."
+}

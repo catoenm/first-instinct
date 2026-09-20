@@ -1,6 +1,6 @@
 {
   "experiment": "mixed-decisions-v1",
-  "status": "training",
+  "status": "complete_audited",
   "nine_billion_parameter_optimizer_update_confirmed": true,
   "foundation": "Qwen/Qwen3.5-9B",
   "source_commit": "25a3e54",
@@ -12,7 +12,7 @@
   "pilot_allocation_from_original_budget_usd": 40,
   "original_cumulative_authorization_usd": 500,
   "provider_deadline_utc": "2026-09-20T04:19:24.881041+00:00",
-  "stage": "First forecast-only and reward-only seed1507 arms completed, each40acceptedupdates and0rejections; selected updates20and40. Combined arm running; second seed and original transfer control pending. Two completed-arm metadata/trajectory snapshots contain76verifiedfiles. Offline outcome, probability, consumed-data and selection audit passed; this is not full-run checkpoint recovery.",
+  "stage": "All six arms completed 40 accepted updates with zero rejected steps. The original control is complete. Full archive and all 459 files recovered and verified; selected adapter bytes, shared starts, executed trajectories, metrics and consumption audited. No method passes the joint transfer gate in both seeds. Owned H200 deleted; provider reports zero remaining pods.",
   "demo_checkpoint_changed": false,
   "execution_attempt": 3,
   "prior_failed_attempts": 2,
@@ -20,8 +20,14 @@
   "active_attempt_allocation_usd": 38,
   "failed_attempts_reserve_usd": 2,
   "qualification_evidence": "results/mixed-decisions-v1-runtime-recovery",
-  "snapshot_utc": "2026-09-19T23:44:18.233333+00:00",
+  "snapshot_utc": "2026-09-20T01:38:45.373107+00:00",
   "source_commit_note": "Uploaded training source matches the third-attempt freeze; standalone reporting was added after upload.",
   "early_evidence": "results/mixed-decisions-v1-runtime-recovery/early-training/progress.json",
-  "interim_evidence": "docs/mixed-decisions-v1-interim.md"
+  "interim_evidence": "docs/mixed-decisions-v1-interim.md",
+  "final_evidence": "docs/mixed-decisions-v1-results.md",
+  "recovery_evidence": "results/mixed-decisions-v1-final/cloud-collection.json",
+  "accepted_updates": 240,
+  "rejected_updates": 0,
+  "joint_advancement_passed": false,
+  "owned_gpu_deleted": true
 }

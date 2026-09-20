@@ -1,0 +1,1303 @@
+{
+  "arms": {
+    "hybrid-1507": {
+      "status": "passed",
+      "arm": "hybrid",
+      "seed": 1507,
+      "selected_update": 20,
+      "stop_reason": "validation_plateau",
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "prepared_counts": {
+        "application_base_database_worlds": 9,
+        "context_cases": 228,
+        "diagnostic_questions": 228,
+        "forecasts_by_split": {
+          "train": 2520,
+          "transfer": 504,
+          "validation": 504
+        },
+        "guard_probes": 24,
+        "mechanisms": 5,
+        "optimizer_presentations": 0,
+        "prepared_forecasts": 3528,
+        "prepared_questions": 3756,
+        "replay_pool": 4096,
+        "root_fixtures": 5,
+        "shell_base_file_worlds": 8,
+        "trained_questions": 0,
+        "world_goal_tasks": 34
+      },
+      "actual_learning": {
+        "physical_optimizer_attempts": 40,
+        "accepted_transactions": 40,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 1034,
+            "unique_question_ids": 1034,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 1034,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "policy": {
+            "completed_backward_presentations": 2435,
+            "unique_question_ids": 1175,
+            "repeated_presentations": 1260,
+            "presentations_in_accepted_transactions": 2435,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 640,
+            "unique_question_ids": 589,
+            "repeated_presentations": 51,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "forecast_provenance": {
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "distinct_preexecuted_branches_referenced": 1034,
+          "new_forecast_label_executions_during_training": 0
+        }
+      },
+      "executions_by_file": {
+        "baseline-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 86
+        },
+        "rollouts.jsonl": {
+          "episodes": 960,
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "actor_transitions": 2435
+        },
+        "selected-test-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 169
+        },
+        "update-10-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 85
+        },
+        "update-20-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 84
+        },
+        "update-30-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 83
+        },
+        "update-40-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 82
+        }
+      },
+      "measurements": {
+        "baseline-validation": {
+          "reward": 0.2622222222222222,
+          "success_rate": 0.5833333333333334,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6517688921064776,
+            "log_loss": 1.1054705681427612,
+            "accuracy": 0.5119047619047619
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35221356615736266
+        },
+        "selected-test": {
+          "reward": -0.1527777777777778,
+          "success_rate": 0.4722222222222222,
+          "forecast": {
+            "n": 504,
+            "brier": 0.4786753859606325,
+            "log_loss": 0.820680855923872,
+            "accuracy": 0.6587301587301587
+          },
+          "general_macro_accuracy": 0.8699575371549895,
+          "general_macro_log_loss": 0.3525569567784659
+        },
+        "update-10-validation": {
+          "reward": 0.31777777777777777,
+          "success_rate": 0.6388888888888888,
+          "forecast": {
+            "n": 504,
+            "brier": 0.593868533242339,
+            "log_loss": 0.992419907782527,
+            "accuracy": 0.5297619047619048
+          },
+          "general_macro_accuracy": 0.8673036093418258,
+          "general_macro_log_loss": 0.35206655085329563
+        },
+        "update-20-validation": {
+          "reward": 0.4016666666666666,
+          "success_rate": 0.6944444444444444,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5277285592594861,
+            "log_loss": 0.8860747039123401,
+            "accuracy": 0.5734126984126984
+          },
+          "general_macro_accuracy": 0.8699575371549895,
+          "general_macro_log_loss": 0.3525569567784659
+        },
+        "update-30-validation": {
+          "reward": 0.34722222222222215,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.49374717896181564,
+            "log_loss": 0.83890718731577,
+            "accuracy": 0.6071428571428571
+          },
+          "general_macro_accuracy": 0.8651804670912951,
+          "general_macro_log_loss": 0.3529705998197795
+        },
+        "update-40-validation": {
+          "reward": 0.34833333333333333,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.47264067143199706,
+            "log_loss": 0.8103348304012062,
+            "accuracy": 0.6488095238095238
+          },
+          "general_macro_accuracy": 0.8667728237791933,
+          "general_macro_log_loss": 0.35173751274988285
+        }
+      },
+      "general_transfer": {
+        "n": 1128,
+        "macro_accuracy": 0.7767210144927535,
+        "macro_log_loss": 0.4980479397045041
+      },
+      "limits": "Offline receipt audit, no new executions or model calls. Full artifact recovery must also verify checkpoint bytes. Prepared counts are not consumed counts; evaluation episodes are separate from optimizer presentations."
+    },
+    "hybrid-1609": {
+      "status": "passed",
+      "arm": "hybrid",
+      "seed": 1609,
+      "selected_update": 20,
+      "stop_reason": "validation_plateau",
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "prepared_counts": {
+        "application_base_database_worlds": 9,
+        "context_cases": 228,
+        "diagnostic_questions": 228,
+        "forecasts_by_split": {
+          "train": 2520,
+          "transfer": 504,
+          "validation": 504
+        },
+        "guard_probes": 24,
+        "mechanisms": 5,
+        "optimizer_presentations": 0,
+        "prepared_forecasts": 3528,
+        "prepared_questions": 3756,
+        "replay_pool": 4096,
+        "root_fixtures": 5,
+        "shell_base_file_worlds": 8,
+        "trained_questions": 0,
+        "world_goal_tasks": 34
+      },
+      "actual_learning": {
+        "physical_optimizer_attempts": 40,
+        "accepted_transactions": 40,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 1026,
+            "unique_question_ids": 1026,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 1026,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "policy": {
+            "completed_backward_presentations": 2441,
+            "unique_question_ids": 1185,
+            "repeated_presentations": 1256,
+            "presentations_in_accepted_transactions": 2441,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 640,
+            "unique_question_ids": 592,
+            "repeated_presentations": 48,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "forecast_provenance": {
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "distinct_preexecuted_branches_referenced": 1026,
+          "new_forecast_label_executions_during_training": 0
+        }
+      },
+      "executions_by_file": {
+        "baseline-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 86
+        },
+        "rollouts.jsonl": {
+          "episodes": 960,
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "actor_transitions": 2441
+        },
+        "selected-test-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 165
+        },
+        "update-10-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 83
+        },
+        "update-20-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 83
+        },
+        "update-30-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 81
+        },
+        "update-40-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 80
+        }
+      },
+      "measurements": {
+        "baseline-validation": {
+          "reward": 0.2622222222222222,
+          "success_rate": 0.5833333333333334,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6517688921064776,
+            "log_loss": 1.1054705681427612,
+            "accuracy": 0.5119047619047619
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35221356615736266
+        },
+        "selected-test": {
+          "reward": -0.1227777777777778,
+          "success_rate": 0.5,
+          "forecast": {
+            "n": 504,
+            "brier": 0.4729006488309097,
+            "log_loss": 0.8062444197134112,
+            "accuracy": 0.6626984126984127
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35217095295902745
+        },
+        "update-10-validation": {
+          "reward": 0.29166666666666663,
+          "success_rate": 0.6388888888888888,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5742729915628066,
+            "log_loss": 0.9576391866253305,
+            "accuracy": 0.5535714285714286
+          },
+          "general_macro_accuracy": 0.8683651804670913,
+          "general_macro_log_loss": 0.35221190641353406
+        },
+        "update-20-validation": {
+          "reward": 0.34722222222222215,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5218284695028308,
+            "log_loss": 0.877193953260056,
+            "accuracy": 0.5654761904761905
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35217095295902745
+        },
+        "update-30-validation": {
+          "reward": 0.32111111111111107,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.48651162353293975,
+            "log_loss": 0.8294647334087776,
+            "accuracy": 0.6190476190476191
+          },
+          "general_macro_accuracy": 0.8667728237791933,
+          "general_macro_log_loss": 0.35296702017509224
+        },
+        "update-40-validation": {
+          "reward": 0.3222222222222222,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.465805833181305,
+            "log_loss": 0.8030467030313028,
+            "accuracy": 0.6527777777777778
+          },
+          "general_macro_accuracy": 0.8683651804670913,
+          "general_macro_log_loss": 0.35253311490585937
+        }
+      },
+      "general_transfer": {
+        "n": 1128,
+        "macro_accuracy": 0.7803442028985508,
+        "macro_log_loss": 0.4962722843013901
+      },
+      "limits": "Offline receipt audit, no new executions or model calls. Full artifact recovery must also verify checkpoint bytes. Prepared counts are not consumed counts; evaluation episodes are separate from optimizer presentations."
+    },
+    "original-test": {
+      "status": "passed",
+      "arm": "baseline",
+      "seed": 1507,
+      "selected_update": 0,
+      "stop_reason": null,
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "prepared_counts": {
+        "application_base_database_worlds": 9,
+        "context_cases": 228,
+        "diagnostic_questions": 228,
+        "forecasts_by_split": {
+          "train": 2520,
+          "transfer": 504,
+          "validation": 504
+        },
+        "guard_probes": 24,
+        "mechanisms": 5,
+        "optimizer_presentations": 0,
+        "prepared_forecasts": 3528,
+        "prepared_questions": 3756,
+        "replay_pool": 4096,
+        "root_fixtures": 5,
+        "shell_base_file_worlds": 8,
+        "trained_questions": 0,
+        "world_goal_tasks": 34
+      },
+      "actual_learning": null,
+      "executions_by_file": {
+        "selected-test-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 157
+        }
+      },
+      "measurements": {
+        "selected-test": {
+          "reward": -0.11833333333333337,
+          "success_rate": 0.5,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5511471142769052,
+            "log_loss": 1.0251999277110646,
+            "accuracy": 0.6349206349206349
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35221356615736266
+        }
+      },
+      "general_transfer": {
+        "n": 1128,
+        "macro_accuracy": 0.7794384057971014,
+        "macro_log_loss": 0.5003348273850637
+      },
+      "limits": "Offline receipt audit, no new executions or model calls. Full artifact recovery must also verify checkpoint bytes. Prepared counts are not consumed counts; evaluation episodes are separate from optimizer presentations."
+    },
+    "outcome-1507": {
+      "status": "passed",
+      "arm": "outcome",
+      "seed": 1507,
+      "selected_update": 20,
+      "stop_reason": "validation_plateau",
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "prepared_counts": {
+        "application_base_database_worlds": 9,
+        "context_cases": 228,
+        "diagnostic_questions": 228,
+        "forecasts_by_split": {
+          "train": 2520,
+          "transfer": 504,
+          "validation": 504
+        },
+        "guard_probes": 24,
+        "mechanisms": 5,
+        "optimizer_presentations": 0,
+        "prepared_forecasts": 3528,
+        "prepared_questions": 3756,
+        "replay_pool": 4096,
+        "root_fixtures": 5,
+        "shell_base_file_worlds": 8,
+        "trained_questions": 0,
+        "world_goal_tasks": 34
+      },
+      "actual_learning": {
+        "physical_optimizer_attempts": 40,
+        "accepted_transactions": 40,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 1034,
+            "unique_question_ids": 1034,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 1034,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 640,
+            "unique_question_ids": 589,
+            "repeated_presentations": 51,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "forecast_provenance": {
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "distinct_preexecuted_branches_referenced": 1034,
+          "new_forecast_label_executions_during_training": 0
+        }
+      },
+      "executions_by_file": {
+        "baseline-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 86
+        },
+        "rollouts.jsonl": {
+          "episodes": 0,
+          "context_cases": 0,
+          "root_fixtures": 0,
+          "underlying_world_goal_tasks": 0,
+          "actor_transitions": 0
+        },
+        "selected-test-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 165
+        },
+        "update-10-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 84
+        },
+        "update-20-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 83
+        },
+        "update-30-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 81
+        },
+        "update-40-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 80
+        }
+      },
+      "measurements": {
+        "baseline-validation": {
+          "reward": 0.2622222222222222,
+          "success_rate": 0.5833333333333334,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6517688921064776,
+            "log_loss": 1.1054705681427612,
+            "accuracy": 0.5119047619047619
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35221356615736266
+        },
+        "selected-test": {
+          "reward": -0.15027777777777782,
+          "success_rate": 0.4722222222222222,
+          "forecast": {
+            "n": 504,
+            "brier": 0.47893972689905284,
+            "log_loss": 0.8201704329620725,
+            "accuracy": 0.6567460317460317
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.3519564160141138
+        },
+        "update-10-validation": {
+          "reward": 0.2633333333333333,
+          "success_rate": 0.6111111111111112,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5951662426947044,
+            "log_loss": 0.9948876987369814,
+            "accuracy": 0.5297619047619048
+          },
+          "general_macro_accuracy": 0.8699575371549895,
+          "general_macro_log_loss": 0.3522731136955676
+        },
+        "update-20-validation": {
+          "reward": 0.31888888888888883,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5286014530549841,
+            "log_loss": 0.8869392809792701,
+            "accuracy": 0.5674603174603174
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.3519564160141138
+        },
+        "update-30-validation": {
+          "reward": 0.29277777777777775,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.48898808531402554,
+            "log_loss": 0.8322210158882657,
+            "accuracy": 0.6150793650793651
+          },
+          "general_macro_accuracy": 0.868895966029724,
+          "general_macro_log_loss": 0.3525398042396475
+        },
+        "update-40-validation": {
+          "reward": 0.29388888888888887,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.4650400859183578,
+            "log_loss": 0.7999871751745188,
+            "accuracy": 0.6547619047619048
+          },
+          "general_macro_accuracy": 0.8699575371549895,
+          "general_macro_log_loss": 0.3525007424574899
+        }
+      },
+      "general_transfer": {
+        "n": 1128,
+        "macro_accuracy": 0.7817028985507247,
+        "macro_log_loss": 0.4976561437204854
+      },
+      "limits": "Offline receipt audit, no new executions or model calls. Full artifact recovery must also verify checkpoint bytes. Prepared counts are not consumed counts; evaluation episodes are separate from optimizer presentations."
+    },
+    "outcome-1609": {
+      "status": "passed",
+      "arm": "outcome",
+      "seed": 1609,
+      "selected_update": 30,
+      "stop_reason": null,
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "prepared_counts": {
+        "application_base_database_worlds": 9,
+        "context_cases": 228,
+        "diagnostic_questions": 228,
+        "forecasts_by_split": {
+          "train": 2520,
+          "transfer": 504,
+          "validation": 504
+        },
+        "guard_probes": 24,
+        "mechanisms": 5,
+        "optimizer_presentations": 0,
+        "prepared_forecasts": 3528,
+        "prepared_questions": 3756,
+        "replay_pool": 4096,
+        "root_fixtures": 5,
+        "shell_base_file_worlds": 8,
+        "trained_questions": 0,
+        "world_goal_tasks": 34
+      },
+      "actual_learning": {
+        "physical_optimizer_attempts": 40,
+        "accepted_transactions": 40,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 1026,
+            "unique_question_ids": 1026,
+            "repeated_presentations": 0,
+            "presentations_in_accepted_transactions": 1026,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 640,
+            "unique_question_ids": 592,
+            "repeated_presentations": 48,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "forecast_provenance": {
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "distinct_preexecuted_branches_referenced": 1026,
+          "new_forecast_label_executions_during_training": 0
+        }
+      },
+      "executions_by_file": {
+        "baseline-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 86
+        },
+        "rollouts.jsonl": {
+          "episodes": 0,
+          "context_cases": 0,
+          "root_fixtures": 0,
+          "underlying_world_goal_tasks": 0,
+          "actor_transitions": 0
+        },
+        "selected-test-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 168
+        },
+        "update-10-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 83
+        },
+        "update-20-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 83
+        },
+        "update-30-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 82
+        },
+        "update-40-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 80
+        }
+      },
+      "measurements": {
+        "baseline-validation": {
+          "reward": 0.2622222222222222,
+          "success_rate": 0.5833333333333334,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6517688921064776,
+            "log_loss": 1.1054705681427612,
+            "accuracy": 0.5119047619047619
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35221356615736266
+        },
+        "selected-test": {
+          "reward": -0.12305555555555557,
+          "success_rate": 0.4722222222222222,
+          "forecast": {
+            "n": 504,
+            "brier": 0.43895764518730307,
+            "log_loss": 0.7373580389889519,
+            "accuracy": 0.6865079365079365
+          },
+          "general_macro_accuracy": 0.8667728237791933,
+          "general_macro_log_loss": 0.35248918568552046
+        },
+        "update-10-validation": {
+          "reward": 0.32,
+          "success_rate": 0.6388888888888888,
+          "forecast": {
+            "n": 504,
+            "brier": 0.571917811411374,
+            "log_loss": 0.9538490620128669,
+            "accuracy": 0.5515873015873016
+          },
+          "general_macro_accuracy": 0.8683651804670913,
+          "general_macro_log_loss": 0.35217494794797494
+        },
+        "update-20-validation": {
+          "reward": 0.29166666666666663,
+          "success_rate": 0.6388888888888888,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5190719577141313,
+            "log_loss": 0.8730864511711445,
+            "accuracy": 0.5734126984126984
+          },
+          "general_macro_accuracy": 0.8699575371549895,
+          "general_macro_log_loss": 0.3522702925824504
+        },
+        "update-30-validation": {
+          "reward": 0.32,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.4843684510296115,
+            "log_loss": 0.8263120449314374,
+            "accuracy": 0.6190476190476191
+          },
+          "general_macro_accuracy": 0.8667728237791933,
+          "general_macro_log_loss": 0.35248918568552046
+        },
+        "update-40-validation": {
+          "reward": 0.29388888888888887,
+          "success_rate": 0.6666666666666666,
+          "forecast": {
+            "n": 504,
+            "brier": 0.46292593170334856,
+            "log_loss": 0.7989499233619535,
+            "accuracy": 0.6547619047619048
+          },
+          "general_macro_accuracy": 0.8683651804670913,
+          "general_macro_log_loss": 0.35216790868921743
+        }
+      },
+      "general_transfer": {
+        "n": 1128,
+        "macro_accuracy": 0.779891304347826,
+        "macro_log_loss": 0.4958767950390425
+      },
+      "limits": "Offline receipt audit, no new executions or model calls. Full artifact recovery must also verify checkpoint bytes. Prepared counts are not consumed counts; evaluation episodes are separate from optimizer presentations."
+    },
+    "reward-1507": {
+      "status": "passed",
+      "arm": "reward",
+      "seed": 1507,
+      "selected_update": 40,
+      "stop_reason": null,
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "prepared_counts": {
+        "application_base_database_worlds": 9,
+        "context_cases": 228,
+        "diagnostic_questions": 228,
+        "forecasts_by_split": {
+          "train": 2520,
+          "transfer": 504,
+          "validation": 504
+        },
+        "guard_probes": 24,
+        "mechanisms": 5,
+        "optimizer_presentations": 0,
+        "prepared_forecasts": 3528,
+        "prepared_questions": 3756,
+        "replay_pool": 4096,
+        "root_fixtures": 5,
+        "shell_base_file_worlds": 8,
+        "trained_questions": 0,
+        "world_goal_tasks": 34
+      },
+      "actual_learning": {
+        "physical_optimizer_attempts": 40,
+        "accepted_transactions": 40,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "policy": {
+            "completed_backward_presentations": 2460,
+            "unique_question_ids": 1197,
+            "repeated_presentations": 1263,
+            "presentations_in_accepted_transactions": 2460,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 640,
+            "unique_question_ids": 589,
+            "repeated_presentations": 51,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "forecast_provenance": {
+          "context_cases": 0,
+          "root_fixtures": 0,
+          "underlying_world_goal_tasks": 0,
+          "distinct_preexecuted_branches_referenced": 0,
+          "new_forecast_label_executions_during_training": 0
+        }
+      },
+      "executions_by_file": {
+        "baseline-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 86
+        },
+        "rollouts.jsonl": {
+          "episodes": 960,
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "actor_transitions": 2460
+        },
+        "selected-test-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 171
+        },
+        "update-10-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 88
+        },
+        "update-20-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 88
+        },
+        "update-30-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 88
+        },
+        "update-40-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 88
+        }
+      },
+      "measurements": {
+        "baseline-validation": {
+          "reward": 0.2622222222222222,
+          "success_rate": 0.5833333333333334,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6517688921064776,
+            "log_loss": 1.1054705681427612,
+            "accuracy": 0.5119047619047619
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35221356615736266
+        },
+        "selected-test": {
+          "reward": -0.07222222222222226,
+          "success_rate": 0.5277777777777778,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5513448491915666,
+            "log_loss": 1.0301836051889357,
+            "accuracy": 0.6428571428571429
+          },
+          "general_macro_accuracy": 0.8715498938428875,
+          "general_macro_log_loss": 0.35200105061584314
+        },
+        "update-10-validation": {
+          "reward": 0.26,
+          "success_rate": 0.5833333333333334,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6530392920523034,
+            "log_loss": 1.1086092617291785,
+            "accuracy": 0.5138888888888888
+          },
+          "general_macro_accuracy": 0.8683651804670913,
+          "general_macro_log_loss": 0.35151496046751374
+        },
+        "update-20-validation": {
+          "reward": 0.31555555555555553,
+          "success_rate": 0.6111111111111112,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6532371160018103,
+            "log_loss": 1.108783370833378,
+            "accuracy": 0.5158730158730159
+          },
+          "general_macro_accuracy": 0.8651804670912951,
+          "general_macro_log_loss": 0.3522937469128498
+        },
+        "update-30-validation": {
+          "reward": 0.31555555555555553,
+          "success_rate": 0.6111111111111112,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6511633265108787,
+            "log_loss": 1.1068141702187118,
+            "accuracy": 0.5138888888888888
+          },
+          "general_macro_accuracy": 0.8699575371549895,
+          "general_macro_log_loss": 0.35225028946350717
+        },
+        "update-40-validation": {
+          "reward": 0.3711111111111111,
+          "success_rate": 0.6388888888888888,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6528513241718205,
+            "log_loss": 1.1104596140758372,
+            "accuracy": 0.5138888888888888
+          },
+          "general_macro_accuracy": 0.8715498938428875,
+          "general_macro_log_loss": 0.35200105061584314
+        }
+      },
+      "general_transfer": {
+        "n": 1128,
+        "macro_accuracy": 0.7789855072463768,
+        "macro_log_loss": 0.5047812105656668
+      },
+      "limits": "Offline receipt audit, no new executions or model calls. Full artifact recovery must also verify checkpoint bytes. Prepared counts are not consumed counts; evaluation episodes are separate from optimizer presentations."
+    },
+    "reward-1609": {
+      "status": "passed",
+      "arm": "reward",
+      "seed": 1609,
+      "selected_update": 40,
+      "stop_reason": null,
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "prepared_counts": {
+        "application_base_database_worlds": 9,
+        "context_cases": 228,
+        "diagnostic_questions": 228,
+        "forecasts_by_split": {
+          "train": 2520,
+          "transfer": 504,
+          "validation": 504
+        },
+        "guard_probes": 24,
+        "mechanisms": 5,
+        "optimizer_presentations": 0,
+        "prepared_forecasts": 3528,
+        "prepared_questions": 3756,
+        "replay_pool": 4096,
+        "root_fixtures": 5,
+        "shell_base_file_worlds": 8,
+        "trained_questions": 0,
+        "world_goal_tasks": 34
+      },
+      "actual_learning": {
+        "physical_optimizer_attempts": 40,
+        "accepted_transactions": 40,
+        "rejected_transactions": 0,
+        "attempted_updates_without_closure": [],
+        "started_but_unconfirmed_backward_presentations": 0,
+        "components": {
+          "policy": {
+            "completed_backward_presentations": 2510,
+            "unique_question_ids": 1213,
+            "repeated_presentations": 1297,
+            "presentations_in_accepted_transactions": 2510,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          },
+          "replay": {
+            "completed_backward_presentations": 640,
+            "unique_question_ids": 592,
+            "repeated_presentations": 48,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "presentations_awaiting_transaction_outcome": 0
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "forecast_provenance": {
+          "context_cases": 0,
+          "root_fixtures": 0,
+          "underlying_world_goal_tasks": 0,
+          "distinct_preexecuted_branches_referenced": 0,
+          "new_forecast_label_executions_during_training": 0
+        }
+      },
+      "executions_by_file": {
+        "baseline-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 86
+        },
+        "rollouts.jsonl": {
+          "episodes": 960,
+          "context_cases": 156,
+          "root_fixtures": 3,
+          "underlying_world_goal_tasks": 26,
+          "actor_transitions": 2510
+        },
+        "selected-test-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 156
+        },
+        "update-10-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 83
+        },
+        "update-20-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 84
+        },
+        "update-30-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 82
+        },
+        "update-40-validation-trajectories.jsonl": {
+          "episodes": 36,
+          "context_cases": 36,
+          "root_fixtures": 1,
+          "underlying_world_goal_tasks": 4,
+          "actor_transitions": 82
+        }
+      },
+      "measurements": {
+        "baseline-validation": {
+          "reward": 0.2622222222222222,
+          "success_rate": 0.5833333333333334,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6517688921064776,
+            "log_loss": 1.1054705681427612,
+            "accuracy": 0.5119047619047619
+          },
+          "general_macro_accuracy": 0.870488322717622,
+          "general_macro_log_loss": 0.35221356615736266
+        },
+        "selected-test": {
+          "reward": -0.061944444444444496,
+          "success_rate": 0.5277777777777778,
+          "forecast": {
+            "n": 504,
+            "brier": 0.5528366611473245,
+            "log_loss": 1.0399916184562121,
+            "accuracy": 0.6428571428571429
+          },
+          "general_macro_accuracy": 0.8736730360934182,
+          "general_macro_log_loss": 0.3518603327950622
+        },
+        "update-10-validation": {
+          "reward": 0.29166666666666663,
+          "success_rate": 0.6388888888888888,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6478955314968922,
+            "log_loss": 1.098932586279017,
+            "accuracy": 0.5158730158730159
+          },
+          "general_macro_accuracy": 0.8699575371549895,
+          "general_macro_log_loss": 0.3513541528238585
+        },
+        "update-20-validation": {
+          "reward": 0.4016666666666666,
+          "success_rate": 0.6944444444444444,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6494677292612537,
+            "log_loss": 1.1052753407580003,
+            "accuracy": 0.5158730158730159
+          },
+          "general_macro_accuracy": 0.8667728237791933,
+          "general_macro_log_loss": 0.3515225860344465
+        },
+        "update-30-validation": {
+          "reward": 0.45944444444444443,
+          "success_rate": 0.7222222222222222,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6517989698283155,
+            "log_loss": 1.1116882835775905,
+            "accuracy": 0.5158730158730159
+          },
+          "general_macro_accuracy": 0.8683651804670913,
+          "general_macro_log_loss": 0.35220991266944207
+        },
+        "update-40-validation": {
+          "reward": 0.515,
+          "success_rate": 0.75,
+          "forecast": {
+            "n": 504,
+            "brier": 0.6515398158915706,
+            "log_loss": 1.112705657546782,
+            "accuracy": 0.5178571428571429
+          },
+          "general_macro_accuracy": 0.8736730360934182,
+          "general_macro_log_loss": 0.3518603327950622
+        }
+      },
+      "general_transfer": {
+        "n": 1128,
+        "macro_accuracy": 0.7821557971014492,
+        "macro_log_loss": 0.5033861438590642
+      },
+      "limits": "Offline receipt audit, no new executions or model calls. Full artifact recovery must also verify checkpoint bytes. Prepared counts are not consumed counts; evaluation episodes are separate from optimizer presentations."
+    }
+  },
+  "advancement": {
+    "status": "complete",
+    "methods": {
+      "outcome": {
+        "passed": false,
+        "seeds": [
+          {
+            "seed": 1507,
+            "transfer_reward_gain": -0.03194444444444444,
+            "transfer_brier_reduction": 0.07220738737785237,
+            "general_retention_passed": true,
+            "passed": false
+          },
+          {
+            "seed": 1609,
+            "transfer_reward_gain": -0.004722222222222197,
+            "transfer_brier_reduction": 0.11218946908960215,
+            "general_retention_passed": true,
+            "passed": false
+          }
+        ]
+      },
+      "reward": {
+        "passed": false,
+        "seeds": [
+          {
+            "seed": 1507,
+            "transfer_reward_gain": 0.04611111111111112,
+            "transfer_brier_reduction": -0.00019773491466135162,
+            "general_retention_passed": true,
+            "passed": false
+          },
+          {
+            "seed": 1609,
+            "transfer_reward_gain": 0.05638888888888888,
+            "transfer_brier_reduction": -0.001689546870419334,
+            "general_retention_passed": true,
+            "passed": false
+          }
+        ]
+      },
+      "hybrid": {
+        "passed": false,
+        "seeds": [
+          {
+            "seed": 1507,
+            "transfer_reward_gain": -0.034444444444444416,
+            "transfer_brier_reduction": 0.07247172831627269,
+            "general_retention_passed": true,
+            "passed": false
+          },
+          {
+            "seed": 1609,
+            "transfer_reward_gain": -0.004444444444444431,
+            "transfer_brier_reduction": 0.0782464654459955,
+            "general_retention_passed": true,
+            "passed": false
+          }
+        ]
+      }
+    },
+    "limitation": "One transfer root only. Passing is a pilot advancement gate, not broad generalization."
+  },
+  "observed_states": {
+    "hybrid-1507": "complete",
+    "hybrid-1609": "complete",
+    "original-test": "complete",
+    "outcome-1507": "complete",
+    "outcome-1609": "complete",
+    "reward-1507": "complete",
+    "reward-1609": "complete"
+  },
+  "experiment_status": "complete"
+}

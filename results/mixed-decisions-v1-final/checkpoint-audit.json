@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "original_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+  "checkpoints": {
+    "hybrid-1507": {
+      "selected_update": 20,
+      "adapter_sha256": "1b9bda2287741045049ec404a9b15776e4a0f4e61c013b4d1986fbc33cbfead1",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "ad4cb4177497ebb1aed0edf89dd4069db8d9ad6800abee2f550b491f23631049",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    },
+    "hybrid-1609": {
+      "selected_update": 20,
+      "adapter_sha256": "e233520e9fe498d7271a7aa1de2354d71603a093a4a01e9978f2a34ba62b1194",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "9452cee88b01a9b4be80182a180ec1e2a73031b65c62333ce0d3ee5e7ade9cdc",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    },
+    "outcome-1507": {
+      "selected_update": 20,
+      "adapter_sha256": "fb8a67d53279842b7c5d36fbab6e09d9aabec732887cda33d3f238af42b9896b",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "8b0432a195a381a6140124620b2be11f027c46305b202532b322394a91642eda",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    },
+    "outcome-1609": {
+      "selected_update": 30,
+      "adapter_sha256": "46f9ab017f19a575c732c8242eebf2d1838d58f497e69646b24a9167761a8f98",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "580c8e01fe0af184f6b6149182cc23cda0841a4ea4bba41af543e039c7b7d757",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    },
+    "reward-1507": {
+      "selected_update": 40,
+      "adapter_sha256": "3bdae54ab892ae3ada3b245f8008fcef033993e34b76cef6385ad920ed5d426e",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "d73d33188713943cc4f4ef7bc97f64f67faefeecfbf89d1672eef6d24e9afce4",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    },
+    "reward-1609": {
+      "selected_update": 40,
+      "adapter_sha256": "5d218c0ddf6484ab8db0623a829427c09420299c89032f98e78ee90461cd1533",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "ab829aface8634b85369bec8f8d5654a23c74560fdb0313ea1584dba4dedddb0",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    }
+  },
+  "scope": "Stored adapter bytes and common starting lineage; no inference or optimizer execution."
+}

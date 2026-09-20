@@ -59,12 +59,15 @@ Its 2,268 distinct alternatives were each replayed once, producing 1,564 paired
 questions from one new root. An independent audit passed, and a prospective
 training guard now rejects and rolls back over-limit updates.
 
-The [mixed-mechanism pilot](docs/mixed-decisions-v1-preflight.md) now has a qualified
-live learning path across shell and application workflows. It compares forecasts,
-executed rewards, and both together from identical 9B weights, with whole-family
-holdouts and automatic rollback of unstable updates.
-The bounded run has [launched on one H200](results/mixed-decisions-v1-launch.json);
-the preflight snapshot is not a training-performance result.
+**Completed: [stable learning, but no joint transfer gain](docs/mixed-decisions-v1-results.md).**
+All six mixed-mechanism arms completed 40 accepted updates without rejection.
+Reward-only learning improved held-out decision return slightly; forecast
+supervision lowered probability error. No method improved both enough to pass
+the predefined gate in both seeds. General-task performance stayed close to the
+starting model. The audit also found no uncertain or incorrect-outcome forecast
+groups in the single transfer mechanism, motivating broader data and forecasts
+from intermediate execution states. All checkpoints were recovered and the GPU
+deleted; the demo remains on its supervised checkpoint.
 
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,

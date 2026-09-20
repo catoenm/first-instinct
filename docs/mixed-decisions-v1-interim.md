@@ -1,5 +1,8 @@
 # First two completed arms: interim evidence
 
+**Historical snapshot, superseded by the [completed six-arm comparison](mixed-decisions-v1-results.md).**
+The text below preserves what was known after the first two arms.
+
 The first forecast-only and reward-only runs each completed 40 accepted updates
 without a rejected transaction. Both started from the same original supervised
 Qwen3.5-9B language weights. The combined method and second seed are still

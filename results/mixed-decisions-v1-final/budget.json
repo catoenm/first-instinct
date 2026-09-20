@@ -1,0 +1,12 @@
+{
+  "original_cumulative_authorization_usd": 500,
+  "pilot_allocation_usd": 40,
+  "provider_reported_prior_charges_usd": 161.763003300759,
+  "failed_attempts_estimated_compute_usd_excluding_storage": 0.8994115461051464,
+  "successful_attempt_estimated_compute_usd_excluding_storage": 12.829259238660335,
+  "pilot_estimated_compute_usd_excluding_storage": 13.72867078476548,
+  "prior_charges_plus_pilot_compute_estimate_usd": 175.4916740855245,
+  "remaining_before_unreconciled_pilot_storage_usd": 324.5083259144755,
+  "caveat": "Compute estimate uses elapsed rental time through confirmed provider absence, including setup and recovery. It is not an invoice; new pilot storage and billing adjustments are not reconciled. Verify fresh billing before another rental.",
+  "remaining_provider_pods": 0
+}

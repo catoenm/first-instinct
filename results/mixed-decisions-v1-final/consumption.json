@@ -1,0 +1,174 @@
+{
+  "prepared": {
+    "application_base_database_worlds": 9,
+    "context_cases": 228,
+    "diagnostic_questions": 228,
+    "forecasts_by_split": {
+      "train": 2520,
+      "transfer": 504,
+      "validation": 504
+    },
+    "guard_probes": 24,
+    "mechanisms": 5,
+    "optimizer_presentations": 0,
+    "prepared_forecasts": 3528,
+    "prepared_questions": 3756,
+    "replay_pool": 4096,
+    "root_fixtures": 5,
+    "shell_base_file_worlds": 8,
+    "trained_questions": 0,
+    "world_goal_tasks": 34
+  },
+  "actual": {
+    "accepted_updates": 240,
+    "rejected_updates": 0,
+    "episodes": {
+      "evaluation": 1332,
+      "training": 3840
+    },
+    "objectives": {
+      "outcome": {
+        "presentations": 4120,
+        "distinct_question_ids": 1612,
+        "repeated_presentations": 2508
+      },
+      "policy": {
+        "presentations": 9846,
+        "distinct_question_ids": 2771,
+        "repeated_presentations": 7075
+      },
+      "replay": {
+        "presentations": 3840,
+        "distinct_question_ids": 1100,
+        "repeated_presentations": 2740
+      }
+    },
+    "per_arm": {
+      "hybrid-1507": {
+        "outcome": {
+          "completed_backward_presentations": 1034,
+          "unique_question_ids": 1034,
+          "repeated_presentations": 0,
+          "presentations_in_accepted_transactions": 1034,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "policy": {
+          "completed_backward_presentations": 2435,
+          "unique_question_ids": 1175,
+          "repeated_presentations": 1260,
+          "presentations_in_accepted_transactions": 2435,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 640,
+          "unique_question_ids": 589,
+          "repeated_presentations": 51,
+          "presentations_in_accepted_transactions": 640,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        }
+      },
+      "hybrid-1609": {
+        "outcome": {
+          "completed_backward_presentations": 1026,
+          "unique_question_ids": 1026,
+          "repeated_presentations": 0,
+          "presentations_in_accepted_transactions": 1026,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "policy": {
+          "completed_backward_presentations": 2441,
+          "unique_question_ids": 1185,
+          "repeated_presentations": 1256,
+          "presentations_in_accepted_transactions": 2441,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 640,
+          "unique_question_ids": 592,
+          "repeated_presentations": 48,
+          "presentations_in_accepted_transactions": 640,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        }
+      },
+      "outcome-1507": {
+        "outcome": {
+          "completed_backward_presentations": 1034,
+          "unique_question_ids": 1034,
+          "repeated_presentations": 0,
+          "presentations_in_accepted_transactions": 1034,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 640,
+          "unique_question_ids": 589,
+          "repeated_presentations": 51,
+          "presentations_in_accepted_transactions": 640,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        }
+      },
+      "outcome-1609": {
+        "outcome": {
+          "completed_backward_presentations": 1026,
+          "unique_question_ids": 1026,
+          "repeated_presentations": 0,
+          "presentations_in_accepted_transactions": 1026,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 640,
+          "unique_question_ids": 592,
+          "repeated_presentations": 48,
+          "presentations_in_accepted_transactions": 640,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        }
+      },
+      "reward-1507": {
+        "policy": {
+          "completed_backward_presentations": 2460,
+          "unique_question_ids": 1197,
+          "repeated_presentations": 1263,
+          "presentations_in_accepted_transactions": 2460,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 640,
+          "unique_question_ids": 589,
+          "repeated_presentations": 51,
+          "presentations_in_accepted_transactions": 640,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        }
+      },
+      "reward-1609": {
+        "policy": {
+          "completed_backward_presentations": 2510,
+          "unique_question_ids": 1213,
+          "repeated_presentations": 1297,
+          "presentations_in_accepted_transactions": 2510,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 640,
+          "unique_question_ids": 592,
+          "repeated_presentations": 48,
+          "presentations_in_accepted_transactions": 640,
+          "presentations_in_rejected_transactions": 0,
+          "presentations_awaiting_transaction_outcome": 0
+        }
+      }
+    }
+  },
+  "interpretation": "Distinct question IDs count exact question identity, not independent tasks. Repeated presentations include sharing across arms. Every arm trained on at most 26 underlying world-goal tasks from three roots. Evaluation and diagnostic gradients are separate from optimizer presentations. Forecast targets refer to preexecuted branches, not new forecast-label execution during training."
+}
