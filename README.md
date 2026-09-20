@@ -82,8 +82,13 @@ ambiguous local times and atomic rescheduling. Native replay and Linux parity
 passed; its model results remain unmeasured. A [source index](docs/decision-source-registry-v1-results.md)
 prepares 2,280 distinct forecast inputs across five training mechanisms while
 preserving uncertain outcomes and whole-mechanism ownership. These are prepared
-data, not consumed training examples. The [remaining gates](docs/decision-data-next-gates.md)
-qualify live adapters and the next controlled learning recipe before renting.
+data, not consumed training examples. [Live runtime and learning qualification](docs/expanded-decisions-v1-qualification.md)
+now passed: 384 primary trajectories were independently replayed, 96 Linux checks
+matched, and all 27 startup tests passed in the exact cloud bundle. The
+[next controlled pilot](docs/expanded-decisions-v1-protocol.md) has been provisioned
+on one H200, with calendar held out and the same original 9B starting weights.
+No improvement is claimed until its decision, probability and general-task gates
+are evaluated.
 
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,

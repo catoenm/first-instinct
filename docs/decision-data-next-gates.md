@@ -1,5 +1,13 @@
 # Before the next paid learning comparison
 
+**September 20 update:** the stages below are now qualified, not pending work.
+The [live-runtime and learning report](expanded-decisions-v1-qualification.md)
+records exact replay, Linux parity and extracted-package tests. The
+[expanded pilot](expanded-decisions-v1-protocol.md) is frozen and provisioned on
+one bounded H200. Preserve these completed stages; follow the existing pilot
+and its recovery guards instead of starting a duplicate collection or rental.
+The earlier checklist below remains the rationale and requirements for that work.
+
 The mixed-decisions-v1 result is closed. All six arms completed, checkpoints were
 verified and the rental deleted. No method met the joint transfer gate. Its
 publication test is exposed. The intermediate-publication diagnostic and the new

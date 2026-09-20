@@ -1,0 +1,85 @@
+{
+  "all_independent_replays_exact": true,
+  "all_linux_receipts_exact": true,
+  "by_family": {
+    "calendar": {
+      "maximum_actor_tokens": 2255,
+      "outcomes": {
+        "completed": 68,
+        "incorrect": 25,
+        "unfinished": 67
+      },
+      "primary_episodes": 160,
+      "reference_outcomes": {
+        "completed": 40,
+        "unfinished": 40
+      }
+    },
+    "filesystem_scope": {
+      "maximum_actor_tokens": 1048,
+      "outcomes": {
+        "completed": 35,
+        "incorrect": 18,
+        "unfinished": 27
+      },
+      "primary_episodes": 80,
+      "reference_outcomes": {
+        "completed": 24,
+        "unfinished": 16
+      }
+    },
+    "reservation": {
+      "maximum_actor_tokens": 1007,
+      "outcomes": {
+        "completed": 51,
+        "incorrect": 12,
+        "unfinished": 81
+      },
+      "primary_episodes": 144,
+      "reference_outcomes": {
+        "completed": 42,
+        "unfinished": 30
+      }
+    }
+  },
+  "files": {
+    "linux-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux.json": "4ac80d88ee99e069eea4d282d8119fd12c2f914d85fd02543715cac8f329405f",
+    "native/attempts.jsonl": "9e131f0929e45340a1c2b243f3e616e6cf0a8a6bd15a8959da14e5ea28b17897",
+    "native/execution-counts.json": "9c841c6d0c310c71afbf262b5e52fb98b285302af5f4e85a74f37172cc08d114",
+    "native/replay-checks.jsonl": "2271f0c236b03aafd444c8977b080d6e4e4278e9492215fac7afa1a68d0deb2e",
+    "native/traces.jsonl": "8bc9330ae7154c1a984667f4e78283dcb3f8b5297b6036f68bbd50c360ca0f2e",
+    "pre-execution-freeze.json": "73d6ba46dbb88b8144d97891c6df5079815c91609b58bc106ce2c23c74cbe7e2"
+  },
+  "linux": {
+    "file_commands": 124,
+    "offered_actions_including_stop_and_prefix": 265,
+    "physical_episodes": 96,
+    "python": "3.12.14 (main, Aug 31 2026, 23:47:53) [GCC 14.2.0]",
+    "reservation_actions_including_finish": 124,
+    "sql_statements_traced": 5127,
+    "sqlite": "3.46.1"
+  },
+  "maximum_actor_tokens": 2255,
+  "model_evaluated": false,
+  "native": {
+    "file_commands": 998,
+    "offered_actions_including_stop_and_prefix": 2338,
+    "physical_episodes": 768,
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "reservation_actions_including_finish": 1188,
+    "sql_statements_traced": 46356,
+    "sqlite": "3.53.4"
+  },
+  "new_training_questions": 0,
+  "note": "Authored reference and random controllers only, no trained-policy performance. These are live-runtime verification executions, not new independent task families or training data. Reservation executes actual SQLite; file/calendar commands execute in subprocesses. Tool actions include stop; file_commands exclude stop. SQL statement counts include setup, tools, observation reads and verifier queries, as recorded by the SQLite trace callback.",
+  "optimizer_steps": 0,
+  "planned_primary_episodes": 384,
+  "status": "qualified_live_runtime",
+  "training_ready": false,
+  "truncated": 0,
+  "unique_executed_trajectories": 370,
+  "unique_public_actor_inputs": 470,
+  "verification_replays": 384,
+  "version": "expanded-runtime-v1"
+}

@@ -1,0 +1,329 @@
+{
+  "arms": [
+    {
+      "arm": "outcome",
+      "diagnostic": {
+        "components": {
+          "outcome": {
+            "critic_l2": 0.0,
+            "language_l2": 0.2136816382408142,
+            "loss": 1.0243187546730042,
+            "rows": 10
+          },
+          "replay": {
+            "critic_l2": 0.0,
+            "language_l2": 0.04827365651726723,
+            "loss": 0.6945815086364746,
+            "rows": 4
+          }
+        },
+        "cosines": {
+          "outcome:replay": 0.962636202803305
+        },
+        "critic_backbone_connection": "detached",
+        "optimizer_steps": 0,
+        "unchanged_parameters": true
+      },
+      "diagnostic_presentations": {
+        "outcome": 10,
+        "replay": 4
+      },
+      "episodes": 0,
+      "execution": {
+        "application_top_level_calls": 0,
+        "file_commands": 0,
+        "new_offered_actions": 0,
+        "new_physical_episodes": 0,
+        "reservation_actions_including_finish": 0,
+        "shell_commands": 0,
+        "sql_statements_traced": 0
+      },
+      "optimizer_presentations": {
+        "outcome": 10,
+        "replay": 4
+      },
+      "parameter_audit": {
+        "changed_elements": 3344,
+        "changed_tensors": 4,
+        "examples": [
+          "embedding.weight",
+          "transform.weight",
+          "transform.bias",
+          "lm_head.weight"
+        ],
+        "interpretation": "Random tiny network only; no pretrained language checkpoint used.",
+        "l2_delta": 0.030644234446113337,
+        "max_absolute_delta": 0.0010287761688232422,
+        "trainable_elements": 3344
+      },
+      "status": "passed",
+      "step": {
+        "accepted": true,
+        "checkpoint_eligible": true,
+        "diagnostic": {
+          "by_contract": {
+            "behavior": {
+              "inputs": 5,
+              "maximum": 1.0428775567561388e-05,
+              "mean": 9.88852116279304e-06
+            },
+            "native": {
+              "inputs": 5,
+              "maximum": 1.6433652490377426e-05,
+              "mean": 1.559318625368178e-05
+            }
+          },
+          "max_full_kl": 1.6433652490377426e-05,
+          "mean_full_kl": 1.559318625368178e-05
+        },
+        "metrics": {
+          "critic_gradient_norm": 0.0,
+          "language_gradient_norm": 0.06629431992769241,
+          "outcome_loss": 1.0243187546730042,
+          "replay_loss": 0.6945815086364746
+        },
+        "parameters_and_optimizer_restored": false,
+        "phase": "accepted",
+        "physical_steps": 1,
+        "reason": null
+      },
+      "transitions": 0,
+      "unchanged_policy": null
+    },
+    {
+      "arm": "reward",
+      "diagnostic": {
+        "components": {
+          "actor": {
+            "critic_l2": 0.0,
+            "language_l2": 0.324604332447052,
+            "loss": -4.584972665422349e-09,
+            "rows": 13
+          },
+          "replay": {
+            "critic_l2": 0.0,
+            "language_l2": 0.04827365651726723,
+            "loss": 0.6945815086364746,
+            "rows": 4
+          },
+          "value": {
+            "critic_l2": 0.6383032202720642,
+            "language_l2": 0.0,
+            "loss": 0.20292306791704434,
+            "rows": 13
+          }
+        },
+        "cosines": {
+          "actor:replay": 0.29447453130274776,
+          "actor:value": null,
+          "replay:value": null
+        },
+        "critic_backbone_connection": "detached",
+        "optimizer_steps": 0,
+        "unchanged_parameters": true
+      },
+      "diagnostic_presentations": {
+        "actor": 13,
+        "replay": 4,
+        "value": 13
+      },
+      "episodes": 5,
+      "execution": {
+        "application_top_level_calls": 11,
+        "file_commands": 1,
+        "new_offered_actions": 5,
+        "new_physical_episodes": 2,
+        "reservation_actions_including_finish": 4,
+        "shell_commands": 3,
+        "sql_statements_traced": 164
+      },
+      "optimizer_presentations": {
+        "policy": 13,
+        "replay": 4
+      },
+      "parameter_audit": {
+        "changed_elements": 3344,
+        "changed_tensors": 4,
+        "examples": [
+          "embedding.weight",
+          "transform.weight",
+          "transform.bias",
+          "lm_head.weight"
+        ],
+        "interpretation": "Random tiny network only; no pretrained language checkpoint used.",
+        "l2_delta": 0.03224194343180884,
+        "max_absolute_delta": 0.001026153564453125,
+        "trainable_elements": 3344
+      },
+      "status": "passed",
+      "step": {
+        "accepted": true,
+        "checkpoint_eligible": true,
+        "diagnostic": {
+          "by_contract": {
+            "behavior": {
+              "inputs": 13,
+              "maximum": 1.9648578017950058e-05,
+              "mean": 1.803543776846849e-05
+            },
+            "native": {
+              "inputs": 13,
+              "maximum": 3.024796023964882e-05,
+              "mean": 2.7902379560355956e-05
+            }
+          },
+          "max_full_kl": 3.024796023964882e-05,
+          "mean_full_kl": 2.7902379560355956e-05
+        },
+        "metrics": {
+          "critic_gradient_norm": 0.3191516101360321,
+          "language_gradient_norm": 0.3323173224925995,
+          "policy_loss": 0.08013559763248149,
+          "replay_loss": 0.6945815086364746
+        },
+        "parameters_and_optimizer_restored": false,
+        "phase": "accepted",
+        "physical_steps": 1,
+        "reason": null
+      },
+      "transitions": 13,
+      "unchanged_policy": {
+        "gradient_enabled": true,
+        "max_absolute_probability_delta": 2.9802322387695312e-08,
+        "maximum_sampled_ratio": 1.0,
+        "minimum_sampled_ratio": 0.9999998807907104,
+        "sampled_ratios_inside_clip": true,
+        "transitions": 13
+      }
+    },
+    {
+      "arm": "hybrid",
+      "diagnostic": {
+        "components": {
+          "actor": {
+            "critic_l2": 0.0,
+            "language_l2": 0.324604332447052,
+            "loss": -4.584972665422349e-09,
+            "rows": 13
+          },
+          "outcome": {
+            "critic_l2": 0.0,
+            "language_l2": 0.2136816382408142,
+            "loss": 1.0243187546730042,
+            "rows": 10
+          },
+          "replay": {
+            "critic_l2": 0.0,
+            "language_l2": 0.04827365651726723,
+            "loss": 0.6945815086364746,
+            "rows": 4
+          },
+          "value": {
+            "critic_l2": 0.6383032202720642,
+            "language_l2": 0.0,
+            "loss": 0.20292306791704434,
+            "rows": 13
+          }
+        },
+        "cosines": {
+          "actor:outcome": 0.3665697578243896,
+          "actor:replay": 0.29447453130274776,
+          "actor:value": null,
+          "outcome:replay": 0.962636202803305,
+          "outcome:value": null,
+          "replay:value": null
+        },
+        "critic_backbone_connection": "detached",
+        "optimizer_steps": 0,
+        "unchanged_parameters": true
+      },
+      "diagnostic_presentations": {
+        "actor": 13,
+        "outcome": 10,
+        "replay": 4,
+        "value": 13
+      },
+      "episodes": 5,
+      "execution": {
+        "application_top_level_calls": 11,
+        "file_commands": 1,
+        "new_offered_actions": 5,
+        "new_physical_episodes": 2,
+        "reservation_actions_including_finish": 4,
+        "shell_commands": 3,
+        "sql_statements_traced": 164
+      },
+      "optimizer_presentations": {
+        "outcome": 10,
+        "policy": 13,
+        "replay": 4
+      },
+      "parameter_audit": {
+        "changed_elements": 3344,
+        "changed_tensors": 4,
+        "examples": [
+          "embedding.weight",
+          "transform.weight",
+          "transform.bias",
+          "lm_head.weight"
+        ],
+        "interpretation": "Random tiny network only; no pretrained language checkpoint used.",
+        "l2_delta": 0.032243473251671775,
+        "max_absolute_delta": 0.001026153564453125,
+        "trainable_elements": 3344
+      },
+      "status": "passed",
+      "step": {
+        "accepted": true,
+        "checkpoint_eligible": true,
+        "diagnostic": {
+          "by_contract": {
+            "behavior": {
+              "inputs": 13,
+              "maximum": 1.9471044652163982e-05,
+              "mean": 1.8010050273285462e-05
+            },
+            "native": {
+              "inputs": 13,
+              "maximum": 3.0088122002780437e-05,
+              "mean": 2.7909212244244722e-05
+            }
+          },
+          "max_full_kl": 3.0088122002780437e-05,
+          "mean_full_kl": 2.7909212244244722e-05
+        },
+        "metrics": {
+          "critic_gradient_norm": 0.3191516101360321,
+          "language_gradient_norm": 0.3527364730834961,
+          "outcome_loss": 1.0243187546730042,
+          "policy_loss": 0.08013559763248149,
+          "replay_loss": 0.6945815086364746
+        },
+        "parameters_and_optimizer_restored": false,
+        "phase": "accepted",
+        "physical_steps": 1,
+        "reason": null
+      },
+      "transitions": 13,
+      "unchanged_policy": {
+        "gradient_enabled": true,
+        "max_absolute_probability_delta": 2.9802322387695312e-08,
+        "maximum_sampled_ratio": 1.0,
+        "minimum_sampled_ratio": 0.9999998807907104,
+        "sampled_ratios_inside_clip": true,
+        "transitions": 13
+      }
+    }
+  ],
+  "calendar_model_evaluated": false,
+  "diagnostic_presentations": 84,
+  "identical_language_start": "c464514ddfc1ac14c5d5852e91b10f335a0109731084db6fd8df45e3f8ecb713",
+  "limits": "Mechanical integration only. Does not establish learning gains, transfer, or a qualified cloud package.",
+  "live_episodes": 10,
+  "optimizer_presentations": 58,
+  "pretrained_model_calls": 0,
+  "pretrained_optimizer_steps": 0,
+  "status": "qualified_learning_mechanics",
+  "test_network_only": true,
+  "tiny_optimizer_steps": 3
+}
