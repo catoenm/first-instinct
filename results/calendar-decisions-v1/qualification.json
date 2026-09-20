@@ -1,0 +1,60 @@
+{
+  "actual_database_initializations": 4320,
+  "actual_tool_commands": 7956,
+  "ambiguous_forecast_public_inputs": 149,
+  "ambiguous_forecast_questions": 596,
+  "concrete_initial_database_worlds": 12,
+  "context_cases": 80,
+  "distinct_executed_branches": 2160,
+  "distinct_forecast_public_inputs": 576,
+  "executed_outcomes_by_structure": {
+    "adjacency": {
+      "completed": 237,
+      "incorrect": 45,
+      "unfinished": 258
+    },
+    "fold_choice": {
+      "completed": 262,
+      "incorrect": 180,
+      "unfinished": 638
+    },
+    "reschedule": {
+      "completed": 291,
+      "incorrect": 30,
+      "unfinished": 219
+    }
+  },
+  "files": {
+    "attempts.jsonl": "3aa89e26ac97c259df3435b8807f2d1d0d536d1e98f835b35ad1dc3bfc4b3d97",
+    "cases.jsonl": "ce06bfa53a95744bf2eaff48b511e474fa467e5e7089362b0cb0ad50198eb250",
+    "contexts-private.jsonl": "c4cfb422ec2ff685dae9c1797907dc02fbda2b2106959b86b571247154d1e533",
+    "executions.jsonl": "42ddfa3b00745db89010dc871c6ac1de7a0461d6b12571f9eb6ef8e76f6470cc",
+    "questions.jsonl": "275a8ba3c6d50918f8db54130ae7c1ad028b72eef4aa7b8e94975e2fe49380ca",
+    "replay-checks.jsonl": "a29f945ca6f099c513a16d7fa39041ba08e01c9ace4281599261450c458cf40e"
+  },
+  "forecast_outcomes": {
+    "completed": 430,
+    "incorrect": 170,
+    "unfinished": 840
+  },
+  "initialization_sql_statements_excluding_pragmas_and_trigger_internals": 39960,
+  "limits": "One authored calendar mechanism, three related task structures. Environment/label qualification only; no model performance or broad-transfer claim. All calendar variants remain reserved.",
+  "mechanism_families": 1,
+  "model_evaluated": false,
+  "optimizer_steps": 0,
+  "ownership": "reserved_transfer",
+  "physical_branch_executions": 4320,
+  "prepared_questions": {
+    "decision": 32,
+    "forecast": 1440,
+    "observation_value": 32
+  },
+  "public_contexts": 32,
+  "status": "qualified_native",
+  "task_structure_roots": 3,
+  "timezone_sha256": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95",
+  "training_questions_consumed": 0,
+  "training_ready": false,
+  "verification_replays": 2160,
+  "world_goal_tasks": 16
+}

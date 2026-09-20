@@ -1,0 +1,28 @@
+{
+  "actual_tool_commands": 7956,
+  "auditor_sha256": "927a6404f58d303b3c4818d6bec4c009b3037a0dbabcd3d7dcc52ec2c04e6364",
+  "distinct_branches": 2160,
+  "initialization_sql_statements": 39960,
+  "limits": "Reconstructs recorded outcomes and SQL semantics using independent relational predicates and UTC anchors. The frozen collector attests actual executions; this audit performs no new task execution or learning.",
+  "model_inference": false,
+  "optimizer_steps": 0,
+  "ownership": "reserved_transfer",
+  "physical_branch_executions": 4320,
+  "qualification_sha256": "0d79124bccdb5adc7fc87d4f780e5e40a0f0d3cfe14dd3f332a6d001a5998e99",
+  "questions_reconstructed": 1504,
+  "status": "passed",
+  "tokens": {
+    "actor_history_maximum": 1841,
+    "limit": 4096,
+    "maximum": 1841,
+    "model": {
+      "id": "Qwen/Qwen3.5-9B",
+      "kind": "qwen3_5",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "question_maximum": 1397,
+    "truncated": 0,
+    "unique_inputs": 1171
+  },
+  "training_questions_consumed": 0
+}

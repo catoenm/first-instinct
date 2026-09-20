@@ -1,0 +1,31 @@
+{
+  "by_source": {
+    "application": {
+      "selected_source_questions": 1512,
+      "unique_referenced_primary_branches": 1512
+    },
+    "calendar": {
+      "selected_source_questions": 1440,
+      "unique_referenced_primary_branches": 1440
+    },
+    "filesystem": {
+      "selected_source_questions": 560,
+      "unique_referenced_primary_branches": 560
+    },
+    "publication_history": {
+      "selected_source_questions": 672,
+      "unique_referenced_primary_branches": 672
+    },
+    "reservation": {
+      "selected_source_questions": 1152,
+      "unique_referenced_primary_branches": 486
+    },
+    "shell": {
+      "selected_source_questions": 2016,
+      "unique_referenced_primary_branches": 2016
+    }
+  },
+  "new_optimizer_presentations": 0,
+  "new_physical_executions": 0,
+  "scope": "Branches referenced by the selected forecast questions, not all branches in each original collection. Reservation has several consequence questions per same executed command. This indexing pass executes no new branches; verification replays are not duplicated labels."
+}

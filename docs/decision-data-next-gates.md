@@ -5,13 +5,37 @@ verified and the rental deleted. No method met the joint transfer gate. Its
 publication test is exposed. The intermediate-publication diagnostic and the new
 filesystem-scope family address data coverage, not learned performance.
 
-The next bounded local stage is the calendar mechanism previously proposed in
+The calendar mechanism was previously proposed in
 [outcome-v3-data-design](outcome-v3-data-design.md). Reserve the **entire mechanism
 for transfer** before model evaluation; no calendar question, trajectory or
 wording variant belongs in replay, training, checkpoint selection or development
 prompts for the tested model. Authored environment qualification and verifier
 negative controls may inspect its ground truth; model results must remain sealed
 until a new learning recipe and selection rule are frozen.
+
+**Completed local qualification:** the [calendar results](calendar-decisions-v1-results.md)
+now record 2,160 distinct alternatives, one independent replay each, 1,504
+questions, 149 uncertain forecast inputs and exact 144-branch Linux parity.
+No model has been evaluated. The [source registry](decision-source-registry-v1-results.md)
+also qualifies five prospective training mechanisms and reconstructs their
+probability targets. Its original reservation presentation has 972 distinct
+rendered inputs, not 1,152; the larger number counts canonical event identities.
+These stages are complete and must not be started again as duplicate collections.
+
+The next bounded local stage is **live runtime and learning qualification**.
+Add filesystem/reservation live adapters and a calendar evaluation adapter around
+the existing executors. For reservations, reuse the actual `SqlEpisode` engine
+and independently verify preservation, partial-write recovery and reward units;
+do not silently claim C-simulator steps are newly executed SQL. Keep dynamic
+proposers separate from authored-menu selection. Qualify arbitrary in-catalog
+histories, live replanning prompts, terminal rewards paid once, sunk prefix costs,
+exact rollout replay, token bounds and pinned Linux behavior before a paid run.
+
+Reuse `puffer_lab.consequence_train.soft_loss` for categorical distributions,
+keeping it separate from acceptable-action-set supervision. Report expected
+observed-outcome Brier and excess distribution error under different names.
+Preserve source multiplicity and repeated presentation accounting. The source
+index is prepared data only; no new questions have been consumed by training.
 
 Use actual SQLite transactions and a pinned timezone database. Include a few
 different task structures: half-open interval overlap versus adjacency, choosing

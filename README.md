@@ -76,8 +76,14 @@ adds actual hard-link side effects, goal-dependent operations and cost-sensitive
 inspection. Both collections passed execution/replay audits; the filesystem
 slice also matched pinned Linux execution. Together they contain 1,848 distinct
 alternatives and 1,324 prepared questions, with **zero training consumption**.
-The [next gates](docs/decision-data-next-gates.md) require a new reserved mechanism
-and broader training roots before another paid comparison.
+The [calendar transfer family](docs/calendar-decisions-v1-results.md) now adds
+2,160 executed alternatives and 1,504 questions about interval conflicts,
+ambiguous local times and atomic rescheduling. Native replay and Linux parity
+passed; its model results remain unmeasured. A [source index](docs/decision-source-registry-v1-results.md)
+prepares 2,280 distinct forecast inputs across five training mechanisms while
+preserving uncertain outcomes and whole-mechanism ownership. These are prepared
+data, not consumed training examples. The [remaining gates](docs/decision-data-next-gates.md)
+qualify live adapters and the next controlled learning recipe before renting.
 
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,

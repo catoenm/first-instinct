@@ -1,0 +1,13 @@
+{
+  "zone": "America/New_York",
+  "tzdata_version": "2026c",
+  "source": "macOS /usr/share/zoneinfo/America/New_York",
+  "source_tzdata_header": [
+    "# version 2026c-rearguard",
+    "# redo posix_only",
+    "# This zic input file is in the public domain."
+  ],
+  "bytes": 3552,
+  "sha256": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95",
+  "loader": "zoneinfo.ZoneInfo.from_file; no system timezone lookup during execution"
+}

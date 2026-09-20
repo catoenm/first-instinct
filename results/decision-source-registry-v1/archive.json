@@ -1,0 +1,16 @@
+{
+  "archive_bytes": 3357660,
+  "archive_sha256": "45f1f7e0ef03e4f27be61f7ad36db7ec4cb1f0664c8435bb60e85590cf3ea80e",
+  "files": {
+    "development-forecasts.jsonl": "72c53fee09ec6b78152140d55e4965bf36263ec2a56b9502ece1589a6d1fdc98",
+    "exposed_diagnostic-forecasts.jsonl": "fcacd1d97885a6f100b8687f6272f096c2d4888b5082a80ef1929f6b20cdd1dc",
+    "preparation-freeze.json": "ffeabdaa1d9680722b63754b91b7025614ae668e42676c82b8bdd3e075af830a",
+    "report.json": "d72d343aebf48af01e9ec279bcbe017d43aae5cf72ec384232fe6b05445ba9f9",
+    "reserved_transfer-forecasts.jsonl": "30da7da515332037472aa28702c016551e6a8291e23e20f56d482725028c61af",
+    "source-audits.json": "658844e98d5ca0acdeac83864025fd4cdb836210224dedcffccb8175a3a022be",
+    "train_candidate-forecasts.jsonl": "38d17c9dd1466d1f1f599291d75719e2961ef4d0bb23018c4e2d3e9069bb19b0"
+  },
+  "model_inference": false,
+  "new_training_consumption": 0,
+  "training_ready": false
+}

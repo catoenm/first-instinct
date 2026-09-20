@@ -1,0 +1,23 @@
+{
+  "cases_sha256": "ce06bfa53a95744bf2eaff48b511e474fa467e5e7089362b0cb0ad50198eb250",
+  "maximum_commands": 25000,
+  "maximum_distinct_branches": 2160,
+  "maximum_physical_executions": 4320,
+  "model_inference": false,
+  "ownership": "reserved_transfer",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "sources": {
+    "docs/calendar-decisions-v1-protocol.md": "83de4db8fd5ce8bb9236698224f8923f5f4a7b90419d525807a61e713ce52aeb",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "test_calendar_decisions.py": "182ed1511bb54e5454854b9d007d6fc0db13c072fc026efcc46421de54534d17",
+    "tool_lab/calendar_assets/America_New_York.tzif": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95",
+    "tool_lab/calendar_assets/provenance.json": "424213f6fc8ae491cb2f3e80b203c2d61391e956f77dfd3b3f00a649340d76db",
+    "tool_lab/calendar_decisions.py": "7ad4fc0bd0f58e400c82cdb73c36d3b7a82d6093087c766ada7cd2e517f768e4",
+    "tool_lab/calendar_worker.py": "4bf2ecb2bfff9af0afc559133b97b54241524bf549ba005f75f514a61ed58a2b"
+  },
+  "sqlite": "3.53.4",
+  "timezone_sha256": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95",
+  "training": false,
+  "version": "calendar-decisions-v1"
+}

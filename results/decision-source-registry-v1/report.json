@@ -1,0 +1,161 @@
+{
+  "by_family": {
+    "application_delivery": {
+      "ambiguous_inputs": 108,
+      "maximum_tokens": 769,
+      "role": "train_candidate",
+      "source_forecast_rows": 1512,
+      "unique_rendered_and_token_inputs": 468
+    },
+    "calendar": {
+      "ambiguous_inputs": 149,
+      "maximum_tokens": 1101,
+      "role": "reserved_transfer",
+      "source_forecast_rows": 1440,
+      "unique_rendered_and_token_inputs": 576
+    },
+    "config": {
+      "ambiguous_inputs": 40,
+      "maximum_tokens": 730,
+      "role": "train_candidate",
+      "source_forecast_rows": 504,
+      "unique_rendered_and_token_inputs": 308
+    },
+    "filesystem_scope": {
+      "ambiguous_inputs": 24,
+      "maximum_tokens": 579,
+      "role": "train_candidate",
+      "source_forecast_rows": 560,
+      "unique_rendered_and_token_inputs": 224
+    },
+    "publish": {
+      "ambiguous_inputs": 32,
+      "maximum_tokens": 800,
+      "role": "exposed_diagnostic",
+      "source_forecast_rows": 1176,
+      "unique_rendered_and_token_inputs": 728
+    },
+    "report": {
+      "ambiguous_inputs": 40,
+      "maximum_tokens": 746,
+      "role": "development",
+      "source_forecast_rows": 504,
+      "unique_rendered_and_token_inputs": 308
+    },
+    "reservation": {
+      "ambiguous_inputs": 168,
+      "maximum_tokens": 594,
+      "role": "train_candidate",
+      "source_forecast_rows": 1152,
+      "unique_rendered_and_token_inputs": 972
+    },
+    "sqlite": {
+      "ambiguous_inputs": 40,
+      "maximum_tokens": 811,
+      "role": "train_candidate",
+      "source_forecast_rows": 504,
+      "unique_rendered_and_token_inputs": 308
+    }
+  },
+  "files": {
+    "development-forecasts.jsonl": "72c53fee09ec6b78152140d55e4965bf36263ec2a56b9502ece1589a6d1fdc98",
+    "exposed_diagnostic-forecasts.jsonl": "fcacd1d97885a6f100b8687f6272f096c2d4888b5082a80ef1929f6b20cdd1dc",
+    "preparation-freeze.json": "ffeabdaa1d9680722b63754b91b7025614ae668e42676c82b8bdd3e075af830a",
+    "reserved_transfer-forecasts.jsonl": "30da7da515332037472aa28702c016551e6a8291e23e20f56d482725028c61af",
+    "source-audits.json": "658844e98d5ca0acdeac83864025fd4cdb836210224dedcffccb8175a3a022be",
+    "train_candidate-forecasts.jsonl": "38d17c9dd1466d1f1f599291d75719e2961ef4d0bb23018c4e2d3e9069bb19b0"
+  },
+  "inherited_general_pools": {
+    "replay.jsonl": {
+      "exact_token_overlap": 0,
+      "new_consumption": 0,
+      "path": "output/evidence-decisions-v2-data/replay.jsonl",
+      "questions": 4096,
+      "sha256": "224c19979ae4be2309e65eea640e732e1b743780eb32ff6fe1900aa5ea2f7844"
+    },
+    "retention.jsonl": {
+      "exact_token_overlap": 0,
+      "new_consumption": 0,
+      "path": "output/evidence-decisions-v2-data/retention.jsonl",
+      "questions": 622,
+      "sha256": "8ad2ffafd4c1ffb75d9872b0a5c3012ec5351b04fd40790c33f7ae5ceaff9ac4"
+    },
+    "transfer.jsonl": {
+      "exact_token_overlap": 0,
+      "new_consumption": 0,
+      "path": "output/evidence-decisions-v2-data/transfer.jsonl",
+      "questions": 1128,
+      "sha256": "c62306ed43283a55fe86dfa5e5d2c9a6741f7f5392745fbd29f5320dfd75838f"
+    }
+  },
+  "maximum_tokens": 1101,
+  "model_inference": false,
+  "new_optimizer_steps": 0,
+  "new_task_executions": 0,
+  "new_training_questions_consumed": 0,
+  "note": "Prepared source index, not a live learning run. Sampling multiplicities and weights are not yet a learning recipe. Calendar remains reserved; all exposed publication questions are diagnostic only. Only public input fields enter messages; soft_target is verifier supervision, never prompt content.",
+  "source_member_count": 7352,
+  "source_summaries": {
+    "application": {
+      "all_rendered_forecast_inputs": 468,
+      "available_source_questions": 1564,
+      "selected_canonical_ids": 1512,
+      "selected_forecast_rows": 1512,
+      "selected_rendered_forecast_inputs": 468,
+      "source_question_sha256": "4683144e7e242309b5ae652cfab84c0630a20118aeb3dd6fe4bf1353f8269847"
+    },
+    "calendar": {
+      "all_rendered_forecast_inputs": 576,
+      "available_source_questions": 1504,
+      "selected_canonical_ids": 1440,
+      "selected_forecast_rows": 1440,
+      "selected_rendered_forecast_inputs": 576,
+      "source_question_sha256": "275a8ba3c6d50918f8db54130ae7c1ad028b72eef4aa7b8e94975e2fe49380ca"
+    },
+    "filesystem": {
+      "all_rendered_forecast_inputs": 224,
+      "available_source_questions": 592,
+      "selected_canonical_ids": 560,
+      "selected_forecast_rows": 560,
+      "selected_rendered_forecast_inputs": 224,
+      "source_question_sha256": "cb553b62baf529768f0e97e3144ce2987d99ee49f446662f98369f42df011829"
+    },
+    "publication_history": {
+      "all_rendered_forecast_inputs": 420,
+      "available_source_questions": 732,
+      "selected_canonical_ids": 672,
+      "selected_forecast_rows": 672,
+      "selected_rendered_forecast_inputs": 420,
+      "source_question_sha256": "12ac51717ef146ea26f20f0b25811f50f81beeec8ed9052f91a0d785a07ee127"
+    },
+    "reservation": {
+      "all_rendered_forecast_inputs": 2916,
+      "available_source_questions": 3456,
+      "caveat": "Existing exposed development corpus. Canonical events and presentation variants are not independent tasks.",
+      "concrete_initial_worlds": 6,
+      "mechanisms": 1,
+      "new_sqlite_executions": 0,
+      "qualification_branches_sha256": "8da662f62190222f08b69d866ac713c4789e5cd64f53eed5605e6ac090da289d",
+      "selected_canonical_ids": 1152,
+      "selected_forecast_rows": 1152,
+      "selected_rendered_forecast_inputs": 972,
+      "source_question_sha256": "49922981370c9908d6fa94ada85614eda5af93ab1fa58dfc8a76a7872dd3186e",
+      "untouched_test_rows": 0
+    },
+    "shell": {
+      "all_rendered_forecast_inputs": 1232,
+      "available_source_questions": 2192,
+      "selected_canonical_ids": 2016,
+      "selected_forecast_rows": 2016,
+      "selected_rendered_forecast_inputs": 1232,
+      "source_question_sha256": "07a7b2f52dc4a1ba7b3a7f22502c1493d46191acc539b2b73eb3fd9ef57588f0"
+    }
+  },
+  "status": "qualified_source_index",
+  "total_distinct_forecast_inputs": 3892,
+  "total_selected_source_forecasts": 7352,
+  "training_candidate_mechanisms": 5,
+  "training_ready": false,
+  "truncated": 0,
+  "version": "decision-source-registry-v1"
+}

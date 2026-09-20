@@ -1,0 +1,269 @@
+{
+  "application": {
+    "aggregate_float_tolerance": 1e-12,
+    "auditor_sha256": "21318498310eb94f198751336c3098afde31e20f2c3347fdf0b371a64a358cb5",
+    "base_world_goal_tasks": 18,
+    "branch_calls": 6940,
+    "concrete_initial_database_snapshots": 9,
+    "distinct_executed_alternatives": 2268,
+    "exact_question_and_label_match": true,
+    "fresh_context_shortcut_ceilings": {
+      "fresh_contexts": 18,
+      "goal_without_observations": 0.3333333333333333,
+      "menu_only": 0.3333333333333333,
+      "observations_without_goal": 0.6111111111111112
+    },
+    "optimizer_presentations": 0,
+    "prefix_calls": 4536,
+    "production_and_replay_branches": 4536,
+    "public_contexts": 26,
+    "questions": {
+      "decision": 26,
+      "forecast": 1512,
+      "observation_value": 26
+    },
+    "replay_executions": 2268,
+    "root_fixtures": 1,
+    "scope": "Labels, frame conditions, visible inputs, full counterfactual menus and counts independently rechecked. Two deterministic executions per label; nine concrete initial databases. No learned performance claim.",
+    "semantic_world_configurations": 9,
+    "setup_calls": 22788,
+    "status": "passed",
+    "token_audit": null,
+    "total_top_level_tool_calls": 34264,
+    "trained_questions": 0,
+    "world_goal_context_cases": 84
+  },
+  "calendar": {
+    "actual_tool_commands": 7956,
+    "auditor_sha256": "927a6404f58d303b3c4818d6bec4c009b3037a0dbabcd3d7dcc52ec2c04e6364",
+    "distinct_branches": 2160,
+    "initialization_sql_statements": 39960,
+    "limits": "Reconstructs recorded outcomes and SQL semantics using independent relational predicates and UTC anchors. The frozen collector attests actual executions; this audit performs no new task execution or learning.",
+    "linux_parity": {
+      "report": {
+        "actual_tool_commands": 270,
+        "all_receipts_exact": true,
+        "branches": 144,
+        "contract": "Logical schema/table state, integrity, protected request/timezone bytes and public observations. Raw SQLite page bytes intentionally outside the contract.",
+        "image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+        "model_evaluated": false,
+        "ownership": "reserved_transfer",
+        "python": "3.12.14 (main, Aug 31 2026, 23:47:53) [GCC 14.2.0]",
+        "sqlite": "3.46.1",
+        "status": "passed"
+      },
+      "sha256": "dd768d249229fec7f48debb417cb1e1b1847f7d559ab24917d849b4020c465d7"
+    },
+    "model_inference": false,
+    "optimizer_steps": 0,
+    "ownership": "reserved_transfer",
+    "physical_branch_executions": 4320,
+    "qualification_sha256": "0d79124bccdb5adc7fc87d4f780e5e40a0f0d3cfe14dd3f332a6d001a5998e99",
+    "questions_reconstructed": 1504,
+    "status": "passed",
+    "training_questions_consumed": 0
+  },
+  "filesystem": {
+    "actual_tool_commands": 2048,
+    "auditor_sha256": "3dba4b0a834a4245149757fd8f8b8f9904485002ca62f0a3ba78646fad461e5a",
+    "collection_sha256": "3da299997a8aa3f50cc33efbeb62edc3478f5f8942c73e860fa33ea618d6fab3",
+    "distinct_branches": 840,
+    "limits": "Receipt and token audit, no model inference or learning. Physical replay is attested by the frozen collector and matched receipt hashes; this auditor performs no new world execution.",
+    "linux_parity": {
+      "report": {
+        "actual_tool_commands": 112,
+        "all_public_observations_and_byte_link_receipts_exact": true,
+        "branches": 72,
+        "ignored_inode_numbers": true,
+        "image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+        "native_qualification_sha256": "3da299997a8aa3f50cc33efbeb62edc3478f5f8942c73e860fa33ea618d6fab3",
+        "note": "Snapshot link relationships use actual device/inode equality, never raw numbers. All other receipt fields match without normalization. This does not launch training.",
+        "python": "3.12.14 (main, Aug 31 2026, 23:47:53) [GCC 14.2.0]",
+        "status": "passed"
+      },
+      "sha256": "0548d292b12643d4017ec5961a1c6726ed6c43ef6a74fd0fcb112d030876c5c1"
+    },
+    "optimizer_steps": 0,
+    "prepared_counts": {
+      "decision": 16,
+      "forecast": 560,
+      "observation_value": 16
+    },
+    "questions_reconstructed": 592,
+    "status": "passed",
+    "training_questions_consumed": 0,
+    "verification_replays": 840,
+    "version": "filesystem-decisions-v1"
+  },
+  "publication_history": {
+    "actual_tool_commands": 9652,
+    "auditor_sha256": "3dba4b0a834a4245149757fd8f8b8f9904485002ca62f0a3ba78646fad461e5a",
+    "collection_sha256": "c654bb22d4c326f6d8902e1d68bfacf5dd876624db7c2665f2af62a61c080aaf",
+    "distinct_branches": 1008,
+    "limits": "Receipt and token audit, no model inference or learning. Physical replay is attested by the frozen collector and matched receipt hashes; this auditor performs no new world execution.",
+    "optimizer_steps": 0,
+    "prepared_counts": {
+      "decision": 30,
+      "forecast": 672,
+      "observation_value": 30
+    },
+    "questions_reconstructed": 732,
+    "status": "passed",
+    "training_questions_consumed": 0,
+    "verification_replays": 1008,
+    "version": "trajectory-decisions-v1"
+  },
+  "reservation": {
+    "by_event": {
+      "account": {
+        "canonical_questions": 288,
+        "uncertain_questions": 80
+      },
+      "request": {
+        "canonical_questions": 288,
+        "uncertain_questions": 18
+      },
+      "stock_a": {
+        "canonical_questions": 288,
+        "uncertain_questions": 48
+      },
+      "stock_b": {
+        "canonical_questions": 288,
+        "uncertain_questions": 48
+      }
+    },
+    "canonical_event_questions": 1152,
+    "context_action_groups": 288,
+    "data_sha256": "49922981370c9908d6fa94ada85614eda5af93ab1fa58dfc8a76a7872dd3186e",
+    "independent_mechanisms": 1,
+    "model_calls": 0,
+    "new_SQLite_attempts": 0,
+    "probability_fractions": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "public_histories": 32,
+    "rows": 3456,
+    "status": "verified",
+    "uncertain_canonical_events": 194,
+    "untouched_test_rows": 0
+  },
+  "shell": {
+    "audit_dependencies_sha256": {
+      "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+      "tool_lab/contextual_shell_audit.py": "1d7aa7369d54e06d5f2b6af1a89fdec3f1330e35fba42d85cd34a80ba49d1f45",
+      "tool_lab/decision_collect.py": "d3caf1e53a0af0ec26c366701409658996c097406114a240225f8f29f0796773",
+      "tool_lab/decision_curriculum.py": "b212c1f630367ad680142f1a651872150ee0e3212777266e7647ffc416156725"
+    },
+    "auditor_source_sha256": "bdf85fae2ed566a9580de982911ba048be621214ea55cd13243f34aedf5bfaee",
+    "collection_qualification_sha256": "4a183525f5e433fc632c1ac685302cd211d8a8a5eade1b753911a230c4dbabfc",
+    "family_ownership": {
+      "config": [
+        "train"
+      ],
+      "publish": [
+        "transfer"
+      ],
+      "report": [
+        "validation"
+      ],
+      "sqlite": [
+        "train"
+      ]
+    },
+    "fresh_context_shortcut_ceilings": {
+      "goal_without_observations": {
+        "contexts": 16,
+        "maximum_accuracy": 0.5
+      },
+      "menu_only": {
+        "contexts": 16,
+        "maximum_accuracy": 0.5
+      },
+      "observations_without_goal": {
+        "contexts": 16,
+        "maximum_accuracy": 0.5
+      }
+    },
+    "limits": "Four authored mechanisms and one fixture root per family in the initial qualification. Historical contradictions have explicitly obsolete provenance; noisy current-source reliability is not yet covered.",
+    "model_inference": false,
+    "optimizer_steps": 0,
+    "prepared_by_split": {
+      "train": {
+        "decision": 44,
+        "forecast": 1008,
+        "observation_value": 44
+      },
+      "transfer": {
+        "decision": 22,
+        "forecast": 504,
+        "observation_value": 22
+      },
+      "validation": {
+        "decision": 22,
+        "forecast": 504,
+        "observation_value": 22
+      }
+    },
+    "questions_reconstructed": 2192,
+    "reference_controls": {
+      "config": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.8277777777777778
+      },
+      "publish": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.7961111111111111
+      },
+      "report": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.8277777777777778
+      },
+      "sqlite": {
+        "completed": 32,
+        "episodes": 36,
+        "mean_reward": 0.8277777777777778
+      }
+    },
+    "status": "passed",
+    "token_audit": null,
+    "trained_questions": 0
+  }
+}
