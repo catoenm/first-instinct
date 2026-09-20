@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "selected_update": 20,
+  "stop_reason": "validation_plateau",
+  "updates": 40,
+  "scope": "Development selection and stopping only; no final-test input.",
+  "source_sha256": "60619e3a47d43708c2665d7e5784b77107784894ff8a3779536945a2554a5ab1"
+}

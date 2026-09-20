@@ -41,3 +41,32 @@ learning arms and never opens a final-test result. It reconstructs probability
 losses from saved probabilities and rejects unrecoverable target-probability
 underflow rather than silently clipping it. Selected checkpoint bytes still
 require the full recovery audit after the pilot finishes.
+
+## Reward-only arm, seed 1507
+
+The same two auditors also passed the completed reward-only arm. It performed
+40 accepted updates with no rejection, retained update 20, and correctly recorded
+`validation_plateau` after two subsequent non-improving development checks.
+All 1,200 live training episodes were independently reconstructed: 3,028 actual
+actor decisions across all five mechanisms, 268 context cases and 40 underlying
+world-and-goal tasks. This includes the new filesystem and actual SQLite
+reservation adapters, their visible token inputs, executed commands, reward
+assignments and sampled action likelihoods.
+
+The optimizer consumed 3,028 policy presentations from 1,670 distinct question
+identities (1,358 repeats), plus the same 640 replay presentations from 589 unique
+questions. Reward-only consumed zero forecast-supervision examples. Its 190
+additional diagnostic backward presentations comprise 87 actor, 87 value and
+16 replay measurements. They are excluded from optimizer consumption.
+
+At selected update 20, development return was 0.315556 and expected Brier was
+0.642762, versus the original 0.262222 and 0.641098. Retention macro accuracy
+was 0.871550 versus 0.870488. This is a small development decision improvement
+without an improvement in forecast error. Final transfer evidence remains sealed
+while other arms are selecting checkpoints; this is not the final comparison.
+
+The reward-only snapshot contains 25 allowed development/training files and is
+4,128,581 compressed bytes, SHA256
+`d0892614a856046a571023876c55208ccd18ca616530d2da8d925f28ffecea73`.
+`reward-1507-hashes.json` and `reward-1507-snapshot-manifest.json` cover its receipts
+and audit reports. The earlier forecast-only snapshot remains unchanged.
