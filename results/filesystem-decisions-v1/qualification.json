@@ -1,0 +1,43 @@
+{
+  "actual_tool_commands": 2048,
+  "actual_world_resets": 1680,
+  "ambiguous_forecast_public_inputs": 24,
+  "ambiguous_forecast_questions": 96,
+  "concrete_initial_file_worlds": 4,
+  "context_cases": 40,
+  "distinct_executed_branches": 840,
+  "files": {
+    "cases.jsonl": "77c0130d78bfce5977402f3fc4834ba7dab91e99152d4feea62f86c39540a2ba",
+    "contexts-private.jsonl": "46085db33f3b6bf28ad942b926b656bbc259c584ba769455d80463629eda5eca",
+    "executions.jsonl": "07795e95ab03c04b07112d4fe2e9c3a10dd783c720dbf052a7f36ef905ef8ccd",
+    "questions.jsonl": "cb553b62baf529768f0e97e3144ce2987d99ee49f446662f98369f42df011829",
+    "replay-checks.jsonl": "fc96d964b8effd1b7ff0f30f6d933fa4449e8ee1ada586d7045ccf81098d5795"
+  },
+  "forecast_outcomes": {
+    "completed": 186,
+    "incorrect": 190,
+    "unfinished": 184
+  },
+  "fresh_menu_or_constant_contents_only": {
+    "contexts": 8,
+    "maximum_accuracy": 0.75
+  },
+  "initialization_file_operations": 15960,
+  "limitation": "Authored fixed catalog and two task structures; not independent real-world tasks. Native execution qualified, Linux parity and new learning/transfer protocol still required.",
+  "mechanisms": 1,
+  "optimizer_presentations": 0,
+  "ownership": "train_candidate; all related worlds, goals, costs and variants stay in this mechanism",
+  "physical_executions": 1680,
+  "prepared_questions": {
+    "decision": 16,
+    "forecast": 560,
+    "observation_value": 16
+  },
+  "public_contexts": 16,
+  "root_task_structures": 2,
+  "status": "qualified_native",
+  "training_questions_consumed": 0,
+  "training_ready": false,
+  "verification_replays": 840,
+  "world_goal_tasks": 8
+}

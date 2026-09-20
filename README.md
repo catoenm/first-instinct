@@ -69,6 +69,16 @@ groups in the single transfer mechanism, motivating broader data and forecasts
 from intermediate execution states. All checkpoints were recovered and the GPU
 deleted; the demo remains on its supervised checkpoint.
 
+**New local data:** [forecasts inside execution histories](docs/trajectory-decisions-v1-results.md)
+now cover uncertain and incorrect publication outcomes that the earlier forecast
+set missed. A [filesystem mutation-scope family](docs/filesystem-decisions-v1-results.md)
+adds actual hard-link side effects, goal-dependent operations and cost-sensitive
+inspection. Both collections passed execution/replay audits; the filesystem
+slice also matched pinned Linux execution. Together they contain 1,848 distinct
+alternatives and 1,324 prepared questions, with **zero training consumption**.
+The [next gates](docs/decision-data-next-gates.md) require a new reserved mechanism
+and broader training roots before another paid comparison.
+
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,
 replacement parts and irreversible damage. They supply **59,993 training

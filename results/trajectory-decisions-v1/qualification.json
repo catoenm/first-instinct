@@ -1,0 +1,37 @@
+{
+  "actual_commands_including_history_and_menu_replays": 9652,
+  "ambiguous_forecast_public_inputs": 32,
+  "ambiguous_forecast_questions": 64,
+  "branch_executions_with_verification_replays": 2016,
+  "cost_evidence_cases": 16,
+  "distinct_executed_branches": 1008,
+  "distinct_forecast_public_inputs": 420,
+  "files": {
+    "cases.jsonl": "f2f000cee0dd171e74dfdd247388191709fca713085aba0763b0339cd0d7fad6",
+    "contexts-private.jsonl": "7bddaa62cd520368fe75c9188f8a7aeb74d7a1721daa47cfef5c514bd3b93c06",
+    "executions.jsonl": "17220114b4c35ca2ef8c21430fb39d6ae9c0647128fdc5244a2c2c1f2df67b88",
+    "questions.jsonl": "12ac51717ef146ea26f20f0b25811f50f81beeec8ed9052f91a0d785a07ee127",
+    "replay-checks.jsonl": "988ab90536d7ff8dfc2d8761989a12b24630b0168ce4e54fabe3178338c5da7d"
+  },
+  "forecast_outcomes": {
+    "completed": 184,
+    "incorrect": 16,
+    "unfinished": 472
+  },
+  "intermediate_context_variants": 48,
+  "limits": "Publication was exposed in mixed-decisions-v1. This demonstrates data coverage and receipt correctness, not learned transfer or a new mechanism.",
+  "mechanisms": 1,
+  "optimizer_steps": 0,
+  "ownership": "exposed_diagnostic",
+  "prepared_questions": {
+    "decision": 30,
+    "forecast": 672,
+    "observation_value": 30
+  },
+  "public_contexts": 30,
+  "root_fixtures": 1,
+  "status": "qualified",
+  "trained_questions": 0,
+  "underlying_file_worlds": 2,
+  "world_goal_tasks": 4
+}

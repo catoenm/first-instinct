@@ -1,0 +1,16 @@
+{
+  "archive_bytes": 326791,
+  "archive_sha256": "811f8785c0ad9f69b9e7523fcf12b09858a3967a305850cc62cd276af442027d",
+  "files": {
+    "cases.jsonl": "77c0130d78bfce5977402f3fc4834ba7dab91e99152d4feea62f86c39540a2ba",
+    "executions.jsonl": "07795e95ab03c04b07112d4fe2e9c3a10dd783c720dbf052a7f36ef905ef8ccd",
+    "questions.jsonl": "cb553b62baf529768f0e97e3144ce2987d99ee49f446662f98369f42df011829",
+    "contexts-private.jsonl": "46085db33f3b6bf28ad942b926b656bbc259c584ba769455d80463629eda5eca",
+    "replay-checks.jsonl": "fc96d964b8effd1b7ff0f30f6d933fa4449e8ee1ada586d7045ccf81098d5795",
+    "pre-execution-freeze.json": "ab0fdd94906b50edf93ea458e77c98b9f2694b02e153632048b17b83af17c8d2",
+    "qualification.json": "3da299997a8aa3f50cc33efbeb62edc3478f5f8942c73e860fa33ea618d6fab3"
+  },
+  "model_inference": false,
+  "training": false,
+  "scope": "Authored local data and execution receipts, including verifier-only worlds and labels. Only each question input field is allowed into a model."
+}

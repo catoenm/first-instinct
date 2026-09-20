@@ -1,0 +1,39 @@
+{
+  "cases_sha256": "f2f000cee0dd171e74dfdd247388191709fca713085aba0763b0339cd0d7fad6",
+  "histories": [
+    [
+      "repair_0",
+      "prepare"
+    ],
+    [
+      "repair_0",
+      "prepare",
+      "repair_1"
+    ],
+    [
+      "commit"
+    ]
+  ],
+  "maximum_commands": 25000,
+  "maximum_distinct_branches": 1008,
+  "maximum_physical_branch_executions": 2016,
+  "model_inference": false,
+  "plans": [
+    "stop_now",
+    "evidence_then_commit",
+    "no_more_observations"
+  ],
+  "sources": {
+    "docs/trajectory-decisions-v1-protocol.md": "63cb3253fb49cae2423b05439bfe3c585cfe5febb645a0e319dde51ea67d5a42",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "test_trajectory_forecasts.py": "46796b2fb2dbe65c86101ee5d206b306da0218244f731572b97e1e4b60706b51",
+    "tool_lab/decision_collect.py": "d3caf1e53a0af0ec26c366701409658996c097406114a240225f8f29f0796773",
+    "tool_lab/decision_curriculum.py": "b212c1f630367ad680142f1a651872150ee0e3212777266e7647ffc416156725",
+    "tool_lab/evidence_env.py": "3de48b6c1da7c2a660d5d27b56ab968e08d29b69d95e295c33b4b2f094b0dcd9",
+    "tool_lab/mixed_runtime.py": "366e2fa5205de7a08c6281b2e1359ae8df5e339853365acdb0235cac8fdc1d46",
+    "tool_lab/shell_supervision.py": "0b88a66806e8e8abf9cebb389b6cafe905ad5a8ebd069492ef76544c98e5e875",
+    "tool_lab/trajectory_forecasts.py": "10c86bb2fa81c960f073e179b17b84518f9d088b1da79068cc4d6e66f4b19d29"
+  },
+  "training": false,
+  "version": "trajectory-decisions-v1"
+}

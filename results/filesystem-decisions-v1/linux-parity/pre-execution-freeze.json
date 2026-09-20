@@ -1,0 +1,1403 @@
+{
+  "image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+  "jobs": [
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "2692be84c9badcd6a039d82b0e52e60d04127158604a92859eeba131dc29b928",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "2692be84c9badcd6a039d82b0e52e60d04127158604a92859eeba131dc29b928",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "2692be84c9badcd6a039d82b0e52e60d04127158604a92859eeba131dc29b928",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "f28f517ba5b5652f5f1c2a311eff1496ff3471ede228b83b41f55ceb641dc679",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "f28f517ba5b5652f5f1c2a311eff1496ff3471ede228b83b41f55ceb641dc679",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "f28f517ba5b5652f5f1c2a311eff1496ff3471ede228b83b41f55ceb641dc679",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "3da5ca2bc39452f5ca3606c2fdead7768f713b402fc4c80ae99117216e3ef6d1",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "3da5ca2bc39452f5ca3606c2fdead7768f713b402fc4c80ae99117216e3ef6d1",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "3da5ca2bc39452f5ca3606c2fdead7768f713b402fc4c80ae99117216e3ef6d1",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "cf2bd1f74ddb6f96156f42c10557f8dd75fb359f0cfc9c5d2cd4b664bfbcf6e8",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "cf2bd1f74ddb6f96156f42c10557f8dd75fb359f0cfc9c5d2cd4b664bfbcf6e8",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "cf2bd1f74ddb6f96156f42c10557f8dd75fb359f0cfc9c5d2cd4b664bfbcf6e8",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "5a5745dde1744a8e9cd53393502abd543d48d65bfb2feb7ff16098df8f49d6a1",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "5a5745dde1744a8e9cd53393502abd543d48d65bfb2feb7ff16098df8f49d6a1",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "5a5745dde1744a8e9cd53393502abd543d48d65bfb2feb7ff16098df8f49d6a1",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "e39754e6c7f892a39f97489e9b295df6c26358689be850d8b8acdab26e371ba2",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "e39754e6c7f892a39f97489e9b295df6c26358689be850d8b8acdab26e371ba2",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "e39754e6c7f892a39f97489e9b295df6c26358689be850d8b8acdab26e371ba2",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "798e7b4574e2c1db320801a9c3dbe1ed07a51217e6c3a3fb918fb5c15a5fe483",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "798e7b4574e2c1db320801a9c3dbe1ed07a51217e6c3a3fb918fb5c15a5fe483",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "798e7b4574e2c1db320801a9c3dbe1ed07a51217e6c3a3fb918fb5c15a5fe483",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "5555b385e7ba1acdbee5aded7c1c014a94c42ed515d4e109d635df43e8e70e7c",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "5555b385e7ba1acdbee5aded7c1c014a94c42ed515d4e109d635df43e8e70e7c",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "5555b385e7ba1acdbee5aded7c1c014a94c42ed515d4e109d635df43e8e70e7c",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "fd44c56de7f7f58c4049b3f389e5ca32493a8df036ff938555f96cffb1285f8c",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "fd44c56de7f7f58c4049b3f389e5ca32493a8df036ff938555f96cffb1285f8c",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "fd44c56de7f7f58c4049b3f389e5ca32493a8df036ff938555f96cffb1285f8c",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "a0b789c64c27772bf554a0aa933106b14a058c248d255461fde0453c0a52edf7",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "a0b789c64c27772bf554a0aa933106b14a058c248d255461fde0453c0a52edf7",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "a0b789c64c27772bf554a0aa933106b14a058c248d255461fde0453c0a52edf7",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "c6dcb91276507928bee4bdcf842393a35924e352259cb44dc38e06d5cd124859",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "c6dcb91276507928bee4bdcf842393a35924e352259cb44dc38e06d5cd124859",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "c6dcb91276507928bee4bdcf842393a35924e352259cb44dc38e06d5cd124859",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "c12ca4f5474462557ae11544377525e31a76e1d22ac6e4590bd3b9172c603faf",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "c12ca4f5474462557ae11544377525e31a76e1d22ac6e4590bd3b9172c603faf",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "one_path",
+        "group_id": "2ba97c786052ae185548916324b1ada61f3e8840570b13788a84fa2258f9931a",
+        "id": "c12ca4f5474462557ae11544377525e31a76e1d22ac6e4590bd3b9172c603faf",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "d21a27e8b9e480b5fc70bc462085f4509f0a334a7353efa0601de7c571e8a796",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "d21a27e8b9e480b5fc70bc462085f4509f0a334a7353efa0601de7c571e8a796",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "d21a27e8b9e480b5fc70bc462085f4509f0a334a7353efa0601de7c571e8a796",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "cbd0aba26c812c7c68a6fcbf092f3d7650507e2a03a98c53bb354fa544168109",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "cbd0aba26c812c7c68a6fcbf092f3d7650507e2a03a98c53bb354fa544168109",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "cbd0aba26c812c7c68a6fcbf092f3d7650507e2a03a98c53bb354fa544168109",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "b7bcc36a520e24f05ee44c665d19d14ebd9fc90a7baa5c9cffda4d6171561ee3",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "b7bcc36a520e24f05ee44c665d19d14ebd9fc90a7baa5c9cffda4d6171561ee3",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "b7bcc36a520e24f05ee44c665d19d14ebd9fc90a7baa5c9cffda4d6171561ee3",
+        "partition": [],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "1d8f60b8eef634c95e1752e0ea0830b69b04591b8cbf64533723cd2b6a54e0f9",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "1d8f60b8eef634c95e1752e0ea0830b69b04591b8cbf64533723cd2b6a54e0f9",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "1d8f60b8eef634c95e1752e0ea0830b69b04591b8cbf64533723cd2b6a54e0f9",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "3210416ec1ee151eef9efd1e884b2b173110e2578573347d0ad391bd6c2ff5a7",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "3210416ec1ee151eef9efd1e884b2b173110e2578573347d0ad391bd6c2ff5a7",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "3210416ec1ee151eef9efd1e884b2b173110e2578573347d0ad391bd6c2ff5a7",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "0aa8ce6a1d1bf414d0639a081ce07153c6859f4047f39545273ee055ecc2d874",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "0aa8ce6a1d1bf414d0639a081ce07153c6859f4047f39545273ee055ecc2d874",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "0aa8ce6a1d1bf414d0639a081ce07153c6859f4047f39545273ee055ecc2d874",
+        "partition": [
+          "a.txt",
+          "b.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "232488a0d750ed6b563ea33eb846dab49e56774c562cde0cf03befa49116ffb1",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "232488a0d750ed6b563ea33eb846dab49e56774c562cde0cf03befa49116ffb1",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "232488a0d750ed6b563ea33eb846dab49e56774c562cde0cf03befa49116ffb1",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "2e07c938175295e6f62658fa10b974758a7af1a3857b2cf6c45e95bb46f42d91",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "2e07c938175295e6f62658fa10b974758a7af1a3857b2cf6c45e95bb46f42d91",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "2e07c938175295e6f62658fa10b974758a7af1a3857b2cf6c45e95bb46f42d91",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "34fb152e4157486517d44beee516c6d9917af0166fcc58813d338fd445e84c56",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "34fb152e4157486517d44beee516c6d9917af0166fcc58813d338fd445e84c56",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "34fb152e4157486517d44beee516c6d9917af0166fcc58813d338fd445e84c56",
+        "partition": [
+          "a.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "3c1ded8f569a9b51497cee3d7f5e539656aeec2dad27bed97864bcfb8916cdc1",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "3c1ded8f569a9b51497cee3d7f5e539656aeec2dad27bed97864bcfb8916cdc1",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "3c1ded8f569a9b51497cee3d7f5e539656aeec2dad27bed97864bcfb8916cdc1",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "cheap_write",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "a10a983b2153f15813997015db9f6c7b69cb00b680b1783fdb55bbdb382b0014",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "a10a983b2153f15813997015db9f6c7b69cb00b680b1783fdb55bbdb382b0014",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "a10a983b2153f15813997015db9f6c7b69cb00b680b1783fdb55bbdb382b0014",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "fresh",
+        "replace_cost": 0.12,
+        "split": "train_candidate",
+        "write_cost": 0.02
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "inspect",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "496765656bd0ed8e8156d44cbf476a3a82bd6926286d58754450f3b3aeeb6134",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "evidence_then_complete"
+    },
+    {
+      "action": "write_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "496765656bd0ed8e8156d44cbf476a3a82bd6926286d58754450f3b3aeeb6134",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    },
+    {
+      "action": "replace_a",
+      "case": {
+        "family": "filesystem_scope",
+        "goal": "physical_object",
+        "group_id": "7b8152327c95b6af51c8230a732d967aa4c620729013a803ffe3595ccc9e3d03",
+        "id": "496765656bd0ed8e8156d44cbf476a3a82bd6926286d58754450f3b3aeeb6134",
+        "partition": [
+          "b.txt",
+          "c.txt"
+        ],
+        "read_cost": 0.015,
+        "regime": "expensive_mutation",
+        "replace_cost": 1.2,
+        "split": "train_candidate",
+        "write_cost": 1.2
+      },
+      "plan": "stop_now"
+    }
+  ],
+  "maximum_branches": 72,
+  "native_qualification_sha256": "3da299997a8aa3f50cc33efbeb62edc3478f5f8942c73e860fa33ea618d6fab3",
+  "reference_hashes": {
+    "0016403daa0bdda1b1f4c8fd4261175bcf16e39d9d7756e0f0bdc74f95f84fe8": "9cf0ef176bbf06025af9fe7ea82a7598a89be317230801f2a1e9868f5e5d28da",
+    "00d566740388a16bac648ed5e710053a1cb58d707ba60691cdb21e5c9a2bdff3": "cf76e6fba68cd9e1c239ed3e2ddce85af0ab7150fde160d48a049b1351b6c093",
+    "0b71a8b0d39cb4f4fedee95470c8a21eaff81dfea9160f95a2ee8975b207727b": "ec11f017c8801ea809a0b9a8683aac4c5f5ce7ba6b78d9c912a1c5059272b2af",
+    "12401a23045a7e7967d584a6f40ea14e9d64b63ba2c3497fc6427106318463d9": "61695d5dfce94cb73a81bb827d5bc7c9bd8f7ee3eed59edc1471c7490cf40466",
+    "1a761ffc45d4ef04e122d1e399f2b42fbbeac5ef3e4c0e359c8be17b379893cd": "cb780d62e61d4d2acbc1838fe3155e690e77a2d2e7cc779236d0f624920816e1",
+    "1f4f5e0003a30d8e2f3772534d656adaea5c5160de152836290684cdaa2b7d9e": "be3507b9e08b6dbd2d530219c6d79083e8e5eb06dabd6a164e3cf9c280cb6fd3",
+    "22b8d48881b3c4a891d92a80eb3a100b4e3b06b0db63b3d403638bc77fb39db4": "1c4ea36a00c4b97cc50492a0446970e529e11239de7c405829862a24baf74c26",
+    "249dbf683f81cff3a025d955a9858141086ac43a0c46a1eef9b840cba5df1545": "26a86e060be62cef3e5e74a4031314b529320f8b266ccf977a990623ae2c524c",
+    "249f8be49305d0f31ab8f5e2831b2300b24d1841127175d217ecea9970c60611": "84c98481c8a2e54cf1e66dd143c8d81ab865978869084b2b22296d22aee6a2d2",
+    "250e84fccc6f3777abc65b5628333b1019f2618be34ae38289bfa4f519d41026": "d6a27d16c298e89458649b2f25898e2cca9425d4d1e11d0466a4bc2c1e980503",
+    "2c9541e5efa13fbbed07519da8cee7098d0948a580d4d1dbc7c9a081d2493f3f": "df4a276ea011cfd1edcf1d13fe8b70b165f1e78a08a25aa02c602d157eb2567c",
+    "3283817380eb5a70638514606bff84716267b3eeb4005eaeada9e0995cac546b": "6ab56b535fdf4768db51ad4ae0aad7971779f51241832be2a541af38ea0fb649",
+    "369c5a23a948754b372aa1bfc9e3dd905a8403605743c1084e93cb1dec140f52": "cc8f486408dabbb32689e9722fed90d7c19fc4073c15c9fc2cf9eb6e0ddecf63",
+    "3eec6828d9e8f8b438e45e5f40b35492ef69142f378d4b5af1c86f52aa95eaef": "74c0f129cd2642a4176c422396807a9e0e924d48610881f186784682c4332892",
+    "439282bcd98b17038436b5edb52522ee849fdf3342fab6a7fcc1f034294f54b3": "a8d11cdcd6bed8099b8e386174c3e9d6058f302051bc8d4789e8e4ff76dc6071",
+    "47186812ee1062b052126b82ae71d113e6ccc7a476a21cebf05932e16bf3b950": "f5422b4ba457bc76c813070a89f8594c2d164b0d6ae62eb26dc0503466c02a74",
+    "4739d1d4ba8e7667bf3af26884ed8a62e2d679e6467946ea277f1324171993be": "38aed62c29a61e4200b70c50e5365041d2f9d103341534c2bac03d8331439312",
+    "4acae3cf21c5817277bf85983658805df7a26531f65406d12ad8a32960591a29": "05df410084b0021f010db3baa62b5c069d9089168040ea75096e0b4b387fe9c6",
+    "50ccb199d5b38056d2c4c031208446a271ea4772c75f0854c9fba3a95265f497": "2a14903449f70d39e8187d5c6b907442f33dafd21fbab640d9d3fa1727c5aaea",
+    "55f393270edb01ab7b09ae3d801443c516f7e18411c77da489c3dff410450de9": "1464b6256719f069fc2c18d88da933af445abace56e2bd033337481a4e5a539a",
+    "65f580d2d1a52b03b912f806846b256cb0888f262de23e0db7c3dc284731fdff": "445c78cf32b1c1eb664d2373e055018f26f0351729f1389dd34ae6ae5e16694f",
+    "67000dbb33ff2021e8d041c11b06c0c56a87806e2980c8422fce4e3f9b59e362": "a1e5a5ea5a1d03658ab2aba715f6f0ff573fcb64e3a92506b6fa34a64468dbd5",
+    "6bc12faa69f874de67a81f012f34fe7dc35a8a6ca60648085bdf2ebaf8370ede": "87bf8f6d41460f9cf881de622ba140b4fbf0b69680f72956d82c54b50f5059db",
+    "6be200971bd0f6f980740f4cbfb7cf282c51f6af8d88a97e3dc27194675eb5e9": "32664ccbb02f52f81908c04aa4b20d5d407987061b6c9c2b411e4862fb8b89ed",
+    "716e013241ac761d5064ab83f1e9596aa4cc3bbcd276ebfaf9b25a9b42a125cd": "86be470f2117f8372e5047d9058e09440368c7bde9059fcf111b6ee656a74efa",
+    "7220a55cd857c6c55256a7342e552b8231570d6263b602c299ecb399ebef770f": "0561d39effae27b473ad6d2082c171d40ed0880fe7ce4668944fee5f10e558c9",
+    "727d3e93960c84c3ddb3a47ea407bcb5c2447a739267aa03012c6b1653af4501": "a25c21d09bfc44612404c4112702a044e36545577f8eb352d8bd3b12ba9e0487",
+    "72cf32557164784c13434e5aceddc7376ddb9645a0d5fb02cc63eb139696a0af": "bd4d158c2f9af573e3f5e1d2d35c886f203d60fcb02540f36fb28d83538075a0",
+    "73ee599499578a7ab1ea724438fbb52abe4a7f2c8972bcc2614692be6dd8a19c": "43d1fd3a975e3920db658b069f39edded652807902b5b8cfe42fc74dadd74592",
+    "77c9a90bc925ea1391c7381da0db389bc816fae4654de4ef1dc64a4bc2afcd87": "352aba62f85d98df505ddef035bdf288a06f4d68f1e0dd131f758c7086ea80a8",
+    "78208adc0a7ff8e26ffb26c0ac0cf5eb715e83c850baebded8dcb21d0f0f5d34": "d63fc9cab38ffd847cd8c4145b11e415123d9b9a3713b576931bed523855acfd",
+    "7b6c51e1e7c4c5f92a6738b90da0d18cb7056cbcc433b6a05a4d56b3551ecb50": "b8297116764b177536f89ef655ad4dda997dcf1b47c8484fe7799737a66d5e55",
+    "7f6a6d889826917d5c6aeb8de5abaa85159ef0f08c563e957337ea47c487b78f": "22644937bf7a2ab51b5427f782f41403ded49d956a67851b0200d55b0cbd17c5",
+    "865e9657a4401cfc85899771d1e1391157d0040c8540beaed2e26caab7baed49": "57cefd3b0324c9b54d97ec582c2590674776f78a42a51e677ef30d40b5017db2",
+    "869262f4f4dfb7fd074cdaa1f8e2f5f88dab197d96f5334d61c3bb8499ebb164": "6d4b6df5b9922eeba89efcbc88c0c1bd40fb028b495d88c7b036ee940dd26ad8",
+    "89e57cd0ef018aeb31506af2e21e1b2fdf5f1dd23709a04b05f974f1f6fa20f0": "35c21c123e304d3f74186e2c0ad65b027d19e6f753ac2f860ad88dd4545e65e4",
+    "941e6f1dd58fd6c9a09aef1f1a7b993942f8e446854f4d259fe95d9f13ec69eb": "191ed1122c875fe7fc88e858d082c31091ba8accd464cec7e1faff176bb67fcc",
+    "94d0dc01647ec8833d233662bdc0bfcb876b52040bf13b080b59e031b7bc09c5": "5ec28c6099efce7717dfbd4488fe4a984cdbb94d094fa5a31e5954b5a7c8c359",
+    "94d679fa303586197b8903bd5f04d33ace9016ae573d24eac420260564377707": "7ae4cb9149d5559a40cd63cc880f68e9c9b93be8a0ac004a6f5a99929e881e44",
+    "9acee6a990539fb94e722c34c136b2d87bc950467f62cde980e2d84c3af3d818": "de41c6cdb0c36883192a1876f5c09de0f84eae8bb4020beff2b3daa7b77df98b",
+    "a24a264df823c5c5a78286c77260a4794479a6b405ee56c8cd2e1e368776e5b6": "ec461c618b35fefe8301dee354e4642c924cea33e170fa2b979208dd8a4bc04a",
+    "a82a32cba592089588c576b0576824724ae0e928b666df598dd1b6798e2bfb4f": "2377710849b8753cc32a5a41941a8d71795ac5a86048da7d589a95ba81dba16d",
+    "aa860d083cf167dd331946f2e6a7b9a59142ffcbb57f056c1ed97451bf04c584": "4c19089a3bd9b20a87414ee6f89b72bb29ca7ff25f0ff16a88fbf0f3cd1e3ebc",
+    "ab1164eb0632dae2dd3a7622dbc6eeb339387ec79c54a490f5e343cd1f68e65d": "b4dafb3377d5c4d6328fc901953edacf2b144f4fdfe130c0cf8753bd33219ab9",
+    "abe891ab80620199c2c7443484c0851445b0d0e33ca1590d3e3c69bfe5ee9edc": "cf8503f9336518922f62ac3383c77450cd13aee3a78497ac335de79f42ca6da0",
+    "b19782087bf2d61334b3457ca7d1977a438b84d3e5c3870e82e1a5028aba454a": "0f83f8f8d4c57c60c3ff62c617319ca5236083d0abc01740f9c57c24a3c7a1fc",
+    "b7f16a50169269c915435a443818dae2c601493940e1fe639e53a44e91de1022": "e1c529cdf2325af5e7f69a417ad39c4bfd47db0107cb7a5bdcd6ab8371c3d3d0",
+    "b8902909a3ca2ef664aa6a594a1102e6fbaa2e53f26a9e654731a8749f435e1f": "139c493d60b181968e6f4fdc9d01fc794bfcddb2af79e33fea8edd78bd642735",
+    "bad1c24ca949ce91f5f3ffe31336f8b5174cfe4da05cc00ebbb9611f6ba76beb": "e35669c3d22bc8bc23b3bc44163cec573ad2c05271bcf403b2bb2a30eb40dd04",
+    "bca0ad8b68fc777308236a787b8f9faf102a153c7ebf12455b0cf7b8f6dabd1b": "a354dac31214f3c0fa520e0e18df4b9d349857aef81d3ece65de48219cc648e9",
+    "bd71a8ab431ad7bb47468806cc90214a1012c86ae54034413613cf020664ec51": "acbad4476b2d4c2f6b584bbbb684e3189cdf869b9c78d99e3797de3ca2979a2c",
+    "c06fdfb955d976947e8aa8a99dda159675ce931e9a6a37a1e893946f387a8f91": "0e8c1b7d2670b6abbd8a07e375572ad2e0037365cdc281a2b70efad4a7d22880",
+    "c3d9fae3ee1bc13084875c0cc818a5cdaf391559d68a683f959b2abb0c6e3545": "1ba226eb7c343eaa4496443b72c4915f3b8a3c23814440ddbfdb25336181b48b",
+    "c70fecfa3a500eb5d834b15cd416f07dfe591e707507ac127d2a4d88a4407c70": "2d122ffa1941c06435f12de9c883d1c4dc1e065eb5862b4ae7b1d98a3e8dc467",
+    "c7e3eb8902593daae4e0e48268fd8b135309675683b3755c2051bdb93d5b3076": "e27ef956872b4009fde4d1d8f4f50816b56e88cd0288cd1194a90332d0974d0f",
+    "d01c4fdf3f65b5473b85f5eaf272b1dd801ec382ac94a0e3af9e78c573241523": "f5e4ff48fe6e7744a2a08cd7a271d3a04df569b8f5cd8bd60fb1b5c6e7dc78c6",
+    "d84ab3203c835cc6ce6d22f87fc40983b9ca33a913f5fbd032e73b566dd7a19c": "0d327fa15622030aef41b4d4ca95580c33f8fe67e8916e3762d51dce1ec4fb37",
+    "d8d42251e1a762a20d141484b68630345ffe50c176356c29bfa2c89770abb877": "daeeb17a73b358ff714609575acf334fd3a10addb0fb21833c56ab5bf9c7a654",
+    "db64d163d49e2db6061e4c3635ad3d8f48c1b93cb7cc532dba180266d1d10559": "b1991187b076d4f1663248870bf50a847c7f8881224599dd7f56140dd830aace",
+    "de3b9d119d7bbb1ec433cd29d79dd24a069030671c6728d9d6422e59885b7d95": "248f7414b948587542cdb0b2c039eeb92c7bc63e346843cb0e43648c55074a47",
+    "df480896f6b0867c285876d1dd7bfbe416352b3ca21d7be91549ba59e6388898": "7e1df83e5112d6581066edc6f5689f54a0b77494356612c0cbfe997900d29475",
+    "e478d262b2c2b3dd2eca34a0d0c25975920e22e8cc8d55f574ee4e01ff18ed9a": "9f14e685a7f2f2ed105fc23682fc9bfaf871e455a5671ee9fee785b70dfaf831",
+    "e52cba7e979c7ac2db76ec809f21a482e496c9e2b248a4653cb416d3216848a7": "669fdb8ca9d3f6c7776f57c2cda1e74fbec0ccbf750d7a68fbea04ef6b05299e",
+    "ea70e25bcc442f24304f6292e981444863ccc51b5c7fd14825852a9e1d3a51f4": "7368b71df193b3fbdb8356a85c9687e34d5f2ea26ee257150bc0eae2ea681f43",
+    "eb8626c9852a0ac0bdff97e099797fcbf5888dfc4dcc9c09a3bae8feb6ced05d": "12e5337eb4544b4ac076a656b0b5fbe46634a29fca4479309bd727c1fac8ad01",
+    "ef6359b6afb7e662595a9c4482cd495f265fd55754f11e4223834d694b38b8cf": "1dcf0254a126871f6ad6fd67630ad9f821a18d2b507bc2a8d896cf0557415d08",
+    "f17db063870eb1af2821ad86bb56bf4df91d08d761bfada497b4cf70c2b78ca1": "2bf2ee2627970f3c833cdc1e6415d8e517ad22db91c86c0fcdc84b6e455f2aab",
+    "f476203a4f7b3dab63c40f021026d789bf17fec252543be3b639054b61b78fca": "adf79d0ad251a65aecf8e56a62934432792a518d8fc4e85a403ceb2ba90cf5b7",
+    "f5cc7fe59c3853a5f9b413db12321c91e9f350c30b20a3b44682a5286796bac4": "928bcea02ae6cd14832b2d252dbdf2cd24aeb64ca28039a403f1c11ab5458bd0",
+    "f66ca6860ab316630680f363baa50927f562061fd2a84d5cea6195f13ac5170d": "ef377277fdab78b66dadb21f61085315c39c52b954a322dc4d415f4e82f2c96d",
+    "f68effedafa90802292747cd3a88cb6d6253f8ee12af42ac1e31071ba0940d81": "18541e2536ac6716ec0ac84ab14cf9c37deb3cb2a754d44a1e7109530929ee0c",
+    "f8fd98602c284498d6a0180d404724bf1dc5e6cad85181ea88b15aa62d44def5": "1f1dd68a6d1ac6298f3d8193188accfb2d58c986c56d909fd2f89233060e25a7"
+  },
+  "scope": "All four link worlds, both goals, three regimes and three action/continuation pairs.",
+  "source_sha256": {
+    "scale_lab/__init__.py": "15300119a8f9c724a4dadf4e9dea98796469f39c779963947022d01c23bbc46e",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "tool_lab/__init__.py": "db42d9a8e8f1266a49ea25baffb8ff970b47fcebffcf54033435965993697383",
+    "tool_lab/filesystem_decisions.py": "b59ca61893a1cabce4e34bd6e9258d12a3a1d56394a97fbc30c5adb838536387",
+    "tool_lab/filesystem_parity.py": "07f0d5b59e662794e69c519e4835c08caacad3040dc5adc1ccf9b0dce9992161"
+  }
+}

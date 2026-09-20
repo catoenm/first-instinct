@@ -1,0 +1,31 @@
+{
+  "actual_tool_commands": 9652,
+  "auditor_sha256": "3dba4b0a834a4245149757fd8f8b8f9904485002ca62f0a3ba78646fad461e5a",
+  "collection_sha256": "c654bb22d4c326f6d8902e1d68bfacf5dd876624db7c2665f2af62a61c080aaf",
+  "distinct_branches": 1008,
+  "limits": "Receipt and token audit, no model inference or learning. Physical replay is attested by the frozen collector and matched receipt hashes; this auditor performs no new world execution.",
+  "optimizer_steps": 0,
+  "prepared_counts": {
+    "decision": 30,
+    "forecast": 672,
+    "observation_value": 30
+  },
+  "questions_reconstructed": 732,
+  "status": "passed",
+  "tokens": {
+    "actor_history_maximum": 1063,
+    "limit": 4096,
+    "maximum": 1063,
+    "model": {
+      "id": "Qwen/Qwen3.5-9B",
+      "kind": "qwen3_5",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "question_maximum": 954,
+    "truncated": 0,
+    "unique_inputs": 1072
+  },
+  "training_questions_consumed": 0,
+  "verification_replays": 1008,
+  "version": "trajectory-decisions-v1"
+}

@@ -1,0 +1,11 @@
+{
+  "actual_tool_commands": 112,
+  "all_public_observations_and_byte_link_receipts_exact": true,
+  "branches": 72,
+  "ignored_inode_numbers": true,
+  "image": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+  "native_qualification_sha256": "3da299997a8aa3f50cc33efbeb62edc3478f5f8942c73e860fa33ea618d6fab3",
+  "note": "Snapshot link relationships use actual device/inode equality, never raw numbers. All other receipt fields match without normalization. This does not launch training.",
+  "python": "3.12.14 (main, Aug 31 2026, 23:47:53) [GCC 14.2.0]",
+  "status": "passed"
+}

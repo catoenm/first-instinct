@@ -1,0 +1,17 @@
+{
+  "cases_sha256": "77c0130d78bfce5977402f3fc4834ba7dab91e99152d4feea62f86c39540a2ba",
+  "maximum_branches": 840,
+  "maximum_commands": 12000,
+  "maximum_physical_executions": 1680,
+  "model_inference": false,
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "sources": {
+    "docs/filesystem-decisions-v1-protocol.md": "b533780406ab62948f3a8a81b7544be6d27fd4e4268a0f012e99fbadef1fb767",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "test_filesystem_decisions.py": "aeb3d69848994aecddc213c638d0f3ec5369d2ad81ed6887a90777cb18ffba6c",
+    "tool_lab/filesystem_decisions.py": "b59ca61893a1cabce4e34bd6e9258d12a3a1d56394a97fbc30c5adb838536387"
+  },
+  "training": false,
+  "version": "filesystem-decisions-v1"
+}
