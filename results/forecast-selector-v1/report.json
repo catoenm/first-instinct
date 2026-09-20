@@ -1,0 +1,3014 @@
+{
+  "counts": {
+    "authored_roots": 1,
+    "cases": 36,
+    "evaluated_model_decisions": 308,
+    "existing_branches": 504,
+    "forecast_inputs": 308,
+    "new_executions": 0,
+    "new_model_calls": 0,
+    "new_optimizer_steps": 0,
+    "new_training_questions": 0,
+    "saved_prediction_vectors_reused": 2156,
+    "uncertain_forecast_inputs": 40,
+    "visible_contexts": 22,
+    "world_goal_tasks": 4
+  },
+  "files": {
+    "contexts-private.jsonl": "c7ef37a9b9ffcbae7df99d17ef038d14fc588f246352a0a57274b926cb830565",
+    "decisions.jsonl": "6f3bfbe5e6bb6d344bc7ed514c176fdcf9294e4f7ed491fadab1c64de77c9614",
+    "freeze.json": "31f80d46f1c645c56528c1e74f9f8b44c98d3c5f914243439ce1d78d09a4053b",
+    "menu-coverage.jsonl": "4d600eff147075914b00eab0d362a83f885286df3b2e013f01682ad35767377c"
+  },
+  "freeze_sha256": "31f80d46f1c645c56528c1e74f9f8b44c98d3c5f914243439ce1d78d09a4053b",
+  "interpretation": "Offline fixed-continuation diagnostic; no live actor comparison, new training, transfer claim, or checkpoint reselection.",
+  "menu_coverage": {
+    "evidence_then_commit": {
+      "contexts": 22,
+      "useful_contexts": 20,
+      "variable_future_cost_cells": 0
+    },
+    "stop_now": {
+      "contexts": 22,
+      "useful_contexts": 8,
+      "variable_future_cost_cells": 0
+    }
+  },
+  "ownership": "exposed_development",
+  "results": {
+    "hybrid-1507": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.91,
+            "regret": 0.0,
+            "return": 0.91
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.12000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.88,
+            "regret": 0.0,
+            "return": 0.88
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 12,
+            "prepare": 2,
+            "repair_0": 6,
+            "unlock": 2
+          },
+          "completion": 0.3888888888888889,
+          "contexts": 22,
+          "cost": 0.030000000000000002,
+          "incorrect": 0.16666666666666666,
+          "optimal": 0.2222222222222222,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.6355555555555555,
+          "return": 0.1922222222222222
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 12,
+            "prepare": 2,
+            "repair_0": 6,
+            "unlock": 2
+          },
+          "completion": 0.3181818181818182,
+          "contexts": 22,
+          "cost": 0.024545454545454547,
+          "incorrect": 0.13636363636363635,
+          "optimal": 0.18181818181818182,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.6981818181818181,
+          "return": 0.15727272727272726
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "summary": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.04,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.04,
+            "return": -0.04
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.03,
+            "return": -0.03
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "summary": 3
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 1.01,
+            "return": -0.03
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.2777777777777778,
+          "contexts": 22,
+          "cost": 0.022222222222222223,
+          "incorrect": 0.2777777777777778,
+          "optimal": 0.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.24000000000000002,
+          "return": -0.022222222222222233
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.22727272727272727,
+          "contexts": 22,
+          "cost": 0.02090909090909091,
+          "incorrect": 0.22727272727272727,
+          "optimal": 0.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3772727272727273,
+          "return": -0.02090909090909092
+        }
+      }
+    },
+    "hybrid-1609": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.91,
+            "regret": 0.0,
+            "return": 0.91
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.12000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.88,
+            "regret": 0.0,
+            "return": 0.88
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 10,
+            "prepare": 2,
+            "repair_0": 8,
+            "unlock": 2
+          },
+          "completion": 0.4444444444444444,
+          "contexts": 22,
+          "cost": 0.03222222222222223,
+          "incorrect": 0.2222222222222222,
+          "optimal": 0.2222222222222222,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.6377777777777778,
+          "return": 0.19
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 10,
+            "prepare": 2,
+            "repair_0": 8,
+            "unlock": 2
+          },
+          "completion": 0.36363636363636365,
+          "contexts": 22,
+          "cost": 0.026363636363636367,
+          "incorrect": 0.18181818181818182,
+          "optimal": 0.18181818181818182,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.7000000000000001,
+          "return": 0.15545454545454546
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "summary": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.04,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.04,
+            "return": -0.04
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.03,
+            "return": -0.03
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "summary": 3
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 1.01,
+            "return": -0.03
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.2777777777777778,
+          "contexts": 22,
+          "cost": 0.022222222222222223,
+          "incorrect": 0.2777777777777778,
+          "optimal": 0.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.24000000000000002,
+          "return": -0.022222222222222233
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.22727272727272727,
+          "contexts": 22,
+          "cost": 0.02090909090909091,
+          "incorrect": 0.22727272727272727,
+          "optimal": 0.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3772727272727273,
+          "return": -0.02090909090909092
+        }
+      }
+    },
+    "oracle_probabilities": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.029999999999999916,
+            "return": 0.91
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.11,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.91,
+            "regret": 0.020000000000000018,
+            "return": 0.89
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2,
+              "repair_1": 2
+            },
+            "completion": 1.0,
+            "contexts": 4,
+            "cost": 0.02,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.98,
+            "regret": 0.0,
+            "return": 0.98
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.029999999999999916,
+            "return": 0.91
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.15,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.030000000000000027,
+            "return": 0.85
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.13999999999999999,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.020000000000000018,
+            "return": 0.86
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2,
+              "repair_1": 2
+            },
+            "completion": 1.0,
+            "contexts": 4,
+            "cost": 0.02,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.98,
+            "regret": 0.0,
+            "return": 0.98
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.029999999999999916,
+            "return": 0.91
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 2,
+            "prepare": 8,
+            "repair_0": 8,
+            "repair_1": 4
+          },
+          "completion": 0.8888888888888888,
+          "contexts": 22,
+          "cost": 0.07888888888888888,
+          "incorrect": 0.0,
+          "optimal": 0.3333333333333333,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.017777777777777757,
+          "return": 0.81
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 2,
+            "prepare": 8,
+            "repair_0": 8,
+            "repair_1": 4
+          },
+          "completion": 0.9090909090909091,
+          "contexts": 22,
+          "cost": 0.06818181818181818,
+          "incorrect": 0.0,
+          "optimal": 0.45454545454545453,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.014545454545454528,
+          "return": 0.8409090909090909
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2,
+              "repair_1": 2
+            },
+            "completion": 1.0,
+            "contexts": 4,
+            "cost": 0.02,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.98,
+            "regret": 0.0,
+            "return": 0.98
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2,
+              "repair_1": 2
+            },
+            "completion": 1.0,
+            "contexts": 4,
+            "cost": 0.02,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.98,
+            "regret": 0.0,
+            "return": 0.98
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 14,
+            "repair_0": 4,
+            "repair_1": 4
+          },
+          "completion": 0.2222222222222222,
+          "contexts": 22,
+          "cost": 0.0044444444444444444,
+          "incorrect": 0.0,
+          "optimal": 1.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.0,
+          "return": 0.21777777777777776
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 14,
+            "repair_0": 4,
+            "repair_1": 4
+          },
+          "completion": 0.36363636363636365,
+          "contexts": 22,
+          "cost": 0.007272727272727273,
+          "incorrect": 0.0,
+          "optimal": 1.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.0,
+          "return": 0.3563636363636364
+        }
+      }
+    },
+    "original": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "repair_0": 1
+            },
+            "completion": 0.25,
+            "contexts": 2,
+            "cost": 0.01,
+            "incorrect": 0.25,
+            "optimal": 0.5,
+            "oracle_return": 0.0,
+            "regret": 0.010000000000000009,
+            "return": -0.010000000000000009
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.91,
+            "regret": 0.0,
+            "return": 0.91
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.12000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.88,
+            "regret": 0.0,
+            "return": 0.88
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 13,
+            "prepare": 2,
+            "repair_0": 5,
+            "unlock": 2
+          },
+          "completion": 0.3611111111111111,
+          "contexts": 22,
+          "cost": 0.02888888888888889,
+          "incorrect": 0.1388888888888889,
+          "optimal": 0.2777777777777778,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.6344444444444445,
+          "return": 0.19333333333333333
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 13,
+            "prepare": 2,
+            "repair_0": 5,
+            "unlock": 2
+          },
+          "completion": 0.29545454545454547,
+          "contexts": 22,
+          "cost": 0.023636363636363636,
+          "incorrect": 0.11363636363636363,
+          "optimal": 0.22727272727272727,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.6972727272727273,
+          "return": 0.15818181818181817
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "summary": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.04,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.04,
+            "return": -0.04
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.03,
+            "return": -0.03
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "summary": 3
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 1.01,
+            "return": -0.03
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.2777777777777778,
+          "contexts": 22,
+          "cost": 0.022222222222222223,
+          "incorrect": 0.2777777777777778,
+          "optimal": 0.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.24000000000000002,
+          "return": -0.022222222222222233
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.22727272727272727,
+          "contexts": 22,
+          "cost": 0.02090909090909091,
+          "incorrect": 0.22727272727272727,
+          "optimal": 0.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3772727272727273,
+          "return": -0.02090909090909092
+        }
+      }
+    },
+    "outcome-1507": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.91,
+            "regret": 0.0,
+            "return": 0.91
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.12000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.88,
+            "regret": 0.0,
+            "return": 0.88
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 3,
+              "repair_1": 1
+            },
+            "completion": 0.25,
+            "contexts": 4,
+            "cost": 0.005,
+            "incorrect": 0.0,
+            "optimal": 0.25,
+            "oracle_return": 0.98,
+            "regret": 0.735,
+            "return": 0.245
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 9,
+            "prepare": 2,
+            "repair_0": 8,
+            "repair_1": 1,
+            "unlock": 2
+          },
+          "completion": 0.4722222222222222,
+          "contexts": 22,
+          "cost": 0.03277777777777778,
+          "incorrect": 0.2222222222222222,
+          "optimal": 0.25,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.6105555555555555,
+          "return": 0.21722222222222223
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 9,
+            "prepare": 2,
+            "repair_0": 8,
+            "repair_1": 1,
+            "unlock": 2
+          },
+          "completion": 0.4090909090909091,
+          "contexts": 22,
+          "cost": 0.02727272727272728,
+          "incorrect": 0.18181818181818182,
+          "optimal": 0.22727272727272727,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.6554545454545454,
+          "return": 0.2
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "summary": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.04,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.04,
+            "return": -0.04
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.03,
+            "return": -0.03
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "summary": 3
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 1.01,
+            "return": -0.03
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.2777777777777778,
+          "contexts": 22,
+          "cost": 0.022222222222222223,
+          "incorrect": 0.2777777777777778,
+          "optimal": 0.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.24000000000000002,
+          "return": -0.022222222222222233
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.22727272727272727,
+          "contexts": 22,
+          "cost": 0.02090909090909091,
+          "incorrect": 0.22727272727272727,
+          "optimal": 0.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3772727272727273,
+          "return": -0.02090909090909092
+        }
+      }
+    },
+    "outcome-1609": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.91,
+            "regret": 0.0,
+            "return": 0.91
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.12000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.88,
+            "regret": 0.0,
+            "return": 0.88
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 12,
+            "prepare": 2,
+            "repair_0": 6,
+            "unlock": 2
+          },
+          "completion": 0.3888888888888889,
+          "contexts": 22,
+          "cost": 0.030000000000000002,
+          "incorrect": 0.16666666666666666,
+          "optimal": 0.2222222222222222,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.6355555555555555,
+          "return": 0.1922222222222222
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 12,
+            "prepare": 2,
+            "repair_0": 6,
+            "unlock": 2
+          },
+          "completion": 0.3181818181818182,
+          "contexts": 22,
+          "cost": 0.024545454545454547,
+          "incorrect": 0.13636363636363635,
+          "optimal": 0.18181818181818182,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.6981818181818181,
+          "return": 0.15727272727272726
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "summary": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.04,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.04,
+            "return": -0.04
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.03,
+            "return": -0.03
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "summary": 3
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 1.01,
+            "return": -0.03
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.2777777777777778,
+          "contexts": 22,
+          "cost": 0.022222222222222223,
+          "incorrect": 0.2777777777777778,
+          "optimal": 0.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.24000000000000002,
+          "return": -0.022222222222222233
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.22727272727272727,
+          "contexts": 22,
+          "cost": 0.02090909090909091,
+          "incorrect": 0.22727272727272727,
+          "optimal": 0.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3772727272727273,
+          "return": -0.02090909090909092
+        }
+      }
+    },
+    "reward-1507": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.91,
+            "regret": 0.0,
+            "return": 0.91
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.12000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.88,
+            "regret": 0.0,
+            "return": 0.88
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 14,
+            "prepare": 2,
+            "repair_0": 4,
+            "unlock": 2
+          },
+          "completion": 0.3333333333333333,
+          "contexts": 22,
+          "cost": 0.027777777777777776,
+          "incorrect": 0.1111111111111111,
+          "optimal": 0.3333333333333333,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.6333333333333333,
+          "return": 0.19444444444444445
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 14,
+            "prepare": 2,
+            "repair_0": 4,
+            "unlock": 2
+          },
+          "completion": 0.2727272727272727,
+          "contexts": 22,
+          "cost": 0.022727272727272728,
+          "incorrect": 0.09090909090909091,
+          "optimal": 0.2727272727272727,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.6963636363636364,
+          "return": 0.1590909090909091
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "summary": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.04,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.04,
+            "return": -0.04
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 3,
+              "summary": 1
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.01,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.99,
+            "return": -0.01
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.03,
+            "return": -0.03
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "summary": 3
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 1.01,
+            "return": -0.03
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 4,
+            "repair_1": 10,
+            "summary": 6,
+            "unlock": 2
+          },
+          "completion": 0.2777777777777778,
+          "contexts": 22,
+          "cost": 0.02333333333333333,
+          "incorrect": 0.2777777777777778,
+          "optimal": 0.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.2411111111111111,
+          "return": -0.02333333333333334
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 4,
+            "repair_1": 10,
+            "summary": 6,
+            "unlock": 2
+          },
+          "completion": 0.22727272727272727,
+          "contexts": 22,
+          "cost": 0.022727272727272728,
+          "incorrect": 0.22727272727272727,
+          "optimal": 0.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3790909090909091,
+          "return": -0.02272727272727274
+        }
+      }
+    },
+    "reward-1609": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "prepare": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.09000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.91,
+            "regret": 0.0,
+            "return": 0.91
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 1.0,
+            "contexts": 2,
+            "cost": 0.12000000000000001,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.88,
+            "regret": 0.0,
+            "return": 0.88
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_0": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.96,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 12,
+            "prepare": 2,
+            "repair_0": 6,
+            "unlock": 2
+          },
+          "completion": 0.3888888888888889,
+          "contexts": 22,
+          "cost": 0.030000000000000002,
+          "incorrect": 0.16666666666666666,
+          "optimal": 0.2222222222222222,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.6355555555555555,
+          "return": 0.1922222222222222
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 12,
+            "prepare": 2,
+            "repair_0": 6,
+            "unlock": 2
+          },
+          "completion": 0.3181818181818182,
+          "contexts": 22,
+          "cost": 0.024545454545454547,
+          "incorrect": 0.13636363636363635,
+          "optimal": 0.18181818181818182,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.6981818181818181,
+          "return": 0.15727272727272726
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "summary": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.04,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.04,
+            "return": -0.04
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "unlock": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.03,
+            "return": -0.03
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 1,
+              "summary": 3
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.03,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 1.01,
+            "return": -0.03
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "repair_1": 2
+            },
+            "completion": 0.5,
+            "contexts": 2,
+            "cost": 0.02,
+            "incorrect": 0.5,
+            "optimal": 0.0,
+            "oracle_return": 0.0,
+            "regret": 0.020000000000000018,
+            "return": -0.020000000000000018
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.2777777777777778,
+          "contexts": 22,
+          "cost": 0.022222222222222223,
+          "incorrect": 0.2777777777777778,
+          "optimal": 0.0,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.24000000000000002,
+          "return": -0.022222222222222233
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 5,
+            "repair_1": 10,
+            "summary": 5,
+            "unlock": 2
+          },
+          "completion": 0.22727272727272727,
+          "contexts": 22,
+          "cost": 0.02090909090909091,
+          "incorrect": 0.22727272727272727,
+          "optimal": 0.0,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3772727272727273,
+          "return": -0.02090909090909092
+        }
+      }
+    },
+    "uniform": {
+      "evidence_then_commit": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.91,
+            "regret": 0.91,
+            "return": 0.0
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.88,
+            "regret": 0.88,
+            "return": 0.0
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.94,
+            "regret": 0.94,
+            "return": 0.0
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 22
+          },
+          "completion": 0.0,
+          "contexts": 22,
+          "cost": 0.0,
+          "incorrect": 0.0,
+          "optimal": 0.1111111111111111,
+          "oracle_return": 0.8277777777777778,
+          "regret": 0.8277777777777778,
+          "return": 0.0
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 22
+          },
+          "completion": 0.0,
+          "contexts": 22,
+          "cost": 0.0,
+          "incorrect": 0.0,
+          "optimal": 0.09090909090909091,
+          "oracle_return": 0.8554545454545455,
+          "regret": 0.8554545454545455,
+          "return": 0.0
+        }
+      },
+      "stop_now": {
+        "by_regime": {
+          "contradictory": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "expensive": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "failed_write": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "fresh": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "hidden": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "offline": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "prerequisite": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          },
+          "redundant": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 4
+            },
+            "completion": 0.0,
+            "contexts": 4,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 0.0,
+            "oracle_return": 0.98,
+            "regret": 0.98,
+            "return": 0.0
+          },
+          "stale": {
+            "cases": 4,
+            "chosen_actions": {
+              "finish": 2
+            },
+            "completion": 0.0,
+            "contexts": 2,
+            "cost": 0.0,
+            "incorrect": 0.0,
+            "optimal": 1.0,
+            "oracle_return": 0.0,
+            "regret": 0.0,
+            "return": 0.0
+          }
+        },
+        "case_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 22
+          },
+          "completion": 0.0,
+          "contexts": 22,
+          "cost": 0.0,
+          "incorrect": 0.0,
+          "optimal": 0.7777777777777778,
+          "oracle_return": 0.21777777777777776,
+          "regret": 0.21777777777777776,
+          "return": 0.0
+        },
+        "visible_context_weighted": {
+          "cases": 36,
+          "chosen_actions": {
+            "finish": 22
+          },
+          "completion": 0.0,
+          "contexts": 22,
+          "cost": 0.0,
+          "incorrect": 0.0,
+          "optimal": 0.6363636363636364,
+          "oracle_return": 0.3563636363636364,
+          "regret": 0.3563636363636364,
+          "return": 0.0
+        }
+      }
+    }
+  },
+  "status": "passed",
+  "version": "forecast-selector-v1"
+}

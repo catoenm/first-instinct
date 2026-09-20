@@ -37,6 +37,13 @@ in a compact retro interface. The local version now serves the completed
 supervised checkpoint; the underlying interface accepts your own questions
 and choices.
 
+**Next capability gap: [using forecasts to select actions](docs/forecast-selector-v1-results.md).**
+An offline diagnostic of saved predictions found that the forecasts still
+overvalue stopping in some unfinished tasks. Perfect verified forecasts recover
+most of the available reward in this small development curriculum; the trained
+forecasts do not. The next priority is broader execution-verified supervision and
+application workflows, beginning with [local AppWorld qualification](docs/appworld-local-v1-protocol.md).
+
 **Completed pilot: [costly evidence and recoverable commands](docs/evidence-decisions-v2-results.md).**
 Consequence supervision improved execution return from 0.316 to 0.483–0.502
 and forecast Brier from 0.311 to 0.068–0.096 across two seeds. Reward learning

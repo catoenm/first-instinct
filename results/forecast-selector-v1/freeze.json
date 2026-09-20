@@ -1,0 +1,82 @@
+{
+  "contracts": [
+    "stop_now",
+    "evidence_then_commit"
+  ],
+  "maximum_branches": 504,
+  "maximum_cases": 36,
+  "maximum_forecasts": 308,
+  "maximum_predictors": 7,
+  "model_calls": 0,
+  "new_executions": 0,
+  "optimizer_steps": 0,
+  "ownership": "exposed_development",
+  "paths": {
+    "docs/forecast-selector-v1-protocol.md": "fe0ebb07fecdac183b484016b96ffca63f7c0bea9994461b7b4c05772e0050fa",
+    "output/decision-curriculum-v3-qualified/cases.jsonl": "8963fa03ae11d7d3ce66dc258d503130f3587cf8b827fcf4abc8ed48ddaffdce",
+    "output/decision-curriculum-v3-qualified/executions.jsonl": "63e16d5e98ed6dc4706e0f7c4efd2699c1e3cee25e49656fba6bfdd6cac7aa2b",
+    "output/decision-curriculum-v3-qualified/qualification.json": "4a183525f5e433fc632c1ac685302cd211d8a8a5eade1b753911a230c4dbabfc",
+    "output/decision-curriculum-v3-qualified/questions.jsonl": "07a7b2f52dc4a1ba7b3a7f22502c1493d46191acc539b2b73eb3fd9ef57588f0",
+    "output/expanded-decisions-cloud-v1/artifact-hashes.json": "bd59c758a368865e3c6c1b6d1c4a121bfff521d34c0b57e00477cbc6348633df",
+    "output/expanded-decisions-cloud-v1/data/freeze.json": "838d3c3ba19292ec80cd4618a641c74ada72b802a2243bce37cdf50b8e3daf90",
+    "output/expanded-decisions-cloud-v1/data/validation-cases.jsonl": "260a667962a30f57b3bbca484272fa469bc177d2ff5937b1332bb0c0abbd3f9a",
+    "output/expanded-decisions-cloud-v1/data/validation-forecasts.jsonl": "7288ebd3097f2167b9f6b19df6bdf444893276b3464fbed57f143c83cb16e882",
+    "output/expanded-decisions-cloud-v1/run/hybrid-1507/run.json": "c982f2c5c207a04379d99a64ab807702e914f7cd4ab605ec6b46150522d8cd60",
+    "output/expanded-decisions-cloud-v1/run/hybrid-1507/update-40-validation-forecasts.jsonl": "c9892488759e79dee764ef0f9940577750a90afd3eb3bded7ad8e9cd90abcfa6",
+    "output/expanded-decisions-cloud-v1/run/hybrid-1609/run.json": "b8ac4fe5279c92a900948085da94f6d3385c036f5b9b052afbfd55f58eedaada",
+    "output/expanded-decisions-cloud-v1/run/hybrid-1609/update-40-validation-forecasts.jsonl": "f90ab7bebdede82174f15698142d41b848fd3e59a7d811cdcd913572620ff378",
+    "output/expanded-decisions-cloud-v1/run/outcome-1507/baseline-validation-forecasts.jsonl": "7d89471588eb6660347137653f5847ef28addd66a53386217a9ef3fbca97fefd",
+    "output/expanded-decisions-cloud-v1/run/outcome-1507/run.json": "7d8b3917b6d333e97becb05630c2c8b10341f5b8d41b930219cd5b6bc4543d5e",
+    "output/expanded-decisions-cloud-v1/run/outcome-1507/update-40-validation-forecasts.jsonl": "735ef55052de1e29e00e5c8f648754cb5fa2ea7dce1fc8f1e9794cd553ca4ea4",
+    "output/expanded-decisions-cloud-v1/run/outcome-1609/run.json": "7ab22a0bb1a94f745adfddc14af070f8a6abe32833a38cf764c8161a4eda167a",
+    "output/expanded-decisions-cloud-v1/run/outcome-1609/update-10-validation-forecasts.jsonl": "8ea4ea6d9000f8e99332d5df27d4cd1cd7341c6cb6c78c3e3173fffef739ebc8",
+    "output/expanded-decisions-cloud-v1/run/reward-1507/run.json": "65aafd88ba6811f24314515c6712a51155695e5d739bc925d60c3e12050e6f37",
+    "output/expanded-decisions-cloud-v1/run/reward-1507/update-20-validation-forecasts.jsonl": "a4deab727a6f68413c9b35a02afa7559497f50d6e247c9013e64dd1cbc9c94ab",
+    "output/expanded-decisions-cloud-v1/run/reward-1609/run.json": "533efccd2bd0fabd29f083be4c8801a6dbe30339b308f499cc6334f757a72a1a",
+    "output/expanded-decisions-cloud-v1/run/reward-1609/update-40-validation-forecasts.jsonl": "70736dd0314b5a98b16f25469c1baf4749cf08a88c0fc54839b5940158d46a6f",
+    "results/expanded-decisions-v1-final/audit.json": "f5112d65c2179ef530d1f6f8badfb3b363f137faba6444c00fe178bd70b4ddd1",
+    "scale_lab/common.py": "530ff8df7086e1fb909f41d8d81210ded9e18febd9846fac5acf9b255edc1e6e",
+    "test_forecast_selector.py": "1225b29632cec3792d35da3095b82970862308b08faa10481382b9089f1ecc73",
+    "tool_lab/forecast_selector.py": "544fb75ee03b08948f50e02465a5b029a67b257c8a6dc0707fc2123e94abfa94"
+  },
+  "predictors": {
+    "hybrid-1507": {
+      "path": "output/expanded-decisions-cloud-v1/run/hybrid-1507/update-40-validation-forecasts.jsonl",
+      "selected_update": 40,
+      "trainable_sha256": "3dbb1cd2d58c92651974290644e6122aaab2542805237bf39625d6384980dce0"
+    },
+    "hybrid-1609": {
+      "path": "output/expanded-decisions-cloud-v1/run/hybrid-1609/update-40-validation-forecasts.jsonl",
+      "selected_update": 40,
+      "trainable_sha256": "5e1fe5fde77a2642730c48c7e16cbbc701888a1fcb49b7190f1d0d47b8665681"
+    },
+    "original": {
+      "path": "output/expanded-decisions-cloud-v1/run/outcome-1507/baseline-validation-forecasts.jsonl",
+      "selected_update": 0,
+      "trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27"
+    },
+    "outcome-1507": {
+      "path": "output/expanded-decisions-cloud-v1/run/outcome-1507/update-40-validation-forecasts.jsonl",
+      "selected_update": 40,
+      "trainable_sha256": "f19ea825512fa0391ca82e9a4a137f8b4598b5150bf8e7f4393b6ae92549bbc8"
+    },
+    "outcome-1609": {
+      "path": "output/expanded-decisions-cloud-v1/run/outcome-1609/update-10-validation-forecasts.jsonl",
+      "selected_update": 10,
+      "trainable_sha256": "2cec7f4ba56f88f51263378c82c3180ac8ef5519cd41f4d2384ccac226d3f62a"
+    },
+    "reward-1507": {
+      "path": "output/expanded-decisions-cloud-v1/run/reward-1507/update-20-validation-forecasts.jsonl",
+      "selected_update": 20,
+      "trainable_sha256": "d0731299c1bdc58c7b10e6b3b78e9d4cf33f6d2248a5e2ae6eaaf2d8ac3e8677"
+    },
+    "reward-1609": {
+      "path": "output/expanded-decisions-cloud-v1/run/reward-1609/update-40-validation-forecasts.jsonl",
+      "selected_update": 40,
+      "trainable_sha256": "65c72337adaf24ed259e4bbb2c5855e2d049c2dedffe958ee3cc5104a5822e2d"
+    }
+  },
+  "scoring": "p_completed-p_incorrect-public_immediate_cost",
+  "tie_break": "lexicographic_action_id",
+  "version": "forecast-selector-v1"
+}

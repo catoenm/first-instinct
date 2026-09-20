@@ -1,0 +1,133 @@
+{
+  "status": "partial_qualification_no_training_release",
+  "source_commit": "42b5bcf3cd334fee33f0c37c02070a9f5807add5",
+  "data_bundle": {
+    "status": "downloaded_and_unpacked",
+    "upstream_commit": "42b5bcf3cd334fee33f0c37c02070a9f5807add5",
+    "version": "0.2.0",
+    "url": "https://s3.us-west-2.amazonaws.com/appworld.dev/data-0.2.0.bundle",
+    "bytes": 34908601,
+    "uncompressed_bytes": 174032410,
+    "sha256": "c9299e6cafe92bce4592a3c117c047c973d1554a667c21dd81537e78ab2f532e",
+    "created_unix": 1789942841.578132,
+    "model_calls": 0,
+    "task_executions": 0
+  },
+  "train_task_instances": 90,
+  "train_generator_programs": 30,
+  "candidate_programs_before_verification": 23,
+  "candidate_instances_before_verification": 69,
+  "reserved_mechanism": "venmo workflows",
+  "reserved_programs": 7,
+  "reserved_instances": 21,
+  "reserved_task_executions": 0,
+  "planned_task_programs": 4,
+  "qualified_task_programs": 2,
+  "quarantined_task_programs": 2,
+  "isolated_world_attempts": 12,
+  "reference_executions": 4,
+  "reference_replays": 4,
+  "noop_attempts": 4,
+  "application_calls": 62,
+  "earlier_rejected_wrapper_attempts": 1,
+  "total_world_attempts_including_earlier_wrapper": 13,
+  "model_calls": 0,
+  "gpu_rentals": 0,
+  "training_questions_prepared": 0,
+  "training_questions_consumed": 0,
+  "optimizer_steps": 0,
+  "interpretation": "Two workflows satisfy the strict no-op/reference/replay contract; two remain quarantined. All four references and replays pass. Not an official benchmark score or a qualified decision dataset.",
+  "workflows": [
+    {
+      "index": 0,
+      "apps": [
+        "spotify"
+      ],
+      "qualified": true,
+      "tests": 2,
+      "reference_api_calls": 5,
+      "reference_and_replay_pass": true,
+      "replay_exact": true,
+      "noop_fails_cleanly": true,
+      "failure": null
+    },
+    {
+      "index": 1,
+      "apps": [
+        "simple_note"
+      ],
+      "qualified": false,
+      "tests": 8,
+      "reference_api_calls": 7,
+      "reference_and_replay_pass": true,
+      "replay_exact": true,
+      "noop_fails_cleanly": false,
+      "failure": "Dependent evaluator variable is unset after a failed assertion; propagated as infrastructure failure by strict wrapper."
+    },
+    {
+      "index": 2,
+      "apps": [
+        "file_system"
+      ],
+      "qualified": true,
+      "tests": 8,
+      "reference_api_calls": 9,
+      "reference_and_replay_pass": true,
+      "replay_exact": true,
+      "noop_fails_cleanly": true,
+      "failure": null
+    },
+    {
+      "index": 3,
+      "apps": [
+        "phone",
+        "simple_note"
+      ],
+      "qualified": false,
+      "tests": 8,
+      "reference_api_calls": 10,
+      "reference_and_replay_pass": true,
+      "replay_exact": true,
+      "noop_fails_cleanly": false,
+      "failure": "Dependent evaluator variable is unset after a failed assertion; propagated as infrastructure failure by strict wrapper."
+    }
+  ],
+  "dependencies_sha256": "9a137c6589f7d47eea00f20b0cc2c71a6d3263cbb500d61a6146ec56d9f33391",
+  "protected_receipts_sha256": {
+    "output/appworld-local-v1-retry1/2-reference.log": "81bfe0b463ddc3c04d839928cc3a119d5e040188651299254503ef3eca63e6d4",
+    "output/appworld-local-v1-retry1/2-noop-receipt-private.json": "2a0d43d98834fe1ca3eea4541f133eb8c49b50e05eacdeeeaf4d3a3f7d531d6c",
+    "output/appworld-local-v1-retry1/3-reference-receipt-private.json": "0dd5f3af30f8e0633b175d95d30e0f7e76ca07ddefe96697b65888a8ad40726f",
+    "output/appworld-local-v1-retry1/1-reference.log": "6acba52f6eff47918cc85dacd4ed6c3cbaac445dc9a62eae9924fc16693c058f",
+    "output/appworld-local-v1-retry1/continuation-review.json": "163f51efab3d5f87eb665a5eb1a56d5443a1e88c1ce8d38d4c970094cc2310c6",
+    "output/appworld-local-v1-retry1/3-reference_replay.log": "8edb20d87a48cdb99d21aaecbb67cdebd735003d4e09530c75cf833733e46b6b",
+    "output/appworld-local-v1-retry1/2-noop.log": "5673d2dfda48ad1956e767f24e0d500373a79acb5213bc5b78d0a0948c009f01",
+    "output/appworld-local-v1-retry1/3-noop.log": "c5715bdaeb57809ffd0f04c149f527775b15fdb89c1ea5596a4c85208c4015cc",
+    "output/appworld-local-v1-retry1/0-noop-receipt-private.json": "18f335d7e3bcea45602929c92b07bcedae10475d9e4e07cc0bb749ac94607a39",
+    "output/appworld-local-v1-retry1/2-reference-receipt-private.json": "0aee2a1946d968844898d6d4a8f4f898f587fe69598d231aebbf5dc7e5004fb9",
+    "output/appworld-local-v1-retry1/2-reference_replay.log": "8239c2e7ffb0f4bb1885588aa1ca90115c64ce539036f53cb618a7eb2f7b03d2",
+    "output/appworld-local-v1-retry1/1-noop.log": "b24d5c15e7711de18c3dc90bc824130910efd10e3f0695e7977f18cadfa2b2aa",
+    "output/appworld-local-v1-retry1/0-noop.log": "f317bea25c9128745285011b6dcc7c4fc4e7e5672c10c6d293be891f6321597e",
+    "output/appworld-local-v1-retry1/1-reference-receipt-private.json": "79232cc487034ec76c5f335f735b07d4769e6537d3e1bd3a7e227817778bb5f4",
+    "output/appworld-local-v1-retry1/dependencies.txt": "9a137c6589f7d47eea00f20b0cc2c71a6d3263cbb500d61a6146ec56d9f33391",
+    "output/appworld-local-v1-retry1/1-reference_replay.log": "9175a18f2470709008a6f5eed42f21b25917708d78dee8ae854881593680b239",
+    "output/appworld-local-v1-retry1/2-reference_replay-receipt-private.json": "cadba82e1559b81735115894d27d14349b3b272ad52d0d2251df3f80c734ccba",
+    "output/appworld-local-v1-retry1/3-reference_replay-receipt-private.json": "8c601e58415e9d944a34b57ae43ed1a3c825c31e5ab32e03f078907cca427043",
+    "output/appworld-local-v1-retry1/0-reference_replay-receipt-private.json": "b6427ad16527b379ca6e73957c9fc844ab8a35e14329a06eeb44a6f89b431e91",
+    "output/appworld-local-v1-retry1/1-reference_replay-receipt-private.json": "64cf490e79cb21374e1d57c45c22326f69f8c8c2e349b7943e2de3ad4c64cbcf",
+    "output/appworld-local-v1-retry1/freeze-private.json": "aa80a507f384cb6b78fcdae5e8d56d41354a5b04fc27115f7883f60acdcc97e1",
+    "output/appworld-local-v1-retry1/0-reference-receipt-private.json": "80614e65417959401bdc1fb0242b002c3e21f953720b7bfca41343a9ac3e4673",
+    "output/appworld-local-v1-retry1/0-reference_replay.log": "305e3f24fa872cb2c6b002908e2795e04c69a314a99d9a19d29918ac40fb9429",
+    "output/appworld-local-v1-retry1/0-reference.log": "7057bad3c83045dcdaaa9491c0b42dfaea01afbbb0da19d20120dab39aca7083",
+    "output/appworld-local-v1-retry1/independent-continuation-errors.json": "27c5d1531b3edf87a22244fa1ccc45893ad678caf044cda95deaa6689f466cca",
+    "output/appworld-local-v1-retry1/3-reference.log": "76e397b4f775670bb072a74f89e155b35c3b77d49d68bc0b0fda3712a78897ef",
+    "output/appworld-local-v1-retry1/REJECTED.json": "45549b0c58dcaa3a32493bbda97a5ec2fb195d043588e425e2fdcb635588e06d",
+    "output/appworld-local-v1/0-noop.log": "6ed9651d027acb0248722c50e8e9adac413c7bad7c16f54603787b5278acf79d",
+    "output/appworld-local-v1/dependencies.txt": "9a137c6589f7d47eea00f20b0cc2c71a6d3263cbb500d61a6146ec56d9f33391",
+    "output/appworld-local-v1/freeze-private.json": "bdaef5d54718b562a1b041ddb78dcfe1be3287f72ad485655994370eb8521140",
+    "output/appworld-local-v1/REJECTED.json": "a2de4b4d239acbf96b620a673292a5486d6bbac9420f753813f0dbb5472b9a8f",
+    "output/appworld-local-v1/rejected-sources/run-appworld-qualification-v1.py": "155df38757756fec948081a6b60357c2cb2285b12369cf3acb68e50b67d0cb4e",
+    "output/appworld-local-v1/rejected-sources/appworld_qualification.py": "e3364ef4ca49379eba82b21f610dd553853c74f318f79daa92a429ffeb0ab5f2",
+    "output/appworld-local-v1/rejected-sources/appworld-local-v1-protocol.md": "a87fe003520c2d1c872ce73545c3916430da1a1956765628c8bb9749a1a7e2b7"
+  },
+  "protected_material_publicly_redistributed": false
+}
