@@ -62,13 +62,17 @@ def cached_development(cache,name,directory):
     for n,h in snapshot['files'].items():
         if sha(directory/n)!=h:raise ValueError('Recovered development receipt differs from audited snapshot')
     result=read(cache/audit_name);selected=read(cache/selection_name)
-    if (result['status']!='passed' or selected['status']!='passed' or
-        result['source_sha256']!=sha(Path(evaluation.__file__)) or selected['source_sha256']!=sha(Path(selection.__file__))):
-        raise ValueError('Cached development audit uses a different auditor')
+    if result['status']!='passed' or selected['status']!='passed':
+        raise ValueError('Cached development audit did not pass')
     receipt=read(directory/'run.json')
     if (result['arm']!=receipt['arm'] or result['seed']!=receipt['seed'] or
         result['selected_update']!=receipt['selected_update'] or selected['selected_update']!=receipt['selected_update']):
         raise ValueError('Cached audit belongs to a different arm or selected checkpoint')
+    if (result['source_sha256']!=sha(Path(evaluation.__file__)) or
+        selected['source_sha256']!=sha(Path(selection.__file__))):
+        # Preserve the old, byte-verified report but recompute with the current
+        # auditor. A source revision must never silently inherit its approval.
+        return None
     return result,selected
 
 

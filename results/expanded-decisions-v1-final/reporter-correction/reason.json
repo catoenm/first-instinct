@@ -1,0 +1,6 @@
+{
+  "at": 1789942010.48655,
+  "type": "reporter_schema_mismatch",
+  "detail": "Calendar task-count helper expected goal field, but frozen cases store request plus initial_events. No training data, model, metric or selection changes. Correct independent task accounting and rerun reporting; retain old audits.",
+  "freeze_sha256": "838d3c3ba19292ec80cd4618a641c74ada72b802a2243bce37cdf50b8e3daf90"
+}

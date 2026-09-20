@@ -92,3 +92,20 @@ Its 25-file development snapshot is 4,088,176 compressed bytes, SHA256
 `6070de43f08cf9bb2c25d1c071fbf8f706006ddb2b052715fa50245fef031a04`.
 The `hybrid-1507` manifests and audit reports preserve those receipts separately.
 No final-test scores or model weights are included in this partial-study folder.
+
+## Second-seed development
+
+The completed combined and reward-only arms at seed 1609 also passed the same
+independent evaluation, consumption, selection and stop audits. Each completed
+40 accepted updates without rejection and selected update 40. The final transfer
+results remain sealed at the time these development snapshots were taken.
+
+| Arm | Live episodes | Policy presentations / IDs | Forecast presentations / IDs | Replay presentations / IDs | Development return | Expected Brier | Retention accuracy |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Combined / 1609 | 1,200 | 2,956 / 1,629 | 800 / 800 | 640 / 592 | 0.403889 | 0.540015 | 0.868365 |
+| Reward-only / 1609 | 1,200 | 2,965 / 1,645 | 0 / 0 | 640 / 592 | 0.402778 | 0.635309 | 0.866773 |
+
+Each arm covers all five training mechanisms, 268 cases and 40 world-and-goal
+tasks. The per-arm manifests and hashes bind each 25-file snapshot to its audits.
+Diagnostic backward presentations remain separate from optimizer consumption.
+These are development results used for selection, not evidence of transfer.

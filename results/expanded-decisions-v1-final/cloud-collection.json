@@ -1,0 +1,19 @@
+{
+  "archive_sha256": "04ce1cc38f42edb32484f6a9177e032ee0b7aa147a47f38e57437c0c50a4cd05",
+  "archive_bytes": 1983749467,
+  "pipeline_status": "complete",
+  "verified_files": 514,
+  "created_at": 1789876272.692818,
+  "stop_requested_at": 1789941905.7917628,
+  "deleted_at": 1789941953.9624891,
+  "gpu_hourly_rate_usd": 4.59,
+  "estimated_compute_usd_excluding_storage": 27.939532834672452,
+  "pod_deleted": true,
+  "remaining_pod_count": 0,
+  "stop_time_source": "recovery_collector_request",
+  "observed_stopped_or_absent_at": 1789941953.961789,
+  "compute_estimate_time_source": "provider-reported initial billed duration plus separately bounded recovery sessions; excludes stopped interval",
+  "initial_provider_billed_seconds": 21599.48,
+  "recovery_seconds_upper_bound": 313.87908601760864,
+  "recovery_plan_sha256": "977e6db51db3597454220a73edb98231c26be57560cd735967a10153c5a63b83"
+}

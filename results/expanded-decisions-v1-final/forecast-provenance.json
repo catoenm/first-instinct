@@ -1,0 +1,36 @@
+{
+  "by_mechanism": {
+    "application_delivery": {
+      "inputs": 267,
+      "source_questions": 833,
+      "distinct_source_branch_references": 833,
+      "uncertain_inputs": 62
+    },
+    "config": {
+      "inputs": 233,
+      "source_questions": 381,
+      "distinct_source_branch_references": 381,
+      "uncertain_inputs": 29
+    },
+    "filesystem_scope": {
+      "inputs": 212,
+      "source_questions": 530,
+      "distinct_source_branch_references": 530,
+      "uncertain_inputs": 24
+    },
+    "reservation": {
+      "inputs": 296,
+      "source_questions": 357,
+      "distinct_source_branch_references": 393,
+      "uncertain_inputs": 54
+    },
+    "sqlite": {
+      "inputs": 233,
+      "source_questions": 384,
+      "distinct_source_branch_references": 384,
+      "uncertain_inputs": 33
+    }
+  },
+  "total_source_branch_references": 2521,
+  "note": "Primary executed branch references supporting consumed forecasts. Namespace is the source mechanism. These are not new branch executions during training."
+}

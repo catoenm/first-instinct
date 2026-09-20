@@ -1,0 +1,184 @@
+{
+  "checked_at": 1789941964.4505332,
+  "source": "https://docs.runpod.io/api-reference/billing/GET/billing/pods",
+  "query": {
+    "grouping": "podId",
+    "bucketSize": "day",
+    "startTime": "2026-09-16T00:00:00Z",
+    "endTime": "2026-09-22T00:00:00Z"
+  },
+  "owned_pod_ids": [
+    "3rklzrmj4aduso",
+    "4i4s8d45h4l8x5",
+    "8855xkhg673arr",
+    "8cnqsi7ubfcpw3",
+    "8dh19d15o9qv5e",
+    "8p34xvbytg3gn8",
+    "8rebz8r0b02j0x",
+    "a2s0f7rnfe3f83",
+    "cloz053h1qu3g2",
+    "jhzin6hgu6dby0",
+    "lh0xu7fcpmlsit",
+    "n125noh3k5no67",
+    "v0czn1eilbfxo0",
+    "zjxyb21a8esi4f"
+  ],
+  "records": {
+    "3rklzrmj4aduso": [
+      {
+        "amount": 0.46943939267657697,
+        "timeBilledMs": 366463,
+        "diskSpaceBilledGB": 200,
+        "podId": "3rklzrmj4aduso",
+        "time": "2026-09-19 00:00:00"
+      }
+    ],
+    "4i4s8d45h4l8x5": [
+      {
+        "amount": 2.375449133804068,
+        "timeBilledMs": 2945917,
+        "diskSpaceBilledGB": 400,
+        "podId": "4i4s8d45h4l8x5",
+        "time": "2026-09-18 00:00:00"
+      }
+    ],
+    "8855xkhg673arr": [
+      {
+        "amount": 0.5148206106387079,
+        "timeBilledMs": 400876,
+        "diskSpaceBilledGB": 300,
+        "podId": "8855xkhg673arr",
+        "time": "2026-09-19 00:00:00"
+      }
+    ],
+    "8cnqsi7ubfcpw3": [
+      {
+        "amount": 5.474489871645346,
+        "timeBilledMs": 4276016,
+        "diskSpaceBilledGB": 1500,
+        "podId": "8cnqsi7ubfcpw3",
+        "time": "2026-09-19 00:00:00"
+      },
+      {
+        "amount": 7.344388389261439,
+        "timeBilledMs": 5737338,
+        "diskSpaceBilledGB": 2000,
+        "podId": "8cnqsi7ubfcpw3",
+        "time": "2026-09-20 00:00:00"
+      }
+    ],
+    "8dh19d15o9qv5e": [
+      {
+        "amount": 6.1732276699040085,
+        "timeBilledMs": 4823501,
+        "diskSpaceBilledGB": 1600,
+        "podId": "8dh19d15o9qv5e",
+        "time": "2026-09-19 00:00:00"
+      }
+    ],
+    "8p34xvbytg3gn8": [
+      {
+        "amount": 33.889309369027615,
+        "timeBilledMs": 26475457,
+        "diskSpaceBilledGB": 8900,
+        "podId": "8p34xvbytg3gn8",
+        "time": "2026-09-19 00:00:00"
+      }
+    ],
+    "8rebz8r0b02j0x": [
+      {
+        "amount": 1.7411063506733626,
+        "timeBilledMs": 1787507,
+        "diskSpaceBilledGB": 600,
+        "podId": "8rebz8r0b02j0x",
+        "time": "2026-09-18 00:00:00"
+      }
+    ],
+    "a2s0f7rnfe3f83": [
+      {
+        "amount": 0.11831399495713413,
+        "timeBilledMs": 145939,
+        "diskSpaceBilledGB": 100,
+        "podId": "a2s0f7rnfe3f83",
+        "time": "2026-09-18 00:00:00"
+      }
+    ],
+    "cloz053h1qu3g2": [
+      {
+        "amount": 0.3098577169002965,
+        "timeBilledMs": 242481,
+        "diskSpaceBilledGB": 100,
+        "podId": "cloz053h1qu3g2",
+        "time": "2026-09-19 00:00:00"
+      }
+    ],
+    "jhzin6hgu6dby0": [
+      {
+        "amount": 33.22738163918257,
+        "timeBilledMs": 17082174,
+        "diskSpaceBilledGB": 5800,
+        "podId": "jhzin6hgu6dby0",
+        "time": "2026-09-18 00:00:00"
+      }
+    ],
+    "lh0xu7fcpmlsit": [
+      {
+        "amount": 1.848134752130136,
+        "timeBilledMs": 2291650,
+        "diskSpaceBilledGB": 320,
+        "podId": "lh0xu7fcpmlsit",
+        "time": "2026-09-17 00:00:00"
+      }
+    ],
+    "n125noh3k5no67": [
+      {
+        "amount": 17.776476297760382,
+        "timeBilledMs": 13886325,
+        "diskSpaceBilledGB": 4800,
+        "podId": "n125noh3k5no67",
+        "time": "2026-09-19 00:00:00"
+      }
+    ],
+    "v0czn1eilbfxo0": [
+      {
+        "amount": 64.09878348268103,
+        "timeBilledMs": 12552866,
+        "diskSpaceBilledGB": 4300,
+        "podId": "v0czn1eilbfxo0",
+        "time": "2026-09-18 00:00:00"
+      }
+    ],
+    "zjxyb21a8esi4f": [
+      {
+        "amount": 27.740610248642042,
+        "timeBilledMs": 21599480,
+        "diskSpaceBilledGB": 20700,
+        "podId": "zjxyb21a8esi4f",
+        "time": "2026-09-20 00:00:00"
+      }
+    ]
+  },
+  "totals_usd": {
+    "3rklzrmj4aduso": 0.46943939267657697,
+    "4i4s8d45h4l8x5": 2.375449133804068,
+    "8855xkhg673arr": 0.5148206106387079,
+    "8cnqsi7ubfcpw3": 12.818878260906786,
+    "8dh19d15o9qv5e": 6.1732276699040085,
+    "8p34xvbytg3gn8": 33.889309369027615,
+    "8rebz8r0b02j0x": 1.7411063506733626,
+    "a2s0f7rnfe3f83": 0.11831399495713413,
+    "cloz053h1qu3g2": 0.3098577169002965,
+    "jhzin6hgu6dby0": 33.22738163918257,
+    "lh0xu7fcpmlsit": 1.848134752130136,
+    "n125noh3k5no67": 17.776476297760382,
+    "v0czn1eilbfxo0": 64.09878348268103,
+    "zjxyb21a8esi4f": 27.740610248642042
+  },
+  "provider_reported_total_usd": 203.1017889198847,
+  "original_authorization_usd": 500,
+  "provider_reported_remaining_usd": 296.8982110801153,
+  "expanded_pilot_reported_usd": 27.740610248642042,
+  "remaining_provider_pod_count": 0,
+  "note": "Provider-reported accrued charges may not yet include the full recovery restart. No stopped interval is counted as GPU runtime by the local estimate; preserve the separate recovery estimate until billing settles.",
+  "conservative_remaining_after_full_pilot_reservation_usd": 284.63882132875733
+}

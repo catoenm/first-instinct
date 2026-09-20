@@ -73,7 +73,7 @@ def task_counts(cases):
         elif f=='application_delivery':key=(c['ledger'],c['connection'],c['goal'])
         elif f=='filesystem_scope':key=(tuple(c['partition']),c['goal'])
         elif f=='reservation':key=c['world']
-        elif f=='calendar':key=(c['structure'],c['world'],c['goal'])
+        elif f=='calendar':key=json.dumps([c['initial_events'],c['request']],sort_keys=True,separators=(',',':'))
         else:raise ValueError('Unknown task mechanism')
         tasks.add((f,key))
     return dict(context_cases=len({c['id'] for c in cases}),authored_root_groups=len({c['group_id'] for c in cases}),

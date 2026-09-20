@@ -1,0 +1,38 @@
+{
+  "live_training_episodes": 4800,
+  "underlying_training_tasks": {
+    "context_cases": 268,
+    "authored_root_groups": 6,
+    "world_goal_tasks": 40,
+    "mechanisms": 5
+  },
+  "objectives": {
+    "outcome": {
+      "completed_presentations": 3000,
+      "distinct_question_ids": 1241,
+      "distinct_model_token_inputs": 1241,
+      "repeated_question_presentations": 1759
+    },
+    "policy": {
+      "completed_presentations": 11938,
+      "distinct_question_ids": 3280,
+      "distinct_model_token_inputs": 2714,
+      "repeated_question_presentations": 8658
+    },
+    "replay": {
+      "completed_presentations": 3680,
+      "distinct_question_ids": 1100,
+      "distinct_model_token_inputs": 1100,
+      "repeated_question_presentations": 2580
+    }
+  },
+  "diagnostic_presentations": {
+    "actor": 338,
+    "value": 338,
+    "outcome": 80,
+    "replay": 96
+  },
+  "accepted_updates": 230,
+  "rejected_updates": 0,
+  "note": "Token-input identity uses exact token IDs and offered-choice count. Question identities can differ for identical visible inputs in different worlds. Counts pool all arms; shared inputs and repeated presentations are not new underlying tasks. Evaluation episodes and preexecuted forecast-label branches are separate."
+}

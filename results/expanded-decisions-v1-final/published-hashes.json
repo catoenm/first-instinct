@@ -1,0 +1,18 @@
+{
+  "README.md": "5b1ff17a7b42050521308a105f375be6b284af69fdcdc84410a1614fb490d85b",
+  "advancement.json": "eabe0962933fc2a2005d16442cd8ce83a76f1d4da5f2507021150aec3e73d109",
+  "audit.json": "f5112d65c2179ef530d1f6f8badfb3b363f137faba6444c00fe178bd70b4ddd1",
+  "checkpoint-audit.json": "c6db7ab1604bcbefd44a7d5531188c6f85bef7f5074e42f6b1aa3489cba2a9d1",
+  "cloud-collection.json": "978e61c9283f5a4af07caa1ff7d99a918767b8fa307b8cbeac47ade3c9496604",
+  "consumption.json": "465d9063d59b4a23b508e9245f51fed523818f5869b9cda58ec390a50fe002e4",
+  "forecast-provenance.json": "1245d5608d4ec975c08a261da7c074c212703dc5242165c02804b102fb0c28c0",
+  "freeze.json": "838d3c3ba19292ec80cd4618a641c74ada72b802a2243bce37cdf50b8e3daf90",
+  "provider-billing.json": "b29cc1481e3f0f759c480b89253700e49909048c145fa56f61c53d53acdeee73",
+  "receipt-archive.json": "36a0bb726fd8b667f129da920c1b8ebdcdf9da51fe4499e56d1b0c93e5a4e35b",
+  "receipt-hashes.json": "97ec9e10fd7a3da64eec6d15dca31dd13810ec47541b6dded0a2bc9d694a6a12",
+  "receipts.tar.gz": "72ba9c67665c9190e27a4c9b6ddf5a93dc2f401a420b6ebc8dc4305972fb214e",
+  "reporter-correction/expanded_evaluation_audit.py": "1dc805b150239ae1e4a96736468ff7ae5b995045a2ddef36f6930f9f9703af70",
+  "reporter-correction/expanded_final_audit.py": "e2894c01f4e6397970bb6432a6f407ac7ea04192eeb1ab3e4d52830cd61566d6",
+  "reporter-correction/failure.log": "2733c3d478beeb858956df19d8c66f7046e44bd2a758abe6cd8d86e3faa2ed61",
+  "reporter-correction/reason.json": "9adf3df8d1c428212288cc7aea2688069d3746e0603d10730d64ec4746be1447"
+}

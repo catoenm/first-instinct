@@ -6,6 +6,7 @@ import tarfile
 import unittest
 
 from tool_lab.expanded_final_audit import verify_files,consumption,audit,cached_development
+from tool_lab import expanded_evaluation_audit as evaluation,expanded_selection_audit as selection
 
 
 def write(p,value):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(value))
@@ -61,6 +62,24 @@ class ExpandedFinalAuditTests(unittest.TestCase):
             root=Path(d);write(root/'cloud-collection.json',{'pipeline_status':'training','pod_deleted':False})
             with self.assertRaisesRegex(ValueError,'sealed'):audit(root,root/'absent-archive',root/'absent-parent',root/'absent-cache',None)
             self.assertIsNone(cached_development(root,'hybrid-1609',root/'absent-arm'))
+
+    def test_changed_auditor_requires_recomputation_and_receipts_still_verify(self):
+        with TemporaryDirectory() as d:
+            root=Path(d);cache=root/'cache';arm=root/'arm';name='hybrid-1609'
+            write(arm/'run.json',dict(arm='hybrid',seed=1609,selected_update=40))
+            report=dict(status='passed',arm='hybrid',seed=1609,selected_update=40,
+                        source_sha256=sha(Path(evaluation.__file__)))
+            selected=dict(status='passed',selected_update=40,source_sha256=sha(Path(selection.__file__)))
+            write(cache/(name+'-audit.json'),report);write(cache/(name+'-selection.json'),selected)
+            write(cache/(name+'-snapshot-manifest.json'),{'files':{'run.json':sha(arm/'run.json')}})
+            def manifest():
+                names=[name+'-'+x+'.json' for x in ('audit','selection','snapshot-manifest')]
+                write(cache/(name+'-hashes.json'),{n:sha(cache/n) for n in names})
+            manifest();self.assertIsNotNone(cached_development(cache,name,arm))
+            report['source_sha256']='old-auditor';write(cache/(name+'-audit.json'),report);manifest()
+            self.assertIsNone(cached_development(cache,name,arm))
+            write(arm/'run.json',dict(arm='hybrid',seed=1609,selected_update=30))
+            with self.assertRaisesRegex(ValueError,'receipt differs'):cached_development(cache,name,arm)
 
 
 if __name__=='__main__':unittest.main()

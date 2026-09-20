@@ -1,0 +1,33 @@
+{
+  "scope": "Completed hybrid-1609 development-only receipts",
+  "path": "/workspace/expanded-development-hybrid-1609.tar.gz",
+  "files": {
+    "update-40-validation-metrics.json": "88320b5d7c9bf6654e9e7cca0dd06a9a345a0750fc15758a662747940b7e8f27",
+    "update-40-validation-retention-predictions.jsonl": "bd57a53d4cc1c635c2a5e2020d491ce631a78e352bace1b965129d3c5882a2b0",
+    "update-40-validation-forecasts.jsonl": "f90ab7bebdede82174f15698142d41b848fd3e59a7d811cdcd913572620ff378",
+    "update-40-validation-trajectories.jsonl": "ec059efe98ba05f3617b85a765701d2f694d0eb687d7fee3569c2b2bea43ca00",
+    "update-30-validation-metrics.json": "8dca6757126a7fcf1a0e7f4783c756fed7fe6c9e89ed0c203e35131029aba419",
+    "update-30-validation-retention-predictions.jsonl": "6ae8d8c7c4ab41301dfc3b311d42ab3be895647b97d769d781fef00182cb26c6",
+    "update-30-validation-forecasts.jsonl": "f8ce2c4410c483ab82c170bca2358c53d96e487e9d6283dd569356ad01d75c94",
+    "update-30-validation-trajectories.jsonl": "1f417856da0ab65bbba0ed3cbc7ecf5d6742601c3d918d23d6988145703f6c17",
+    "update-20-validation-metrics.json": "3ae7c60868af2817dd2bf77570c81b83da70c4c2895d2df6fb5157825fd189bf",
+    "update-20-validation-retention-predictions.jsonl": "2cc7c9e78de169c24bc470730d76fef206a83bfb0403feba2e98f3d6561d08b7",
+    "update-20-validation-forecasts.jsonl": "8bd913bd8bb9a8091a201ae00cd001d9fe82ce0e2d0bda15bf9bb88229fc773f",
+    "update-20-validation-trajectories.jsonl": "502a68cc05e8b70be2cf9e3158ebbec2e5287b36b4695febf86f42ca0dd9fe3c",
+    "update-10-validation-metrics.json": "efc3a883e2b856e542a64bed1557687c9b3c093c685a93570a7ac8eebe4f77ef",
+    "update-10-validation-retention-predictions.jsonl": "f99907cd9253ed8dfe06df6695a50fdbdcb92398a59ce709e099f47a7da612ec",
+    "update-10-validation-forecasts.jsonl": "5643d8d5ca3fa6781bd4c699334d1471adff9b9374d7bacdb64ce7c42681197a",
+    "update-10-validation-trajectories.jsonl": "5693195d863b08337382d8205da26e915306e3d19d4bb68e09cd8823f0c63770",
+    "gradient-diagnostic.json": "4a70a8880e1deae886c7d73d92a38185fb80d106dc188d970e91c636087f74ed",
+    "learning-ledger.jsonl": "0410beb1fd301b1a440b3a65de113ec715ec13ea6f76d5c0c6e686eb5904cadf",
+    "rollouts.jsonl": "4302d930e9ab78409e5dbde4dfb6d8fa0555a27ca0ce7567d434fead5cabe229",
+    "training.jsonl": "a55f3679e9e506e253b6a3668a579709514ef579e1df9a3171e2a1860f63df86",
+    "baseline-validation-metrics.json": "07c70891c8d8f2419492c1a66ce0ec3178f9bb0fcc068d22bcb91dff2c07f4e7",
+    "baseline-validation-retention-predictions.jsonl": "44e6d0aff38d0177bd35f6ec8163e784cf6342b8a7f68c770ac5ca6b19078630",
+    "baseline-validation-forecasts.jsonl": "7d89471588eb6660347137653f5847ef28addd66a53386217a9ef3fbca97fefd",
+    "baseline-validation-trajectories.jsonl": "4654e0509df29d0d888f40ce2db05846567bd2bbbb3de789c52713c2586839c3",
+    "run.json": "b8ac4fe5279c92a900948085da94f6d3385c036f5b9b052afbfd55f58eedaada"
+  },
+  "archive_sha256": "e0895bed5a9d83b11b30d4d49e18d56e0cef2f524f64b165ee399054dd136c5f",
+  "bytes": 4055489
+}

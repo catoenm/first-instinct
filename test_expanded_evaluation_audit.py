@@ -58,6 +58,14 @@ class ExpandedEvaluationTests(unittest.TestCase):
         cases=[dict(id=str(i),family='reservation',group_id='reservation-root',world=0,regime=str(i)) for i in range(8)]
         self.assertEqual(task_counts(cases),dict(context_cases=8,authored_root_groups=1,world_goal_tasks=1,mechanisms=1))
 
+    def test_calendar_identity_uses_concrete_database_and_request(self):
+        base=dict(family='calendar',group_id='fold-root',structure='fold_choice',world=0,
+                  initial_events=[[999,'protected']],request={'occurrence':'first'})
+        cases=[dict(base,id=str(i),regime=str(i),read_cost=i) for i in range(4)]
+        cases.append(dict(base,id='second',request={'occurrence':'second'}))
+        cases.append(dict(base,id='other-world',initial_events=[[999,'protected'],[100,'busy']]))
+        self.assertEqual(task_counts(cases),dict(context_cases=6,authored_root_groups=1,world_goal_tasks=3,mechanisms=1))
+
     def test_target_probability_underflow_is_not_silently_clipped(self):
         truth,pred=self.fixture();pred[0]['probabilities']=[1.,0.,0.]
         with self.assertRaisesRegex(ValueError,'underflow'):forecasts(pred,truth)

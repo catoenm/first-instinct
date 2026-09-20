@@ -50,6 +50,17 @@ ensure that gains in one seed or one objective cannot compensate for failure
 in another, and that general-transfer regression fails even if retention passes.
 These offline reporting checks do not alter the frozen training recipe.
 
+The first full recovered-study audit stopped on a calendar task-accounting
+schema error: those cases contain `initial_events` and `request`, not a `goal`
+field. The correction uses the concrete initial database and request, preserving
+the original collection's definition of a world-and-goal task. A new regression
+test distinguishes changed goals/worlds from fees and observation variants.
+The failed audit and its original source files are retained. No model, target,
+selection rule or metric definition changed. Previously cached development
+audits remain intact; a changed auditor now forces fresh reconstruction instead
+of reusing their approval. A fifth final-auditor test checks that fallback while
+still rejecting altered receipts.
+
 Expected Brier score includes irreducible uncertainty; excess error does not.
 The forecast auditor checks both and never uses a prediction as its own label.
 It rejects target-probability underflow that prevents independent log-loss

@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "methods": {
+    "outcome": {
+      "passed": false,
+      "seeds": [
+        {
+          "seed": 1507,
+          "macro_calendar_return_gain": -0.0008333333333332971,
+          "macro_expected_brier_reduction": -0.025309512186828975,
+          "general_retention": {
+            "accuracy_drop": 0.0031847133757961776,
+            "log_loss_increase": 0.00028510811571563766,
+            "passed": true
+          },
+          "general_transfer": {
+            "accuracy_drop": 0.00045289855072461194,
+            "log_loss_increase": -0.005637083689122135,
+            "passed": true
+          },
+          "passed": false
+        },
+        {
+          "seed": 1609,
+          "macro_calendar_return_gain": -0.0008333333333332971,
+          "macro_expected_brier_reduction": -0.013400215422131323,
+          "general_retention": {
+            "accuracy_drop": 0.0037154989384287074,
+            "log_loss_increase": -0.00024476813456913993,
+            "passed": true
+          },
+          "general_transfer": {
+            "accuracy_drop": 0.00045289855072461194,
+            "log_loss_increase": -0.0012486086752185321,
+            "passed": true
+          },
+          "passed": false
+        }
+      ]
+    },
+    "reward": {
+      "passed": false,
+      "seeds": [
+        {
+          "seed": 1507,
+          "macro_calendar_return_gain": 0.008541666666666725,
+          "macro_expected_brier_reduction": -0.001368481285221157,
+          "general_retention": {
+            "accuracy_drop": -0.0010615711252655036,
+            "log_loss_increase": -0.0005682364329243073,
+            "passed": true
+          },
+          "general_transfer": {
+            "accuracy_drop": -0.00045289855072461194,
+            "log_loss_increase": 0.0019863069505381414,
+            "passed": true
+          },
+          "passed": false
+        },
+        {
+          "seed": 1609,
+          "macro_calendar_return_gain": -0.001083333333333325,
+          "macro_expected_brier_reduction": -0.00644068048317592,
+          "general_retention": {
+            "accuracy_drop": 0.0037154989384287074,
+            "log_loss_increase": -0.00032963966663940303,
+            "passed": true
+          },
+          "general_transfer": {
+            "accuracy_drop": -0.0013586956521738358,
+            "log_loss_increase": 0.0010115481519333835,
+            "passed": true
+          },
+          "passed": false
+        }
+      ]
+    },
+    "hybrid": {
+      "passed": false,
+      "seeds": [
+        {
+          "seed": 1507,
+          "macro_calendar_return_gain": -0.0017083333333333672,
+          "macro_expected_brier_reduction": -0.028924816080342586,
+          "general_retention": {
+            "accuracy_drop": 0.005307855626326852,
+            "log_loss_increase": -0.0004975791748129677,
+            "passed": true
+          },
+          "general_transfer": {
+            "accuracy_drop": 0.0022644927536231707,
+            "log_loss_increase": -0.0024818715687279225,
+            "passed": true
+          },
+          "passed": false
+        },
+        {
+          "seed": 1609,
+          "macro_calendar_return_gain": -0.0017083333333333672,
+          "macro_expected_brier_reduction": -0.02653296676715955,
+          "general_retention": {
+            "accuracy_drop": 0.002123142250530674,
+            "log_loss_increase": 7.844615182311943e-05,
+            "passed": true
+          },
+          "general_transfer": {
+            "accuracy_drop": -0.0018115942028985588,
+            "log_loss_increase": -0.004279752551697824,
+            "passed": true
+          },
+          "passed": false
+        }
+      ]
+    }
+  },
+  "passed_methods": [],
+  "comparison_tolerance": 1e-12,
+  "limits": "Descriptive gate on one authored transfer mechanism, three task structures and two seeds. Passing does not establish broad generalization or identify Jev implementation."
+}

@@ -1,6 +1,14 @@
 # Before the next paid learning comparison
 
-**September 20 update:** the stages below are now qualified, not pending work.
+**September 20 closing update:** the [expanded comparison](expanded-decisions-v1-results.md)
+is complete, recovered and independently audited. No method passed the joint
+transfer gate; the rental is deleted and the supervised demo remains unchanged.
+Calendar is now exposed. The next local diagnostic is explicit use of saved
+consequence forecasts for action selection, with matched information and declared
+costs. A later learning recipe needs a fresh reserved mechanism. The earlier
+qualification and pilot checklist below is historical, not pending work.
+
+**Earlier September 20 qualification update:** the stages below are now qualified, not pending work.
 The [live-runtime and learning report](expanded-decisions-v1-qualification.md)
 records exact replay, Linux parity and extracted-package tests. The
 [expanded pilot](expanded-decisions-v1-protocol.md) is frozen and provisioned on

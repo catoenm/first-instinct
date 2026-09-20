@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "arms": {
+    "hybrid-1507": {
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "starting_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "selected_update": 40,
+      "selected_file_sha256": "7c5ef0678d9325665edba55c3fc4ae305fe7dfdd2f6609e0dadd005bc662159e",
+      "selected_tensor_sha256": "3dbb1cd2d58c92651974290644e6122aaab2542805237bf39625d6384980dce0",
+      "selected_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277793,
+        "changed_tensors": 496,
+        "l2_delta": 0.08019355049145022,
+        "max_absolute_delta": 3.8941099774092436e-05
+      },
+      "latest_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277793,
+        "changed_tensors": 496,
+        "l2_delta": 0.08019355049145022,
+        "max_absolute_delta": 3.8941099774092436e-05
+      },
+      "latest_tensor_sha256": "3dbb1cd2d58c92651974290644e6122aaab2542805237bf39625d6384980dce0",
+      "latest_file_sha256": "7c5ef0678d9325665edba55c3fc4ae305fe7dfdd2f6609e0dadd005bc662159e"
+    },
+    "hybrid-1609": {
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "starting_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "selected_update": 40,
+      "selected_file_sha256": "42569af79f933536edc0fb0859fd9caa694286600eccc8b00169de1d1b6b0590",
+      "selected_tensor_sha256": "5e1fe5fde77a2642730c48c7e16cbbc701888a1fcb49b7190f1d0d47b8665681",
+      "selected_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277799,
+        "changed_tensors": 496,
+        "l2_delta": 0.07788764315900036,
+        "max_absolute_delta": 3.931252285838127e-05
+      },
+      "latest_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277799,
+        "changed_tensors": 496,
+        "l2_delta": 0.07788764315900036,
+        "max_absolute_delta": 3.931252285838127e-05
+      },
+      "latest_tensor_sha256": "5e1fe5fde77a2642730c48c7e16cbbc701888a1fcb49b7190f1d0d47b8665681",
+      "latest_file_sha256": "42569af79f933536edc0fb0859fd9caa694286600eccc8b00169de1d1b6b0590"
+    },
+    "original-test": {
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "starting_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a"
+    },
+    "outcome-1507": {
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "starting_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "selected_update": 40,
+      "selected_file_sha256": "2de0a871cbea85d755a2725036c43b3640ceaf09094e104fad70383770b38d8d",
+      "selected_tensor_sha256": "f19ea825512fa0391ca82e9a4a137f8b4598b5150bf8e7f4393b6ae92549bbc8",
+      "selected_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277874,
+        "changed_tensors": 496,
+        "l2_delta": 0.09083621351693767,
+        "max_absolute_delta": 4.120427183806896e-05
+      },
+      "latest_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277874,
+        "changed_tensors": 496,
+        "l2_delta": 0.09083621351693767,
+        "max_absolute_delta": 4.120427183806896e-05
+      },
+      "latest_tensor_sha256": "f19ea825512fa0391ca82e9a4a137f8b4598b5150bf8e7f4393b6ae92549bbc8",
+      "latest_file_sha256": "2de0a871cbea85d755a2725036c43b3640ceaf09094e104fad70383770b38d8d"
+    },
+    "outcome-1609": {
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "starting_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "selected_update": 10,
+      "selected_file_sha256": "523d9ece4e99d73265cdd18654a39aa7af85ed08f1e274697cbbc32a7ac25aa2",
+      "selected_tensor_sha256": "2cec7f4ba56f88f51263378c82c3180ac8ef5519cd41f4d2384ccac226d3f62a",
+      "selected_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277422,
+        "changed_tensors": 496,
+        "l2_delta": 0.03556768031430505,
+        "max_absolute_delta": 1.0140705853700638e-05
+      },
+      "latest_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277871,
+        "changed_tensors": 496,
+        "l2_delta": 0.07988164573230173,
+        "max_absolute_delta": 3.00724059343338e-05
+      },
+      "latest_tensor_sha256": "9700f6e9af2f85d2d0bea012d1941528bc1c5762d7f99f52e643dc6c15d3ff85",
+      "latest_file_sha256": "2b535b472f730addeea37a770dfc2e4888f42501aba765bac7c08a1042d9305b"
+    },
+    "reward-1507": {
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "starting_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "selected_update": 20,
+      "selected_file_sha256": "06b4d2652a43719a0e733bd6e7eecdf277925fc10684f54fde2148027f66741c",
+      "selected_tensor_sha256": "d0731299c1bdc58c7b10e6b3b78e9d4cf33f6d2248a5e2ae6eaaf2d8ac3e8677",
+      "selected_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277355,
+        "changed_tensors": 496,
+        "l2_delta": 0.041432481459839805,
+        "max_absolute_delta": 1.9642291590571404e-05
+      },
+      "latest_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277672,
+        "changed_tensors": 496,
+        "l2_delta": 0.06872923163382579,
+        "max_absolute_delta": 3.9862701669335365e-05
+      },
+      "latest_tensor_sha256": "18dc910b5906d111fa1b3843c309eda3e4a3582bce6e9ab8f8e90793def646b2",
+      "latest_file_sha256": "1a9cee887441e245204d481f73b3455e9ff85c764868da9ecd5b58414d477f0f"
+    },
+    "reward-1609": {
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "starting_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "selected_update": 40,
+      "selected_file_sha256": "767859ec9dca2ab8464ca4625c941e87cf89bafdbdfa59706b99bd4e7acce33f",
+      "selected_tensor_sha256": "65c72337adaf24ed259e4bbb2c5855e2d049c2dedffe958ee3cc5104a5822e2d",
+      "selected_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277609,
+        "changed_tensors": 496,
+        "l2_delta": 0.06135057447397786,
+        "max_absolute_delta": 3.822939470410347e-05
+      },
+      "latest_change": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43277609,
+        "changed_tensors": 496,
+        "l2_delta": 0.06135057447397786,
+        "max_absolute_delta": 3.822939470410347e-05
+      },
+      "latest_tensor_sha256": "65c72337adaf24ed259e4bbb2c5855e2d049c2dedffe958ee3cc5104a5822e2d",
+      "latest_file_sha256": "767859ec9dca2ab8464ca4625c941e87cf89bafdbdfa59706b99bd4e7acce33f"
+    }
+  },
+  "original_trainable_tensors": 496,
+  "original_trainable_elements": 43278336,
+  "new_model_calls": 0,
+  "scope": "Saved adapter byte/tensor identity and change audit after closed recovery. Base matrices remain frozen; effective language transformations change through adapters."
+}

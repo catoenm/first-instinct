@@ -75,20 +75,31 @@ set missed. A [filesystem mutation-scope family](docs/filesystem-decisions-v1-re
 adds actual hard-link side effects, goal-dependent operations and cost-sensitive
 inspection. Both collections passed execution/replay audits; the filesystem
 slice also matched pinned Linux execution. Together they contain 1,848 distinct
-alternatives and 1,324 prepared questions, with **zero training consumption**.
+alternatives and 1,324 prepared questions, with zero training consumption at the
+time of collection; the later learning comparison below records actual use.
 The [calendar transfer family](docs/calendar-decisions-v1-results.md) now adds
 2,160 executed alternatives and 1,504 questions about interval conflicts,
 ambiguous local times and atomic rescheduling. Native replay and Linux parity
-passed; its model results remain unmeasured. A [source index](docs/decision-source-registry-v1-results.md)
+passed; its model results are now reported below. A [source index](docs/decision-source-registry-v1-results.md)
 prepares 2,280 distinct forecast inputs across five training mechanisms while
-preserving uncertain outcomes and whole-mechanism ownership. These are prepared
-data, not consumed training examples. [Live runtime and learning qualification](docs/expanded-decisions-v1-qualification.md)
+preserving uncertain outcomes and whole-mechanism ownership. These preparation
+counts are separate from actual consumption. [Live runtime and learning qualification](docs/expanded-decisions-v1-qualification.md)
 now passed: 384 primary trajectories were independently replayed, 96 Linux checks
 matched, and all 27 startup tests passed in the exact cloud bundle. The
-[next controlled pilot](docs/expanded-decisions-v1-protocol.md) has been provisioned
-on one H200, with calendar held out and the same original 9B starting weights.
-No improvement is claimed until its decision, probability and general-task gates
-are evaluated.
+[controlled pilot](docs/expanded-decisions-v1-protocol.md) has now completed.
+
+**Latest: [broader executable training did not improve unfamiliar decisions](docs/expanded-decisions-v1-results.md).**
+Five training mechanisms, 4,800 live episodes and 230 accepted updates still
+produced no method that passed the joint transfer gate in both seeds. All models
+completed 50 of 80 calendar cases, and every trained model's overall forecast
+error worsened on that new mechanism. Small gains on uncertain inputs did not
+offset losses on deterministic ones. General capabilities stayed close to the
+starting model. All checkpoints and 514 artifact files were recovered and
+verified; no rented pods remain. The demo keeps its supervised model. The
+[public evidence](results/expanded-decisions-v1-final/) separates prepared data,
+consumed questions, repeated presentations and underlying tasks. Next comes a
+local check of how forecasts could support action selection, not a larger run
+of the same recipe.
 
 **Earlier protocol: [learning decisions from executable outcomes](docs/outcome-v2-protocol.md).**
 Two environments cover SQLite retries and a workshop with prerequisites,

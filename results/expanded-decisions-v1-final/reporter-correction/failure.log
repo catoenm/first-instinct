@@ -1,0 +1,16 @@
+Closed recovery confirmed; beginning final audit
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/mitchell/Documents/workspace/ml-data/tool_lab/expanded_final_audit.py", line 158, in <module>
+    result=audit(a.root,a.archive,a.original,a.cache,tokenizer)
+  File "/Users/mitchell/Documents/workspace/ml-data/tool_lab/expanded_final_audit.py", line 133, in audit
+    executed,trajectory=evaluation.trajectories(read_rows(directory/'selected-test-trajectories.jsonl'),transfer_cases,tokenizer,require_exact_coverage=True)
+                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchell/Documents/workspace/ml-data/tool_lab/expanded_evaluation_audit.py", line 126, in trajectories
+    return dict(actor_transitions=transitions,**task_counts([byid[t['case_id']] for t in traces])),metrics
+                                                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchell/Documents/workspace/ml-data/tool_lab/expanded_evaluation_audit.py", line 76, in task_counts
+    elif f=='calendar':key=(c['structure'],c['world'],c['goal'])
+                                                      ~^^^^^^^^
+KeyError: 'goal'
