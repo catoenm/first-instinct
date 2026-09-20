@@ -1,0 +1,491 @@
+{
+  "status": "passed",
+  "scope": "Development, training consumption and selection only; final transfer scores are unopened.",
+  "arm": "hybrid",
+  "seed": 1507,
+  "selected_update": 40,
+  "actual_learning": {
+    "physical_optimizer_attempts": 40,
+    "accepted_transactions": 40,
+    "rejected_transactions": 0,
+    "attempted_updates_without_closure": [],
+    "started_but_unconfirmed_backward_presentations": 0,
+    "components": {
+      "outcome": {
+        "completed_backward_presentations": 800,
+        "unique_question_ids": 800,
+        "repeated_presentations": 0,
+        "presentations_in_accepted_transactions": 800,
+        "presentations_in_rejected_transactions": 0,
+        "presentations_awaiting_transaction_outcome": 0
+      },
+      "policy": {
+        "completed_backward_presentations": 2989,
+        "unique_question_ids": 1643,
+        "repeated_presentations": 1346,
+        "presentations_in_accepted_transactions": 2989,
+        "presentations_in_rejected_transactions": 0,
+        "presentations_awaiting_transaction_outcome": 0
+      },
+      "replay": {
+        "completed_backward_presentations": 640,
+        "unique_question_ids": 589,
+        "repeated_presentations": 51,
+        "presentations_in_accepted_transactions": 640,
+        "presentations_in_rejected_transactions": 0,
+        "presentations_awaiting_transaction_outcome": 0
+      }
+    },
+    "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+    "diagnostics": {
+      "completed_backward_presentations": 210,
+      "started_but_unconfirmed_backward_presentations": 0,
+      "components": {
+        "actor": {
+          "completed_backward_presentations": 87,
+          "unique_question_ids": 87,
+          "repeated_presentations": 0
+        },
+        "outcome": {
+          "completed_backward_presentations": 20,
+          "unique_question_ids": 20,
+          "repeated_presentations": 0
+        },
+        "replay": {
+          "completed_backward_presentations": 16,
+          "unique_question_ids": 16,
+          "repeated_presentations": 0
+        },
+        "value": {
+          "completed_backward_presentations": 87,
+          "unique_question_ids": 87,
+          "repeated_presentations": 0
+        }
+      },
+      "note": "Component-gradient measurements; no optimizer steps. Excluded from optimizer-objective presentations."
+    }
+  },
+  "training_episodes": 1200,
+  "training_tasks": {
+    "actor_transitions": 2989,
+    "context_cases": 268,
+    "authored_root_groups": 6,
+    "world_goal_tasks": 40,
+    "mechanisms": 5
+  },
+  "evaluation_executions": {
+    "baseline-validation": {
+      "actor_transitions": 86,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-10-validation": {
+      "actor_transitions": 87,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-20-validation": {
+      "actor_transitions": 84,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-30-validation": {
+      "actor_transitions": 84,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    },
+    "update-40-validation": {
+      "actor_transitions": 84,
+      "context_cases": 36,
+      "authored_root_groups": 1,
+      "world_goal_tasks": 4,
+      "mechanisms": 1
+    }
+  },
+  "consumed_forecast_provenance": {
+    "application_delivery": {
+      "inputs": 160,
+      "questions": 501,
+      "branches": 501,
+      "ambiguous": 35
+    },
+    "sqlite": {
+      "inputs": 160,
+      "questions": 262,
+      "branches": 262,
+      "ambiguous": 23
+    },
+    "config": {
+      "inputs": 160,
+      "questions": 268,
+      "branches": 268,
+      "ambiguous": 23
+    },
+    "filesystem_scope": {
+      "inputs": 160,
+      "questions": 409,
+      "branches": 409,
+      "ambiguous": 20
+    },
+    "reservation": {
+      "inputs": 160,
+      "questions": 191,
+      "branches": 262,
+      "ambiguous": 29
+    }
+  },
+  "measurements": {
+    "baseline-validation": {
+      "reward": 0.2622222222222222,
+      "success_rate": 0.5833333333333334,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 1.087066210284795,
+          "excess_log_loss": 0.9970470959263605,
+          "expected_brier": 0.6410978476397308,
+          "excess_brier": 0.5761627827046658,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5194805194805194
+        },
+        "input_weighted": {
+          "log_loss": 1.087066210284795,
+          "excess_log_loss": 0.9970470959263605,
+          "expected_brier": 0.6410978476397308,
+          "excess_brier": 0.5761627827046658,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5194805194805194
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 1.087066210284795,
+            "excess_log_loss": 0.9970470959263605,
+            "expected_brier": 0.6410978476397308,
+            "excess_brier": 0.5761627827046658,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5194805194805194
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 1.087066210284795,
+            "excess_log_loss": 0.9970470959263605,
+            "expected_brier": 0.6410978476397308,
+            "excess_brier": 0.5761627827046658,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5194805194805194
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 2.0963274356471673,
+          "excess_log_loss": 1.4031802550872219,
+          "expected_brier": 1.3080469921489375,
+          "excess_brier": 0.8080469921489375,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.0
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.9364302064993663,
+          "excess_log_loss": 0.9364302064993663,
+          "expected_brier": 0.5415531992055208,
+          "excess_brier": 0.5415531992055208,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.5970149253731343
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.870488322717622,
+        "macro_log_loss": 0.35221356615736266
+      }
+    },
+    "update-10-validation": {
+      "reward": 0.28833333333333333,
+      "success_rate": 0.6111111111111112,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 1.0147747519733055,
+          "excess_log_loss": 0.9247556376148709,
+          "expected_brier": 0.6038561955975793,
+          "excess_brier": 0.5389211306625143,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5227272727272727
+        },
+        "input_weighted": {
+          "log_loss": 1.0147747519733055,
+          "excess_log_loss": 0.9247556376148709,
+          "expected_brier": 0.6038561955975793,
+          "excess_brier": 0.5389211306625143,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5227272727272727
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 1.0147747519733055,
+            "excess_log_loss": 0.9247556376148709,
+            "expected_brier": 0.6038561955975793,
+            "excess_brier": 0.5389211306625143,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5227272727272727
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 1.0147747519733055,
+            "excess_log_loss": 0.9247556376148709,
+            "expected_brier": 0.6038561955975793,
+            "excess_brier": 0.5389211306625143,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5227272727272727
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.9294413531954937,
+          "excess_log_loss": 1.2362941726355483,
+          "expected_brier": 1.2055605605505766,
+          "excess_brier": 0.7055605605505766,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.05
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.8782573488058145,
+          "excess_log_loss": 0.8782573488058145,
+          "expected_brier": 0.5140495739628036,
+          "excess_brier": 0.5140495739628036,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.5932835820895522
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8699575371549895,
+        "macro_log_loss": 0.35132157227089106
+      }
+    },
+    "update-20-validation": {
+      "reward": 0.4016666666666666,
+      "success_rate": 0.6944444444444444,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 0.9600489960345909,
+          "excess_log_loss": 0.8700298816761564,
+          "expected_brier": 0.5724912425246084,
+          "excess_brier": 0.5075561775895434,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5584415584415584
+        },
+        "input_weighted": {
+          "log_loss": 0.9600489960345909,
+          "excess_log_loss": 0.8700298816761564,
+          "expected_brier": 0.5724912425246084,
+          "excess_brier": 0.5075561775895434,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.5584415584415584
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9600489960345909,
+            "excess_log_loss": 0.8700298816761564,
+            "expected_brier": 0.5724912425246084,
+            "excess_brier": 0.5075561775895434,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5584415584415584
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9600489960345909,
+            "excess_log_loss": 0.8700298816761564,
+            "expected_brier": 0.5724912425246084,
+            "excess_brier": 0.5075561775895434,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.5584415584415584
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.79488237698171,
+          "excess_log_loss": 1.1017351964217645,
+          "expected_brier": 1.1132388062259158,
+          "excess_brier": 0.6132388062259156,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.075
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.8354469988783045,
+          "excess_log_loss": 0.8354469988783045,
+          "expected_brier": 0.49178265092739837,
+          "excess_brier": 0.49178265092739837,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.6305970149253731
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8715498938428875,
+        "macro_log_loss": 0.3517550101684865
+      }
+    },
+    "update-30-validation": {
+      "reward": 0.4016666666666666,
+      "success_rate": 0.6944444444444444,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 0.9287496003890553,
+          "excess_log_loss": 0.8387304860306208,
+          "expected_brier": 0.5527642753376766,
+          "excess_brier": 0.4878292104026117,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.560064935064935
+        },
+        "input_weighted": {
+          "log_loss": 0.9287496003890553,
+          "excess_log_loss": 0.8387304860306208,
+          "expected_brier": 0.5527642753376766,
+          "excess_brier": 0.4878292104026117,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.560064935064935
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9287496003890553,
+            "excess_log_loss": 0.8387304860306208,
+            "expected_brier": 0.5527642753376766,
+            "excess_brier": 0.4878292104026117,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.560064935064935
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9287496003890553,
+            "excess_log_loss": 0.8387304860306208,
+            "expected_brier": 0.5527642753376766,
+            "excess_brier": 0.4878292104026117,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.560064935064935
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.722793214866274,
+          "excess_log_loss": 1.0296460343063285,
+          "expected_brier": 1.0608945050087644,
+          "excess_brier": 0.5608945050087643,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.0875
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.8102356280790227,
+          "excess_log_loss": 0.8102356280790227,
+          "expected_brier": 0.47692394255094717,
+          "excess_brier": 0.47692394255094717,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.6305970149253731
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8651804670912951,
+        "macro_log_loss": 0.35189377407534117
+      }
+    },
+    "update-40-validation": {
+      "reward": 0.4016666666666666,
+      "success_rate": 0.6944444444444444,
+      "forecast": {
+        "n": 308,
+        "macro": {
+          "log_loss": 0.9070532828856119,
+          "excess_log_loss": 0.8170341685271775,
+          "expected_brier": 0.5384579328516844,
+          "excess_brier": 0.47352286791661946,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.564935064935065
+        },
+        "input_weighted": {
+          "log_loss": 0.9070532828856119,
+          "excess_log_loss": 0.8170341685271775,
+          "expected_brier": 0.5384579328516844,
+          "excess_brier": 0.47352286791661946,
+          "irreducible_brier": 0.06493506493506493,
+          "expected_choice_accuracy": 0.564935064935065
+        },
+        "by_metric_group": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9070532828856119,
+            "excess_log_loss": 0.8170341685271775,
+            "expected_brier": 0.5384579328516844,
+            "excess_brier": 0.47352286791661946,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.564935064935065
+          }
+        },
+        "by_family": {
+          "report": {
+            "n": 308,
+            "log_loss": 0.9070532828856119,
+            "excess_log_loss": 0.8170341685271775,
+            "expected_brier": 0.5384579328516844,
+            "excess_brier": 0.47352286791661946,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.564935064935065
+          }
+        },
+        "ambiguous": {
+          "n": 40,
+          "log_loss": 1.6623515324461242,
+          "excess_log_loss": 0.9692043518861787,
+          "expected_brier": 1.0184728869285447,
+          "excess_brier": 0.5184728869285447,
+          "irreducible_brier": 0.5,
+          "expected_choice_accuracy": 0.1
+        },
+        "deterministic": {
+          "n": 268,
+          "log_loss": 0.7943222008616548,
+          "excess_log_loss": 0.7943222008616548,
+          "expected_brier": 0.46681390985513815,
+          "excess_brier": 0.46681390985513815,
+          "irreducible_brier": 0.0,
+          "expected_choice_accuracy": 0.6343283582089553
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro_accuracy": 0.8651804670912951,
+        "macro_log_loss": 0.3517159869825497
+      }
+    }
+  },
+  "source_sha256": "1dc805b150239ae1e4a96736468ff7ae5b995045a2ddef36f6930f9f9703af70",
+  "new_model_calls": 0,
+  "new_environment_executions": 0,
+  "limits": "Independent receipt reconstruction, not a checkpoint recovery audit or final transfer conclusion."
+}

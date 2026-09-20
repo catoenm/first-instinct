@@ -70,3 +70,25 @@ The reward-only snapshot contains 25 allowed development/training files and is
 `d0892614a856046a571023876c55208ccd18ca616530d2da8d925f28ffecea73`.
 `reward-1507-hashes.json` and `reward-1507-snapshot-manifest.json` cover its receipts
 and audit reports. The earlier forecast-only snapshot remains unchanged.
+
+## Combined arm, seed 1507
+
+The same independent development and selection audits passed the first combined
+arm: 40 accepted updates, zero rejections, selected update 40. It executed 1,200
+live training episodes across the same 268 cases and 40 world-and-goal tasks.
+The optimizer consumed 2,989 policy presentations from 1,643 question identities
+(1,346 repeats), 800 distinct forecast inputs, and 640 replay presentations from
+589 unique questions. Its 210 diagnostic backward presentations are separate.
+The paired forecast and replay schedules match the other methods at this seed.
+
+Selected development return was 0.401667, expected Brier was 0.538458 and
+retention macro accuracy was 0.865180. The original values were 0.262222,
+0.641098 and 0.870488. Both development decision return and forecast error
+improved, within the retention limit. **This remains checkpoint-selection
+evidence from one seed.** The second seed and sealed transfer evaluations are
+needed before applying the prospective joint advancement gate.
+
+Its 25-file development snapshot is 4,088,176 compressed bytes, SHA256
+`6070de43f08cf9bb2c25d1c071fbf8f706006ddb2b052715fa50245fef031a04`.
+The `hybrid-1507` manifests and audit reports preserve those receipts separately.
+No final-test scores or model weights are included in this partial-study folder.
