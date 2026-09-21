@@ -1,0 +1,179 @@
+{
+  "checkpoints": {
+    "laya": {
+      "by_cohort": {
+        "exposed_development_forecasts": {
+          "distinct_logical_inputs": 308,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 144,
+          "instruction_dropped_tokens": 0,
+          "instruction_loss_presentations": 0,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 0,
+          "option_descriptions_loss_presentations": 0,
+          "presentations": 308,
+          "state_dropped_tokens": 6474,
+          "state_loss_presentations": 164
+        },
+        "previous_training_preflight_actions": {
+          "distinct_logical_inputs": 40,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 0,
+          "instruction_dropped_tokens": 2293,
+          "instruction_loss_presentations": 41,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 2585,
+          "option_descriptions_loss_presentations": 30,
+          "presentations": 41,
+          "state_dropped_tokens": 12270,
+          "state_loss_presentations": 35
+        },
+        "training_forecasts": {
+          "distinct_logical_inputs": 2510,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 1580,
+          "instruction_dropped_tokens": 4992,
+          "instruction_loss_presentations": 96,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 0,
+          "option_descriptions_loss_presentations": 0,
+          "presentations": 2510,
+          "state_dropped_tokens": 220115,
+          "state_loss_presentations": 834
+        }
+      },
+      "native_formatter_parity_presentations": 2859,
+      "native_head_max_len": 192,
+      "native_max_len": 512,
+      "repo": "convaiinnovations/laya",
+      "revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982"
+    },
+    "laya-multilingual": {
+      "by_cohort": {
+        "exposed_development_forecasts": {
+          "distinct_logical_inputs": 308,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 308,
+          "instruction_dropped_tokens": 0,
+          "instruction_loss_presentations": 0,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 0,
+          "option_descriptions_loss_presentations": 0,
+          "presentations": 308,
+          "state_dropped_tokens": 0,
+          "state_loss_presentations": 0
+        },
+        "previous_training_preflight_actions": {
+          "distinct_logical_inputs": 40,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 9,
+          "instruction_dropped_tokens": 1179,
+          "instruction_loss_presentations": 32,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 1382,
+          "option_descriptions_loss_presentations": 22,
+          "presentations": 41,
+          "state_dropped_tokens": 3086,
+          "state_loss_presentations": 10
+        },
+        "training_forecasts": {
+          "distinct_logical_inputs": 2510,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 2285,
+          "instruction_dropped_tokens": 0,
+          "instruction_loss_presentations": 0,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 0,
+          "option_descriptions_loss_presentations": 0,
+          "presentations": 2510,
+          "state_dropped_tokens": 55121,
+          "state_loss_presentations": 225
+        }
+      },
+      "native_formatter_parity_presentations": 2859,
+      "native_head_max_len": 256,
+      "native_max_len": 1024,
+      "repo": "convaiinnovations/laya-multilingual",
+      "revision": "052592a15d198d9ad47da779604259b10b47b7aa"
+    },
+    "laya-typed-decisions": {
+      "by_cohort": {
+        "exposed_development_forecasts": {
+          "distinct_logical_inputs": 308,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 308,
+          "instruction_dropped_tokens": 0,
+          "instruction_loss_presentations": 0,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 0,
+          "option_descriptions_loss_presentations": 0,
+          "presentations": 308,
+          "state_dropped_tokens": 0,
+          "state_loss_presentations": 0
+        },
+        "previous_training_preflight_actions": {
+          "distinct_logical_inputs": 40,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 9,
+          "instruction_dropped_tokens": 1218,
+          "instruction_loss_presentations": 32,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 1306,
+          "option_descriptions_loss_presentations": 22,
+          "presentations": 41,
+          "state_dropped_tokens": 3197,
+          "state_loss_presentations": 10
+        },
+        "training_forecasts": {
+          "distinct_logical_inputs": 2510,
+          "final_sequence_dropped_tokens": 0,
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 2253,
+          "instruction_dropped_tokens": 144,
+          "instruction_loss_presentations": 32,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_dropped_tokens": 0,
+          "option_descriptions_loss_presentations": 0,
+          "presentations": 2510,
+          "state_dropped_tokens": 59165,
+          "state_loss_presentations": 225
+        }
+      },
+      "native_formatter_parity_presentations": 2859,
+      "native_head_max_len": 256,
+      "native_max_len": 1024,
+      "repo": "convaiinnovations/laya-typed-decisions",
+      "revision": "f9ab0b228f0fc0f14d873dbc99038f135c2da1b2"
+    }
+  },
+  "data_freeze_sha256": "06914d15fd54344325815cc595461929d66b53723811db0c5c9d1f865cbfbfe2",
+  "limitations": "No model weights loaded and no predictions or new execution labels. Input coverage does not measure task quality. Inputs are existing training/development/preflight material, not fresh transfer. Native defaults are unchanged; lost inputs cannot silently enter a full-information accuracy comparison.",
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "private_details": "Raw inputs and per-input compatibility receipts remain private.",
+  "reserved_model_scores_opened": 0,
+  "runtime": {
+    "tokenizers": "0.23.2",
+    "transformers": "5.17.0"
+  },
+  "seconds": 7.697215792024508,
+  "status": "passed_tokenizer_compatibility_audit",
+  "upstream_common_sha256": "f231d42fcec84da203222fcaa89c083b22776e00341e66e118183d754e1dcabf"
+}

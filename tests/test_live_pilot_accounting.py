@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from tool_lab.live_pilot_accounting import summarize
+from tool_lab.live_pilot_accounting import actor_rows, summarize
 
 
 def backward(update, component, ids, diagnostic=False):
@@ -17,6 +17,16 @@ def close(update, accepted=True):
 
 
 class LiveAccountingTests(unittest.TestCase):
+    def test_shell_and_retail_keep_their_actual_receipt_schemas(self):
+        shell = dict(task='shell_action', input_ids=[10, 11])
+        retail = dict(task='retail_live_action', input_ids=[12, 13])
+        traces = [dict(actor_events=[dict(encoded_input=shell)]),
+                  dict(reset_identity={}, actor_events=[dict(row=retail)])]
+        self.assertEqual(actor_rows(traces), [shell, retail])
+        traces[1]['actor_events'][0]['row'] = shell
+        with self.assertRaises(ValueError):
+            actor_rows(traces)
+
     def test_diagnostics_repeats_and_rollback_remain_separate(self):
         rows = backward(1, 'outcome', ['a'], diagnostic=True)
         rows += backward(1, 'outcome', ['a', 'b']) + backward(1, 'outcome', ['c']) + close(1)

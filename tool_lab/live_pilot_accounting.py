@@ -63,6 +63,20 @@ def token_identity(row):
     return hashlib.sha256(json.dumps(row['input_ids'], separators=(',', ':')).encode()).hexdigest()
 
 
+def actor_rows(traces):
+    rows = []
+    for trace in traces:
+        retail = 'reset_identity' in trace
+        field = 'row' if retail else 'encoded_input'
+        task = 'retail_live_action' if retail else 'shell_action'
+        for event in trace['actor_events']:
+            row = event[field]
+            if row['task'] != task:
+                raise ValueError('Actor input contract differs from trajectory kind')
+            rows.append(row)
+    return rows
+
+
 def inspect_arm(directory):
     receipt = json.loads((directory/'run.json').read_text())
     ledger = summarize(read_rows(directory/'learning-ledger.jsonl'))
@@ -78,7 +92,7 @@ def inspect_arm(directory):
     traces = read_rows(directory/'rollouts.jsonl')
     retail = [t for t in traces if 'reset_identity' in t]
     shell = [t for t in traces if 'reset_identity' not in t]
-    actor_rows = [event['encoded_input'] for t in traces for event in t['actor_events']]
+    inputs = actor_rows(traces)
     resets = [t['reset_identity'] for t in retail]
     return dict(
         status=receipt['status'], arm=receipt['arm'], seed=receipt['seed'],
@@ -90,8 +104,8 @@ def inspect_arm(directory):
         correction_sha256=receipt.get('correction_sha256'),
         ledger_matches_run_receipt=agrees, actual_learning=ledger,
         collected_training=dict(
-            episodes=len(traces), actor_transitions=len(actor_rows),
-            distinct_actor_token_inputs=len({token_identity(r) for r in actor_rows}),
+            episodes=len(traces), actor_transitions=len(inputs),
+            distinct_actor_token_inputs=len({token_identity(r) for r in inputs}),
             shell_episodes=len(shell), distinct_shell_case_variants=len({t['case_id'] for t in shell}),
             retail_reset_presentations=len(retail),
             distinct_retail_goal_world_pairs=len({(r['task'], r['condition']) for r in resets}),
