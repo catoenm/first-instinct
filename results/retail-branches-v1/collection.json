@@ -1,0 +1,10 @@
+{
+  "actor_turns": 1896,
+  "admitted_questions": 0,
+  "candidate_questions": 40,
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "reset_executions": 520,
+  "status": "complete",
+  "tool_calls": 1400
+}

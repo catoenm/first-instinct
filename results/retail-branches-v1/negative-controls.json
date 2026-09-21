@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "corruption": "label",
+      "rejected": true
+    },
+    {
+      "corruption": "compatibility",
+      "rejected": true
+    },
+    {
+      "corruption": "original_state",
+      "rejected": true
+    },
+    {
+      "corruption": "source_identity",
+      "rejected": true
+    }
+  ],
+  "new_worlds": 0,
+  "new_tool_calls": 0,
+  "model_calls": 0
+}
