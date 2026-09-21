@@ -1,0 +1,63 @@
+{
+  "admitted_source_trajectories": 17786,
+  "candidate_presentations": 10682,
+  "candidate_sha256": "7cc7fbcfc3109085abf00aac306f67a43d49fa812fb7bcccbf83cf53f6407a50",
+  "candidate_unique_token_inputs": 10682,
+  "conflicting_token_inputs": 0,
+  "cpu_supervision": {
+    "additional_system_swap_bytes": 0,
+    "elapsed_seconds": 130.61859075003304,
+    "limits": {
+      "rss_bytes": 4294967296,
+      "seconds": 1800,
+      "swap_growth_bytes": 536870912
+    },
+    "peak_process_group_rss_bytes": 1319485440,
+    "status": "completed"
+  },
+  "distinct_normalized_requests": 4901,
+  "earlier_attempt": "Stopped the first partial inventory after the supervisor deadline test exposed unsupported process-group signaling. Preserved its partial output; not admitted. Individual owned-process signaling passed the repeated real deadline test before this retry.",
+  "elapsed_seconds": 126.64743533398723,
+  "exclusions": {
+    "JSONDecodeError": 37,
+    "argument_schema_violation": 192,
+    "duplicate_json_key": 2,
+    "later_question_over_4096_tokens": 10853,
+    "nonserial_or_pre_user_call": 2776,
+    "undeclared_call": 213
+  },
+  "input_tokens": 24144062,
+  "inspected_trajectories": 17786,
+  "limitations": [
+    "Teacher actions are not verified optimal actions or outcome rewards.",
+    "Source responses are recorded feedback, not independently replayed outcomes.",
+    "No new families or independent tasks are created by later prefixes.",
+    "Independent source reconstruction, conflict filtering and full ownership audit remain required before training.",
+    "System prompts are retained as source data; assistant reasoning and future messages are absent."
+  ],
+  "new_executed_branches": 0,
+  "new_underlying_tasks": 0,
+  "optimizer_steps": 0,
+  "preceding_calls": {
+    "1": 5122,
+    "10": 20,
+    "11": 11,
+    "12": 7,
+    "13": 3,
+    "14": 2,
+    "15": 1,
+    "2": 2641,
+    "3": 1394,
+    "4": 685,
+    "5": 384,
+    "6": 195,
+    "7": 117,
+    "8": 64,
+    "9": 36
+  },
+  "source_ownership_sha256": "6b162e689482e4a903cbd7b3a8dc6cef13b176fe231ea9cea1579f2f92fb58dd",
+  "source_server_groups": 238,
+  "status": "inventory_complete_not_admitted",
+  "training_presentations": 0,
+  "trajectories_with_later_candidates": 5122
+}
