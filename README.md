@@ -20,6 +20,11 @@ The release plan combines general decisions, broader tool-selection data and
 verified outcomes, then tests reinforcement learning as a measured upgrade.
 Dataset admission, evaluation and serving qualification are still in progress.
 
+The first [release-data admission](docs/release-tool-data-v1-results.md) now adds
+17,786 tool-choice training questions across 283 server groups, with 2,217
+development and 2,431 reserved-transfer questions kept separate. These are checked
+teacher-action examples, not verified outcome labels; new training consumption is zero.
+
 **Latest audit: [tool success is not financial success](docs/retail-ledger-v1-results.md).**
 A real simulator's payment-change-then-cancellation sequence returned normally but
 over-refunded a synthetic account; an independent ledger/goal check rejected it.

@@ -1,0 +1,74 @@
+{
+  "admission_sha256": "e15c040161bfdbab52cc179d707b29b8397f45dbb51caa6b8ff823b2574f238c",
+  "blocked_servers": 42,
+  "by_role": {
+    "development": {
+      "questions": 2217,
+      "server_groups": 27,
+      "tokens": 2913684,
+      "unique_requests": 2071,
+      "within_1536": 1379
+    },
+    "reserved_transfer": {
+      "questions": 2431,
+      "server_groups": 38,
+      "tokens": 3138141,
+      "unique_requests": 2330,
+      "within_1536": 1783
+    },
+    "train": {
+      "questions": 17786,
+      "server_groups": 283,
+      "tokens": 19729286,
+      "unique_requests": 17072,
+      "within_1536": 13504
+    }
+  },
+  "candidate_lineage_rows": 22434,
+  "candidate_manifest_sha256": "89cf4629e2cff3db1baad882cebc5797871c159dad52e84059618fbc0a849d5f",
+  "candidate_questions": 22434,
+  "excluded_trajectories_by_reason": {
+    "argument_schema_violation": 307,
+    "blocked_server_group": 3265,
+    "conflicting_teacher_choices": 190,
+    "cross_role_composition": 1685,
+    "duplicate_offered_name": 7,
+    "malformed_source": 25,
+    "malformed_tool": 206,
+    "offered_tool_count": 4205,
+    "over_4096_tokens": 1649,
+    "undeclared_first_call": 717,
+    "unresolved_tool_attribution": 13,
+    "unsupported_schema_keyword": 311,
+    "unsupported_schema_reference": 213
+  },
+  "executed_source_tools": 0,
+  "interpretation": "Observed first-action imitation; no optimality, verified success or calibrated-outcome labels.",
+  "inventory_rows": 35227,
+  "legacy_index": {
+    "token_rows": 484891,
+    "unique_requests": 346596,
+    "unique_schemas": 16493,
+    "unique_token_inputs": 403804,
+    "visible_rows": 558390
+  },
+  "new_executed_branches": 0,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "ownership_rounds": 2,
+  "pre_generation_freeze_sha256": "556d1d4b65caaa11ba97df9cd50821c0f7d6396034d158866a74dcedbb3457f3",
+  "questions_before_length_filter": 24083,
+  "source_dataset": "Agent-Ark/Toucan-1.5M",
+  "source_revision": "0df3cf37f2abefb380370cfb02eabea2a35ae782",
+  "source_servers": 429,
+  "source_trajectories": 35227,
+  "source_unique_requests": 33961,
+  "source_unique_schemas": 2132,
+  "status": "qualified_supervised_behavior_only",
+  "structurally_eligible_after_ownership": 24273,
+  "tests": {
+    "converter_and_saved_export": 15,
+    "mixed_objectives_cpu": 6
+  },
+  "training_presentations": 0
+}

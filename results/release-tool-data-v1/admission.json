@@ -1,0 +1,38 @@
+{
+  "by_role": {
+    "development": {
+      "questions": 2217,
+      "servers": 27
+    },
+    "reserved_transfer": {
+      "questions": 2431,
+      "servers": 38
+    },
+    "train": {
+      "questions": 17786,
+      "servers": 283
+    }
+  },
+  "checked_questions": 22434,
+  "checked_source_witnesses": 22434,
+  "coverage_passed": true,
+  "freeze_sha256": "556d1d4b65caaa11ba97df9cd50821c0f7d6396034d158866a74dcedbb3457f3",
+  "integrity_passed": true,
+  "limitations": [
+    "Exact overlap checks do not detect semantic paraphrases or foundation pretraining exposure.",
+    "First-action teacher agreement is not verified task success or optimality.",
+    "Contiguous cached shards, not a random sample of all TOUCAN.",
+    "No none/clarify or outcome labels were manufactured."
+  ],
+  "manifest_sha256": "89cf4629e2cff3db1baad882cebc5797871c159dad52e84059618fbc0a849d5f",
+  "source_trajectory_accounting_complete": true,
+  "status": "qualified_supervised_behavior_only",
+  "training_presentations": 0,
+  "unique_keys": {
+    "request_key": 21473,
+    "schema_keys": 1530,
+    "semantic_key": 21473,
+    "servers": 348,
+    "token_sha256": 22434
+  }
+}

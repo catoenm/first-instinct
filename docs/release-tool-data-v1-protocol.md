@@ -75,3 +75,38 @@ cross-role server compositions, alias ownership and overlength inputs. Verify th
 saved export from immutable source witnesses before marking it admitted. This
 stage supplies breadth for supervised learning and does not replace the separate
 retail outcome admission or live reinforcement-learning qualification.
+
+## Initial implementation contract, before generation
+
+Use SHA-256 of canonical JSON containing seed 20260921 and the string server
+identifier, take the first 16 hexadecimal digits modulo 100, then apply the
+80/10/10 buckets. Co-occurrence is not a union: reject cross-role compositions.
+An affected server is removed in its entirety, including its other requests;
+removed servers never return when another removal resolves a collision.
+
+Match each offered function to exactly one server's recorded tool declaration
+using its local name (or witnessed server-prefixed name), exact description and
+parameters. For alias joins, preserve the local name, whitespace-normalize only
+the description, and canonicalize parameter-object key order. Do not normalize
+regex, enum or other schema values. Requests normalize whitespace only.
+
+The first version supports checked Draft 7 and 2020-12 schema subsets. Reject
+references, formats, unknown assertion keywords and unsupported dialects rather
+than silently ignoring them. The separate dependency environment leaves earlier
+frozen runtimes untouched. Record its exact installed versions in the freeze.
+
+Index the canonical original general, ToolACE, Glaive, verified-source, AppWorld,
+contextual-shell and corrected telecom corpora before generation. Conservatively
+block new server groups overlapping any indexed old request/schema, regardless
+of the old role; check exact prepared token inputs too. Publish hashes and counts,
+never protected raw inputs. These are exact checks, not semantic deduplication or
+proof that the foundation model has never seen related data.
+
+Admission requires at least 1,000 training questions from ten server groups and
+200 questions from five groups in each development and reserved-transfer role,
+in addition to the integrity checks. This is a minimum data-coverage gate, not a
+statistical claim about a future three-point model improvement. The saved export
+audit reconstructs every admitted prompt from its immutable source witness,
+rechecks complete token sequences and targets, proves every source trajectory
+is either retained in lineage or explicitly excluded, and binds admission to the
+manifest digest. No candidate data may be consumed before that audit passes.
