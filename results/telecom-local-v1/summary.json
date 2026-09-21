@@ -1,0 +1,155 @@
+{
+  "authored_underlying_tasks": 3,
+  "collateral_controls": 3,
+  "completed_tool_calls": 78,
+  "freeze_sha256": "a5211c6ca4f8b5e9d2c910fd4a1e80301a6160f982c63e21502934049df0ca8d",
+  "incomplete_repair_controls": 3,
+  "independent_replays": 3,
+  "known_failed_attempt_calls": 3,
+  "limitation": "Three authored fixtures over pinned real telecom tools in a restricted package namespace. Not an official benchmark run, general decision data, a training result or a policy-calibration demonstration.",
+  "load_official_task_solutions": false,
+  "mechanisms": 3,
+  "new_model_calls": 0,
+  "new_training_questions": 0,
+  "no_op_controls": 3,
+  "optimizer_steps": 0,
+  "outbound_attempts": 0,
+  "prior_failed_adapter_attempts": 1,
+  "private_report_sha256": "5e300d108b16acbe089a94f01e8518c9ae5d2ed6c9452e824807c5e00ab15703",
+  "qualified_mechanisms": 3,
+  "receipt_hashes": {
+    "carrier_allowance-collateral-private.json": "e6a8c27171dd11b0ab0e496ae2babadd5e781a64f065c78b0a378db463daabe8",
+    "carrier_allowance-incomplete-private.json": "c56e1c2532e7ac73f0172c32b5cdaa90a6a87eb3b6d84823788aff22bd22387e",
+    "carrier_allowance-repair-private.json": "ce5c1c2448b9f252390ab8d6c340b0c39491266aeaa372edbe9c5d52c80615d4",
+    "carrier_allowance-replay-private.json": "bd4e684f1dc5b4aef5816c597abfc3735d6a9742b4b726129d10b286bc9b1e2d",
+    "carrier_allowance-stop-private.json": "e5e6c3ddd54cf7a0576ac176a68b34e27c6c758002320c49f616a2cab7108c19",
+    "coupled_roaming-collateral-private.json": "48d287350442a5f4e7bb2205c489dd86ed23d744cb07de219f329ed43b14a1b5",
+    "coupled_roaming-incomplete-private.json": "1c6540299794754cd828eb19dce104b4a36ca5983889b328bec1c265bf5dcf14",
+    "coupled_roaming-repair-private.json": "a25a1ec389db1cfbb7769990f5846d09aa0972e5513808e4077c0d2b093708fe",
+    "coupled_roaming-replay-private.json": "6352739e303e94dd8bf436811342a982fdd4eafcc37f317e0d8142feaf00a024",
+    "coupled_roaming-stop-private.json": "0b84d5c8c2c3dd61200c19bb1596a006ee41dbfb0c0377594afb339e5ede3e4a",
+    "device_switches-collateral-private.json": "326b62a0c9d8aac817a0077f8ca0a46f43ad729ed767f7d37439256395fd0e6b",
+    "device_switches-incomplete-private.json": "4eb09789dd4bcd2ea94f4c6fd00b3c04d408c40ae43ef097d33869dc71cdb6b4",
+    "device_switches-repair-private.json": "715f718122f8189502df8dde46ed61bfcfe254fa1d7af58f812a96079634934e",
+    "device_switches-replay-private.json": "130e4f6cab3960fbfd83942d479fd86a5162dc7eb97677d57d423900793ba569",
+    "device_switches-stop-private.json": "0b64ef754689b7ab22a5f8512f670b87d7b1b79689fc6fd729779c8d98e529e4"
+  },
+  "results": {
+    "carrier_allowance": {
+      "controls": {
+        "collateral": {
+          "charge_consistent": true,
+          "frame_preserved": false,
+          "goal_satisfied": true,
+          "success": false
+        },
+        "incomplete": {
+          "charge_consistent": true,
+          "frame_preserved": false,
+          "goal_satisfied": false,
+          "success": false
+        },
+        "repair": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": true,
+          "success": true
+        },
+        "replay": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": true,
+          "success": true
+        },
+        "stop": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": false,
+          "success": false
+        }
+      },
+      "exact_replay": true,
+      "executed_worlds": 5,
+      "qualified": true
+    },
+    "coupled_roaming": {
+      "controls": {
+        "collateral": {
+          "charge_consistent": true,
+          "frame_preserved": false,
+          "goal_satisfied": true,
+          "success": false
+        },
+        "incomplete": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": false,
+          "success": false
+        },
+        "repair": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": true,
+          "success": true
+        },
+        "replay": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": true,
+          "success": true
+        },
+        "stop": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": false,
+          "success": false
+        }
+      },
+      "exact_replay": true,
+      "executed_worlds": 5,
+      "qualified": true
+    },
+    "device_switches": {
+      "controls": {
+        "collateral": {
+          "charge_consistent": true,
+          "frame_preserved": false,
+          "goal_satisfied": true,
+          "success": false
+        },
+        "incomplete": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": false,
+          "success": false
+        },
+        "repair": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": true,
+          "success": true
+        },
+        "replay": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": true,
+          "success": true
+        },
+        "stop": {
+          "charge_consistent": true,
+          "frame_preserved": true,
+          "goal_satisfied": false,
+          "success": false
+        }
+      },
+      "exact_replay": true,
+      "executed_worlds": 5,
+      "qualified": true
+    }
+  },
+  "runtime_sha256": "56c10d7b7a17f9f4676cea4e17078fab00a21976c48dd9732c022138aac45379",
+  "source_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "status": "passed",
+  "total_attempted_worlds": 16,
+  "world_executions": 15
+}
