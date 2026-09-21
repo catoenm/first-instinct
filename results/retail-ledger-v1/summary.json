@@ -1,0 +1,117 @@
+{
+  "status": "passed",
+  "goal_contracts": 2,
+  "financial_mechanisms": 1,
+  "physical_initial_states": 1,
+  "distinct_branches": 6,
+  "independent_replays": 6,
+  "world_executions": 12,
+  "completed_tool_calls": 48,
+  "controls_passed": true,
+  "results": {
+    "cancel": {
+      "status_correct": true,
+      "required_net_charge": true,
+      "exact_wallets": true,
+      "ledger_consistent": true,
+      "frame_preserved": true,
+      "success": true,
+      "target_net_by_card": {
+        "gift_card_old": "0.0"
+      },
+      "allowed_card_balances": {
+        "gift_card_old": "100.0",
+        "gift_card_new": "50.0"
+      }
+    },
+    "stop": {
+      "status_correct": false,
+      "required_net_charge": false,
+      "exact_wallets": false,
+      "ledger_consistent": true,
+      "frame_preserved": true,
+      "success": false,
+      "target_net_by_card": {
+        "gift_card_old": "20.0"
+      },
+      "allowed_card_balances": {
+        "gift_card_old": "80.0",
+        "gift_card_new": "50.0"
+      }
+    },
+    "wrong_target": {
+      "status_correct": false,
+      "required_net_charge": false,
+      "exact_wallets": false,
+      "ledger_consistent": true,
+      "frame_preserved": false,
+      "success": false,
+      "target_net_by_card": {
+        "gift_card_old": "20.0"
+      },
+      "allowed_card_balances": {
+        "gift_card_old": "80.0",
+        "gift_card_new": "50.0"
+      }
+    },
+    "migrate_then_cancel": {
+      "status_correct": true,
+      "required_net_charge": false,
+      "exact_wallets": false,
+      "ledger_consistent": true,
+      "frame_preserved": true,
+      "success": false,
+      "target_net_by_card": {
+        "gift_card_new": "0.0",
+        "gift_card_old": "-40.0"
+      },
+      "allowed_card_balances": {
+        "gift_card_old": "140.0",
+        "gift_card_new": "50.0"
+      }
+    },
+    "migrate": {
+      "status_correct": true,
+      "required_net_charge": true,
+      "exact_wallets": true,
+      "ledger_consistent": true,
+      "frame_preserved": true,
+      "success": true,
+      "target_net_by_card": {
+        "gift_card_new": "20.0",
+        "gift_card_old": "0.0"
+      },
+      "allowed_card_balances": {
+        "gift_card_old": "100.0",
+        "gift_card_new": "30.0"
+      }
+    },
+    "collateral": {
+      "status_correct": true,
+      "required_net_charge": true,
+      "exact_wallets": true,
+      "ledger_consistent": true,
+      "frame_preserved": false,
+      "success": false,
+      "target_net_by_card": {
+        "gift_card_new": "20.0",
+        "gift_card_old": "0.0"
+      },
+      "allowed_card_balances": {
+        "gift_card_old": "100.0",
+        "gift_card_new": "30.0"
+      }
+    }
+  },
+  "composed_path_returns_normally_but_violates_goal": true,
+  "source_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "freeze_sha256": "84396fc30ba84ec6fb5f14f9bccdbf3703113dd4314824b4e8365a66bbfb2504",
+  "model_calls": 0,
+  "admitted_questions": 0,
+  "optimizer_steps": 0,
+  "official_task_or_database_reads": 0,
+  "outbound_attempts": 0,
+  "limitation": "Two authored goals over one synthetic financial mechanism in pinned real tools; not an official benchmark result or model improvement.",
+  "chain_audit_sha256": "f139889e2e262f137883ae2237837dea4ce3e2339b1dccd8eedee1970c91a02e",
+  "audit_sha256": "d308514edd081303f2c32d0a6de407a893b9e846b1aa2ea0902d5d44170d8657"
+}

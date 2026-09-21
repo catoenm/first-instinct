@@ -1,0 +1,125 @@
+{
+  "status": "qualified_evaluation_only",
+  "original_question_construction": {
+    "status": "passed",
+    "problems": [],
+    "raw_variants": 54,
+    "unique_candidate_questions": 51,
+    "accepted_questions": 51,
+    "exact_duplicate_variants": 3,
+    "tasks": 3,
+    "mechanisms": 3,
+    "visible_histories": 3,
+    "compatible_configurations": 12,
+    "physical_initial_states": 10,
+    "referenced_executed_branches": 72,
+    "referenced_independent_replays": 72,
+    "new_world_executions": 0,
+    "displayed_program_trace_checks": 144,
+    "by_question_type": {
+      "immediate_success": 15,
+      "continued_success": 18,
+      "next_procedure": 9,
+      "observation_value": 9
+    },
+    "by_ownership": {
+      "training_candidate": 17,
+      "development_candidate": 17,
+      "reserved_transfer_candidate": 17
+    },
+    "fractional_forecast_questions": 22,
+    "decision_forecast_joins": 90,
+    "maximum_tokens": 1864,
+    "model_calls": 0,
+    "training_presentations": 0,
+    "optimizer_steps": 0,
+    "freeze_sha256": "48ae2a430e7d2f840a7f1936ea20801c42308b5f619ac3767b47551e4a925b40",
+    "source_audit_sha256": "a144a1feb56ff3c429cc2a7cc1fe1ac7afd342528999b11fc81e6747a49a74b8",
+    "files": {
+      "development_candidate-private.jsonl": "8e73092de70240a29258a12db961ec642cd7634a6824b467018715e2da611759",
+      "reserved_transfer_candidate-private.jsonl": "95c1a423b5fd41bf73a06b7001810a938867e800d2394bcf72d974db3d303ed5",
+      "candidates-private.jsonl": "c7200a980b3762c12ecc3d7aca776d603dd1feef15fcc626060bd093493a61ad",
+      "training_candidate-private.jsonl": "b25e38fcb5ac9165129d35388860c85aafbaf3b80d3ed51dbfb83d07adb1cc02"
+    },
+    "limitation": "Prepared questions from three authored mechanisms; no new execution, model inference, learning or broad-transfer result."
+  },
+  "construction_audit": {
+    "status": "passed",
+    "unique_questions": 51,
+    "semantic_variants": 54,
+    "displayed_trace_replays": 144,
+    "checked_forecast_joins": 90,
+    "preparation_sha256": "3433b3ec7bcafe6bf0df11dbdab7706d653e2c61e0a34f95fee4b699a304e820",
+    "freeze_sha256": "48ae2a430e7d2f840a7f1936ea20801c42308b5f619ac3767b47551e4a925b40",
+    "model_calls": 0,
+    "new_world_executions": 0,
+    "training_presentations": 0,
+    "optimizer_steps": 0
+  },
+  "negative_controls": {
+    "status": "passed",
+    "checks": {
+      "hidden_input": "Displayed evidence, costs or procedure differs from its declared input",
+      "changed_command": "Duplicate or excessive admitted rows",
+      "swapped_outcome": "Target does not match executed states and actual future call costs",
+      "wrong_cost": "Duplicate or excessive admitted rows",
+      "wrong_horizon": "Wrong horizon or undeclared semantic question",
+      "wrong_ownership": "Whole-mechanism ownership differs",
+      "duplicate_prior_witness": "Missing, duplicate or wrong-world witness",
+      "foreign_forecast_join": "Forecast joins a different evidence state, role or continuation"
+    },
+    "new_executions": 0,
+    "model_calls": 0
+  },
+  "corrected_usage": {
+    "status": "qualified_evaluation_only",
+    "initial_admission_training_split": "rejected_overlap",
+    "components": [
+      [
+        "carrier_allowance",
+        "device_switches"
+      ],
+      [
+        "coupled_roaming"
+      ]
+    ],
+    "usage_by_family": {
+      "carrier_allowance": "reserved_transfer",
+      "device_switches": "reserved_transfer",
+      "coupled_roaming": "development"
+    },
+    "shared_initial_physical_states": 2,
+    "shared_complete_trajectory_groups": 7,
+    "original_source_roles": {
+      "device_switches": "training_candidate",
+      "coupled_roaming": "development_candidate",
+      "carrier_allowance": "reserved_transfer_candidate"
+    },
+    "counts": {
+      "training": 0,
+      "development": 17,
+      "reserved_transfer": 34
+    },
+    "question_preparation_sha256": "3433b3ec7bcafe6bf0df11dbdab7706d653e2c61e0a34f95fee4b699a304e820",
+    "question_source_sha256": "c7200a980b3762c12ecc3d7aca776d603dd1feef15fcc626060bd093493a61ad",
+    "sources": {
+      "tool_lab/telecom_usage.py": "23742bc45847297fea5b35c4e8ac40ed344ae074c09ef37faca69bc8e7f510e5",
+      "test_telecom_usage.py": "b9c8379942a92579afcbbbfe4a3009a59547857058fe3cd4a0c835c5d67a1460",
+      "docs/telecom-questions-v1-ownership-correction.md": "42631605a044beec95713432df76b56807ff645a9a881a27926ab1b5f1b8eb78"
+    },
+    "model_calls": 0,
+    "new_worlds": 0,
+    "training_presentations": 0,
+    "optimizer_steps": 0,
+    "files": {
+      "reserved_transfer-private.jsonl": "75b44f8ab4a45a7bf1d346482df5f5113e4c2030fdda71d5a516fade7bc69e8c",
+      "development-private.jsonl": "8e73092de70240a29258a12db961ec642cd7634a6824b467018715e2da611759",
+      "training-private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "usage_manifest_sha256": "748d2be373ce814f42245ea0c817f92a80e7338d4cb0e12aee2979f868b8ed7d",
+  "training_eligible_questions": 0,
+  "prepared_evaluation_questions": 51,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0
+}

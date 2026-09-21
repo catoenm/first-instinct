@@ -15,6 +15,13 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 
 </div>
 
+**Latest audit: [tool success is not financial success](docs/retail-ledger-v1-results.md).**
+A real simulator's payment-change-then-cancellation sequence returned normally but
+over-refunded a synthetic account; an independent ledger/goal check rejected it.
+The [telecom question admission](docs/telecom-questions-v1-results.md) also caught
+shared worlds across proposed learning roles before training. Its 51 short paired
+questions are now evaluation-only. No new model improvement is claimed.
+
 **Latest data qualification: [hidden causes, real tools and costly observations](docs/telecom-hidden-causes-v1-results.md).**
 Across three telecom mechanisms, identical visible histories produce genuinely
 different outcomes. All 72 alternative branches passed exact independent replay;
