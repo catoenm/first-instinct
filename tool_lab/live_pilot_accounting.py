@@ -101,7 +101,7 @@ def inspect_arm(directory):
         initial_trainable_sha256=receipt.get('initial_trainable_sha256'),
         freeze_sha256=receipt['freeze_sha256'],
         action_forward_contract=receipt.get('action_forward_contract'),
-        correction_sha256=receipt.get('correction_sha256'),
+        runtime_correction_sha256=receipt.get('runtime_correction_sha256'),
         ledger_matches_run_receipt=agrees, actual_learning=ledger,
         collected_training=dict(
             episodes=len(traces), actor_transitions=len(inputs),

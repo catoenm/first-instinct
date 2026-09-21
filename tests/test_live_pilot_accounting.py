@@ -1,7 +1,10 @@
 import copy
+import json
+from pathlib import Path
+import tempfile
 import unittest
 
-from tool_lab.live_pilot_accounting import actor_rows, summarize
+from tool_lab.live_pilot_accounting import actor_rows, inspect_arm, summarize
 
 
 def backward(update, component, ids, diagnostic=False):
@@ -17,6 +20,18 @@ def close(update, accepted=True):
 
 
 class LiveAccountingTests(unittest.TestCase):
+    def test_completed_receipt_keeps_canonical_runtime_lineage(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            receipt=dict(status='complete',arm='outcome',seed=20260924,selected_update=0,
+                parent_adapter_sha256='parent',freeze_sha256='data',accepted_steps=0,
+                physical_optimizer_attempts=0,action_forward_contract='canonical-action-forward-v1',
+                runtime_correction_sha256='qualified-correction')
+            (root/'run.json').write_text(json.dumps(receipt))
+            for name in ('learning-ledger.jsonl','rollouts.jsonl'): (root/name).write_text('')
+            result=inspect_arm(root)
+            self.assertEqual(result['runtime_correction_sha256'],'qualified-correction')
+
     def test_shell_and_retail_keep_their_actual_receipt_schemas(self):
         shell = dict(task='shell_action', input_ids=[10, 11])
         retail = dict(task='retail_live_action', input_ids=[12, 13])

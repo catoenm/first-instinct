@@ -1,0 +1,323 @@
+{
+  "arms": {
+    "outcome-20260924": {
+      "actual_learning": {
+        "accepted_transactions": 16,
+        "attempted_updates_without_closure": [],
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 448,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 448,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 0,
+            "unique_question_ids": 448
+          },
+          "replay": {
+            "completed_backward_presentations": 1024,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 1024,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 102,
+            "unique_question_ids": 922
+          }
+        },
+        "diagnostic_backwards": {
+          "outcome": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          },
+          "replay": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "on_policy_checks": {
+          "maximum_absolute_probability_delta": null,
+          "transitions": 0,
+          "updates": 0
+        },
+        "physical_optimizer_attempts": 16,
+        "rejected_transactions": 0,
+        "started_but_unconfirmed_backward_presentations": 0,
+        "started_but_unconfirmed_diagnostic_presentations": 0
+      },
+      "collected_training": {
+        "actor_transitions": 0,
+        "distinct_actor_token_inputs": 0,
+        "distinct_retail_goal_world_cost_cells": 0,
+        "distinct_retail_goal_world_pairs": 0,
+        "distinct_shell_case_variants": 0,
+        "episodes": 0,
+        "retail_reset_presentations": 0,
+        "shell_episodes": 0
+      },
+      "evaluation_execution": {
+        "baseline": {
+          "actor_transitions": 87,
+          "authored_root_groups": 1,
+          "context_cases": 36,
+          "mechanisms": 1,
+          "world_goal_tasks": 4
+        },
+        "update-16": {
+          "actor_transitions": 87,
+          "authored_root_groups": 1,
+          "context_cases": 36,
+          "mechanisms": 1,
+          "world_goal_tasks": 4
+        },
+        "update-8": {
+          "actor_transitions": 87,
+          "authored_root_groups": 1,
+          "context_cases": 36,
+          "mechanisms": 1,
+          "world_goal_tasks": 4
+        }
+      },
+      "gates": {
+        "update-16": {
+          "changes": {
+            "brier": -0.01164467939896685,
+            "retention_accuracy": 0.0,
+            "retention_log_loss": -4.584942623531152e-05,
+            "reward": 0.0
+          },
+          "joint_improvement": false,
+          "safe": true,
+          "safety": {
+            "brier": true,
+            "retention_accuracy": true,
+            "retention_log_loss": true,
+            "reward": true
+          }
+        },
+        "update-8": {
+          "changes": {
+            "brier": -0.003988739010993614,
+            "retention_accuracy": 0.0,
+            "retention_log_loss": 0.0003389226969624515,
+            "reward": 0.054444444444444434
+          },
+          "joint_improvement": false,
+          "safe": true,
+          "safety": {
+            "brier": true,
+            "retention_accuracy": true,
+            "retention_log_loss": true,
+            "reward": true
+          }
+        }
+      },
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "limitation": "Recomputes frozen development metrics, public actor inputs, executed reward receipts, schedules, consumption and selection. Does not reexecute model updates or tools, or prove checkpoint bytes/optimizer numerics. This is not new-mechanism transfer or a release decision.",
+      "measured": {
+        "baseline": {
+          "forecast": {
+            "excess_brier": 0.5760525716565792,
+            "excess_log_loss": 0.9974733579591601,
+            "expected_brier": 0.6409876365916441,
+            "expected_choice_accuracy": 0.5227272727272727,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.0874924723175947
+          },
+          "incorrect_rate": 0.25,
+          "retention_accuracy": 0.8683651804670913,
+          "retention_log_loss": 0.35198480399471954,
+          "reward": 0.2338888888888889,
+          "success_rate": 0.5555555555555556
+        },
+        "update-16": {
+          "forecast": {
+            "excess_brier": 0.5644078922576125,
+            "excess_log_loss": 0.9737105744281073,
+            "expected_brier": 0.6293429571926773,
+            "expected_choice_accuracy": 0.5243506493506493,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.0637296887865417
+          },
+          "incorrect_rate": 0.25,
+          "retention_accuracy": 0.8683651804670913,
+          "retention_log_loss": 0.35193895456848423,
+          "reward": 0.2338888888888889,
+          "success_rate": 0.5555555555555556
+        },
+        "update-8": {
+          "forecast": {
+            "excess_brier": 0.5720638326455857,
+            "excess_log_loss": 0.9887971820453215,
+            "expected_brier": 0.6369988975806505,
+            "expected_choice_accuracy": 0.5243506493506493,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.078816296403756
+          },
+          "incorrect_rate": 0.25,
+          "retention_accuracy": 0.8683651804670913,
+          "retention_log_loss": 0.352323726691682,
+          "reward": 0.28833333333333333,
+          "success_rate": 0.6111111111111112
+        }
+      },
+      "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "retail_training_execution": {
+        "actor_transitions": 0,
+        "episodes": 0
+      },
+      "runtime_correction_sha256": "76b93476333cc5fa6446cb2d6d36ebd94128226f3423ab35c2d679d877490a16",
+      "selected_update": 0,
+      "shell_training_execution": {
+        "actor_transitions": 0,
+        "context_cases": 0,
+        "mechanisms": 0,
+        "world_goal_tasks": 0
+      },
+      "status": "independently_verified_development_receipts"
+    },
+    "reward-20260924": {
+      "actual_learning": {
+        "accepted_transactions": 8,
+        "attempted_updates_without_closure": [],
+        "components": {
+          "policy": {
+            "completed_backward_presentations": 302,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 302,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 11,
+            "unique_question_ids": 291
+          },
+          "replay": {
+            "completed_backward_presentations": 512,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 512,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 27,
+            "unique_question_ids": 485
+          }
+        },
+        "diagnostic_backwards": {
+          "actor": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          },
+          "replay": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          },
+          "value": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "on_policy_checks": {
+          "maximum_absolute_probability_delta": 0.0,
+          "transitions": 302,
+          "updates": 8
+        },
+        "physical_optimizer_attempts": 8,
+        "rejected_transactions": 0,
+        "started_but_unconfirmed_backward_presentations": 0,
+        "started_but_unconfirmed_diagnostic_presentations": 0
+      },
+      "collected_training": {
+        "actor_transitions": 302,
+        "distinct_actor_token_inputs": 239,
+        "distinct_retail_goal_world_cost_cells": 46,
+        "distinct_retail_goal_world_pairs": 20,
+        "distinct_shell_case_variants": 80,
+        "episodes": 128,
+        "retail_reset_presentations": 48,
+        "shell_episodes": 80
+      },
+      "evaluation_execution": {
+        "baseline": {
+          "actor_transitions": 87,
+          "authored_root_groups": 1,
+          "context_cases": 36,
+          "mechanisms": 1,
+          "world_goal_tasks": 4
+        },
+        "update-8": {
+          "actor_transitions": 87,
+          "authored_root_groups": 1,
+          "context_cases": 36,
+          "mechanisms": 1,
+          "world_goal_tasks": 4
+        }
+      },
+      "gates": {
+        "update-8": {
+          "changes": {
+            "brier": 0.0006168828985263497,
+            "retention_accuracy": 0.0015923566878981443,
+            "retention_log_loss": -0.00014031391223673362,
+            "reward": -0.05555555555555558
+          },
+          "joint_improvement": false,
+          "safe": false,
+          "safety": {
+            "brier": true,
+            "retention_accuracy": true,
+            "retention_log_loss": true,
+            "reward": false
+          }
+        }
+      },
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "limitation": "Recomputes frozen development metrics, public actor inputs, executed reward receipts, schedules, consumption and selection. Does not reexecute model updates or tools, or prove checkpoint bytes/optimizer numerics. This is not new-mechanism transfer or a release decision.",
+      "measured": {
+        "baseline": {
+          "forecast": {
+            "excess_brier": 0.5760525716565792,
+            "excess_log_loss": 0.9974733579591601,
+            "expected_brier": 0.6409876365916441,
+            "expected_choice_accuracy": 0.5227272727272727,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.0874924723175947
+          },
+          "incorrect_rate": 0.25,
+          "retention_accuracy": 0.8683651804670913,
+          "retention_log_loss": 0.35198480399471954,
+          "reward": 0.2338888888888889,
+          "success_rate": 0.5555555555555556
+        },
+        "update-8": {
+          "forecast": {
+            "excess_brier": 0.5766694545551055,
+            "excess_log_loss": 0.9975807020053484,
+            "expected_brier": 0.6416045194901705,
+            "expected_choice_accuracy": 0.5227272727272727,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.087599816363783
+          },
+          "incorrect_rate": 0.2777777777777778,
+          "retention_accuracy": 0.8699575371549895,
+          "retention_log_loss": 0.3518444900824828,
+          "reward": 0.17833333333333332,
+          "success_rate": 0.5277777777777778
+        }
+      },
+      "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "retail_training_execution": {
+        "actor_transitions": 125,
+        "episodes": 48
+      },
+      "runtime_correction_sha256": "76b93476333cc5fa6446cb2d6d36ebd94128226f3423ab35c2d679d877490a16",
+      "selected_update": 0,
+      "shell_training_execution": {
+        "actor_transitions": 177,
+        "authored_root_groups": 6,
+        "context_cases": 80,
+        "mechanisms": 5,
+        "world_goal_tasks": 33
+      },
+      "status": "independently_verified_development_receipts"
+    }
+  },
+  "complete_comparison": false,
+  "release_eligible": false,
+  "scope": "Named completed development arms only; reserved evaluation remains unopened.",
+  "status": "interim_first_seed_two_closed_arms"
+}
