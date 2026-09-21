@@ -15,6 +15,11 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 
 </div>
 
+**Next milestone: [a usable 9B release candidate](docs/release-candidate-v1-plan.md).**
+The release plan combines general decisions, broader tool-selection data and
+verified outcomes, then tests reinforcement learning as a measured upgrade.
+Dataset admission, evaluation and serving qualification are still in progress.
+
 **Latest audit: [tool success is not financial success](docs/retail-ledger-v1-results.md).**
 A real simulator's payment-change-then-cancellation sequence returned normally but
 over-refunded a synthetic account; an independent ledger/goal check rejected it.
