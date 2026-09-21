@@ -1,5 +1,6 @@
 """Request-bound and backend-isolation checks; no model or MLX dependency."""
 import copy
+import ast
 import json
 from pathlib import Path
 import subprocess
@@ -38,6 +39,15 @@ def payload(lengths):
 
 
 class MacAPITests(unittest.TestCase):
+    def test_contract_function_trees_match_the_unchanged_historical_interface(self):
+        def functions(path):
+            tree = ast.parse(Path(path).read_text())
+            return {node.name:ast.dump(node, include_attributes=False) for node in tree.body
+                    if isinstance(node, ast.FunctionDef) and node.name in ('requests','answer')}
+        original = functions('general_lab/interface.py')
+        self.assertEqual(set(original), {'requests','answer'})
+        self.assertEqual(original, functions('release_lab/typed_interface.py'))
+
     def test_rejects_work_before_any_inference(self):
         for lengths in ([1]*5, [4096,4096,1], [10,4097]):
             predictor = FakePredictor()

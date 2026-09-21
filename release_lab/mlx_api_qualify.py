@@ -8,7 +8,7 @@ import resource
 import threading
 import time
 
-from general_lab.interface import requests
+from release_lab.typed_interface import requests
 from general_lab.serve import ThreadingHTTPServer, handler_for
 from release_lab.mlx_api import MacDemo, MacPredictor
 from scale_lab.common import digest, encode, file_hash, write_json
@@ -34,6 +34,7 @@ def run(package, qualification, output):
     files = [Path(__file__), Path('release_lab/mlx_api.py'), Path('release_lab/mlx_package.py'),
              Path('release_lab/mlx_scorer.py'), Path('general_lab/serve.py'),
              Path('general_lab/interface.py'), Path('scale_lab/common.py'),
+             Path('release_lab/typed_interface.py'),
              Path('docs/mlx-api-v1-protocol.md'), Path('examples/general-decisions.json'),
              package/'package.json', qualification]
     plan = dict(version='mlx-api-v1', paths={str(p.resolve()):file_hash(p) for p in files},

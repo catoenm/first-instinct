@@ -5,8 +5,11 @@ This stage may load the exported original-model package only after the complete
 continuation. Keep the existing port-8766 demo until this check finishes.
 
 Reuse the existing typed question serialization, native option mapping and HTTP
-handler. Move the PyTorch-only command-line import out of the shared interface's
-module scope, without changing any request or answer semantics. No network model
+handler. Preserve the old interface file byte-for-byte because earlier evidence
+freezes its hash. A separate dependency-free module copies its two pure contract
+functions; a syntax-tree comparison must confirm they remain identical. The first
+attempt to move an import in the old module failed these provenance checks and
+was reverted before model serving qualification. No network model
 download is allowed: tokenizer and weights must load from the hashed package.
 Require its exact pinned MLX/runtime versions and passing regression receipt.
 

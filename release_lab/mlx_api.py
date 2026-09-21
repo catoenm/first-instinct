@@ -6,7 +6,7 @@ import math
 from pathlib import Path
 import time
 
-from general_lab.interface import requests
+from release_lab.typed_interface import requests, answer
 from general_lab.serve import Demo, ThreadingHTTPServer, handler_for, strict_json
 from scale_lab.common import encode, file_hash, label_token_ids
 
@@ -86,7 +86,7 @@ class MacDemo(Demo):
         lengths = [len(self.predictor.validate(item)) for _, _, item in prepared]
         if sum(lengths) > MAX_TOTAL_TOKENS:
             raise ValueError(f'Combined prompts exceed {MAX_TOTAL_TOKENS} tokens; no truncation')
-        return super().answer(payload)
+        return {**answer(payload, self.predictor), **self.metadata}
 
 
 def main():

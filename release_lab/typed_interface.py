@@ -1,16 +1,11 @@
-"""User-defined choice, binary and ordered questions over a shared supplied state.
+"""Dependency-free copy of the frozen public question contract.
 
-Each question is encoded independently. Adding a question cannot alter another
-question's prompt. This implementation repeats state processing; it does not
-claim Jev's shared-state latency or its calibration guarantees.
+The two function syntax trees must match general_lab/interface.py exactly. Keep
+that historical file unchanged: existing experiment audits freeze its full hash.
+This module avoids its eager PyTorch import for the Mac inference runtime.
 """
-
-import argparse
 import json
-from pathlib import Path
-
 from scale_lab.common import validate_input
-from scale_lab.infer import Predictor
 
 
 def requests(payload):
@@ -74,19 +69,3 @@ def answer(payload, predictor):
             "execution": "Independent prompts; shared-state computation is not implemented."}
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, required=True)
-    parser.add_argument("--run", type=Path)
-    parser.add_argument("--model", default="qwen35-9b")
-    parser.add_argument("--device", default="auto")
-    parser.add_argument("--max-tokens", type=int, default=1536)
-    args = parser.parse_args()
-    payload = json.loads(args.input.read_text())
-    requests(payload)
-    predictor = Predictor(args.model, args.run, args.max_tokens, args.device)
-    print(json.dumps(answer(payload, predictor), ensure_ascii=False, indent=2, allow_nan=False))
-
-
-if __name__ == "__main__":
-    main()
