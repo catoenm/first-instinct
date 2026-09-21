@@ -10,6 +10,7 @@ import shutil
 
 from scale_lab.common import MODELS, file_hash, write_json
 from .pilot_plan import CONFIG, PARENT
+from .balanced_plan import CONFIG as BALANCED_CONFIG
 from .pilot_metrics import gates
 
 
@@ -24,7 +25,9 @@ def checked_selection(recovered):
         if path.is_absolute() or '..' in path.parts or file_hash(recovered/path)!=sha:
             raise ValueError('Recovered artifact changed: '+name)
     freeze=json.loads((recovered/'data/freeze.json').read_text())
-    if freeze['config']!=CONFIG or freeze['parent_adapter_sha256']!=PARENT or freeze['model']!=MODELS['qwen35-9b']:
+    supported={'release-pilot-v1':CONFIG,'release-balanced-v1':BALANCED_CONFIG}
+    if (freeze.get('version') not in supported or freeze['config']!=supported[freeze['version']]
+            or freeze['parent_adapter_sha256']!=PARENT or freeze['model']!=MODELS['qwen35-9b']):
         raise ValueError('Unexpected pilot lineage')
     run=recovered/'run'
     result=json.loads((run/'result.json').read_text());selected=json.loads((run/'selected.json').read_text())
@@ -53,15 +56,15 @@ def export(recovered,output):
     (output/'best').mkdir()
     for name in ('adapter_config.json','adapter_model.safetensors'):
         shutil.copy2(adapter/name,output/'best'/name)
-    version='first-instinct-9b-release-pilot-v1-step'+str(selected['step'])
+    version='first-instinct-9b-'+freeze['version']+'-step'+str(selected['step'])
     receipt=dict(status='candidate',version=version,model=freeze['model'],best_step=selected['step'],
                  parent=dict(stage='original_supervised',step=2742,adapter_sha256=PARENT),
                  adapter_sha256=selected['adapter_sha256'],training_method='mixed-target supervised continuation',
                  completed_optimizer_steps=result['completed_steps'],selected_optimizer_step=selected['step'],
-                 selected_training_presentations=selected['step']*sum(CONFIG['per_step'].values()),
+                 selected_training_presentations=selected['step']*sum(freeze['config']['per_step'].values()),
                  whole_run_training_presentations=result['consumed_presentations'],
                  whole_run_unique_questions=result['unique_consumed_questions'],
-                 training_max_tokens=CONFIG['max_tokens'],serving_max_tokens_pending_qualification=1536,
+                 training_max_tokens=freeze['config']['max_tokens'],serving_max_tokens_pending_qualification=1536,
                  freeze_sha256=result['freeze_sha256'],advancement_checks=checks,
                  formatter_sha256=freeze['sources']['scale_lab/common.py'],
                  label_token_ids=freeze['label_token_ids'],pad_id=freeze['pad_id'],

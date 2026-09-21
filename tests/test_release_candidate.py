@@ -15,7 +15,7 @@ def fixture(root,probability_worse=False):
     (adapter/'adapter_model.safetensors').write_bytes(b'fixture, not model weights')
     write_json(adapter/'adapter_config.json',{'fixture':True})
     (root/'data/protected.jsonl').write_text('private fixture must never enter package\n')
-    freeze=dict(config=CONFIG,parent_adapter_sha256=PARENT,model=MODELS['qwen35-9b'],
+    freeze=dict(version='release-pilot-v1',config=CONFIG,parent_adapter_sha256=PARENT,model=MODELS['qwen35-9b'],
                 sources={'scale_lab/common.py':'fixture'},label_token_ids=[1,2],pad_id=0)
     write_json(root/'data/freeze.json',freeze)
     base=dict(general=dict(n=8,macro=dict(accuracy=.8,log_loss=.5),slices={'rules':dict(accuracy=.8)}),
@@ -55,6 +55,20 @@ class CandidateTests(unittest.TestCase):
             root=Path(name);fixture(root/'recovered')
             (root/'recovered/run/checkpoint-0040/adapter/adapter_model.safetensors').write_bytes(b'changed')
             with self.assertRaisesRegex(ValueError,'artifact changed'):export(root/'recovered',root/'export')
+
+    def test_balanced_version_has_explicit_supported_identity(self):
+        from release_lab.balanced_plan import CONFIG as balanced
+        with tempfile.TemporaryDirectory() as name:
+            root=Path(name);recovered=root/'recovered';fixture(recovered)
+            freeze=json.loads((recovered/'data/freeze.json').read_text());freeze.update(version='release-balanced-v1',config=balanced)
+            write_json(recovered/'data/freeze.json',freeze)
+            result=json.loads((recovered/'run/result.json').read_text());result['freeze_sha256']=file_hash(recovered/'data/freeze.json')
+            write_json(recovered/'run/result.json',result)
+            hashes=json.loads((recovered/'artifact-hashes.json').read_text())
+            for file in ('data/freeze.json','run/result.json'):hashes[file]=file_hash(recovered/file)
+            write_json(recovered/'artifact-hashes.json',hashes)
+            summary=export(recovered,root/'export')
+            self.assertIn('release-balanced-v1',summary['version'])
 
 
 if __name__=='__main__':unittest.main()
