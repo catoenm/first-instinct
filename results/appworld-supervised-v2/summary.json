@@ -1,0 +1,61 @@
+{
+  "status": "completed_and_independently_audited",
+  "selected_checkpoint_step": 40,
+  "completed_run_steps": 60,
+  "selected_checkpoint_consumption": {
+    "accepted_optimizer_updates": 40,
+    "completed_backward_presentations": 960,
+    "presentations_in_accepted_updates": 960,
+    "partial_update_backward_presentations": 0,
+    "input_tokens": 1999966,
+    "unique_pool_question_pairs": 835,
+    "by_pool": {
+      "known_forecast": {
+        "prepared_questions": 2280,
+        "completed_backward_presentations": 160,
+        "unique_questions_presented": 160,
+        "input_tokens": 91092,
+        "presentations_in_accepted_updates": 160,
+        "unique_underlying_worlds_presented": 0
+      },
+      "new_decision": {
+        "prepared_questions": 186,
+        "completed_backward_presentations": 160,
+        "unique_questions_presented": 134,
+        "input_tokens": 630378,
+        "presentations_in_accepted_updates": 160,
+        "unique_underlying_worlds_presented": 19
+      },
+      "new_forecast": {
+        "prepared_questions": 298,
+        "completed_backward_presentations": 320,
+        "unique_questions_presented": 244,
+        "input_tokens": 1178693,
+        "presentations_in_accepted_updates": 320,
+        "unique_underlying_worlds_presented": 20
+      },
+      "replay": {
+        "prepared_questions": 4096,
+        "completed_backward_presentations": 320,
+        "unique_questions_presented": 297,
+        "input_tokens": 99803,
+        "presentations_in_accepted_updates": 320,
+        "unique_underlying_worlds_presented": 0
+      }
+    },
+    "note": "Repeated presentations are not new questions or worlds; world coverage is available only for pools carrying explicit world provenance."
+  },
+  "uncertain_old_forecast_presentations": {
+    "completed_run": 40,
+    "selected_checkpoint": 24
+  },
+  "elapsed_training_process_seconds": 1746.6152607891709,
+  "joint_development_gate": true,
+  "no_transfer_model_evaluation": true,
+  "no_demo_promotion": true,
+  "no_live_reinforcement_learning": true,
+  "final_audit_sha256": "73e87f0761d9a0798d8dbb5413d5ac3aefa3bdc308372ed2df71c237dfaee779",
+  "final_controller_diagnostic_sha256": "f54080da9ebb4c4e520e48053c4fb7c59eb876f7da070e7525f7f7734e649338",
+  "saved_tensor_audit_sha256": "b31893703675afb416e894f609e783eae36455ee0177934550f364f869f20eec",
+  "latest_saved_hash_matches_final_runtime": true
+}

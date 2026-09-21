@@ -1,0 +1,75 @@
+{
+  "accepted_questions": 0,
+  "by_question_type": {
+    "continued_application_change": 24,
+    "continued_task_success": 12,
+    "fixed_plan_decision": 6
+  },
+  "candidates_sha256": "1896dbc359ae3f1163cd18ae8d793c9912e4e11f500267573bbd7282d0ab45b4",
+  "context_admitted_candidates": 42,
+  "exclusion_counts": {
+    "prior_history_argument_closure": 4,
+    "token_limit": 42
+  },
+  "freeze_sha256": "2494c34f8573f257cf2ff77e1f9750a09532d34141cb3bb77019a44dc072df34",
+  "groups": [
+    {
+      "continued_success_forecasts": 0,
+      "decisions": 0,
+      "positive_alternative_retained": false,
+      "program_index": 0,
+      "questions": 0,
+      "useful_nonempty_menus": 0
+    },
+    {
+      "continued_success_forecasts": 2,
+      "decisions": 0,
+      "positive_alternative_retained": false,
+      "program_index": 1,
+      "questions": 6,
+      "useful_nonempty_menus": 0
+    },
+    {
+      "continued_success_forecasts": 10,
+      "decisions": 6,
+      "positive_alternative_retained": true,
+      "program_index": 2,
+      "questions": 36,
+      "useful_nonempty_menus": 3
+    },
+    {
+      "continued_success_forecasts": 0,
+      "decisions": 0,
+      "positive_alternative_retained": false,
+      "program_index": 3,
+      "questions": 0,
+      "useful_nonempty_menus": 0
+    }
+  ],
+  "limitation": "Transfer-only preparation, not model performance. Rejected candidates cannot enter inference or training.",
+  "matched_forecast_menus": 6,
+  "maximum_admitted_tokens": 8182,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "new_training_questions": 0,
+  "problems": [
+    {
+      "program_index": 0,
+      "reason": "missing_paired_outcomes_or_useful_positive_menu"
+    },
+    {
+      "program_index": 1,
+      "reason": "missing_paired_outcomes_or_useful_positive_menu"
+    },
+    {
+      "program_index": 3,
+      "reason": "missing_paired_outcomes_or_useful_positive_menu"
+    }
+  ],
+  "raw_questions": 90,
+  "role": "reserved_transfer_only",
+  "status": "rejected",
+  "task_programs": 4,
+  "underlying_task_instances": 4,
+  "unique_questions_before_context_admission": 84
+}

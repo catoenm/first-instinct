@@ -1,0 +1,71 @@
+{
+  "status": "offline_metadata_feasibility_only",
+  "missing_application_metadata_found": "venmo",
+  "new_public_api_definitions": 54,
+  "history_checks": [
+    {
+      "program_index": 0,
+      "history_point": 27,
+      "argument_errors": 1,
+      "error_categories": {
+        "min_created_at: argument_not_grounded_in_visible_evidence": 1
+      }
+    },
+    {
+      "program_index": 0,
+      "history_point": 30,
+      "argument_errors": 4,
+      "error_categories": {
+        "min_created_at: argument_not_grounded_in_visible_evidence": 1,
+        "amount: argument_not_grounded_in_visible_evidence": 3
+      }
+    },
+    {
+      "program_index": 1,
+      "history_point": 24,
+      "argument_errors": 0,
+      "error_categories": {}
+    },
+    {
+      "program_index": 1,
+      "history_point": 28,
+      "argument_errors": 0,
+      "error_categories": {}
+    },
+    {
+      "program_index": 2,
+      "history_point": 34,
+      "argument_errors": 0,
+      "error_categories": {}
+    },
+    {
+      "program_index": 2,
+      "history_point": 44,
+      "argument_errors": 0,
+      "error_categories": {}
+    },
+    {
+      "program_index": 3,
+      "history_point": 24,
+      "argument_errors": 1,
+      "error_categories": {
+        "min_created_at: argument_not_grounded_in_visible_evidence": 1
+      }
+    },
+    {
+      "program_index": 3,
+      "history_point": 60,
+      "argument_errors": 1,
+      "error_categories": {
+        "min_created_at: argument_not_grounded_in_visible_evidence": 1
+      }
+    }
+  ],
+  "public_schema_sha256": "e8797d241eedafa95deba1ab2d24e644ba81cbb6ee2069e984467abae5b99266",
+  "source_sha256": "9185c2322d1f8e3b9fbdf2d78a1767aa4405cf2bb6b4a0bad46cf213745c49c6",
+  "new_model_calls": 0,
+  "new_world_executions": 0,
+  "new_accepted_questions": 0,
+  "original_rejected_admission_unchanged": true,
+  "limitation": "Finite documented values can repair missing public domains; positive-number constraints do not ground calculated amounts. No context admission or transfer evaluation performed."
+}

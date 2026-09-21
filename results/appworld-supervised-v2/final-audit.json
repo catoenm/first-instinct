@@ -1,0 +1,356 @@
+{
+  "status": "passed",
+  "scope": "Recovered completed supervised pilot; no new inference or optimization.",
+  "freeze_sha256": "2f318c261a498be566fe54544074badaeaa1bf1984aca2649140de84eddb7b3b",
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "archive_sha256": "96d12d18f1f5525fbb8e9ba8a4fdaa602047efabde888790d87877c9a991751a",
+  "verified_artifact_files": 264,
+  "selection": {
+    "best_step": 40,
+    "stop_reason": "no_development_improvement",
+    "joint_advance_gate": true,
+    "last_evaluated_step": 60
+  },
+  "consumption": {
+    "accepted_optimizer_updates": 60,
+    "completed_backward_presentations": 1440,
+    "presentations_in_accepted_updates": 1440,
+    "partial_update_backward_presentations": 0,
+    "input_tokens": 3000049,
+    "unique_pool_question_pairs": 1120,
+    "by_pool": {
+      "known_forecast": {
+        "prepared_questions": 2280,
+        "completed_backward_presentations": 240,
+        "unique_questions_presented": 240,
+        "input_tokens": 135436,
+        "presentations_in_accepted_updates": 240,
+        "unique_underlying_worlds_presented": 0
+      },
+      "new_decision": {
+        "prepared_questions": 186,
+        "completed_backward_presentations": 240,
+        "unique_questions_presented": 168,
+        "input_tokens": 942829,
+        "presentations_in_accepted_updates": 240,
+        "unique_underlying_worlds_presented": 19
+      },
+      "new_forecast": {
+        "prepared_questions": 298,
+        "completed_backward_presentations": 480,
+        "unique_questions_presented": 298,
+        "input_tokens": 1774613,
+        "presentations_in_accepted_updates": 480,
+        "unique_underlying_worlds_presented": 20
+      },
+      "replay": {
+        "prepared_questions": 4096,
+        "completed_backward_presentations": 480,
+        "unique_questions_presented": 414,
+        "input_tokens": 147171,
+        "presentations_in_accepted_updates": 480,
+        "unique_underlying_worlds_presented": 0
+      }
+    },
+    "note": "Repeated presentations are not new questions or worlds; world coverage is available only for pools carrying explicit world provenance."
+  },
+  "startup_diagnostic": {
+    "diagnostic_backward_presentations": 1,
+    "optimizer_steps": 0,
+    "peak_allocated_bytes": 27733189632,
+    "peak_reserved_bytes": 28345106432,
+    "status": "passed",
+    "tokens": 8172
+  },
+  "checkpoint_lineage": {
+    "best": {
+      "step": 40,
+      "adapter_sha256": "0e4c4888045df59c5d9f6d2adbf0dbbdc56b24ec597c8a03a203e4ad07229c5f",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "b6d270208284cc7cef970ca3dac1bd5ab4a619d942365727fb5222fd26d65a3e",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    },
+    "latest": {
+      "step": 60,
+      "adapter_sha256": "27b0b42719d75ade85fe030272ef15cdde4cd32de70465494cd65ddd8feadc8e",
+      "tensors": 496,
+      "changed_tensors": 496,
+      "trainable_parameter_capacity": 43278336,
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "b2f8c25683772b5f6131a97d9fb947f6c4ac817d75f47a6458b21b0d36086b75",
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded."
+    }
+  },
+  "metrics": {
+    "0": {
+      "development_forecast": {
+        "n": 50,
+        "macro": {
+          "brier": 0.4725001096101432,
+          "log_loss": 0.8884359527004724
+        }
+      },
+      "development_change": {
+        "n": 50,
+        "macro": {
+          "brier": 0.001783217807500546,
+          "log_loss": 0.019533073991498444
+        }
+      },
+      "development_decision": {
+        "n": 57,
+        "macro": {
+          "accuracy": 0.6818181818181819,
+          "log_loss": 1.10018171903325,
+          "return": -0.14317234848484856
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro": {
+          "accuracy": 0.8699575371549895,
+          "log_loss": 0.352848022698317
+        }
+      },
+      "known_validation": {
+        "n": 308,
+        "macro": {
+          "brier": 0.6409741551565928,
+          "log_loss": 1.0860411699807615
+        }
+      }
+    },
+    "10": {
+      "development_forecast": {
+        "n": 50,
+        "macro": {
+          "brier": 0.4385892486123996,
+          "log_loss": 0.8156838722966381
+        }
+      },
+      "development_change": {
+        "n": 50,
+        "macro": {
+          "brier": 0.0014769234519239097,
+          "log_loss": 0.016720658724825706
+        }
+      },
+      "development_decision": {
+        "n": 57,
+        "macro": {
+          "accuracy": 0.7234848484848485,
+          "log_loss": 1.0300884933523684,
+          "return": -0.08825757575757578
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro": {
+          "accuracy": 0.8651804670912951,
+          "log_loss": 0.35252448410284004
+        }
+      },
+      "known_validation": {
+        "n": 308,
+        "macro": {
+          "brier": 0.4921542483011444,
+          "log_loss": 0.8414385530623985
+        }
+      }
+    },
+    "20": {
+      "development_forecast": {
+        "n": 50,
+        "macro": {
+          "brier": 0.37461891915851764,
+          "log_loss": 0.6035152464751532
+        }
+      },
+      "development_change": {
+        "n": 50,
+        "macro": {
+          "brier": 0.0020147043634901147,
+          "log_loss": 0.01874105160379666
+        }
+      },
+      "development_decision": {
+        "n": 57,
+        "macro": {
+          "accuracy": 0.7234848484848485,
+          "log_loss": 0.8070709163511349,
+          "return": -0.10265151515151522
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro": {
+          "accuracy": 0.8667728237791933,
+          "log_loss": 0.3526161115911784
+        }
+      },
+      "known_validation": {
+        "n": 308,
+        "macro": {
+          "brier": 0.4487659672603215,
+          "log_loss": 0.7729121496011767
+        }
+      }
+    },
+    "30": {
+      "development_forecast": {
+        "n": 50,
+        "macro": {
+          "brier": 0.3304536184656235,
+          "log_loss": 0.49726189638222873
+        }
+      },
+      "development_change": {
+        "n": 50,
+        "macro": {
+          "brier": 0.0020790653748312218,
+          "log_loss": 0.019417135680571993
+        }
+      },
+      "development_decision": {
+        "n": 57,
+        "macro": {
+          "accuracy": 0.7234848484848485,
+          "log_loss": 0.6324728200031133,
+          "return": 0.001969696969696927
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro": {
+          "accuracy": 0.8604033970276009,
+          "log_loss": 0.354339170864333
+        }
+      },
+      "known_validation": {
+        "n": 308,
+        "macro": {
+          "brier": 0.40074608778548604,
+          "log_loss": 0.7079616508793027
+        }
+      }
+    },
+    "40": {
+      "development_forecast": {
+        "n": 50,
+        "macro": {
+          "brier": 0.24632415820895776,
+          "log_loss": 0.3815413227852605
+        }
+      },
+      "development_change": {
+        "n": 50,
+        "macro": {
+          "brier": 0.0014710069846691025,
+          "log_loss": 0.016310901975151948
+        }
+      },
+      "development_decision": {
+        "n": 57,
+        "macro": {
+          "accuracy": 0.7234848484848485,
+          "log_loss": 0.6303971680981286,
+          "return": -0.0003030303030303605
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro": {
+          "accuracy": 0.8588110403397028,
+          "log_loss": 0.35605475219642074
+        }
+      },
+      "known_validation": {
+        "n": 308,
+        "macro": {
+          "brier": 0.35735755476321296,
+          "log_loss": 0.638176628228527
+        }
+      }
+    },
+    "50": {
+      "development_forecast": {
+        "n": 50,
+        "macro": {
+          "brier": 0.21060320684601136,
+          "log_loss": 0.32994979286843346
+        }
+      },
+      "development_change": {
+        "n": 50,
+        "macro": {
+          "brier": 0.0006179086203728072,
+          "log_loss": 0.010209992301155777
+        }
+      },
+      "development_decision": {
+        "n": 57,
+        "macro": {
+          "accuracy": 0.7443181818181819,
+          "log_loss": 0.9098568105585545,
+          "return": -0.04318181818181821
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro": {
+          "accuracy": 0.8540339702760086,
+          "log_loss": 0.3575893779450537
+        }
+      },
+      "known_validation": {
+        "n": 308,
+        "macro": {
+          "brier": 0.36043401439199946,
+          "log_loss": 0.6191132037386479
+        }
+      }
+    },
+    "60": {
+      "development_forecast": {
+        "n": 50,
+        "macro": {
+          "brier": 0.2110630857971753,
+          "log_loss": 0.3179216799145895
+        }
+      },
+      "development_change": {
+        "n": 50,
+        "macro": {
+          "brier": 0.0002286554216188249,
+          "log_loss": 0.0059853994120780615
+        }
+      },
+      "development_decision": {
+        "n": 57,
+        "macro": {
+          "accuracy": 0.7291666666666666,
+          "log_loss": 1.0032155032574703,
+          "return": -0.058257575757575814
+        }
+      },
+      "retention": {
+        "n": 622,
+        "macro": {
+          "accuracy": 0.8545647558386411,
+          "log_loss": 0.3596029798247096
+        }
+      },
+      "known_validation": {
+        "n": 308,
+        "macro": {
+          "brier": 0.2843691085587574,
+          "log_loss": 0.4982478721393975
+        }
+      }
+    }
+  },
+  "limitations": "Selection uses two phone development programs. No pristine transfer test, dynamic proposer, online reinforcement learning or demo promotion."
+}

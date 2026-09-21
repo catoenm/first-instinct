@@ -1,5 +1,10 @@
 # Forecasts can support better choices than direct selection
 
+**Final follow-up:** the run stopped at update 60 and selected update 40 using
+its original rule. The [completed-run audit](appworld-supervised-v2-results.md)
+confirms the update-40 figures below and reports the reserved-transfer data gate.
+The interim aggregate receipt remains preserved as originally recorded.
+
 This is an **exploratory development diagnostic while supervised v2 is running**,
 using saved predictions through update 40. It was defined after the original and
 update-10 aggregate development results were visible. It changes neither training

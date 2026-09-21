@@ -1,0 +1,27 @@
+{
+  "original_canonical_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+  "algorithm": "sha256-sorted-name-float32-v1",
+  "new_model_calls": 0,
+  "checkpoints": {
+    "best": {
+      "canonical_sha256": "a52a8f2c0e4d87d8269c69deb78ed667157f13156d9266601f4ad3dd119d9291",
+      "changes": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43278272,
+        "changed_tensors": 496,
+        "l2_delta": 0.5856722344808466,
+        "max_absolute_delta": 0.0003506019711494446
+      }
+    },
+    "latest": {
+      "canonical_sha256": "fc567ab3ab4a5a143d0faf74b854cd3f16ed57c669d7e6f672bbabc4f96e7464",
+      "changes": {
+        "trainable_elements": 43278336,
+        "changed_elements": 43278285,
+        "changed_tensors": 496,
+        "l2_delta": 0.7329214673879842,
+        "max_absolute_delta": 0.0004952959716320038
+      }
+    }
+  }
+}
