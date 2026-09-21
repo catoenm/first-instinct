@@ -1,0 +1,150 @@
+{
+  "status": "qualified_preparation_snapshot",
+  "scope": "Local data and packaged trainer qualification; no training performance claim.",
+  "collection": {
+    "task_programs": 10,
+    "task_instances": 29,
+    "observed_histories": 49,
+    "alternative_branches": 210,
+    "negative_alternatives": 132,
+    "successful_alternatives": 69,
+    "same_cost_wrong_answer_alternatives": 9,
+    "independent_branch_replays": 210,
+    "reference_and_control_executions": 87,
+    "total_world_executions": 507,
+    "earlier_substrate_screens_excluded": true
+  },
+  "questions": {
+    "counts": {
+      "development": {
+        "ambiguous_forecasts": 0,
+        "by_type": {
+          "continued_application_change": 50,
+          "continued_task_success": 50,
+          "fixed_plan_decision": 57
+        },
+        "programs": 2,
+        "questions": 157,
+        "worlds": 5
+      },
+      "train": {
+        "ambiguous_forecasts": 0,
+        "by_type": {
+          "continued_application_change": 154,
+          "continued_task_success": 144,
+          "fixed_plan_decision": 186
+        },
+        "programs": 8,
+        "questions": 484,
+        "worlds": 20
+      }
+    },
+    "raw_questions_before_grouping": 768,
+    "unique_questions_before_token_filter": 712,
+    "prepared_questions": 641,
+    "maximum_tokens": 8172,
+    "max_tokens": 8192,
+    "consumed_training_questions": 0,
+    "optimizer_steps": 0,
+    "new_pretrained_model_calls": 0
+  },
+  "shortcut_audit": {
+    "status": "passed",
+    "best_command_only_regret": {
+      "development": 0.08155303030303031,
+      "train": 0.08864583333333334
+    },
+    "minimum_regret_required": 0.03,
+    "limitation": "A small fixed baseline suite cannot exclude every shortcut. No model calls, goal text or observations were used."
+  },
+  "prepared_pools": {
+    "development_change": 50,
+    "development_decision": 57,
+    "development_forecast": 50,
+    "known_forecast": 2280,
+    "known_validation": 308,
+    "new_decision": 186,
+    "new_forecast": 298,
+    "replay": 4096,
+    "retention": 622
+  },
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+  "recipe": {
+    "decision_gain": 0.03,
+    "eval_every": 10,
+    "forecast_brier_gain": 0.02,
+    "grad_clip": 1.0,
+    "known_forecast_brier_increase": 0.02,
+    "learning_rate": 1e-05,
+    "max_seconds": 7200,
+    "max_steps": 80,
+    "micro_batch": 1,
+    "patience": 2,
+    "per_step": {
+      "known_forecast": 4,
+      "new_decision": 4,
+      "new_forecast": 8,
+      "replay": 8
+    },
+    "retention_accuracy_drop": 0.02,
+    "retention_log_loss_increase": 0.05,
+    "seed": 20260920
+  },
+  "package": {
+    "status": "passed",
+    "archive_sha256": "4bed2df01d4e5d53faeb581806b668dc6ecda0052e90dd8a3ddac342565158b7",
+    "files": 200,
+    "bytes": 170903130,
+    "startup_tests": [
+      "test_supervised_decision_pilot",
+      "test_appworld_questions",
+      "test_record_codec",
+      "test_appworld_positive",
+      "test_appworld_answer_controls",
+      "test_appworld_trace",
+      "test_appworld_qualification"
+    ]
+  },
+  "hashes": {
+    "output/appworld-questions-v1/preparation.json": "192b2023fbc638f55c4026a23ad57243cc719b8b317a57df325cc4ffef8ea804",
+    "output/appworld-supervised-v1-data/freeze.json": "cd7d087b675b17f305acfcaccbdd0204c1344f5334519e3e10c92c6aacb108cd",
+    "output/appworld-questions-v1/shortcut-audit.json": "b7b62be4863c5954cf238f8b1e278464f5478d3bee3e047c0ae3e6c237fab222",
+    "output/appworld-interventions-v1/control-audit-private.json": "6fff4e64a7f4bbbc4cf8c67074555c8ae4aa46b1b3f192ccf718d2457747a15a",
+    "output/appworld-interventions-v1-independent/replay-summary.json": "95d80d64b26cb4db3d81a2f8afad445f0a3dbfdc1176bdfba5cab8dbb18dea04",
+    "output/appworld-positive-v1/qualification-private.json": "b2c346c2df89db0c59e51a95fe328c2d6c2250c578ef60fbcf14e890991e525c",
+    "output/appworld-answer-controls-v1/qualification-private.json": "79c976ab3bfe01a54adc5949f163a9b46a7958913e2e3c318df02b29f34e9a1f"
+  },
+  "limitations": [
+    "Reference-assisted supplied continuations, not a dynamic proposer.",
+    "Phone program development scores select checkpoints; they are not pristine transfer scores.",
+    "New application forecasts are deterministic; genuine uncertainty comes from the earlier verified corpus.",
+    "Prepared and repeated questions do not count as new task instances.",
+    "Raw protected tasks and derived data are not included in this public receipt."
+  ],
+  "infrastructure_attempt_1": {
+    "archive_sha256": "7de4caa78bd21ecb7bf78b8751d570de35bbdd316641ef36810d4901b05e4be8",
+    "archive_bytes": 9983534,
+    "pipeline_status": "failed",
+    "verified_files": 200,
+    "estimated_compute_usd_excluding_storage": 0.4103904857754707,
+    "pod_deleted": true,
+    "new_model_calls": 0,
+    "new_optimizer_steps": 0,
+    "cause": "Missing pycairo dependency in pinned base image",
+    "reserved_cost_usd": 1
+  },
+  "infrastructure_retry": {
+    "maximum_retries": 1,
+    "restored_previously_successful_setup": true,
+    "pycairo_version": "1.29.1",
+    "data_model_and_training_recipe_unchanged": true,
+    "combined_pilot_allocation_usd": 30,
+    "deadline_extended": false
+  }
+}
