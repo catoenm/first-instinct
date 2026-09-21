@@ -1,0 +1,59 @@
+{
+  "status": "completed_substrate_screen",
+  "version": "appworld-transfer-local-v1",
+  "candidate_programs": 7,
+  "candidate_instances": 7,
+  "reserved_instances": 21,
+  "world_attempts": 21,
+  "clean_receipts": 19,
+  "recorded_application_calls": 480,
+  "failed_world_call_count": "Not included where an exception prevented a receipt; at most 96 each.",
+  "qualified_program_indices": [
+    0,
+    1,
+    4,
+    5
+  ],
+  "quarantined": [
+    {
+      "program_index": 2,
+      "reason": "Independent replay differs: final_db_hashes"
+    },
+    {
+      "program_index": 3,
+      "reason": "Missing clean execution receipt; inspect private logs"
+    },
+    {
+      "program_index": 6,
+      "reason": "Missing clean execution receipt; inspect private logs"
+    }
+  ],
+  "qualified_programs": 4,
+  "upstream_development_test_used": false,
+  "new_model_calls": 0,
+  "new_training_questions": 0,
+  "new_optimizer_steps": 0,
+  "freeze_sha256": "17afa2aed4f99eaf46160790101eb386ff32dbe54971df75bfb1d28c174b150e",
+  "receipt_hashes": {
+    "2-noop-receipt-private.json": "69ed64688579b5f94861ea052b704e0c587a40aceba62e09087d67bd447300f2",
+    "3-reference-receipt-private.json": "24a54de99f60d755a5722d90afb4845736e6e0804a21f5b5660abb642ac803e0",
+    "5-reference-receipt-private.json": "be645a62a6fceea338ec3c681d8165831856ddadd8000dc0b9a0402485c74ce1",
+    "5-noop-receipt-private.json": "880d8d9b50d665b0dd10bf710ad4b34a2c0482cd7fdf3f34e9460a096aea7764",
+    "4-reference-receipt-private.json": "6e82a2bf67ddd49e06b5ff12c263b98d27277eb81342a0873aa4f5e68104a076",
+    "0-noop-receipt-private.json": "8a52b920204060f88fa18aa7917d6af03ccbf487e75a4e142d842cdd84da6275",
+    "2-reference-receipt-private.json": "b54c17dc8535599c62772516b06754cbf4ba06c7e7b35155ed721e4fd2153016",
+    "1-reference-receipt-private.json": "ccea12495820e5140c50ee86f514282015f173cbdab6d7ad3873d344d25b5823",
+    "2-reference_replay-receipt-private.json": "6a7c8cdf2cbbf5477199767ce9207138d689982614d0304d4f9e127e802704cc",
+    "3-reference_replay-receipt-private.json": "dc193ffcc953d7981ae289c1a576b512aa9024f73ef78854f413a0c8a1a652ec",
+    "0-reference_replay-receipt-private.json": "2b8bcbbbe914d1cd0bed2d0564018dede1071d3423f5a3eceb572431406be972",
+    "1-reference_replay-receipt-private.json": "253f9ac478b8a206c1f667ca81dd781859af4722733a1a488fc1eaab0399365e",
+    "1-noop-receipt-private.json": "34d7740267edcd9e940bdcfdf6cdc52abcfd411a23cd8a46459c288987f66a78",
+    "6-reference_replay-receipt-private.json": "9b775cccdcee6cb156336dc3522a65a70e7c4f9690f4c08cdf7992ac1339f570",
+    "5-reference_replay-receipt-private.json": "d90222c645e7e9416b2b6a35d5cf5674f4df352a4ddb1dea574c5b537ad4077e",
+    "4-reference_replay-receipt-private.json": "d3c949fa2fac964caccd7332ea67be00c9339c79dce556adc25e73d24848c389",
+    "6-reference-receipt-private.json": "3c4dd80bb69ee5c7fb8c8611d666aaf290cc6bab412670f7101ae68b0f391793",
+    "0-reference-receipt-private.json": "d264d3ea8afcdb83eaf853591e7a0646ffb9d8e38289bc2ae7da6d4292398728",
+    "4-noop-receipt-private.json": "1c5c4a1d0f1a21631d74ced757d9faf380743441c169ce0862a85e79813bc11c"
+  },
+  "limitation": "Only reserved-transfer execution substrate qualification. No accepted decision menus, forecasts, transfer scores or new training data."
+}

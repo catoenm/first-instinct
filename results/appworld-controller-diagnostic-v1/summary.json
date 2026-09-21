@@ -1,0 +1,2921 @@
+{
+  "status": "completed_exploratory_diagnostic",
+  "timing": "Defined after baseline and step-10 aggregate development metrics were visible. No training or checkpoint selection rule changes.",
+  "data_freeze_sha256": "2f318c261a498be566fe54544074badaeaa1bf1984aca2649140de84eddb7b3b",
+  "prediction_sha256": {
+    "0": {
+      "decisions": "dca58ae82f190210b6c007695b5ff0c892dc50a0e9a06649a62f8683accbd83c",
+      "forecasts": "4af1a991c0e60100a5a205876e76b1c7bf6802425300c0f36428166176ce011a"
+    },
+    "10": {
+      "decisions": "b2ef1256552a91ed135b520dbe2364e0d215c4feee8cd7963a9f658d40c7b775",
+      "forecasts": "770d8163e55d448fb71ef3f92f9698ed0c9bcc48ca321d5164746f5948f339cc"
+    },
+    "20": {
+      "decisions": "70f826f131c7b9d6a260fd70300ca6a7ca2328d26e71eccec3c2c616c7360213",
+      "forecasts": "84f52ca8edf84539a45a5faa854da29e37b7eab7d2794f4cf92475a00aab6438"
+    },
+    "30": {
+      "decisions": "7a28a9be41906791cd097c1a71387c18862147259892ec3d81c545a5440f102b",
+      "forecasts": "e2dc3c9fa288d7ad754a7e284f977bc0b42a87992e741c9fd104c2532f0ee71d"
+    },
+    "40": {
+      "decisions": "58f4fc4e6366e687a6b89b50f078d329287c9b989c8097c4f2075416b798b31f",
+      "forecasts": "63349449b88ee2c57761974d8b472251ab37272b9cd901c55e075163b2ebba89"
+    }
+  },
+  "coverage": {
+    "decision_questions": 57,
+    "forecast_questions": 50,
+    "exact_forecast_matched_menus": 57,
+    "excluded_menus": {},
+    "programs": 2,
+    "underlying_worlds": 5
+  },
+  "results": {
+    "0": {
+      "all_decisions": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.14317234848484856,
+            "regret": 0.785691287878788,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.6818181818181819,
+            "probability_of_negative_return": 0.2765151515151515,
+            "probability_of_cost_dominated_choice": 0.23484848484848486
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8818465909090909,
+                "regret": 0.0621875,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9375,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.08181818181818176,
+                "regret": 0.48352272727272727,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5852272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.393181818181818,
+                "regret": 1.8113636363636365,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5227272727272727,
+                "probability_of_negative_return": 0.4772727272727273,
+                "probability_of_cost_dominated_choice": 0.4772727272727273
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.561373106060606,
+            "regret": 0.08114583333333333,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9166666666666667,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8818465909090909,
+                "regret": 0.0621875,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9375,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "exact_forecast_matches": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.14317234848484856,
+            "regret": 0.785691287878788,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.6818181818181819,
+            "probability_of_negative_return": 0.2765151515151515,
+            "probability_of_cost_dominated_choice": 0.23484848484848486
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8818465909090909,
+                "regret": 0.0621875,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9375,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.08181818181818176,
+                "regret": 0.48352272727272727,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5852272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.393181818181818,
+                "regret": 1.8113636363636365,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5227272727272727,
+                "probability_of_negative_return": 0.4772727272727273,
+                "probability_of_cost_dominated_choice": 0.4772727272727273
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.561373106060606,
+            "regret": 0.08114583333333333,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9166666666666667,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8818465909090909,
+                "regret": 0.0621875,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9375,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "forecast_expected_return": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.163967803030303,
+            "regret": 0.47855113636363633,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.42613636363636365,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4231534090909091,
+                "regret": 0.5208806818181818,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.32386363636363635,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.06874999999999999,
+                "regret": 0.496590909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "forecast_error_subgroups": {
+        "nonempty_plan/success_target_0.0": {
+          "questions": 15,
+          "mean_predicted_success": 0.6661847154299418,
+          "minimum_predicted_success": 0.2619282007217407,
+          "maximum_predicted_success": 0.812736988067627
+        },
+        "nonempty_plan/success_target_1.0": {
+          "questions": 25,
+          "mean_predicted_success": 0.8893027853965759,
+          "minimum_predicted_success": 0.8070882558822632,
+          "maximum_predicted_success": 0.9823014736175537
+        },
+        "stop/success_target_0.0": {
+          "questions": 10,
+          "mean_predicted_success": 0.49729988038307055,
+          "minimum_predicted_success": 0.00020887015853077173,
+          "maximum_predicted_success": 0.9961293935775757
+        }
+      }
+    },
+    "10": {
+      "all_decisions": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.08825757575757578,
+            "regret": 0.7307765151515152,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.2765151515151515,
+            "probability_of_cost_dominated_choice": 0.23484848484848486
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.18437499999999996,
+                "regret": 0.3809659090909091,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.393181818181818,
+                "regret": 1.8113636363636365,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5227272727272727,
+                "probability_of_negative_return": 0.4772727272727273,
+                "probability_of_cost_dominated_choice": 0.4772727272727273
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.6018939393939393,
+            "regret": 0.040625,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9583333333333333,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "exact_forecast_matches": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.08825757575757578,
+            "regret": 0.7307765151515152,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.2765151515151515,
+            "probability_of_cost_dominated_choice": 0.23484848484848486
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.18437499999999996,
+                "regret": 0.3809659090909091,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.393181818181818,
+                "regret": 1.8113636363636365,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5227272727272727,
+                "probability_of_negative_return": 0.4772727272727273,
+                "probability_of_cost_dominated_choice": 0.4772727272727273
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.6018939393939393,
+            "regret": 0.040625,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9583333333333333,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "forecast_expected_return": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.163967803030303,
+            "regret": 0.47855113636363633,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.42613636363636365,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4231534090909091,
+                "regret": 0.5208806818181818,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.32386363636363635,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.06874999999999999,
+                "regret": 0.496590909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "forecast_error_subgroups": {
+        "nonempty_plan/success_target_0.0": {
+          "questions": 15,
+          "mean_predicted_success": 0.6161135703325271,
+          "minimum_predicted_success": 0.1487242430448532,
+          "maximum_predicted_success": 0.7974117398262024
+        },
+        "nonempty_plan/success_target_1.0": {
+          "questions": 25,
+          "mean_predicted_success": 0.8850318121910096,
+          "minimum_predicted_success": 0.7913147211074829,
+          "maximum_predicted_success": 0.9836804866790771
+        },
+        "stop/success_target_0.0": {
+          "questions": 10,
+          "mean_predicted_success": 0.49496077762742063,
+          "minimum_predicted_success": 0.00012542646436486393,
+          "maximum_predicted_success": 0.9942328333854675
+        }
+      }
+    },
+    "20": {
+      "all_decisions": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.10265151515151522,
+            "regret": 0.7451704545454546,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.2765151515151515,
+            "probability_of_cost_dominated_choice": 0.23484848484848486
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.14119318181818177,
+                "regret": 0.4241477272727273,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.393181818181818,
+                "regret": 1.8113636363636365,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5227272727272727,
+                "probability_of_negative_return": 0.4772727272727273,
+                "probability_of_cost_dominated_choice": 0.4772727272727273
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.6018939393939393,
+            "regret": 0.040625,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9583333333333333,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "exact_forecast_matches": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.10265151515151522,
+            "regret": 0.7451704545454546,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.2765151515151515,
+            "probability_of_cost_dominated_choice": 0.23484848484848486
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.14119318181818177,
+                "regret": 0.4241477272727273,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.393181818181818,
+                "regret": 1.8113636363636365,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5227272727272727,
+                "probability_of_negative_return": 0.4772727272727273,
+                "probability_of_cost_dominated_choice": 0.4772727272727273
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.6018939393939393,
+            "regret": 0.040625,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9583333333333333,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.944034090909091,
+                "regret": 0.0,
+                "oracle_return": 0.944034090909091,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "forecast_expected_return": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.3071875,
+            "regret": 0.3353314393939394,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.5700757575757576,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8528125,
+                "regret": 0.0912215909090909,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.7556818181818181,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.06874999999999999,
+                "regret": 0.496590909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "forecast_error_subgroups": {
+        "nonempty_plan/success_target_0.0": {
+          "questions": 15,
+          "mean_predicted_success": 0.5035052726666133,
+          "minimum_predicted_success": 0.0430397093296051,
+          "maximum_predicted_success": 0.7215731143951416
+        },
+        "nonempty_plan/success_target_1.0": {
+          "questions": 25,
+          "mean_predicted_success": 0.8241586923599243,
+          "minimum_predicted_success": 0.6394238471984863,
+          "maximum_predicted_success": 0.9745080471038818
+        },
+        "stop/success_target_0.0": {
+          "questions": 10,
+          "mean_predicted_success": 0.4717471757918247,
+          "minimum_predicted_success": 8.309468103107065e-05,
+          "maximum_predicted_success": 0.973139762878418
+        }
+      }
+    },
+    "30": {
+      "all_decisions": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.001969696969696927,
+            "regret": 0.6405492424242425,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.26136363636363635,
+            "probability_of_cost_dominated_choice": 0.21969696969696967
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.18437499999999996,
+                "regret": 0.3809659090909091,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.084090909090909,
+                "regret": 1.5022727272727274,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5681818181818181,
+                "probability_of_negative_return": 0.4318181818181818,
+                "probability_of_cost_dominated_choice": 0.4318181818181818
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.5890909090909091,
+            "regret": 0.053428030303030304,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9431818181818181,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "exact_forecast_matches": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.001969696969696927,
+            "regret": 0.6405492424242425,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.26136363636363635,
+            "probability_of_cost_dominated_choice": 0.21969696969696967
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.18437499999999996,
+                "regret": 0.3809659090909091,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.084090909090909,
+                "regret": 1.5022727272727274,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5681818181818181,
+                "probability_of_negative_return": 0.4318181818181818,
+                "probability_of_cost_dominated_choice": 0.4318181818181818
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.5890909090909091,
+            "regret": 0.053428030303030304,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9431818181818181,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "forecast_expected_return": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4730397727272727,
+            "regret": 0.16947916666666668,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9432670454545454,
+                "regret": 0.0007670454545454551,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.8465909090909092,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4758522727272727,
+                "regret": 0.08948863636363637,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8465909090909092,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "forecast_error_subgroups": {
+        "nonempty_plan/success_target_0.0": {
+          "questions": 15,
+          "mean_predicted_success": 0.47025108312567077,
+          "minimum_predicted_success": 0.035471368581056595,
+          "maximum_predicted_success": 0.6806493401527405
+        },
+        "nonempty_plan/success_target_1.0": {
+          "questions": 25,
+          "mean_predicted_success": 0.805728771686554,
+          "minimum_predicted_success": 0.6714878082275391,
+          "maximum_predicted_success": 0.9675236344337463
+        },
+        "stop/success_target_0.0": {
+          "questions": 10,
+          "mean_predicted_success": 0.42729206014846566,
+          "minimum_predicted_success": 8.589729986852035e-05,
+          "maximum_predicted_success": 0.9198059439659119
+        }
+      }
+    },
+    "40": {
+      "all_decisions": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.0003030303030303605,
+            "regret": 0.6428219696969697,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.26136363636363635,
+            "probability_of_cost_dominated_choice": 0.21969696969696967
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.14119318181818177,
+                "regret": 0.4241477272727273,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.0477272727272728,
+                "regret": 1.465909090909091,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5681818181818181,
+                "probability_of_negative_return": 0.4318181818181818,
+                "probability_of_cost_dominated_choice": 0.4318181818181818
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.5890909090909091,
+            "regret": 0.053428030303030304,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9431818181818181,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "exact_forecast_matches": {
+        "direct_choice": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": -0.0003030303030303605,
+            "regret": 0.6428219696969697,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.7234848484848485,
+            "probability_of_negative_return": 0.26136363636363635,
+            "probability_of_cost_dominated_choice": 0.21969696969696967
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.14119318181818177,
+                "regret": 0.4241477272727273,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.6477272727272727,
+                "probability_of_negative_return": 0.3522727272727273,
+                "probability_of_cost_dominated_choice": 0.22727272727272727
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": -1.0477272727272728,
+                "regret": 1.465909090909091,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.5681818181818181,
+                "probability_of_negative_return": 0.4318181818181818,
+                "probability_of_cost_dominated_choice": 0.4318181818181818
+              }
+            }
+          }
+        },
+        "exclude_cost_dominated": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.5890909090909091,
+            "regret": 0.053428030303030304,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9431818181818181,
+            "probability_of_negative_return": 0.041666666666666664,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9056249999999999,
+                "regret": 0.03840909090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.9545454545454546,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.443465909090909,
+                "regret": 0.12187500000000001,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.875,
+                "probability_of_negative_return": 0.125,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "forecast_expected_return": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.6422632575757576,
+            "regret": 0.0002556818181818184,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.9488636363636365,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.9432670454545454,
+                "regret": 0.0007670454545454551,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.8465909090909092,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.565340909090909,
+                "regret": 0.0,
+                "oracle_return": 0.565340909090909,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "stop": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.0,
+            "regret": 0.6425189393939393,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.23484848484848486,
+            "probability_of_negative_return": 0.0,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.944034090909091,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.565340909090909,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.22727272727272727,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.0,
+                "regret": 0.4181818181818182,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.4772727272727273,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "cheapest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.4594318181818182,
+            "regret": 0.1830871212121212,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.8143939393939394,
+            "probability_of_negative_return": 0.1856060606060606,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.5760227272727273,
+                "regret": 0.36801136363636366,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.6306818181818181,
+                "probability_of_negative_return": 0.3693181818181818,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.38409090909090904,
+                "regret": 0.18125,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.8125,
+                "probability_of_negative_return": 0.1875,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.4181818181818182,
+                "regret": 0.0,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 1.0,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        },
+        "longest_completion": {
+          "questions": 57,
+          "programs": 2,
+          "macro": {
+            "return_value": 0.560965909090909,
+            "regret": 0.08155303030303031,
+            "oracle_return": 0.6425189393939393,
+            "optimality": 0.553030303030303,
+            "probability_of_negative_return": 0.056818181818181816,
+            "probability_of_cost_dominated_choice": 0.0
+          },
+          "by_declared_cost": {
+            "0.005": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.8334659090909091,
+                "regret": 0.11056818181818182,
+                "oracle_return": 0.944034090909091,
+                "optimality": 0.3693181818181818,
+                "probability_of_negative_return": 0.10795454545454546,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.05": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.48352272727272727,
+                "regret": 0.08181818181818179,
+                "oracle_return": 0.565340909090909,
+                "optimality": 0.5511363636363636,
+                "probability_of_negative_return": 0.0625,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            },
+            "0.2": {
+              "questions": 19,
+              "programs": 2,
+              "macro": {
+                "return_value": 0.3659090909090909,
+                "regret": 0.05227272727272729,
+                "oracle_return": 0.4181818181818182,
+                "optimality": 0.7386363636363636,
+                "probability_of_negative_return": 0.0,
+                "probability_of_cost_dominated_choice": 0.0
+              }
+            }
+          }
+        }
+      },
+      "forecast_error_subgroups": {
+        "nonempty_plan/success_target_0.0": {
+          "questions": 15,
+          "mean_predicted_success": 0.48831272770961126,
+          "minimum_predicted_success": 0.028981812298297882,
+          "maximum_predicted_success": 0.7187879681587219
+        },
+        "nonempty_plan/success_target_1.0": {
+          "questions": 25,
+          "mean_predicted_success": 0.8219526958465576,
+          "minimum_predicted_success": 0.7018375992774963,
+          "maximum_predicted_success": 0.9723994135856628
+        },
+        "stop/success_target_0.0": {
+          "questions": 10,
+          "mean_predicted_success": 0.2630500118924829,
+          "minimum_predicted_success": 6.723866681568325e-05,
+          "maximum_predicted_success": 0.675507128238678
+        }
+      }
+    }
+  },
+  "new_model_calls": 0,
+  "new_environment_executions": 0,
+  "new_optimizer_steps": 0,
+  "limits": "Exposed phone development data; fixed reference-assisted menus. This is neither adaptive replanning nor independent proposer evaluation. No proof of transfer or Jev parity. Ties in simple rules are averaged uniformly; model-controller ties use first maximum."
+}
