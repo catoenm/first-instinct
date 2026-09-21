@@ -1,0 +1,9 @@
+{
+  "private_artifact_files": 368,
+  "private_artifact_manifest_sha256": "d87b2f1f5c9a1e5f6f3ab444d1f97cdad8539947074adcd89f1b5ac2f240ae4e",
+  "freeze_sha256": "4327ba0e357e09e1498518fb1255df99fffd7a924586dc85e9cc5aabe1293233",
+  "audit_sha256": "74a294197fd7b39be918458ab714cbde653c9bfb7e0c42b4acdd8ff921ca3b0e",
+  "models_called": 0,
+  "gpu_spend": 0,
+  "raw_receipts": "Retained locally in ignored output; generic code and permitted aggregates are public."
+}

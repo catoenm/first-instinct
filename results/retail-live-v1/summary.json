@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "source_goal_contracts": 3,
+  "source_mechanisms": 2,
+  "source_goal_configuration_pairs": 20,
+  "physical_initial_states": 10,
+  "new_independent_tasks": 0,
+  "primary_validation_episodes": 60,
+  "independent_replays": 60,
+  "runtime_episodes": 120,
+  "actual_tool_calls": 102,
+  "actor_turns_including_stop": 222,
+  "expected_actor_errors": 10,
+  "cost_pairs": 6,
+  "controllers": {
+    "stop": {
+      "episodes": 20,
+      "successful_terminal_goals": 9
+    },
+    "inspect": {
+      "episodes": 20,
+      "successful_terminal_goals": 16
+    },
+    "wrong_scope": {
+      "episodes": 20,
+      "successful_terminal_goals": 5
+    }
+  },
+  "model_calls": 0,
+  "new_admitted_questions": 0,
+  "training_presentations": 0,
+  "optimizer_steps": 0,
+  "freeze_sha256": "4327ba0e357e09e1498518fb1255df99fffd7a924586dc85e9cc5aabe1293233",
+  "limitation": "Runtime validation on authored retail worlds, not PPO training, dynamic proposals or a model-performance result.",
+  "negative_controls": {
+    "hidden_actor_feedback": {
+      "rejected": true,
+      "reason": "Actor delivery contains unearned reward or private information"
+    },
+    "premature_payout": {
+      "rejected": true,
+      "reason": "State chain, fee, reward or premature terminal feedback differs"
+    },
+    "free_inspection": {
+      "rejected": true,
+      "reason": "State chain, fee, reward or premature terminal feedback differs"
+    },
+    "altered_menu": {
+      "rejected": true,
+      "reason": "Menu changed with hidden state"
+    },
+    "reset_state_leakage": {
+      "rejected": true,
+      "reason": "Live reset, public context, scope or final state differs from qualified witness"
+    },
+    "double_total_reward": {
+      "rejected": true,
+      "reason": "Final state/history/utility mismatch"
+    }
+  },
+  "unit_tests": 6,
+  "private_audit_sha256": "74a294197fd7b39be918458ab714cbde653c9bfb7e0c42b4acdd8ff921ca3b0e",
+  "negative_audit_sha256": "4d8c296545b9ef155fdb8b01aa82f638f1915332415bc3ba1d5ba1378d5061c3",
+  "preserved_freezes_sha256": "afa8cbb12bdd11a9c19a212e6381e30cba5ef95e5f8cc322300f03f56d4f207f"
+}

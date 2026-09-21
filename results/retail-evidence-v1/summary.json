@@ -1,0 +1,963 @@
+{
+  "status": "passed",
+  "task_contracts": 3,
+  "mechanisms": 2,
+  "whole_usage_groups": 1,
+  "candidate_usage": "retail_workflows: training_candidate",
+  "goal_configuration_slots": 20,
+  "unique_physical_initial_states": 10,
+  "physical_states_shared_across_task_contracts": 8,
+  "complete_trajectory_groups_shared_across_tasks": 24,
+  "reserved_telecom_physical_overlap": 0,
+  "reserved_telecom_trajectory_overlap": 0,
+  "distinct_alternative_branches": 120,
+  "independent_replays": 120,
+  "world_executions": 240,
+  "total_tool_calls": 1744,
+  "calls_by_role": {
+    "cache": 720,
+    "verifier": 480,
+    "actor": 340,
+    "background": 204
+  },
+  "expected_actor_errors": 46,
+  "authored_background_transitions": 120,
+  "contradictory_fresh_read_groups": 14,
+  "uncertain_forecast_targets": 30,
+  "immediate_continued_differences": 7,
+  "stopped_successful_goal_worlds": 9,
+  "task_contracts_with_cost_reversal": 3,
+  "groups": {
+    "order_address": {
+      "compatible_worlds": 8,
+      "cost_changes_best_action": true,
+      "costs": {
+        "read=0.10,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 14.75
+            },
+            "profile_write": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 4.75
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 14.8375
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 14.7375
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 14.65
+            }
+          },
+          "best_actions": [
+            "inspect"
+          ]
+        },
+        "read=0.10,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 9.0
+            },
+            "profile_write": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -1.0
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 13.4
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 13.3
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 8.9
+            }
+          },
+          "best_actions": [
+            "inspect"
+          ]
+        },
+        "read=2,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 14.75
+            },
+            "profile_write": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 4.75
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 12.9375
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 10.9375
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 12.75
+            }
+          },
+          "best_actions": [
+            "order_write"
+          ]
+        },
+        "read=2,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 9.0
+            },
+            "profile_write": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -1.0
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 11.5
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 9.5
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 7.0
+            }
+          },
+          "best_actions": [
+            "inspect"
+          ]
+        },
+        "read=10,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 14.75
+            },
+            "profile_write": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 4.75
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 4.9375
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": -5.0625
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 4.75
+            }
+          },
+          "best_actions": [
+            "order_write"
+          ]
+        },
+        "read=10,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 9.0
+            },
+            "profile_write": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -1.0
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 3.5
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.75,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": -6.5
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.75,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -1.0
+            }
+          },
+          "best_actions": [
+            "stop"
+          ]
+        }
+      }
+    },
+    "profile_address": {
+      "compatible_worlds": 8,
+      "cost_changes_best_action": true,
+      "costs": {
+        "read=0.10,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.375,
+              "continued_success": 0.375,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 7.25
+            },
+            "profile_write": {
+              "immediate_success": 1.0,
+              "continued_success": 1.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 19.75
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 19.775
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 19.675
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.375,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.5,
+              "expected_return": 14.525
+            }
+          },
+          "best_actions": [
+            "inspect"
+          ]
+        },
+        "read=0.10,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.375,
+              "continued_success": 0.375,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 1.5
+            },
+            "profile_write": {
+              "immediate_success": 1.0,
+              "continued_success": 1.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 14.0
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 16.9
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 16.8
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.375,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.5,
+              "expected_return": 5.9
+            }
+          },
+          "best_actions": [
+            "inspect"
+          ]
+        },
+        "read=2,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.375,
+              "continued_success": 0.375,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 7.25
+            },
+            "profile_write": {
+              "immediate_success": 1.0,
+              "continued_success": 1.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 19.75
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 17.875
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 15.875
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.375,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.5,
+              "expected_return": 12.625
+            }
+          },
+          "best_actions": [
+            "profile_write"
+          ]
+        },
+        "read=2,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.375,
+              "continued_success": 0.375,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 1.5
+            },
+            "profile_write": {
+              "immediate_success": 1.0,
+              "continued_success": 1.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 14.0
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 15.0
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 13.0
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.375,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.5,
+              "expected_return": 4.0
+            }
+          },
+          "best_actions": [
+            "inspect"
+          ]
+        },
+        "read=10,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.375,
+              "continued_success": 0.375,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 7.25
+            },
+            "profile_write": {
+              "immediate_success": 1.0,
+              "continued_success": 1.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 19.75
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 9.875
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": -0.125
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.375,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.5,
+              "expected_return": 4.625
+            }
+          },
+          "best_actions": [
+            "profile_write"
+          ]
+        },
+        "read=10,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 10.0
+            },
+            "order_write": {
+              "immediate_success": 0.375,
+              "continued_success": 0.375,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 1.5
+            },
+            "profile_write": {
+              "immediate_success": 1.0,
+              "continued_success": 1.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 14.0
+            },
+            "inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": 7.0
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 1.0,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.5,
+              "expected_return": -3.0
+            },
+            "order_then_inspect": {
+              "immediate_success": 0.375,
+              "continued_success": 0.75,
+              "expected_actor_reads": 1.0,
+              "expected_actor_writes": 1.5,
+              "expected_return": -4.0
+            }
+          },
+          "best_actions": [
+            "profile_write"
+          ]
+        }
+      }
+    },
+    "payment_migration": {
+      "compatible_worlds": 4,
+      "cost_changes_best_action": true,
+      "costs": {
+        "read=0.10,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 5.0
+            },
+            "migrate": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 9.75
+            },
+            "cancel": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -0.25
+            },
+            "inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 9.7375
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 3.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 9.6375
+            },
+            "migrate_then_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 9.55
+            }
+          },
+          "best_actions": [
+            "migrate"
+          ]
+        },
+        "read=0.10,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 5.0
+            },
+            "migrate": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 4.0
+            },
+            "cancel": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -6.0
+            },
+            "inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 8.3
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 3.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 8.2
+            },
+            "migrate_then_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 3.8
+            }
+          },
+          "best_actions": [
+            "inspect"
+          ]
+        },
+        "read=2,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 5.0
+            },
+            "migrate": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 9.75
+            },
+            "cancel": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -0.25
+            },
+            "inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 5.9375
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 3.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 3.9375
+            },
+            "migrate_then_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 5.75
+            }
+          },
+          "best_actions": [
+            "migrate"
+          ]
+        },
+        "read=2,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 5.0
+            },
+            "migrate": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 4.0
+            },
+            "cancel": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -6.0
+            },
+            "inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 4.5
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 3.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": 2.5
+            },
+            "migrate_then_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 0.0
+            }
+          },
+          "best_actions": [
+            "stop"
+          ]
+        },
+        "read=10,write=0.25": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 5.0
+            },
+            "migrate": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 9.75
+            },
+            "cancel": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -0.25
+            },
+            "inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": -10.0625
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 3.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": -20.0625
+            },
+            "migrate_then_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -10.25
+            }
+          },
+          "best_actions": [
+            "migrate"
+          ]
+        },
+        "read=10,write=6": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 0.0,
+              "expected_return": 5.0
+            },
+            "migrate": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": 4.0
+            },
+            "cancel": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "expected_actor_reads": 0.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -6.0
+            },
+            "inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": -11.5
+            },
+            "repeat_inspect": {
+              "immediate_success": 0.25,
+              "continued_success": 0.5,
+              "expected_actor_reads": 3.0,
+              "expected_actor_writes": 0.25,
+              "expected_return": -21.5
+            },
+            "migrate_then_inspect": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "expected_actor_reads": 2.0,
+              "expected_actor_writes": 1.0,
+              "expected_return": -16.0
+            }
+          },
+          "best_actions": [
+            "stop"
+          ]
+        }
+      }
+    }
+  },
+  "freeze_sha256": "2d5222774bd31f50424afcbc256a859f6cea27c26dc82f4d6e66a1f8f37a82d4",
+  "source_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "model_calls": 0,
+  "admitted_questions": 0,
+  "training_presentations": 0,
+  "optimizer_steps": 0,
+  "limitation": "Three authored contracts over two connected retail mechanisms, with explicit background events. Execution receipts, not admitted questions, an official benchmark run or model improvement.",
+  "negative_audit_controls": {
+    "hidden_input": {
+      "rejected": true,
+      "reason": "Public input differs from its executed cache or leaks extra fields"
+    },
+    "wrong_forecast_horizon": {
+      "rejected": true,
+      "reason": "Immediate forecast is from the wrong time"
+    },
+    "wrong_fee_type": {
+      "rejected": true,
+      "reason": "Tool cost type differs"
+    },
+    "infrastructure_error_as_outcome": {
+      "rejected": true,
+      "reason": "Infrastructure error masquerades as an outcome"
+    },
+    "unrelated_mutation": {
+      "rejected": true,
+      "reason": "Terminal state or transition accounting differs"
+    }
+  },
+  "private_audit_sha256": "8a51807b2cd52b91949bf89ee075b80a7126e3eb52a0bf3378674762e94b7cac",
+  "negative_audit_sha256": "bcf24ff561c474d0b263ab5ae88e1a7490319f20f8392bd7c2397ba382ffc30b"
+}
