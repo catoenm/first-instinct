@@ -1,5 +1,11 @@
 # A qualified application-data pilot
 
+**Status update:** v1 stopped before training because its checkpoint identity
+check compared two hash orderings. The [separate v2 correction](appworld-supervised-v2-correction.md)
+preserves the data and learning recipe, qualifies the canonical identity locally,
+and shares the original budget. The preparation evidence below remains valid;
+it is not a record of consumed training data.
+
 The next experiment keeps the original Qwen3.5-9B supervised checkpoint and asks
 whether broader, executed application examples improve both decisions and
 consequence forecasts. It follows the failed joint transfer gate in
@@ -121,9 +127,9 @@ directory and original adapter:
 
 ```sh
 python -m tool_lab.supervised_pilot_audit \
-  --root output/appworld-supervised-retry1-cloud-v1 \
+  --root output/appworld-supervised-v2-cloud-v1 \
   --original output/general-supervised-complete-v1/runs/supervised-01/best/adapter_model.safetensors \
-  --output output/appworld-supervised-v1-final-audit.json
+  --output output/appworld-supervised-v2-final-audit.json
 ```
 
 It recalculates probability scores and checkpoint selection, checks the actual

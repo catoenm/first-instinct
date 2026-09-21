@@ -1,0 +1,85 @@
+{
+  "status": "corrected_preparation_snapshot",
+  "correction": "Canonical sorted-name float32 tensor identity; unchanged questions, weights, optimizer recipe and learning gates.",
+  "identity_qualification": {
+    "status": "passed",
+    "original_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "canonical_tensor_hash": {
+      "sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "parameters": 43278336
+    },
+    "actual_tensor_count": 496,
+    "reversed_registration_order": true,
+    "recipe_unchanged": true,
+    "new_foundation_loads": 0,
+    "new_model_forward_calls": 0,
+    "new_optimizer_steps": 0,
+    "diagnosis": "v1 compared registration-order hashing against a sorted-name reference hash; v2 uses the established sorted-name contract."
+  },
+  "package": {
+    "status": "passed",
+    "archive_sha256": "07b939b657570e90adeb2d6cb44bc6fa91b4c585b64355a19194639ca6ac2356",
+    "files": 208,
+    "bytes": 170913079,
+    "startup_tests": [
+      "test_supervised_decision_pilot",
+      "test_appworld_questions",
+      "test_record_codec",
+      "test_appworld_positive",
+      "test_appworld_answer_controls",
+      "test_appworld_trace",
+      "test_appworld_qualification",
+      "test_supervised_identity_v2",
+      "test_supervised_pilot_audit"
+    ]
+  },
+  "freeze_sha256": "2f318c261a498be566fe54544074badaeaa1bf1984aca2649140de84eddb7b3b",
+  "previous_freeze_sha256": "cd7d087b675b17f305acfcaccbdd0204c1344f5334519e3e10c92c6aacb108cd",
+  "prepared_pools": {
+    "development_change": 50,
+    "development_decision": 57,
+    "development_forecast": 50,
+    "known_forecast": 2280,
+    "known_validation": 308,
+    "new_decision": 186,
+    "new_forecast": 298,
+    "replay": 4096,
+    "retention": 622
+  },
+  "unchanged_question_files": {
+    "development_change.jsonl": "86ae3b88fa840417090ce0120bf49f4327f2079eefcc9517e9ba3cae32c13bc2",
+    "development_decision.jsonl": "581f940709925c25fb6dac25bcdc5d1142a79fd73505c7238d8a5fabaffdb33e",
+    "development_forecast.jsonl": "c67d988ace5f4223c87eaaf53d7e28cadaedbe2fdd26c2fed6a567923d683a32",
+    "known_forecast.jsonl": "db54698d31ae0231642308c7991940882a09e7e5c596579d52285cc426971dbd",
+    "known_validation.jsonl": "7288ebd3097f2167b9f6b19df6bdf444893276b3464fbed57f143c83cb16e882",
+    "new_decision.jsonl": "875b8e464ce44fad94d5711df225f87e86d96d7bd990240277601c284f5b000d",
+    "new_forecast.jsonl": "8ca7cbb16d397c7672f6b544a12389c36bff21068f23383f36e247966db74c61",
+    "question-preparation.json": "192b2023fbc638f55c4026a23ad57243cc719b8b317a57df325cc4ffef8ea804",
+    "replay.jsonl": "224c19979ae4be2309e65eea640e732e1b743780eb32ff6fe1900aa5ea2f7844",
+    "retention.jsonl": "8ad2ffafd4c1ffb75d9872b0a5c3012ec5351b04fd40790c33f7ae5ceaff9ac4",
+    "shortcut-audit.json": "b7b62be4863c5954cf238f8b1e278464f5478d3bee3e047c0ae3e6c237fab222"
+  },
+  "all_attempts_combined_allocation_usd": 30,
+  "prior_attempt_reserve_usd": 2,
+  "remaining_compute_ceiling_usd": 19.6,
+  "storage_recovery_reserve_usd": 8.4,
+  "failed_attempts": [
+    {
+      "archive_sha256": "7de4caa78bd21ecb7bf78b8751d570de35bbdd316641ef36810d4901b05e4be8",
+      "archive_bytes": 9983534,
+      "verified_files": 200,
+      "estimated_compute_usd_excluding_storage": 0.4103904857754707,
+      "pod_deleted": true
+    },
+    {
+      "archive_sha256": "0c46907af5b0c3d586fafea8673441d23c5a00197ebe041e31f4846d8e4c5cbf",
+      "archive_bytes": 9989292,
+      "verified_files": 204,
+      "estimated_compute_usd_excluding_storage": 0.6263328606963158,
+      "pod_deleted": true
+    }
+  ],
+  "consumed_9b_training_questions": 0,
+  "completed_9b_optimizer_updates": 0,
+  "limitations": "Preparation snapshot only. No claim of successful training, transfer, dynamic proposals, live reinforcement learning or Jev equivalence."
+}
