@@ -7,6 +7,8 @@ required three-percentage-point improvement, so the unchanged stopping rule ende
 the run. The original supervised checkpoint remains selected for the demo.
 The trained update-80 and update-160 adapters are preserved as experimental results.
 
+![Audited development curves: forecast error falls substantially, general accuracy remains just above its retention floor, and tool accuracy remains below the required improvement.](../results/release-balanced-v1/learning-curves.svg)
+
 | Development measure | Original | Update 80 | Update 160 |
 |---|---:|---:|---:|
 | Tool accuracy, equal weight per server | 86.87% | 86.47% | 86.68% |
