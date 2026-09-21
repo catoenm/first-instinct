@@ -1,0 +1,19 @@
+{
+  "admitted_training_questions": 0,
+  "expected_refusals": 36,
+  "foundation_model_calls": 0,
+  "freeze_sha256": "64e4c50f9c9a6c187b114e398fcb02bb7083762009b96b79666ca78f138ef938",
+  "independent_replays": 9,
+  "limitation": "Local real-process and horizon coverage with scripted actions, not learned performance, a matched training prior, arbitrary trajectory coverage, or GPU-host qualification.",
+  "maximum_tokens": 3185,
+  "new_independent_tasks": 0,
+  "new_reset_executions": 18,
+  "optimizer_steps": 0,
+  "primary_diagnostic_episodes": 9,
+  "real_horizon_terminations": 18,
+  "real_tool_calls": 108,
+  "scripted_actor_decisions": 108,
+  "status": "passed",
+  "unique_public_inputs": 48,
+  "unique_underlying_physical_states": 4
+}
