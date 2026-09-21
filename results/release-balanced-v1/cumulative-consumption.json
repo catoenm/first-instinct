@@ -1,0 +1,26 @@
+{
+  "by_pool": {
+    "general": {
+      "presentations": 7680,
+      "unique_questions": 7640
+    },
+    "tools": {
+      "presentations": 6080,
+      "unique_questions": 5585
+    },
+    "verified": {
+      "presentations": 1600,
+      "unique_questions": 1212
+    }
+  },
+  "input_tokens": 10709074,
+  "note": "Tokenized question identity across these two audited continuations only. General replay already appeared during original training; these are not all newly acquired examples or independent worlds.",
+  "presentations": 15360,
+  "questions_shared_between_runs": 715,
+  "repeated_presentations_across_both": 923,
+  "source_receipt_sha256": [
+    "afab6b80133c8d01bef89f6a4d942819c5e891e651207f3eb9ccd3f35a1c3b73",
+    "5ad27cf9c3c8589d26cbd9d2e268c012a5a21e304d365fe51c2fa07d8ab925f3"
+  ],
+  "unique_questions_across_both": 14437
+}

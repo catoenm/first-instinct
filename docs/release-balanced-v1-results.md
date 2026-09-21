@@ -77,9 +77,12 @@ branches. The separately collected 190 fresh-observation retail forecasts were
 not included in this frozen training schedule.
 
 Both release attempts together consumed 15,360 presentations and 10,709,074
-input tokens. Their unique-question counts cannot be added: the attempts reused
-the admitted corpus and original starting checkpoint. No new main run was started
-after the failed advancement gate.
+input tokens, covering 14,437 unique tokenized questions. The attempts shared
+715 questions; including repetition within the follow-up, there were 923 repeated
+presentations across both. These comprise 7,640 distinct general replay questions,
+5,585 tool questions and 1,212 verified questions. General replay had already
+appeared during original training, so these are not all newly acquired examples.
+No new main run was started after the failed advancement gate.
 
 An independent audit recomputed every saved evaluation from per-question
 predictions and matched the complete consumed sequence to the frozen schedule.
