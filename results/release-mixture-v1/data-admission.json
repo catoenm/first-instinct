@@ -1,0 +1,73 @@
+{
+  "assembly_sha256": "85a09f58eccc2a9de4fc27e8fb2723234f0e8accf3759c7a4e755dfe96ee8180",
+  "audit_plan_sha256": "15e826119b877fddf687169f42f1e24a2a24462d06404eadaa88456b1678ea2c",
+  "by_role": {
+    "development": {
+      "source_groups": 13861,
+      "source_presentations": 16764,
+      "target_contracts": {
+        "acceptable_set": 16398,
+        "categorical_distribution": 366
+      },
+      "tokens": 7854098,
+      "unique_token_questions": 16764
+    },
+    "diagnostic": {
+      "source_groups": 1,
+      "source_presentations": 728,
+      "target_contracts": {
+        "categorical_distribution": 728
+      },
+      "tokens": 431728,
+      "unique_token_questions": 728
+    },
+    "known_regression": {
+      "source_groups": 20096,
+      "source_presentations": 24325,
+      "target_contracts": {
+        "acceptable_set": 24325
+      },
+      "tokens": 7964853,
+      "unique_token_questions": 24325
+    },
+    "known_transfer": {
+      "source_groups": 1,
+      "source_presentations": 576,
+      "target_contracts": {
+        "categorical_distribution": 576
+      },
+      "tokens": 455064,
+      "unique_token_questions": 576
+    },
+    "reserved_transfer": {
+      "source_groups": 2330,
+      "source_presentations": 2431,
+      "target_contracts": {
+        "acceptable_set": 2431
+      },
+      "tokens": 3138141,
+      "unique_token_questions": 2431
+    },
+    "train": {
+      "source_groups": 273912,
+      "source_presentations": 371278,
+      "target_contracts": {
+        "acceptable_set": 368757,
+        "categorical_distribution": 2521
+      },
+      "tokens": 133796202,
+      "unique_token_questions": 371278
+    }
+  },
+  "checked_source_rows": 416373,
+  "optimizer_steps": 0,
+  "remaining_gates": [
+    "exact sampling/weights and evaluation cohorts",
+    "qualified pilot trainer, context/padding and restart checks",
+    "fresh billing, price, recovery and provider stop deadline"
+  ],
+  "retained_source_rows": 416102,
+  "status": "qualified_data_pack_not_training_runtime",
+  "training_presentations": 0,
+  "whole_overlength_exclusions": 271
+}

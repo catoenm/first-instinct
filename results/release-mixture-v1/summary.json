@@ -1,0 +1,219 @@
+{
+  "by_role": {
+    "development": {
+      "source_groups": 13861,
+      "source_presentations": 16764,
+      "target_contracts": {
+        "acceptable_set": 16398,
+        "categorical_distribution": 366
+      },
+      "tokens": 7854098,
+      "unique_token_questions": 16764
+    },
+    "diagnostic": {
+      "source_groups": 1,
+      "source_presentations": 728,
+      "target_contracts": {
+        "categorical_distribution": 728
+      },
+      "tokens": 431728,
+      "unique_token_questions": 728
+    },
+    "known_regression": {
+      "source_groups": 20096,
+      "source_presentations": 24325,
+      "target_contracts": {
+        "acceptable_set": 24325
+      },
+      "tokens": 7964853,
+      "unique_token_questions": 24325
+    },
+    "known_transfer": {
+      "source_groups": 1,
+      "source_presentations": 576,
+      "target_contracts": {
+        "categorical_distribution": 576
+      },
+      "tokens": 455064,
+      "unique_token_questions": 576
+    },
+    "reserved_transfer": {
+      "source_groups": 2330,
+      "source_presentations": 2431,
+      "target_contracts": {
+        "acceptable_set": 2431
+      },
+      "tokens": 3138141,
+      "unique_token_questions": 2431
+    },
+    "train": {
+      "source_groups": 273912,
+      "source_presentations": 371278,
+      "target_contracts": {
+        "acceptable_set": 368757,
+        "categorical_distribution": 2521
+      },
+      "tokens": 133796202,
+      "unique_token_questions": 371278
+    }
+  },
+  "data_admission_sha256": "9bcb42aa62a2908ad53b8f5ddb0a829190c277e0213cd3e2ea7ecfd036bfa9f3",
+  "exact_agreement_duplicates_collapsed": 0,
+  "files": {
+    "development-private.jsonl": "f6456e8fed6b1e76795673480396ceeb3070a4ecfb31cf464c83cc86e6a3b0fa",
+    "diagnostic-private.jsonl": "bcc09ebf5184f049bdfeec09191ca6d9f97fab1586bb824eb030ce7d9fc96551",
+    "excluded-private.jsonl": "b931bac3156588ddb8e13d6921f80c8c215d9e611583290d4ae963319511a11a",
+    "known_regression-private.jsonl": "51629d0bb1e36272ab42f29b41aa49a7e97fa3a196d40ea104e304402197e5f9",
+    "known_transfer-private.jsonl": "191e4509215f8247713c4d09aaca9b9b16328165c7801124158c79eb2aa95f3b",
+    "reserved_transfer-private.jsonl": "4d7fa6a5122f5a406d1da4b58b37704c486a44343d1862b7acd4aa79c15017fc",
+    "train-private.jsonl": "76cc5c34540aeb6f255d0f2ee8ef1f0e50d65628c3b5abe5017284a484136e94"
+  },
+  "freeze_sha256": "fa532185930b535288a6d7610ec45af5497eb639b0a106a7333834a76ab5e00a",
+  "label_token_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "max_tokens": 4096,
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "new_world_executions": 0,
+  "optimizer_steps": 0,
+  "overlength_exclusions": 271,
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "remaining_gates": [
+    "exact sampling/weights and evaluation cohorts",
+    "qualified pilot trainer, context/padding and restart checks",
+    "fresh billing, price, recovery and provider stop deadline"
+  ],
+  "source_census": {
+    "appworld_development_change": {
+      "eligible_questions": 29,
+      "eligible_tokens": 68244,
+      "overlength": 21,
+      "source_questions": 50
+    },
+    "appworld_development_decision": {
+      "eligible_questions": 24,
+      "eligible_tokens": 68772,
+      "overlength": 33,
+      "source_questions": 57
+    },
+    "appworld_development_forecast": {
+      "eligible_questions": 29,
+      "eligible_tokens": 68041,
+      "overlength": 21,
+      "source_questions": 50
+    },
+    "appworld_new_decision": {
+      "eligible_questions": 114,
+      "eligible_tokens": 178929,
+      "overlength": 72,
+      "source_questions": 186
+    },
+    "appworld_new_forecast": {
+      "eligible_questions": 174,
+      "eligible_tokens": 221221,
+      "overlength": 124,
+      "source_questions": 298
+    },
+    "forecasts_development": {
+      "eligible_questions": 308,
+      "eligible_tokens": 186960,
+      "source_questions": 308
+    },
+    "forecasts_exposed_diagnostic": {
+      "eligible_questions": 728,
+      "eligible_tokens": 431728,
+      "source_questions": 728
+    },
+    "forecasts_reserved_transfer": {
+      "eligible_questions": 576,
+      "eligible_tokens": 455064,
+      "source_questions": 576
+    },
+    "forecasts_train_candidate": {
+      "eligible_questions": 2280,
+      "eligible_tokens": 1267344,
+      "source_questions": 2280
+    },
+    "general_challenge": {
+      "eligible_questions": 7048,
+      "eligible_tokens": 3100211,
+      "source_questions": 7048
+    },
+    "general_test": {
+      "eligible_questions": 17277,
+      "eligible_tokens": 4864642,
+      "source_questions": 17277
+    },
+    "general_train": {
+      "eligible_questions": 350857,
+      "eligible_tokens": 112309610,
+      "source_questions": 350857
+    },
+    "general_validation": {
+      "eligible_questions": 14157,
+      "eligible_tokens": 4548397,
+      "source_questions": 14157
+    },
+    "retail": {
+      "eligible_questions": 67,
+      "eligible_tokens": 89812,
+      "source_questions": 67
+    },
+    "tools_development": {
+      "eligible_questions": 2217,
+      "eligible_tokens": 2913684,
+      "source_questions": 2217
+    },
+    "tools_reserved_transfer": {
+      "eligible_questions": 2431,
+      "eligible_tokens": 3138141,
+      "source_questions": 2431
+    },
+    "tools_train": {
+      "eligible_questions": 17786,
+      "eligible_tokens": 19729286,
+      "source_questions": 17786
+    }
+  },
+  "status": "qualified_data_pack_not_training_runtime",
+  "training_presentations": 0
+}

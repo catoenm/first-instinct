@@ -19,6 +19,9 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 The release plan combines general decisions, broader tool-selection data and
 verified outcomes, then tests reinforcement learning as a measured upgrade.
 Dataset admission, evaluation and serving qualification are still in progress.
+The [combined release corpus](docs/release-mixture-v1-results.md) now passes its
+source audit: 371,278 training questions and 133.8 million input tokens. This is
+prepared data; the new training pilot has not started.
 
 The first [release-data admission](docs/release-tool-data-v1-results.md) now adds
 17,786 tool-choice training questions across 283 server groups, with 2,217
