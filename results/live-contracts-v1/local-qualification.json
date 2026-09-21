@@ -1,0 +1,14 @@
+{
+  "receipt_check": {
+    "added_swap_bytes": 0,
+    "elapsed_seconds": 2.1305430000065826,
+    "peak_owned_group_rss_bytes": 258686976,
+    "status": "completed"
+  },
+  "tests": {
+    "added_swap_bytes": 0,
+    "elapsed_seconds": 2.1402337920153514,
+    "peak_owned_group_rss_bytes": 254902272,
+    "status": "completed"
+  }
+}

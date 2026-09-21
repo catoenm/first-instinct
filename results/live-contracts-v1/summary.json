@@ -1,0 +1,29 @@
+{
+  "cpu_tests_passed": 15,
+  "distinct_saved_public_inputs": 114,
+  "foundation_optimizer_steps": 0,
+  "freeze_sha256": "d766ebdb27a05ba839bcfe9fcccccd55bc49ec7eb8a071b6712c0ec110aa01e7",
+  "historical_critic_values": "All zero; no inferred nonzero unit conversion.",
+  "model_training_presentations": 0,
+  "negative_controls": [
+    "wrong_units_rejected"
+  ],
+  "new_foundation_model_calls": 0,
+  "new_task_families": 0,
+  "new_tool_calls": 0,
+  "new_world_executions": 0,
+  "normalized_return_range": [
+    -1.0,
+    1.0
+  ],
+  "optimizer_eligibility_of_historical_scripted_records": false,
+  "original_raw_return_range": [
+    -20.0,
+    20.0
+  ],
+  "reconstructed_transitions": 452,
+  "reserved_model_calls": 0,
+  "reused_real_execution_receipts": 252,
+  "scope": "Software contracts and reused receipts plus separate tiny-network mechanics tests; not model training, live GPU behavior, new trajectory coverage, forecast admission or transfer.",
+  "status": "locally_qualified"
+}
