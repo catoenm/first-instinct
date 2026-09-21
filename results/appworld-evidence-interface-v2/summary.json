@@ -1,0 +1,56 @@
+{
+  "accepted_questions": 0,
+  "by_program": [
+    {
+      "maximum_shared_tokens": 5336,
+      "program_index": 0,
+      "raw_variants": 52,
+      "shared_fit": 52
+    },
+    {
+      "maximum_shared_tokens": 7558,
+      "program_index": 1,
+      "raw_variants": 45,
+      "shared_fit": 45
+    },
+    {
+      "maximum_shared_tokens": 7469,
+      "program_index": 2,
+      "raw_variants": 45,
+      "shared_fit": 45
+    },
+    {
+      "maximum_shared_tokens": 7394,
+      "program_index": 3,
+      "raw_variants": 45,
+      "shared_fit": 45
+    }
+  ],
+  "candidates_sha256": "3c26ced787030df869a3cf6d30da7754d6ff798f12ff10e2e02b71b926ea0122",
+  "controller_invariance_checks": 288,
+  "exact_question_roundtrips": 187,
+  "freeze_sha256": "5a4ab114d0b1fcddcab3359a0a7768f4676efa33a3e2ffb3e9bce2384608dec6",
+  "histories": 8,
+  "limitation": "Local interface qualification only. All protected values stay private. Context admission is a separate frozen stage. No prediction invariance or model performance claim.",
+  "maximum_plain_tokens": 11388,
+  "maximum_shared_tokens": 7558,
+  "new_model_calls": 0,
+  "new_outcome_labels": 0,
+  "new_training_questions": 0,
+  "new_world_executions": 0,
+  "optimizer_steps": 0,
+  "plain_fit_variants": 130,
+  "prior_argument_failures": 7,
+  "private_report_sha256": "d09674c0c1c2e62e8731ae15c6fdc505c1820572c21645ce3d2c3c6fcc1bf0d4",
+  "programs": 4,
+  "question_types": {
+    "continued_application_change": 96,
+    "continued_task_success": 43,
+    "fixed_plan_decision": 48
+  },
+  "raw_question_variants": 187,
+  "remaining_argument_failures": 0,
+  "shared_fit_variants": 187,
+  "status": "passed_integrity",
+  "underlying_task_instances": 4
+}

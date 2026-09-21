@@ -1,0 +1,27 @@
+{
+  "all_clock_reads_state_preserving": true,
+  "all_prefixes_match_original_branches": true,
+  "freeze_sha256": "ffe6a54ac894c88c8946bfbbc13e9ad1c8652254260dfe0b68fafd69d9445894",
+  "independent_replays": 4,
+  "load_ground_truth": false,
+  "new_accepted_questions": 0,
+  "new_model_calls": 0,
+  "new_outcome_labels": 0,
+  "private_report_sha256": "1871ac7fc589c2c50e5c7b07c2f0e32b1186d174ebdc5f71ac6c70409691ea56",
+  "public_clock_calls": 24,
+  "receipt_hashes": {
+    "0-0-private.json": "aabf63ea594c3693a290297e80f55e3f57a14acbf071a255ace3f48956f486de",
+    "0-1-private.json": "0894cd201e38dea59b39f52abb226ce97d93444181358fd5bc9cd3afd876da84",
+    "1-0-private.json": "62d92c81863ef2d25be768b1f5b99ecf2977bfb436c566bbdcfbd2014be6d1da",
+    "1-1-private.json": "1ed36a8309ba4f2dbdff72ad5235d586d20817c9f2594e18461b07ff553c141b",
+    "2-0-private.json": "a35b5895e1286df8db6b700f04354dbac68e67853f15126496992f64174f784b",
+    "2-1-private.json": "0f9a01b49c2f95b3362cac06041ab9991e0ab376687598fc629bb23c762d38ed",
+    "3-0-private.json": "fda34af22322cdbd17298519ff41f4af6795843eed207889c36959c6f33b2cff",
+    "3-1-private.json": "13c17901d5fa13264dd6c6e1108c03c9d7c6b67f1b5cf81b5e98a31d388bb134"
+  },
+  "status": "passed",
+  "task_programs": 4,
+  "total_api_calls": 348,
+  "underlying_task_instances": 4,
+  "world_executions": 8
+}
