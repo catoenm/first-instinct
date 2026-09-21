@@ -52,9 +52,36 @@ The exact 937-file package is 306,316,668 bytes, with archive digest
 The largest local qualification process group stayed below one GiB, with no added
 swap. No foundation model was loaded on the Mac.
 
-The cloud pipeline must independently qualify the Linux workers and the actual
-nine-billion-parameter model before optimization. Its backward-only qualification
-is reported separately from training. A new H200 rental has been dispatched under
-the existing budget, with a seven-hour maximum and a $40 stage cap. This document
-records launch readiness, not completed training. The independent release scores
-remain unopened; deployment still requires fresh transfer and broader retention.
+The first cloud attempt passed the Linux workers but failed the unchanged-weight
+action probability check before any optimizer update. Its complete failure archive
+was recovered before deleting the rental. The separately frozen
+[action-forward correction](canonical-action-forward-v1-protocol.md) preserves this
+data, the learning recipe, the parent model and the original numerical tolerance.
+Twenty-two tests passed in the corrected package.
+
+The corrected path subsequently passed on the actual nine-billion-parameter model:
+sixteen freshly executed episodes produced thirty-nine action transitions, with
+exactly zero probability difference when rescored for learning. Every sampled-action
+likelihood ratio was one. The actor and forecast objectives produced nonzero language
+gradients; the value objective affected only the detached critic. All fifty-five
+guard inputs also agreed before an update. These checks performed zero optimizer
+steps. They establish a usable learning interface, not improved decision quality.
+
+Rescoring the previous forty-one inputs separately reproduced a maximum probability
+difference of 0.02265 with the old collection path. That is a new diagnostic measurement,
+not the unsaved maximum from the failed assertion. Those old inputs never become
+optimizer rollouts. This does not establish the cause of earlier transfer failures.
+
+All four execution-parity stages passed, and the corrected six-arm pipeline entered
+its first arm on one H200. The corrected rental has a 6.5-hour maximum and a $38 cap,
+with $2 retained for the first attempt inside the same original $40 stage allocation.
+Independent provider shutdown and artifact recovery are configured. This document
+records qualification and launch, not completed training. The independent release
+scores remain unopened; deployment still requires fresh transfer and broader retention.
+
+After recovery, `python -m tool_lab.live_pilot_accounting --run <recovered-run>
+--data <frozen-data> --output <new-report.json>` separates diagnostic backwards,
+physical optimizer attempts, accepted or rolled-back presentations, repeated question
+IDs and collected trajectories. It also reports distinct actor token inputs and
+retail goal/world/cost cells without calling them independent tasks. This is an
+accounting check; it does not replace execution verification or metric auditing.
