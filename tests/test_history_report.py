@@ -2,10 +2,21 @@ import copy
 import math
 import unittest
 
-from release_lab.history_report import audit_updates
+from release_lab.history_report import audit_updates, audit_groups
 
 
 class HistoryReceiptTests(unittest.TestCase):
+    def test_wrong_group_hidden_by_correct_macro_is_rejected(self):
+        from release_lab.pilot_metrics import summarize
+        rows=[dict(id=str(i),option_ids=['a','b'],target_indices=[0],soft_target=None,
+                   target_contract='acceptable_set',metric_groups=[str(i)],slices=['product']) for i in range(2)]
+        probabilities=[[.9,.1],[.2,.8]]
+        recorded=summarize(rows,probabilities)
+        predictions=[dict(id=r['id'],probabilities=p) for r,p in zip(rows,probabilities)]
+        audit_groups(rows,predictions,recorded)
+        recorded['by_group']['0']['accuracy']=0.;recorded['by_group']['1']['accuracy']=1.
+        with self.assertRaises(ValueError):audit_groups(rows,predictions,recorded)
+
     def fixture(self, after=(.52,.48)):
         index={'x':dict(id='x',learning_pool='general',option_ids=['a','b'])}
         config=dict(per_step={'general':1},probes_per_pool=1,max_mean_update_kl=.02,max_individual_update_kl=.10)

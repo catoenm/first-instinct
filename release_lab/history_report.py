@@ -10,7 +10,7 @@ import math
 from pathlib import Path
 
 from scale_lab.common import file_hash, read_rows, write_json
-from .pilot_report import audit as audit_predictions
+from .pilot_report import audit as audit_predictions, recompute
 
 
 def distribution(values, length):
@@ -27,7 +27,7 @@ def audit_updates(index, schedule, completed, config, attempts, probes):
             raise ValueError('Invalid attempt cursor')
         transactions[row['step']].append(row)
     rejected = len(transactions)-completed
-    if rejected not in (0, 1) or set(transactions) != set(range(1, len(transactions)+1)):
+    if rejected not in (0, 1) or list(transactions) != list(range(1, len(transactions)+1)):
         raise ValueError('Missing or repeated update transaction')
     if len(probes) != len(transactions) or [p['step'] for p in probes] != list(transactions):
         raise ValueError('Missing or reordered distribution probe')
@@ -75,6 +75,28 @@ def audit_updates(index, schedule, completed, config, attempts, probes):
                 scope='Independent recomputation of recorded probes; no GPU-step re-execution.')
 
 
+def audit_groups(rows, predictions, recorded):
+    """Do not let a correct macro average conceal a wrong group/slice gate."""
+    groups = defaultdict(list); slices = defaultdict(list)
+    for row in rows:
+        for group in row['metric_groups']:
+            groups[group].append(row)
+        for name in row['slices']:
+            slices[name].append(row)
+    if set(groups) != set(recorded['by_group']) or set(slices) != set(recorded['slices']):
+        raise ValueError('Reported group coverage differs')
+    for source, table in ((groups, 'by_group'), (slices, 'slices')):
+        for name, members in source.items():
+            ids = {r['id'] for r in members}
+            calculated = recompute([dict(r, metric_groups=['audit']) for r in members],
+                                   [p for p in predictions if p['id'] in ids])
+            if any(abs(value-recorded[table][name][key]) > 1e-9 for key,value in calculated.items()):
+                raise ValueError('Group or slice score differs from saved predictions')
+            count = recorded['group_support'][name] if table == 'by_group' else recorded[table][name]['n']
+            if count != len(members):
+                raise ValueError('Group or slice denominator differs')
+
+
 def audit(folder):
     report = audit_predictions(folder)
     data,run = folder/'data',folder/'run'
@@ -108,9 +130,17 @@ def audit(folder):
             raise ValueError('Independent-process restart not qualified')
     updates = audit_updates(index, schedule, state['completed_steps'], config,
                            read_rows(run/'optimizer-attempts.jsonl'), read_rows(run/'guard-probes.jsonl'))
+    suites = defaultdict(list)
+    for row in read_rows(data/'development.jsonl'):
+        suites[row['suite']].append(row)
+    for step in report['evaluations']:
+        recorded = json.loads((run/f'{step}-metrics.json').read_text())
+        for suite,rows in suites.items():
+            audit_groups(rows, read_rows(run/f'{step}-{suite}-predictions.jsonl'), recorded[suite])
     report.update(update_receipt_audit=updates, reference_forward_questions=len(expected),
                   reference_forward_tokens=sum(len(index[x]['input_ids']) for x in expected),
                   reference_sha256=reference_sha, runtime_qualification_backward_presentations=qualification['backward_presentations'],
+                  group_and_slice_scores_independently_recomputed=True,
                   reference_scope='Fixed original-parent predictions on general training inputs; preservation penalty, not truth labels.')
     return report
 
