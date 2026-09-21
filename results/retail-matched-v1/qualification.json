@@ -1,0 +1,32 @@
+{
+  "correction": "Preserved the virtual environment entry-point path in a new manifest; installed no dependencies.",
+  "failed_worker_startups": 1,
+  "failure": "Base interpreter lacked toml; resolving the virtual environment executable lost its package environment.",
+  "gpu_rentals": 0,
+  "guards": {
+    "audit": {
+      "added_swap_bytes": 0,
+      "elapsed_seconds": 3.1850077499984764,
+      "peak_owned_group_rss_bytes": 624951296,
+      "status": "completed"
+    },
+    "execute": {
+      "added_swap_bytes": 0,
+      "elapsed_seconds": 85.87677095801337,
+      "peak_owned_group_rss_bytes": 705265664,
+      "status": "completed"
+    },
+    "prepare": {
+      "added_swap_bytes": 0,
+      "elapsed_seconds": 1.0887217079871334,
+      "peak_owned_group_rss_bytes": 12353536,
+      "status": "completed"
+    }
+  },
+  "local_foundation_model_calls": 0,
+  "previous_failed_freeze_sha256": "484cf269975c2c65a348c435520fbe650f91afcdea01db606652febde80037b8",
+  "prior_completed_episodes": 0,
+  "prior_started_tool_calls": 0,
+  "same_sources_schedule_labels_and_limits": true,
+  "tests_passed": 19
+}

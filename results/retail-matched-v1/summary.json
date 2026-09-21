@@ -1,0 +1,104 @@
+{
+  "actor_turns": 452,
+  "admitted_training_questions": 0,
+  "consumed_training_presentations": 0,
+  "existing_physical_initial_states": 10,
+  "existing_task_contracts": 3,
+  "expected_controller_returns": {
+    "order_address": {
+      "read=0.10,write=0.25": {
+        "inspect": 14.8375,
+        "stop": 10.0
+      },
+      "read=0.10,write=6": {
+        "inspect": 13.4,
+        "stop": 10.0
+      },
+      "read=10,write=0.25": {
+        "inspect": 4.9375,
+        "stop": 10.0
+      },
+      "read=10,write=6": {
+        "inspect": 3.5,
+        "stop": 10.0
+      },
+      "read=2,write=0.25": {
+        "inspect": 12.9375,
+        "stop": 10.0
+      },
+      "read=2,write=6": {
+        "inspect": 11.5,
+        "stop": 10.0
+      }
+    },
+    "payment_migration": {
+      "read=0.10,write=0.25": {
+        "inspect": 9.7375,
+        "stop": 5.0
+      },
+      "read=0.10,write=6": {
+        "inspect": 8.3,
+        "stop": 5.0
+      },
+      "read=10,write=0.25": {
+        "inspect": -10.0625,
+        "stop": 5.0
+      },
+      "read=10,write=6": {
+        "inspect": -11.5,
+        "stop": 5.0
+      },
+      "read=2,write=0.25": {
+        "inspect": 5.9375,
+        "stop": 5.0
+      },
+      "read=2,write=6": {
+        "inspect": 4.5,
+        "stop": 5.0
+      }
+    },
+    "profile_address": {
+      "read=0.10,write=0.25": {
+        "inspect": 19.775,
+        "stop": 10.0
+      },
+      "read=0.10,write=6": {
+        "inspect": 16.9,
+        "stop": 10.0
+      },
+      "read=10,write=0.25": {
+        "inspect": 9.875,
+        "stop": 10.0
+      },
+      "read=10,write=6": {
+        "inspect": 7.0,
+        "stop": 10.0
+      },
+      "read=2,write=0.25": {
+        "inspect": 17.875,
+        "stop": 10.0
+      },
+      "read=2,write=6": {
+        "inspect": 15.0,
+        "stop": 10.0
+      }
+    }
+  },
+  "foundation_model_calls": 0,
+  "freeze_sha256": "082f107e87791faf9dfe47b87ed9164ee0129cd3daa36bc188b1e8bff4360b3c",
+  "independent_replays": 12,
+  "initial_input_cells_with_uncertain_outcomes": 30,
+  "limitation": "Matched runtime diagnostic using two scripted controllers on existing training worlds; not learned performance, optimal action labels, arbitrary actor path coverage or independent transfer.",
+  "maximum_tokens": 2262,
+  "new_independent_tasks": 0,
+  "new_physical_worlds": 0,
+  "optimizer_steps": 0,
+  "prepared_presentations_per_seed": 144,
+  "prepared_unique_reset_cells_per_seed": 120,
+  "primary_reset_executions": 240,
+  "real_tool_calls": 200,
+  "status": "independently_verified",
+  "total_reset_executions": 252,
+  "unique_goal_condition_fee_cells": 120,
+  "unique_public_actor_inputs": 114
+}
