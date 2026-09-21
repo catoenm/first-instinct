@@ -1,0 +1,121 @@
+{
+  "checkpoints": {
+    "laya": {
+      "by_variant": {
+        "original": {
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 0,
+          "instruction_loss_presentations": 41,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_loss_presentations": 30,
+          "state_loss_presentations": 35
+        },
+        "packed": {
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 0,
+          "instruction_loss_presentations": 0,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_loss_presentations": 0,
+          "state_loss_presentations": 41
+        }
+      },
+      "head_max_len": 192,
+      "max_len": 512,
+      "native_formatter_parities": 82,
+      "repo": "convaiinnovations/laya",
+      "revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982"
+    },
+    "laya-multilingual": {
+      "by_variant": {
+        "original": {
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 9,
+          "instruction_loss_presentations": 32,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_loss_presentations": 22,
+          "state_loss_presentations": 10
+        },
+        "packed": {
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 25,
+          "instruction_loss_presentations": 0,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_loss_presentations": 0,
+          "state_loss_presentations": 16
+        }
+      },
+      "head_max_len": 256,
+      "max_len": 1024,
+      "native_formatter_parities": 82,
+      "repo": "convaiinnovations/laya-multilingual",
+      "revision": "052592a15d198d9ad47da779604259b10b47b7aa"
+    },
+    "laya-typed-decisions": {
+      "by_variant": {
+        "original": {
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 9,
+          "instruction_loss_presentations": 32,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_loss_presentations": 22,
+          "state_loss_presentations": 10
+        },
+        "packed": {
+          "final_sequence_loss_presentations": 0,
+          "full_information_presentations": 23,
+          "instruction_loss_presentations": 0,
+          "mask_replacement_presentations": 0,
+          "missing_marker_presentations": 0,
+          "option_descriptions_loss_presentations": 0,
+          "state_loss_presentations": 18
+        }
+      },
+      "head_max_len": 256,
+      "max_len": 1024,
+      "native_formatter_parities": 82,
+      "repo": "convaiinnovations/laya-typed-decisions",
+      "revision": "f9ab0b228f0fc0f14d873dbc99038f135c2da1b2"
+    },
+    "qwen35-9b": {
+      "by_variant": {
+        "original": {
+          "full_information_presentations": 41,
+          "max_tokens": 2277,
+          "min_tokens": 624,
+          "total_tokens": 44420
+        },
+        "packed": {
+          "full_information_presentations": 41,
+          "max_tokens": 3210,
+          "min_tokens": 817,
+          "total_tokens": 60796
+        }
+      },
+      "max_len": 4096,
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "distinct_logical_inputs": 40,
+  "exact_public_roundtrips": 41,
+  "executed_branches": 0,
+  "limitations": "Reversible text relocation does not ensure a model understands references. Native context limits still apply. This exposed training-owned action cohort is neither a performance evaluation nor independent transfer; no model scores or new labels were obtained.",
+  "model_calls": 0,
+  "new_tasks": 0,
+  "optimizer_updates": 0,
+  "presentations": 41,
+  "reserved_scores_opened": 0,
+  "runtime": {
+    "tokenizers": "0.23.2",
+    "transformers": "5.17.0"
+  },
+  "seconds": 1.9090320839895867,
+  "stage": "shared-action-frame-v1",
+  "status": "passed_lossless_framing_audit",
+  "training_presentations": 0
+}

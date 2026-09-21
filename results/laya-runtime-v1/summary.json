@@ -1,0 +1,131 @@
+{
+  "checkpoint_calibration_checks": {
+    "laya": [
+      {
+        "applied_temperature": 1.9063563346862793,
+        "bucket": "choice:2",
+        "menu_size": 2,
+        "shipped_temperature": 1.9063563346862793,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 1.7601518630981445,
+        "bucket": "choice:3-5",
+        "menu_size": 5,
+        "shipped_temperature": 1.7601518630981445,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 1.0000158548355103,
+        "bucket": "choice:6-10",
+        "menu_size": 10,
+        "shipped_temperature": 1.0000158548355103,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 0.5,
+        "bucket": "choice:11+",
+        "menu_size": 12,
+        "shipped_temperature": 0.10058280825614929,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 0.5,
+        "bucket": "choice:11+",
+        "menu_size": 36,
+        "shipped_temperature": 0.10058280825614929,
+        "source": "temperature_by_options"
+      }
+    ],
+    "laya-multilingual": [
+      {
+        "applied_temperature": 1.0,
+        "bucket": "choice:2",
+        "menu_size": 2,
+        "shipped_temperature": 1.0,
+        "source": "temperature[0]"
+      },
+      {
+        "applied_temperature": 1.0,
+        "bucket": "choice:3-5",
+        "menu_size": 5,
+        "shipped_temperature": 1.0,
+        "source": "temperature[0]"
+      },
+      {
+        "applied_temperature": 1.0,
+        "bucket": "choice:6-10",
+        "menu_size": 10,
+        "shipped_temperature": 1.0,
+        "source": "temperature[0]"
+      },
+      {
+        "applied_temperature": 1.0,
+        "bucket": "choice:11+",
+        "menu_size": 12,
+        "shipped_temperature": 1.0,
+        "source": "temperature[0]"
+      },
+      {
+        "applied_temperature": 1.0,
+        "bucket": "choice:11+",
+        "menu_size": 36,
+        "shipped_temperature": 1.0,
+        "source": "temperature[0]"
+      }
+    ],
+    "laya-typed-decisions": [
+      {
+        "applied_temperature": 1.9063563346862793,
+        "bucket": "choice:2",
+        "menu_size": 2,
+        "shipped_temperature": 1.9063563346862793,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 1.7601518630981445,
+        "bucket": "choice:3-5",
+        "menu_size": 5,
+        "shipped_temperature": 1.7601518630981445,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 1.0000158548355103,
+        "bucket": "choice:6-10",
+        "menu_size": 10,
+        "shipped_temperature": 1.0000158548355103,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 0.5,
+        "bucket": "choice:11+",
+        "menu_size": 12,
+        "shipped_temperature": 0.10058280825614929,
+        "source": "temperature_by_options"
+      },
+      {
+        "applied_temperature": 0.5,
+        "bucket": "choice:11+",
+        "menu_size": 36,
+        "shipped_temperature": 0.10058280825614929,
+        "source": "temperature_by_options"
+      }
+    ]
+  },
+  "device": "cpu",
+  "exact_public_probability_parities": 15,
+  "foundation_model_calls": 0,
+  "foundation_weights_loaded": false,
+  "limitations": "Only tiny synthetic logits were passed through the pinned native runtime here. No trained foundation quality, GPU kernel behavior, checkpoint loading, or latency claim. Separate tests exercise the actual native decision head with a tiny random encoder; that encoder is not a pretrained checkpoint.",
+  "new_execution_labels": 0,
+  "optimizer_updates": 0,
+  "reserved_scores_opened": 0,
+  "runtime": {
+    "numpy": "2.5.3",
+    "torch": "2.14.0"
+  },
+  "runtime_revision": "573e5b62696ba441230cd6be71d593331b5d23af",
+  "seconds": 0.006222957978025079,
+  "status": "passed_tiny_cpu_runtime_qualification",
+  "synthetic_native_forward_calls": 15
+}
