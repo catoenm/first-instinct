@@ -24,9 +24,11 @@ source audit: 371,278 training questions and 133.8 million input tokens. This is
 prepared data, not the amount consumed in a run. The
 [first training pilot](docs/release-pilot-v1-results.md) completed 80 updates on
 5,120 presentations. Average forecast error fell, but tool accuracy and one
-probability group failed the release gates, so it was not promoted. A
-[coverage-balanced follow-up](docs/release-balanced-v1-protocol.md) is running from
-the same original checkpoint with the same acceptance thresholds.
+probability group failed the release gates, so it was not promoted. The
+[coverage-balanced follow-up](docs/release-balanced-v1-results.md) completed 160
+updates on 10,240 presentations. Forecast Brier error improved by 57%, and every
+forecast group passed its checks. Equal-server tool accuracy did not improve, so this run also
+stopped without replacing the released model. Both runs are recovered and audited.
 
 The first [release-data admission](docs/release-tool-data-v1-results.md) now adds
 17,786 tool-choice training questions across 283 server groups, with 2,217
@@ -52,7 +54,10 @@ episodes: each command is charged, and verified success pays only at termination
 The [language-policy interface](docs/retail-actor-v1-results.md) fits every saved
 decision point without cropping. Its [isolated process check](docs/retail-process-v1-results.md)
 then ran 108 real tool calls, including refused writes and six-action terminations.
-These are runtime checks with scripted actions, not learned-policy results. The preceding
+These are runtime checks with scripted actions, not learned-policy results.
+[Fresh-observation forecasts](docs/retail-history-v1-results.md) add 190 verified
+questions from 300 executed alternatives and 300 independent replays; 29 retain
+legitimate uncertainty. These questions have not yet been used in training. The preceding
 [AppWorld comparison failed its transfer and format checks](docs/appworld-transfer-evaluation-v2-results.md),
 so the demo remains on its original supervised checkpoint.
 

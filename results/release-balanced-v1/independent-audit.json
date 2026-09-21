@@ -1,0 +1,110 @@
+{
+  "by_pool": {
+    "general": 5120,
+    "tools": 3840,
+    "verified": 1280
+  },
+  "committed_presentations": 10240,
+  "completed_optimizer_steps": 160,
+  "evaluations": {
+    "0": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.6666666666666666,
+          "log_loss": 1.0878491203567315
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.872441323195351,
+          "log_loss": 0.34014792509873815
+        },
+        "n": 3465
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.3409330839478848,
+          "log_loss": 0.5931438409349118
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8687396012478099,
+          "log_loss": 0.4324677740124522
+        },
+        "n": 2217
+      }
+    },
+    "160": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.7916666666666666,
+          "log_loss": 0.49934785470238857
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8633392901798671,
+          "log_loss": 0.3574628085689705
+        },
+        "n": 3465
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.14586391802637863,
+          "log_loss": 0.2479629458840543
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8668233524693185,
+          "log_loss": 0.34057388924842535
+        },
+        "n": 2217
+      }
+    },
+    "80": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.75,
+          "log_loss": 0.6115193316181655
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8647524002994216,
+          "log_loss": 0.3488538066403043
+        },
+        "n": 3465
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.26635530027804416,
+          "log_loss": 0.4428003112815248
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8647313720108419,
+          "log_loss": 0.359393959230583
+        },
+        "n": 2217
+      }
+    }
+  },
+  "freeze_sha256": "2dac4a11244fdfd5f49829b46c672d3699499c68587354b49f41df3948d7138e",
+  "inherited_source_groups": 8945,
+  "input_tokens": 7201901,
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "run_status": "stopped",
+  "source_group_note": "These are inherited ownership groups, not a claim of independently executed underlying worlds.",
+  "status": "saved_predictions_and_consumption_verified",
+  "uncommitted_backward_presentations": 0,
+  "unique_consumed_questions": 10032
+}

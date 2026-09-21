@@ -1,0 +1,231 @@
+{
+  "buckets": {
+    "all": {
+      "final_correct": 1933,
+      "gained": 58,
+      "lost": 20,
+      "n": 2217,
+      "original_correct": 1895
+    },
+    "menu_13plus": {
+      "final_correct": 226,
+      "gained": 24,
+      "lost": 6,
+      "n": 284,
+      "original_correct": 208
+    },
+    "menu_2to12": {
+      "final_correct": 1707,
+      "gained": 34,
+      "lost": 14,
+      "n": 1933,
+      "original_correct": 1687
+    },
+    "tokens_1025plus": {
+      "final_correct": 966,
+      "gained": 41,
+      "lost": 15,
+      "n": 1113,
+      "original_correct": 940
+    },
+    "tokens_upto1024": {
+      "final_correct": 967,
+      "gained": 17,
+      "lost": 5,
+      "n": 1104,
+      "original_correct": 955
+    }
+  },
+  "groups": {
+    "1017": {
+      "final_correct": 79,
+      "gained": 2,
+      "lost": 2,
+      "n": 84,
+      "original_correct": 79
+    },
+    "1049": {
+      "final_correct": 19,
+      "gained": 0,
+      "lost": 1,
+      "n": 22,
+      "original_correct": 20
+    },
+    "122": {
+      "final_correct": 167,
+      "gained": 8,
+      "lost": 0,
+      "n": 182,
+      "original_correct": 159
+    },
+    "1520": {
+      "final_correct": 69,
+      "gained": 10,
+      "lost": 5,
+      "n": 116,
+      "original_correct": 64
+    },
+    "1536": {
+      "final_correct": 4,
+      "gained": 0,
+      "lost": 0,
+      "n": 4,
+      "original_correct": 4
+    },
+    "1591": {
+      "final_correct": 31,
+      "gained": 0,
+      "lost": 0,
+      "n": 54,
+      "original_correct": 31
+    },
+    "1646": {
+      "final_correct": 11,
+      "gained": 0,
+      "lost": 0,
+      "n": 11,
+      "original_correct": 11
+    },
+    "1663": {
+      "final_correct": 5,
+      "gained": 0,
+      "lost": 0,
+      "n": 5,
+      "original_correct": 5
+    },
+    "174": {
+      "final_correct": 52,
+      "gained": 2,
+      "lost": 3,
+      "n": 73,
+      "original_correct": 53
+    },
+    "2391": {
+      "final_correct": 65,
+      "gained": 1,
+      "lost": 0,
+      "n": 73,
+      "original_correct": 64
+    },
+    "2490": {
+      "final_correct": 36,
+      "gained": 1,
+      "lost": 0,
+      "n": 37,
+      "original_correct": 35
+    },
+    "265": {
+      "final_correct": 33,
+      "gained": 0,
+      "lost": 0,
+      "n": 34,
+      "original_correct": 33
+    },
+    "284": {
+      "final_correct": 132,
+      "gained": 0,
+      "lost": 0,
+      "n": 133,
+      "original_correct": 132
+    },
+    "288": {
+      "final_correct": 19,
+      "gained": 0,
+      "lost": 0,
+      "n": 19,
+      "original_correct": 19
+    },
+    "331": {
+      "final_correct": 165,
+      "gained": 4,
+      "lost": 1,
+      "n": 181,
+      "original_correct": 162
+    },
+    "349": {
+      "final_correct": 132,
+      "gained": 2,
+      "lost": 1,
+      "n": 185,
+      "original_correct": 131
+    },
+    "54": {
+      "final_correct": 5,
+      "gained": 0,
+      "lost": 0,
+      "n": 6,
+      "original_correct": 5
+    },
+    "58": {
+      "final_correct": 370,
+      "gained": 3,
+      "lost": 0,
+      "n": 386,
+      "original_correct": 367
+    },
+    "584": {
+      "final_correct": 44,
+      "gained": 0,
+      "lost": 0,
+      "n": 45,
+      "original_correct": 44
+    },
+    "597": {
+      "final_correct": 27,
+      "gained": 2,
+      "lost": 1,
+      "n": 38,
+      "original_correct": 26
+    },
+    "755": {
+      "final_correct": 5,
+      "gained": 0,
+      "lost": 2,
+      "n": 7,
+      "original_correct": 7
+    },
+    "788": {
+      "final_correct": 121,
+      "gained": 2,
+      "lost": 0,
+      "n": 128,
+      "original_correct": 119
+    },
+    "89": {
+      "final_correct": 94,
+      "gained": 20,
+      "lost": 1,
+      "n": 126,
+      "original_correct": 75
+    },
+    "899": {
+      "final_correct": 46,
+      "gained": 0,
+      "lost": 0,
+      "n": 46,
+      "original_correct": 46
+    },
+    "903": {
+      "final_correct": 83,
+      "gained": 0,
+      "lost": 0,
+      "n": 84,
+      "original_correct": 83
+    },
+    "905": {
+      "final_correct": 125,
+      "gained": 0,
+      "lost": 0,
+      "n": 130,
+      "original_correct": 125
+    },
+    "925": {
+      "final_correct": 18,
+      "gained": 1,
+      "lost": 3,
+      "n": 35,
+      "original_correct": 20
+    }
+  },
+  "note": "Post hoc diagnostic; no gate changes and no reserved evaluation used."
+}
