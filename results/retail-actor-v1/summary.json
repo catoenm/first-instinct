@@ -1,0 +1,23 @@
+{
+  "admitted_training_questions": 0,
+  "by_goal": {
+    "order_address": 84,
+    "payment_migration": 50,
+    "profile_address": 88
+  },
+  "freeze_sha256": "5e69546366e80972c4ccc6f13d6b9c83b33489b8ec57e0ecc5f7ed8680d5bc81",
+  "historical_primary_episodes": 60,
+  "historical_replay_episodes": 60,
+  "historical_runtime_episodes": 120,
+  "limitation": "Historical trajectory format check only; no learned-policy result, new real-worker qualification, or proof that all six-turn histories fit.",
+  "maximum_tokens": 2253,
+  "model_calls": 0,
+  "new_world_executions": 0,
+  "observations_sha256": "44a7e301be08d5219f3b788c482db6f3c93d37690e46d88da3340bacf8b5e6eb",
+  "observed_pre_action_presentations": 222,
+  "optimizer_steps": 0,
+  "overlength_observations": 0,
+  "status": "saved_observations_fit",
+  "unique_public_inputs": 45,
+  "unique_token_inputs": 45
+}
