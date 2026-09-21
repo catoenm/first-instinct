@@ -1,0 +1,28 @@
+{
+  "distinct_tool_requests": 2330,
+  "exact_training_development_overlap": 0,
+  "expected_models": 3,
+  "input_tokens": 6347424,
+  "maximum_scored_presentations": 14790,
+  "model_calls": 0,
+  "new_world_executions": 0,
+  "optimizer_steps": 0,
+  "overlap_presentations_scanned": 395966,
+  "primary_by_suite": {
+    "telecom": 34,
+    "tools": 2431
+  },
+  "primary_questions": 2465,
+  "reverse_overlength_exclusions": 0,
+  "reverse_presentations": 2465,
+  "status": "prepared_unscored_reserved_evaluation",
+  "telecom_by_question_kind": {
+    "continued_success": 12,
+    "immediate_success": 10,
+    "next_procedure": 6,
+    "observation_value": 6
+  },
+  "telecom_connected_ownership_components": 1,
+  "telecom_independent_task_warning": "Two related families in one connected physical-world component.",
+  "tool_server_groups": 38
+}

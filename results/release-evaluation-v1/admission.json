@@ -1,0 +1,17 @@
+{
+  "auditor_sha256": "50bc6eb139d77f5ac19eaecd3c00a1a818d69483458caa57891752071b36b0b5",
+  "checked_presentations": {
+    "original/telecom": 34,
+    "original/tools": 2431,
+    "reversed/telecom": 34,
+    "reversed/tools": 2431
+  },
+  "data_freeze_sha256": "bfa144c66b5e71c589fa7e78d8727d59c95591e0d953391dafebe290efd5e2d7",
+  "model_calls": 0,
+  "new_world_executions": 0,
+  "optimizer_steps": 0,
+  "source_labels_preserved": true,
+  "source_questions": 2465,
+  "status": "independently_verified_unscored_evaluation",
+  "utility_recomputed_from_primary_worlds": true
+}
