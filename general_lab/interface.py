@@ -10,7 +10,6 @@ import json
 from pathlib import Path
 
 from scale_lab.common import validate_input
-from scale_lab.infer import Predictor
 
 
 def requests(payload):
@@ -75,6 +74,8 @@ def answer(payload, predictor):
 
 
 def main():
+    # The shared typed interface also serves non-PyTorch backends.
+    from scale_lab.infer import Predictor
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--run", type=Path)
