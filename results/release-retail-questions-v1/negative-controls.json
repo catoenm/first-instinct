@@ -1,0 +1,57 @@
+{
+  "admission_sha256": "27716e7b03c4386519435aeaa9f791f9164da7de04ef6acc219f30806fd49389",
+  "controls": [
+    {
+      "control": "hidden_current_truth",
+      "exception": "ValueError",
+      "reason": "Displayed evidence, horizon, procedures or costs differ from witnesses",
+      "rejected": true
+    },
+    {
+      "control": "incorrect_fractional_truth",
+      "exception": "ValueError",
+      "reason": "Probabilities do not match execution or decision costs",
+      "rejected": true
+    },
+    {
+      "control": "swapped_horizon",
+      "exception": "ValueError",
+      "reason": "Displayed evidence, horizon, procedures or costs differ from witnesses",
+      "rejected": true
+    },
+    {
+      "control": "omitted_attempt_cost",
+      "exception": "ValueError",
+      "reason": "Displayed evidence, horizon, procedures or costs differ from witnesses",
+      "rejected": true
+    },
+    {
+      "control": "missing_witness_lineage",
+      "exception": "ValueError",
+      "reason": "Missing or substituted source witness lineage",
+      "rejected": true
+    },
+    {
+      "control": "incomplete_prior",
+      "exception": "ValueError",
+      "reason": "Compatible worlds or independent replays are missing",
+      "rejected": true
+    },
+    {
+      "control": "display_trace_mismatch",
+      "exception": "ValueError",
+      "reason": "Displayed command differs from saved trace",
+      "rejected": true
+    },
+    {
+      "control": "training_component_as_transfer",
+      "exception": "ValueError",
+      "reason": "Retail row or usage differs from admitted training-only component",
+      "rejected": true
+    }
+  ],
+  "model_calls": 0,
+  "new_worlds": 0,
+  "optimizer_steps": 0,
+  "status": "passed"
+}

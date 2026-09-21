@@ -1,0 +1,58 @@
+{
+  "by_kind": {
+    "continued_success": 18,
+    "immediate_success": 13,
+    "next_procedure": 18,
+    "observation_value": 18
+  },
+  "checks": {
+    "decision_forecast_joins": 180,
+    "displayed_program_trace_checks": 240,
+    "proper_distribution_loss_and_gradient": "passed",
+    "raw_specs_accounted": 72
+  },
+  "files": {
+    "candidates-private.jsonl": "b3edc3838b66a48d41f55e28a7cd859f0ab2eb677f1f4fc342e4b79aa10130bb",
+    "train-private.jsonl": "b3edc3838b66a48d41f55e28a7cd859f0ab2eb677f1f4fc342e4b79aa10130bb"
+  },
+  "fractional_forecasts": 25,
+  "freeze_sha256": "1059efb2b652791effc17490e7cae819ca2321c5c4fe8edd1280bca1d109717b",
+  "goal_configuration_slots": 20,
+  "goal_contracts": 3,
+  "input_tokens": 89812,
+  "max_tokens": 1910,
+  "mechanisms": 2,
+  "model_calls": 0,
+  "negative_controls_sha256": "4e679be707682802c6bfc8368958b768c95a6d453cce9f2c9df707ed429d2a2e",
+  "new_executed_worlds": 0,
+  "optimizer_steps": 0,
+  "overlap": {
+    "corrected_telecom_usage_sha256": "748d2be373ce814f42245ea0c817f92a80e7338d4cb0e12aee2979f868b8ed7d",
+    "full_trajectory_overlap": 0,
+    "legacy_presentation_census": {
+      "token_rows": 484891,
+      "visible_rows": 558390
+    },
+    "physical_overlap": 0,
+    "prior_executed_rows_checked": 9871,
+    "prior_snapshot_hashes": 369,
+    "retail_initial_states": 10,
+    "scope": "Exact stored representations and existing whole-mechanism ownership; not semantic state equivalence across simulators.",
+    "token_input_overlap": 0,
+    "visible_state_overlap": 0
+  },
+  "physical_initial_states": 10,
+  "raw_question_variants": 72,
+  "referenced_independent_replays": 120,
+  "referenced_primary_branches": 120,
+  "status": "qualified_paired_questions",
+  "tests": {
+    "procedure_and_target_contract": 6,
+    "saved_negative_controls": 8
+  },
+  "training_presentations": 0,
+  "unique_questions": 67,
+  "usage_sha256": "516237f4602f92e62f0e465aad9bd24964ab16d3fe25d54fd04f90360c91429b",
+  "whole_usage_groups": 1,
+  "within_1536": 55
+}

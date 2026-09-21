@@ -35,8 +35,9 @@ questions are now evaluation-only. No new model improvement is claimed.
 **Latest data qualification: [stale evidence, scoped changes and payment prerequisites](docs/retail-evidence-v1-results.md).**
 Three retail goals now have 120 executed alternatives and 120 exact replays.
 The best offered procedure changes with inspection and attempted-write costs; 30 of 36
-forecast targets retain legitimate uncertainty. The connected retail worlds stay
-in one training-candidate group, with zero admitted questions or model updates.
+forecast targets retain legitimate uncertainty. Their
+[67 paired questions](docs/release-retail-questions-v1-results.md) now pass admission
+in one connected training-only group, with zero model updates.
 The [live tool interface](docs/retail-live-v1-results.md) also passed 120 runtime
 episodes: each command is charged, and verified success pays only at termination.
 These are runtime checks, not a new training run. The preceding
