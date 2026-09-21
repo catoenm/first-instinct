@@ -1,0 +1,560 @@
+{
+  "status": "passed",
+  "source_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "authored_underlying_tasks": 3,
+  "mechanisms": 3,
+  "compatible_configurations": 12,
+  "unique_physical_initial_states": 10,
+  "physical_states_reused_from_qualification": 3,
+  "new_physical_initial_states": 7,
+  "visible_information_sets": 3,
+  "executed_alternative_branches": 72,
+  "independent_replays": 72,
+  "total_world_executions": 144,
+  "completed_tool_calls": 750,
+  "actor_calls": 318,
+  "prefix_calls": 144,
+  "private_verifier_calls": 288,
+  "expected_failed_commands": 24,
+  "fractional_forecast_targets": 25,
+  "immediate_continued_differences": 9,
+  "mechanisms_with_cost_reversal": 3,
+  "model_calls": 0,
+  "training_questions": 0,
+  "optimizer_steps": 0,
+  "outbound_attempts": 0,
+  "official_benchmark_tasks_loaded": false,
+  "freeze_sha256": "5e798b7b9e54cb377e02834ad7e3418b09c449e409e7e5f783dacf268e974deb",
+  "groups": {
+    "device_switches": {
+      "ownership": "training_candidate",
+      "compatible_worlds": 4,
+      "visible_histories": 1,
+      "cost_changes_best_action": true,
+      "fees": {
+        "0.10": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 19.575
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.75,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 19.475
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 2.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 19.325
+            }
+          },
+          "best_alternatives": [
+            "inspect_repair"
+          ],
+          "inspection_value": 14.575
+        },
+        "2": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 16.25
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.75,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 14.25
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 2.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 16.0
+            }
+          },
+          "best_alternatives": [
+            "inspect_repair"
+          ],
+          "inspection_value": 11.25
+        },
+        "10": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 2.25
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.75,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": -7.75
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 2.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 2.0
+            }
+          },
+          "best_alternatives": [
+            "stop"
+          ],
+          "inspection_value": -2.75
+        }
+      }
+    },
+    "coupled_roaming": {
+      "ownership": "development_candidate",
+      "compatible_worlds": 4,
+      "visible_histories": 1,
+      "cost_changes_best_action": true,
+      "fees": {
+        "0.10": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": -0.25
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 9.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 1.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 19.5125
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.75,
+              "mean_actor_writes": 1.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 19.4125
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 2.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 19.2625
+            }
+          },
+          "best_alternatives": [
+            "inspect_repair"
+          ],
+          "inspection_value": 9.7625
+        },
+        "2": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": -0.25
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 9.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 1.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 16.1875
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.75,
+              "mean_actor_writes": 1.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 14.1875
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 2.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 15.9375
+            }
+          },
+          "best_alternatives": [
+            "inspect_repair"
+          ],
+          "inspection_value": 6.4375
+        },
+        "10": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.0,
+              "continued_success": 0.0,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": -0.25
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 9.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 1.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 2.1875
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.75,
+              "mean_actor_writes": 1.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": -7.8125
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 1.75,
+              "mean_actor_writes": 2.25,
+              "mean_additional_bill": 0.0,
+              "expected_return": 1.9375
+            }
+          },
+          "best_alternatives": [
+            "blind_mechanism"
+          ],
+          "inspection_value": -7.5625
+        }
+      }
+    },
+    "carrier_allowance": {
+      "ownership": "reserved_transfer_candidate",
+      "compatible_worlds": 4,
+      "visible_histories": 1,
+      "cost_changes_best_action": true,
+      "fees": {
+        "0.10": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 5.0,
+              "expected_return": 4.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.5,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": 17.0
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 3.5,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": 16.9
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.5,
+              "mean_actor_writes": 2.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": 16.75
+            }
+          },
+          "best_alternatives": [
+            "inspect_repair"
+          ],
+          "inspection_value": 12.0
+        },
+        "2": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 5.0,
+              "expected_return": 4.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.5,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": 12.25
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 3.5,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": 10.25
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.5,
+              "mean_actor_writes": 2.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": 12.0
+            }
+          },
+          "best_alternatives": [
+            "inspect_repair"
+          ],
+          "inspection_value": 7.25
+        },
+        "10": {
+          "alternatives": {
+            "stop": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 0.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 5.0
+            },
+            "toggle_data": {
+              "immediate_success": 0.25,
+              "continued_success": 0.25,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 0.0,
+              "expected_return": 4.75
+            },
+            "blind_mechanism": {
+              "immediate_success": 0.5,
+              "continued_success": 0.5,
+              "mean_actor_reads": 0.0,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 5.0,
+              "expected_return": 4.75
+            },
+            "inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.5,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": -7.75
+            },
+            "redundant_inspect_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 3.5,
+              "mean_actor_writes": 1.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": -17.75
+            },
+            "recover_error_repair": {
+              "immediate_success": 0.25,
+              "continued_success": 1.0,
+              "mean_actor_reads": 2.5,
+              "mean_actor_writes": 2.0,
+              "mean_additional_bill": 2.5,
+              "expected_return": -8.0
+            }
+          },
+          "best_alternatives": [
+            "stop"
+          ],
+          "inspection_value": -12.75
+        }
+      }
+    }
+  },
+  "limitation": "Three authored finite-prior mechanisms; receipts only. No admitted training questions, model result, official benchmark score or unrestricted planning oracle.",
+  "private_audit_sha256": "a144a1feb56ff3c429cc2a7cc1fe1ac7afd342528999b11fc81e6747a49a74b8"
+}

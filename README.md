@@ -15,6 +15,14 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 
 </div>
 
+**Latest data qualification: [hidden causes, real tools and costly observations](docs/telecom-hidden-causes-v1-results.md).**
+Across three telecom mechanisms, identical visible histories produce genuinely
+different outcomes. All 72 alternative branches passed exact independent replay;
+inspection cost reverses the best action in every mechanism. These are verified
+data receipts, with no new model training. The preceding
+[AppWorld comparison failed its transfer and format checks](docs/appworld-transfer-evaluation-v2-results.md),
+so the demo remains on its original supervised checkpoint.
+
 **New: [measured results for the nine-billion-parameter decision model](docs/general-supervised-results.md).**
 One supervised pass over 350,857 examples raised accuracy from **63.3% to 78.1%**
 on 17,277 held-out questions under the same constrained-answer interface.

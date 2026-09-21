@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "files": 438,
+  "artifact_manifest_sha256": "daa2ef8469c3f258db6b96c2cbd484eb8a575371d2701c7e7403833ff966e32f",
+  "attempts_sha256": "a5d6b06e4b091fcef0478108fa5bed9ec59d2337cf49c59aa960a73c090b432d",
+  "collection_sha256": "a49094c8732fa4bc158009ad538f29438bab579c29c5e039f4c3add31733cb14",
+  "runtime_sha256": "56c10d7b7a17f9f4676cea4e17078fab00a21976c48dd9732c022138aac45379",
+  "code_tests": 7,
+  "training_presentations": 0,
+  "optimizer_steps": 0,
+  "new_rentals": 0,
+  "remote_model_calls": 0,
+  "private_receipts": "Ignored output directory; none published",
+  "source_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "saved_receipt_corruption_controls": 4,
+  "negative_controls_sha256": "00e06377945a9c57cba99ab338e8e3828cf402bb5a1af5236b5d797f909e3275"
+}
