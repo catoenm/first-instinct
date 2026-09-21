@@ -1,0 +1,52 @@
+{
+  "by_pool": {
+    "general": {
+      "presentations": 10240,
+      "unique": 10240
+    },
+    "history": {
+      "presentations": 2560,
+      "unique": 2560
+    },
+    "tools": {
+      "presentations": 5120,
+      "unique": 5120
+    },
+    "verified": {
+      "presentations": 2560,
+      "unique": 2003
+    }
+  },
+  "development_by_suite": {
+    "application_decisions": 24,
+    "general": 3465,
+    "history": 212,
+    "outcomes": 366,
+    "tools": 2217
+  },
+  "history_distinct_requests": 1892,
+  "optimizer_steps": 0,
+  "prepared_base_questions": 371278,
+  "prepared_fresh_retail_forecasts": 190,
+  "prepared_later_tool_questions": 7712,
+  "reference_forward_questions": 10240,
+  "scheduled_presentations": 20480,
+  "scheduled_tokens": 15636387,
+  "scheduled_unique_questions": 19923,
+  "training_presentations": 0,
+  "verified_question_kinds": {
+    "application_delivery::consequence_application_delivery": 309,
+    "appworld::continued_application_change": 174,
+    "appworld::continued_task_success": 174,
+    "appworld::fixed_plan_decision": 228,
+    "config::consequence_config": 308,
+    "filesystem_scope::consequence_filesystem_scope": 308,
+    "reservation::consequence_reservation": 309,
+    "retail::continued_success": 36,
+    "retail::immediate_success": 26,
+    "retail::next_procedure": 36,
+    "retail::observation_value": 36,
+    "retail_fresh_history::immediate_goal_forecast": 308,
+    "sqlite::consequence_sqlite": 308
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "conflicting_inputs": 0,
+  "eligible_questions": 1972,
+  "exclusions": {
+    "overlength": 178,
+    "unsupported_source": 1244
+  },
+  "group_support": {
+    "122": 16,
+    "1520": 16,
+    "1536": 2,
+    "1591": 16,
+    "174": 12,
+    "2391": 14,
+    "2490": 8,
+    "265": 5,
+    "284": 16,
+    "331": 16,
+    "349": 16,
+    "54": 1,
+    "58": 16,
+    "584": 3,
+    "788": 14,
+    "89": 16,
+    "899": 9,
+    "905": 16,
+    "925": 4
+  },
+  "inspected_sources": 2217,
+  "model_calls": 0,
+  "reserved_transfer_used": false,
+  "selected_questions": 212,
+  "selected_requests": 212,
+  "server_groups": 19,
+  "status": "frozen_development_only",
+  "tokens": 400963,
+  "training_presentations": 0
+}

@@ -1,0 +1,30 @@
+{
+  "candidate_presentations": 7712,
+  "conflicting_inputs_removed": 0,
+  "distinct_normalized_requests": 3342,
+  "duplicate_presentations": 0,
+  "elapsed_seconds": 94.55040274997009,
+  "exclusions": {
+    "complete_input_over_limit": 2441,
+    "invalid_source_trajectory": 3220,
+    "nonredundant_or_unrecognized_system": 9121
+  },
+  "input_tokens": 12637563,
+  "inspected_training_trajectories": 17786,
+  "max_tokens": 4095,
+  "new_executed_branches": 0,
+  "new_independent_tasks": 0,
+  "optimizer_steps": 0,
+  "original_candidates_verified": 10682,
+  "questions": 7712,
+  "recovered_beyond_original_inventory": 1915,
+  "scope": "Teacher next-tool imitation only; no optimal-action or outcome-reward guarantee; existing training ownership, no new task families.",
+  "source_server_groups": 236,
+  "source_trajectories": 3383,
+  "status": "qualified_supervised_history_imitation",
+  "system_wrappers": {
+    "kimi_tool_declarations_only": 272,
+    "qwen_tool_declarations_only": 5173
+  },
+  "training_presentations": 0
+}
