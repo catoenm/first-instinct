@@ -59,6 +59,10 @@ first pilot's failed continuation. It optimized the existing 43,278,336 internal
 adapter scalars. These were mixed supervised decision and distribution targets,
 not online reinforcement learning. The real-device context, gradient and
 separate-process restart checks passed before sustained training.
+An additional local weight audit found that all 496 internal adapter tensors
+changed, retained their expected shapes and precision, and contained only finite
+values. The final adapter file has digest
+`f95c2437301b0c752023851754bd3978ba2fce58205687133917b8a7d80a0475`.
 
 Actual consumption was **10,240 presentations of 10,032 unique tokenized
 questions**, totaling **7,201,901 input tokens**: 5,120 general replay presentations,

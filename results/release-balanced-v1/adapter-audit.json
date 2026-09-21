@@ -1,0 +1,10 @@
+{
+  "changed_tensors": 496,
+  "checkpoint_sha256": "f95c2437301b0c752023851754bd3978ba2fce58205687133917b8a7d80a0475",
+  "note": "Shape, precision and finite-value audit of recovered tensors. All tensors belong to the unchanged internal adapter schema; this does not override development promotion gates.",
+  "optimizer_updates": 160,
+  "parent_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "status": "finite_internal_adapter_update_verified",
+  "tensors": 496,
+  "trainable_scalars": 43278336
+}
