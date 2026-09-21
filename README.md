@@ -21,12 +21,18 @@ verified outcomes, then tests reinforcement learning as a measured upgrade.
 Dataset admission, evaluation and serving qualification are still in progress.
 The [combined release corpus](docs/release-mixture-v1-results.md) now passes its
 source audit: 371,278 training questions and 133.8 million input tokens. This is
-prepared data; the new training pilot has not started.
+prepared data, not the amount consumed in a run. The
+[first training pilot](docs/release-pilot-v1-results.md) completed 80 updates on
+5,120 presentations. Average forecast error fell, but tool accuracy and one
+probability group failed the release gates, so it was not promoted. A
+[coverage-balanced follow-up](docs/release-balanced-v1-protocol.md) is running from
+the same original checkpoint with the same acceptance thresholds.
 
 The first [release-data admission](docs/release-tool-data-v1-results.md) now adds
 17,786 tool-choice training questions across 283 server groups, with 2,217
 development and 2,431 reserved-transfer questions kept separate. These are checked
-teacher-action examples, not verified outcome labels; new training consumption is zero.
+teacher-action examples, not verified outcome labels. The first pilot consumed
+2,240 tool questions; further consumption is recorded separately for each run.
 
 **Latest audit: [tool success is not financial success](docs/retail-ledger-v1-results.md).**
 A real simulator's payment-change-then-cancellation sequence returned normally but
@@ -43,7 +49,10 @@ forecast targets retain legitimate uncertainty. Their
 in one connected training-only group, with zero model updates.
 The [live tool interface](docs/retail-live-v1-results.md) also passed 120 runtime
 episodes: each command is charged, and verified success pays only at termination.
-These are runtime checks, not a new training run. The preceding
+The [language-policy interface](docs/retail-actor-v1-results.md) fits every saved
+decision point without cropping. Its [isolated process check](docs/retail-process-v1-results.md)
+then ran 108 real tool calls, including refused writes and six-action terminations.
+These are runtime checks with scripted actions, not learned-policy results. The preceding
 [AppWorld comparison failed its transfer and format checks](docs/appworld-transfer-evaluation-v2-results.md),
 so the demo remains on its original supervised checkpoint.
 
