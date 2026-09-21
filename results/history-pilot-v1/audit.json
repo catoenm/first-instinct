@@ -1,0 +1,146 @@
+{
+  "by_pool": {
+    "general": 5120,
+    "history": 1280,
+    "tools": 2560,
+    "verified": 1280
+  },
+  "committed_presentations": 10240,
+  "completed_optimizer_steps": 160,
+  "evaluations": {
+    "0": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.6666666666666666,
+          "log_loss": 1.0878491203567315
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.872441323195351,
+          "log_loss": 0.34014792509873815
+        },
+        "n": 3465
+      },
+      "history": {
+        "macro": {
+          "accuracy": 0.7285401002506265,
+          "log_loss": 0.9178711525563107
+        },
+        "n": 212
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.3409330839478848,
+          "log_loss": 0.5931438409349118
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8687396012478099,
+          "log_loss": 0.4324677740124522
+        },
+        "n": 2217
+      }
+    },
+    "160": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.75,
+          "log_loss": 0.7269540661377792
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8654041061660956,
+          "log_loss": 0.3445642434587366
+        },
+        "n": 3465
+      },
+      "history": {
+        "macro": {
+          "accuracy": 0.744204260651629,
+          "log_loss": 0.6938085941030818
+        },
+        "n": 212
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.2277619590478943,
+          "log_loss": 0.3979164917281324
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8610542008315641,
+          "log_loss": 0.3608854457562159
+        },
+        "n": 2217
+      }
+    },
+    "80": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.75,
+          "log_loss": 0.83853774571056
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8666011310096174,
+          "log_loss": 0.34293441705817634
+        },
+        "n": 3465
+      },
+      "history": {
+        "macro": {
+          "accuracy": 0.7406015037593985,
+          "log_loss": 0.7291255170268137
+        },
+        "n": 212
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.2585746838200985,
+          "log_loss": 0.45475465579703145
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8680070906156819,
+          "log_loss": 0.37331058507739606
+        },
+        "n": 2217
+      }
+    }
+  },
+  "freeze_sha256": "079ed7ad7f0c537e2c62bdf0e3ed4e41df60df7466e5193225cfa4b80f66787d",
+  "group_and_slice_scores_independently_recomputed": true,
+  "inherited_source_groups": 8712,
+  "input_tokens": 7978447,
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "reference_forward_questions": 10240,
+  "reference_forward_tokens": 3184538,
+  "reference_scope": "Fixed original-parent predictions on general training inputs; preservation penalty, not truth labels.",
+  "reference_sha256": "28f24769164cb8a0588d1d4b22e0f7922177fa6ca6157f8e224862d92f91dcb9",
+  "run_status": "stopped",
+  "runtime_qualification_backward_presentations": 4,
+  "source_group_note": "These are inherited ownership groups, not a claim of independently executed underlying worlds.",
+  "status": "saved_predictions_and_consumption_verified",
+  "uncommitted_backward_presentations": 0,
+  "unique_consumed_questions": 10079,
+  "update_receipt_audit": {
+    "accepted_updates": 160,
+    "max_observed_individual_kl": 0.02481282302885251,
+    "max_observed_mean_kl": 0.0022935055052066364,
+    "physical_optimizer_attempts": 160,
+    "rejected_attempts": 0,
+    "scope": "Independent recomputation of recorded probes; no GPU-step re-execution."
+  }
+}

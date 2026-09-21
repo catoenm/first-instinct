@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "Saved adapter identity, finite values and changes; no foundation model loaded.",
+  "checkpoints": {
+    "80": {
+      "file_sha256": "d02ebaad54ed5fbce8022484816df1e7984b75ab9297ce7d179da49641fd52be",
+      "tensor_sha256": "a526a9a515095ea4ce38f439d4e2761f3d55d93ba76b5ae3acbdf7a8a7459a18",
+      "trainable_elements": 43278336,
+      "changed_elements": 43278248,
+      "changed_tensors": 496,
+      "l2_delta": 0.4803081679194823,
+      "max_absolute_delta": 0.000314073171466589
+    },
+    "160": {
+      "file_sha256": "e70b93daa42a412b3e978f16c433747b731ec6f368531e551cabf18ce2f65ead",
+      "tensor_sha256": "07f03e9bb83c3468e79dc55c8bb4776309ce44a055cf0d68f696cf5c0a113c63",
+      "trainable_elements": 43278336,
+      "changed_elements": 43278256,
+      "changed_tensors": 496,
+      "l2_delta": 0.6613552864214248,
+      "max_absolute_delta": 0.0005216386634856462
+    }
+  }
+}

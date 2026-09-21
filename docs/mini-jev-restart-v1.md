@@ -109,9 +109,11 @@ from the existing training authorization.
 
 ## Budget and evidence
 
-The conservative ledger leaves $217.64 of the original cumulative $500. This
-is not a new allocation, and delayed billing/storage holds remain. The two
-latest pilot compute estimates total $8.53 excluding storage. No rental is active.
+The [completed history pilot](history-pilot-v1-results.md) stopped without
+promotion after 160 updates. The conservative ledger now leaves $192.64 of the
+original cumulative $500, retaining the latest stage's full $25 allocation and
+earlier delayed billing/storage holds. This is not a new allocation. The history
+pilot's compute estimate is $6.16 excluding storage. No rental is active.
 Reconcile costs and obtain a current rate before any new bounded rental; require
 a provider-side deadline that works when the laptop disconnects. Recover and
 hash-check artifacts before deletion.

@@ -1,0 +1,255 @@
+{
+  "scope": "Post-run development diagnostics; no new models, ground-truth labels or checkpoint selection.",
+  "suites": {
+    "tools": {
+      "question_counts": {
+        "n": 2217,
+        "before": 1895,
+        "after": 1918,
+        "newly_correct": 59,
+        "regressions": 36
+      },
+      "by_menu_size": {
+        "2_to_4": {
+          "n": 1128,
+          "before": 985,
+          "after": 994,
+          "newly_correct": 23,
+          "regressions": 14
+        },
+        "5_to_12": {
+          "n": 805,
+          "before": 702,
+          "after": 706,
+          "newly_correct": 13,
+          "regressions": 9
+        },
+        "13_to_36": {
+          "n": 284,
+          "before": 208,
+          "after": 218,
+          "newly_correct": 23,
+          "regressions": 13
+        }
+      },
+      "groups_improved": 8,
+      "groups_declined": 6,
+      "groups_unchanged": 13,
+      "largest_group_declines": [
+        {
+          "n": 7,
+          "before": 7,
+          "after": 5,
+          "newly_correct": 0,
+          "regressions": 2,
+          "accuracy_change": -0.2857142857142857
+        },
+        {
+          "n": 73,
+          "before": 53,
+          "after": 46,
+          "newly_correct": 0,
+          "regressions": 7,
+          "accuracy_change": -0.0958904109589041
+        },
+        {
+          "n": 35,
+          "before": 20,
+          "after": 17,
+          "newly_correct": 0,
+          "regressions": 3,
+          "accuracy_change": -0.08571428571428572
+        },
+        {
+          "n": 84,
+          "before": 79,
+          "after": 76,
+          "newly_correct": 1,
+          "regressions": 4,
+          "accuracy_change": -0.03571428571428571
+        },
+        {
+          "n": 116,
+          "before": 64,
+          "after": 63,
+          "newly_correct": 5,
+          "regressions": 6,
+          "accuracy_change": -0.008620689655172414
+        }
+      ]
+    },
+    "history": {
+      "question_counts": {
+        "n": 212,
+        "before": 151,
+        "after": 159,
+        "newly_correct": 17,
+        "regressions": 9
+      },
+      "by_menu_size": {
+        "2_to_4": {
+          "n": 116,
+          "before": 84,
+          "after": 88,
+          "newly_correct": 11,
+          "regressions": 7
+        },
+        "13_to_36": {
+          "n": 28,
+          "before": 19,
+          "after": 17,
+          "newly_correct": 0,
+          "regressions": 2
+        },
+        "5_to_12": {
+          "n": 68,
+          "before": 48,
+          "after": 54,
+          "newly_correct": 6,
+          "regressions": 0
+        }
+      },
+      "groups_improved": 7,
+      "groups_declined": 3,
+      "groups_unchanged": 9,
+      "largest_group_declines": [
+        {
+          "n": 3,
+          "before": 3,
+          "after": 1,
+          "newly_correct": 0,
+          "regressions": 2,
+          "accuracy_change": -0.6666666666666666
+        },
+        {
+          "n": 16,
+          "before": 15,
+          "after": 13,
+          "newly_correct": 0,
+          "regressions": 2,
+          "accuracy_change": -0.125
+        },
+        {
+          "n": 16,
+          "before": 10,
+          "after": 9,
+          "newly_correct": 0,
+          "regressions": 1,
+          "accuracy_change": -0.0625
+        },
+        {
+          "n": 16,
+          "before": 13,
+          "after": 13,
+          "newly_correct": 0,
+          "regressions": 0,
+          "accuracy_change": 0.0
+        },
+        {
+          "n": 16,
+          "before": 15,
+          "after": 15,
+          "newly_correct": 1,
+          "regressions": 1,
+          "accuracy_change": 0.0
+        }
+      ]
+    },
+    "general": {
+      "question_counts": {
+        "n": 3465,
+        "before": 3103,
+        "after": 3090,
+        "newly_correct": 9,
+        "regressions": 22
+      },
+      "by_menu_size": {
+        "5_to_12": {
+          "n": 695,
+          "before": 570,
+          "after": 568,
+          "newly_correct": 4,
+          "regressions": 6
+        },
+        "2_to_4": {
+          "n": 2770,
+          "before": 2533,
+          "after": 2522,
+          "newly_correct": 5,
+          "regressions": 16
+        }
+      },
+      "groups_improved": 8,
+      "groups_declined": 18,
+      "groups_unchanged": 131,
+      "largest_group_declines": [
+        {
+          "n": 4,
+          "before": 3,
+          "after": 2,
+          "newly_correct": 0,
+          "regressions": 1,
+          "accuracy_change": -0.25
+        },
+        {
+          "n": 5,
+          "before": 5,
+          "after": 4,
+          "newly_correct": 0,
+          "regressions": 1,
+          "accuracy_change": -0.2
+        },
+        {
+          "n": 5,
+          "before": 3,
+          "after": 2,
+          "newly_correct": 0,
+          "regressions": 1,
+          "accuracy_change": -0.2
+        },
+        {
+          "n": 12,
+          "before": 12,
+          "after": 10,
+          "newly_correct": 0,
+          "regressions": 2,
+          "accuracy_change": -0.16666666666666666
+        },
+        {
+          "n": 6,
+          "before": 6,
+          "after": 5,
+          "newly_correct": 0,
+          "regressions": 1,
+          "accuracy_change": -0.16666666666666666
+        }
+      ]
+    }
+  },
+  "consumed_verified_unique_by_kind": {
+    "filesystem_scope::consequence_filesystem_scope": 128,
+    "config::consequence_config": 127,
+    "application_delivery::consequence_application_delivery": 127,
+    "appworld::continued_task_success": 87,
+    "appworld::fixed_plan_decision": 114,
+    "retail_fresh_history::immediate_goal_forecast": 128,
+    "sqlite::consequence_sqlite": 127,
+    "reservation::consequence_reservation": 127,
+    "retail::next_procedure": 18,
+    "retail::observation_value": 18,
+    "appworld::continued_application_change": 87,
+    "retail::continued_success": 18,
+    "retail::immediate_success": 13
+  },
+  "fractional_targets_by_kind": {
+    "application_delivery::consequence_application_delivery": 34,
+    "retail_fresh_history::immediate_goal_forecast": 17,
+    "filesystem_scope::consequence_filesystem_scope": 19,
+    "reservation::consequence_reservation": 25,
+    "config::consequence_config": 22,
+    "sqlite::consequence_sqlite": 19,
+    "retail::continued_success": 14,
+    "retail::immediate_success": 11
+  },
+  "consumed_history_distinct_requests": 1036
+}

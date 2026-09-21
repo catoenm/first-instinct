@@ -1,0 +1,40 @@
+{
+  "gates_by_evaluated_update": {
+    "160": {
+      "eligible": false,
+      "history_retention": true,
+      "probability": false,
+      "product_slices": true,
+      "qualifies": false,
+      "retention": true,
+      "tool_accuracy_gain": -0.007685400416245769
+    },
+    "80": {
+      "eligible": false,
+      "history_retention": true,
+      "probability": false,
+      "product_slices": true,
+      "qualifies": false,
+      "retention": true,
+      "tool_accuracy_gain": -0.0007325106321279806
+    }
+  },
+  "new_executed_counterfactual_branches": 0,
+  "new_executed_worlds": 0,
+  "new_online_reinforcement_training": false,
+  "new_rental_active": false,
+  "reserved_evaluation_model_calls": 0,
+  "selected_original_gates": {
+    "eligible": true,
+    "history_retention": true,
+    "probability": true,
+    "product_slices": true,
+    "qualifies": false,
+    "retention": true,
+    "tool_accuracy_gain": 0.0
+  },
+  "selected_parent_supervised_step": 2742,
+  "selected_step": 0,
+  "status": "completed_without_promotion",
+  "stop_reason": "two_checks_without_eligible_improvement"
+}
