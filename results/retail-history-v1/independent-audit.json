@@ -1,0 +1,19 @@
+{
+  "actor_turns_including_stops": 1880,
+  "auditor_sha256": "c70911cfa2e9946507307852711d4a59196f4cc4829f8c83d303fb101344944c",
+  "distinct_public_histories": 38,
+  "fractional_forecast_questions": 29,
+  "freeze_sha256": "ea83585de12c12a52a24b099d15a2272448d0d2a84261345c9d60c5146513d57",
+  "independent_replays": 300,
+  "limitation": "Training-only fixed command-then-stop forecasts. No new task family, transfer result, learned continuation label or model improvement.",
+  "maximum_tokens": 1734,
+  "optimizer_steps": 0,
+  "physical_initial_states": 10,
+  "primary_branches": 300,
+  "questions_sha256": "1464ef6a662838fe9bc56be0e59590a2f9c83e26de7a384a5a80dd243502da4e",
+  "real_tool_calls": 1280,
+  "status": "independently_verified",
+  "training_component": "retail_workflows",
+  "training_presentations": 0,
+  "unique_forecast_questions": 190
+}

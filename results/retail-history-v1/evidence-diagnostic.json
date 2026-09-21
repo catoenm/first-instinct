@@ -1,0 +1,23 @@
+{
+  "groups": {
+    "read_order": {
+      "fractional": 18,
+      "primary_world_branches": 100,
+      "prior_weighted_goal_macro_brier_floor": 0.15833333333333333,
+      "questions": 55
+    },
+    "read_user": {
+      "fractional": 11,
+      "primary_world_branches": 100,
+      "prior_weighted_goal_macro_brier_floor": 0.17083333333333334,
+      "questions": 35
+    },
+    "read_user+read_order": {
+      "fractional": 0,
+      "primary_world_branches": 100,
+      "prior_weighted_goal_macro_brier_floor": 0.0,
+      "questions": 100
+    }
+  },
+  "interpretation": "Expected two-class Brier of the true conditional probabilities, averaged equally over three goals, five candidate commands and each goal prior; not a trained-model result."
+}

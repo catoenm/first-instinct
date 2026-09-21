@@ -1,0 +1,25 @@
+{
+  "auditor_sha256": "c70911cfa2e9946507307852711d4a59196f4cc4829f8c83d303fb101344944c",
+  "checks": [
+    {
+      "case": "target",
+      "rejected": true
+    },
+    {
+      "case": "forecast_horizon",
+      "rejected": true
+    },
+    {
+      "case": "usage_role",
+      "rejected": true
+    },
+    {
+      "case": "witness_weight",
+      "rejected": true
+    }
+  ],
+  "model_calls": 0,
+  "new_world_executions": 0,
+  "questions_sha256": "1464ef6a662838fe9bc56be0e59590a2f9c83e26de7a384a5a80dd243502da4e",
+  "status": "passed"
+}
