@@ -45,7 +45,8 @@ local development demo, not a public hosting setup.
 1. Press **Start model** to watch it choose successive moves.
 2. **Pause** stops automatic play after any move already in flight.
 3. **One move** asks the model for a single decision; **New game** resets the board.
-4. Expand **What does the model see?** to inspect the exact latest request.
+4. Expand **View model input** to inspect the request that produced the displayed
+   move probabilities, or the starting request before the first move.
 
 The game removes reverse turns, supplies mechanically computed immediate
 collision and food-distance observations, and executes the returned choice.

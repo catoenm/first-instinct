@@ -36,6 +36,11 @@ function draw() {
   $("end-note").textContent = `${game.score} food · ${game.moves} moves${game.collision ? ` · ${game.collision} collision` : ""}`;
 }
 function message(text, error = false) { $("status").textContent = text; $("status").classList.toggle("error", error); }
+function disconnected() {
+  token = null;
+  $("connection").textContent = "Offline"; $("connection").dataset.ready = "false";
+  $("model-note").textContent = "Model offline · reconnect to play";
+}
 function probabilities(values = null, chosen = null, menu = actions(game)) {
   $("choices").replaceChildren();
   for (const action of menu) {
@@ -62,7 +67,7 @@ async function connect(signal) {
 }
 function reset() {
   running = false; generation++; controller?.abort(); game = newGame();
-  $("latency").textContent = "—"; $("input-preview").textContent = "Start a game to see the exact question sent to the model.";
+  $("latency").textContent = "—"; $("input-preview").textContent = JSON.stringify(question(game), null, 2);
   probabilities(); draw(); message("The model chooses. The game executes.");
 }
 async function tick() {
@@ -71,7 +76,6 @@ async function tick() {
   busy = true; controller = new AbortController();
   const timeout = setTimeout(() => controller?.abort(), 60000);
   draw(); message(game.moves ? "Choosing the next move…" : "Choosing the first move…");
-  $("input-preview").textContent = JSON.stringify(payload, null, 2);
   try {
     if (!token) await connect(controller.signal);
     const result = await request("/api/answer", { method: "POST", signal: controller.signal,
@@ -82,13 +86,14 @@ async function tick() {
       || Math.abs(offered.reduce((sum, key) => sum + answer.probabilities[key], 0) - 1) > .001) throw new Error("The model returned an invalid move.");
     // Execute exactly the returned choice. No heuristic fallback or collision veto.
     game = advance(game, answer.choice); best = Math.max(best, game.score);
+    $("input-preview").textContent = JSON.stringify(payload, null, 2);
     probabilities(answer.probabilities, answer.choice, offered);
     $("latency").textContent = Number.isFinite(answer.milliseconds) ? `${Math.round(answer.milliseconds)} ms` : "—";
     message(game.over ? (game.won ? "Every cell filled." : `The model hit its ${game.collision === "body" ? "body" : "wall"}.`) : `${DIRECTIONS[answer.choice].arrow} ${DIRECTIONS[answer.choice].label}`);
     if (game.over) running = false;
   } catch (error) {
     if (epoch === generation) {
-      running = false; token = null;
+      running = false; disconnected();
       message(error.name === "AbortError" ? "Paused. Press Resume to try again." : error.message || "Could not reach the model.", true);
     }
   } finally {
@@ -105,4 +110,4 @@ $("step").addEventListener("click", tick);
 $("reset").addEventListener("click", reset);
 document.addEventListener("visibilitychange", () => { if (document.hidden) { running = false; draw(); } });
 reset();
-connect().catch(() => { $("connection").textContent = "Offline"; $("connection").dataset.ready = "false"; message("Connect to the model, then press Start.", true); });
+connect().catch(() => { disconnected(); message("Connect to the model, then press Start.", true); });
