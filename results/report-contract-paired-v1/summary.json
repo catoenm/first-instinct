@@ -1,0 +1,433 @@
+{
+  "ambiguous_questions": 40,
+  "collection": {
+    "archive_bytes": 1248661,
+    "archive_sha256": "ffac89fefee8749b6a491af0c8081806b4bf80c2a8d8d1047d1d14922e635c14",
+    "compute_estimate_time_source": "provider_stopped_or_absent_observation",
+    "created_at": 1790046047.702923,
+    "deleted_at": 1790046753.5213969,
+    "estimated_compute_usd_excluding_storage": 0.21370593194762869,
+    "gpu_hourly_rate_usd": 1.09,
+    "observed_stopped_or_absent_at": 1790046753.52068,
+    "pipeline_status": "complete",
+    "pod_deleted": true,
+    "remaining_pod_count": 0,
+    "stop_requested_at": 1790046704.7270179,
+    "stop_time_source": "collector_request",
+    "verified_files": 44
+  },
+  "deterministic_questions": 268,
+  "fixed_models": 3,
+  "fixture_roots": 1,
+  "hardware": {
+    "capability": [
+      8,
+      9
+    ],
+    "name": "NVIDIA L40S",
+    "total_memory": 47665709056
+  },
+  "input_freeze_sha256": "05ed502c8241803800b487c7f43c5bad2dfe96a4ec90db7c855d736ce3143f3d",
+  "mechanisms": 1,
+  "models": {
+    "laya_typed": {
+      "ambiguous_output_diagnostic": {
+        "contract": {
+          "mean_max_probability": 0.39643066599965093,
+          "n": 40,
+          "zero_support_top_choices": 0
+        },
+        "original": {
+          "mean_max_probability": 0.4221286676824093,
+          "n": 40,
+          "zero_support_top_choices": 0
+        }
+      },
+      "maximum_qualification_probability_drift": 0.0,
+      "metrics": {
+        "contract": {
+          "all": {
+            "excess_brier": 0.6376682402629207,
+            "excess_log_loss": 1.0713370794887862,
+            "expected_brier": 0.7026033051979856,
+            "expected_choice_accuracy": 0.4090909090909091,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.1613561938472208,
+            "n": 308
+          },
+          "ambiguous": {
+            "excess_brier": 0.10864965124405943,
+            "excess_log_loss": 0.3136332065198378,
+            "expected_brier": 0.6086496512440595,
+            "expected_choice_accuracy": 0.5,
+            "irreducible_brier": 0.5,
+            "log_loss": 1.006780387079783,
+            "n": 40
+          },
+          "deterministic": {
+            "excess_brier": 0.7166262386239447,
+            "excess_log_loss": 1.1844272097826591,
+            "expected_brier": 0.7166262386239447,
+            "expected_choice_accuracy": 0.39552238805970147,
+            "irreducible_brier": 0.0,
+            "log_loss": 1.1844272097826591,
+            "n": 268
+          }
+        },
+        "original": {
+          "all": {
+            "excess_brier": 0.6020583157613664,
+            "excess_log_loss": 1.0115462098497754,
+            "expected_brier": 0.6669933806964313,
+            "expected_choice_accuracy": 0.4090909090909091,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.1015653242082097,
+            "n": 308
+          },
+          "ambiguous": {
+            "excess_brier": 0.1309517882054432,
+            "excess_log_loss": 0.35266753953333607,
+            "expected_brier": 0.6309517882054432,
+            "expected_choice_accuracy": 0.5,
+            "irreducible_brier": 0.5,
+            "log_loss": 1.0458147200932815,
+            "n": 40
+          },
+          "deterministic": {
+            "excess_brier": 0.6723727228592654,
+            "excess_log_loss": 1.1098863098970049,
+            "expected_brier": 0.6723727228592654,
+            "expected_choice_accuracy": 0.39552238805970147,
+            "irreducible_brier": 0.0,
+            "log_loss": 1.1098863098970049,
+            "n": 268
+          }
+        }
+      },
+      "native_latency_median_ms": {
+        "contract": [
+          16.441699117422104,
+          17.68605411052704,
+          17.59774424135685
+        ],
+        "original": [
+          15.60358889400959,
+          17.298499122262,
+          16.831694170832634
+        ]
+      },
+      "native_zero_probabilities": 0,
+      "original_max_probability_delta_from_previous_baseline": 0.0,
+      "paired_changes": {
+        "changes": {
+          "all": {
+            "excess_brier": 0.03560992450155431,
+            "excess_log_loss": 0.05979086963901081,
+            "expected_brier": 0.03560992450155431,
+            "expected_choice_accuracy": 0.0,
+            "irreducible_brier": 0.0,
+            "log_loss": 0.059790869639011035
+          },
+          "ambiguous": {
+            "excess_brier": -0.02230213696138378,
+            "excess_log_loss": -0.03903433301349829,
+            "expected_brier": -0.022302136961383723,
+            "expected_choice_accuracy": 0.0,
+            "irreducible_brier": 0.0,
+            "log_loss": -0.03903433301349857
+          },
+          "deterministic": {
+            "excess_brier": 0.044253515764679285,
+            "excess_log_loss": 0.07454089988565427,
+            "expected_brier": 0.044253515764679285,
+            "expected_choice_accuracy": 0.0,
+            "irreducible_brier": 0.0,
+            "log_loss": 0.07454089988565427
+          }
+        },
+        "checks": {
+          "ambiguous_brier": false,
+          "deterministic_accuracy": true,
+          "deterministic_brier": false,
+          "overall_brier": false,
+          "overall_log_loss": false
+        },
+        "descriptive_support": false,
+        "interpretation": "Exposed one-mechanism diagnostic; not an independent-task significance test or trained improvement.",
+        "release_eligible": false
+      }
+    },
+    "qwen_foundation": {
+      "ambiguous_output_diagnostic": {
+        "contract": {
+          "mean_max_probability": 0.6890710785984993,
+          "n": 40,
+          "zero_support_top_choices": 0
+        },
+        "original": {
+          "mean_max_probability": 0.6340325482189655,
+          "n": 40,
+          "zero_support_top_choices": 36
+        }
+      },
+      "maximum_qualification_probability_drift": 0.0,
+      "metrics": {
+        "contract": {
+          "all": {
+            "excess_brier": 0.3889236467537041,
+            "excess_log_loss": 0.7231573370562886,
+            "expected_brier": 0.4538587116887691,
+            "expected_choice_accuracy": 0.7012987012987013,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.813176451414723,
+            "n": 308
+          },
+          "ambiguous": {
+            "excess_brier": 0.2636100285534574,
+            "excess_log_loss": 0.7311048762184099,
+            "expected_brier": 0.7636100285534574,
+            "expected_choice_accuracy": 0.5,
+            "irreducible_brier": 0.5,
+            "log_loss": 1.4242520567783552,
+            "n": 40
+          },
+          "deterministic": {
+            "excess_brier": 0.40762717185821856,
+            "excess_log_loss": 0.7219711371813451,
+            "expected_brier": 0.40762717185821856,
+            "expected_choice_accuracy": 0.7313432835820896,
+            "irreducible_brier": 0.0,
+            "log_loss": 0.7219711371813451,
+            "n": 268
+          }
+        },
+        "original": {
+          "all": {
+            "excess_brier": 0.47469022445972836,
+            "excess_log_loss": 0.8646094489195971,
+            "expected_brier": 0.5396252893947933,
+            "expected_choice_accuracy": 0.5714285714285714,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.9546285632780317,
+            "n": 308
+          },
+          "ambiguous": {
+            "excess_brier": 0.643486814383141,
+            "excess_log_loss": 1.3396810792053395,
+            "expected_brier": 1.1434868143831411,
+            "expected_choice_accuracy": 0.05,
+            "irreducible_brier": 0.5,
+            "log_loss": 2.0328282597652847,
+            "n": 40
+          },
+          "deterministic": {
+            "excess_brier": 0.44949670357563687,
+            "excess_log_loss": 0.7937032354441133,
+            "expected_brier": 0.44949670357563687,
+            "expected_choice_accuracy": 0.6492537313432836,
+            "irreducible_brier": 0.0,
+            "log_loss": 0.7937032354441133,
+            "n": 268
+          }
+        }
+      },
+      "native_latency_median_ms": {
+        "contract": [
+          116.88883788883686,
+          131.33960030972958,
+          153.1109269708395
+        ],
+        "original": [
+          74.58228804171085,
+          95.91723047196865,
+          106.44801892340183
+        ]
+      },
+      "native_zero_probabilities": 0,
+      "original_max_probability_delta_from_previous_baseline": 0.0,
+      "paired_changes": {
+        "changes": {
+          "all": {
+            "excess_brier": -0.08576657770602425,
+            "excess_log_loss": -0.14145211186330853,
+            "expected_brier": -0.08576657770602414,
+            "expected_choice_accuracy": 0.1298701298701299,
+            "irreducible_brier": 0.0,
+            "log_loss": -0.14145211186330875
+          },
+          "ambiguous": {
+            "excess_brier": -0.37987678582968365,
+            "excess_log_loss": -0.6085762029869296,
+            "expected_brier": -0.37987678582968376,
+            "expected_choice_accuracy": 0.45,
+            "irreducible_brier": 0.0,
+            "log_loss": -0.6085762029869295
+          },
+          "deterministic": {
+            "excess_brier": -0.04186953171741831,
+            "excess_log_loss": -0.07173209826276816,
+            "expected_brier": -0.04186953171741831,
+            "expected_choice_accuracy": 0.08208955223880599,
+            "irreducible_brier": 0.0,
+            "log_loss": -0.07173209826276816
+          }
+        },
+        "checks": {
+          "ambiguous_brier": true,
+          "deterministic_accuracy": true,
+          "deterministic_brier": true,
+          "overall_brier": true,
+          "overall_log_loss": true
+        },
+        "descriptive_support": true,
+        "interpretation": "Exposed one-mechanism diagnostic; not an independent-task significance test or trained improvement.",
+        "release_eligible": false
+      }
+    },
+    "qwen_supervised": {
+      "ambiguous_output_diagnostic": {
+        "contract": {
+          "mean_max_probability": 0.7627981781959534,
+          "n": 40,
+          "zero_support_top_choices": 0
+        },
+        "original": {
+          "mean_max_probability": 0.7194155044853687,
+          "n": 40,
+          "zero_support_top_choices": 40
+        }
+      },
+      "maximum_qualification_probability_drift": 0.0,
+      "metrics": {
+        "contract": {
+          "all": {
+            "excess_brier": 0.3533117529648674,
+            "excess_log_loss": 0.6287223846501101,
+            "expected_brier": 0.4182468178999323,
+            "expected_choice_accuracy": 0.6948051948051948,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.7187414990085446,
+            "n": 308
+          },
+          "ambiguous": {
+            "excess_brier": 0.2315271548214835,
+            "excess_log_loss": 0.5181497646147082,
+            "expected_brier": 0.7315271548214834,
+            "expected_choice_accuracy": 0.5,
+            "irreducible_brier": 0.5,
+            "log_loss": 1.2112969451746536,
+            "n": 40
+          },
+          "deterministic": {
+            "excess_brier": 0.37148855865790975,
+            "excess_log_loss": 0.6452257607747969,
+            "expected_brier": 0.37148855865790975,
+            "expected_choice_accuracy": 0.7238805970149254,
+            "irreducible_brier": 0.0,
+            "log_loss": 0.6452257607747969,
+            "n": 268
+          }
+        },
+        "original": {
+          "all": {
+            "excess_brier": 0.5753486144434107,
+            "excess_log_loss": 0.9947230008809497,
+            "expected_brier": 0.6402836793784756,
+            "expected_choice_accuracy": 0.5227272727272727,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 1.0847421152393841,
+            "n": 308
+          },
+          "ambiguous": {
+            "excess_brier": 0.8051249201167308,
+            "excess_log_loss": 1.397402379254673,
+            "expected_brier": 1.3051249201167308,
+            "expected_choice_accuracy": 0.0,
+            "irreducible_brier": 0.5,
+            "log_loss": 2.0905495598146184,
+            "n": 40
+          },
+          "deterministic": {
+            "excess_brier": 0.5410536434473928,
+            "excess_log_loss": 0.9346216011236775,
+            "expected_brier": 0.5410536434473928,
+            "expected_choice_accuracy": 0.6007462686567164,
+            "irreducible_brier": 0.0,
+            "log_loss": 0.9346216011236775,
+            "n": 268
+          }
+        }
+      },
+      "native_latency_median_ms": {
+        "contract": [
+          149.85518343746662,
+          172.67093062400818,
+          200.88909566402435
+        ],
+        "original": [
+          92.27001294493675,
+          118.42541582882404,
+          138.55478540062904
+        ]
+      },
+      "native_zero_probabilities": 0,
+      "original_max_probability_delta_from_previous_baseline": 0.0,
+      "paired_changes": {
+        "changes": {
+          "all": {
+            "excess_brier": -0.2220368614785433,
+            "excess_log_loss": -0.36600061623083957,
+            "expected_brier": -0.22203686147854335,
+            "expected_choice_accuracy": 0.17207792207792205,
+            "irreducible_brier": 0.0,
+            "log_loss": -0.36600061623083957
+          },
+          "ambiguous": {
+            "excess_brier": -0.5735977652952473,
+            "excess_log_loss": -0.8792526146399648,
+            "expected_brier": -0.5735977652952473,
+            "expected_choice_accuracy": 0.5,
+            "irreducible_brier": 0.0,
+            "log_loss": -0.8792526146399648
+          },
+          "deterministic": {
+            "excess_brier": -0.16956508478948307,
+            "excess_log_loss": -0.28939584034888066,
+            "expected_brier": -0.16956508478948307,
+            "expected_choice_accuracy": 0.12313432835820892,
+            "irreducible_brier": 0.0,
+            "log_loss": -0.28939584034888066
+          }
+        },
+        "checks": {
+          "ambiguous_brier": true,
+          "deterministic_accuracy": true,
+          "deterministic_brier": true,
+          "overall_brier": true,
+          "overall_log_loss": true
+        },
+        "descriptive_support": true,
+        "interpretation": "Exposed one-mechanism diagnostic; not an independent-task significance test or trained improvement.",
+        "release_eligible": false
+      }
+    }
+  },
+  "new_executed_branches": 0,
+  "new_training_questions": 0,
+  "optimizer_updates": 0,
+  "original_prepared_input_superseded_before_scoring": true,
+  "original_questions": 308,
+  "physical_worlds": 2,
+  "primary_predictions": 1848,
+  "qualification_forwards": 18,
+  "release_eligible": false,
+  "remaining_original_authorization_usd": 140.63882132875733,
+  "renderings_per_question": 2,
+  "reserved_scores_opened": 0,
+  "scope": "Paired exposed report-forecast input diagnostic, not training or release qualification",
+  "stage_hold_retained_usd": 6,
+  "status": "complete_independently_audited",
+  "timing_forwards": 144,
+  "worker_seconds": 244.97412061691284,
+  "world_goal_tasks": 4
+}
