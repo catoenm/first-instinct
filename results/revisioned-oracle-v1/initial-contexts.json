@@ -1,0 +1,92 @@
+{
+  "actor_visits": 64,
+  "by_goal_cost": {
+    "approved_revision/cheap": {
+      "distributions": 4,
+      "greedy_commands": {
+        "cached_write": 4
+      },
+      "greedy_menu_positions": {
+        "2": 4
+      },
+      "greedy_optimal": 0,
+      "optimal_actions": [
+        "read"
+      ]
+    },
+    "approved_revision/expensive_read": {
+      "distributions": 4,
+      "greedy_commands": {
+        "cached_write": 4
+      },
+      "greedy_menu_positions": {
+        "5": 4
+      },
+      "greedy_optimal": 0,
+      "optimal_actions": [
+        "checked_write"
+      ]
+    },
+    "approved_revision/expensive_write": {
+      "distributions": 6,
+      "greedy_commands": {
+        "read": 6
+      },
+      "greedy_menu_positions": {
+        "0": 6
+      },
+      "greedy_optimal": 0,
+      "optimal_actions": [
+        "finish"
+      ]
+    },
+    "increment_latest/cheap": {
+      "distributions": 6,
+      "greedy_commands": {
+        "cached_write": 6
+      },
+      "greedy_menu_positions": {
+        "0": 6
+      },
+      "greedy_optimal": 0,
+      "optimal_actions": [
+        "read"
+      ]
+    },
+    "increment_latest/expensive_read": {
+      "distributions": 8,
+      "greedy_commands": {
+        "cached_write": 8
+      },
+      "greedy_menu_positions": {
+        "5": 8
+      },
+      "greedy_optimal": 0,
+      "optimal_actions": [
+        "checked_write"
+      ]
+    },
+    "increment_latest/expensive_write": {
+      "distributions": 4,
+      "greedy_commands": {
+        "read": 4
+      },
+      "greedy_menu_positions": {
+        "1": 4
+      },
+      "greedy_optimal": 0,
+      "optimal_actions": [
+        "finish"
+      ]
+    }
+  },
+  "distinct_initial_public_contexts": 6,
+  "greedy_optimal_visits": 0,
+  "limitations": "Repeated visits, seeds and updates are not independent tasks. These scores do not establish the cause of errors or a matched before/after learning curve. Menu positions vary but that does not prove order invariance.",
+  "public_history_update_distributions": 32,
+  "sampled_optimal_visits": 10,
+  "scope": "Post-hoc descriptive initial-context slice of recorded training visits; no model calls or new test.",
+  "source_diagnostic_freeze_sha256": "d298c7629cad7fade68ee660c1ca0df4c5b599ab95cd6f401d8268539cd2f1d5",
+  "source_oracle_freeze_sha256": "f95a345d1825757eef78094cab85e399f91e892fb84fb3cbbe80245b29f3767e",
+  "source_sha256": "6f8e86306f3cfc9340e2a7cddea7def39542b925a2f25746c4954f5965ceb298"
+}

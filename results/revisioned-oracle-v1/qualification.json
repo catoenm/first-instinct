@@ -1,0 +1,164 @@
+{
+  "actual_training_presentations": 0,
+  "by_task": {
+    "net_read_first_advantage": 258,
+    "optimal_continuation_outcome": 1548,
+    "optimal_next_action": 258
+  },
+  "corruption_controls_rejected": [
+    "action_value",
+    "graph_reward",
+    "continuation_choice",
+    "outcome_mass",
+    "action_target",
+    "horizon",
+    "private_state",
+    "ownership",
+    "inspection_target",
+    "missing_question"
+  ],
+  "distinct_world_history_action_branches": 1692,
+  "enumeration": {
+    "first_action_values": 1548,
+    "histories": 258,
+    "incompatible_private_information_policies_rejected": 76350,
+    "status": "passed_exact_public_policy_enumeration",
+    "suffix_combinations_examined": 91608
+  },
+  "existing_mechanisms": 1,
+  "existing_primary_executed_branches": 1422,
+  "existing_world_goal_tasks": 4,
+  "fresh_transfer": false,
+  "full_token_presentations": 4128,
+  "histories_with_tied_optimal_actions": 0,
+  "initial_contexts": [
+    {
+      "expected_remaining_utility": 97.5,
+      "first_action_values": {
+        "cached_write": -1.0,
+        "checked_write": 97.0,
+        "finish": 50.0,
+        "increment": -40.0,
+        "missing_read": 96.5,
+        "read": 97.5
+      },
+      "goal": "approved_revision",
+      "optimal_actions": [
+        "read"
+      ],
+      "profile": "cheap",
+      "read_first_advantage": 0.5
+    },
+    {
+      "expected_remaining_utility": 97.0,
+      "first_action_values": {
+        "cached_write": -1.0,
+        "checked_write": 97.0,
+        "finish": 50.0,
+        "increment": -40.0,
+        "missing_read": 96.0,
+        "read": -20.5
+      },
+      "goal": "approved_revision",
+      "optimal_actions": [
+        "checked_write"
+      ],
+      "profile": "expensive_read",
+      "read_first_advantage": -117.5
+    },
+    {
+      "expected_remaining_utility": 50.0,
+      "first_action_values": {
+        "cached_write": -120.0,
+        "checked_write": -20.0,
+        "finish": 50.0,
+        "increment": -120.0,
+        "missing_read": 49.0,
+        "read": 48.0
+      },
+      "goal": "approved_revision",
+      "optimal_actions": [
+        "finish"
+      ],
+      "profile": "expensive_write",
+      "read_first_advantage": -2.0
+    },
+    {
+      "expected_remaining_utility": 97.0,
+      "first_action_values": {
+        "cached_write": -1.0,
+        "checked_write": 95.5,
+        "finish": 0.0,
+        "increment": 60.0,
+        "missing_read": 96.0,
+        "read": 97.0
+      },
+      "goal": "increment_latest",
+      "optimal_actions": [
+        "read"
+      ],
+      "profile": "cheap",
+      "read_first_advantage": 1.0
+    },
+    {
+      "expected_remaining_utility": 77.0,
+      "first_action_values": {
+        "cached_write": -1.0,
+        "checked_write": 77.0,
+        "finish": 0.0,
+        "increment": 60.0,
+        "missing_read": 76.0,
+        "read": -21.0
+      },
+      "goal": "increment_latest",
+      "optimal_actions": [
+        "checked_write"
+      ],
+      "profile": "expensive_read",
+      "read_first_advantage": -98.0
+    },
+    {
+      "expected_remaining_utility": 0.0,
+      "first_action_values": {
+        "cached_write": -120.0,
+        "checked_write": -70.0,
+        "finish": 0.0,
+        "increment": -20.0,
+        "missing_read": -1.0,
+        "read": -2.0
+      },
+      "goal": "increment_latest",
+      "optimal_actions": [
+        "finish"
+      ],
+      "profile": "expensive_write",
+      "read_first_advantage": -2.0
+    }
+  ],
+  "limitations": "Optimal only within the frozen six-command four-decision environment and public prior. Forecasts follow the explicit optimal public continuation, not the learned policy. Questions and contexts are not new independent tasks or a model-performance result.",
+  "maximum_qwen_tokens": 806,
+  "new_executed_branches": 0,
+  "new_model_calls": 0,
+  "new_worlds": 0,
+  "optimal_action_membership": {
+    "cached_write": 78,
+    "checked_write": 8,
+    "finish": 142,
+    "increment": 20,
+    "read": 10
+  },
+  "optimizer_updates": 0,
+  "ownership_groups": 1,
+  "public_histories": 258,
+  "questions": 2064,
+  "repeated_replay_probability_mass": 0,
+  "reversed_menu_questions": 2064,
+  "seconds": 6.572895999997854,
+  "source_freeze_sha256": "f0f65ce31edc12c170c71612770431e981fad4a9b4d3fb9f6b7d76c7ee8ba1e5",
+  "status": "locally_qualified_public_policy_oracle",
+  "strictly_beneficial_read_first_histories": 10,
+  "tests_passed": 5,
+  "training_admitted": false,
+  "uncertain_outcome_questions": 66,
+  "unresolved_histories": 24
+}

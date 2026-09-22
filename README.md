@@ -29,6 +29,10 @@ improved slightly, but decision performance did not improve. Every arm stopped
 at its predefined limit; the original checkpoint remains selected. Recovery,
 metrics, consumption and saved weights passed independent audit, and the H200
 was deleted.
+The subsequent [execution-derived decision oracle](docs/revisioned-oracle-v1-results.md)
+finds suboptimal recorded first choices in all six database starting situations.
+It supplies exact action and continuation targets for a fixed learnability
+diagnostic; it adds no new worlds, model calls or trained checkpoint.
 
 **Next milestone: [a usable 9B release candidate](docs/release-candidate-v1-plan.md).**
 The release plan combines general decisions, broader tool-selection data and

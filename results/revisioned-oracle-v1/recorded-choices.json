@@ -1,0 +1,485 @@
+{
+  "arms": {
+    "hybrid-20260924": {
+      "all_actor_visits": {
+        "behavior_expected_regret": 47.11313004387544,
+        "greedy_optimal": 0.047619047619047616,
+        "greedy_regret": 60.57142857142857,
+        "n": 21,
+        "optimal_native_exploration_regret": 8.25873015873016,
+        "optimal_probability_mass": 0.18270723016710497,
+        "sampled_optimal": 0.19047619047619047,
+        "sampled_regret": 57.523809523809526
+      },
+      "by_goal_cost": {
+        "approved_revision/cheap": {
+          "behavior_expected_regret": 86.66704291849908,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.5,
+          "n": 1,
+          "optimal_native_exploration_regret": 9.5,
+          "optimal_probability_mass": 0.035569887210765254
+        },
+        "approved_revision/expensive_read": {
+          "behavior_expected_regret": 87.1838349480294,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.0,
+          "n": 1,
+          "optimal_native_exploration_regret": 13.350000000000001,
+          "optimal_probability_mass": 0.07991388618753596
+        },
+        "approved_revision/expensive_write": {
+          "behavior_expected_regret": 15.373539340553735,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 2.0,
+          "n": 3,
+          "optimal_native_exploration_regret": 5.988888888888888,
+          "optimal_probability_mass": 0.06035823480793016
+        },
+        "increment_latest/cheap": {
+          "behavior_expected_regret": 59.3000162739086,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.0,
+          "n": 2,
+          "optimal_native_exploration_regret": 7.816666666666667,
+          "optimal_probability_mass": 0.21656727449759583
+        },
+        "increment_latest/expensive_read": {
+          "behavior_expected_regret": 60.7543026586226,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 105.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 9.422222222222224,
+          "optimal_probability_mass": 0.2101119413635133
+        },
+        "increment_latest/expensive_write": {
+          "behavior_expected_regret": 6.530727240934238,
+          "greedy_optimal": 0.3333333333333333,
+          "greedy_regret": 1.3333333333333333,
+          "n": 3,
+          "optimal_native_exploration_regret": 3.766666666666667,
+          "optimal_probability_mass": 0.35678718762355
+        }
+      },
+      "by_optimal_command": {
+        "checked_write": {
+          "behavior_expected_regret": 67.14832785165042,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 84.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 10.472222222222223,
+          "optimal_probability_mass": 0.17062649659471277
+        },
+        "finish": {
+          "behavior_expected_regret": 10.952133290743987,
+          "greedy_optimal": 0.16666666666666666,
+          "greedy_regret": 1.6666666666666667,
+          "n": 6,
+          "optimal_native_exploration_regret": 4.877777777777777,
+          "optimal_probability_mass": 0.20857271121574006
+        },
+        "increment": {
+          "behavior_expected_regret": 68.00175936894595,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 161.0,
+          "n": 1,
+          "optimal_native_exploration_regret": 10.200000000000001,
+          "optimal_probability_mass": 0.19837022049393752
+        },
+        "read": {
+          "behavior_expected_regret": 68.42235848877209,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.16666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 8.377777777777778,
+          "optimal_probability_mass": 0.1562348120686523
+        }
+      },
+      "distinct_histories": 11,
+      "episodes": 16,
+      "repeated_history_pairs": {
+        "greedy_corrections": 0,
+        "greedy_regressions": 0,
+        "mean_behavior_regret_reduction": -0.16753359867978546,
+        "mean_optimal_probability_mass_gain": 0.0005515483656967912,
+        "n": 2,
+        "update_spans": {
+          "6": 2
+        }
+      },
+      "unique_history_update_distributions": {
+        "behavior_expected_regret": 41.57127831805211,
+        "greedy_optimal": 0.07692307692307693,
+        "greedy_regret": 55.34615384615385,
+        "n": 13,
+        "optimal_native_exploration_regret": 7.385897435897437,
+        "optimal_probability_mass": 0.18695310875219026
+      }
+    },
+    "hybrid-20260925": {
+      "all_actor_visits": {
+        "behavior_expected_regret": 45.51421018224297,
+        "greedy_optimal": 0.20833333333333334,
+        "greedy_regret": 53.083333333333336,
+        "n": 24,
+        "optimal_native_exploration_regret": 11.25,
+        "optimal_probability_mass": 0.24388491656700825,
+        "sampled_optimal": 0.2916666666666667,
+        "sampled_regret": 52.375
+      },
+      "by_goal_cost": {
+        "approved_revision/cheap": {
+          "behavior_expected_regret": 86.61804349808428,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.5,
+          "n": 1,
+          "optimal_native_exploration_regret": 9.5,
+          "optimal_probability_mass": 0.03550108921156145
+        },
+        "approved_revision/expensive_read": {
+          "behavior_expected_regret": 47.99672909386918,
+          "greedy_optimal": 0.5,
+          "greedy_regret": 49.0,
+          "n": 2,
+          "optimal_native_exploration_regret": 11.025000000000002,
+          "optimal_probability_mass": 0.36607598681995956
+        },
+        "approved_revision/expensive_write": {
+          "behavior_expected_regret": 33.754449926831406,
+          "greedy_optimal": 0.5,
+          "greedy_regret": 1.0,
+          "n": 4,
+          "optimal_native_exploration_regret": 22.933333333333334,
+          "optimal_probability_mass": 0.2736184181809373
+        },
+        "increment_latest/cheap": {
+          "behavior_expected_regret": 49.64270648019812,
+          "greedy_optimal": 0.3333333333333333,
+          "greedy_regret": 98.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 7.927777777777778,
+          "optimal_probability_mass": 0.3528765393132643
+        },
+        "increment_latest/expensive_read": {
+          "behavior_expected_regret": 61.173154514239876,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 105.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 9.422222222222224,
+          "optimal_probability_mass": 0.20935157832114895
+        },
+        "increment_latest/expensive_write": {
+          "behavior_expected_regret": 6.614608760372724,
+          "greedy_optimal": 0.3333333333333333,
+          "greedy_regret": 1.3333333333333333,
+          "n": 3,
+          "optimal_native_exploration_regret": 3.766666666666667,
+          "optimal_probability_mass": 0.35489990674634436
+        }
+      },
+      "by_optimal_command": {
+        "cached_write": {
+          "behavior_expected_regret": 7.420578430242031,
+          "greedy_optimal": 1.0,
+          "greedy_regret": 0.0,
+          "n": 2,
+          "optimal_native_exploration_regret": 6.733333333333333,
+          "optimal_probability_mass": 0.6422656715760258
+        },
+        "checked_write": {
+          "behavior_expected_regret": 66.9968144915175,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 84.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 10.472222222222223,
+          "optimal_probability_mass": 0.172279458879273
+        },
+        "finish": {
+          "behavior_expected_regret": 22.12308942692054,
+          "greedy_optimal": 0.42857142857142855,
+          "greedy_regret": 1.1428571428571428,
+          "n": 7,
+          "optimal_native_exploration_regret": 14.719047619047618,
+          "optimal_probability_mass": 0.30845334185182605
+        },
+        "increment": {
+          "behavior_expected_regret": 69.38744101123402,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 161.0,
+          "n": 1,
+          "optimal_native_exploration_regret": 10.200000000000001,
+          "optimal_probability_mass": 0.19445397063340006
+        },
+        "read": {
+          "behavior_expected_regret": 76.61334777428868,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 131.5,
+          "n": 3,
+          "optimal_native_exploration_regret": 9.505555555555556,
+          "optimal_probability_mass": 0.15283790844381653
+        }
+      },
+      "distinct_histories": 13,
+      "episodes": 16,
+      "repeated_history_pairs": {
+        "greedy_corrections": 0,
+        "greedy_regressions": 0,
+        "mean_behavior_regret_reduction": 0.2820118992377516,
+        "mean_optimal_probability_mass_gain": 0.002795437588621883,
+        "n": 3,
+        "update_spans": {
+          "6": 3
+        }
+      },
+      "unique_history_update_distributions": {
+        "behavior_expected_regret": 41.87004441609878,
+        "greedy_optimal": 0.3125,
+        "greedy_regret": 51.09375,
+        "n": 16,
+        "optimal_native_exploration_regret": 11.664583333333335,
+        "optimal_probability_mass": 0.2883444255448439
+      }
+    },
+    "reward-20260924": {
+      "all_actor_visits": {
+        "behavior_expected_regret": 47.12716908080557,
+        "greedy_optimal": 0.047619047619047616,
+        "greedy_regret": 60.57142857142857,
+        "n": 21,
+        "optimal_native_exploration_regret": 8.25873015873016,
+        "optimal_probability_mass": 0.18189340091389344,
+        "sampled_optimal": 0.19047619047619047,
+        "sampled_regret": 57.523809523809526
+      },
+      "by_goal_cost": {
+        "approved_revision/cheap": {
+          "behavior_expected_regret": 86.60651692644431,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.5,
+          "n": 1,
+          "optimal_native_exploration_regret": 9.5,
+          "optimal_probability_mass": 0.03536961814598956
+        },
+        "approved_revision/expensive_read": {
+          "behavior_expected_regret": 87.10170663489163,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.0,
+          "n": 1,
+          "optimal_native_exploration_regret": 13.350000000000001,
+          "optimal_probability_mass": 0.08075861903588315
+        },
+        "approved_revision/expensive_write": {
+          "behavior_expected_regret": 15.264338472553499,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 2.0,
+          "n": 3,
+          "optimal_native_exploration_regret": 5.988888888888888,
+          "optimal_probability_mass": 0.05840416660017866
+        },
+        "increment_latest/cheap": {
+          "behavior_expected_regret": 59.212973976850336,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.0,
+          "n": 2,
+          "optimal_native_exploration_regret": 7.816666666666667,
+          "optimal_probability_mass": 0.2156357431062111
+        },
+        "increment_latest/expensive_read": {
+          "behavior_expected_regret": 61.2409740676819,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 105.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 9.422222222222224,
+          "optimal_probability_mass": 0.20801285460514896
+        },
+        "increment_latest/expensive_write": {
+          "behavior_expected_regret": 6.6128308256833845,
+          "greedy_optimal": 0.3333333333333333,
+          "greedy_regret": 1.3333333333333333,
+          "n": 3,
+          "optimal_native_exploration_regret": 3.766666666666667,
+          "optimal_probability_mass": 0.35521991036261497
+        }
+      },
+      "by_optimal_command": {
+        "checked_write": {
+          "behavior_expected_regret": 67.13948452378001,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 84.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 10.472222222222223,
+          "optimal_probability_mass": 0.17065438365940455
+        },
+        "finish": {
+          "behavior_expected_regret": 10.938584649118441,
+          "greedy_optimal": 0.16666666666666666,
+          "greedy_regret": 1.6666666666666667,
+          "n": 6,
+          "optimal_native_exploration_regret": 4.877777777777777,
+          "optimal_probability_mass": 0.20681203848139681
+        },
+        "increment": {
+          "behavior_expected_regret": 69.40617526659733,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 161.0,
+          "n": 1,
+          "optimal_native_exploration_regret": 10.200000000000001,
+          "optimal_probability_mass": 0.19283403187311643
+        },
+        "read": {
+          "behavior_expected_regret": 68.34415496004833,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.16666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 8.377777777777778,
+          "optimal_probability_mass": 0.15554703478613727
+        }
+      },
+      "distinct_histories": 11,
+      "episodes": 16,
+      "repeated_history_pairs": {
+        "greedy_corrections": 0,
+        "greedy_regressions": 0,
+        "mean_behavior_regret_reduction": 0.2213380550929891,
+        "mean_optimal_probability_mass_gain": 0.0034870984844348335,
+        "n": 2,
+        "update_spans": {
+          "6": 2
+        }
+      },
+      "unique_history_update_distributions": {
+        "behavior_expected_regret": 41.65296935483023,
+        "greedy_optimal": 0.07692307692307693,
+        "greedy_regret": 55.34615384615385,
+        "n": 13,
+        "optimal_native_exploration_regret": 7.385897435897437,
+        "optimal_probability_mass": 0.18556234754600945
+      }
+    },
+    "reward-20260925": {
+      "all_actor_visits": {
+        "behavior_expected_regret": 41.98518764133182,
+        "greedy_optimal": 0.19230769230769232,
+        "greedy_regret": 45.96153846153846,
+        "n": 26,
+        "optimal_native_exploration_regret": 10.247435897435897,
+        "optimal_probability_mass": 0.22955265780845713,
+        "sampled_optimal": 0.19230769230769232,
+        "sampled_regret": 37.01923076923077
+      },
+      "by_goal_cost": {
+        "approved_revision/cheap": {
+          "behavior_expected_regret": 86.73569292213251,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.5,
+          "n": 1,
+          "optimal_native_exploration_regret": 9.5,
+          "optimal_probability_mass": 0.035447057072467675
+        },
+        "approved_revision/expensive_read": {
+          "behavior_expected_regret": 87.28677438577579,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 98.0,
+          "n": 1,
+          "optimal_native_exploration_regret": 13.350000000000001,
+          "optimal_probability_mass": 0.07886270099907298
+        },
+        "approved_revision/expensive_write": {
+          "behavior_expected_regret": 33.75468782353954,
+          "greedy_optimal": 0.5,
+          "greedy_regret": 1.0,
+          "n": 4,
+          "optimal_native_exploration_regret": 22.933333333333334,
+          "optimal_probability_mass": 0.27373563088952885
+        },
+        "increment_latest/cheap": {
+          "behavior_expected_regret": 48.89064228392215,
+          "greedy_optimal": 0.3333333333333333,
+          "greedy_regret": 98.66666666666667,
+          "n": 3,
+          "optimal_native_exploration_regret": 7.927777777777778,
+          "optimal_probability_mass": 0.35570815639733305
+        },
+        "increment_latest/expensive_read": {
+          "behavior_expected_regret": 58.63385976455541,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 78.0,
+          "n": 3,
+          "optimal_native_exploration_regret": 9.033333333333335,
+          "optimal_probability_mass": 0.1797227438489506
+        },
+        "increment_latest/expensive_write": {
+          "behavior_expected_regret": 6.105987202063711,
+          "greedy_optimal": 0.3333333333333333,
+          "greedy_regret": 1.3333333333333333,
+          "n": 6,
+          "optimal_native_exploration_regret": 2.9333333333333336,
+          "optimal_probability_mass": 0.32034470744987226
+        }
+      },
+      "by_optimal_command": {
+        "cached_write": {
+          "behavior_expected_regret": 5.706903866524158,
+          "greedy_optimal": 1.0,
+          "greedy_regret": 0.0,
+          "n": 1,
+          "optimal_native_exploration_regret": 4.766666666666666,
+          "optimal_probability_mass": 0.6364061094133681
+        },
+        "checked_write": {
+          "behavior_expected_regret": 65.7970884198605,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 83.0,
+          "n": 4,
+          "optimal_native_exploration_regret": 10.1125,
+          "optimal_probability_mass": 0.1545077331364812
+        },
+        "finish": {
+          "behavior_expected_regret": 17.16546745065404,
+          "greedy_optimal": 0.4,
+          "greedy_regret": 1.2,
+          "n": 10,
+          "optimal_native_exploration_regret": 10.933333333333334,
+          "optimal_probability_mass": 0.3017010768257349
+        },
+        "read": {
+          "behavior_expected_regret": 75.9002386357916,
+          "greedy_optimal": 0.0,
+          "greedy_regret": 131.5,
+          "n": 3,
+          "optimal_native_exploration_regret": 9.505555555555556,
+          "optimal_probability_mass": 0.15538847228369956
+        }
+      },
+      "distinct_histories": 15,
+      "episodes": 16,
+      "repeated_history_pairs": {
+        "greedy_corrections": 0,
+        "greedy_regressions": 0,
+        "mean_behavior_regret_reduction": 0.4774493413042175,
+        "mean_optimal_probability_mass_gain": 0.005452502765286714,
+        "n": 3,
+        "update_spans": {
+          "6": 3
+        }
+      },
+      "unique_history_update_distributions": {
+        "behavior_expected_regret": 37.125035997771185,
+        "greedy_optimal": 0.2777777777777778,
+        "greedy_regret": 41.02777777777778,
+        "n": 18,
+        "optimal_native_exploration_regret": 10.170370370370371,
+        "optimal_probability_mass": 0.26320073483709666
+      }
+    }
+  },
+  "checkpoint_selection_changed": false,
+  "limits": "Visited training histories, not a population sample or new transfer. Regret assumes optimal later continuation, not the model continuation. Matched comparisons are visitation-selected and pre-update; not a causal learning curve.",
+  "maximum_probability_normalization_adjustment": 7.207652474860993e-08,
+  "new_executions": 0,
+  "new_model_calls": 0,
+  "optimizer_updates": 0,
+  "raw_reward_units": "Verified terminal completion is100; costs and regret use these abstract units.",
+  "status": "recorded_actor_oracle_diagnostic_complete",
+  "total_database_actor_visits": 92
+}
