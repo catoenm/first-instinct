@@ -1,5 +1,10 @@
 # Final-checkpoint evaluation: local qualification complete
 
+**Completed:** both GPU evaluations and their independent audit passed. See the
+[results](oracle-capacity-completion-v1-results.md): forecasts improved, task
+completion did not, and the original model remains selected. The H200 is deleted.
+The preparation and launch record below is retained for provenance.
+
 The evaluation-only package now binds the preserved reward step-28 and combined
 step-31 adapters, their matching critics, the original data freeze, and executable
 source hashes. It makes no optimizer updates and opens no reserved release scores.

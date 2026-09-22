@@ -36,10 +36,12 @@ diagnostic; it adds no new worlds, model calls or trained checkpoint.
 The [decision-capacity follow-up](docs/oracle-capacity-probe-v2-results.md) has now
 trained and audited 91 accepted updates. Direct supervision raised diagnostic
 decision accuracy from 41.2% to 55.3%, but database goal success stayed at 5/12.
-The reward arm improved forecast error at its measured checkpoint. Both reward
-and combined runs reached their time limits before final evaluation, so their
-final checkpoints remain unmeasured. No replacement was selected; all artifacts
-were recovered and the H200 deleted.
+The [completed final-checkpoint evaluations](docs/oracle-capacity-completion-v1-results.md)
+now close the earlier measurement gap. Reward learning reduced forecast Brier
+error from 0.6248 to 0.5904; the combined model reached 53.9% decision accuracy.
+Both still completed only 5/12 database goals and failed the joint improvement
+check. No replacement was selected; all artifacts were recovered and the H200
+deleted. Reversing menu order also exposes remaining decision sensitivity.
 
 **Next milestone: [a usable 9B release candidate](docs/release-candidate-v1-plan.md).**
 The release plan combines general decisions, broader tool-selection data and

@@ -1,5 +1,10 @@
 # Decision supervision learned the questions; task success barely moved
 
+**Follow-up:** the [final-checkpoint evaluation](oracle-capacity-completion-v1-results.md)
+has now measured both saved final adapters. Forecasts improved, task completion
+remained 5/12, and neither qualified a replacement. The report below preserves
+what was measured during the original training run.
+
 The corrected Qwen3.5-9B capacity pilot completed 91 accepted updates across three
 arms. None selected a replacement for the original supervised checkpoint. The
 supervised arm met its stopping rule; the two reinforcement-learning arms reached
