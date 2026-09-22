@@ -1,0 +1,294 @@
+{
+  "hardware": {
+    "capability": [
+      8,
+      9
+    ],
+    "name": "NVIDIA L40S",
+    "total_memory": 47665709056
+  },
+  "interpretation": "Our supervised adaptation worsens this exposed consequence-forecast cohort relative to unmodified Qwen. Laya is faster and better on ambiguity but worse overall. One mechanism does not establish general capability or calibration.",
+  "lineage": {
+    "data_freeze_sha256": "06914d15fd54344325815cc595461929d66b53723811db0c5c9d1f865cbfbfe2",
+    "forecast_freeze_sha256": "e202071a0accea8bfdeb1b5c2a26b1f18d8afce151abf277abd189d68601d4d0",
+    "laya_applied_temperature": 1.7601518630981445,
+    "laya_checkpoint": "convaiinnovations/laya-typed-decisions@f9ab0b228f0fc0f14d873dbc99038f135c2da1b2",
+    "laya_runtime_revision": "573e5b62696ba441230cd6be71d593331b5d23af",
+    "original_supervised_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+    "qwen_applied_temperature": 1.0,
+    "qwen_checkpoint": "Qwen/Qwen3.5-9B@c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "models": {
+    "laya_typed": {
+      "ambiguous_diagnostic": {
+        "mean_maximum_probability": 0.4221286676824093,
+        "questions": 40,
+        "zero_support_outcome_choices": 0
+      },
+      "gpu_allocated_bytes": 1693956608,
+      "gpu_peak_allocated_bytes": 2458109440,
+      "instrumented_cohort_seconds": 5.624181378632784,
+      "metrics": {
+        "all": {
+          "excess_brier": 0.6020583157613664,
+          "excess_log_loss": 1.0115462098497754,
+          "expected_brier": 0.6669933806964313,
+          "expected_choice_accuracy": 0.4090909090909091,
+          "irreducible_brier": 0.06493506493506493,
+          "log_loss": 1.1015653242082097,
+          "n": 308
+        },
+        "ambiguous": {
+          "excess_brier": 0.1309517882054432,
+          "excess_log_loss": 0.35266753953333607,
+          "expected_brier": 0.6309517882054432,
+          "expected_choice_accuracy": 0.5,
+          "irreducible_brier": 0.5,
+          "log_loss": 1.0458147200932815,
+          "n": 40
+        },
+        "deterministic": {
+          "excess_brier": 0.6723727228592654,
+          "excess_log_loss": 1.1098863098970049,
+          "expected_brier": 0.6723727228592654,
+          "expected_choice_accuracy": 0.39552238805970147,
+          "irreducible_brier": 0.0,
+          "log_loss": 1.1098863098970049,
+          "n": 268
+        }
+      },
+      "native_latency": [
+        {
+          "length_rank": "shortest",
+          "median_seconds": 0.013487640768289566,
+          "qwen_input_tokens": 484,
+          "seconds": [
+            0.013444127514958382,
+            0.013420991599559784,
+            0.01349618285894394,
+            0.013487640768289566,
+            0.013527680188417435
+          ]
+        },
+        {
+          "length_rank": "median",
+          "median_seconds": 0.013858292251825333,
+          "qwen_input_tokens": 611,
+          "seconds": [
+            0.013858292251825333,
+            0.013823401182889938,
+            0.013875307515263557,
+            0.013893967494368553,
+            0.013849830254912376
+          ]
+        },
+        {
+          "length_rank": "longest",
+          "median_seconds": 0.01356901042163372,
+          "qwen_input_tokens": 746,
+          "seconds": [
+            0.013665946200489998,
+            0.013640867546200752,
+            0.013563534244894981,
+            0.01356901042163372,
+            0.013522502034902573
+          ]
+        }
+      ],
+      "native_zero_probabilities": 0,
+      "qualification_max_probability_drift": 0.0
+    },
+    "qwen_foundation": {
+      "ambiguous_diagnostic": {
+        "mean_maximum_probability": 0.6340325482189655,
+        "questions": 40,
+        "zero_support_outcome_choices": 36
+      },
+      "gpu_allocated_bytes": 20874299392,
+      "gpu_peak_allocated_bytes": 21157708800,
+      "instrumented_cohort_seconds": 22.4197744037956,
+      "metrics": {
+        "all": {
+          "excess_brier": 0.47469022445972836,
+          "excess_log_loss": 0.8646094489195971,
+          "expected_brier": 0.5396252893947933,
+          "expected_choice_accuracy": 0.5714285714285714,
+          "irreducible_brier": 0.06493506493506493,
+          "log_loss": 0.9546285632780317,
+          "n": 308
+        },
+        "ambiguous": {
+          "excess_brier": 0.643486814383141,
+          "excess_log_loss": 1.3396810792053395,
+          "expected_brier": 1.1434868143831411,
+          "expected_choice_accuracy": 0.05,
+          "irreducible_brier": 0.5,
+          "log_loss": 2.0328282597652847,
+          "n": 40
+        },
+        "deterministic": {
+          "excess_brier": 0.44949670357563687,
+          "excess_log_loss": 0.7937032354441133,
+          "expected_brier": 0.44949670357563687,
+          "expected_choice_accuracy": 0.6492537313432836,
+          "irreducible_brier": 0.0,
+          "log_loss": 0.7937032354441133,
+          "n": 268
+        }
+      },
+      "native_latency": [
+        {
+          "length_rank": "shortest",
+          "median_seconds": 0.05935327149927616,
+          "qwen_input_tokens": 484,
+          "seconds": [
+            0.05913063883781433,
+            0.05935327149927616,
+            0.059264566749334335,
+            0.05937489494681358,
+            0.05999850295484066
+          ]
+        },
+        {
+          "length_rank": "median",
+          "median_seconds": 0.07129557617008686,
+          "qwen_input_tokens": 611,
+          "seconds": [
+            0.07129557617008686,
+            0.07051458023488522,
+            0.07156728021800518,
+            0.0706299003213644,
+            0.07182946428656578
+          ]
+        },
+        {
+          "length_rank": "longest",
+          "median_seconds": 0.08304165676236153,
+          "qwen_input_tokens": 746,
+          "seconds": [
+            0.08311298489570618,
+            0.08293609134852886,
+            0.08289226330816746,
+            0.08304165676236153,
+            0.08346457779407501
+          ]
+        }
+      ],
+      "native_zero_probabilities": 0,
+      "qualification_max_probability_drift": 0.0
+    },
+    "qwen_supervised": {
+      "ambiguous_diagnostic": {
+        "mean_maximum_probability": 0.7194155044853687,
+        "questions": 40,
+        "zero_support_outcome_choices": 40
+      },
+      "gpu_allocated_bytes": 21047412736,
+      "gpu_peak_allocated_bytes": 21194654208,
+      "instrumented_cohort_seconds": 28.638686748221517,
+      "metrics": {
+        "all": {
+          "excess_brier": 0.5753486144434107,
+          "excess_log_loss": 0.9947230008809497,
+          "expected_brier": 0.6402836793784756,
+          "expected_choice_accuracy": 0.5227272727272727,
+          "irreducible_brier": 0.06493506493506493,
+          "log_loss": 1.0847421152393841,
+          "n": 308
+        },
+        "ambiguous": {
+          "excess_brier": 0.8051249201167308,
+          "excess_log_loss": 1.397402379254673,
+          "expected_brier": 1.3051249201167308,
+          "expected_choice_accuracy": 0.0,
+          "irreducible_brier": 0.5,
+          "log_loss": 2.0905495598146184,
+          "n": 40
+        },
+        "deterministic": {
+          "excess_brier": 0.5410536434473928,
+          "excess_log_loss": 0.9346216011236775,
+          "expected_brier": 0.5410536434473928,
+          "expected_choice_accuracy": 0.6007462686567164,
+          "irreducible_brier": 0.0,
+          "log_loss": 0.9346216011236775,
+          "n": 268
+        }
+      },
+      "native_latency": [
+        {
+          "length_rank": "shortest",
+          "median_seconds": 0.07559436000883579,
+          "qwen_input_tokens": 484,
+          "seconds": [
+            0.07505249232053757,
+            0.07559436000883579,
+            0.07593612745404243,
+            0.07578380964696407,
+            0.07506828382611275
+          ]
+        },
+        {
+          "length_rank": "median",
+          "median_seconds": 0.0914414506405592,
+          "qwen_input_tokens": 611,
+          "seconds": [
+            0.09199364483356476,
+            0.09068450890481472,
+            0.09174620173871517,
+            0.0914414506405592,
+            0.09094884432852268
+          ]
+        },
+        {
+          "length_rank": "longest",
+          "median_seconds": 0.11049053445458412,
+          "qwen_input_tokens": 746,
+          "seconds": [
+            0.11003730818629265,
+            0.1108029130846262,
+            0.11049053445458412,
+            0.10998422093689442,
+            0.1105883102864027
+          ]
+        }
+      ],
+      "native_zero_probabilities": 0,
+      "qualification_max_probability_drift": 0.0
+    }
+  },
+  "packages": {
+    "numpy": "2.5.3",
+    "peft": "0.21.0",
+    "safetensors": "0.8.0",
+    "torch": "2.13.0+cu129",
+    "transformers": "5.17.0"
+  },
+  "recovery": {
+    "archive_bytes": 609140,
+    "archive_sha256": "8cd879d1b80e89df5184fd20afa85fe166aa6894b29162efe6029981d90276e0",
+    "estimated_compute_usd_excluding_storage": 0.19172113156318665,
+    "pod_deleted": true,
+    "verified_files": 42
+  },
+  "release_eligible": false,
+  "scope": {
+    "ambiguous_questions": 40,
+    "authored_roots": 1,
+    "deterministic_questions": 268,
+    "exposed_development_only": true,
+    "mechanisms": 1,
+    "new_executed_branches": 0,
+    "new_tasks": 0,
+    "optimizer_updates": 0,
+    "primary_predictions": 924,
+    "qualification_forward_calls": 18,
+    "reserved_scores_opened": 0,
+    "timing_forward_calls": 72,
+    "training_presentations": 0,
+    "underlying_world_goal_tasks": 4,
+    "unique_visible_forecast_questions": 308
+  },
+  "status": "verified_complete_recovered_baseline",
+  "worker_seconds": 110.39433908462524
+}
