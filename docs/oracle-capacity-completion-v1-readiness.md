@@ -27,7 +27,7 @@ completed pilot's runner.
 
 The cloud launcher and artifact collector now use this exact bundle. Billing
 was reconciled within the existing authorization before the allocation below.
-Actual CUDA evaluation remains pending; local qualification is not a performance
+Actual CUDA evaluation has now begun; local qualification is not a performance
 result. The original supervised release remains selected.
 
 ## Evaluation allocation — September 22, 2026
@@ -40,6 +40,8 @@ A single H200 was allocated at $4.59/hour for evaluation only, with a 90-minute
 provider shutdown deadline and a maximum $10 allocation from the remaining
 original project budget. The two fixed final checkpoints are reward update 28
 and the combined arm after 16 teacher updates plus 15 reward updates.
-Remote setup is in progress; GPU evaluation and improved performance are not
-yet established. No additional learning or release promotion is authorized
-by this evaluation package.
+Remote setup and all input checks passed. The first saved adapter loaded with
+the expected tensor identity and is evaluating the canonical question panel;
+the second checkpoint is queued. The independent remote shutdown guard and
+autonomous launcher are active. No complete quality result is available yet.
+This evaluation makes no additional learning updates or release promotion.
