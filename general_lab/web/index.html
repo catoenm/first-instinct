@@ -28,10 +28,22 @@
         <button id="tab-support" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="support"><span>02</span> Support</button>
         <button id="tab-access" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="access"><span>03</span> Access</button>
         <button id="tab-severity" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="severity"><span>04</span> Severity</button>
+        <button id="tab-custom" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="custom"><span>05</span> Your own</button>
       </div>
       <form id="demo">
         <div id="example-panel" role="tabpanel" aria-labelledby="tab-parcel">
           <div class="question-line"><h2 id="question">What should happen to this parcel?</h2><span id="question-type" class="type-label">Choose one</span></div>
+          <div id="custom-fields" hidden>
+            <div class="field-heading"><label for="custom-question">Your question</label><select id="custom-kind" aria-label="Answer format"><option value="choice">Choose one</option><option value="binary">Yes or no</option><option value="score">Ordered scale</option></select></div>
+            <input id="custom-question" type="text" value="What should I do next?" maxlength="2000">
+            <div id="custom-options-field">
+              <div class="field-heading"><label for="custom-options">Answers <span>/ one per line</span></label></div>
+              <textarea id="custom-options" rows="3" spellcheck="false" aria-describedby="custom-options-hint">Check the review status
+Publish the release
+Delete the release</textarea>
+              <p id="custom-options-hint" class="hint">Supply 2–36 answers. For a scale, list levels from lowest to highest.</p>
+            </div>
+          </div>
           <div class="field-heading"><label for="example">Context <span>/ editable</span></label><button id="reset" type="button" class="text-button" title="Restore this example">↺ Reset</button></div>
           <textarea id="example" rows="4" required spellcheck="false" aria-describedby="hint">Expedite a parcel if it is at least two days late. Otherwise, wait.
 

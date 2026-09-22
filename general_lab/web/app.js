@@ -35,6 +35,13 @@
                 { id: "1", label: "Medium", description: "Medium: some users are blocked, but a workaround exists" },
                 { id: "2", label: "High", description: "High: all users are blocked, with no workaround" }],
     },
+    custom: {
+      title: "Ask your own question", kind: "choice", typeLabel: "Choose one",
+      state: "Publish a release only after its build passes and a reviewer approves it.\n\nThe build passed. The review status is unknown.",
+      hint: "Edit the question, context, and answers. Supplied commands are scored; they are not executed.",
+      instructions: "What should I do next?",
+      options: ["Check the review status", "Publish the release", "Delete the release"].map((label, i) => ({ id: `option_${i + 1}`, label, description: label })),
+    },
   };
   const form = document.getElementById("demo");
   const input = document.getElementById("example");
@@ -47,9 +54,24 @@
   const connection = document.getElementById("connection");
   const probabilityNote = document.getElementById("probability-note");
   const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const customFields = document.getElementById("custom-fields");
+  const customQuestion = document.getElementById("custom-question");
+  const customKind = document.getElementById("custom-kind");
+  const customOptions = document.getElementById("custom-options");
+  const controls = [button, input, reset, customQuestion, customKind, customOptions, ...tabs];
   const drafts = new Map();
   let selected = "parcel";
   let busy = false;
+
+  function currentExample() {
+    if (selected !== "custom") return examples[selected];
+    const kind = customKind.value;
+    const options = kind === "binary" ? [{ id: "yes", label: "Yes" }, { id: "no", label: "No" }]
+      : customOptions.value.split(/\r?\n/).map(line => line.trim()).filter(Boolean).map((label, i) => ({
+        id: kind === "score" ? String(i) : `option_${i + 1}`, label, description: label,
+      }));
+    return { ...examples.custom, kind, instructions: customQuestion.value.trim(), options };
+  }
 
   function message(text, error = false) {
     status.textContent = text;
@@ -58,7 +80,7 @@
 
   function renderOptions(probabilities = null, choice = null) {
     result.replaceChildren();
-    for (const option of examples[selected].options) {
+    for (const option of currentExample().options) {
       const row = document.createElement("div");
       row.className = "answer";
       row.classList.toggle("selected", choice === option.id);
@@ -84,10 +106,11 @@
     drafts.set(selected, input.value);
     selected = key;
     const example = examples[key];
+    customFields.hidden = key !== "custom";
     input.value = drafts.get(key) ?? example.state;
     input.rows = key === "severity" ? 6 : 4;
     document.getElementById("question").textContent = example.title;
-    document.getElementById("question-type").textContent = example.typeLabel;
+    document.getElementById("question-type").textContent = key === "custom" ? customKind.selectedOptions[0].text : example.typeLabel;
     document.getElementById("hint").textContent = example.hint;
     document.getElementById("example-panel").setAttribute("aria-labelledby", `tab-${key}`);
     for (const tab of tabs) {
@@ -152,8 +175,20 @@
   }
 
   input.addEventListener("input", () => { renderOptions(); message(""); });
+  for (const control of [customQuestion, customKind, customOptions]) control.addEventListener("input", () => {
+    document.getElementById("custom-options-field").hidden = customKind.value === "binary";
+    if (selected === "custom") document.getElementById("question-type").textContent = customKind.selectedOptions[0].text;
+    renderOptions(); message("");
+  });
   reset.addEventListener("click", () => {
     input.value = examples[selected].state;
+    if (selected === "custom") {
+      customQuestion.value = examples.custom.instructions;
+      customKind.value = "choice";
+      customOptions.value = examples.custom.options.map(option => option.label).join("\n");
+      document.getElementById("custom-options-field").hidden = false;
+      document.getElementById("question-type").textContent = examples.custom.typeLabel;
+    }
     renderOptions();
     message("");
     input.focus();
@@ -164,12 +199,16 @@
     if (busy) return;
     const state = input.value.trim();
     if (!state) { message("Add some context first.", true); input.focus(); return; }
-    const example = examples[selected];
+    const example = currentExample();
+    if (!example.instructions) { message("Add your question first.", true); customQuestion.focus(); return; }
+    if (example.options.length < 2 || example.options.length > 36 || new Set(example.options.map(option => option.label)).size !== example.options.length) {
+      message("Supply 2–36 different answers, one per line.", true); customOptions.focus(); return;
+    }
     const question = { type: example.kind, instructions: example.instructions };
     if (example.kind === "choice") question.criteria = Object.fromEntries(example.options.map(option => [option.id, option.description]));
     if (example.kind === "score") question.criteria = example.options.map(option => option.description);
     busy = true;
-    for (const control of [button, input, reset, ...tabs]) control.disabled = true;
+    for (const control of controls) control.disabled = true;
     form.setAttribute("aria-busy", "true");
     runLabel.textContent = "Scoring…";
     renderOptions();
@@ -197,7 +236,7 @@
       message(error.message || "Could not run the example. Try again.", true);
     } finally {
       busy = false;
-      for (const control of [button, input, reset, ...tabs]) control.disabled = false;
+      for (const control of controls) control.disabled = false;
       form.setAttribute("aria-busy", "false");
       runLabel.textContent = "Run decision";
     }

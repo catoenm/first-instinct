@@ -1,7 +1,7 @@
 # General decision demo
 
 The local browser demo is a compact retro workbench with four example tabs:
-Parcel, Support, Access, and Severity. One editable context and a Run button
+Parcel, Support, Access, and Severity, plus a **Your own** editor. One editable context and a Run button
 remain visible at a time. The examples exercise choice, yes/no, and ordered
 severity questions against the actual trained language model.
 
@@ -44,7 +44,10 @@ local development demo, not a public hosting setup.
 2. Select **Run decision** to see the model's probabilities.
 3. Edit the context and run again. Try changing the parcel's delay, asking
    support about a password, changing Robin's role, or describing a milder incident.
-4. **Reset** restores the selected example. Switching tabs preserves edits;
+4. **Your own** accepts an editable question, context and answer definitions.
+   Choose a list of answers, a yes/no proposition, or an ordered scale. Commands
+   supplied as answers are scored; this page does not execute them.
+5. **Reset** restores the selected example. Switching tabs preserves edits;
    editing or switching clears the previous result. Arrow keys also move between tabs.
 
 The note below the explanation identifies the loaded model and its training

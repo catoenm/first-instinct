@@ -34,6 +34,13 @@ form { padding: 19px 20px 15px; }
 .text-button:hover:not(:disabled) { color: var(--accent); }
 textarea { display: block; width: 100%; min-height: 118px; resize: vertical; border: 1px solid #8c9082; border-radius: 0; padding: 11px 12px; background: #fffef7; color: var(--ink); box-shadow: inset 2px 2px 0 #292f2b0c; font: 12px/1.65 var(--mono); }
 textarea:focus { border-color: var(--accent); outline: 1px solid var(--accent); outline-offset: 2px; }
+#custom-fields { margin-bottom: 16px; }
+#custom-fields input, #custom-fields select { border: 1px solid #8c9082; border-radius: 0; background: #fffef7; color: var(--ink); padding: 7px 9px; font: 12px/1.5 var(--mono); }
+#custom-question { width: 100%; margin-bottom: 12px; }
+#custom-options { min-height: 82px; }
+#custom-fields input:focus, #custom-fields select:focus { outline: 1px solid var(--accent); outline-offset: 2px; }
+.answer-label { overflow-wrap: anywhere; }
+.answer-label::before { flex-shrink: 0; }
 .hint { margin: 7px 0 14px; color: var(--muted); font-size: 11px; }
 .run-line { display: flex; align-items: center; gap: 14px; min-height: 38px; margin-bottom: 19px; }
 .run-button { display: flex; justify-content: space-between; align-items: center; gap: 22px; min-height: 37px; border: 1px solid var(--ink); padding: 8px 12px; background: var(--accent); color: #fffaf0; box-shadow: 2px 2px 0 var(--ink); font: 11px var(--mono); font-weight: 700; white-space: nowrap; }

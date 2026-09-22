@@ -17,6 +17,7 @@ and their original results remain at their existing paths.
 
 | Question | Read |
 | --- | --- |
+| How are we training toward the working demo? | [Broader generalist continuation](generalist-training-v1.md), using the existing release corpus |
 | What is the longer supervised experiment testing? | [Paired-capacity run](paired-capacity-v1-launch.md) and [protocol](paired-capacity-v1-protocol.md) |
 | What data is admitted, and what has only been prepared? | [Paired-data readiness](paired-training-v1-readiness.md) and [curriculum census](paired-curriculum-v1-results.md) |
 | Did the previous learning runs improve decisions? | [Capacity comparison](oracle-capacity-probe-v2-results.md) and [final checkpoint evaluations](oracle-capacity-completion-v1-results.md) |
