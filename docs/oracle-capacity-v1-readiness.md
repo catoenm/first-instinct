@@ -1,5 +1,9 @@
 # Decision-learning capacity pilot
 
+Status: the first allocation stopped during preflight with zero updates. A
+diagnostic selected a zero-advantage action and incorrectly demanded a nonzero
+gradient. See the [audited result](oracle-capacity-v1-preflight-results.md).
+
 The previous eight-update comparison did not improve decision return. An exact
 oracle over its recorded database executions then found suboptimal greedy choices
 in all six initial goal/cost contexts. That diagnoses a concrete weakness without
