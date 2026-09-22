@@ -33,6 +33,13 @@ The subsequent [execution-derived decision oracle](docs/revisioned-oracle-v1-res
 finds suboptimal recorded first choices in all six database starting situations.
 It supplies exact action and continuation targets for a fixed learnability
 diagnostic; it adds no new worlds, model calls or trained checkpoint.
+The [decision-capacity follow-up](docs/oracle-capacity-probe-v2-results.md) has now
+trained and audited 91 accepted updates. Direct supervision raised diagnostic
+decision accuracy from 41.2% to 55.3%, but database goal success stayed at 5/12.
+The reward arm improved forecast error at its measured checkpoint. Both reward
+and combined runs reached their time limits before final evaluation, so their
+final checkpoints remain unmeasured. No replacement was selected; all artifacts
+were recovered and the H200 deleted.
 
 **Next milestone: [a usable 9B release candidate](docs/release-candidate-v1-plan.md).**
 The release plan combines general decisions, broader tool-selection data and

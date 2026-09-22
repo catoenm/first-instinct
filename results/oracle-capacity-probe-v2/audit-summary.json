@@ -1,0 +1,749 @@
+{
+  "archive_sha256": "11d9f47e7874b8757fb17d39a4684146437ed0297e96c218f14a09db859e3c63",
+  "arms": {
+    "oracle": {
+      "accepted_updates": 32,
+      "actual_learning": {
+        "accepted_transactions": 32,
+        "attempted_updates_without_closure": [],
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 640,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 12,
+            "unique_question_ids": 628
+          },
+          "replay": {
+            "completed_backward_presentations": 1024,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 1024,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 117,
+            "unique_question_ids": 907
+          },
+          "teacher": {
+            "completed_backward_presentations": 384,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 384,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 132,
+            "unique_question_ids": 252
+          }
+        },
+        "diagnostic_backwards": {},
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "on_policy_checks": {
+          "maximum_absolute_probability_delta": null,
+          "transitions": 0,
+          "updates": 0
+        },
+        "physical_optimizer_attempts": 32,
+        "rejected_transactions": 0,
+        "started_but_unconfirmed_backward_presentations": 0,
+        "started_but_unconfirmed_diagnostic_presentations": 0
+      },
+      "checkpoints": {
+        "best": {
+          "associated_update": 0,
+          "changed_elements": 0,
+          "changed_tensors": 0,
+          "complete_evaluation_exists": true,
+          "file_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+          "l2_delta": 0.0,
+          "max_absolute_delta": 0.0,
+          "tensor_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "trainable_elements": 43278336
+        },
+        "latest": {
+          "associated_update": 32,
+          "changed_elements": 43277931,
+          "changed_tensors": 496,
+          "complete_evaluation_exists": true,
+          "file_sha256": "9beb9bd4e5585bad2a0fa222e5150eaa2e796699dbbd88a1e735e8e32c7c8e71",
+          "l2_delta": 0.08583230752806136,
+          "max_absolute_delta": 2.650392707437277e-05,
+          "tensor_sha256": "7332e09b33f9c883355ce9df6a5c41c0c5a931837026c0d77c614053a3df83cc",
+          "trainable_elements": 43278336
+        }
+      },
+      "executions": {
+        "evaluation": {
+          "collected_actor_transitions": 51,
+          "completed_episodes": 36,
+          "interrupted_episodes": 0,
+          "pending_episodes": 0,
+          "started_episodes": 36,
+          "unique_actor_token_inputs": 13,
+          "unique_world_goal_cost_cells": 12,
+          "unique_world_goal_tasks": 4
+        },
+        "training": {
+          "collected_actor_transitions": 0,
+          "completed_episodes": 0,
+          "interrupted_episodes": 0,
+          "pending_episodes": 0,
+          "started_episodes": 0,
+          "unique_actor_token_inputs": 0,
+          "unique_world_goal_cost_cells": 0,
+          "unique_world_goal_tasks": 0
+        }
+      },
+      "final_accepted_weights_evaluated": true,
+      "gates": {
+        "16": {
+          "capacity_improvement": false,
+          "changes": {
+            "database_return": 0.0049999999999999906,
+            "general_accuracy": -0.0015923566878980333,
+            "general_log_loss": -0.0003469744430053545,
+            "oracle_brier": 0.001207540829907594,
+            "report_brier": -0.005596141527425491,
+            "report_return": 0.0
+          },
+          "release_eligible": false,
+          "safe": true
+        },
+        "32": {
+          "capacity_improvement": false,
+          "changes": {
+            "database_return": 0.006666666666666668,
+            "general_accuracy": -0.0015923566878980333,
+            "general_log_loss": -0.0002030526340039418,
+            "oracle_brier": -0.0014055992692998398,
+            "report_brier": -0.007747923481098762,
+            "report_return": 0.0
+          },
+          "release_eligible": false,
+          "safe": true
+        }
+      },
+      "last_complete_evaluation_update": 32,
+      "measurements": {
+        "baseline": {
+          "database": {
+            "episodes": 12,
+            "return": 0.06333333333333334,
+            "success_rate": 0.4166666666666667
+          },
+          "general_accuracy": 0.8683651804670913,
+          "general_log_loss": 0.35198480399471954,
+          "panel": {
+            "canonical": {
+              "action_accuracy": 0.41196689113355783,
+              "action_expected_regret": 45.42687731699672,
+              "action_log_loss": 1.7739883477500415,
+              "action_regret": 49.52351641414142,
+              "forecast_brier": 0.624810580902221,
+              "forecast_log_loss": 1.0374061962098948,
+              "inspection_accuracy": 0.6758908529741863,
+              "inspection_log_loss": 0.5744927995227133,
+              "questions": 2064
+            },
+            "reversed": {
+              "action_accuracy": 0.40046296296296297,
+              "action_expected_regret": 50.958925533159665,
+              "action_log_loss": 1.7282191944601546,
+              "action_regret": 54.25924172278339,
+              "forecast_brier": 0.58974281673778,
+              "forecast_log_loss": 1.017519795081964,
+              "inspection_accuracy": 0.5044191919191919,
+              "inspection_log_loss": 0.756798629014841,
+              "questions": 2064
+            }
+          },
+          "report_forecast": {
+            "excess_brier": 0.3548566854038506,
+            "excess_log_loss": 0.6288470033360459,
+            "expected_brier": 0.41979175033891564,
+            "expected_choice_accuracy": 0.6883116883116883,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.7188661176944804
+          },
+          "report_return": -0.03444444444444447
+        },
+        "update-16": {
+          "database": {
+            "episodes": 12,
+            "return": 0.06833333333333333,
+            "success_rate": 0.4166666666666667
+          },
+          "general_accuracy": 0.8667728237791933,
+          "general_log_loss": 0.3516378295517142,
+          "panel": {
+            "canonical": {
+              "action_accuracy": 0.5155723905723906,
+              "action_expected_regret": 40.90035112766818,
+              "action_log_loss": 1.403227312073614,
+              "action_regret": 43.757908950617285,
+              "forecast_brier": 0.6260181217321286,
+              "forecast_log_loss": 1.0357826362819778,
+              "inspection_accuracy": 0.8114127384960718,
+              "inspection_log_loss": 0.48497668843116654,
+              "questions": 2064
+            },
+            "reversed": {
+              "action_accuracy": 0.4588594276094276,
+              "action_expected_regret": 45.63696629398196,
+              "action_log_loss": 1.4108145574439872,
+              "action_regret": 49.87519290123456,
+              "forecast_brier": 0.5964558455894874,
+              "forecast_log_loss": 1.02586785975103,
+              "inspection_accuracy": 0.5611672278338945,
+              "inspection_log_loss": 0.6856764257437856,
+              "questions": 2064
+            }
+          },
+          "report_forecast": {
+            "excess_brier": 0.3492605438764252,
+            "excess_log_loss": 0.6198567423652025,
+            "expected_brier": 0.41419560881149015,
+            "expected_choice_accuracy": 0.6948051948051948,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.709875856723637
+          },
+          "report_return": -0.03444444444444447
+        },
+        "update-32": {
+          "database": {
+            "episodes": 12,
+            "return": 0.07,
+            "success_rate": 0.4166666666666667
+          },
+          "general_accuracy": 0.8667728237791933,
+          "general_log_loss": 0.3517817513607156,
+          "panel": {
+            "canonical": {
+              "action_accuracy": 0.5533459595959596,
+              "action_expected_regret": 37.59179152335941,
+              "action_log_loss": 1.1899151881363983,
+              "action_regret": 39.350080667789,
+              "forecast_brier": 0.6234049816329211,
+              "forecast_log_loss": 1.028738120967319,
+              "inspection_accuracy": 0.8664772727272728,
+              "inspection_log_loss": 0.40749189179942097,
+              "questions": 2064
+            },
+            "reversed": {
+              "action_accuracy": 0.494388327721661,
+              "action_expected_regret": 40.69836402975016,
+              "action_log_loss": 1.2044110310966114,
+              "action_regret": 42.00475238496072,
+              "forecast_brier": 0.6003604506307477,
+              "forecast_log_loss": 1.0315157213283601,
+              "inspection_accuracy": 0.6726290684624018,
+              "inspection_log_loss": 0.6167448427362245,
+              "questions": 2064
+            }
+          },
+          "report_forecast": {
+            "excess_brier": 0.347108761922752,
+            "excess_log_loss": 0.6153624541400696,
+            "expected_brier": 0.4120438268578169,
+            "expected_choice_accuracy": 0.6948051948051948,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.7053815684985041
+          },
+          "report_return": -0.03444444444444447
+        }
+      },
+      "partial": false,
+      "reward_updates": 0,
+      "run_status": "complete",
+      "selected_update": 0,
+      "stop_reason": "two_checks_without_capacity_improvement",
+      "teacher_updates": 32
+    },
+    "reward": {
+      "accepted_updates": 28,
+      "actual_learning": {
+        "accepted_transactions": 28,
+        "attempted_updates_without_closure": [],
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 560,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 560,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 6,
+            "unique_question_ids": 554
+          },
+          "policy": {
+            "completed_backward_presentations": 512,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 512,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 467,
+            "unique_question_ids": 45
+          },
+          "replay": {
+            "completed_backward_presentations": 896,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 896,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 88,
+            "unique_question_ids": 808
+          }
+        },
+        "diagnostic_backwards": {},
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "on_policy_checks": {
+          "maximum_absolute_probability_delta": 0.0,
+          "transitions": 512,
+          "updates": 28
+        },
+        "physical_optimizer_attempts": 28,
+        "rejected_transactions": 0,
+        "started_but_unconfirmed_backward_presentations": 0,
+        "started_but_unconfirmed_diagnostic_presentations": 0
+      },
+      "checkpoints": {
+        "best": {
+          "associated_update": 0,
+          "changed_elements": 0,
+          "changed_tensors": 0,
+          "complete_evaluation_exists": true,
+          "file_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+          "l2_delta": 0.0,
+          "max_absolute_delta": 0.0,
+          "tensor_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "trainable_elements": 43278336
+        },
+        "interrupted": {
+          "associated_update": 28,
+          "changed_elements": 43277447,
+          "changed_tensors": 496,
+          "complete_evaluation_exists": false,
+          "file_sha256": "0305d0197e5079dabff0f64ef5dae4a66fbbfd630ce8cd08aa0fe9e5a5117579",
+          "l2_delta": 0.04623263032778748,
+          "max_absolute_delta": 2.1993182599544525e-05,
+          "tensor_sha256": "3228e4de288c878169cd55d79aef867e6c86ffabe0a21e14fdc6a483670896a3",
+          "trainable_elements": 43278336
+        },
+        "latest": {
+          "associated_update": 16,
+          "changed_elements": 43277098,
+          "changed_tensors": 496,
+          "complete_evaluation_exists": true,
+          "file_sha256": "a1c7264ef02567d19bcb390b15df2320475cd4026e091ebb0ace8e0b5717fb91",
+          "l2_delta": 0.030027738490151182,
+          "max_absolute_delta": 1.2843869626522064e-05,
+          "tensor_sha256": "9d1280a5834219a084c5c5c8d14aa2c16a23c7064a591cd3cf598bdb3c47d4b3",
+          "trainable_elements": 43278336
+        }
+      },
+      "executions": {
+        "evaluation": {
+          "collected_actor_transitions": 40,
+          "completed_episodes": 24,
+          "interrupted_episodes": 0,
+          "pending_episodes": 0,
+          "started_episodes": 24,
+          "unique_actor_token_inputs": 15,
+          "unique_world_goal_cost_cells": 12,
+          "unique_world_goal_tasks": 4
+        },
+        "training": {
+          "collected_actor_transitions": 512,
+          "completed_episodes": 336,
+          "interrupted_episodes": 0,
+          "pending_episodes": 0,
+          "started_episodes": 336,
+          "unique_actor_token_inputs": 45,
+          "unique_world_goal_cost_cells": 12,
+          "unique_world_goal_tasks": 4
+        }
+      },
+      "final_accepted_weights_evaluated": false,
+      "gates": {
+        "16": {
+          "capacity_improvement": false,
+          "changes": {
+            "database_return": -0.0050000000000000044,
+            "general_accuracy": 0.0015923566878981443,
+            "general_log_loss": -0.00014857615391172807,
+            "oracle_brier": -0.02359561825881218,
+            "report_brier": -0.00826191436114787,
+            "report_return": 0.0
+          },
+          "release_eligible": false,
+          "safe": true
+        }
+      },
+      "last_complete_evaluation_update": 16,
+      "measurements": {
+        "baseline": {
+          "database": {
+            "episodes": 12,
+            "return": 0.06333333333333334,
+            "success_rate": 0.4166666666666667
+          },
+          "general_accuracy": 0.8683651804670913,
+          "general_log_loss": 0.35198480399471954,
+          "panel": {
+            "canonical": {
+              "action_accuracy": 0.41196689113355783,
+              "action_expected_regret": 45.42687731699672,
+              "action_log_loss": 1.7739883477500415,
+              "action_regret": 49.52351641414142,
+              "forecast_brier": 0.624810580902221,
+              "forecast_log_loss": 1.0374061962098948,
+              "inspection_accuracy": 0.6758908529741863,
+              "inspection_log_loss": 0.5744927995227133,
+              "questions": 2064
+            },
+            "reversed": {
+              "action_accuracy": 0.40046296296296297,
+              "action_expected_regret": 50.958925533159665,
+              "action_log_loss": 1.7282191944601546,
+              "action_regret": 54.25924172278339,
+              "forecast_brier": 0.58974281673778,
+              "forecast_log_loss": 1.017519795081964,
+              "inspection_accuracy": 0.5044191919191919,
+              "inspection_log_loss": 0.756798629014841,
+              "questions": 2064
+            }
+          },
+          "report_forecast": {
+            "excess_brier": 0.3548566854038506,
+            "excess_log_loss": 0.6288470033360459,
+            "expected_brier": 0.41979175033891564,
+            "expected_choice_accuracy": 0.6883116883116883,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.7188661176944804
+          },
+          "report_return": -0.03444444444444447
+        },
+        "update-16": {
+          "database": {
+            "episodes": 12,
+            "return": 0.058333333333333334,
+            "success_rate": 0.4166666666666667
+          },
+          "general_accuracy": 0.8699575371549895,
+          "general_log_loss": 0.3518362278408078,
+          "panel": {
+            "canonical": {
+              "action_accuracy": 0.40225168350168355,
+              "action_expected_regret": 43.86113116817962,
+              "action_log_loss": 1.7589300410549569,
+              "action_regret": 48.71340137485971,
+              "forecast_brier": 0.6012149626434088,
+              "forecast_log_loss": 0.9997991657568099,
+              "inspection_accuracy": 0.6517255892255892,
+              "inspection_log_loss": 0.5825748306254099,
+              "questions": 2064
+            },
+            "reversed": {
+              "action_accuracy": 0.3831719977553311,
+              "action_expected_regret": 49.610561666892075,
+              "action_log_loss": 1.7099116654400592,
+              "action_regret": 54.29382365319865,
+              "forecast_brier": 0.5802319987160988,
+              "forecast_log_loss": 1.0028383939665957,
+              "inspection_accuracy": 0.5028759820426487,
+              "inspection_log_loss": 0.7602768600278065,
+              "questions": 2064
+            }
+          },
+          "report_forecast": {
+            "excess_brier": 0.34659477104270286,
+            "excess_log_loss": 0.6268706217461414,
+            "expected_brier": 0.41152983597776777,
+            "expected_choice_accuracy": 0.698051948051948,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.7168897361045757
+          },
+          "report_return": -0.03444444444444447
+        }
+      },
+      "partial": true,
+      "reward_updates": 28,
+      "run_status": "bounded_stop",
+      "selected_update": 0,
+      "stop_reason": "DeadlineReached",
+      "teacher_updates": 0
+    },
+    "warm_reward": {
+      "accepted_updates": 31,
+      "actual_learning": {
+        "accepted_transactions": 31,
+        "attempted_updates_without_closure": [],
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 620,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 620,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 12,
+            "unique_question_ids": 608
+          },
+          "policy": {
+            "completed_backward_presentations": 272,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 272,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 227,
+            "unique_question_ids": 45
+          },
+          "replay": {
+            "completed_backward_presentations": 992,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 992,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 109,
+            "unique_question_ids": 883
+          },
+          "teacher": {
+            "completed_backward_presentations": 192,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 192,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 36,
+            "unique_question_ids": 156
+          }
+        },
+        "diagnostic_backwards": {},
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "on_policy_checks": {
+          "maximum_absolute_probability_delta": 0.0,
+          "transitions": 272,
+          "updates": 15
+        },
+        "physical_optimizer_attempts": 31,
+        "rejected_transactions": 0,
+        "started_but_unconfirmed_backward_presentations": 0,
+        "started_but_unconfirmed_diagnostic_presentations": 0
+      },
+      "checkpoints": {
+        "best": {
+          "associated_update": 0,
+          "changed_elements": 0,
+          "changed_tensors": 0,
+          "complete_evaluation_exists": true,
+          "file_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+          "l2_delta": 0.0,
+          "max_absolute_delta": 0.0,
+          "tensor_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+          "trainable_elements": 43278336
+        },
+        "interrupted": {
+          "associated_update": 31,
+          "changed_elements": 43277780,
+          "changed_tensors": 496,
+          "complete_evaluation_exists": false,
+          "file_sha256": "fa05a4a636f0f1265a27dd8b591d46d81a87df228764cbb2cd420401bb8eb97a",
+          "l2_delta": 0.06893754226185964,
+          "max_absolute_delta": 2.5220680981874466e-05,
+          "tensor_sha256": "2196e2dc73336fe5a44f2c49e61a43e81d34700505acadfc603fff58b43a8a86",
+          "trainable_elements": 43278336
+        },
+        "latest": {
+          "associated_update": 16,
+          "changed_elements": 43277700,
+          "changed_tensors": 496,
+          "complete_evaluation_exists": true,
+          "file_sha256": "129902fa9662a9eb3c4a5365cfee2ddfa53944560c1eb1194fcaf98f17c7a550",
+          "l2_delta": 0.04657219007531752,
+          "max_absolute_delta": 1.308368518948555e-05,
+          "tensor_sha256": "f5a50453cf8b704ecc80724dd97ad3ad42e941a0a30d6bb1283709e565c70207",
+          "trainable_elements": 43278336
+        }
+      },
+      "executions": {
+        "evaluation": {
+          "collected_actor_transitions": 35,
+          "completed_episodes": 24,
+          "interrupted_episodes": 0,
+          "pending_episodes": 0,
+          "started_episodes": 24,
+          "unique_actor_token_inputs": 13,
+          "unique_world_goal_cost_cells": 12,
+          "unique_world_goal_tasks": 4
+        },
+        "training": {
+          "collected_actor_transitions": 272,
+          "completed_episodes": 180,
+          "interrupted_episodes": 0,
+          "pending_episodes": 0,
+          "started_episodes": 180,
+          "unique_actor_token_inputs": 45,
+          "unique_world_goal_cost_cells": 12,
+          "unique_world_goal_tasks": 4
+        }
+      },
+      "final_accepted_weights_evaluated": false,
+      "gates": {
+        "16": {
+          "capacity_improvement": false,
+          "changes": {
+            "database_return": 0.0049999999999999906,
+            "general_accuracy": -0.0015923566878980333,
+            "general_log_loss": 0.00025417932840327007,
+            "oracle_brier": 0.00045175699325217256,
+            "report_brier": -0.006197003087703656,
+            "report_return": 0.0
+          },
+          "release_eligible": false,
+          "safe": true
+        }
+      },
+      "last_complete_evaluation_update": 16,
+      "measurements": {
+        "baseline": {
+          "database": {
+            "episodes": 12,
+            "return": 0.06333333333333334,
+            "success_rate": 0.4166666666666667
+          },
+          "general_accuracy": 0.8683651804670913,
+          "general_log_loss": 0.35198480399471954,
+          "panel": {
+            "canonical": {
+              "action_accuracy": 0.41196689113355783,
+              "action_expected_regret": 45.42687731699672,
+              "action_log_loss": 1.7739883477500415,
+              "action_regret": 49.52351641414142,
+              "forecast_brier": 0.624810580902221,
+              "forecast_log_loss": 1.0374061962098948,
+              "inspection_accuracy": 0.6758908529741863,
+              "inspection_log_loss": 0.5744927995227133,
+              "questions": 2064
+            },
+            "reversed": {
+              "action_accuracy": 0.40046296296296297,
+              "action_expected_regret": 50.958925533159665,
+              "action_log_loss": 1.7282191944601546,
+              "action_regret": 54.25924172278339,
+              "forecast_brier": 0.58974281673778,
+              "forecast_log_loss": 1.017519795081964,
+              "inspection_accuracy": 0.5044191919191919,
+              "inspection_log_loss": 0.756798629014841,
+              "questions": 2064
+            }
+          },
+          "report_forecast": {
+            "excess_brier": 0.3548566854038506,
+            "excess_log_loss": 0.6288470033360459,
+            "expected_brier": 0.41979175033891564,
+            "expected_choice_accuracy": 0.6883116883116883,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.7188661176944804
+          },
+          "report_return": -0.03444444444444447
+        },
+        "update-16": {
+          "database": {
+            "episodes": 12,
+            "return": 0.06833333333333333,
+            "success_rate": 0.4166666666666667
+          },
+          "general_accuracy": 0.8667728237791933,
+          "general_log_loss": 0.3522389833231228,
+          "panel": {
+            "canonical": {
+              "action_accuracy": 0.5117845117845118,
+              "action_expected_regret": 40.97099875535106,
+              "action_log_loss": 1.4098875440351526,
+              "action_regret": 43.76548470819304,
+              "forecast_brier": 0.6252623378954731,
+              "forecast_log_loss": 1.0341443591342818,
+              "inspection_accuracy": 0.8121141975308642,
+              "inspection_log_loss": 0.48483520109300243,
+              "questions": 2064
+            },
+            "reversed": {
+              "action_accuracy": 0.4588594276094276,
+              "action_expected_regret": 45.525142602508986,
+              "action_log_loss": 1.4055980327428994,
+              "action_regret": 49.87519290123456,
+              "forecast_brier": 0.5960514523009783,
+              "forecast_log_loss": 1.0250447482746796,
+              "inspection_accuracy": 0.5649551066217733,
+              "inspection_log_loss": 0.6865121028449995,
+              "questions": 2064
+            }
+          },
+          "report_forecast": {
+            "excess_brier": 0.348659682316147,
+            "excess_log_loss": 0.6199334663948318,
+            "expected_brier": 0.413594747251212,
+            "expected_choice_accuracy": 0.6948051948051948,
+            "irreducible_brier": 0.06493506493506493,
+            "log_loss": 0.7099525807532663
+          },
+          "report_return": -0.03444444444444447
+        }
+      },
+      "partial": true,
+      "reward_updates": 15,
+      "run_status": "bounded_stop",
+      "selected_update": 0,
+      "stop_reason": "DeadlineReached",
+      "teacher_updates": 16
+    }
+  },
+  "auditor_sha256": "3125ab4b7769c54f1e1f3f9e60aa06aac813092bfa8ea985c1f05ed7c64bbe17",
+  "combined_consumption": {
+    "accepted_updates": 91,
+    "components": {
+      "outcome": {
+        "presentations": 1820,
+        "repeats": 1192,
+        "unique_ids": 628
+      },
+      "policy": {
+        "presentations": 784,
+        "repeats": 727,
+        "unique_ids": 57
+      },
+      "replay": {
+        "presentations": 2912,
+        "repeats": 2005,
+        "unique_ids": 907
+      },
+      "teacher": {
+        "presentations": 576,
+        "repeats": 324,
+        "unique_ids": 252
+      }
+    },
+    "note": "Presentations across separate arms are repetitions, not extra independent tasks. Qualification/evaluation excluded.",
+    "training_episodes": 516,
+    "training_transitions": 784,
+    "unique_actor_inputs": 57,
+    "unique_world_goal_cost_cells": 12,
+    "unique_world_goal_tasks": 4
+  },
+  "correction_freeze_sha256": "49c89193d4110050b15b36bd85bb74d88fb13e0cf4f6e1848f764d53084a4dee",
+  "data_freeze_sha256": "6a24d2964c19fd112020a801d3b7f6cc27ffd48e16729b18289ec5a52780b01a",
+  "new_model_calls": 0,
+  "new_tool_executions": 0,
+  "original_adapter_tensors": 496,
+  "original_trainable_elements": 43278336,
+  "pipeline_status": "complete_with_bounded_arms",
+  "prepared": {
+    "actual_training_presentations": 0,
+    "admission_scanned_presentations": 842299,
+    "existing_database_world_goal_tasks": 4,
+    "forecast_pool": 7202,
+    "maximum_forecasts_per_arm": 1280,
+    "maximum_live_training_episodes_reward_arm": 768,
+    "maximum_replay_presentations_per_arm": 2048,
+    "maximum_teacher_presentations_oracle_arm": 768,
+    "model_calls": 0,
+    "new_mechanisms": 0,
+    "old_forecast_groups": 7,
+    "oracle_forecasts": 1548,
+    "panel_canonical": 2064,
+    "panel_reversed": 2064,
+    "replay_pool": 4096,
+    "reserved_scores_opened": 0,
+    "teacher_questions": 516
+  },
+  "release_eligible": false,
+  "reserved_scores_opened": 0,
+  "scope": "Recovered executed rewards, consumed schedules, complete evaluations, stopping and saved language-adapter arrays. No optimizer replay, independent model rescore, foundation inference or reserved scores. Timeouts remain partial.",
+  "status": "passed_recovered_capacity_audit"
+}
