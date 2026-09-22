@@ -10,7 +10,7 @@ bundle. Four additional corruption controls rejected a changed manifest, swapped
 final adapters, a changed critic, and a truncated retention cohort. The bundle
 contains 355 hashed input/source files and is 337,385,624 bytes. Qualification used
 no model inference or new environment executions; guarded memory stayed below
-253 MB and added no swap. No hardware was allocated.
+253 MB and added no swap. No hardware was allocated during local qualification.
 
 Input manifest:
 `83d6e9dabdb1e178a2a88aeacd135923e037103ebf477499dd8420fb58bfb735`.
@@ -25,7 +25,21 @@ every cohort and unchanged weights. A separate
 cutoff leaves time for final evaluation and recovery; it does not modify the
 completed pilot's runner.
 
-Before execution, the remaining work is a bounded cloud launcher and artifact
-collector using this exact bundle, fresh billing reconciliation within the
-existing authorization, and actual CUDA execution. Local qualification is not
-a performance result. The original supervised release remains selected.
+The cloud launcher and artifact collector now use this exact bundle. Billing
+was reconciled within the existing authorization before the allocation below.
+Actual CUDA evaluation remains pending; local qualification is not a performance
+result. The original supervised release remains selected.
+
+## Evaluation allocation — September 22, 2026
+
+The exact cloud entry and its failure-archive path have now passed local
+qualification. The entry also verifies that all 36 report cases use the existing
+catalog executor, so this cohort requires no external application worker.
+
+A single H200 was allocated at $4.59/hour for evaluation only, with a 90-minute
+provider shutdown deadline and a maximum $10 allocation from the remaining
+original project budget. The two fixed final checkpoints are reward update 28
+and the combined arm after 16 teacher updates plus 15 reward updates.
+Remote setup is in progress; GPU evaluation and improved performance are not
+yet established. No additional learning or release promotion is authorized
+by this evaluation package.
