@@ -7,7 +7,7 @@ import torch
 from tests.test_decision_learning_v2 import model
 from tests.test_canonical_actions import PathSensitiveLanguage
 from tests.test_paired_learning import rows, usage
-from tool_lab.paired_capacity_runtime import phase_limits, progress, qualify_forward
+from tool_lab.paired_capacity_runtime import phase_limits, progress, qualify_forward, make_optimizer
 from tool_lab.paired_capacity_train import train
 
 
@@ -54,6 +54,18 @@ class PairedCapacityRuntimeTests(unittest.TestCase):
 
     def test_foundation_training_is_blocked_on_non_cuda_device_before_file_access(self):
         with self.assertRaises(ValueError): train(SimpleNamespace(device='cpu'))
+
+    def test_trainer_optimizer_completes_a_guarded_update_without_changing_critic(self):
+        from tests.test_paired_update import fixtures
+        from tool_lab.paired_update import learning_step
+        policy = model(); before = deepcopy(policy.value.state_dict()); events = []
+        optimizer = make_optimizer(policy)
+        result = learning_step(policy, optimizer, *fixtures(), lambda: None, events.append)
+        self.assertTrue(result['accepted'])
+        self.assertEqual(sum(e['phase'] == 'optimizer_attempt' for e in events), 1)
+        for name, tensor in policy.value.state_dict().items():
+            torch.testing.assert_close(tensor, before[name], rtol=0, atol=0)
+        self.assertTrue(all(p.grad is None for p in policy.value.parameters()))
 
 
 if __name__ == '__main__': unittest.main()

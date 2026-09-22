@@ -5,6 +5,17 @@ from tool_lab.paired_capacity_plan import RECIPE
 from tool_lab.paired_curriculum import require
 
 
+def make_optimizer(policy):
+    """Track all trainable parameters required by the transactional guard.
+
+    Supervision forbids critic gradients; AdamW skips parameters with grad=None.
+    Keeping them in the transaction preserves the guard's complete ownership rule.
+    """
+    import torch
+    return torch.optim.AdamW([p for p in policy.parameters() if p.requires_grad],
+                             lr=RECIPE['learning_rate'], weight_decay=0.)
+
+
 def progress(current, gates, update, best_progress, misses):
     score = current['database']['return']-.25*current['panel']['canonical']['forecast_brier']
     require(math.isfinite(score), 'Nonfinite development progress')

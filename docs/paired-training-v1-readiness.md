@@ -97,7 +97,7 @@ comparison still needs identical starts and isolated objectives. Existing
 release gates remain unchanged.
 
 The bounded trainer/final evaluator and cloud recovery bundle passed local
-qualification. Twenty focused tests passed in a fresh extraction of the730-file
+qualification. Twenty-one focused tests passed in a fresh extraction of the730-file
 input package. Exact cloud-entry checks rejected modified training data, source
 code and adapter weights, and a simulated setup failure still preserved an
 archive without loading a model. Next are actual GPU qualification and learning,

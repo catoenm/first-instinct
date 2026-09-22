@@ -11,7 +11,7 @@ from scale_lab.common import ROOT, file_hash, read_rows, write_json, write_rows
 from tool_lab.evaluation_budget import EvaluationBudget, PhaseExpired
 from tool_lab.oracle_capacity_completion import require_device
 from tool_lab.paired_capacity_plan import VERSION, RECIPE, SEED
-from tool_lab.paired_capacity_runtime import progress, phase_limits, qualify_forward
+from tool_lab.paired_capacity_runtime import progress, phase_limits, qualify_forward, make_optimizer
 from tool_lab.paired_curriculum import require
 
 
@@ -122,7 +122,7 @@ def train(args):
             writer.flush(); save(); return results
         receipt['status'] = 'baseline'; save(); baseline = measure('baseline', 'training')
         receipt['baseline'] = baseline; receipt['best_checkpoint'] = checkpoint('best')
-        optimizer = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=args.learning_rate, weight_decay=0.)
+        optimizer = make_optimizer(policy)
         best_progress = baseline['database']['return']-.25*baseline['panel']['canonical']['forecast_brier']
         best_selected = float('-inf'); misses = 0; estimate = 180.
         receipt['status'] = 'training'; save()

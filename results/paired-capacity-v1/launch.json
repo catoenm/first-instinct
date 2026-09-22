@@ -1,10 +1,10 @@
 {
   "actual_gpu_hourly_usd": 4.59,
   "bundle": {
-    "archive_bytes": 180717303,
-    "archive_sha256": "2bf9db5fe5095f01726b4f25793820bea95c8b03dc42636b619a13e9c70973ec",
-    "bundle_manifest_sha256": "59cbb3c577f67d8c928fc278a73dcf6e93d02f7ca1b06147d86748d0d411ed52",
-    "checked_at": 1790093713.723958,
+    "archive_bytes": 180718038,
+    "archive_sha256": "ab153c10da253a469844f22551d8838491c5813ba800f13ea2c2e0beb32a0f6c",
+    "bundle_manifest_sha256": "b7850c38f3d152af89b75c06f0f6d89df4782e4e843fb3c64621918f24e66059",
+    "checked_at": 1790093978.689282,
     "data_freeze_sha256": "a7544bb5429347a717d3cc80f591e7bf164c4746c37e19a4403626caf584e74b",
     "gpu_allocations": 0,
     "input_files": 730,
@@ -12,11 +12,11 @@
     "optimizer_updates": 0,
     "scope": "Portable code/data/controller qualification; no foundation model executed.",
     "status": "passed_local_isolated_bundle_qualification",
-    "unit_tests": 20
+    "unit_tests": 21
   },
   "entry": {
-    "archive_sha256": "2bf9db5fe5095f01726b4f25793820bea95c8b03dc42636b619a13e9c70973ec",
-    "checked_at": 1790093774.4676101,
+    "archive_sha256": "ab153c10da253a469844f22551d8838491c5813ba800f13ea2c2e0beb32a0f6c",
+    "checked_at": 1790094029.77521,
     "checks": [
       "paired-data/freeze.json",
       "paired-data/paired.jsonl",
@@ -30,12 +30,12 @@
     "new_environment_executions": 0,
     "optimizer_updates": 0,
     "sources": {
-      "bootstrap-paired-capacity-v1-pod.py": "74056b7c29306908bf4afd4dcc028caa5a59befa80db42e0e9f6cc0ced7bbda6",
-      "paired-capacity-v1-cloud-launch.py": "89e21e083608d49aa3914b66ce4b218f6cafe6a00bbecdfecbf0fa82bb5e7abb",
+      "bootstrap-paired-capacity-v1-pod-v2.py": "a7897a2dfb60da15d43becac6454e4712439633cea904e8f00fe9cad50f44b93",
+      "paired-capacity-v1-cloud-launch-v2.py": "5c864888a1f90ed2ec5dc40dca3c5023f25d84ee44c0c69a657d20f303dcb007",
       "paired-capacity-v1-cloud-setup.sh": "bd0de525ff3af2baa708960f3eeed8fdbb888d99ff59a7364dfce0ea107f233b",
-      "paired-capacity-v1-entry.py": "741f992c64c7fc0fad33ecded8443e683b15b96e6ce491b38d00a75867c2acc2",
+      "paired-capacity-v1-entry-v2.py": "72e84f20da63408e36457e59abf76a992f893d3b0b222d5e9de4b42db6d64182",
       "paired-capacity-v1-host-collect-template.py": "cadc0c00ed61adbd5e9d7b80c9aa659f48531208dc76fe4048771a312c3e5319",
-      "verify-paired-capacity-v1-bundle.py": "f95f9867002d14eeb99e196d2d67759c6549a5867384d946057af183b565b025"
+      "verify-paired-capacity-v1-bundle-v2.py": "cebd2fdfaa442fca86e7b77973eb6f7d10d941aed6777045ed7f3d3899603fae"
     },
     "status": "passed_exact_entry_and_failure_archive"
   },
@@ -45,9 +45,24 @@
   "minimum_before_ordinary_plateau": 128,
   "observed_optimizer_updates": 0,
   "planned_stage_ceiling_usd": 35,
+  "pretraining_correction": "Optimizer now tracks all trainable policy parameters required by rollback; critic gradients remain forbidden. Same rental/deadline. No optimizer updates before correction.",
+  "prior_bundle": {
+    "archive_bytes": 180717303,
+    "archive_sha256": "2bf9db5fe5095f01726b4f25793820bea95c8b03dc42636b619a13e9c70973ec",
+    "bundle_manifest_sha256": "59cbb3c577f67d8c928fc278a73dcf6e93d02f7ca1b06147d86748d0d411ed52",
+    "checked_at": 1790093713.723958,
+    "data_freeze_sha256": "a7544bb5429347a717d3cc80f591e7bf164c4746c37e19a4403626caf584e74b",
+    "gpu_allocations": 0,
+    "input_files": 730,
+    "model_calls": 0,
+    "optimizer_updates": 0,
+    "scope": "Portable code/data/controller qualification; no foundation model executed.",
+    "status": "passed_local_isolated_bundle_qualification",
+    "unit_tests": 20
+  },
   "provider_hard_stop_seconds": 21600,
-  "recorded_at": 1790093924.112221,
+  "recorded_at": 1790094176.390233,
   "release_eligible": false,
-  "status": "allocated_bootstrap_pending",
+  "status": "corrected_bootstrap_resumed_remote_shutdown_confirmed",
   "training_kind": "paired supervised capacity, not an isolated reinforcement-learning comparison"
 }

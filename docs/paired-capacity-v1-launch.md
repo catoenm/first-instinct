@@ -36,7 +36,7 @@ still needs evaluation.
 
 ## Local qualification completed before rental
 
-- The730-file input bundle passed20focused tests in a fresh extraction.
+- The corrected730-file input bundle passed21focused tests in a fresh extraction.
 - Exact entry checks reject changes to the data freeze, examples, trainer,
   runtime controls and starting adapter before importing model code.
 - The actual launcher's setup-failure branch preserved a verified archive
@@ -44,7 +44,17 @@ still needs evaluation.
 - The GPU entry will additionally check actual probabilities and gradients
   for the admitted target types before starting the optimizer.
 
-The CPU bundle check peaked below349MB, and the entry/failure check below627MB,
+Before model loading, an integration review caught an optimizer-membership
+mismatch: the trainer included only language parameters, while its rollback
+guard requires every trainable policy parameter. Startup paused on the same
+rental. The corrected optimizer tracks both sets; the supervised loss still
+forbids critic gradients, so critic weights remain unchanged. An additional
+test runs this exact optimizer through a real guarded update. The original
+bundle is preserved, and the replacement bundle and entry were qualified
+before startup resumed. No model update was discarded or additional rental
+created.
+
+The CPU bundle check peaked below349MB, and the entry/failure check below630MB,
 without additional swap. No foundation model ran on the Mac.
 
 The cloud launcher, provider shutdown guard and artifact recovery use the same
