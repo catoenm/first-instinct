@@ -1,0 +1,29 @@
+{
+  "acceptable_set_questions": 18,
+  "actual_training_questions_consumed": 0,
+  "candidate_exact_token_collisions": 0,
+  "canonical_diagnostic_permutations_scanned": 276,
+  "comparison_files": 18,
+  "comparison_presentations_scanned": 842299,
+  "existing_group_identifier_collisions": 0,
+  "existing_training_packs_modified": false,
+  "existing_world_goal_tasks": 4,
+  "forecast_contracts": {
+    "displayed_fixed_continuation": 48,
+    "immediate_command_response": 36,
+    "immediate_state": 36
+  },
+  "model_calls": 0,
+  "new_executions": 0,
+  "optimizer_updates": 0,
+  "outcome_questions": 120,
+  "ready_for_existing_trainer": false,
+  "required_consumer_work": "Explicit support for immediate-state and command-response distributions; keep acceptable-action sets separate. No silent conversion to terminal or fixed-policy forecasts.",
+  "reserved_model_scores_opened": 0,
+  "seconds": 24.167835041997023,
+  "semantic_scope": "Training-only extension of existing database/stale-evidence curricula. Exact fingerprints and authored-executor review do not prove semantic novelty across all natural-language data.",
+  "staged_groups": 1,
+  "staged_training_questions": 138,
+  "status": "qualified_staging_admission",
+  "underlying_mechanisms": 1
+}

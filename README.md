@@ -15,6 +15,15 @@ Open experiments in outcome forecasts, reinforcement learning, and the cost of e
 
 </div>
 
+**Current result:** the original supervised 9B checkpoint remains selected; later
+learning runs have not qualified a replacement. A
+[controlled tool-description experiment](docs/report-contract-paired-v1-results.md)
+improved its expected forecast accuracy from 52.3% to 69.5% on one exposed workflow
+without changing weights. New [live database decisions](docs/revisioned-live-v1-results.md)
+and their [learning adapter](docs/decision-learning-v2-results.md) now pass local
+execution and CPU checks. They prepare richer training experience; they do not
+establish a new trained model or broad transfer.
+
 **Next milestone: [a usable 9B release candidate](docs/release-candidate-v1-plan.md).**
 The release plan combines general decisions, broader tool-selection data and
 verified outcomes, then tests reinforcement learning as a measured upgrade.

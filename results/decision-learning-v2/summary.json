@@ -1,0 +1,32 @@
+{
+  "allowed_objective_arms": [
+    "outcome",
+    "reward",
+    "hybrid"
+  ],
+  "candidate_distribution_rows_checked": 3216,
+  "cuda_policy_qualified": false,
+  "forecast_contracts": {
+    "displayed_fixed_continuation": 48,
+    "immediate_command_response": 1584,
+    "immediate_state": 1584
+  },
+  "foundation_model_calls": 0,
+  "foundation_optimizer_updates": 0,
+  "foundation_training_presentations": 0,
+  "limitations": "Tiny network mechanics and synthetic-logit input checks; not 9B training, GPU qualification, a new training recipe, or a transfer result.",
+  "model_performance_measured": false,
+  "new_forecast_mixture_admission": false,
+  "qualified_live_action_types": [
+    "shell_action",
+    "retail_live_action",
+    "revisioned_live_action"
+  ],
+  "seconds": 0.171732124988921,
+  "status": "qualified_cpu_mechanics_and_candidate_contracts",
+  "synthetic_loss_range": [
+    1.0986123085021973,
+    1.0986123085021973
+  ],
+  "tiny_cpu_tests_passed": 7
+}

@@ -1,0 +1,55 @@
+{
+  "actor_actions": 10164,
+  "actor_sql_statements_excluding_transaction_control": 9600,
+  "candidate_forecast_questions": 3096,
+  "colleague_writes": 1932,
+  "complete_terminal_paths_by_hidden_world": {
+    "False": 76,
+    "True": 161
+  },
+  "database_resets": 2844,
+  "distinct_public_actor_inputs": 258,
+  "evidence_resolved_contexts": 234,
+  "existing_post_schedule_states": 2,
+  "existing_world_goal_tasks": 4,
+  "failed_or_refused_commands": 5064,
+  "forecast_by_task": {
+    "command_return_code": 1548,
+    "immediate_goal": 1548
+  },
+  "forecast_corruption_controls_rejected": [
+    "mass",
+    "target",
+    "horizon",
+    "private"
+  ],
+  "forecast_mixture_admission": false,
+  "full_tokenized_distinct_inputs": 3354,
+  "independent_replay_branches": 1422,
+  "limits": "One existing training mechanism, fixed two-world prior and finite horizon; no learned continuation forecast, dynamic proposer, fresh transfer or GPU-policy qualification.",
+  "maximum_qwen_tokens": 736,
+  "model_calls": 0,
+  "new_mechanisms": 0,
+  "normalized_return_range": [
+    -5.8,
+    1.0
+  ],
+  "optimizer_updates": 0,
+  "ownership_groups": 1,
+  "prefix_reads": 2844,
+  "primary_executed_branches": 1422,
+  "qualification_policy": "Scripts exhaust physical paths; no model performance is measured.",
+  "raw_utility_range": [
+    -580,
+    100
+  ],
+  "scripted_rollouts_training_eligible": false,
+  "seconds": 17.571071499958634,
+  "status": "locally_qualified_live_actor_and_immediate_forecasts",
+  "tests_passed": 5,
+  "training_presentations_consumed": 0,
+  "uncertain_distributions": 108,
+  "underlying_mechanisms": 1,
+  "unresolved_contexts": 24,
+  "visible_contexts": 258
+}
