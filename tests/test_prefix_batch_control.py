@@ -8,10 +8,11 @@ import torch
 
 from general_lab import prefix_batch_control as control
 from general_lab.shared_prefix import compare, predict_tokens
-from test_shared_prefix import tiny_model
+from tests.test_shared_prefix import tiny_model
+from tests.historical import source_tree
 
 
-PUBLISHED = Path(__file__).resolve().parent / 'results/shared-prefix-v1'
+PUBLISHED = Path(__file__).resolve().parents[1] / 'results/shared-prefix-v1'
 
 
 def fixture():
@@ -20,6 +21,9 @@ def fixture():
 
 
 class BatchControlTests(unittest.TestCase):
+    def setUp(self):
+        self.enterContext(patch.object(control, 'ROOT', source_tree()))
+
     def test_exact_published_streams_and_bounded_padded_accounting(self):
         _, _, encoded = control.published_inputs(PUBLISHED)
         rows = encoded['state_first']

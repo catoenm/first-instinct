@@ -122,7 +122,8 @@ def main():
     for name in ('thresholds.py', 'train.py', 'environment.py'):
         shutil.copy2(Path(__file__).parent / name, root / 'code_snapshot' / name)
     shutil.copy2(ROOT / 'docs/calibration-thresholds-protocol.md', root / 'code_snapshot/protocol.md')
-    for name in ('requirements-calibration.txt', 'test_calibration_thresholds.py'):
+    for name in ('requirements-calibration.txt', 'tests/test_calibration_thresholds.py'):
+        (root / 'code_snapshot' / name).parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / name, root / 'code_snapshot' / name)
     shutil.copy2(args.reference_run / 'runtime.json', root / 'runtime.json')
     protocol = {'seeds': args.seeds, 'steps': args.steps, 'batch_size': 1024, 'learning_rate': .001,

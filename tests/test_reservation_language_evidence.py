@@ -2,6 +2,8 @@
 
 from pathlib import Path
 import unittest
+from unittest.mock import patch
+from tests.historical import source_tree
 
 from puffer_lab.audit import check_manifest
 from puffer_lab.dynamics_data import verify as verify_data
@@ -10,11 +12,15 @@ from puffer_lab.language_analysis import existing_numeric_controls, public_mista
 from puffer_lab.text_baseline import analyze as decision_analysis, read
 from scale_lab.common import file_hash
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / 'results/reservation-language-v1'
 
 
 class LanguageEvidenceTests(unittest.TestCase):
+    def setUp(self):
+        for module in ('puffer_lab.text_baseline', 'puffer_lab.forecast_probe', 'puffer_lab.dynamics_data'):
+            self.enterContext(patch(module+'.ROOT', source_tree()))
+
     def test_manifest_and_analysis_source_are_unchanged(self):
         self.assertGreater(check_manifest(EVIDENCE), 20)
         analysis = read(EVIDENCE / 'analysis.json')

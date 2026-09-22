@@ -11,7 +11,7 @@ from tool_lab.report import summarize
 
 class ReportTests(unittest.TestCase):
     def test_published_evidence_preserves_requests_inputs_and_rewards(self):
-        script = Path(__file__).parent / 'results/harbor-command-v1/verify.py'
+        script = Path(__file__).parents[1] / 'results/harbor-command-v1/verify.py'
         runpy.run_path(str(script), run_name='__main__')
 
     def make_trial(self, root, success, error=None, status='finished_by_selector'):

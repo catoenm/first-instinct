@@ -4,7 +4,7 @@ import unittest
 
 import torch
 
-from test_general_rl import TinyLanguage, TinyTokenizer
+from tests.test_general_rl import TinyLanguage, TinyTokenizer
 from tests.test_canonical_actions import PathSensitiveLanguage
 from tests.test_live_contracts import ARGS, forecast_rows
 from tool_lab.canonical_actions import CanonicalActionPolicy

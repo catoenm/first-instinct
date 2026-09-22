@@ -20,7 +20,7 @@ from .text_render import VARIANTS, cases, render, semantic_choice
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCE = ROOT / 'results/general-robustness-v1/freeze.json'
 SOURCES = (
-    'puffer_lab/text_baseline.py', 'puffer_lab/text_render.py', 'test_reservation_language.py',
+    'puffer_lab/text_baseline.py', 'puffer_lab/text_render.py', 'tests/test_reservation_language.py',
     'docs/reservation-language-v1-protocol.md', 'puffer_lab/contract.py', 'puffer_lab/native.py',
     'puffer_lab/native_bridge.c', 'puffer_lab/reservation_core.h',
     'general_lab/robustness_local.py', 'general_lab/robustness.py',

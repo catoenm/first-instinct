@@ -31,7 +31,7 @@ PUBLISHED_HASHES = {
     'measurements/summary.json': '87dd3fba666cba7f1210411c96f3119481fde74b8697cc0e003b97d2b297f624',
 }
 SOURCE_FILES = (*original.SOURCE_FILES, 'general_lab/prefix_batch_control.py',
-                'test_prefix_batch_control.py', 'test_shared_prefix.py',
+                'tests/test_prefix_batch_control.py', 'tests/test_shared_prefix.py',
                 'docs/shared-prefix-batch-control-v1-protocol.md')
 TOTAL_KEYS = ('questions', 'model_calls', 'forward_input_tokens', 'padded_input_tokens')
 

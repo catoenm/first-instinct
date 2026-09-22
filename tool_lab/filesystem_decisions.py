@@ -312,7 +312,7 @@ def qualify(cases,traces):
 
 def collect(output):
     output.mkdir(parents=True,exist_ok=False);cases=fixtures();write_rows(output/'cases.jsonl',cases)
-    sources=('tool_lab/filesystem_decisions.py','test_filesystem_decisions.py','scale_lab/common.py','docs/filesystem-decisions-v1-protocol.md')
+    sources=('tool_lab/filesystem_decisions.py','tests/test_filesystem_decisions.py','scale_lab/common.py','docs/filesystem-decisions-v1-protocol.md')
     write_json(output/'pre-execution-freeze.json',dict(version=VERSION,sources={n:file_hash(ROOT/n) for n in sources},
         cases_sha256=file_hash(output/'cases.jsonl'),python=sys.version,platform=platform.platform(),
         maximum_branches=840,maximum_physical_executions=1680,maximum_commands=MAX_COMMANDS,

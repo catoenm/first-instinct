@@ -9,7 +9,7 @@ import torch
 from general_lab.outcome_train import gradient_diagnostic,rollout_kl,update
 from general_lab.rl import prepare,parameter_audit,snapshot
 from scale_lab.common import ROOT,encode,file_hash,read_rows,write_json,write_rows
-from test_general_rl import TinyLanguage,TinyTokenizer
+from tests.test_general_rl import TinyLanguage,TinyTokenizer
 from tool_lab import application_curriculum as env
 from tool_lab.application_live import Worker,Episode,audit_trajectory
 from tool_lab.decision_rl import collect,audit_actor_trace,forecast_metrics

@@ -159,7 +159,7 @@ def prepare(source, independent, positive, answer, output):
     sources = [ROOT/n for n in ('tool_lab/appworld_trace.py', 'tool_lab/appworld_interventions.py',
                                'tool_lab/appworld_questions.py', 'tool_lab/appworld_prepare.py',
                                'tool_lab/record_codec.py', 'tool_lab/appworld_positive.py', 'tool_lab/appworld_answer_controls.py', 'scale_lab/common.py',
-                               'test_appworld_trace.py', 'test_appworld_questions.py', 'test_record_codec.py',
+                               'tests/test_appworld_trace.py', 'tests/test_appworld_questions.py', 'tests/test_record_codec.py',
                                'docs/appworld-interventions-v1-protocol.md', 'docs/appworld-question-contract-v1.md',
                                'docs/appworld-positive-controls-v1-protocol.md','docs/appworld-answer-controls-v1-protocol.md')]
     receipt = dict(status='qualified_data' if not problems else 'rejected_data', problems=problems,

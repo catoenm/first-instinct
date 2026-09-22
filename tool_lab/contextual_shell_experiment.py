@@ -31,7 +31,7 @@ def prepare(data, output, adapter):
     frozen.update(schema='contextual-shell-training-v1',
                   scope='Supervised context-dependent command selection and deterministic completion forecasts; no PPO or live Harbor trajectories.',
                   preceding_pilot='shell-supervised-v1 cancelled before optimizer updates after a 93.66% command-only validation shortcut; different data, prospective new freeze.')
-    for name in ('docs/contextual-shell-v1-protocol.md', 'test_contextual_shell.py'):
+    for name in ('docs/contextual-shell-v1-protocol.md', 'tests/test_contextual_shell.py'):
         frozen['sources'][name] = file_hash(ROOT / name)
     frozen['files'] = {str(p.relative_to(output)): file_hash(p) for p in output.rglob('*') if p.is_file() and p.name != 'freeze.json'}
     write_json(output / 'freeze.json', frozen)

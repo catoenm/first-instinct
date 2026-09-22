@@ -14,7 +14,7 @@ PLANS=('stop_now','evidence_then_commit','no_more_observations')
 SOURCES=('tool_lab/decision_curriculum.py','tool_lab/decision_collect.py',
          'tool_lab/evidence_env.py','tool_lab/contextual_shell.py','tool_lab/evidence_shell.py',
          'tool_lab/shell_supervision.py','scale_lab/common.py','tool_lab/contextual_shell_audit.py',
-         'test_decision_curriculum.py','docs/decision-curriculum-v3-protocol.md')
+         'tests/test_decision_curriculum.py','docs/decision-curriculum-v3-protocol.md')
 
 
 def reconstruct(case,trace):

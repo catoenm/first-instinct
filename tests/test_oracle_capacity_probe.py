@@ -4,7 +4,7 @@ import unittest
 
 import torch
 
-from test_general_rl import TinyTokenizer
+from tests.test_general_rl import TinyTokenizer
 from tests.test_decision_learning_v2 import model
 from tests.test_live_contracts import ARGS, forecast_rows
 from scale_lab.common import encode

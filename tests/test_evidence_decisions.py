@@ -63,7 +63,7 @@ class PublicBoundaryTests(unittest.TestCase):
 
     def test_exploration_changes_only_action_distribution(self):
         import torch
-        from test_general_rl import TinyLanguage
+        from tests.test_general_rl import TinyLanguage
         from tool_lab.evidence_train import EvidencePolicy
         torch.manual_seed(19)
         policy=EvidencePolicy(TinyLanguage(),list(range(1,37)),0,'cpu')

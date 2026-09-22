@@ -15,8 +15,9 @@ from unittest.mock import patch
 
 from general_lab import toolsandbox_transfer as scorer
 from scale_lab.common import digest, file_hash, write_json
+from tests.historical import source_tree
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 PATH = ROOT / 'results/toolsandbox-transfer-supervised-v1/analyze.py'
 SPEC = importlib.util.spec_from_file_location('toolsandbox_transfer_analysis', PATH)
 analysis = importlib.util.module_from_spec(SPEC)
@@ -57,7 +58,8 @@ def fixture():
         write_json(output / 'run.json', receipt)
         write_json(output / 'metrics.json', report)
         (output / 'report.md').write_text(scorer.markdown(report, analysis.MODEL_LABEL))
-        with patch.object(analysis, '_available_provenance', return_value=deepcopy(AVAILABLE)):
+        with patch.object(analysis, '_available_provenance', return_value=deepcopy(AVAILABLE)), \
+                patch.object(analysis, 'ROOT', source_tree()):
             yield folder, output, report
 
 
@@ -204,6 +206,7 @@ class TransferAnalysisTests(unittest.TestCase):
             command = ('import importlib.util,sys; '
                 f's=importlib.util.spec_from_file_location("a", {str(PATH)!r}); '
                 'm=importlib.util.module_from_spec(s); s.loader.exec_module(m); '
+                f'm.ROOT=__import__("pathlib").Path({str(source_tree())!r}); '
                 'm._available_provenance=lambda *a,**k: {}; '
                 f'm.analyze({str(folder)!r}); '
                 'assert "torch" not in sys.modules; assert "transformers" not in sys.modules; '

@@ -17,7 +17,7 @@ SCHEMA = 'toolsandbox-transfer-outcome-cohort-v1'
 OUTCOME_FREEZE_SHA256 = '22d68712a79054b7f87227de7383d8ec3954d4eb649612f79823ae4c2b364daa'
 TRANSFER_FREEZE_SHA256 = 'cd83e94da4d800cb2d793a03da3f138a95b4f12a70e5d43fba3708e6b49d4ae0'
 REFERENCE_ANALYZER = 'results/toolsandbox-transfer-supervised-v1/analyze.py'
-SOURCE_FILES = ('general_lab/toolsandbox_transfer_cohort.py', 'test_toolsandbox_transfer_cohort.py',
+SOURCE_FILES = ('general_lab/toolsandbox_transfer_cohort.py', 'tests/test_toolsandbox_transfer_cohort.py',
                 'docs/toolsandbox-transfer-cohort-v1-protocol.md', 'scale_lab/common.py', REFERENCE_ANALYZER)
 ARMS, SEEDS, ROLES = ('outcome', 'reward', 'hybrid'), (77, 83), ('best', 'latest')
 COMPLETE = {'complete', 'early_stopped_complete'}

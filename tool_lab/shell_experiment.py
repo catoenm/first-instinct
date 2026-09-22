@@ -64,7 +64,7 @@ def prepare(shell, output, adapter):
     for name in ('shell-test.jsonl','general-transfer.jsonl'):
         if train_ids & {r['id'] for r in read_rows(output/name)}: raise ValueError('Training/test identifier overlap')
     source_paths = [p for package in ('scale_lab','general_lab','tool_lab') for p in (ROOT/package).glob('*.py')]
-    source_paths += [ROOT/'requirements-scale-cuda.txt',ROOT/'test_shell_supervision.py',ROOT/'test_shell_experiment.py',ROOT/'docs/shell-supervised-v1-protocol.md']
+    source_paths += [ROOT/'requirements-scale-cuda.txt',ROOT/'tests/test_shell_supervision.py',ROOT/'tests/test_shell_experiment.py',ROOT/'docs/shell-supervised-v1-protocol.md']
     freeze = dict(schema='shell-supervised-v1', model=MODELS['qwen35-9b'], seeds=list(SEEDS),recipe=RECIPE,guard=GUARD,
                   starting_adapter_sha256=file_hash(adapter/'adapter_model.safetensors'),
                   files={str(p.relative_to(output)):file_hash(p) for p in output.rglob('*') if p.is_file()},

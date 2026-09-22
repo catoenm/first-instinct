@@ -255,7 +255,8 @@ def main():
     snapshot.mkdir()
     for name in SOURCES:
         shutil.copy2(Path(__file__).parent/name,snapshot/name)
-    for name in ('requirements-calibration.txt','test_ppo_study.py'):
+    for name in ('requirements-calibration.txt','tests/test_ppo_study.py'):
+        (snapshot/name).parent.mkdir(parents=True,exist_ok=True)
         shutil.copy2(ROOT/name,snapshot/name)
     shutil.copy2(ROOT/'docs/ppo-data-protocol.md',snapshot/'protocol.md')
     protocol = vars(args).copy()

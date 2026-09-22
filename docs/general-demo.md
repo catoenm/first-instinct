@@ -5,8 +5,8 @@ Parcel, Support, Access, and Severity. One editable context and a Run button
 remain visible at a time. The examples exercise choice, yes/no, and ordered
 severity questions against the actual trained language model.
 
-The supervised training pass is complete, and the author's local demo now
-serves its selected checkpoint at step 2,742. See the
+The released demo uses the supervised checkpoint selected at step 2,742.
+Start a local server with the instructions below. See the
 [measured supervised results](https://github.com/catoenm/first-instinct/blob/main/docs/general-supervised-results.md). The
 [four completed reinforcement-learning runs](https://github.com/catoenm/first-instinct/blob/main/docs/general-reinforcement-results.md)
 did not reliably improve held-out decisions, so this demo keeps the supervised
@@ -36,8 +36,7 @@ machine has 128 GB of unified memory.
 
 The server keeps one model loaded and accepts one inference request at a time.
 It binds to localhost and does not save submitted questions or state. It is a
-local development demo, not a public hosting setup. The earlier software
-inspection demo can continue on port 8765.
+local development demo, not a public hosting setup.
 
 ## Try it
 

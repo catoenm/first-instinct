@@ -178,7 +178,7 @@ def prepare(source, output):
     paths = dict(prior["paths"])
     names = ["tool_lab/telecom_questions.py", "tool_lab/telecom_public_programs.py",
              "tool_lab/telecom_question_audit.py", "docs/telecom-questions-v1-protocol.md",
-             "test_telecom_questions.py", "scale_lab/common.py", "puffer_lab/consequence_train.py"]
+             'tests/test_telecom_questions.py', "scale_lab/common.py", "puffer_lab/consequence_train.py"]
     paths.update({str(Path(name).resolve()): sha(name) for name in names})
     paths.update({str(p.resolve()): sha(p) for p in source.glob("*-private.json")})
     paths[str((source / "audit.json").resolve())] = sha(source / "audit.json")

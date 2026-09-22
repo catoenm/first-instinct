@@ -16,7 +16,7 @@ from scale_lab.common import digest, file_hash, validate_input
 SCHEMA = 'toolsandbox-transfer-v1'
 FLOOR = 1e-12
 COLLECTION_FREEZE_SHA256 = '8dd4cad766f6434cc86034561d245e1f051170cdc425d42aadf1eccb97e1b258'
-SOURCE_FILES = ('general_lab/toolsandbox_transfer.py', 'test_toolsandbox_transfer.py',
+SOURCE_FILES = ('general_lab/toolsandbox_transfer.py', 'tests/test_toolsandbox_transfer.py',
                 'docs/toolsandbox-transfer-v1-protocol.md', 'scale_lab/common.py')
 OPERATIONS = {'create': 'train', 'update': 'validation', 'delete': 'test'}
 PUBLIC_KEYS = {'clock', 'continuation', 'costs', 'history', 'initial_prior', 'request',

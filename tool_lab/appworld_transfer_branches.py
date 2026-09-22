@@ -70,7 +70,7 @@ def prepare(qualification, output):
     extra = [qualification/'summary.json', qualification/'freeze-private.json', Path(__file__).resolve(),
              Path('tool_lab/appworld_trace.py').resolve(),
              Path('docs/appworld-transfer-branches-v1-protocol.md').resolve(),
-             Path('test_appworld_transfer_branches.py').resolve()]
+             Path('tests/test_appworld_transfer_branches.py').resolve()]
     extra += list(qualification.glob('*receipt-private.json'))
     paths.update({p: sha(p) for p in extra})
     for p, h in paths.items():

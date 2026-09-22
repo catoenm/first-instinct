@@ -3,7 +3,7 @@ from collections import Counter
 import json
 import unittest
 
-from test_retail_live import make_episode
+from tests.test_retail_live import make_episode
 from tool_lab.retail_matched import balanced_block, identities, public_inspection_action, validate_block
 from tool_lab.retail_matched_audit import distribution, source_agreement
 from tool_lab.retail_evidence_policy import TASKS, conditions, DESTINATION

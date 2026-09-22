@@ -79,7 +79,7 @@ def cells_for(branches):
 
 def freeze(output):
     output.mkdir(parents=True, exist_ok=False)
-    paths = [PROTOCOL, 'tool_lab/forecast_selector.py', 'test_forecast_selector.py',
+    paths = [PROTOCOL, 'tool_lab/forecast_selector.py', 'tests/test_forecast_selector.py',
              'scale_lab/common.py', 'results/expanded-decisions-v1-final/audit.json',
              str(CLOUD/'artifact-hashes.json'), str(CLOUD/'data/freeze.json'),
              str(CLOUD/'data/validation-forecasts.jsonl'), str(CLOUD/'data/validation-cases.jsonl')]

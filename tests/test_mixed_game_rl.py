@@ -13,7 +13,7 @@ from games_lab.native import compile_game, library
 from puffer_lab.native import compile_core, library as reservation_library
 from puffer_lab.contract import PROFILES
 from games_lab.data import toggle
-from test_reservation_language_rl import Tokenizer, TinyLanguage
+from tests.test_reservation_language_rl import Tokenizer, TinyLanguage
 from general_lab.outcome_train import DetachedValuePolicy, unchanged_policy_check
 from puffer_lab.environment_rl import step_optimizer
 

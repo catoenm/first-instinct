@@ -16,6 +16,7 @@ from unittest.mock import patch
 
 from general_lab import robustness_foundation as control
 from scale_lab.common import LABELS, digest, write_json
+from tests.historical import source_tree
 
 
 class Tokenizer:
@@ -55,10 +56,14 @@ class FakeModel:
 
 
 class ControlTests(unittest.TestCase):
+    def setUp(self):
+        self.enterContext(patch.object(control, 'ROOT', source_tree()))
+
     @classmethod
     def setUpClass(cls):
         # Read and verify the real completed SFT artifacts. No endpoint is used.
-        cls.corpus, cls.prior = control._prior()
+        with patch('general_lab.robustness_report.ROOT', source_tree()):
+            cls.corpus, cls.prior = control._prior()
         cls.examples = [e for root in cls.corpus['roots'] for e in root['examples']]
         cls.encoded = control._tokenization(cls.corpus, Tokenizer())
 

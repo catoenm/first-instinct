@@ -10,7 +10,7 @@ import torch
 from general_lab.outcome_train import gradient_diagnostic
 from general_lab.rl import prepare,snapshot,parameter_audit
 from scale_lab.common import ROOT,file_hash,read_rows,write_json,write_rows
-from test_general_rl import TinyLanguage,TinyTokenizer
+from tests.test_general_rl import TinyLanguage,TinyTokenizer
 from tool_lab.decision_rl import actor_input
 from tool_lab.evidence_train import EvidencePolicy
 from tool_lab.mixed_curriculum import RECIPE

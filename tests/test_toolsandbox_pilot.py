@@ -103,7 +103,7 @@ OPTIONAL_READY = all(importlib.util.find_spec(module) is not None for module in
 class UpstreamTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.source = Path(__file__).parent / ".local/toolsandbox-upstream"
+        cls.source = Path(__file__).parents[1] / ".local/toolsandbox-upstream"
         with pilot.replay_guard():
             cls.backend = pilot.load_backend(cls.source)
         import polars.exceptions

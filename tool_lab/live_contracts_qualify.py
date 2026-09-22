@@ -26,9 +26,9 @@ def qualify(source, output, tests):
     if test_status["status"] != "completed" or "Ran 15 tests" not in test_log or not test_log.endswith("OK\n"):
         raise ValueError("Required CPU checks did not pass")
     files = [Path(__file__), Path("tool_lab/live_contracts.py"), Path("tests/test_live_contracts.py"),
-             Path("docs/live-contracts-v1-protocol.md"), Path("test_guarded_update.py"),
+             Path("docs/live-contracts-v1-protocol.md"), Path('tests/test_guarded_update.py'),
              Path("tool_lab/guarded_update.py"), Path("general_lab/outcome_train.py"),
-             Path("general_lab/rl.py"), Path("test_general_rl.py"), Path("test_retail_live.py"),
+             Path("general_lab/rl.py"), Path('tests/test_general_rl.py'), Path('tests/test_retail_live.py'),
              Path("tests/test_retail_actor.py"), source / "freeze-private.json", source / "audit.json",
              tests / "status.json", tests / "stderr.log"]
     paths = dict(prior["paths"])

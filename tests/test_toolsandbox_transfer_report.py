@@ -12,6 +12,7 @@ from unittest.mock import patch
 
 from general_lab import toolsandbox_transfer_report as report
 from scale_lab.common import digest, file_hash, write_json
+from tests.historical import source_tree
 
 
 def corpus_fixture():
@@ -149,6 +150,7 @@ class Fixture:
 @contextmanager
 def fixture(**kwargs):
     with tempfile.TemporaryDirectory() as temporary, ExitStack() as stack:
+        stack.enter_context(patch.object(report, 'ROOT', source_tree()))
         f = Fixture(Path(temporary), **kwargs)
         stack.enter_context(patch.object(report.scorer, 'load_corpus', side_effect=lambda path: deepcopy(f.corpus)))
         stack.enter_context(patch.object(report, 'reference', return_value=(f.baseline, f.reference_summary)))

@@ -24,7 +24,7 @@ from . import toolsandbox_transfer_cohort as cohort_api
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = 'toolsandbox-transfer-execution-v1'
-SOURCES = ('general_lab/toolsandbox_transfer_execute.py', 'test_toolsandbox_transfer_execute.py',
+SOURCES = ('general_lab/toolsandbox_transfer_execute.py', 'tests/test_toolsandbox_transfer_execute.py',
            'docs/toolsandbox-transfer-execute-v1-protocol.md')
 SETTINGS = {'model_questions': 720, 'max_unit_seconds': 5400, 'batch_size': 1,
             'max_tokens': 1536, 'max_options': 36, 'retries': 0, 'warmups': 0}

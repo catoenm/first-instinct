@@ -10,7 +10,7 @@ import torch
 from general_lab.outcome_train import unchanged_policy_check
 from general_lab.rl import prepare,snapshot,parameter_audit,_hash_trainable
 from scale_lab.common import ROOT,file_hash,read_rows,write_json,write_rows
-from test_general_rl import TinyLanguage,TinyTokenizer
+from tests.test_general_rl import TinyLanguage,TinyTokenizer
 from tool_lab.decision_rl import actor_input as old_actor_input
 from tool_lab.expanded_runtime import reservation_cases
 from tool_lab.expanded_pool import Pool
@@ -51,8 +51,8 @@ def run(output):
     names=('tool_lab/expanded_mechanics.py','tool_lab/expanded_learning.py','tool_lab/expanded_pool.py',
         'tool_lab/expanded_runtime.py','tool_lab/guarded_update.py','puffer_lab/consequence_train.py',
         'tool_lab/mixed_runtime.py','tool_lab/decision_rl.py','tool_lab/application_live.py',
-        'general_lab/outcome_train.py','general_lab/rl.py','scale_lab/model.py','test_general_rl.py',
-        'test_expanded_learning.py','docs/expanded-learning-v1-protocol.md')
+        'general_lab/outcome_train.py','general_lab/rl.py','scale_lab/model.py','tests/test_general_rl.py',
+        'tests/test_expanded_learning.py','docs/expanded-learning-v1-protocol.md')
     write_json(output/'plan.json',dict(tiny_model=True,seed=773,arms=['outcome','reward','hybrid'],case_ids=[c['id'] for c in selected],
         forecast_ids=[r['id'] for r in forecasts],max_live_episodes=16,max_offered_actions=200,
         max_optimizer_steps=3,max_optimizer_presentations=120,max_diagnostic_presentations=240,

@@ -5,17 +5,20 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from puffer_lab.audit import check_freezes, check_manifest, check_qualification
+from tests.historical import source_tree
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "results/puffer-reservation-v1"
 
 
 class EvidenceTests(unittest.TestCase):
     def test_published_inventory_and_prospective_source_freezes(self):
         self.assertGreater(check_manifest(EVIDENCE), 190)
-        check_freezes(EVIDENCE)
+        with patch('puffer_lab.audit.ROOT', source_tree()):
+            check_freezes(EVIDENCE)
 
     def test_targets_are_recomputed_from_actual_replayed_branches(self):
         result = check_qualification(EVIDENCE)

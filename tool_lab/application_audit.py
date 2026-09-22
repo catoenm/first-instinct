@@ -78,7 +78,7 @@ def audit(folder,tokenizer=None,max_tokens=1536):
         path=Path(name)
         relative=Path(*path.parts[-2:]) if path.is_absolute() else path
         if relative.as_posix() not in ('tool_lab/application_curriculum.py','general_lab/toolsandbox_pilot.py',
-                                      'test_application_curriculum.py','docs/application-curriculum-v1-protocol.md'):
+                                      'tests/test_application_curriculum.py','docs/application-curriculum-v1-protocol.md'):
             raise ValueError('Unexpected source in freeze')
         if file_hash(ROOT/relative)!=expected:raise ValueError('Changed executed source: '+name)
     if file_hash(folder/'cases.jsonl')!=frozen['cases_sha256']:raise ValueError('Fixture freeze differs')

@@ -214,7 +214,8 @@ def main():
     source.mkdir()
     for name in SOURCES:
         shutil.copy2(Path(__file__).parent/name,source/name)
-    for name in ('test_forecast_audit.py','test_jev_benchmark.py','requirements-calibration.txt'):
+    for name in ('tests/test_forecast_audit.py','tests/test_jev_benchmark.py','requirements-calibration.txt'):
+        (source/name).parent.mkdir(parents=True,exist_ok=True)
         shutil.copy2(ROOT/name,source/name)
     shutil.copy2(ROOT/'docs'/'forecast-audit-protocol.md',source/'protocol.md')
     write_json(args.output/'run.json',{'pilot':args.pilot,'rollouts':args.rollouts,'batch_size':512,

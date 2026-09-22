@@ -29,7 +29,7 @@ CONDITIONS = ('legacy_uncached', 'state_first_uncached', 'state_first_cached')
 SOURCE_FILES = (
     'general_lab/prefix_benchmark.py', 'general_lab/shared_prefix.py',
     'general_lab/interface.py', 'scale_lab/common.py', 'scale_lab/infer.py',
-    'scale_lab/model.py', 'test_prefix_benchmark.py',
+    'scale_lab/model.py', 'tests/test_prefix_benchmark.py',
     'docs/shared-prefix-v1-protocol.md',
 )
 PACKAGES = ('torch', 'transformers', 'peft', 'safetensors', 'tokenizers', 'huggingface-hub')

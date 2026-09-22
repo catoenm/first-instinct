@@ -95,7 +95,7 @@ def prepare(qualified, output):
     if read(qualified / "audit.json")["status"] != "passed":
         raise ValueError("Retail substrate not qualified")
     names = [Path(__file__), Path("tool_lab/retail_evidence_policy.py"), Path("tool_lab/retail_evidence_audit.py"),
-             Path("test_retail_evidence.py"), Path("docs/retail-evidence-v1-protocol.md"), qualified / "audit.json"]
+             Path('tests/test_retail_evidence.py'), Path("docs/retail-evidence-v1-protocol.md"), qualified / "audit.json"]
     paths = dict(old["paths"])
     paths.update({str(p.resolve()): sha(p) for p in names})
     output.mkdir(parents=True, exist_ok=False)

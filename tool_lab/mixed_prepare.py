@@ -13,7 +13,7 @@ from tool_lab.decision_rl import actor_input
 from tool_lab.mixed_curriculum import VERSION,RECIPE,SEEDS,schedule,selected_probes
 from tool_lab.mixed_train import ORIGINAL_ADAPTER_SHA256
 
-STARTUP_TESTS = ('test_mixed_learning','test_decision_rl','test_guarded_update','test_sqlite_backend_parity')
+STARTUP_TESTS = ('tests.test_mixed_learning','tests.test_decision_rl','tests.test_guarded_update','tests.test_sqlite_backend_parity')
 
 
 def prepare_data(output,adapter,shell,application):
@@ -96,14 +96,14 @@ def prepare_data(output,adapter,shell,application):
         artifacts={p.name:file_hash(p) for p in stress.iterdir() if p.is_file()},
         limit='A measured stress set, not an exhaustive upper bound; runtime encoding rejects longer histories.'))
     write_json(output/'data-audit.json',audits)
-    write_json(output/'startup-tests.json',dict(modules=list(STARTUP_TESTS),support_files=['test_general_rl.py']))
+    write_json(output/'startup-tests.json',dict(modules=list(STARTUP_TESTS),support_files=['tests/__init__.py','tests/test_general_rl.py']))
     billing=json.loads((ROOT/'.local/decision-curriculum-v3-provider-billing.json').read_text())
     billed=sum(r['amount'] for records in billing['records'].values() for r in records)
     if billed+40>500:raise ValueError('Pilot would exceed remaining original authorization')
     sources=[p for folder in ('tool_lab','general_lab','scale_lab') for p in (ROOT/folder).glob('*.py')]
-    sources += [ROOT/n for n in ('requirements-scale-cuda.txt','requirements-monitor.txt','test_general_rl.py','test_mixed_learning.py',
+    sources += [ROOT/n for n in ('requirements-scale-cuda.txt','requirements-monitor.txt','tests/__init__.py','tests/test_general_rl.py','tests/test_mixed_learning.py',
         'docs/mixed-decisions-v1-protocol.md')]
-    sources += [ROOT/(name+'.py') for name in STARTUP_TESTS]
+    sources += [ROOT/(name.replace('.', '/')+'.py') for name in STARTUP_TESTS]
     frozen=dict(version=VERSION,recipe=RECIPE,seeds=list(SEEDS),model=MODELS['qwen35-9b'],
         adapter={p.name:file_hash(p) for p in adapter.iterdir() if p.is_file()},
         initial_trainable_sha256='17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27',

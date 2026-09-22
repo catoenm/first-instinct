@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = 'toolsandbox-transfer-supervised-local-v1'
 PACKAGES = ('torch', 'transformers', 'peft', 'safetensors', 'tokenizers', 'huggingface-hub')
 SOURCE_FILES = (
-    'general_lab/toolsandbox_transfer_local.py', 'test_toolsandbox_transfer_local.py',
+    'general_lab/toolsandbox_transfer_local.py', 'tests/test_toolsandbox_transfer_local.py',
     'docs/toolsandbox-transfer-local-v1-protocol.md',
     'general_lab/robustness_local.py', 'general_lab/robustness.py',
     'general_lab/interface.py', 'general_lab/serve.py',

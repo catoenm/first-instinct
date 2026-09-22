@@ -367,7 +367,7 @@ def questions(cases, traces):
 
 def collect(source,output):
     output.mkdir(parents=True,exist_ok=False);cases=fixtures();write_rows(output/'cases.jsonl',cases)
-    source_paths=[Path(__file__),Path('general_lab/toolsandbox_pilot.py'),Path('test_application_curriculum.py'),
+    source_paths=[Path(__file__),Path('general_lab/toolsandbox_pilot.py'),Path('tests/test_application_curriculum.py'),
                   Path('docs/application-curriculum-v1-protocol.md')]
     write_json(output/'pre-execution-freeze.json',dict(schema=VERSION,upstream_commit=COMMIT,
         upstream_hashes=SOURCE_HASHES,sources={str(p):file_hash(p) for p in source_paths},

@@ -184,7 +184,7 @@ def prepare(output):
     from transformers import AutoTokenizer
     output.mkdir(parents=True, exist_ok=False)
     sources = [p for parent in ('tool_lab', 'puffer_lab', 'scale_lab', 'general_lab') for p in (ROOT/parent).glob('*.py')]
-    sources += [ROOT/'docs/decision-source-registry-v1-protocol.md', ROOT/'test_decision_sources.py']
+    sources += [ROOT/'docs/decision-source-registry-v1-protocol.md', ROOT/'tests/test_decision_sources.py']
     inputs = {str(p.relative_to(ROOT)):file_hash(p) for path in PATHS.values()
               for p in (ROOT/path).glob('*') if p.is_file()}
     write_json(output/'preparation-freeze.json', dict(version=VERSION, sources={str(p.relative_to(ROOT)):file_hash(p) for p in sources},

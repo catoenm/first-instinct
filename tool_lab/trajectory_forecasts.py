@@ -15,7 +15,7 @@ MAX_COMMANDS = 25000
 SOURCES = ('tool_lab/trajectory_forecasts.py', 'tool_lab/decision_curriculum.py',
            'tool_lab/decision_collect.py', 'tool_lab/mixed_runtime.py', 'tool_lab/evidence_env.py',
            'tool_lab/shell_supervision.py', 'scale_lab/common.py',
-           'docs/trajectory-decisions-v1-protocol.md', 'test_trajectory_forecasts.py')
+           'docs/trajectory-decisions-v1-protocol.md', 'tests/test_trajectory_forecasts.py')
 
 
 def fixtures():

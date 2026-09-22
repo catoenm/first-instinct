@@ -212,8 +212,8 @@ def archive_candidates(args):
     for folder in ('general_lab', 'scale_lab', 'scripts'):
         for path in sorted((args.project / folder).glob('*.py')):
             add(path, 'source/' + str(path.relative_to(args.project)), args.project)
-    for path in sorted(args.project.glob('test_*.py')):
-        add(path, 'source/' + path.name, args.project)
+    for path in sorted((args.project / 'tests').glob('*.py')):
+        add(path, 'source/' + str(path.relative_to(args.project)), args.project)
     for path in sorted((args.project / 'results/outcome-v2').glob('*.json')):
         add(path, 'source/' + str(path.relative_to(args.project)), args.project)
     for folder in ('docs', 'licenses', 'provenance'):

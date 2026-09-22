@@ -158,7 +158,7 @@ def prepare(output):
     sources = [p for folder in ('tool_lab','general_lab','scale_lab','puffer_lab','release_lab') for p in (ROOT/folder).glob('*.py')]
     sources += list((ROOT/'puffer_lab').glob('*.h'))
     sources += [ROOT/n for n in ('tool_lab/calendar_assets/America_New_York.tzif','tool_lab/calendar_assets/provenance.json',
-        'requirements-scale-cuda.txt','requirements-monitor.txt','test_general_rl.py','test_retail_live.py',
+        'requirements-scale-cuda.txt','requirements-monitor.txt','tests/test_general_rl.py','tests/test_retail_live.py',
         'tests/test_retail_actor.py','tests/test_live_contracts.py','tests/test_live_mixed.py','tests/test_live_pilot.py',
         'docs/live-tools-pilot-v1-protocol.md')]
     census = dict(training_case_variants=len(cases),training_shell_mechanisms=len(TRAIN_FAMILIES),retail_goals=3,

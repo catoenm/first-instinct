@@ -75,7 +75,7 @@ class TrainingTests(unittest.TestCase):
                 microbatch_size(*arguments)
 
     def test_padding_multiple_preserves_last_token_scores(self):
-        from test_general_distributed import TinyCausalTransformer
+        from tests.test_general_distributed import TinyCausalTransformer
         torch.manual_seed(929)
         model = TinyCausalTransformer().double()
         rows = [{"input_ids": list(range(1, n + 1)), "option_ids": ["a", "b", "c"][:2 + n % 2],

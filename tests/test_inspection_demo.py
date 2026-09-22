@@ -4,7 +4,7 @@ import json
 import unittest
 
 from inspection_lab.serve import Demo, adjusted_probability, handler_for, value_text
-from test_software_inspection import fixture
+from tests.test_software_inspection import fixture
 
 
 class FakePredictor:

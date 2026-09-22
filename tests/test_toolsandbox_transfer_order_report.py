@@ -8,7 +8,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 PATH = ROOT / 'results/toolsandbox-transfer-order-v1/analyze.py'
 SPEC = importlib.util.spec_from_file_location('option_order_public_report', PATH)
 reporter = importlib.util.module_from_spec(SPEC)

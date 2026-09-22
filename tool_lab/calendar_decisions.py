@@ -374,7 +374,7 @@ def collect(output):
     import time
     output.mkdir(parents=True,exist_ok=False);cases=fixtures();write_rows(output/'cases.jsonl',cases)
     sources=('tool_lab/calendar_decisions.py','tool_lab/calendar_worker.py','tool_lab/calendar_assets/America_New_York.tzif',
-        'tool_lab/calendar_assets/provenance.json','test_calendar_decisions.py','scale_lab/common.py','docs/calendar-decisions-v1-protocol.md')
+        'tool_lab/calendar_assets/provenance.json','tests/test_calendar_decisions.py','scale_lab/common.py','docs/calendar-decisions-v1-protocol.md')
     write_json(output/'pre-execution-freeze.json',dict(version=VERSION,sources={n:file_hash(ROOT/n) for n in sources},
         cases_sha256=file_hash(output/'cases.jsonl'),maximum_distinct_branches=2160,maximum_physical_executions=4320,
         maximum_commands=MAX_COMMANDS,python=sys.version,sqlite=sqlite3.sqlite_version,platform=platform.platform(),

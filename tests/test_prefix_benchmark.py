@@ -212,7 +212,7 @@ class PrefixBenchmarkTests(unittest.TestCase):
                    '_enable_offline_loading(); from huggingface_hub import constants; '
                    'assert constants.HF_HUB_OFFLINE; import sys; assert "scale_lab.infer" not in sys.modules')
         result = subprocess.run([sys.executable, '-c', command], text=True, capture_output=True,
-                                cwd=Path(__file__).resolve().parent, check=False)
+                                cwd=Path(__file__).resolve().parents[1], check=False)
         self.assertEqual(result.returncode, 0, result.stderr)
 
 

@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from test_retail_live import make_episode
+from tests.test_retail_live import make_episode
 from tool_lab.retail_branches import assemble_questions, prefix_observation, identities
 from tool_lab.retail_evidence import verify
 from tool_lab.retail_evidence_policy import DESTINATION, conditions

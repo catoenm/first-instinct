@@ -89,7 +89,7 @@ def prepare(qualified, output):
         raise ValueError("Pinned runtime qualification missing")
     paths = dict(previous["paths"])
     policy = Path(previous["upstream"]) / "data/tau2/domains/retail/policy.md"
-    additions = [Path(__file__), Path("docs/retail-ledger-v1-protocol.md"), Path("test_retail_ledger.py"),
+    additions = [Path(__file__), Path("docs/retail-ledger-v1-protocol.md"), Path('tests/test_retail_ledger.py'),
                  policy, qualified / "runtime.txt"]
     paths.update({str(p.resolve()): sha(p) for p in additions})
     output.mkdir(parents=True, exist_ok=False)

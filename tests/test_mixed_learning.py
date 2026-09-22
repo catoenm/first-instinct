@@ -4,7 +4,7 @@ import unittest
 
 import torch
 
-from test_general_rl import TinyLanguage,TinyTokenizer
+from tests.test_general_rl import TinyLanguage,TinyTokenizer
 from general_lab.rl import prepare
 from tool_lab.evidence_train import EvidencePolicy
 from tool_lab.guarded_mechanics import equal_state

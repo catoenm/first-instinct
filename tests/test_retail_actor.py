@@ -4,7 +4,7 @@ import unittest
 
 import torch
 
-from test_retail_live import make_episode
+from tests.test_retail_live import make_episode
 from tool_lab.retail_actor import actor_input, audit_actor_trace, collect
 from tool_lab.retail_live import RetailEpisode
 

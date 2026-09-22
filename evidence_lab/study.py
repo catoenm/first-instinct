@@ -146,7 +146,7 @@ def main():
     a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
     source=a.output/'source';source.mkdir()
     for name in SOURCES:shutil.copy2(Path(__file__).with_name(name),source/name)
-    for name in ('test_evidence_lab.py','decision_model.py','requirements-calibration.txt',
+    for name in ('tests/test_evidence_lab.py','decision_model.py','requirements-calibration.txt',
                  'requirements-decision-lock.txt','docs/executable-evidence-protocol.md'):
         shutil.copy2(ROOT/name,source/Path(name).name)
     if a.pool:shutil.copytree(a.pool,a.output/'development-pool')

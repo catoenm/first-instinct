@@ -56,8 +56,8 @@ def prepare(transfer, pilot, original, selected, billing, output):
     source_names.update(['tool_lab/appworld_transfer_evaluate.py','tool_lab/appworld_transfer_evaluation_prepare.py',
         'tool_lab/appworld_transfer_evaluation_report.py','tool_lab/appworld_transfer_prepare_v2.py',
         'docs/appworld-transfer-questions-v2-protocol.md','docs/appworld-transfer-evaluation-v2-protocol.md',
-        'test_public_argument_witness.py','test_shared_json.py','test_appworld_questions_v2.py',
-        'test_appworld_shared_input.py','test_appworld_transfer_evaluation.py'])
+        'tests/test_public_argument_witness.py','tests/test_shared_json.py','tests/test_appworld_questions_v2.py',
+        'tests/test_appworld_shared_input.py','tests/test_appworld_transfer_evaluation.py'])
     adapters={name:{p.name:file_hash(p) for p in directory.iterdir() if p.is_file()}
               for name,directory in [('original',original),('selected40',selected)]}
     for name,record in ADAPTERS.items():
@@ -75,8 +75,8 @@ def prepare(transfer, pilot, original, selected, billing, output):
             allocation_usd=12,maximum_total_gpu_rate=5.4,hard_deadline_seconds=5400,
             maximum_compute_usd=8.1,storage_recovery_usd=3.9,billing_checked_at=budget['checked_at']),
         label_token_ids=label_token_ids(tokenizer),pad_id=tokenizer.pad_token_id,
-        startup_tests=['test_public_argument_witness','test_shared_json','test_appworld_questions_v2',
-                       'test_appworld_shared_input','test_appworld_transfer_evaluation'])
+        startup_tests=['tests.test_public_argument_witness','tests.test_shared_json','tests.test_appworld_questions_v2',
+                       'tests.test_appworld_shared_input','tests.test_appworld_transfer_evaluation'])
     write_json(output/'freeze.json',freeze)
     return dict(status='prepared',counts=freeze['counts'],presentations_per_checkpoint=1010,
                 total_presentations=2020,maximum_tokens=max(len(r['input_ids']) for rows in pools.values() for r in rows),

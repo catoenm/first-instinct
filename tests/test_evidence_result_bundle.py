@@ -31,7 +31,7 @@ class EvidenceResultBundleTest(unittest.TestCase):
                 reanalyze(folder)
 
     def test_published_metrics_and_root_pairs(self):
-        folder = Path(__file__).parent/'results/evidence-decisions-v2-final'
+        folder = Path(__file__).parents[1]/'results/evidence-decisions-v2-final'
         result = reanalyze(folder)
         self.assertEqual(result['status'], 'passed')
         self.assertEqual(len(result['paired_roots']), 6)

@@ -121,7 +121,7 @@ def prepare_data(raw,output,adapter):
     write_cases(output/'parity-cases.jsonl',selected.values())
     write_rows(output/'parity-executions.jsonl',[r for r in read_rows(raw/'train-executions.jsonl') if r['case_id'] in ids])
     sources=[p for folder in ('scale_lab','general_lab','tool_lab') for p in (ROOT/folder).glob('*.py')]
-    sources += [ROOT/'requirements-scale-cuda.txt',ROOT/'test_evidence_decisions.py',ROOT/'test_general_rl.py',
+    sources += [ROOT/'requirements-scale-cuda.txt',ROOT/'tests/test_evidence_decisions.py',ROOT/'tests/test_general_rl.py',
                 ROOT/'docs/evidence-decisions-v2-protocol.md']
     manifest=json.loads((raw/'manifest.json').read_text())
     frozen=dict(schema=VERSION,recipe=RECIPE,seeds=list(SEEDS),model=MODELS['qwen35-9b'],

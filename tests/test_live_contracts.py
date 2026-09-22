@@ -7,8 +7,8 @@ import torch
 from torch import nn
 
 from general_lab.rl import prepare
-from test_general_rl import TinyLanguage, TinyTokenizer
-from test_retail_live import make_episode
+from tests.test_general_rl import TinyLanguage, TinyTokenizer
+from tests.test_retail_live import make_episode
 from tests.test_retail_actor import ScriptPolicy
 from tool_lab.guarded_mechanics import equal_state
 from tool_lab.retail_actor import collect as raw_collect

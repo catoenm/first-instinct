@@ -263,7 +263,8 @@ def main():
     (root / 'code_snapshot').mkdir()
     for name in ('train.py', 'environment.py'):
         shutil.copy2(ROOT / 'calibration_lab' / name, root / 'code_snapshot' / name)
-    for name in ('requirements-calibration.txt', 'test_calibration_lab.py'):
+    for name in ('requirements-calibration.txt', 'tests/test_calibration_lab.py'):
+        (root / 'code_snapshot' / name).parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / name, root / 'code_snapshot' / name)
     shutil.copy2(ROOT / 'docs/calibration-experiment.md', root / 'code_snapshot' / 'protocol.md')
     write_json(root / 'runtime.json', {'python': platform.python_version(),

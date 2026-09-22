@@ -13,7 +13,7 @@ from .text_baseline import ROOT, append, binding, read, require, rows, tokenizer
 from .text_render import DESCRIPTIONS, render
 
 TARGETS = ROOT / 'results/puffer-reservation-v1/qualification/conditional-targets.jsonl'
-EXTRA_SOURCES = ('puffer_lab/forecast_probe.py', 'test_reservation_forecast.py',
+EXTRA_SOURCES = ('puffer_lab/forecast_probe.py', 'tests/test_reservation_forecast.py',
                  'docs/reservation-forecast-v1-protocol.md')
 CONTINUATION = (
     'After the specified first action, repeatedly apply the first matching rule below until finish or no turns remain: '

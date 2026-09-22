@@ -53,12 +53,12 @@ def freeze(questions, output, adapter, billing):
         shutil.copyfile(old/original,output/(name+'.jsonl'))
     shutil.copyfile(questions/'preparation.json',output/'question-preparation.json')
     shutil.copyfile(questions/'shortcut-audit.json',output/'shortcut-audit.json')
-    test_modules=['test_supervised_decision_pilot','test_appworld_questions','test_record_codec','test_appworld_positive',
-                  'test_appworld_answer_controls',
-                  'test_appworld_trace','test_appworld_qualification']
+    test_modules=['tests.test_supervised_decision_pilot','tests.test_appworld_questions','tests.test_record_codec','tests.test_appworld_positive',
+                  'tests.test_appworld_answer_controls',
+                  'tests.test_appworld_trace','tests.test_appworld_qualification']
     sources=[p for directory in ('tool_lab','scale_lab','general_lab','puffer_lab') for p in (ROOT/directory).glob('*.py')]
-    sources += [ROOT/(name+'.py') for name in test_modules]
-    sources += [ROOT/n for n in ('docs/appworld-supervised-v1-protocol.md','requirements-scale-cuda.txt','requirements-monitor.txt')]
+    sources += [ROOT/(name.replace('.', '/')+'.py') for name in test_modules]
+    sources += [ROOT/n for n in ('tests/__init__.py','docs/appworld-supervised-v1-protocol.md','requirements-scale-cuda.txt','requirements-monitor.txt')]
     counts={p.stem:len(read_rows(p)) for p in output.glob('*.jsonl')}
     manifest=dict(status='qualified_supervised_pilot',version='appworld-supervised-v1',model=MODELS['qwen35-9b'],
         config=CONFIG, label_token_ids=prepared['label_token_ids'],pad_id=prepared['pad_id'],

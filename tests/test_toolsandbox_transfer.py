@@ -13,7 +13,7 @@ from unittest.mock import patch
 
 from general_lab import toolsandbox_transfer as transfer
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'results/toolsandbox-partial-v1'
 
 

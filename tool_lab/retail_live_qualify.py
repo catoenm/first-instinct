@@ -50,7 +50,7 @@ def prepare(source, output):
         paths[str(path.resolve())] = expected
     for path in [source / "freeze-private.json", source / "audit.json", Path(__file__),
                  Path("tool_lab/retail_live.py"), Path("tool_lab/retail_live_audit.py"),
-                 Path("test_retail_live.py"), Path("docs/retail-live-v1-protocol.md")]:
+                 Path('tests/test_retail_live.py'), Path("docs/retail-live-v1-protocol.md")]:
         paths[str(path.resolve())] = sha(path)
     output.mkdir(parents=True, exist_ok=False)
     write(output / "freeze-private.json", dict(version="retail-live-v1", paths=paths, upstream=old["upstream"],

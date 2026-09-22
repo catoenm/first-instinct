@@ -13,7 +13,7 @@ from games_lab.native import compile_game, library
 from games_lab.rollouts import collect, evaluation_cases
 from games_lab.replay_audit import replay
 from games_lab.mixed_data import CONFIG
-from test_reservation_language_rl import Tokenizer, TinyLanguage
+from tests.test_reservation_language_rl import Tokenizer, TinyLanguage
 
 
 class ReplayAuditTests(unittest.TestCase):

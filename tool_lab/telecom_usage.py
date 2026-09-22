@@ -75,7 +75,7 @@ def review(source, output):
                     row_sha256={r["id"]: digest(r) for r in rows},
                     question_preparation_sha256=sha(source / "preparation.json"),
                     question_source_sha256=sha(source / "candidates-private.jsonl"),
-                    sources={name: sha(name) for name in ("tool_lab/telecom_usage.py", "test_telecom_usage.py",
+                    sources={name: sha(name) for name in ("tool_lab/telecom_usage.py", 'tests/test_telecom_usage.py',
                         "docs/telecom-questions-v1-ownership-correction.md")},
                     model_calls=0, new_worlds=0, training_presentations=0, optimizer_steps=0)
     if counts["training"]:

@@ -20,7 +20,10 @@ outcome forecasts; no new model training or GPU rental is involved.
 The subsequent [costly-evidence pilot](../docs/evidence-decisions-v2-protocol.md)
 adds stale readings, inspection costs and recoverable write failures. Its data
 passed 4,608 executed forecast checks and 2,304 control episodes. A bounded
-three-method, two-seed training comparison has been launched; results are pending.
+three-method, two-seed training comparison is complete. Its
+[results](../docs/evidence-decisions-v2-results.md) show more reliable gains from
+forecast supervision than from reward learning. For the broader curriculum and
+current training work, see the [project guide](../docs/README.md).
 The policy collector executes its current choices and preserves the exact inputs
 and sampling probabilities needed for Proximal Policy Optimization.
 
@@ -35,7 +38,7 @@ repository root; leave the model's Python environment unchanged.
 ```sh
 python3 -m venv .local/harbor-venv
 .local/harbor-venv/bin/python -m pip install -r requirements-harbor.txt
-python3 -m unittest test_harbor_selection test_harbor_report -v
+python3 -m unittest tests.test_harbor_selection tests.test_harbor_report -v
 python3 -m tool_lab.generate --output output/harbor-example/tasks --seeds 101 102
 HARBOR_TELEMETRY=0 PYTHONPATH=. .local/harbor-venv/bin/harbor run --config tool_lab/example-job.json
 python3 -m tool_lab.report --job output/harbor-example/jobs/command-selection-example --output output/harbor-example/report.json

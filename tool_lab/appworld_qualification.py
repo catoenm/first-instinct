@@ -66,7 +66,7 @@ def prepare(root, output, upstream, inventory):
     protected += [p for p in (root/'data/base_dbs').glob('*') if p.is_file()]
     sources = [p for p in (upstream/'src/appworld').rglob('*') if p.is_file() and p.suffix in ('.py','.bundle')]
     paths = protected + sources + [Path(__file__).resolve(),Path('docs/appworld-local-v1-protocol.md').resolve(),
-                                  Path('test_appworld_qualification.py').resolve()]
+                                  Path('tests/test_appworld_qualification.py').resolve()]
     plan = dict(version=VERSION, commit=COMMIT, root=str(root.resolve()), upstream=str(upstream.resolve()),
         selected=selected, reserved_mechanism='any workflow requiring venmo',
         available_train_tasks=len(records), available_train_generators=len({r['generator_id'] for r in records}),

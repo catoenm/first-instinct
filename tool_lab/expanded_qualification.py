@@ -90,7 +90,7 @@ def qualify(output):
     for n in SOURCES:
         p=source/n;p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/n,p)
     frozen=dict(version=VERSION,jobs=jobs,linux_job_ids=[j['id'] for j in selected],image=IMAGE,
-        sources={n:file_hash(ROOT/n) for n in SOURCES+('docs/expanded-runtime-v1-protocol.md','test_expanded_runtime.py')},
+        sources={n:file_hash(ROOT/n) for n in SOURCES+('docs/expanded-runtime-v1-protocol.md','tests/test_expanded_runtime.py')},
         max_native_episodes=800,max_linux_episodes=96,max_actions_per_platform=9000,max_seconds_per_platform=900,
         model_evaluated=False,optimizer_steps=0,calendar_ownership='reserved_transfer')
     write_json(output/'pre-execution-freeze.json',frozen)

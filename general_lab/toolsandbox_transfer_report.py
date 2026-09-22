@@ -15,7 +15,7 @@ from . import toolsandbox_transfer_execute as executor
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = 'toolsandbox-transfer-cohort-report-v1'
 STRATA = ('root_state', 'phone_prior_weighted')
-SOURCE_FILES = ('general_lab/toolsandbox_transfer_report.py', 'test_toolsandbox_transfer_report.py',
+SOURCE_FILES = ('general_lab/toolsandbox_transfer_report.py', 'tests/test_toolsandbox_transfer_report.py',
                 'docs/toolsandbox-transfer-report.md')
 
 

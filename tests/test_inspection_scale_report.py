@@ -1,7 +1,7 @@
 import unittest
 
 from inspection_lab.scale_report import probabilities,scale,fit_temperature,summarize
-from test_software_inspection import fixture
+from tests.test_software_inspection import fixture
 from inspection_lab.environment import MASKS
 
 

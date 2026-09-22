@@ -10,7 +10,7 @@ import torch
 from general_lab.outcome_train import gradient_diagnostic, rollout_kl, update
 from general_lab.rl import prepare
 from scale_lab.common import write_json
-from test_general_rl import TinyLanguage, TinyTokenizer
+from tests.test_general_rl import TinyLanguage, TinyTokenizer
 from tool_lab import decision_curriculum as env
 from tool_lab.decision_rl import collect, audit_actor_trace
 from tool_lab.evidence_train import EvidencePolicy

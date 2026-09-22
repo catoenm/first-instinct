@@ -45,7 +45,7 @@ class OutcomeMonitorTests(unittest.TestCase):
                 'assert "torch" not in sys.modules; assert "tensorboard" not in sys.modules; '
                 'assert snapshot("/nonexistent-outcome-monitor-root")["runs"] == {}')
         result = subprocess.run([sys.executable, '-S', '-c', code], capture_output=True, text=True,
-                                cwd=Path(__file__).resolve().parent, check=False)
+                                cwd=Path(__file__).resolve().parents[1], check=False)
         self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_snapshot_allowlists_aggregates_and_excludes_private_artifacts(self):

@@ -112,7 +112,7 @@ def prepare(output, adapter):
     source_paths = [p for directory in ('scale_lab', 'puffer_lab', 'general_lab')
                     for p in sorted((ROOT / directory).glob('*.py'))]
     source_paths += [ROOT / 'puffer_lab' / n for n in ('native_bridge.c', 'reservation_core.h')]
-    source_paths += [ROOT / 'docs/consequence-training-v1-protocol.md', ROOT / 'test_consequence_train.py']
+    source_paths += [ROOT / 'docs/consequence-training-v1-protocol.md', ROOT / 'tests/test_consequence_train.py']
     frozen = dict(schema='consequence-training-v1', created_at=time.time(), config=CONFIG, model=spec,
                   label_token_ids=label_token_ids(tok), pad_id=tok.pad_token_id or tok.eos_token_id,
                   files={p.name: file_hash(p) for p in sorted(output.glob('*'))},

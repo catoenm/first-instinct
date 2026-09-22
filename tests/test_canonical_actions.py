@@ -4,7 +4,7 @@ import unittest
 
 import torch
 
-from test_general_rl import TinyLanguage
+from tests.test_general_rl import TinyLanguage
 from tests.test_live_contracts import forecast_rows
 from tool_lab.canonical_actions import CanonicalActionPolicy
 from tool_lab.live_contracts import LivePolicy
@@ -28,7 +28,7 @@ class CanonicalActionTests(unittest.TestCase):
     def test_all_existing_mixed_optimizer_controls_with_canonical_actions(self):
         from unittest.mock import patch
         from tests.test_live_mixed import MixedContracts
-        from test_general_rl import TinyLanguage
+        from tests.test_general_rl import TinyLanguage
         factory=lambda: CanonicalActionPolicy(TinyLanguage(),list(range(1,37)),0,'cpu')
         for name in ('test_all_three_arms_can_use_shared_actor_without_task_relabeling',
                      'test_real_shell_receipts_keep_scale_one_and_uncentered_advantages',

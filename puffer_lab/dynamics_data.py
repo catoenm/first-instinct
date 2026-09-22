@@ -12,7 +12,7 @@ from .text_render import DESCRIPTIONS, REWORDED, VARIANTS, render
 
 BRANCHES = ROOT / 'results/puffer-reservation-v1/qualification/branches.jsonl'
 TARGETS = ROOT / 'results/puffer-reservation-v1/qualification/conditional-targets.jsonl'
-SOURCES = ('puffer_lab/dynamics_data.py', 'test_reservation_dynamics.py',
+SOURCES = ('puffer_lab/dynamics_data.py', 'tests/test_reservation_dynamics.py',
            'docs/reservation-dynamics-data-v1.md', 'puffer_lab/text_render.py', 'puffer_lab/contract.py')
 EVENTS = {
     'request': ('What is the status of request 17 immediately after this command?',

@@ -40,7 +40,7 @@ def prepare(root, output, upstream, inventory, training_freeze):
              Path('tool_lab/appworld_controller_diagnostic.py').resolve(),
              Path('tool_lab/appworld_shortcuts.py').resolve(),
              Path('docs/appworld-transfer-local-v1-protocol.md').resolve(),
-             Path('test_appworld_transfer_qualification.py').resolve()}
+             Path('tests/test_appworld_transfer_qualification.py').resolve()}
     paths.update(p for p in (root/'data/base_dbs').rglob('*') if p.is_file())
     paths.update(p for p in (upstream/'src/appworld').rglob('*')
                  if p.is_file() and p.suffix in ('.py', '.bundle'))

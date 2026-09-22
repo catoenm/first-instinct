@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = 'toolsandbox-transfer-option-order-v1'
 ANALYZER = 'results/toolsandbox-transfer-supervised-v1/analyze.py'
 SUMMARY = 'results/toolsandbox-transfer-supervised-v1/summary.json'
-SOURCES = ('general_lab/toolsandbox_transfer_order.py', 'test_toolsandbox_transfer_order.py',
+SOURCES = ('general_lab/toolsandbox_transfer_order.py', 'tests/test_toolsandbox_transfer_order.py',
            'docs/toolsandbox-transfer-order-v1-protocol.md', ANALYZER, SUMMARY,
            *support.SOURCES, *support.cohort_api.SOURCE_FILES)
 SETTINGS = {'port': 8766, 'model_calls': 240, 'batch_size': 1, 'max_tokens': 1536,

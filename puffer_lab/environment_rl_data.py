@@ -205,7 +205,7 @@ def prepare(output, adapter):
     sources = [p for directory in ('scale_lab', 'puffer_lab', 'general_lab')
                for p in sorted((ROOT / directory).glob('*.py'))]
     sources += [ROOT / 'puffer_lab' / n for n in ('native_bridge.c', 'reservation_core.h')]
-    sources += [ROOT / 'docs/reservation-rl-v1-protocol.md', ROOT / 'test_reservation_language_rl.py']
+    sources += [ROOT / 'docs/reservation-rl-v1-protocol.md', ROOT / 'tests/test_reservation_language_rl.py']
     frozen = dict(schema='reservation-language-rl-v1', created_at=time.time(), config=CONFIG,
                   model=MODELS['qwen35-9b'], counts=counts, maximum_tokens=lengths,
                   unique_prompt_counts={k: len(v) for k, v in hashes.items()},

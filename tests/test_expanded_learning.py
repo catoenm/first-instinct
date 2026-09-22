@@ -5,7 +5,7 @@ import unittest
 import torch
 from torch import nn
 
-from test_general_rl import TinyLanguage,TinyTokenizer
+from tests.test_general_rl import TinyLanguage,TinyTokenizer
 from general_lab.rl import prepare
 from tool_lab.guarded_mechanics import equal_state
 from tool_lab.expanded_learning import Policy,outcome_loss,forecast_metrics,guard_reference,guard_measure,learning_step

@@ -20,7 +20,7 @@ SCHEMA = 'typed-robustness-foundation-control-v1'
 ALIAS = 'qwen35-9b'
 MODEL = {'id': 'Qwen/Qwen3.5-9B', 'revision': 'c202236235762e1c871ad0ccb60c8ee5ba337b9a', 'kind': 'qwen3_5'}
 AUDIT = 'results/general-robustness-v1'
-ADDED_SOURCES = ('general_lab/robustness_foundation.py', 'test_robustness_foundation.py',
+ADDED_SOURCES = ('general_lab/robustness_foundation.py', 'tests/test_robustness_foundation.py',
                  'docs/general-robustness-foundation-v1-protocol.md', 'general_lab/robustness_report.py')
 PACKAGES = ('torch', 'transformers', 'peft', 'safetensors', 'tokenizers', 'huggingface-hub')
 QUESTION_LIMIT = 456

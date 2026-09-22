@@ -4,7 +4,7 @@ from unittest.mock import patch
 import torch
 
 from tool_lab.decision_rl import actor_input, forecast_metrics, collect, audit_actor_trace
-from test_general_rl import TinyTokenizer
+from tests.test_general_rl import TinyTokenizer
 
 
 class DecisionLearningContracts(unittest.TestCase):

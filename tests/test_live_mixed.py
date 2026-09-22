@@ -7,8 +7,8 @@ import unittest
 import torch
 
 from general_lab.rl import snapshot, _hash_trainable
-from test_general_rl import TinyTokenizer
-from test_retail_live import make_episode
+from tests.test_general_rl import TinyTokenizer
+from tests.test_retail_live import make_episode
 from tests.test_live_contracts import ARGS, forecast_rows, policy
 from tool_lab.filesystem_decisions import fixtures
 from tool_lab.expanded_runtime import reservation_cases

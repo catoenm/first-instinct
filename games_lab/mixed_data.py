@@ -124,7 +124,7 @@ def prepare(output, adapter):
     sources = [p for folder in ('scale_lab', 'general_lab', 'puffer_lab', 'games_lab')
                for p in (ROOT / folder).rglob('*') if p.is_file() and
                (p.suffix in ('.py', '.c', '.h') or p.name.startswith('LICENSE') or p.name == 'provenance.json')]
-    sources += [ROOT / 'test_reservation_language_rl.py', ROOT / 'test_puffer_games.py', ROOT / 'test_mixed_game_rl.py', ROOT / 'test_game_pipeline.py',
+    sources += [ROOT / 'tests/test_reservation_language_rl.py', ROOT / 'tests/test_puffer_games.py', ROOT / 'tests/test_mixed_game_rl.py', ROOT / 'tests/test_game_pipeline.py',
                 ROOT / 'docs/mixed-game-training-v1-protocol.md', ROOT / 'requirements-scale-cuda.txt']
     frozen = dict(schema='mixed-game-training-v1', created_at=time.time(), config=CONFIG, supervised_config=SUPERVISED,
                   model=MODELS['qwen35-9b'], starting_adapter_sha256=ADAPTER_SHA,

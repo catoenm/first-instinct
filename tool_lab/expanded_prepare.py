@@ -15,8 +15,8 @@ from tool_lab.expanded_curriculum import VERSION,RECIPE,SEEDS,TRAIN_FAMILIES,sch
 
 ADAPTER_SHA='882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a'
 INITIAL_TENSOR_SHA='17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27'
-STARTUP_TESTS=('test_expanded_runtime','test_expanded_learning','test_expanded_curriculum',
-               'test_guarded_update','test_decision_rl','test_sqlite_backend_parity')
+STARTUP_TESTS=('tests.test_expanded_runtime','tests.test_expanded_learning','tests.test_expanded_curriculum',
+               'tests.test_guarded_update','tests.test_decision_rl','tests.test_sqlite_backend_parity')
 
 
 def check_sources(path,key='sources'):
@@ -93,12 +93,12 @@ def prepare_data(output,adapter):
                       ('learning-mechanics-plan.json',mechanics/'plan.json'),('source-registry.json',index/'report.json')]:
         shutil.copyfile(path,output/name)
     write_json(output/'data-audits.json',audits)
-    write_json(output/'startup-tests.json',dict(modules=list(STARTUP_TESTS),support_files=['test_general_rl.py']))
+    write_json(output/'startup-tests.json',dict(modules=list(STARTUP_TESTS),support_files=['tests/__init__.py','tests/test_general_rl.py']))
     sources=[p for folder in ('tool_lab','general_lab','scale_lab','puffer_lab') for p in (ROOT/folder).glob('*.py')]
     sources += list((ROOT/'puffer_lab').glob('*.h'))
     sources += [ROOT/n for n in ('tool_lab/calendar_assets/America_New_York.tzif','tool_lab/calendar_assets/provenance.json',
-        'requirements-scale-cuda.txt','requirements-monitor.txt','test_general_rl.py','docs/expanded-decisions-v1-protocol.md')]
-    sources += [ROOT/(n+'.py') for n in STARTUP_TESTS]
+        'requirements-scale-cuda.txt','requirements-monitor.txt','tests/__init__.py','tests/test_general_rl.py','docs/expanded-decisions-v1-protocol.md')]
+    sources += [ROOT/(n.replace('.', '/')+'.py') for n in STARTUP_TESTS]
     frozen=dict(version=VERSION,recipe=RECIPE,seeds=list(SEEDS),model=MODELS['qwen35-9b'],
         adapter={p.name:file_hash(p) for p in adapter.iterdir() if p.is_file()},initial_trainable_sha256=INITIAL_TENSOR_SHA,
         sources={str(p.relative_to(ROOT)):file_hash(p) for p in sources},files={p.name:file_hash(p) for p in output.iterdir() if p.is_file()},

@@ -2,7 +2,7 @@ import copy
 import unittest
 
 from scale_lab.common import encode
-from test_general_rl import TinyTokenizer
+from tests.test_general_rl import TinyTokenizer
 from tool_lab.report_contract import augment, STATE_KEYS
 from tool_lab.revisioned_pilot_runtime import ContractTokenizer
 from tool_lab.revisioned_pilot_plan import schedules, RECIPE, SEEDS
