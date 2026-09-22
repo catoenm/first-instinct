@@ -1,6 +1,7 @@
-"""Serve user-defined decisions from one resident saved adapter on localhost."""
+"""Serve the decision demo with a resident adapter or a loopback model server."""
 
 import argparse
+from http.client import HTTPConnection, HTTPException
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import math
@@ -123,6 +124,69 @@ class Demo:
         return {**answer(payload, self.predictor), **self.metadata}
 
 
+class ModelUnavailable(RuntimeError):
+    pass
+
+
+class RemoteDemo:
+    """Keep the page local while a model runs behind a loopback SSH tunnel."""
+    def __init__(self, upstream):
+        parsed = urlsplit(upstream)
+        if (parsed.scheme != "http" or parsed.hostname != "127.0.0.1"
+                or parsed.username or parsed.password or parsed.path not in ("", "/")
+                or parsed.query or parsed.fragment or parsed.port is None
+                or not 1024 <= parsed.port <= 65535):
+            raise ValueError("Use an upstream such as http://127.0.0.1:8767")
+        self.port = parsed.port
+        self.csrf_token = secrets.token_urlsafe(32)
+        self.gate = threading.Lock()
+
+    def _request(self, method, path, payload=None, token=None):
+        connection = HTTPConnection("127.0.0.1", self.port, timeout=55 if payload else 3)
+        headers = {"Content-Type": "application/json"}
+        if token is not None:
+            headers["X-CSRF-Token"] = token
+        body = json.dumps(payload, allow_nan=False).encode() if payload is not None else None
+        try:
+            connection.request(method, path, body=body, headers=headers)
+            response = connection.getresponse()
+            raw = response.read(2 * 1024 * 1024 + 1)
+            if len(raw) > 2 * 1024 * 1024:
+                raise ValueError("Oversized model response")
+            result = strict_json(raw)
+            if not isinstance(result, dict):
+                raise ValueError("Invalid model response")
+            status = response.status
+        except (OSError, HTTPException, ValueError) as error:
+            raise ModelUnavailable("Model offline. Reconnect the model server to play.") from error
+        finally:
+            connection.close()
+        if status != 200:
+            if status in (400, 413, 415):
+                raise ValueError(str(result.get("error", "Invalid model request")))
+            raise ModelUnavailable("The model is unavailable or busy. Try again shortly.")
+        return result
+
+    def _model_status(self):
+        result = self._request("GET", "/api/status")
+        token = result.get("csrf_token")
+        if (result.get("ready") is not True or not isinstance(token, str)
+                or not token.isascii() or not token or "\r" in token or "\n" in token):
+            raise ModelUnavailable("Model offline. Reconnect the model server to play.")
+        return result
+
+    def status(self):
+        try:
+            return {**self._model_status(), "csrf_token": self.csrf_token}
+        except ModelUnavailable:
+            return {"ready": False, "csrf_token": self.csrf_token}
+
+    def answer(self, payload):
+        # Fetch a fresh upstream token so a model restart needs no page restart.
+        remote = self._model_status()
+        return self._request("POST", "/api/answer", payload, remote["csrf_token"])
+
+
 def handler_for(demo):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, _format, *args):
@@ -217,6 +281,8 @@ def handler_for(demo):
                 return
             try:
                 self.reply(200, demo.answer(payload))
+            except ModelUnavailable as error:
+                self.reply(503, {"error": str(error)})
             except ValueError as error:
                 self.reply(400, {"error": str(error)})
             except Exception:
@@ -229,7 +295,9 @@ def handler_for(demo):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--run", type=Path, required=True)
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--run", type=Path)
+    source.add_argument("--upstream", help="Loopback model server, typically an SSH tunnel")
     parser.add_argument("--model", default="qwen35-9b")
     parser.add_argument("--device", choices=["auto", "cpu", "mps", "cuda"], default="auto")
     parser.add_argument("--max-tokens", type=int, default=1536)
@@ -239,16 +307,24 @@ def main():
         parser.error("Use a port between 1024 and 65535")
     if args.max_tokens <= 0:
         parser.error("Token limit must be positive")
-    from scale_lab.common import MODELS
-    if args.model not in MODELS:
-        parser.error("Choose a supported model: " + ", ".join(MODELS))
-    receipt = read_receipt(args.run)
-    from scale_lab.infer import Predictor
-    predictor = Predictor(args.model, args.run, args.max_tokens, args.device)
-    demo = Demo(predictor, receipt)
+    if args.upstream:
+        try:
+            demo = RemoteDemo(args.upstream)
+        except ValueError as error:
+            parser.error(str(error))
+        if demo.port == args.port:
+            parser.error("The model server must use a different port from the page")
+    else:
+        from scale_lab.common import MODELS
+        if args.model not in MODELS:
+            parser.error("Choose a supported model: " + ", ".join(MODELS))
+        receipt = read_receipt(args.run)
+        from scale_lab.infer import Predictor
+        predictor = Predictor(args.model, args.run, args.max_tokens, args.device)
+        demo = Demo(predictor, receipt)
     server = ThreadingHTTPServer(("127.0.0.1", args.port), handler_for(demo))
     print(f"General decision demo ready at http://127.0.0.1:{args.port}", flush=True)
-    print(demo.metadata["checkpoint"]["label"], flush=True)
+    print("Model through " + args.upstream if args.upstream else demo.metadata["checkpoint"]["label"], flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

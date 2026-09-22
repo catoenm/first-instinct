@@ -10,7 +10,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from general_lab.serve import (Demo, MAX_REQUEST_BYTES, checkpoint_metadata,
+from general_lab.serve import (Demo, RemoteDemo, MAX_REQUEST_BYTES, checkpoint_metadata,
                                handler_for, main, strict_json)
 
 
@@ -116,6 +116,45 @@ class GeneralServeTests(unittest.TestCase):
 
     def test_tokens_are_unique_to_each_resident_demo(self):
         self.assertNotEqual(self.demo.csrf_token, Demo(FakePredictor(), receipt()).csrf_token)
+
+    def test_remote_page_survives_model_disconnect_without_inventing_predictions(self):
+        self.demo = RemoteDemo("http://127.0.0.1:8767")
+        self.handler = handler_for(self.demo)
+        with patch("general_lab.serve.HTTPConnection") as connection:
+            connection.return_value.request.side_effect = ConnectionRefusedError
+            self.assertEqual(self.request(path="/")[0], 200)
+            self.assertFalse(self.request()[2]["ready"])
+            status, _, result = self.post()
+        self.assertEqual(status, 503)
+        self.assertIn("offline", result["error"])
+        self.assertNotIn("answers", result)
+
+    def test_remote_model_restart_refreshes_upstream_token(self):
+        self.demo = RemoteDemo("http://127.0.0.1:8767")
+        self.handler = handler_for(self.demo)
+        seen = []
+        def remote(method, path, body=None, token=None):
+            seen.append((method, path, body, token))
+            if method == "GET":
+                return {"ready": True, "csrf_token": "remote-" + str(len(seen))}
+            return {"answers": {"ready": {"probability_yes": .75}}}
+        with patch.object(self.demo, "_request", side_effect=remote):
+            status = self.request()[2]
+            self.assertEqual(status["csrf_token"], self.demo.csrf_token)
+            first = self.post()[2]
+            second = self.post()[2]
+        self.assertEqual(first, second)
+        self.assertEqual(seen[2][3], "remote-2")
+        self.assertEqual(seen[4][3], "remote-4")
+        self.assertEqual(seen[2][2], payload())
+
+    def test_remote_accepts_only_explicit_loopback_destinations(self):
+        for url in ("https://127.0.0.1:8767", "http://example.com:8767",
+                    "http://127.0.0.1", "http://user@127.0.0.1:8767",
+                    "http://127.0.0.1:8767/api", "http://127.0.0.1:8767?x=1",
+                    "http://127.0.0.1:80", "http://127.0.0.1:8767#fragment"):
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                RemoteDemo(url)
 
     def test_host_and_origin_restrictions_include_read_endpoints(self):
         for headers in ({"Host": "evil.example:8766"}, {"Host": None},

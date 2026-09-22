@@ -40,6 +40,19 @@ The server keeps one model loaded and accepts one inference request at a time.
 It binds to localhost and does not save submitted questions or state. It is a
 local development demo, not a public hosting setup.
 
+### Keep the page available while using a remote model
+
+Run the model server on port 8767 on the GPU machine and forward that port to
+your computer with SSH. Then serve the page locally without loading any weights:
+
+```bash
+python -m general_lab.serve --upstream http://127.0.0.1:8767
+```
+
+The page stays accessible if the model disconnects, shows **Offline**, and returns
+no predictions until the connection is restored. Press **Start model** to retry.
+Both the page and the forwarded model port must remain bound to localhost.
+
 ## Try it
 
 1. Press **Start model** to watch it choose successive moves.
