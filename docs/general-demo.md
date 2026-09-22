@@ -1,9 +1,9 @@
 # General decision demo
 
-The local browser demo is a compact retro workbench with four example tabs:
-Parcel, Support, Access, and Severity, plus a **Your own** editor. One editable context and a Run button
-remain visible at a time. The examples exercise choice, yes/no, and ordered
-severity questions against the actual trained language model.
+The browser demo is a compact retro game of **Snake**. On each turn, the game
+sends its visible board, recent moves and three candidate directions to the
+trained language model. It executes the model's returned choice and displays
+its probabilities. A wall or body collision ends the game.
 
 The released demo uses the supervised checkpoint selected at step 2,742.
 Start a local server with the instructions below. See the
@@ -15,8 +15,10 @@ includes all selected and latest adapters, predictions, and experiment receipts.
 
 Download the archive and its checksum manifest from that release, check the
 archive's SHA-256, then extract it and run `python verify.py` inside the extracted
-directory. Install `requirements-scale.txt` there and use `--run runs/supervised`
-in the command below. The archive includes this demo; no frontend build is needed.
+directory. Use the current repository checkout for the Snake interface; the
+older release archive contains an earlier demo. Install `requirements-scale.txt`
+in the checkout and pass the extracted `runs/supervised` directory to `--run`
+below. No frontend build is needed.
 
 ## Run a saved checkpoint
 
@@ -40,17 +42,18 @@ local development demo, not a public hosting setup.
 
 ## Try it
 
-1. Choose an example tab and read its context and possible answers.
-2. Select **Run decision** to see the model's probabilities.
-3. Edit the context and run again. Try changing the parcel's delay, asking
-   support about a password, changing Robin's role, or describing a milder incident.
-4. **Your own** accepts an editable question, context and answer definitions.
-   Choose a list of answers, a yes/no proposition, or an ordered scale. Commands
-   supplied as answers are scored; this page does not execute them.
-5. **Reset** restores the selected example. Switching tabs preserves edits;
-   editing or switching clears the previous result. Arrow keys also move between tabs.
+1. Press **Start model** to watch it choose successive moves.
+2. **Pause** stops automatic play after any move already in flight.
+3. **One move** asks the model for a single decision; **New game** resets the board.
+4. Expand **What does the model see?** to inspect the exact latest request.
 
-The note below the explanation identifies the loaded model and its training
+The game removes reverse turns, supplies mechanically computed immediate
+collision and food-distance observations, and executes the returned choice.
+There is no heuristic fallback or collision veto. These observations are not
+learned consequence forecasts. This is an interactive example, not an independent
+benchmark of game-playing or general decision competence.
+
+The footer identifies the loaded model and its training
 status. Unfinished runs are labeled **Training preview**. If a reinforcement
 run selects update zero, the demo identifies it as the supervised starting
 checkpoint: completed reinforcement updates elsewhere in the run do not change
@@ -58,12 +61,11 @@ the selected model.
 
 ## Limits of this experiment
 
-The browser presents one question at a time, with answer definitions supplied
-by the selected example. The underlying interface supports arbitrary user-defined
-choice, yes/no, and ordered-level questions. It scores supplied answers directly,
-without generating an explanation first. Use the command below and edit its
-input file to supply your own questions and answer definitions. The severity
-tab shows each level's probability and highlights the most probable level.
+The browser asks a new choice question after every move. The underlying
+interface also supports arbitrary caller-defined choices, yes/no propositions
+and ordered levels. It scores supplied answers without generating an explanation.
+Use the command below and edit its input file to supply your own questions and
+answer definitions.
 
 Each question independently includes the shared state and its own answer
 definitions. The interface accepts up to 32 questions with 2–36 options each

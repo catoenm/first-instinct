@@ -39,3 +39,5 @@ jobs:
           HF_HUB_OFFLINE: '1'
           TOKENIZERS_PARALLELISM: 'false'
         run: python -m unittest discover -s tests -t . -p 'test_*.py' -v
+      - name: Check Snake game rules
+        run: node --test tests/test_snake.mjs

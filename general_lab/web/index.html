@@ -1,72 +1,24 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An open experiment in language models that make decisions. Give it context. Get an answer and its probability.">
-  <meta name="theme-color" content="#eeeade">
-  <title>First Instinct</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="/app.js" defer></script>
-</head>
-<body>
-  <main>
-    <header class="masthead">
-      <div>
-        <p class="eyebrow">An open model experiment / 001</p>
-        <h1><span class="brand-mark" aria-hidden="true">fi.</span>First Instinct</h1>
-      </div>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Watch First Instinct choose its next move. A small language model plays Snake with constrained decisions.">
+<meta name="theme-color" content="#eeeade"><title>First Instinct — Snake</title>
+<link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body><main>
+<header class="masthead"><div><p class="eyebrow">An open model experiment / 002</p><h1><span class="brand-mark" aria-hidden="true">fi.</span>First Instinct</h1></div>
       <a class="github" href="https://github.com/catoenm/first-instinct" aria-label="First Instinct on GitHub" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.16 1.18A11 11 0 0 1 12 6.02c.98 0 1.96.13 2.88.39 2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.42.36.78 1.06.78 2.14v3.16c0 .31.21.68.79.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
       </a>
-    </header>
-    <p class="intro">Give it context. Give it choices. Get a decision.</p>
-    <section class="workbench" aria-label="Try the model">
-      <div class="window-bar"><span>Decision workbench</span><span id="connection" class="connection">Connecting</span></div>
-      <div class="tabs" role="tablist" aria-label="Example scenarios">
-        <button id="tab-parcel" type="button" role="tab" aria-selected="true" aria-controls="example-panel" data-example="parcel"><span>01</span> Parcel</button>
-        <button id="tab-support" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="support"><span>02</span> Support</button>
-        <button id="tab-access" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="access"><span>03</span> Access</button>
-        <button id="tab-severity" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="severity"><span>04</span> Severity</button>
-        <button id="tab-custom" type="button" role="tab" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-example="custom"><span>05</span> Your own</button>
-      </div>
-      <form id="demo">
-        <div id="example-panel" role="tabpanel" aria-labelledby="tab-parcel">
-          <div class="question-line"><h2 id="question">What should happen to this parcel?</h2><span id="question-type" class="type-label">Choose one</span></div>
-          <div id="custom-fields" hidden>
-            <div class="field-heading"><label for="custom-question">Your question</label><select id="custom-kind" aria-label="Answer format"><option value="choice">Choose one</option><option value="binary">Yes or no</option><option value="score">Ordered scale</option></select></div>
-            <input id="custom-question" type="text" value="What should I do next?" maxlength="2000">
-            <div id="custom-options-field">
-              <div class="field-heading"><label for="custom-options">Answers <span>/ one per line</span></label></div>
-              <textarea id="custom-options" rows="3" spellcheck="false" aria-describedby="custom-options-hint">Check the review status
-Publish the release
-Delete the release</textarea>
-              <p id="custom-options-hint" class="hint">Supply 2–36 answers. For a scale, list levels from lowest to highest.</p>
-            </div>
-          </div>
-          <div class="field-heading"><label for="example">Context <span>/ editable</span></label><button id="reset" type="button" class="text-button" title="Restore this example">↺ Reset</button></div>
-          <textarea id="example" rows="4" required spellcheck="false" aria-describedby="hint">Expedite a parcel if it is at least two days late. Otherwise, wait.
-
-This parcel is three days late.</textarea>
-          <p id="hint" class="hint">Try changing “three” to “one”.</p>
-          <div class="run-line">
-            <button id="run" class="run-button" type="submit" disabled><span id="run-label">Run decision</span><span aria-hidden="true">↵</span></button>
-            <p id="status" role="status" aria-live="polite">Connecting to the model…</p>
-          </div>
-          <div class="output-heading"><span>Model output</span><span>Probability</span></div>
-          <div id="result" aria-label="Answer probabilities"></div>
-          <p id="probability-note" class="note">Run to see the model’s probabilities for these answers.</p>
-        </div>
-      </form>
-    </section>
-    <section class="about" aria-labelledby="about-title">
-      <h2 id="about-title">A small experiment in making decisions.</h2>
-      <p>We adapted Qwen3.5-9B on <strong>350,857 examples</strong> of instructions, code-checked reasoning, and simulated decisions. It scores the answers you supply in one pass, without writing a response.</p>
-      <p>Supervised training improved held-out answers. Four reinforcement-learning runs did not consistently improve decisions, so this demo uses the supervised model.</p>
-      <a href="https://github.com/catoenm/first-instinct/blob/main/docs/general-reinforcement-results.md" target="_blank" rel="noopener noreferrer">Read the results <span aria-hidden="true">↗</span></a>
-    </section>
-    <footer><span id="model-note">Loading model status…</span><span class="footer-mark" aria-hidden="true">END OF TRANSMISSION _</span></footer>
-    <noscript><p>Enable JavaScript to choose and run an example.</p></noscript>
-  </main>
-</body>
-</html>
+</header>
+<p class="intro">A language model. Three choices. One hungry snake.</p>
+<section class="workbench" aria-label="Model plays Snake">
+<div class="window-bar"><span>SNAKE / autonomous decisions</span><span id="connection" class="connection">Connecting</span></div>
+<div class="scoreboard"><div>Food <strong id="score">00</strong></div><div>Moves <strong id="moves">000</strong></div><div>Best this visit <strong id="best">00</strong></div></div>
+<div class="game-layout"><div class="screen"><canvas id="board" width="400" height="400" role="img" aria-label="Snake board"></canvas><div id="overlay" class="overlay" hidden><strong id="end-title">Game over.</strong><span id="end-note"></span></div></div>
+<aside class="decision"><p class="eyebrow">Latest decision</p><div id="choices" aria-label="Move probabilities"></div><p class="latency">Inference <span id="latency">—</span></p><p class="note">Probabilities over moves. Every chosen move is executed.</p></aside></div>
+<div class="controls"><button id="start" class="run-button" type="button">Start model</button><button id="step" type="button">One move</button><button id="reset" type="button">New game</button></div>
+<p id="status" role="status" aria-live="polite">The model chooses. The game executes.</p>
+</section>
+<section class="about"><h2>Small decisions, made by a language model.</h2><p>Each turn, we give the model the board, the goal, and three directions. It scores those choices in one pass. The highest-probability move becomes the next action.</p><p>We adapted <strong>Qwen3.5-9B on 350,857 examples</strong> of instructions, reasoning and decisions. This demo uses our released supervised checkpoint while broader training continues.</p><details><summary>What does the model see?</summary><p>The game supplies coordinates, recent moves, and exact immediate collision and distance observations. It removes reverse turns. The model selects the direction; collisions end the game.</p><pre id="input-preview"></pre></details></section>
+<footer><span id="model-note">Loading model status…</span><span class="footer-mark" aria-hidden="true">END OF TRANSMISSION _</span></footer>
+<noscript>Enable JavaScript to watch the model play.</noscript>
+</main></body></html>

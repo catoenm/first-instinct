@@ -236,10 +236,10 @@ class GeneralServeTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual(set(example), {"state", "questions"})
         with tempfile.TemporaryDirectory() as directory:
-            for name in ("index.html", "app.js", "style.css"):
+            for name in ("index.html", "app.js", "style.css", "snake.mjs"):
                 (Path(directory) / name).write_text(name)
             with patch("general_lab.serve.WEB", Path(directory)):
-                for path in ("/", "/app.js", "/style.css"):
+                for path in ("/", "/app.js", "/style.css", "/snake.mjs"):
                     self.assertEqual(self.request(path=path)[0], 200)
                 for path in ("/../run.json", "/run.json", "/index.html", "//evil.example/", "http://evil.example/"):
                     self.assertEqual(self.request(path=path)[0], 404)
