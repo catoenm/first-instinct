@@ -1,0 +1,59 @@
+{
+  "acceptable_set_questions": 18,
+  "admitted_training_questions": 0,
+  "canonical_questions": 138,
+  "existing_fixture_roots": 1,
+  "existing_initial_databases": 1,
+  "existing_mechanisms": 1,
+  "existing_post_schedule_states": 2,
+  "existing_primary_branches_used": 96,
+  "existing_world_goal_tasks": 4,
+  "freeze_sha256": "2b28c754b4390d870154e179b0d5e917e2159486d4496632a427dbb2f146a464",
+  "initial_visible_histories": 6,
+  "laya_complete_presentations": {
+    "canonical": 138,
+    "reversed": 138
+  },
+  "laya_loss_presentations": {
+    "final_sequence": 0,
+    "instruction": 0,
+    "option_descriptions": 0,
+    "state": 0
+  },
+  "laya_max_tokens": 605,
+  "limits": "One authored mechanism; fixed continuations/finite procedure comparisons, not unrestricted optimal actions. Candidates have not passed mixture admission or trained any model.",
+  "native_formatter_parities": 276,
+  "negative_controls_rejected": [
+    "outcome",
+    "decision",
+    "prior",
+    "replica",
+    "private",
+    "question",
+    "menu",
+    "missing"
+  ],
+  "new_executions": 0,
+  "new_model_calls": 0,
+  "new_tasks": 0,
+  "optimizer_presentations": 0,
+  "outcome_questions": 120,
+  "ownership_groups": 1,
+  "parent_freeze_sha256": "9641e1e88550c4749deb40f7d83fb2cc684a122dd267ae34765a44ff7b98ede4",
+  "questions_by_kind": {
+    "command_return_code": 36,
+    "immediate_goal": 36,
+    "next_action_fixed_continuation": 6,
+    "observation_value_fixed_comparison": 6,
+    "procedure_goal": 48,
+    "procedure_selection": 6
+  },
+  "qwen_complete_presentations": 276,
+  "qwen_max_tokens": 765,
+  "replay_probability_mass": 0,
+  "reversed_diagnostic_presentations": 138,
+  "seconds": 0.9364830839913338,
+  "source_replays_audited": 96,
+  "status": "qualified_qwen_question_candidates",
+  "uncertain_outcome_questions": 54
+}
