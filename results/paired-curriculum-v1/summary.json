@@ -1,0 +1,174 @@
+{
+  "by_family": {
+    "application_delivery": {
+      "by_supervision": {
+        "acceptable_choice_set": 52,
+        "outcome_distribution": 468
+      },
+      "by_task": {
+        "decision_fixed_continuation": 26,
+        "explicit_question_outcome": 468,
+        "observation_value_fixed_continuation": 26
+      },
+      "canonical_questions": 520,
+      "cyclic_presentations": 1690,
+      "groups_with_both_decisions_and_forecasts": 26,
+      "public_evidence_groups": 26,
+      "source_group_ids": 1,
+      "uncertain_outcomes": 108
+    },
+    "config": {
+      "by_supervision": {
+        "acceptable_choice_set": 44,
+        "outcome_distribution": 308
+      },
+      "by_task": {
+        "decision_fixed_continuation": 22,
+        "explicit_question_outcome": 308,
+        "observation_value_fixed_continuation": 22
+      },
+      "canonical_questions": 352,
+      "cyclic_presentations": 1122,
+      "groups_with_both_decisions_and_forecasts": 22,
+      "public_evidence_groups": 22,
+      "source_group_ids": 1,
+      "uncertain_outcomes": 40
+    },
+    "filesystem_scope": {
+      "by_supervision": {
+        "acceptable_choice_set": 32,
+        "outcome_distribution": 224
+      },
+      "by_task": {
+        "decision_fixed_continuation": 16,
+        "explicit_question_outcome": 224,
+        "observation_value_fixed_continuation": 16
+      },
+      "canonical_questions": 256,
+      "cyclic_presentations": 816,
+      "groups_with_both_decisions_and_forecasts": 16,
+      "public_evidence_groups": 16,
+      "source_group_ids": 2,
+      "uncertain_outcomes": 24
+    },
+    "reservation": {
+      "by_supervision": {
+        "outcome_distribution": 972
+      },
+      "by_task": {
+        "explicit_question_outcome": 972
+      },
+      "canonical_questions": 972,
+      "cyclic_presentations": 2187,
+      "groups_with_both_decisions_and_forecasts": 0,
+      "public_evidence_groups": 27,
+      "source_group_ids": 32,
+      "uncertain_outcomes": 168
+    },
+    "retail": {
+      "by_supervision": {
+        "decision_distribution": 36,
+        "outcome_distribution": 31
+      },
+      "by_task": {
+        "continued_success": 18,
+        "immediate_success": 13,
+        "next_procedure": 18,
+        "observation_value": 18
+      },
+      "canonical_questions": 67,
+      "cyclic_presentations": 206,
+      "groups_with_both_decisions_and_forecasts": 3,
+      "public_evidence_groups": 3,
+      "source_group_ids": 1,
+      "uncertain_outcomes": 25
+    },
+    "revisioned_database": {
+      "by_supervision": {
+        "acceptable_choice_set": 534,
+        "outcome_distribution": 1668
+      },
+      "by_task": {
+        "command_return_code": 36,
+        "immediate_goal": 36,
+        "net_read_first_advantage": 258,
+        "next_action_fixed_continuation": 6,
+        "observation_value_fixed_comparison": 6,
+        "optimal_continuation_outcome": 1548,
+        "optimal_next_action": 258,
+        "procedure_goal": 48,
+        "procedure_selection": 6
+      },
+      "canonical_questions": 2202,
+      "cyclic_presentations": 7170,
+      "groups_with_both_decisions_and_forecasts": 264,
+      "public_evidence_groups": 264,
+      "source_group_ids": 1,
+      "uncertain_outcomes": 120
+    },
+    "sqlite": {
+      "by_supervision": {
+        "acceptable_choice_set": 44,
+        "outcome_distribution": 308
+      },
+      "by_task": {
+        "decision_fixed_continuation": 22,
+        "explicit_question_outcome": 308,
+        "observation_value_fixed_continuation": 22
+      },
+      "canonical_questions": 352,
+      "cyclic_presentations": 1122,
+      "groups_with_both_decisions_and_forecasts": 22,
+      "public_evidence_groups": 22,
+      "source_group_ids": 1,
+      "uncertain_outcomes": 40
+    }
+  },
+  "canonical_questions": 4721,
+  "cyclic_presentations": 14313,
+  "files": {
+    "canonical-private.jsonl": "b227167f2f085f6dbd452c40dca782794d0db03821fec1bd7f472c18c11bf9ad",
+    "preparation-freeze.json": "98aeda2f4ed345d2becb9911d2679d907e9b406499b86b340778740127a8e2b5",
+    "presentations-private.jsonl": "668d5bc30cb855b099ec315dc48b2dc6edc5324aacfd5def1550b0636cc532e3"
+  },
+  "general_overlap_checks": {
+    "replay.jsonl": {
+      "exact_token_overlap": 0,
+      "new_consumption": 0,
+      "path": "output/evidence-decisions-v2-data/replay.jsonl",
+      "questions": 4096,
+      "sha256": "224c19979ae4be2309e65eea640e732e1b743780eb32ff6fe1900aa5ea2f7844"
+    },
+    "retention.jsonl": {
+      "exact_token_overlap": 0,
+      "new_consumption": 0,
+      "path": "output/evidence-decisions-v2-data/retention.jsonl",
+      "questions": 622,
+      "sha256": "8ad2ffafd4c1ffb75d9872b0a5c3012ec5351b04fd40790c33f7ae5ceaff9ac4"
+    },
+    "transfer.jsonl": {
+      "exact_token_overlap": 0,
+      "new_consumption": 0,
+      "path": "output/evidence-decisions-v2-data/transfer.jsonl",
+      "questions": 1128,
+      "sha256": "c62306ed43283a55fe86dfa5e5d2c9a6741f7f5392745fbd29f5320dfd75838f"
+    }
+  },
+  "maximum_tokens": 1910,
+  "new_executed_branches": 0,
+  "new_model_calls": 0,
+  "new_underlying_tasks": 0,
+  "optimizer_updates": 0,
+  "publication_note": "Aggregate candidate-index report. Private ownership aliases and raw questions are not published. No new training consumption.",
+  "remaining_gates": [
+    "public tool-contract sufficiency review",
+    "current full-mixture split admission",
+    "loss consumer and prospective learning recipe"
+  ],
+  "scope": "Existing audited evidence and exact question semantics; cyclic positions add presentations, not independent tasks. Reservation remains forecast-only.",
+  "status": "qualified_candidate_pairing_and_position_index",
+  "training_admitted": false,
+  "training_presentations_consumed": 0,
+  "truncations": 0,
+  "version": "paired-curriculum-v1"
+}
