@@ -1,0 +1,185 @@
+{
+  "distinct_initial_visible_inputs": 6,
+  "distinct_visible_actor_contexts": 60,
+  "execution": {
+    "actor_commands": 348,
+    "actor_database_statements_excluding_transaction_control": 312,
+    "colleague_writes": 96,
+    "database_resets": 192,
+    "failed_commands": 48,
+    "prefix_reads": 192,
+    "stop_actions_included_in_actor_commands": 36
+  },
+  "execution_trace_sha256": "99c1bff0fa097328e9e3657900431efa32902c1a64af28914324af3a20206579",
+  "fee_profiles": 3,
+  "fixture_roots": 1,
+  "freeze_sha256": "9641e1e88550c4749deb40f7d83fb2cc684a122dd267ae34765a44ff7b98ede4",
+  "goals": 2,
+  "immediate_forecasts": {
+    "approved_revision": {
+      "atomic_increment": {
+        "first_command_returned_zero": 1.0,
+        "goal_outcomes": {
+          "completed": 0.5,
+          "incorrect": 0.5,
+          "unfinished": 0.0
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      },
+      "cached_write": {
+        "first_command_returned_zero": 1.0,
+        "goal_outcomes": {
+          "completed": 0.5,
+          "incorrect": 0.5,
+          "unfinished": 0.0
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      },
+      "conditional_then_stop": {
+        "first_command_returned_zero": 0.5,
+        "goal_outcomes": {
+          "completed": 1.0,
+          "incorrect": 0.0,
+          "unfinished": 0.0
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      },
+      "stop": {
+        "first_command_returned_zero": 1.0,
+        "goal_outcomes": {
+          "completed": 0.5,
+          "incorrect": 0.0,
+          "unfinished": 0.5
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      }
+    },
+    "increment_latest": {
+      "atomic_increment": {
+        "first_command_returned_zero": 1.0,
+        "goal_outcomes": {
+          "completed": 1.0,
+          "incorrect": 0.0,
+          "unfinished": 0.0
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      },
+      "cached_write": {
+        "first_command_returned_zero": 1.0,
+        "goal_outcomes": {
+          "completed": 0.5,
+          "incorrect": 0.5,
+          "unfinished": 0.0
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      },
+      "conditional_then_stop": {
+        "first_command_returned_zero": 0.5,
+        "goal_outcomes": {
+          "completed": 0.5,
+          "incorrect": 0.0,
+          "unfinished": 0.5
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      },
+      "stop": {
+        "first_command_returned_zero": 1.0,
+        "goal_outcomes": {
+          "completed": 0.0,
+          "incorrect": 0.0,
+          "unfinished": 1.0
+        },
+        "horizon": "execute the named first command, then stop if it did not terminate"
+      }
+    }
+  },
+  "initial_databases": 1,
+  "limitations": "Authored finite witness plans; no global-optimality claim, question rendering or model/token qualification.",
+  "means": {
+    "approved_revision": {
+      "cheap": {
+        "atomic_increment": -40.0,
+        "cached_write": -1.0,
+        "conditional_recovery": -5.5,
+        "conditional_then_stop": 97.0,
+        "failed_read_recovery": -6.0,
+        "read_then_conditional": -5.0,
+        "redundant_read": -7.0,
+        "stop": 50.0
+      },
+      "expensive_read": {
+        "atomic_increment": -40.0,
+        "cached_write": -1.0,
+        "conditional_recovery": -64.5,
+        "conditional_then_stop": 97.0,
+        "failed_read_recovery": -124.0,
+        "read_then_conditional": -123.0,
+        "redundant_read": -243.0,
+        "stop": 50.0
+      },
+      "expensive_write": {
+        "atomic_increment": -120.0,
+        "cached_write": -120.0,
+        "conditional_recovery": -181.0,
+        "conditional_then_stop": -20.0,
+        "failed_read_recovery": -123.0,
+        "read_then_conditional": -122.0,
+        "redundant_read": -124.0,
+        "stop": 50.0
+      }
+    },
+    "increment_latest": {
+      "cheap": {
+        "atomic_increment": 60.0,
+        "cached_write": -1.0,
+        "conditional_recovery": 94.5,
+        "conditional_then_stop": 47.0,
+        "failed_read_recovery": 94.0,
+        "read_then_conditional": 95.0,
+        "redundant_read": 93.0,
+        "stop": 0.0
+      },
+      "expensive_read": {
+        "atomic_increment": 60.0,
+        "cached_write": -1.0,
+        "conditional_recovery": 35.5,
+        "conditional_then_stop": 47.0,
+        "failed_read_recovery": -24.0,
+        "read_then_conditional": -23.0,
+        "redundant_read": -143.0,
+        "stop": 0.0
+      },
+      "expensive_write": {
+        "atomic_increment": -20.0,
+        "cached_write": -120.0,
+        "conditional_recovery": -81.0,
+        "conditional_then_stop": -70.0,
+        "failed_read_recovery": -23.0,
+        "read_then_conditional": -22.0,
+        "redundant_read": -24.0,
+        "stop": 0.0
+      }
+    }
+  },
+  "mechanisms": 1,
+  "model_calls": 0,
+  "no_read_plan_set": [
+    "stop",
+    "cached_write",
+    "conditional_then_stop",
+    "atomic_increment"
+  ],
+  "optimizer_presentations": 0,
+  "post_schedule_states": 2,
+  "primary_executed_branches": 96,
+  "read_first_advantage_over_four_fixed_no_read_plans": {
+    "cheap": 35.0,
+    "expensive_read": -83.0,
+    "expensive_write": -22.0
+  },
+  "replay_branches": 96,
+  "status": "qualified_executor_witnesses",
+  "training_questions": 0,
+  "transfer_eligible": false,
+  "world_goal_tasks": 4
+}
