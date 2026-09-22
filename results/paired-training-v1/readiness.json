@@ -1,0 +1,658 @@
+{
+  "allocated_usd": 0,
+  "new_foundation_optimizer_updates": 0,
+  "new_underlying_tasks": 0,
+  "phase_seconds": {
+    "final_evaluation": 1800,
+    "provider_hard_stop": 21600,
+    "recovery": 900,
+    "setup_and_preflight": 1800,
+    "training": 16200
+  },
+  "plan_freeze_sha256": "a7544bb5429347a717d3cc80f591e7bf164c4746c37e19a4403626caf584e74b",
+  "planned_coverage": {
+    "128": {
+      "actual_training_consumption": 0,
+      "all_positions_presented_canonical_questions": 373,
+      "all_starting_teachers_cover_all_positions": true,
+      "distinct_canonical_questions": {
+        "forecast": 1535,
+        "teacher": 742
+      },
+      "distinct_position_presentations": {
+        "forecast": 1598,
+        "teacher": 1786
+      },
+      "note": "Prospective schedule only. Position variants and repetitions add no independent tasks.",
+      "planned_presentations": {
+        "forecast": 1792,
+        "replay": 4096,
+        "teacher": 6144
+      },
+      "presentations_per_starting_teacher": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "repeated_position_presentations": {
+        "forecast": 194,
+        "teacher": 4358
+      },
+      "starting_teacher_questions": 12,
+      "updates": 128
+    },
+    "256": {
+      "actual_training_consumption": 0,
+      "all_positions_presented_canonical_questions": 572,
+      "all_starting_teachers_cover_all_positions": true,
+      "distinct_canonical_questions": {
+        "forecast": 2363,
+        "teacher": 742
+      },
+      "distinct_position_presentations": {
+        "forecast": 3134,
+        "teacher": 2318
+      },
+      "note": "Prospective schedule only. Position variants and repetitions add no independent tasks.",
+      "planned_presentations": {
+        "forecast": 3584,
+        "replay": 8192,
+        "teacher": 12288
+      },
+      "presentations_per_starting_teacher": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "repeated_position_presentations": {
+        "forecast": 450,
+        "teacher": 9970
+      },
+      "starting_teacher_questions": 12,
+      "updates": 256
+    },
+    "32": {
+      "actual_training_consumption": 0,
+      "all_positions_presented_canonical_questions": 155,
+      "all_starting_teachers_cover_all_positions": true,
+      "distinct_canonical_questions": {
+        "forecast": 415,
+        "teacher": 412
+      },
+      "distinct_position_presentations": {
+        "forecast": 446,
+        "teacher": 931
+      },
+      "note": "Prospective schedule only. Position variants and repetitions add no independent tasks.",
+      "planned_presentations": {
+        "forecast": 448,
+        "replay": 1024,
+        "teacher": 1536
+      },
+      "presentations_per_starting_teacher": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32
+      ],
+      "repeated_position_presentations": {
+        "forecast": 2,
+        "teacher": 605
+      },
+      "starting_teacher_questions": 12,
+      "updates": 32
+    },
+    "64": {
+      "actual_training_consumption": 0,
+      "all_positions_presented_canonical_questions": 225,
+      "all_starting_teachers_cover_all_positions": true,
+      "distinct_canonical_questions": {
+        "forecast": 799,
+        "teacher": 604
+      },
+      "distinct_position_presentations": {
+        "forecast": 830,
+        "teacher": 1359
+      },
+      "note": "Prospective schedule only. Position variants and repetitions add no independent tasks.",
+      "planned_presentations": {
+        "forecast": 896,
+        "replay": 2048,
+        "teacher": 3072
+      },
+      "presentations_per_starting_teacher": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "repeated_position_presentations": {
+        "forecast": 66,
+        "teacher": 1713
+      },
+      "starting_teacher_questions": 12,
+      "updates": 64
+    }
+  },
+  "proposed_stage_ceiling_usd": 35,
+  "recipe": {
+    "batch_size": 2,
+    "decision_weight": 1.0,
+    "eval_every": 32,
+    "exploration_floor": 0.2,
+    "forecast_weight": 1.0,
+    "forecasts_per_family": 2,
+    "learning_rate": 8e-07,
+    "max_database_resets": 120,
+    "max_individual_kl": 0.1,
+    "max_kl": 0.02,
+    "max_tokens": 4096,
+    "max_updates": 256,
+    "min_updates": 128,
+    "patience": 2,
+    "replay_rows": 32,
+    "replay_weight": 1.0,
+    "root_teacher_per_update": 12,
+    "teacher_per_family": 6
+  },
+  "stages": {
+    "paired-admission-v1": {
+      "by_family": {
+        "application_delivery": 1690,
+        "config": 1122,
+        "filesystem_scope": 816,
+        "reservation": 2187,
+        "retail": 206,
+        "revisioned_database": 7170,
+        "sqlite": 1122
+      },
+      "by_original_role": {
+        "train": 888,
+        "train_candidate": 6717,
+        "training_mechanism_diagnostic": 6708
+      },
+      "by_supervision": {
+        "acceptable_choice_set": 2992,
+        "decision_distribution": 144,
+        "outcome_distribution": 11177
+      },
+      "canonical_questions": 4721,
+      "comparison_files": 27,
+      "comparison_presentations_scanned": 867256,
+      "files": {
+        "pre-admission-freeze.json": "daf773b686672a71c8b1be0431261b0cd0cd9906f74d995112e6740e55bd4fb1",
+        "scan-progress.json": "e925f6475276b05f3a3898d68590ccd276d9ed48f5b1a9f287e22ba50b691f65",
+        "train-presentations-private.jsonl": "c3457bf45576a85e211d4b8831577920287ea3c6cdfd52c9341980c348e864fc",
+        "usage-private.json": "a603718479372e828266186ae9d69a3a5639c2d4428fea2212434d515d29760c"
+      },
+      "history_note": "Expected overlaps identify previous data pools, not actual optimizer consumption; see completed experiment reports.",
+      "model_calls": 0,
+      "new_executed_branches": 0,
+      "new_underlying_tasks": 0,
+      "optimizer_updates": 0,
+      "prepared_training_presentations": 14313,
+      "ready_for_existing_trainer": false,
+      "required_next": "Qualify paired-target consumer and bounded learning recipe.",
+      "reserved_model_scores_opened": 0,
+      "scans": [
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "93acf412bfac0440759b62cf0f5e526834e2b2cadf2b45995162d72f83df203d",
+          "metadata": "output/general-qwen35-9b-v2/manifest.json",
+          "metadata_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+          "overlap_permitted": true,
+          "path": "output/general-qwen35-9b-v2/train.jsonl",
+          "role": "earlier_supervised_training",
+          "rows": 350857
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "3966e92cca71acbbb7e5a6d165d08959fda512b6995028dcdac8cabfce89fba2",
+          "metadata": "output/general-qwen35-9b-v2/manifest.json",
+          "metadata_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+          "overlap_permitted": false,
+          "path": "output/general-qwen35-9b-v2/validation.jsonl",
+          "role": "exposed_general_evaluation",
+          "rows": 14157
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "07494a83fdb34e49841aebbb953b7295cc0e1f19d8b11167ff8160ac12711160",
+          "metadata": "output/general-qwen35-9b-v2/manifest.json",
+          "metadata_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+          "overlap_permitted": false,
+          "path": "output/general-qwen35-9b-v2/test.jsonl",
+          "role": "exposed_general_evaluation",
+          "rows": 17277
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "67c54cc04d7d5d45dbdc795a9149445a1ac9d1534178e64d2560cfc0c69c6fb2",
+          "metadata": "output/general-qwen35-9b-v2/manifest.json",
+          "metadata_sha256": "59cf10b64d67ad81ea1ad7f61a7e0e006432563b7a42e59be1678b8eb7ef0c42",
+          "overlap_permitted": false,
+          "path": "output/general-qwen35-9b-v2/challenge.jsonl",
+          "role": "exposed_general_evaluation",
+          "rows": 7048
+        },
+        {
+          "candidate_group_matches": 2347,
+          "candidate_token_matches": 2347,
+          "expected_sha256": "76cc5c34540aeb6f255d0f2ee8ef1f0e50d65628c3b5abe5017284a484136e94",
+          "metadata": "output/release-mixture-v1/assembly.json",
+          "metadata_sha256": "85a09f58eccc2a9de4fc27e8fb2723234f0e8accf3759c7a4e755dfe96ee8180",
+          "overlap_permitted": true,
+          "path": "output/release-mixture-v1/train-private.jsonl",
+          "role": "prepared_training",
+          "rows": 371278
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "f6456e8fed6b1e76795673480396ceeb3070a4ecfb31cf464c83cc86e6a3b0fa",
+          "metadata": "output/release-mixture-v1/assembly.json",
+          "metadata_sha256": "85a09f58eccc2a9de4fc27e8fb2723234f0e8accf3759c7a4e755dfe96ee8180",
+          "overlap_permitted": false,
+          "path": "output/release-mixture-v1/development-private.jsonl",
+          "role": "exposed_development",
+          "rows": 16764
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "bcc09ebf5184f049bdfeec09191ca6d9f97fab1586bb824eb030ce7d9fc96551",
+          "metadata": "output/release-mixture-v1/assembly.json",
+          "metadata_sha256": "85a09f58eccc2a9de4fc27e8fb2723234f0e8accf3759c7a4e755dfe96ee8180",
+          "overlap_permitted": false,
+          "path": "output/release-mixture-v1/diagnostic-private.jsonl",
+          "role": "exposed_development",
+          "rows": 728
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "51629d0bb1e36272ab42f29b41aa49a7e97fa3a196d40ea104e304402197e5f9",
+          "metadata": "output/release-mixture-v1/assembly.json",
+          "metadata_sha256": "85a09f58eccc2a9de4fc27e8fb2723234f0e8accf3759c7a4e755dfe96ee8180",
+          "overlap_permitted": false,
+          "path": "output/release-mixture-v1/known_regression-private.jsonl",
+          "role": "exposed_development",
+          "rows": 24325
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "191e4509215f8247713c4d09aaca9b9b16328165c7801124158c79eb2aa95f3b",
+          "metadata": "output/release-mixture-v1/assembly.json",
+          "metadata_sha256": "85a09f58eccc2a9de4fc27e8fb2723234f0e8accf3759c7a4e755dfe96ee8180",
+          "overlap_permitted": false,
+          "path": "output/release-mixture-v1/known_transfer-private.jsonl",
+          "role": "exposed_development",
+          "rows": 576
+        },
+        {
+          "candidate_group_matches": 1715,
+          "candidate_token_matches": 1525,
+          "expected_sha256": "db7d2ea47f9e0f1c280c6f66a7b022fe4a60daa5f091ff42bbb8f2cd78f74fce",
+          "metadata": "output/history-pilot-v1-data/freeze.json",
+          "metadata_sha256": "079ed7ad7f0c537e2c62bdf0e3ed4e41df60df7466e5193225cfa4b80f66787d",
+          "overlap_permitted": true,
+          "path": "output/history-pilot-v1-data/train.jsonl",
+          "role": "prepared_history_training",
+          "rows": 19923
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "eb07318b94f67f04d8ee4c833a8bd5024414deac47f0296625b123fd5adf64bb",
+          "metadata": "output/history-pilot-v1-data/freeze.json",
+          "metadata_sha256": "079ed7ad7f0c537e2c62bdf0e3ed4e41df60df7466e5193225cfa4b80f66787d",
+          "overlap_permitted": false,
+          "path": "output/history-pilot-v1-data/development.jsonl",
+          "role": "exposed_history_development",
+          "rows": 6284
+        },
+        {
+          "candidate_group_matches": 2510,
+          "candidate_token_matches": 2280,
+          "expected_sha256": "ed21d884c474d7907aaa80adefd3155985444a0f77b231bac90ebffb10b68221",
+          "metadata": "output/live-tools-pilot-v1-data/freeze.json",
+          "metadata_sha256": "06914d15fd54344325815cc595461929d66b53723811db0c5c9d1f865cbfbfe2",
+          "overlap_permitted": true,
+          "path": "output/live-tools-pilot-v1-data/train-forecasts.jsonl",
+          "role": "prepared_live_training",
+          "rows": 2510
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "224c19979ae4be2309e65eea640e732e1b743780eb32ff6fe1900aa5ea2f7844",
+          "metadata": "output/live-tools-pilot-v1-data/freeze.json",
+          "metadata_sha256": "06914d15fd54344325815cc595461929d66b53723811db0c5c9d1f865cbfbfe2",
+          "overlap_permitted": true,
+          "path": "output/live-tools-pilot-v1-data/replay.jsonl",
+          "role": "prepared_live_training",
+          "rows": 4096
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "7288ebd3097f2167b9f6b19df6bdf444893276b3464fbed57f143c83cb16e882",
+          "metadata": "output/live-tools-pilot-v1-data/freeze.json",
+          "metadata_sha256": "06914d15fd54344325815cc595461929d66b53723811db0c5c9d1f865cbfbfe2",
+          "overlap_permitted": false,
+          "path": "output/live-tools-pilot-v1-data/validation-forecasts.jsonl",
+          "role": "exposed_live_development",
+          "rows": 308
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "8ad2ffafd4c1ffb75d9872b0a5c3012ec5351b04fd40790c33f7ae5ceaff9ac4",
+          "metadata": "output/live-tools-pilot-v1-data/freeze.json",
+          "metadata_sha256": "06914d15fd54344325815cc595461929d66b53723811db0c5c9d1f865cbfbfe2",
+          "overlap_permitted": false,
+          "path": "output/live-tools-pilot-v1-data/retention.jsonl",
+          "role": "exposed_live_development",
+          "rows": 622
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "68a6ac545942730d774535eb88bb852fb5e33fbe1eab06f6c94d554630ea2303",
+          "metadata": "output/report-contract-paired-v1-input-v2/forecast-freeze.json",
+          "metadata_sha256": "05ed502c8241803800b487c7f43c5bad2dfe96a4ec90db7c855d736ce3143f3d",
+          "overlap_permitted": false,
+          "path": "output/report-contract-paired-v1-input-v2/data/forecasts.jsonl",
+          "role": "exposed_paired_diagnostic",
+          "rows": 616
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "03a8d6cf9bcca2125bfc4376cc705e0374f508ac48538317a7ad79018ae29af9",
+          "metadata": "output/release-evaluation-v1-data/freeze.json",
+          "metadata_sha256": "bfa144c66b5e71c589fa7e78d8727d59c95591e0d953391dafebe290efd5e2d7",
+          "overlap_permitted": false,
+          "path": "output/release-evaluation-v1-data/original-private.jsonl",
+          "role": "reserved_fingerprint_only",
+          "rows": 2465
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "bdd49b5f9773e4578ac87e714d14936c7615b67353d9e3f063dff8367a401164",
+          "metadata": "output/release-evaluation-v1-data/freeze.json",
+          "metadata_sha256": "bfa144c66b5e71c589fa7e78d8727d59c95591e0d953391dafebe290efd5e2d7",
+          "overlap_permitted": false,
+          "path": "output/release-evaluation-v1-data/reversed-private.jsonl",
+          "role": "reserved_fingerprint_only",
+          "rows": 2465
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "4d7fa6a5122f5a406d1da4b58b37704c486a44343d1862b7acd4aa79c15017fc",
+          "metadata": "output/release-mixture-v1/assembly.json",
+          "metadata_sha256": "85a09f58eccc2a9de4fc27e8fb2723234f0e8accf3759c7a4e755dfe96ee8180",
+          "overlap_permitted": false,
+          "path": "output/release-mixture-v1/reserved_transfer-private.jsonl",
+          "role": "reserved_fingerprint_only",
+          "rows": 2431
+        },
+        {
+          "candidate_group_matches": 5654,
+          "candidate_token_matches": 2328,
+          "expected_sha256": "7aa544e2e8fa8fbc416a2d3ba7c29b8ec52506014888373936f8fa2b6a022a81",
+          "metadata": "output/revisioned-pilot-v1-data-v2/freeze.json",
+          "metadata_sha256": "83ab2530638f48791f23667e06c3792f52f72894ebcd8ed08bb75f5818684207",
+          "overlap_permitted": true,
+          "path": "output/revisioned-pilot-v1-data-v2/train-forecasts.jsonl",
+          "role": "current_training",
+          "rows": 5654
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "224c19979ae4be2309e65eea640e732e1b743780eb32ff6fe1900aa5ea2f7844",
+          "metadata": "output/revisioned-pilot-v1-data-v2/freeze.json",
+          "metadata_sha256": "83ab2530638f48791f23667e06c3792f52f72894ebcd8ed08bb75f5818684207",
+          "overlap_permitted": true,
+          "path": "output/revisioned-pilot-v1-data-v2/replay.jsonl",
+          "role": "current_training",
+          "rows": 4096
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "0359023d7e0a17328d01fd10c6914d97e88f7f3296c6df88cf522e182534b73d",
+          "metadata": "output/revisioned-pilot-v1-data-v2/freeze.json",
+          "metadata_sha256": "83ab2530638f48791f23667e06c3792f52f72894ebcd8ed08bb75f5818684207",
+          "overlap_permitted": false,
+          "path": "output/revisioned-pilot-v1-data-v2/validation-forecasts.jsonl",
+          "role": "exposed_current_development",
+          "rows": 308
+        },
+        {
+          "candidate_group_matches": 0,
+          "candidate_token_matches": 0,
+          "expected_sha256": "8ad2ffafd4c1ffb75d9872b0a5c3012ec5351b04fd40790c33f7ae5ceaff9ac4",
+          "metadata": "output/revisioned-pilot-v1-data-v2/freeze.json",
+          "metadata_sha256": "83ab2530638f48791f23667e06c3792f52f72894ebcd8ed08bb75f5818684207",
+          "overlap_permitted": false,
+          "path": "output/revisioned-pilot-v1-data-v2/retention.jsonl",
+          "role": "exposed_current_development",
+          "rows": 622
+        },
+        {
+          "candidate_group_matches": 516,
+          "candidate_token_matches": 516,
+          "expected_sha256": "3652c102805c632c6a9f877c5978c4e26aca143c644831d82131d6eb84782979",
+          "metadata": "output/oracle-capacity-v1-data/freeze.json",
+          "metadata_sha256": "6a24d2964c19fd112020a801d3b7f6cc27ffd48e16729b18289ec5a52780b01a",
+          "overlap_permitted": true,
+          "path": "output/oracle-capacity-v1-data/teacher.jsonl",
+          "role": "current_training",
+          "rows": 516
+        },
+        {
+          "candidate_group_matches": 7202,
+          "candidate_token_matches": 3876,
+          "expected_sha256": "329661f8a1cbcfdf5a1533a194cc800188fd18be0a6b064b0ceea230523de023",
+          "metadata": "output/oracle-capacity-v1-data/freeze.json",
+          "metadata_sha256": "6a24d2964c19fd112020a801d3b7f6cc27ffd48e16729b18289ec5a52780b01a",
+          "overlap_permitted": true,
+          "path": "output/oracle-capacity-v1-data/forecasts.jsonl",
+          "role": "current_training",
+          "rows": 7202
+        },
+        {
+          "candidate_group_matches": 2064,
+          "candidate_token_matches": 2064,
+          "expected_sha256": "6be5781a59ede084af674b9a590b4afdb6979662e96a60b7383157c085b8022a",
+          "metadata": "output/oracle-capacity-v1-data/freeze.json",
+          "metadata_sha256": "6a24d2964c19fd112020a801d3b7f6cc27ffd48e16729b18289ec5a52780b01a",
+          "overlap_permitted": true,
+          "path": "output/oracle-capacity-v1-data/panel-canonical.jsonl",
+          "role": "training_owned_capacity_diagnostic",
+          "rows": 2064
+        },
+        {
+          "candidate_group_matches": 2064,
+          "candidate_token_matches": 258,
+          "expected_sha256": "fe77295645e1545c30a8d7fa5e8403c93c772c9b944b50c602867486f7deecf9",
+          "metadata": "output/oracle-capacity-v1-data/freeze.json",
+          "metadata_sha256": "6a24d2964c19fd112020a801d3b7f6cc27ffd48e16729b18289ec5a52780b01a",
+          "overlap_permitted": true,
+          "path": "output/oracle-capacity-v1-data/panel-reversed.jsonl",
+          "role": "training_owned_capacity_diagnostic",
+          "rows": 2064
+        }
+      ],
+      "seconds": 28.074763750017155,
+      "status": "qualified_paired_training_admission",
+      "training_presentations_consumed": 0,
+      "version": "paired-admission-v1"
+    },
+    "paired-learning-v1": {
+      "actual_learning_presentations_consumed": 0,
+      "bounded_score_tensor_batches": 224,
+      "canonical_questions": 4721,
+      "files": {
+        "preparation-freeze.json": "5aa3b343be04799f0c759f3b46c627a59cfe64e1eaa5111a5a443b358737ffd4"
+      },
+      "forward_contract_counts": {
+        "paired_supervised_question": 12765,
+        "revisioned_live_action": 1548
+      },
+      "foundation_model_calls": 0,
+      "foundation_weights_loaded": false,
+      "optimizer_updates": 0,
+      "presentations_validated": 14313,
+      "required_next": "Freeze a useful bounded pilot recipe and integrate this consumer with replay and the qualified runtime.",
+      "scope": "Admission/target interface and CPU derivatives only; no GPU, policy performance or full pilot qualification.",
+      "seconds": 1.3817283330135979,
+      "status": "qualified_paired_supervised_consumer_cpu",
+      "supervision_counts": {
+        "acceptable_choice_set": 2992,
+        "decision_distribution": 144,
+        "outcome_distribution": 11177
+      },
+      "uniform_score_loss": 1.1582096631971261
+    },
+    "repair-contract-v1": {
+      "canonical_questions": 704,
+      "compatible_world_groups_with_identical_overlay": 392,
+      "contract_constant_within_family": true,
+      "cyclic_presentations": 2244,
+      "existing_actor_transitions_audited": {
+        "config": 1300,
+        "sqlite": 1300
+      },
+      "existing_branches_audited": {
+        "config": 756,
+        "sqlite": 756
+      },
+      "existing_commands_reconstructed": {
+        "config": 1936,
+        "sqlite": 1936
+      },
+      "files": {
+        "preparation-freeze.json": "31c68c6b4ab98dde7507a1dabf3a956c15b86aad732b2dee0a0a7848b5767f6d",
+        "presentations-private.jsonl": "d3e2d7acc36eb09bffb116551f7908605b72daa8a4bd40da934c02e612d3780b",
+        "questions-private.jsonl": "97a84f4149f8f331f3d6372bd1970b281d5f6ed814f57c0a6b9feb68dabcdacd"
+      },
+      "forecast_questions": 616,
+      "general_overlap_checks": {
+        "replay.jsonl": {
+          "exact_token_overlap": 0,
+          "new_consumption": 0,
+          "path": "output/evidence-decisions-v2-data/replay.jsonl",
+          "questions": 4096,
+          "sha256": "224c19979ae4be2309e65eea640e732e1b743780eb32ff6fe1900aa5ea2f7844"
+        },
+        "retention.jsonl": {
+          "exact_token_overlap": 0,
+          "new_consumption": 0,
+          "path": "output/evidence-decisions-v2-data/retention.jsonl",
+          "questions": 622,
+          "sha256": "8ad2ffafd4c1ffb75d9872b0a5c3012ec5351b04fd40790c33f7ae5ceaff9ac4"
+        },
+        "transfer.jsonl": {
+          "exact_token_overlap": 0,
+          "new_consumption": 0,
+          "path": "output/evidence-decisions-v2-data/transfer.jsonl",
+          "questions": 1128,
+          "sha256": "c62306ed43283a55fe86dfa5e5d2c9a6741f7f5392745fbd29f5320dfd75838f"
+        }
+      },
+      "labels_unchanged": true,
+      "maximum_tokens": 1325,
+      "new_executed_branches": 0,
+      "new_model_calls": 0,
+      "new_underlying_tasks": 0,
+      "optimizer_updates": 0,
+      "original_inputs_exactly_preserved": true,
+      "remaining_gates": [
+        "current full-mixture split admission",
+        "loss consumer and prospective learning recipe"
+      ],
+      "seconds": 3.69620412500808,
+      "status": "qualified_public_repair_contract_overlay",
+      "teacher_questions": 88,
+      "training_admitted": false,
+      "training_presentations_consumed": 0,
+      "transition_counts": {
+        "config/finish:None": 120,
+        "config/prepare:0": 188,
+        "config/reconnect:0": 120,
+        "config/repair_0:0": 290,
+        "config/repair_0:75": 24,
+        "config/repair_1:0": 186,
+        "config/repair_1:75": 24,
+        "config/summary:0": 188,
+        "config/summary:69": 12,
+        "config/unlock:0": 148,
+        "sqlite/finish:None": 120,
+        "sqlite/prepare:0": 188,
+        "sqlite/reconnect:0": 120,
+        "sqlite/repair_0:0": 290,
+        "sqlite/repair_0:75": 24,
+        "sqlite/repair_1:0": 186,
+        "sqlite/repair_1:75": 24,
+        "sqlite/summary:0": 188,
+        "sqlite/summary:69": 12,
+        "sqlite/unlock:0": 148
+      },
+      "truncations": 0,
+      "uncertain_forecasts": 80,
+      "version": "repair-contract-v1"
+    }
+  },
+  "status": "local_data_consumer_and_schedule_qualified_no_gpu",
+  "tests": {
+    "admission": 5,
+    "guarded_update": 4,
+    "learning": 7,
+    "repair_contract": 8,
+    "schedule": 3
+  }
+}
