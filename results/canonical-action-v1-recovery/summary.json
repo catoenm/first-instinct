@@ -1,0 +1,271 @@
+{
+  "adapters": {
+    "arms": {
+      "hybrid-20260924": {
+        "adapters": {
+          "best": {
+            "equals_original": true,
+            "file_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+            "tensor_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27"
+          },
+          "interrupted": {
+            "changes": {
+              "changed_elements": 43271492,
+              "changed_tensors": 496,
+              "l2_delta": 0.0053851306806072365,
+              "max_absolute_delta": 2.018408849835396e-06,
+              "trainable_elements": 43278336
+            },
+            "equals_original": false,
+            "evaluated_checkpoint": false,
+            "file_sha256": "fadb0e4154eb6a04e96024b9b8c71e5f07bb9bfbb54036d00c30f86082bb8e84",
+            "limitation": "Saved diagnostic after ten accepted steps; no task evaluation at that step.",
+            "tensor_sha256": "0109f7f76f02aa7c58af0dd580e933088ee033cc5cd32f2f25f2470830368029"
+          },
+          "latest": {
+            "changes": {
+              "changed_elements": 43270464,
+              "changed_tensors": 496,
+              "l2_delta": 0.004714927202300435,
+              "max_absolute_delta": 1.6120029613375664e-06,
+              "trainable_elements": 43278336
+            },
+            "equals_original": false,
+            "evaluated_checkpoint": true,
+            "file_sha256": "b1e61b06f5b7569bce82ecc940d730b9f026f1469608209b99961491e8230514",
+            "tensor_sha256": "deed93d671ca94db01f39fafa86444966a8c83ed502c7f7efa271aa9c4b8d3b4"
+          }
+        },
+        "selected_update": 0
+      },
+      "outcome-20260924": {
+        "adapters": {
+          "best": {
+            "equals_original": true,
+            "file_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+            "tensor_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27"
+          },
+          "latest": {
+            "changes": {
+              "changed_elements": 43273985,
+              "changed_tensors": 496,
+              "l2_delta": 0.008664795692176609,
+              "max_absolute_delta": 3.252178430557251e-06,
+              "trainable_elements": 43278336
+            },
+            "equals_original": false,
+            "evaluated_checkpoint": true,
+            "file_sha256": "f585711e5012f41cdea0e965d77bc86cad5890ddef894b24ee1e7cc514642c08",
+            "tensor_sha256": "553ad40a78566e1059a6329d79d776b83132baf8cc1fdf5796e9e6fb04dfaa29"
+          }
+        },
+        "selected_update": 0
+      },
+      "reward-20260924": {
+        "adapters": {
+          "best": {
+            "equals_original": true,
+            "file_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+            "tensor_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27"
+          },
+          "latest": {
+            "changes": {
+              "changed_elements": 43270186,
+              "changed_tensors": 496,
+              "l2_delta": 0.004630736761488986,
+              "max_absolute_delta": 1.6116537153720856e-06,
+              "trainable_elements": 43278336
+            },
+            "equals_original": false,
+            "evaluated_checkpoint": true,
+            "file_sha256": "44a8898032388cfad411ca6953c527a5cde9c56a58c2aa09b91e1cf94421961b",
+            "tensor_sha256": "d7615e04f47ec40a0d23ea1420f25e2a22ea3eb3729080f6dbdbb63bbe206ac6"
+          }
+        },
+        "selected_update": 0
+      }
+    },
+    "model_calls": 0,
+    "optimizer_state_reexecuted": false,
+    "original_tensor_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+    "status": "verified_saved_adapter_bytes_and_finite_arrays",
+    "tensors": 496,
+    "trainable_elements": 43278336
+  },
+  "collection": {
+    "archive_bytes": 1140936076,
+    "archive_sha256": "791026a003c18c6ae3e873252c9c7101d6b1c4d2c7e6da26b07ef1989e323bf3",
+    "estimated_compute_usd_excluding_storage": 9.897020716005564,
+    "pod_deleted": true,
+    "verified_files": 712
+  },
+  "combined": {
+    "accounting": {
+      "action_forward_contract": "canonical-action-forward-v1",
+      "actual_learning": {
+        "accepted_transactions": 10,
+        "attempted_updates_without_closure": [],
+        "components": {
+          "outcome": {
+            "completed_backward_presentations": 280,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 280,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 0,
+            "unique_question_ids": 280
+          },
+          "policy": {
+            "completed_backward_presentations": 412,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 402,
+            "presentations_in_rejected_transactions": 10,
+            "repeated_presentations": 16,
+            "unique_question_ids": 396
+          },
+          "replay": {
+            "completed_backward_presentations": 640,
+            "presentations_awaiting_transaction_outcome": 0,
+            "presentations_in_accepted_transactions": 640,
+            "presentations_in_rejected_transactions": 0,
+            "repeated_presentations": 42,
+            "unique_question_ids": 598
+          }
+        },
+        "diagnostic_backwards": {
+          "actor": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          },
+          "outcome": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          },
+          "replay": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          },
+          "value": {
+            "completed_presentations": 2,
+            "unique_question_ids": 2
+          }
+        },
+        "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+        "on_policy_checks": {
+          "maximum_absolute_probability_delta": 0.0,
+          "transitions": 456,
+          "updates": 11
+        },
+        "physical_optimizer_attempts": 10,
+        "rejected_transactions": 1,
+        "started_but_unconfirmed_backward_presentations": 0,
+        "started_but_unconfirmed_diagnostic_presentations": 0
+      },
+      "arm": "hybrid",
+      "collected_training": {
+        "actor_transitions": 456,
+        "distinct_actor_token_inputs": 347,
+        "distinct_retail_goal_world_cost_cells": 61,
+        "distinct_retail_goal_world_pairs": 20,
+        "distinct_shell_case_variants": 110,
+        "episodes": 176,
+        "retail_reset_presentations": 66,
+        "shell_episodes": 110
+      },
+      "freeze_sha256": "06914d15fd54344325815cc595461929d66b53723811db0c5c9d1f865cbfbfe2",
+      "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+      "ledger_matches_run_receipt": true,
+      "limitation": "Collected inputs are not necessarily consumed. Case variants, question IDs, token inputs, goal/world pairs and fee cells are different units; none count new independent mechanisms. Evaluation and preflight episodes are excluded. This report does not verify rewards, probability metrics or checkpoint promotion.",
+      "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+      "runtime_correction_sha256": "76b93476333cc5fa6446cb2d6d36ebd94128226f3423ab35c2d679d877490a16",
+      "seed": 20260924,
+      "selected_update": 0,
+      "status": "bounded_stop",
+      "stop_reason": null
+    },
+    "gates": {
+      "update-8": {
+        "changes": {
+          "brier": -0.002173103714352642,
+          "retention_accuracy": 0.0,
+          "retention_log_loss": -0.0005823335736207524,
+          "reward": 0.026111111111111113
+        },
+        "joint_improvement": false,
+        "safe": true,
+        "safety": {
+          "brier": true,
+          "retention_accuracy": true,
+          "retention_log_loss": true,
+          "reward": true
+        }
+      }
+    },
+    "measurements": {
+      "baseline": {
+        "forecast": {
+          "excess_brier": 0.5760525716565792,
+          "excess_log_loss": 0.9974733579591601,
+          "expected_brier": 0.6409876365916441,
+          "expected_choice_accuracy": 0.5227272727272727,
+          "irreducible_brier": 0.06493506493506493,
+          "log_loss": 1.0874924723175947
+        },
+        "retention": {
+          "macro_accuracy": 0.8683651804670913,
+          "macro_log_loss": 0.35198480399471954,
+          "n": 622
+        },
+        "reward": 0.2338888888888889
+      },
+      "update-8": {
+        "forecast": {
+          "excess_brier": 0.5738794679422266,
+          "excess_log_loss": 0.9928540009426386,
+          "expected_brier": 0.6388145328772915,
+          "expected_choice_accuracy": 0.525974025974026,
+          "irreducible_brier": 0.06493506493506493,
+          "log_loss": 1.082873115301073
+        },
+        "retention": {
+          "macro_accuracy": 0.8683651804670913,
+          "macro_log_loss": 0.3514024704210988,
+          "n": 622
+        },
+        "reward": 0.26
+      }
+    },
+    "prefix": {
+      "accepted_updates": 10,
+      "interrupted_collected_transitions": 54,
+      "interrupted_completed_policy_backwards": 10,
+      "interrupted_physical_optimizer_steps": 0,
+      "interrupted_update": 11,
+      "interrupted_update_retained": false,
+      "parameters_and_optimizer_restored_as_recorded": true
+    },
+    "retail": {
+      "actor_transitions": 186,
+      "episodes": 66
+    },
+    "shell": {
+      "actor_transitions": 270,
+      "authored_root_groups": 6,
+      "context_cases": 110,
+      "mechanisms": 5,
+      "world_goal_tasks": 36
+    }
+  },
+  "complete_two_seed_comparison": false,
+  "release_eligible": false,
+  "scope": {
+    "authored_root_groups": 1,
+    "development_cases": 36,
+    "forecast_questions": 308,
+    "general_retention_questions": 622,
+    "mechanisms": 1,
+    "underlying_world_goal_tasks": 4
+  },
+  "second_seed_started": false,
+  "selected_checkpoint": "original_supervised_step_2742",
+  "status": "verified_recovered_incomplete_comparison"
+}
