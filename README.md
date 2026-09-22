@@ -23,9 +23,12 @@ without changing weights. New [live database decisions](docs/revisioned-live-v1-
 and their [learning adapter](docs/decision-learning-v2-results.md) now pass local
 execution and CPU checks. They prepare richer training experience; they do not
 establish a new trained model or broad transfer.
-The [integrated 9B pilot](docs/revisioned-pilot-v1-readiness.md) is now launched:
-one bounded H200 run, seven training groups, three objective combinations and
-two paired seeds. Launch readiness is separate from completed training results.
+The [integrated 9B pilot](docs/revisioned-pilot-v1-results.md) completed all six
+arms: 48 accepted updates and 288 executed training episodes. Forecast error
+improved slightly, but decision performance did not improve. Every arm stopped
+at its predefined limit; the original checkpoint remains selected. Recovery,
+metrics, consumption and saved weights passed independent audit, and the H200
+was deleted.
 
 **Next milestone: [a usable 9B release candidate](docs/release-candidate-v1-plan.md).**
 The release plan combines general decisions, broader tool-selection data and
