@@ -1,10 +1,13 @@
-# Paired data admitted; a longer learning schedule is prepared
+# Paired data admitted; the longer cloud experiment is starting
 
 The next local data stages are complete. The 4,721-question paired curriculum
 now has explicit repair effects, checked training ownership and a supervised
 loss consumer connected to guarded updates with general replay. The original
-9B supervised checkpoint remains selected. **No new foundation-model training
-or GPU allocation has occurred.**
+9B supervised checkpoint remains selected. The bounded trainer and portable
+cloud entry are now qualified, and one H200 has been allocated. At this update,
+bootstrap is underway and no new optimizer update has been observed. See the
+[launch record](paired-capacity-v1-launch.md) for the current phase; the earlier
+readiness aggregate remains a dated preparation snapshot.
 
 ## Inputs now describe what the tools actually do
 
@@ -85,17 +88,20 @@ those positions. The full 3,979-question forecast pool is not exhausted by this
 family-balanced schedule. These are prospective counts, not consumed data or
 independent tasks. Three schedule tests and actual package preparation passed.
 
-The proposed training phase can run up to4.5 hours, with separate final-evaluation
-and recovery time, within a prospective$35 stage ceiling from the original
-remaining authorization. No funds or hardware were allocated by this work.
+The training phase can run up to4.5 hours, with separate final-evaluation
+and recovery time, within a$35 stage ceiling from the original
+remaining authorization. One H200 is allocated at$4.59/hour, with an independent
+six-hour rental limit including setup, evaluation and recovery.
 This first stage is supervised capacity testing; a subsequent reward-learning
 comparison still needs identical starts and isolated objectives. Existing
 release gates remain unchanged.
 
-Next, integrate and qualify the bounded trainer/final evaluator and its cloud
-recovery bundle, then reconcile billing and launch within the existing
-authorization. The data admission, loss checks and sampling schedule are
-finished; repeating those stages is unnecessary without a change or failure.
+The bounded trainer/final evaluator and cloud recovery bundle passed local
+qualification. Twenty focused tests passed in a fresh extraction of the730-file
+input package. Exact cloud-entry checks rejected modified training data, source
+code and adapter weights, and a simulated setup failure still preserved an
+archive without loading a model. Next are actual GPU qualification and learning,
+followed by independent recovery, consumption and metric audits.
 
 See the [aggregate readiness results](../results/paired-training-v1/readiness.json),
 [contract implementation](../tool_lab/repair_contract.py),
