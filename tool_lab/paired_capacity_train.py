@@ -10,14 +10,15 @@ import time
 from scale_lab.common import ROOT, file_hash, read_rows, write_json, write_rows
 from tool_lab.evaluation_budget import EvaluationBudget, PhaseExpired
 from tool_lab.oracle_capacity_completion import require_device
-from tool_lab.paired_capacity_plan import VERSION, RECIPE, SEED
-from tool_lab.paired_capacity_runtime import progress, phase_limits, qualify_forward, make_optimizer
+from tool_lab.paired_capacity_plan import VERSION, DECISION_VERSION, RECIPES, SEED
+from tool_lab.paired_capacity_runtime import (progress, phase_limits, qualify_forward, make_optimizer,
+                                             decision_summary, decision_gates)
 from tool_lab.paired_curriculum import require
 
 
 def verify(data, adapter):
     frozen = json.loads((data/'freeze.json').read_text())
-    require(frozen['version'] == VERSION and frozen['recipe'] == RECIPE and frozen['seed'] == SEED and
+    require(frozen['version'] in RECIPES and frozen['recipe'] == RECIPES[frozen['version']] and frozen['seed'] == SEED and
             frozen['release_eligible'] is False, 'Wrong prepared experiment')
     for name, sha in frozen['sources'].items(): require(file_hash(ROOT/name) == sha, 'Frozen planned source changed')
     for name, sha in frozen['files'].items(): require(file_hash(data/name) == sha, 'Frozen training data changed')
@@ -28,15 +29,17 @@ def verify(data, adapter):
 def train(args):
     require_device(sys.platform, args.device)
     frozen = verify(args.data, args.adapter)
-    limits = phase_limits(time.time(), args.hard_stop_epoch)
+    version, recipe = frozen['version'], frozen['recipe']
+    decisions_only = version == DECISION_VERSION
+    limits = phase_limits(time.time(), args.hard_stop_epoch, frozen['phase_seconds'])
     budget = EvaluationBudget(time.monotonic(), **limits)
     started = time.monotonic(); interrupted = [False]
     signal.signal(signal.SIGTERM, lambda *_: interrupted.__setitem__(0, True))
-    for k, value in RECIPE.items(): setattr(args, k, value)
+    for k, value in recipe.items(): setattr(args, k, value)
     args.max_hours = sum(limits.values())/3600
     args.output.mkdir(parents=True, exist_ok=False)
-    receipt = dict(version=VERSION, status='loading', data_freeze_sha256=file_hash(args.data/'freeze.json'),
-        model=frozen['model'], parent_adapter_sha256=frozen['parent_adapter_sha256'], recipe=RECIPE,
+    receipt = dict(version=version, status='loading', data_freeze_sha256=file_hash(args.data/'freeze.json'),
+        model=frozen['model'], parent_adapter_sha256=frozen['parent_adapter_sha256'], recipe=recipe,
         accepted_steps=0, physical_optimizer_attempts=0, selected_update=0, last_evaluated_update=None,
         stop_reason=None, phase_limits=limits, hard_stop_epoch=args.hard_stop_epoch, release_eligible=False)
     def save(): write_json(args.output/'run.json', receipt)
@@ -72,8 +75,14 @@ def train(args):
         retention = read_rows(args.data/'retention.jsonl'); cases = read_rows(args.data/'validation-cases.jsonl')
         forecasts = read_rows(args.data/'validation-forecasts.jsonl')
         panels = {n: read_rows(args.data/f'panel-{n}.jsonl') for n in ('canonical', 'reversed')}
+        calendar = read_rows(args.data/'calendar-regression-cases.jsonl') if decisions_only else []
+        general = read_rows(args.data/'general-regression.jsonl') if decisions_only else []
         require(len(retention) == 622 and len(cases) == 36 and len(forecasts) == 308 and
                 all(len(r) == 2064 for r in panels.values()), 'Evaluation cohorts incomplete')
+        if decisions_only:
+            require(len(calendar) == 80 and len(general) == 3465 and
+                    all(not p['forecast_ids'] for p in schedule), 'Decision-only experiment contract differs')
+        gates_for = decision_gates if decisions_only else capacity_gates
         receipt['status'] = 'device_qualification'; save()
         qualification = qualify_forward(policy, list(paired.values()), usage, check)
         write_json(args.output/'device-qualification.json', qualification)
@@ -98,6 +107,8 @@ def train(args):
                 def record(event): stream.write(json.dumps(event, allow_nan=False)+'\n'); stream.flush()
                 _, traces = database.collect(policy, tokenizer, resets, args.max_tokens, checker, False, record)
             results['database'] = database_metrics(traces)
+            if decisions_only:
+                results['database']['incorrect_rate'] = sum(t['verified']['outcome'] == 'incorrect' for t in traces)/len(traces)
             _, traces = pool.collect(policy, tokenizer, cases, [], checker, False)
             require(len(traces) == 36, 'Incomplete report evaluation')
             write_rows(args.output/f'{tag}-report-trajectories.jsonl', traces)
@@ -111,6 +122,28 @@ def train(args):
                     policy.labels, policy.pad_id, args.device, args.batch_size, 64))
             require(len(retained) == 622, 'Incomplete general evaluation')
             write_rows(args.output/f'{tag}-retention.jsonl', retained); results['retention'] = macro_metrics(retained)
+            if decisions_only:
+                from tool_lab.expanded_pool import Pool
+                from release_lab.pilot_metrics import summarize
+                directory = args.output/f'{tag}-calendar'; directory.mkdir()
+                calendar_pool = Pool(directory, args.worker_python, args.worker_source, backend=args.backend,
+                    workers=args.batch_size, max_seconds=1800, maximum_new_episodes=80, maximum_new_actions=640)
+                try:
+                    _, calendar_traces = calendar_pool.collect(policy, tokenizer, calendar, args.max_tokens, checker, False)
+                    require(len(calendar_traces) == 80, 'Incomplete calendar regression evaluation')
+                    write_rows(args.output/f'{tag}-calendar-trajectories.jsonl', calendar_traces)
+                    results['calendar'] = trajectory_metrics(calendar_traces, calendar)
+                finally:
+                    calendar_pool.close()
+                retained = []
+                for offset in range(0, len(general), args.batch_size):
+                    checker(); retained.extend(evaluate_general(model, general[offset:offset+args.batch_size],
+                        policy.labels, policy.pad_id, args.device, args.batch_size, 64))
+                write_rows(args.output/f'{tag}-general-regression.jsonl', retained)
+                probabilities = [[p['probabilities'][o] for o in r['option_ids']] for r,p in zip(general,retained,strict=True)]
+                results['general_regression'] = summarize(general, probabilities)
+                results['decision_completion'] = decision_summary(results)
+                writer.add_scalar('development/completed_task_rate', results['decision_completion']['success_rate'], receipt['accepted_steps'])
             checker(); require(identity == _hash_trainable(snapshot(policy)), 'Evaluation changed parameters')
             require(all(p.grad is None for p in policy.parameters()), 'Evaluation accumulated gradients')
             write_json(args.output/f'{tag}-metrics.json', results)
@@ -122,8 +155,10 @@ def train(args):
             writer.flush(); save(); return results
         receipt['status'] = 'baseline'; save(); baseline = measure('baseline', 'training')
         receipt['baseline'] = baseline; receipt['best_checkpoint'] = checkpoint('best')
-        optimizer = make_optimizer(policy)
-        best_progress = baseline['database']['return']-.25*baseline['panel']['canonical']['forecast_brier']
+        optimizer = make_optimizer(policy, recipe)
+        best_progress = (decision_summary(baseline)['success_rate'] if decisions_only else
+                         baseline['database']['return']-.25*baseline['panel']['canonical']['forecast_brier'])
+        last_metrics = baseline; last_tag = 'baseline'
         best_selected = float('-inf'); misses = 0; estimate = 180.
         receipt['status'] = 'training'; save()
         with (args.output/'learning-ledger.jsonl').open('x') as ledger, (args.output/'training.jsonl').open('x') as log:
@@ -145,8 +180,9 @@ def train(args):
                     event = dict(update=number, step=result, seconds=time.monotonic()-started)
                     if result['accepted'] and number % args.eval_every == 0:
                         receipt['latest_checkpoint'] = checkpoint('latest'); save()
-                        current = measure(f'update-{number}', 'training'); gates = capacity_gates(current, baseline)
-                        state = progress(current, gates, number, best_progress, misses)
+                        current = measure(f'update-{number}', 'training'); gates = gates_for(current, baseline)
+                        last_metrics, last_tag = current, f'update-{number}'
+                        state = progress(current, gates, number, best_progress, misses, recipe)
                         best_progress, misses = state['best_progress'], state['misses']
                         event.update(metrics=current, gates=gates, progress=state)
                         if gates['capacity_improvement'] and state['score'] > best_selected+1e-4:
@@ -161,8 +197,14 @@ def train(args):
         # Final evaluation uses its own reserve, even if training stopped during an intermediate evaluation.
         receipt['status'] = 'final_evaluation'; receipt['latest_checkpoint'] = checkpoint('latest'); save()
         torch.save(optimizer.state_dict(), args.output/'latest-optimizer.pt')
-        final = measure('final', 'evaluation'); gates = capacity_gates(final, baseline)
-        score = final['database']['return']-.25*final['panel']['canonical']['forecast_brier']
+        if decisions_only and receipt['last_evaluated_update'] == receipt['accepted_steps']:
+            final = last_metrics; receipt['final_metrics_reused_from'] = last_tag
+            write_json(args.output/'final-metrics.json', final)
+        else:
+            final = measure('final', 'evaluation')
+        gates = gates_for(final, baseline)
+        score = (decision_summary(final)['success_rate'] if decisions_only else
+                 final['database']['return']-.25*final['panel']['canonical']['forecast_brier'])
         if gates['capacity_improvement'] and score > best_selected+1e-4:
             receipt['best_checkpoint'] = checkpoint('best'); receipt['selected_update'] = receipt['accepted_steps']
         receipt.update(status='complete', final=final, final_gates=gates,

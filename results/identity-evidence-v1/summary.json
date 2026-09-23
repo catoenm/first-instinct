@@ -1,0 +1,136 @@
+{
+  "execution": {
+    "base_database_worlds": 2,
+    "context_cases": 24,
+    "executed_branches": 576,
+    "files": {
+      "cases.jsonl": "5f505c381544e33bbf524c082df430acc0897a9db304433ddc0268da34e2f4c9",
+      "contexts-private.jsonl": "c3e9580192030c1c81e889f2595afe71563150e044203a53dc69aecd142c4fae",
+      "executions.jsonl": "09ce15b0bdcbbff02a4683e0f3b04864a5e8271fde495806999033c0eec8e3e6",
+      "questions-private.jsonl": "8a0b89abd0f402f0c60f8c0f51a91b5e5b596818ff1e59afcd1ca1572bb1389b"
+    },
+    "freeze_sha256": "9cbafd90c0c0e359fd818c391294dfb304cae196781ed99d4f5983499f666224",
+    "gates": {
+      "complete_menus": true,
+      "cost_reversal": true,
+      "hidden_uncertainty": true,
+      "redundant_query_penalty": true,
+      "replay": true,
+      "verifier_negative_controls": 5,
+      "visible_only_continuation": true
+    },
+    "guard": {
+      "blocked_attempts": [
+        "socket.socket",
+        "socket.create_connection",
+        "socket.getaddrinfo",
+        "subprocess.Popen",
+        "socket.socket"
+      ],
+      "environment_allowlist": [
+        "HF_HUB_OFFLINE",
+        "HOME",
+        "LANG",
+        "PATH",
+        "PYTHONNOUSERSITE",
+        "TMPDIR",
+        "TOKENIZERS_PARALLELISM",
+        "TRANSFORMERS_OFFLINE",
+        "TZ"
+      ],
+      "import_blocked_attempts": [
+        "socket.socket"
+      ],
+      "probe_attempt_count": 4,
+      "scope": "Python socket/subprocess interception; not an OS sandbox"
+    },
+    "limitation": "One authored identifier-resolution cohort within the existing application family. Fixed menu; not Harbor, model training, transfer, or measured model improvement.",
+    "new_model_calls": 0,
+    "optimizer_presentations": 0,
+    "primary_branches": 288,
+    "public_contexts": 16,
+    "questions": {
+      "decision": 16,
+      "forecast": 128,
+      "observation_value": 16
+    },
+    "repeat_branches": 288,
+    "reserved_transfer_scored": 0,
+    "root_fixture_groups": 1,
+    "status": "qualified_local_semantics_only",
+    "tool_calls": {
+      "branch_calls": 528,
+      "prefix_calls": 384,
+      "setup_calls": 2304
+    },
+    "training_questions_consumed": 0,
+    "uncertain_forecast_questions": 32,
+    "world_goal_tasks": 4
+  },
+  "independent_audit": {
+    "auditor_sha256": "343a23bc621e397dc94b13565466ad22ed1df2700f9be60838f1b66698e7ab24",
+    "call_accounting_including_replays": {
+      "branch_calls": 528,
+      "prefix_calls": 384,
+      "setup_calls": 2304
+    },
+    "checked_primary_branches": 288,
+    "checked_questions": 160,
+    "negative_controls": 5,
+    "new_model_calls": 0,
+    "new_tool_executions": 0,
+    "note": "Additional independent full-settings check strengthens the reused delivery verifier; no executions or labels were rewritten.",
+    "qualification_sha256": "7288def759af3625a1f2352361ee2cbf840c850a928b92f169f0c721c5074690",
+    "status": "passed",
+    "strict_frame": "All namespaces except added verified messaging rows must remain exactly unchanged, including every setting.",
+    "stricter_verifier_label_changes": 0
+  },
+  "local_guard": {
+    "audit": {
+      "elapsed_seconds": 1.1194298330228776,
+      "exit_code": 0,
+      "initial_host": {
+        "pressure": 1,
+        "swap_bytes": 1026618818
+      },
+      "last_host": {
+        "pressure": 1,
+        "swap_bytes": 1026618818
+      },
+      "limits": {
+        "rss_bytes": 4294967296,
+        "seconds": 300,
+        "swap_growth_bytes": 536870912
+      },
+      "peak_owned_group_rss_bytes": 14794752,
+      "pid": 18274,
+      "scope": "one CPU data job; not a model-memory qualification",
+      "started_at": 1790199584.584857,
+      "status": "completed"
+    },
+    "execution": {
+      "elapsed_seconds": 28.40786695794668,
+      "exit_code": 0,
+      "initial_host": {
+        "pressure": 1,
+        "swap_bytes": 1026618818
+      },
+      "last_host": {
+        "pressure": 1,
+        "swap_bytes": 1026618818
+      },
+      "limits": {
+        "rss_bytes": 4294967296,
+        "seconds": 300,
+        "swap_growth_bytes": 536870912
+      },
+      "peak_owned_group_rss_bytes": 92471296,
+      "pid": 17939,
+      "scope": "one CPU data job; not a model-memory qualification",
+      "started_at": 1790199469.711505,
+      "status": "completed"
+    }
+  },
+  "prospective_protocol_sha256": "d195503b0993dbe1d96370287381df4401e43b950baea8fa718a3ebb8f7f3fe1",
+  "scope": "Execution semantics qualified; prepared questions not admitted or consumed by training."
+}

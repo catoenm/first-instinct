@@ -5,7 +5,7 @@ from tool_lab.paired_capacity_plan import RECIPE
 from tool_lab.paired_curriculum import require
 
 
-def make_optimizer(policy):
+def make_optimizer(policy, recipe=RECIPE):
     """Track all trainable parameters required by the transactional guard.
 
     Supervision forbids critic gradients; AdamW skips parameters with grad=None.
@@ -13,30 +13,70 @@ def make_optimizer(policy):
     """
     import torch
     return torch.optim.AdamW([p for p in policy.parameters() if p.requires_grad],
-                             lr=RECIPE['learning_rate'], weight_decay=0.)
+                             lr=recipe['learning_rate'], weight_decay=0.)
 
 
-def progress(current, gates, update, best_progress, misses):
-    score = current['database']['return']-.25*current['panel']['canonical']['forecast_brier']
+def progress(current, gates, update, best_progress, misses, recipe=RECIPE):
+    score = (decision_summary(current)['success_rate'] if recipe.get('forecasts_per_family') == 0 else
+             current['database']['return']-.25*current['panel']['canonical']['forecast_brier'])
     require(math.isfinite(score), 'Nonfinite development progress')
     improved = gates['safe'] and score >= best_progress+1e-4
     if improved: best_progress, misses = score, 0
     else: misses += 1
     reason = None
     if not gates['safe']: reason = 'development_safety_gate'
-    elif update >= RECIPE['min_updates'] and misses >= RECIPE['patience']:
+    elif update >= recipe['min_updates'] and misses >= recipe['patience']:
         reason = 'plateau_after_minimum_dose'
     return dict(score=score, best_progress=best_progress, misses=misses, improved=improved, stop_reason=reason)
 
 
-def phase_limits(now_epoch, hard_stop_epoch):
+def phase_limits(now_epoch, hard_stop_epoch, phases=None):
     from tool_lab.paired_capacity_plan import PHASE_SECONDS
+    phases = PHASE_SECONDS if phases is None else phases
     remaining = hard_stop_epoch-now_epoch
-    reserve = PHASE_SECONDS['final_evaluation']+PHASE_SECONDS['recovery']
-    require(math.isfinite(remaining) and reserve < remaining <= PHASE_SECONDS['provider_hard_stop'],
+    reserve = phases['final_evaluation']+phases['recovery']
+    require(math.isfinite(remaining) and reserve < remaining <= phases['provider_hard_stop'],
             'Missing or invalid independent shutdown deadline')
-    return dict(training_seconds=min(PHASE_SECONDS['training'], remaining-reserve),
-                evaluation_seconds=PHASE_SECONDS['final_evaluation'], recovery_seconds=PHASE_SECONDS['recovery'])
+    return dict(training_seconds=min(phases['training'], remaining-reserve),
+                evaluation_seconds=phases['final_evaluation'], recovery_seconds=phases['recovery'])
+
+
+def decision_summary(metrics):
+    """Equal existing mechanisms; never substitute answer accuracy for completion."""
+    result = {}
+    for family, expected in (('database', 12), ('report', 36), ('calendar', 80)):
+        values = metrics[family]
+        require(values['episodes'] == expected, 'Incomplete executed decision panel')
+        result[family] = dict(success_rate=values['success_rate'], incorrect_rate=values['incorrect_rate'],
+                              reward=values['return' if family == 'database' else 'reward'])
+        require(all(math.isfinite(v) for v in result[family].values()) and
+                all(0 <= result[family][k] <= 1 for k in ('success_rate', 'incorrect_rate')),
+                'Invalid executed outcome metrics')
+    return dict(episodes=128, by_family=result,
+        **{k:sum(v[k] for v in result.values())/3 for k in ('success_rate', 'incorrect_rate', 'reward')},
+        weighting='Equal mechanisms; preserve each existing within-mechanism weighting.')
+
+
+def decision_gates(current, baseline):
+    from tool_lab.oracle_capacity_plan import capacity_gates
+    old = capacity_gates(current, baseline)
+    now, start = decision_summary(current), decision_summary(baseline)
+    changes = {f:{k:now['by_family'][f][k]-start['by_family'][f][k]
+                  for k in ('success_rate', 'incorrect_rate', 'reward')} for f in now['by_family']}
+    gain = now['success_rate']-start['success_rate']
+    a, b = current['general_regression'], baseline['general_regression']
+    require(a['n'] == b['n'] == 3465 and set(a['slices']) == set(b['slices']) and len(a['slices']) == 4,
+            'General regression cohort incomplete')
+    general_safe = (a['macro']['accuracy'] >= b['macro']['accuracy']-.01 and
+        a['macro']['log_loss'] <= b['macro']['log_loss']+.02 and
+        all(v['accuracy'] >= b['slices'][k]['accuracy']-.03 for k,v in a['slices'].items()))
+    safe = old['safe'] and general_safe and changes['calendar']['reward'] >= -.02 and changes['calendar']['incorrect_rate'] <= .02
+    qualifies = (safe and gain >= .05-1e-12 and sum(v['success_rate'] > 1e-12 for v in changes.values()) >= 2
+        and all(v['success_rate'] >= -1e-12 and v['incorrect_rate'] <= 1e-12 for v in changes.values())
+        and now['reward'] >= start['reward']-1e-12)
+    return dict(safe=safe, capacity_improvement=qualifies, release_eligible=False,
+        completion_gain=gain, by_family_changes=changes, original_safety_changes=old['changes'], general_safe=general_safe,
+        scope='Prospective decision-only experiment; unchanged historical gates; exposed regression panel, not fresh transfer.')
 
 
 def qualify_forward(policy, rows, usage, check):

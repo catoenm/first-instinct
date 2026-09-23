@@ -18,6 +18,12 @@ RECIPE = dict(max_updates=256, min_updates=128, eval_every=32, patience=2,
     max_database_resets=120)
 PHASE_SECONDS = dict(setup_and_preflight=1800, training=16200, final_evaluation=1800, recovery=900,
                      provider_hard_stop=21600)
+DECISION_VERSION = 'decision-supervision-v1'
+DECISION_RECIPE = dict(RECIPE, max_updates=128, forecasts_per_family=0, forecast_weight=0.)
+DECISION_PHASE_SECONDS = dict(setup_and_preflight=1800, training=36900, final_evaluation=3600,
+                              recovery=900, provider_hard_stop=43200)
+RECIPES = {VERSION: RECIPE, DECISION_VERSION: DECISION_RECIPE}
+PHASES = {VERSION: PHASE_SECONDS, DECISION_VERSION: DECISION_PHASE_SECONDS}
 
 
 def root_ids(canonical):
@@ -32,7 +38,7 @@ def root_ids(canonical):
     return result
 
 
-def schedules(rows, initial_teachers, replay):
+def schedules(rows, initial_teachers, replay, recipe=RECIPE):
     variants = defaultdict(list); teacher = defaultdict(set); forecasts = defaultdict(set)
     for row in rows:
         require(row['role'] == 'train' and row['training_admitted'], 'Only admitted presentations may be scheduled')
@@ -69,11 +75,11 @@ def schedules(rows, initial_teachers, replay):
                 chosen.append(present(values[cursors[key] % len(values)])); cursors[key] += 1
         return chosen
     result = []
-    for index in range(RECIPE['max_updates']):
-        teachers = choose('teacher', RECIPE['teacher_per_family'])
+    for index in range(recipe['max_updates']):
+        teachers = choose('teacher', recipe['teacher_per_family'])
         teachers += [present(key) for key in sorted(initial_teachers)]
         result.append(dict(update=index+1, teacher_ids=teachers,
-            forecast_ids=choose('forecast', RECIPE['forecasts_per_family']),
+            forecast_ids=choose('forecast', recipe['forecasts_per_family']),
             replay_ids=[replay_ids[(index*32+j) % len(replay_ids)] for j in range(32)]))
     return result
 
@@ -101,7 +107,8 @@ def coverage(schedule, rows, initial_teachers):
         note='Prospective schedule only. Position variants and repetitions add no independent tasks.')
 
 
-def prepare(output):
+def prepare(output, version=VERSION):
+    recipe = RECIPES[version]
     admitted = ROOT/'output/paired-admission-v1'
     consumer = ROOT/'output/paired-learning-v1'
     prior = ROOT/'output/oracle-capacity-v1-data'
@@ -111,12 +118,18 @@ def prepare(output):
         'docs/paired-capacity-v1-protocol.md', 'tool_lab/paired_update.py', 'tests/test_paired_update.py',
         'tool_lab/paired_learning.py', 'tool_lab/paired_admission.py', 'tool_lab/oracle_capacity_plan.py',
         'tool_lab/evaluation_budget.py']
+    if version == DECISION_VERSION:
+        source_names += ['tool_lab/paired_capacity_train.py', 'tool_lab/paired_capacity_runtime.py',
+            'tool_lab/expanded_pool.py', 'tool_lab/expanded_metrics.py',
+            'docs/decision-supervision-v1-protocol.md', 'tests/test_decision_supervision.py']
     parents = [admitted/'summary.json', consumer/'summary.json', prior/'freeze.json', index/'summary.json']
-    freeze = dict(version=VERSION, seed=SEED, recipe=RECIPE, phase_seconds=PHASE_SECONDS,
+    freeze = dict(version=version, seed=SEED, recipe=recipe, phase_seconds=PHASES[version],
         sources={n: file_hash(ROOT/n) for n in source_names},
         parent_receipts={str(p.relative_to(ROOT)): file_hash(p) for p in parents},
-        planned_stage_ceiling_usd=35., allocated_usd=0., original_budget_only=True,
-        training_objective='Paired teacher and consequence supervision plus general replay; no PPO in this capacity stage.',
+        planned_stage_ceiling_usd=60. if version == DECISION_VERSION else 35., allocated_usd=0.,
+        original_budget_only=True,
+        training_objective=('Execution-verified decision and inspection supervision plus unchanged general replay; no forecast or reward objective.'
+            if version == DECISION_VERSION else 'Paired teacher and consequence supervision plus general replay; no PPO in this capacity stage.'),
         prospective_only=True)
     write_json(output/'preparation-freeze.json', freeze)
     try:
@@ -130,9 +143,10 @@ def prepare(output):
         rows = read_rows(admitted/'train-presentations-private.jsonl')
         usage = json.loads((admitted/'usage-private.json').read_text()); require_use(rows, usage)
         canonical = read_rows(index/'canonical-private.jsonl'); initial = root_ids(canonical)
-        replay = read_rows(prior/'replay.jsonl'); schedule = schedules(rows, initial, replay)
+        replay = read_rows(prior/'replay.jsonl'); schedule = schedules(rows, initial, replay, recipe)
         require(len(rows) == 14313 and len(canonical) == 4721 and len(replay) == 4096, 'Prepared dose pool differs')
-        coverage_by_step = {str(n): coverage(schedule[:n], rows, initial) for n in (32, 64, 128, 256)}
+        coverage_by_step = {str(n): coverage(schedule[:n], rows, initial) for n in (32, 64, 128, 256)
+                            if n <= recipe['max_updates']}
         require(coverage_by_step['128']['distinct_canonical_questions']['teacher'] == 742 and
                 coverage_by_step['128']['all_starting_teachers_cover_all_positions'], 'Minimum useful teacher dose not achieved')
         write_rows(output/'schedule.jsonl', schedule)
@@ -143,11 +157,36 @@ def prepare(output):
                      'validation-forecasts.jsonl', 'panel-canonical.jsonl', 'panel-reversed.jsonl',
                      'shell-parity-cases.jsonl', 'shell-parity-references.jsonl'):
             shutil.copyfile(prior/name, output/name)
+        if version == DECISION_VERSION:
+            expanded = ROOT/'output/expanded-decisions-v1-data'
+            old = json.loads((expanded/'freeze.json').read_text())
+            name = 'transfer-cases.jsonl'
+            require(file_hash(expanded/name) == old['files'][name], 'Previously exposed calendar cases changed')
+            calendar = read_rows(expanded/name)
+            require(len(calendar) == 80 and all(c['family'] == 'calendar' for c in calendar),
+                    'Calendar regression cohort differs')
+            shutil.copyfile(expanded/name, output/'calendar-regression-cases.jsonl')
+            freeze['calendar_provenance'] = dict(source_freeze_sha256=file_hash(expanded/'freeze.json'),
+                original_role='transfer', current_use='Previously exposed regression evaluation only; never training.',
+                source_cases_sha256=file_hash(expanded/name), new_unseen_claim=False)
+            development = ROOT/'output/generalist-training-v1-data-v2'
+            previous = json.loads((development/'freeze.json').read_text())
+            require(file_hash(development/'development.jsonl') == previous['files']['development.jsonl'],
+                    'General regression cohort changed')
+            general = [r for r in read_rows(development/'development.jsonl') if r['suite'] == 'general']
+            require(len(general) == 3465 and all(r['role'] == 'development' for r in general),
+                    'General regression role or coverage differs')
+            write_rows(output/'general-regression.jsonl', general)
+            freeze['general_regression_parent_sha256'] = file_hash(development/'development.jsonl')
+            freeze['funding_scope'] = 'At most $60 within the remaining existing $195 training/evaluation/recovery hold; reconcile before allocation. No new budget.'
         inherited = json.loads((prior/'freeze.json').read_text())
         freeze.update(model=inherited['model'], parent_adapter_sha256=inherited['parent_adapter_sha256'],
             initial_trainable_sha256=inherited['initial_trainable_sha256'],
-            release_eligible=False, capacity_gates='Unchanged tool_lab.oracle_capacity_plan.capacity_gates',
-            plateau_rule='After at least128 accepted updates, stop after two safe evaluated checkpoints without improvement >=0.0001 in database_return - 0.25*oracle_brier. Safety/step rejection/deadline may stop earlier.',
+            release_eligible=False,
+            capacity_gates=('tool_lab.paired_capacity_runtime.decision_gates; original capacity safety bounds retained'
+                           if version == DECISION_VERSION else 'Unchanged tool_lab.oracle_capacity_plan.capacity_gates'),
+            plateau_rule=('Fixed128-update decision-only comparison; safety, step rejection or deadline can stop earlier.'
+                if version == DECISION_VERSION else 'After at least128 accepted updates, stop after two safe evaluated checkpoints without improvement >=0.0001 in database_return - 0.25*oracle_brier. Safety/step rejection/deadline may stop earlier.'),
             files={p.name: file_hash(p) for p in output.iterdir() if p.is_file()})
         write_json(output/'freeze.json', freeze)
         return dict(status='qualified_longer_paired_schedule', canonical_questions=4721,
@@ -160,4 +199,5 @@ def prepare(output):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__); p.add_argument('--output', type=Path, required=True)
-    print(json.dumps(prepare(p.parse_args().output), indent=2))
+    p.add_argument('--recipe', choices=RECIPES, default=VERSION); args = p.parse_args()
+    print(json.dumps(prepare(args.output, args.recipe), indent=2))

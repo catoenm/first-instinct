@@ -50,6 +50,18 @@ class PairedUpdateTests(unittest.TestCase):
             lambda: None, events.append)['accepted'])
         self.assertEqual({r['component'] for r in events if r['phase'] == 'completed_backward'}, {'outcome', 'replay'})
 
+    def test_decision_only_update_never_trains_on_forecast_targets(self):
+        policy = model(); teacher, outcomes, replay, probes, receipt, args = fixtures()
+        args.forecast_weight = 0.
+        optimizer = torch.optim.AdamW(policy.parameters(), lr=.001); events = []
+        result = learning_step(policy, optimizer, teacher, [], replay, probes, receipt, args, lambda: None, events.append)
+        self.assertTrue(result['accepted'])
+        completed = [e for e in events if e['phase'] == 'completed_backward']
+        self.assertEqual({e['component'] for e in completed}, {'teacher', 'replay'})
+        # Toy replay IDs use a different namespace and may share literal strings.
+        self.assertFalse({r['id'] for r in outcomes} &
+                         {i for e in completed if e['component'] == 'teacher' for i in e['ids']})
+
     def test_swapped_targets_fail_before_an_optimizer_attempt(self):
         policy = model(); teacher, outcomes, replay, probes, receipt, args = fixtures()
         optimizer = torch.optim.AdamW(policy.parameters(), lr=.001); events = []

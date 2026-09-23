@@ -79,3 +79,38 @@ The [original protocol](generalist-training-v1.md) remains unchanged.
 record this completed run. Source questions and per-example predictions remain
 private. Development feedback informed this continuation; it is not independent
 confirmation of generality or equivalence to Jev.
+
+## Tool-choice diagnostic after training
+
+A subsequent offline join of all **2,217** tool questions to their original
+schemas found 42 teacher disagreements corrected and 25 previously correct
+answers lost; 1,869 stayed correct and 281 stayed wrong. Within the last group,
+18 changed their choice while still disagreeing with the teacher. These counts reproduce both
+the improved question-weighted accuracy and the lower equal-server accuracy.
+
+The changes are concentrated around tool prerequisites. Of 85 changed choices,
+**59 moved from a tool with required arguments to one with none**; none moved
+in the opposite direction. Questions whose teacher tool requires no arguments
+gained 34 correct answers and lost none. The remaining questions gained eight
+and lost 25. Required fields describe a schema, not whether their values are
+available in the request. This pattern does not establish that discovery tools
+are better, or that all regressions are ambiguous.
+
+Inspection of the two losses in the seven-question group found a plausible
+ambiguity: the teacher requests content retrieval requiring an edition
+identifier, while the continuation chooses a tool listing available editions.
+The visible requests describe desired formats without supplying that literal
+identifier. Neither route has been executed; tool descriptions or prior
+knowledge might still make direct retrieval appropriate. These two cases were
+selected after seeing failures and cannot estimate label-error prevalence.
+
+This supports a specific prospective data test: keep commands fixed while
+varying whether their required values are missing, current, or stale, and vary
+the cost of discovery. Execute alternatives to distinguish useful inspection
+from redundant inspection or sensible stopping. The
+[identifier-evidence probe](identity-evidence-v1-protocol.md) uses authored
+application fixtures, with none of these development requests copied into
+training. The original labels, metrics, gates and selected checkpoint are
+unchanged. [Diagnostic aggregates and input hashes](../results/generalist-training-v1/tool-diagnostic.json)
+record zero model calls, executed alternatives or training consumption for this
+diagnostic itself.

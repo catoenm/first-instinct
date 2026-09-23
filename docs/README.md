@@ -17,7 +17,9 @@ and their original results remain at their existing paths.
 
 | Question | Read |
 | --- | --- |
+| Can direct decision supervision improve completed tasks? | [Fixed comparison protocol](decision-supervision-v1-protocol.md); data prepared, no result yet |
 | What happened in the longer training run? | [Audited generalist results](generalist-training-v1-results.md) and [original protocol](generalist-training-v1.md); no replacement qualified |
+| When should a tool selector inspect, act, or stop? | [Identifier-evidence results](identity-evidence-v1-results.md): 160 prepared questions from executed alternatives; no model training yet |
 | What is the longer supervised experiment testing? | [Paired-capacity run](paired-capacity-v1-launch.md) and [protocol](paired-capacity-v1-protocol.md) |
 | What data is admitted, and what has only been prepared? | [Paired-data readiness](paired-training-v1-readiness.md) and [curriculum census](paired-curriculum-v1-results.md) |
 | Did the previous learning runs improve decisions? | [Capacity comparison](oracle-capacity-probe-v2-results.md) and [final checkpoint evaluations](oracle-capacity-completion-v1-results.md) |

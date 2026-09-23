@@ -1,0 +1,426 @@
+{
+  "by_group": [
+    {
+      "accuracy_change": -0.011904761904761904,
+      "correct": {
+        "0": 79,
+        "384": 78
+      },
+      "group": "1017",
+      "n": 84,
+      "transitions": {
+        "correct_to_correct": 77,
+        "correct_to_wrong": 2,
+        "wrong_to_correct": 1,
+        "wrong_to_wrong": 4
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 20,
+        "384": 20
+      },
+      "group": "1049",
+      "n": 22,
+      "transitions": {
+        "correct_to_correct": 20,
+        "wrong_to_wrong": 2
+      }
+    },
+    {
+      "accuracy_change": 0.016483516483516484,
+      "correct": {
+        "0": 159,
+        "384": 162
+      },
+      "group": "122",
+      "n": 182,
+      "transitions": {
+        "correct_to_correct": 159,
+        "wrong_to_correct": 3,
+        "wrong_to_wrong": 20
+      }
+    },
+    {
+      "accuracy_change": -0.02586206896551724,
+      "correct": {
+        "0": 64,
+        "384": 61
+      },
+      "group": "1520",
+      "n": 116,
+      "transitions": {
+        "correct_to_correct": 57,
+        "correct_to_wrong": 7,
+        "wrong_to_correct": 4,
+        "wrong_to_wrong": 48
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 4,
+        "384": 4
+      },
+      "group": "1536",
+      "n": 4,
+      "transitions": {
+        "correct_to_correct": 4
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 31,
+        "384": 31
+      },
+      "group": "1591",
+      "n": 54,
+      "transitions": {
+        "correct_to_correct": 30,
+        "correct_to_wrong": 1,
+        "wrong_to_correct": 1,
+        "wrong_to_wrong": 22
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 11,
+        "384": 11
+      },
+      "group": "1646",
+      "n": 11,
+      "transitions": {
+        "correct_to_correct": 11
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 5,
+        "384": 5
+      },
+      "group": "1663",
+      "n": 5,
+      "transitions": {
+        "correct_to_correct": 5
+      }
+    },
+    {
+      "accuracy_change": -0.0410958904109589,
+      "correct": {
+        "0": 53,
+        "384": 50
+      },
+      "group": "174",
+      "n": 73,
+      "transitions": {
+        "correct_to_correct": 50,
+        "correct_to_wrong": 3,
+        "wrong_to_wrong": 20
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 64,
+        "384": 64
+      },
+      "group": "2391",
+      "n": 73,
+      "transitions": {
+        "correct_to_correct": 63,
+        "correct_to_wrong": 1,
+        "wrong_to_correct": 1,
+        "wrong_to_wrong": 8
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 35,
+        "384": 35
+      },
+      "group": "2490",
+      "n": 37,
+      "transitions": {
+        "correct_to_correct": 35,
+        "wrong_to_wrong": 2
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 33,
+        "384": 33
+      },
+      "group": "265",
+      "n": 34,
+      "transitions": {
+        "correct_to_correct": 33,
+        "wrong_to_wrong": 1
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 132,
+        "384": 132
+      },
+      "group": "284",
+      "n": 133,
+      "transitions": {
+        "correct_to_correct": 132,
+        "wrong_to_wrong": 1
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 19,
+        "384": 19
+      },
+      "group": "288",
+      "n": 19,
+      "transitions": {
+        "correct_to_correct": 19
+      }
+    },
+    {
+      "accuracy_change": 0.016574585635359115,
+      "correct": {
+        "0": 161,
+        "384": 164
+      },
+      "group": "331",
+      "n": 181,
+      "transitions": {
+        "correct_to_correct": 161,
+        "wrong_to_correct": 3,
+        "wrong_to_wrong": 17
+      }
+    },
+    {
+      "accuracy_change": 0.016216216216216217,
+      "correct": {
+        "0": 131,
+        "384": 134
+      },
+      "group": "349",
+      "n": 185,
+      "transitions": {
+        "correct_to_correct": 123,
+        "correct_to_wrong": 8,
+        "wrong_to_correct": 11,
+        "wrong_to_wrong": 43
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 5,
+        "384": 5
+      },
+      "group": "54",
+      "n": 6,
+      "transitions": {
+        "correct_to_correct": 5,
+        "wrong_to_wrong": 1
+      }
+    },
+    {
+      "accuracy_change": 0.0025906735751295338,
+      "correct": {
+        "0": 367,
+        "384": 368
+      },
+      "group": "58",
+      "n": 386,
+      "transitions": {
+        "correct_to_correct": 367,
+        "wrong_to_correct": 1,
+        "wrong_to_wrong": 18
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 44,
+        "384": 44
+      },
+      "group": "584",
+      "n": 45,
+      "transitions": {
+        "correct_to_correct": 44,
+        "wrong_to_wrong": 1
+      }
+    },
+    {
+      "accuracy_change": 0.05263157894736842,
+      "correct": {
+        "0": 26,
+        "384": 28
+      },
+      "group": "597",
+      "n": 38,
+      "transitions": {
+        "correct_to_correct": 26,
+        "wrong_to_correct": 2,
+        "wrong_to_wrong": 10
+      }
+    },
+    {
+      "accuracy_change": -0.2857142857142857,
+      "correct": {
+        "0": 7,
+        "384": 5
+      },
+      "group": "755",
+      "n": 7,
+      "transitions": {
+        "correct_to_correct": 5,
+        "correct_to_wrong": 2
+      }
+    },
+    {
+      "accuracy_change": 0.0078125,
+      "correct": {
+        "0": 119,
+        "384": 120
+      },
+      "group": "788",
+      "n": 128,
+      "transitions": {
+        "correct_to_correct": 119,
+        "wrong_to_correct": 1,
+        "wrong_to_wrong": 8
+      }
+    },
+    {
+      "accuracy_change": 0.1111111111111111,
+      "correct": {
+        "0": 75,
+        "384": 89
+      },
+      "group": "89",
+      "n": 126,
+      "transitions": {
+        "correct_to_correct": 75,
+        "wrong_to_correct": 14,
+        "wrong_to_wrong": 37
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 46,
+        "384": 46
+      },
+      "group": "899",
+      "n": 46,
+      "transitions": {
+        "correct_to_correct": 46
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 83,
+        "384": 83
+      },
+      "group": "903",
+      "n": 84,
+      "transitions": {
+        "correct_to_correct": 83,
+        "wrong_to_wrong": 1
+      }
+    },
+    {
+      "accuracy_change": 0.0,
+      "correct": {
+        "0": 125,
+        "384": 125
+      },
+      "group": "905",
+      "n": 130,
+      "transitions": {
+        "correct_to_correct": 125,
+        "wrong_to_wrong": 5
+      }
+    },
+    {
+      "accuracy_change": -0.02857142857142857,
+      "correct": {
+        "0": 20,
+        "384": 19
+      },
+      "group": "925",
+      "n": 35,
+      "transitions": {
+        "correct_to_correct": 19,
+        "correct_to_wrong": 1,
+        "wrong_to_wrong": 15
+      }
+    }
+  ],
+  "by_teacher_required_argument_count": {
+    "one_or_more": {
+      "correct_to_correct": 1417,
+      "correct_to_wrong": 25,
+      "wrong_to_correct": 8,
+      "wrong_to_wrong": 148
+    },
+    "zero": {
+      "correct_to_correct": 452,
+      "wrong_to_correct": 34,
+      "wrong_to_wrong": 133
+    }
+  },
+  "changed_choices": 85,
+  "executed_alternatives": 0,
+  "groups": 27,
+  "inputs": {
+    "output/generalist-training-v1-cloud-v1/data/development.jsonl": "8dbae35b63ca8b66e45ee70b45af71c94e3ced3c69ee6013e199d5abf992c6ae",
+    "output/generalist-training-v1-cloud-v1/run/0-tools-predictions.jsonl": "17cff65c42b8ea9dfcfc1814d056d9bf4730dd480f4fc5405830f315131aea06",
+    "output/generalist-training-v1-cloud-v1/run/384-tools-predictions.jsonl": "e62e4abc57892d01c65b2dcbff5c71940b09a6b6b2680fa18bed60339d26e50c",
+    "output/release-tool-data-v1/development-private.jsonl": "f99bb503facd9b5817138f991f332630868be553bf5a93049f71de5a446d5d1f",
+    "output/release-tool-data-v1/manifest-private.json": "89cf4629e2cff3db1baad882cebc5797871c159dad52e84059618fbc0a849d5f",
+    "results/generalist-training-v1/summary.json": "7965724ebacef5257772b9d6d283c17a1dc70ad824a3d4ea21b701471913a60b"
+  },
+  "labels_changed": 0,
+  "limitation": "Required-schema fields are not evidence that values are missing. Two cases selected post hoc; no estimate of ambiguity prevalence.",
+  "macro_accuracy": {
+    "0": 0.8685349767337931,
+    "384": 0.862248745119043
+  },
+  "new_model_calls": 0,
+  "question_weighted_accuracy": {
+    "0": 0.8543076229138475,
+    "384": 0.8619756427604871
+  },
+  "questions": 2217,
+  "reserved_transfer_scored": 0,
+  "schema_required_counts_for_changed_choices": {
+    "0_to_0": 7,
+    "1_to_0": 57,
+    "1_to_1": 14,
+    "1_to_2": 1,
+    "2_to_0": 1,
+    "2_to_1": 3,
+    "3_to_0": 1,
+    "3_to_2": 1
+  },
+  "scope": "Teacher first-tool agreement, not executable utility or optimality.",
+  "script_sha256": "ce272fb0ba4663263671034db6fbababa0c6d464b9a1d1cf08c746a06ff8a13a",
+  "selected_qualitative_cases": 2,
+  "status": "completed_posthoc_diagnostic",
+  "training_questions_created": 0,
+  "transitions": {
+    "correct_to_correct": 1869,
+    "correct_to_wrong": 25,
+    "wrong_to_correct": 42,
+    "wrong_to_wrong": 281
+  }
+}
