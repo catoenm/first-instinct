@@ -1,0 +1,37 @@
+name: Training startup guard
+run-name: Startup guard for ${{ inputs.rental_name }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      rental_name:
+        description: Unique decision-comparison rental name
+        required: true
+        type: string
+      seconds:
+        description: Stop after this many seconds unless disarmed (10–1200)
+        required: true
+        default: '1200'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  startup-guard:
+    if: github.repository == 'catoenm/first-instinct' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      RENTAL_NAME: ${{ inputs.rental_name }}
+      STARTUP_SECONDS: ${{ inputs.seconds }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Authenticate provider access
+        env:
+          RUNPOD_WATCHDOG_TOKEN: ${{ secrets.RUNPOD_WATCHDOG_TOKEN }}
+        run: python -m release_lab.startup_watchdog --authenticate
+      - name: Enforce startup cutoff
+        env:
+          RUNPOD_WATCHDOG_TOKEN: ${{ secrets.RUNPOD_WATCHDOG_TOKEN }}
+        run: python -m release_lab.startup_watchdog --name "$RENTAL_NAME" --seconds "$STARTUP_SECONDS"
