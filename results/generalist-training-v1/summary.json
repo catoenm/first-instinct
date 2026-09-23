@@ -1,0 +1,447 @@
+{
+  "actual_consumption": {
+    "by_pool": {
+      "general": {
+        "input_tokens": 13400426,
+        "ownership_groups": 41699,
+        "presentations": 43008,
+        "repeated_presentations": 0,
+        "source_rows": 43008,
+        "unique_questions": 43008
+      },
+      "tools": {
+        "input_tokens": 5309564,
+        "ownership_groups": 4588,
+        "presentations": 4608,
+        "repeated_presentations": 0,
+        "source_rows": 4608,
+        "unique_questions": 4608
+      },
+      "verified": {
+        "input_tokens": 1151882,
+        "ownership_groups": 10,
+        "presentations": 1536,
+        "repeated_presentations": 0,
+        "source_rows": 1536,
+        "unique_questions": 1536
+      }
+    },
+    "completed_backward_presentations": 49152,
+    "input_tokens": 19861872,
+    "note": "Ownership groups are not independently executed tasks or worlds. Existing source rows were reused; no new counterfactual branches executed by this supervised run.",
+    "optimizer_updates": 384,
+    "ownership_groups": 46297,
+    "partial_update_backward_presentations": 0,
+    "repeated_presentations": 0,
+    "unique_questions": 49152
+  },
+  "archive_sha256": "90b75e0e264f804dd48fe43bd57884c04f670dcb0231dd9d7a9ecb8dfff7f7bc",
+  "auditor_sha256": "dd6e72d46c1fbcca15415ee0ac78f4b66758310fcb6b536244e90cba0c4dc244",
+  "checkpoint_lineage": {
+    "1": {
+      "adapter_sha256": "478b3f308e7342be17139831ac4e3823ba2db7364ec59363d2f3f67a45a3087f",
+      "changed_tensors": 496,
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded.",
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "9a5a1ce7bc2c44e89164cf09970c15a624a0d22b567ea7ca1f1c7a6561701b2f",
+      "tensors": 496,
+      "trainable_parameter_capacity": 43278336
+    },
+    "128": {
+      "adapter_sha256": "776257b127b39b813719f705a0f615d8166fe304a07a22f7e0c979d3ce22ae6e",
+      "changed_tensors": 496,
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded.",
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "6b30904556f7fd758568ea5f014b4c3f0056d408acb5bbf5c7f657380cd25e5d",
+      "tensors": 496,
+      "trainable_parameter_capacity": 43278336
+    },
+    "256": {
+      "adapter_sha256": "dfc46626a1c5f5adcf24d385dc30f7e317b0fe8f6f8c3a86ab3c1aaca3787294",
+      "changed_tensors": 496,
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded.",
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "4bcfdfa61b373d16cedb29387d6e47a948adb6caba40a519e2e40c1c0abecd92",
+      "tensors": 496,
+      "trainable_parameter_capacity": 43278336
+    },
+    "384": {
+      "adapter_sha256": "dd6f0d0ec36ac7a6987db810cd6dd27dc48243ef57e3e5519fc8b3616bf50f82",
+      "changed_tensors": 496,
+      "note": "Changed tensors are counted by payload bytes; parameter capacity is not a count of individually changed scalar values. Serialization metadata is excluded.",
+      "original_tensor_digest": "cc36a732f9a656700bc9b65d01c2a2d1e3e37b56ef1c8d2c586c96477c486f9e",
+      "selected_tensor_digest": "9c5b0914ccaab70fc6b19ffc428c89bc93da063eeb9e2ce69be6ad64a6119ad3",
+      "tensors": 496,
+      "trainable_parameter_capacity": 43278336
+    }
+  },
+  "development_metrics": {
+    "0": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.6666666666666666,
+          "log_loss": 1.0878491203567315
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8735502858887085,
+          "log_loss": 0.33994954545881606
+        },
+        "n": 3465
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.34100264307891953,
+          "log_loss": 0.5932395998673429
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8685349767337931,
+          "log_loss": 0.4325004069265623
+        },
+        "n": 2217
+      }
+    },
+    "128": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.75,
+          "log_loss": 0.9672055933843012
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8677817842205253,
+          "log_loss": 0.3423655559831623
+        },
+        "n": 3465
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.2997108152888432,
+          "log_loss": 0.5197705314887148
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.860141925736729,
+          "log_loss": 0.39406418219453887
+        },
+        "n": 2217
+      }
+    },
+    "256": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.75,
+          "log_loss": 0.844255345092177
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8663750504210415,
+          "log_loss": 0.34556935156927465
+        },
+        "n": 3465
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.2722091560261159,
+          "log_loss": 0.47956778631907765
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.8575002707279927,
+          "log_loss": 0.3842186117608013
+        },
+        "n": 2217
+      }
+    },
+    "384": {
+      "application_decisions": {
+        "macro": {
+          "accuracy": 0.75,
+          "log_loss": 0.8502440395526593
+        },
+        "n": 24
+      },
+      "general": {
+        "macro": {
+          "accuracy": 0.8632555363540751,
+          "log_loss": 0.3491386793892907
+        },
+        "n": 3465
+      },
+      "outcomes": {
+        "macro": {
+          "brier": 0.24884464852401264,
+          "log_loss": 0.44712126695226934
+        },
+        "n": 366
+      },
+      "tools": {
+        "macro": {
+          "accuracy": 0.862248745119043,
+          "log_loss": 0.3768536574587416
+        },
+        "n": 2217
+      }
+    }
+  },
+  "estimated_compute_usd_excluding_storage": 30.104753746479748,
+  "freeze_sha256": "ef75eecda9a351b6f44b65c385ddefd040f520ec85669e7c47dec00b0300fb6c",
+  "frozen_input_files": 25,
+  "gates": {
+    "128": {
+      "eligible": true,
+      "probability": true,
+      "product_slices": true,
+      "qualifies": false,
+      "retention": true,
+      "tool_accuracy_gain": -0.008393050997064111
+    },
+    "256": {
+      "eligible": true,
+      "probability": true,
+      "product_slices": true,
+      "qualifies": false,
+      "retention": true,
+      "tool_accuracy_gain": -0.011034706005800365
+    },
+    "384": {
+      "eligible": false,
+      "probability": true,
+      "product_slices": true,
+      "qualifies": false,
+      "retention": false,
+      "tool_accuracy_gain": -0.00628623161475006
+    }
+  },
+  "new_model_calls": 0,
+  "outcome_groups": {
+    "0": {
+      "by_group": {
+        "appworld_development_change": {
+          "brier": 0.00188104978813095,
+          "log_loss": 0.019838111060903135
+        },
+        "appworld_development_forecast": {
+          "brier": 0.38045347849467137,
+          "log_loss": 0.6727939707451943
+        },
+        "forecasts_development": {
+          "brier": 0.6406734009539564,
+          "log_loss": 1.0870867177959314
+        }
+      },
+      "support": {
+        "appworld_development_change": 29,
+        "appworld_development_forecast": 29,
+        "forecasts_development": 308
+      }
+    },
+    "128": {
+      "by_group": {
+        "appworld_development_change": {
+          "brier": 0.0018035088232811632,
+          "log_loss": 0.01913725614261518
+        },
+        "appworld_development_forecast": {
+          "brier": 0.37461354638575767,
+          "log_loss": 0.657085196836203
+        },
+        "forecasts_development": {
+          "brier": 0.5227153906574907,
+          "log_loss": 0.8830891414873262
+        }
+      },
+      "support": {
+        "appworld_development_change": 29,
+        "appworld_development_forecast": 29,
+        "forecasts_development": 308
+      }
+    },
+    "256": {
+      "by_group": {
+        "appworld_development_change": {
+          "brier": 0.001689691724657467,
+          "log_loss": 0.017895956574411117
+        },
+        "appworld_development_forecast": {
+          "brier": 0.35994533836504294,
+          "log_loss": 0.6338795312364816
+        },
+        "forecasts_development": {
+          "brier": 0.4549924379886472,
+          "log_loss": 0.7869278711463403
+        }
+      },
+      "support": {
+        "appworld_development_change": 29,
+        "appworld_development_forecast": 29,
+        "forecasts_development": 308
+      }
+    },
+    "384": {
+      "by_group": {
+        "appworld_development_change": {
+          "brier": 0.001201681529204711,
+          "log_loss": 0.015179540653500332
+        },
+        "appworld_development_forecast": {
+          "brier": 0.3682283266735286,
+          "log_loss": 0.6530798215716519
+        },
+        "forecasts_development": {
+          "brier": 0.3771039373693046,
+          "log_loss": 0.6731044386316558
+        }
+      },
+      "support": {
+        "appworld_development_change": 29,
+        "appworld_development_forecast": 29,
+        "forecasts_development": 308
+      }
+    }
+  },
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "prepared": {
+    "by_pool": {
+      "general": {
+        "presentations": 350784,
+        "unique": 350784
+      },
+      "tools": {
+        "presentations": 37584,
+        "unique": 17786
+      },
+      "verified": {
+        "presentations": 12528,
+        "unique": 2635
+      }
+    },
+    "by_verified_question_kind": {
+      "application_delivery::consequence_application_delivery": 2268,
+      "appworld::continued_application_change": 435,
+      "appworld::continued_task_success": 435,
+      "appworld::fixed_plan_decision": 570,
+      "config::consequence_config": 1540,
+      "filesystem_scope::consequence_filesystem_scope": 1120,
+      "reservation::consequence_reservation": 4285,
+      "retail::continued_success": 90,
+      "retail::immediate_success": 65,
+      "retail::next_procedure": 90,
+      "retail::observation_value": 90,
+      "sqlite::consequence_sqlite": 1540
+    },
+    "first_check_verified_question_kind": {
+      "application_delivery::consequence_application_delivery": 55,
+      "appworld::continued_application_change": 56,
+      "appworld::continued_task_success": 55,
+      "appworld::fixed_plan_decision": 56,
+      "config::consequence_config": 56,
+      "filesystem_scope::consequence_filesystem_scope": 55,
+      "reservation::consequence_reservation": 56,
+      "retail::continued_success": 18,
+      "retail::immediate_success": 13,
+      "retail::next_procedure": 18,
+      "retail::observation_value": 18,
+      "sqlite::consequence_sqlite": 56
+    },
+    "optimizer_steps": 0,
+    "prepared_release_questions": 371278,
+    "scheduled_presentations": 400896,
+    "scheduled_tokens": 162516106,
+    "scheduled_unique_questions": 371205,
+    "training_presentations": 0
+  },
+  "reserved_transfer_scored": false,
+  "row_weighted_diagnostic": {
+    "0": {
+      "application_decisions": {
+        "accuracy": 0.6666666666666666,
+        "log_loss": 1.0878491203567315
+      },
+      "general": {
+        "accuracy": 0.8961038961038961,
+        "log_loss": 0.2679015972859662
+      },
+      "outcomes": {
+        "brier": 0.5694401880164477,
+        "log_loss": 0.9696968291079883
+      },
+      "tools": {
+        "accuracy": 0.8543076229138475,
+        "log_loss": 0.47198996495622725
+      }
+    },
+    "128": {
+      "application_decisions": {
+        "accuracy": 0.75,
+        "log_loss": 0.9672055933843012
+      },
+      "general": {
+        "accuracy": 0.8935064935064935,
+        "log_loss": 0.26857354305384606
+      },
+      "outcomes": {
+        "brier": 0.4697061063485499,
+        "log_loss": 0.7967265210778202
+      },
+      "tools": {
+        "accuracy": 0.8606224627875507,
+        "log_loss": 0.42660501819842767
+      }
+    },
+    "256": {
+      "application_decisions": {
+        "accuracy": 0.75,
+        "log_loss": 0.844255345092177
+      },
+      "general": {
+        "accuracy": 0.8926406926406927,
+        "log_loss": 0.26967453726179247
+      },
+      "outcomes": {
+        "brier": 0.4115439529319799,
+        "log_loss": 0.7138668673759255
+      },
+      "tools": {
+        "accuracy": 0.8561118628777628,
+        "log_loss": 0.41472126941241183
+      }
+    },
+    "384": {
+      "application_decisions": {
+        "accuracy": 0.75,
+        "log_loss": 0.8502440395526593
+      },
+      "general": {
+        "accuracy": 0.8917748917748918,
+        "log_loss": 0.27122025253549226
+      },
+      "outcomes": {
+        "brier": 0.34661607362739094,
+        "log_loss": 0.619387127330818
+      },
+      "tools": {
+        "accuracy": 0.8619756427604871,
+        "log_loss": 0.40855454118915485
+      }
+    }
+  },
+  "scope": "Rehash recovered bytes, reconstruct metrics from recorded predictions, match backwards to frozen schedule and optimizer logs, verify adapter lineage. Source label correctness is inherited from prior admission; no new label or fresh-transfer claim.",
+  "selected_step": 0,
+  "status": "audited_no_release_promotion",
+  "stop_reason": "retention_breach",
+  "verified_files": 86
+}
