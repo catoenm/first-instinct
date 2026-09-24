@@ -120,7 +120,9 @@ def prepare(output, version=VERSION):
         'tool_lab/evaluation_budget.py']
     if version == DECISION_VERSION:
         source_names += ['tool_lab/paired_capacity_train.py', 'tool_lab/paired_capacity_runtime.py',
-            'tool_lab/expanded_pool.py', 'tool_lab/expanded_metrics.py',
+            'tool_lab/expanded_pool.py', 'tool_lab/expanded_metrics.py', 'tool_lab/expanded_runtime.py',
+            'tool_lab/calendar_decisions.py', 'tool_lab/calendar_worker.py',
+            'tool_lab/calendar_assets/America_New_York.tzif', 'tool_lab/calendar_assets/provenance.json',
             'docs/decision-supervision-v1-protocol.md', 'tests/test_decision_supervision.py']
     parents = [admitted/'summary.json', consumer/'summary.json', prior/'freeze.json', index/'summary.json']
     freeze = dict(version=version, seed=SEED, recipe=recipe, phase_seconds=PHASES[version],

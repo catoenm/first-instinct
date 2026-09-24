@@ -12,7 +12,7 @@ from tool_lab.evaluation_budget import EvaluationBudget, PhaseExpired
 from tool_lab.oracle_capacity_completion import require_device
 from tool_lab.paired_capacity_plan import VERSION, DECISION_VERSION, RECIPES, SEED
 from tool_lab.paired_capacity_runtime import (progress, phase_limits, qualify_forward, make_optimizer,
-                                             decision_summary, decision_gates)
+                                             decision_summary, decision_gates, qualify_calendar)
 from tool_lab.paired_curriculum import require
 
 
@@ -48,6 +48,11 @@ def train(args):
         budget.check(phase)
     save(); model = policy = pool = writer = optimizer = initial = None
     try:
+        if decisions_only:
+            receipt['status'] = 'environment_qualification'; save()
+            qualification = qualify_calendar(read_rows(args.data/'calendar-regression-cases.jsonl'), check)
+            write_json(args.output/'environment-qualification.json', qualification)
+            receipt['status'] = 'loading'; save()
         import torch
         from transformers import AutoTokenizer
         from torch.utils.tensorboard import SummaryWriter

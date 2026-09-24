@@ -1,0 +1,58 @@
+{
+  "accepted_optimizer_updates": 0,
+  "baseline_complete": false,
+  "checked_at": 1790212284.115005,
+  "corrected_disposable_extraction": {
+    "episodes": 80,
+    "model_calls": 0,
+    "offered_actions": 176,
+    "optimizer_updates": 0,
+    "receipts_sha256": "94c753bc7681356ca7c0cfff3c0b878e0b2f377a90b5313a9e63a061baf36bda",
+    "scope": "Packaging and executable evaluator check; not training data or model performance.",
+    "status": "qualified_calendar_execution_without_model",
+    "tool_commands": 136
+  },
+  "corrected_sources": {
+    "tests/test_decision_supervision.py": "a85c880d1c4727187da270dbe278ed0e7e523c61c716efb400ab85279c7dcdff",
+    "tool_lab/calendar_assets/America_New_York.tzif": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95",
+    "tool_lab/calendar_assets/provenance.json": "424213f6fc8ae491cb2f3e80b203c2d61391e956f77dfd3b3f00a649340d76db",
+    "tool_lab/paired_capacity_plan.py": "d36b585a44a5972f7b9ee37a172e738c0314a3a2e56baac047dcb24a6ea6e2c5",
+    "tool_lab/paired_capacity_runtime.py": "19fea80d3b68c8f000637d87c63c8125225f63192b4ed49b2285c466283b96bc",
+    "tool_lab/paired_capacity_train.py": "9ade50ab4a722752fbfc197731a12e35d2cf9d74f90c03f6a1172f3d6d721c5d"
+  },
+  "corrupt_asset_rejected_before_model": true,
+  "database_event_phases": {
+    "episode_completed": 12,
+    "episode_started": 12
+  },
+  "failure": "Required pinned timezone asset omitted from bundle and source manifest.",
+  "gpu_allocations": 0,
+  "historical_sources_and_hashes_preserved": true,
+  "missing_asset_rejected_before_model": true,
+  "original_archive_sha256": "91a9abbcd7aa39fffc5480e80eff30561d7de3a535eba5c24a0e653f2bf1fcde",
+  "original_remains_selected": true,
+  "partial_baseline_rows": {
+    "baseline-panel-canonical.jsonl": 2064,
+    "baseline-panel-reversed.jsonl": 2064,
+    "baseline-report-forecasts.jsonl": 308,
+    "baseline-report-trajectories.jsonl": 36,
+    "baseline-retention.jsonl": 622
+  },
+  "physical_optimizer_attempts": 0,
+  "recovered_archive_sha256": "e586c605bf6881a912cb9507a450e5ecfa4b6fadbe4fcafeb0f32d80aabe66ad",
+  "release_eligible": false,
+  "run_status": "failed",
+  "scope": "Local infrastructure correction only. Disposable extraction is not a refrozen or launch-qualified training bundle.",
+  "status": "audited_packaging_failure_and_local_correction",
+  "training_presentations": 0,
+  "validation": {
+    "added_swap_bytes": 0,
+    "discovery_tests": 1189,
+    "elapsed_seconds": 63.19498404196929,
+    "guard_sha256": "655ee3f64e973417db2995bbc325cac9aeb4dd0a7c3b863e6ad5d4b46ac49a56",
+    "peak_owned_group_rss_bytes": 1001160704,
+    "skipped": 29,
+    "status": "passed"
+  },
+  "verified_artifact_files": 765
+}

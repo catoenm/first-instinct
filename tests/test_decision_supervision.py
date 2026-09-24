@@ -1,9 +1,15 @@
 from copy import deepcopy
+from pathlib import Path
+import signal
+import tempfile
+import time
+from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 from tests.test_paired_capacity_plan import data
-from tool_lab.paired_capacity_plan import DECISION_RECIPE, DECISION_PHASE_SECONDS, schedules, coverage
-from tool_lab.paired_capacity_runtime import decision_gates, decision_summary, phase_limits, progress
+from tool_lab.paired_capacity_plan import DECISION_VERSION, DECISION_RECIPE, DECISION_PHASE_SECONDS, schedules, coverage
+from tool_lab.paired_capacity_runtime import decision_gates, decision_summary, phase_limits, progress, qualify_calendar
 
 
 def metrics():
@@ -18,6 +24,50 @@ def metrics():
 
 
 class DecisionSupervisionTests(unittest.TestCase):
+    def test_calendar_preflight_executes_actual_worker_and_verifier(self):
+        from tool_lab.calendar_decisions import fixtures
+        result = qualify_calendar(fixtures())
+        self.assertEqual(result['episodes'], 80)
+        self.assertGreater(result['tool_commands'], 80)
+        self.assertEqual(result['model_calls'], 0)
+        self.assertEqual(result['optimizer_updates'], 0)
+
+    def test_calendar_preflight_rejects_missing_or_corrupt_runtime_asset(self):
+        from tool_lab.calendar_decisions import fixtures
+        with tempfile.TemporaryDirectory() as folder:
+            asset = Path(folder)/'missing.tzif'
+            with patch('tool_lab.calendar_decisions.ASSET', asset):
+                with self.assertRaises(FileNotFoundError): qualify_calendar(fixtures())
+                asset.write_bytes(b'not timezone data')
+                with self.assertRaisesRegex(ValueError, 'Pinned timezone'): qualify_calendar(fixtures())
+
+    def test_calendar_preflight_rejects_partial_or_duplicate_cohort(self):
+        from tool_lab.calendar_decisions import fixtures
+        cases = fixtures()
+        for invalid in (cases[:-1], [cases[0]]*80):
+            with self.assertRaisesRegex(ValueError, 'Incomplete calendar'): qualify_calendar(invalid)
+
+    def test_missing_asset_stops_trainer_before_foundation_loading(self):
+        from tool_lab.calendar_decisions import fixtures
+        from tool_lab.paired_capacity_train import train
+        frozen = dict(version=DECISION_VERSION, recipe=DECISION_RECIPE, phase_seconds=DECISION_PHASE_SECONDS,
+                      model={}, parent_adapter_sha256='test-only')
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root/'freeze.json').write_text('{}')
+            args = SimpleNamespace(data=root, adapter=root, output=root/'run', device='cuda',
+                                   hard_stop_epoch=time.time()+43200)
+            original_handler = signal.getsignal(signal.SIGTERM)
+            try:
+                with patch('tool_lab.paired_capacity_train.require_device'), \
+                     patch('tool_lab.paired_capacity_train.verify', return_value=frozen), \
+                     patch('tool_lab.paired_capacity_train.read_rows', return_value=fixtures()), \
+                     patch('tool_lab.calendar_decisions.ASSET', root/'missing.tzif'), \
+                     patch.dict('sys.modules', {'torch': None}):
+                    with self.assertRaises(FileNotFoundError): train(args)
+            finally:
+                signal.signal(signal.SIGTERM, original_handler)
+
     def test_schedule_keeps_teacher_coverage_and_removes_forecast_training(self):
         rows,roots,replay=data()
         schedule=schedules(rows,roots,replay,DECISION_RECIPE)

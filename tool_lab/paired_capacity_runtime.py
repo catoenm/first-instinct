@@ -5,6 +5,41 @@ from tool_lab.paired_capacity_plan import RECIPE
 from tool_lab.paired_curriculum import require
 
 
+def qualify_calendar(cases, check=lambda: None):
+    """Execute the calendar evaluator without a model, before foundation loading.
+
+    This checks packaging and the actual worker/verifier path. The fixed scripted
+    continuation is an infrastructure probe, never a model performance result.
+    """
+    import tempfile
+    from pathlib import Path
+    from scale_lab.common import digest
+    from tool_lab.calendar_decisions import continuation
+    from tool_lab.expanded_runtime import Budget, make_episode, audit_trace
+
+    require(len(cases) == 80 and len({c['id'] for c in cases}) == 80 and
+            all(c['family'] == 'calendar' for c in cases), 'Incomplete calendar preflight cohort')
+    receipts = []
+    with tempfile.TemporaryDirectory(prefix='decision-calendar-preflight-') as folder:
+        budget = Budget(Path(folder)/'attempts.jsonl', max_episodes=80, max_actions=640, max_seconds=120)
+        for case in cases:
+            check()
+            episode = make_episode(case, budget)
+            try:
+                while not episode.done:
+                    check()
+                    episode.step(continuation(episode.input()))
+                trace = episode.receipt()
+                audit_trace(case, trace)
+                receipts.append(dict(case_id=case['id'], receipt_sha256=digest(trace)))
+            finally:
+                episode.close()
+        return dict(status='qualified_calendar_execution_without_model', episodes=budget.episodes,
+            offered_actions=budget.actions, tool_commands=budget.counts['file_commands'],
+            receipts_sha256=digest(receipts), model_calls=0, optimizer_updates=0,
+            scope='Packaging and executable evaluator check; not training data or model performance.')
+
+
 def make_optimizer(policy, recipe=RECIPE):
     """Track all trainable parameters required by the transactional guard.
 
