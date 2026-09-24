@@ -31,6 +31,12 @@ class TinyTokenizer:
         return [1 + ord(char) % 39 for char in text]
 
 
+class TinyWordTokenizer(TinyTokenizer):
+    """Small synthetic vocabulary for long-prompt integration checks, not model metrics."""
+    def encode(self, text, **unused):
+        return [1 + sum(map(ord, word)) % 39 for word in text.split()]
+
+
 class TinyLanguage(nn.Module):
     def __init__(self):
         super().__init__()

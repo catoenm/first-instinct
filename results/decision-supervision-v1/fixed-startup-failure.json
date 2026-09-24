@@ -1,0 +1,70 @@
+{
+  "accepted_optimizer_updates": 0,
+  "all_historical_sources_and_hashes_preserved": true,
+  "checked_at": 1790215649.2401578,
+  "complete_baseline": false,
+  "completed_database_episodes": 12,
+  "compute_estimate_usd_excluding_storage": 1.0262500924275981,
+  "corrected_model_interface_not_qualified_by_old_preflight": true,
+  "corrected_sources": {
+    "tests/test_decision_supervision.py": "3aa0feca1031191e30b5c20119f265d0b7da30b0ecb6f4ab02d023596234e809",
+    "tests/test_general_rl.py": "0da469548edf0316e0877c99a5e795e54894643b6bcc2f07025383af6851f17a",
+    "tool_lab/paired_capacity_plan.py": "03bad2e689ce8750c2dcdd8ed48a167fc23ebc5530be2aeb1140f8870afa1998",
+    "tool_lab/paired_capacity_runtime.py": "5d87271235ffc8b371b4ed3b3938cf0118cbc34ebd19710bbc7407c409c69ec3",
+    "tool_lab/paired_capacity_train.py": "8085f6fbebd5ec4a4d30e77f896bfc309aeab2044e1fbce4fa2cd394e6dd7129"
+  },
+  "data_freeze_sha256": "365c7b72cc2789d8d758c0b01c95aaf1f7ac5011fa7c3fda038cb2ad1c5a8e9b",
+  "failure": "Require unlabeled actions under the canonical gradient-capable forward",
+  "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+  "input_archive_sha256": "6e0fad4b2f115264bc58fe673685e6c04eacef47d0191fa777cc442a728706f5",
+  "local_integration": {
+    "accumulated_gradients": false,
+    "action_probabilities_recomputed": true,
+    "concrete_cases": 80,
+    "independent_receipt_audit_passed": true,
+    "legacy_connection_failure_reproduced": true,
+    "model_weights_unchanged": true,
+    "new_foundation_model_calls": 0,
+    "new_optimizer_updates": 0,
+    "policy": "Actual DecisionPolicy over a tiny test network and synthetic word tokenizer.",
+    "scope": "Infrastructure test only. No candidate performance claim or newly launch-qualified bundle.",
+    "status": "passed_in_disposable_recovered_extraction"
+  },
+  "model_device_qualification_passed": true,
+  "new_gpu_allocations": 0,
+  "original_remains_selected": true,
+  "owned_rental_deleted": true,
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "partial_baseline_rows": {
+    "baseline-panel-canonical.jsonl": 2064,
+    "baseline-panel-reversed.jsonl": 2064,
+    "baseline-report-forecasts.jsonl": 308,
+    "baseline-report-trajectories.jsonl": 36,
+    "baseline-retention.jsonl": 622
+  },
+  "partial_calendar_execution": {
+    "application_top_level_calls": 0,
+    "file_commands": 1,
+    "new_offered_actions": 1,
+    "new_physical_episodes": 2,
+    "reservation_actions_including_finish": 0,
+    "shell_commands": 0,
+    "sql_statements_traced": 0
+  },
+  "physical_optimizer_attempts": 0,
+  "recovered_archive_sha256": "627bb1fc3cbd9181ae8e5c78600e3d5baf7eb9f826718b374cf8544b0a344110",
+  "release_eligible": false,
+  "scripted_calendar_preflight_episodes": 80,
+  "status": "independently_audited_interface_startup_failure",
+  "training_presentations": 0,
+  "validation": {
+    "added_swap_bytes": 0,
+    "discovery_tests": 1190,
+    "elapsed_seconds": 62.395545374951325,
+    "guard_sha256": "f4d58fe4a2be4d998aa54b9157fba77f381eba53b7711fd69931d22c52ce3cb3",
+    "peak_owned_group_rss_bytes": 1245003776,
+    "skipped": 29,
+    "status": "passed"
+  },
+  "verified_artifact_files": 770
+}

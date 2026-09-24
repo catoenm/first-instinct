@@ -9,7 +9,8 @@ from unittest.mock import patch
 
 from tests.test_paired_capacity_plan import data
 from tool_lab.paired_capacity_plan import DECISION_VERSION, DECISION_RECIPE, DECISION_PHASE_SECONDS, schedules, coverage
-from tool_lab.paired_capacity_runtime import decision_gates, decision_summary, phase_limits, progress, qualify_calendar
+from tool_lab.paired_capacity_runtime import (decision_gates, decision_summary, phase_limits, progress,
+                                             qualify_calendar, evaluate_calendar)
 
 
 def metrics():
@@ -24,6 +25,45 @@ def metrics():
 
 
 class DecisionSupervisionTests(unittest.TestCase):
+    def test_complete_calendar_panel_uses_real_decision_policy_and_auditable_unlabeled_rows(self):
+        import torch
+        from general_lab.rl import snapshot, _hash_trainable
+        from tests.test_general_rl import TinyLanguage, TinyWordTokenizer
+        from tool_lab.calendar_decisions import fixtures
+        from tool_lab.decision_learning_v2 import DecisionPolicy
+        from tool_lab.expanded_pool import Pool
+        from tool_lab.expanded_evaluation_audit import check_report
+        from tool_lab.live_pilot_audit import trajectories
+
+        torch.manual_seed(931); torch.set_num_threads(1)
+        policy = DecisionPolicy(TinyLanguage(), list(range(1, 37)), 0, 'cpu')
+        tokenizer = TinyWordTokenizer(); cases = fixtures()
+        args = SimpleNamespace(worker_python=Path('unused'), worker_source=Path('unused'),
+                               backend='catalog', batch_size=2, max_tokens=4096)
+        identity = _hash_trainable(snapshot(policy))
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            # Reproduce the failed connection: the legacy collector supplies [0].
+            pool = Pool(root/'legacy', args.worker_python, args.worker_source, backend='catalog', workers=2)
+            try:
+                with self.assertRaisesRegex(ValueError, 'Require unlabeled actions'):
+                    pool.collect(policy, tokenizer, cases[:2], args.max_tokens, lambda: None, False)
+            finally:
+                pool.close()
+            measured, traces = evaluate_calendar(policy, tokenizer, cases, args, root/'connected', lambda: None)
+            counts, derived = trajectories(traces, cases, tokenizer, require_exact_coverage=True)
+            check_report(measured, derived)
+        self.assertEqual(measured['episodes'], 80)
+        self.assertEqual(counts['context_cases'], 80)
+        self.assertEqual(identity, _hash_trainable(snapshot(policy)))
+        self.assertTrue(all(p.grad is None for p in policy.parameters()))
+        for trace in traces:
+            for event in trace['actor_events']:
+                self.assertEqual(event['encoded_input']['target_indices'], [])
+                with torch.no_grad(): scores, _, _ = policy([event['encoded_input']])
+                torch.testing.assert_close(scores.softmax(-1)[0], torch.tensor(event['old_probabilities']),
+                                           atol=1e-6, rtol=1e-6)
+
     def test_calendar_preflight_executes_actual_worker_and_verifier(self):
         from tool_lab.calendar_decisions import fixtures
         result = qualify_calendar(fixtures())

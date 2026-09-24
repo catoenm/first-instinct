@@ -40,6 +40,25 @@ def qualify_calendar(cases, check=lambda: None):
             scope='Packaging and executable evaluator check; not training data or model performance.')
 
 
+def evaluate_calendar(policy, tokenizer, cases, args, output, check):
+    """Use the existing unlabeled-action adapter for the complete calendar panel."""
+    from tool_lab.expanded_pool import Pool
+    from tool_lab.expanded_metrics import trajectory_metrics
+    from tool_lab.live_mixed import collect_shell
+
+    require(len(cases) == 80 and len({c['id'] for c in cases}) == 80 and
+            all(c['family'] == 'calendar' for c in cases), 'Incomplete calendar evaluation cohort')
+    output.mkdir()
+    pool = Pool(output, args.worker_python, args.worker_source, backend=args.backend,
+        workers=args.batch_size, max_seconds=1800, maximum_new_episodes=80, maximum_new_actions=640)
+    try:
+        _, traces = collect_shell(pool, policy, tokenizer, cases, args.max_tokens, check, False)
+        require(len(traces) == 80, 'Incomplete calendar regression evaluation')
+        return trajectory_metrics(traces, cases), traces
+    finally:
+        pool.close()
+
+
 def make_optimizer(policy, recipe=RECIPE):
     """Track all trainable parameters required by the transactional guard.
 

@@ -1,7 +1,7 @@
 # Decision supervision: startup failure, no training result
 
 The [fixed decision-focused comparison](decision-supervision-v1-protocol.md)
-did not reach training. The H100 attempt loaded the original Qwen3.5-9B adapter
+has not reached training. The initial connected H100 attempt loaded the original Qwen3.5-9B adapter
 and passed its actual forward/backward qualification, then failed during the
 baseline calendar evaluation. It completed **zero optimizer updates** and
 consumed **zero training presentations**. The original step-2742 checkpoint
@@ -55,3 +55,39 @@ can arrive later. This remains within the existing comparison allowance. The
 experiment is closed without an automatic replacement or budget extension.
 
 [Aggregate audit receipt](../results/decision-supervision-v1/summary.json).
+
+## Corrected restart: evaluator interface failure
+
+A subsequent user-authorized restart included the missing asset. Its complete
+scripted calendar preflight, dependency setup, 31 startup tests, model loading,
+and device qualification passed. Baseline evaluation then failed at the first
+calendar policy call. Again, there were **zero optimizer updates, zero training
+presentations, and no complete baseline or candidate result**.
+
+The calendar evaluator called a legacy collector directly. That collector
+inserts an unused first-option target placeholder; the current decision policy
+correctly rejects labeled live actions. The report evaluator already uses an
+existing adapter that removes this placeholder and verifies the executed
+receipts. Calendar evaluation now uses that same adapter. The policy's rejection
+check remains intact.
+
+The earlier tests exercised the environment and model independently but missed
+their connection. The added integration test reproduces that rejected call,
+then runs the production calendar evaluation function across all 80 cases with
+the actual decision-policy class over a tiny test network and a synthetic
+tokenizer. It independently audits the executions and encoded inputs, recomputes
+the recorded action probabilities, and checks that weights remain unchanged and
+no gradients accumulate. This establishes interface compatibility; it does not
+measure the 9B model's capabilities.
+
+The same connected test passed from a disposable extraction of the recovered
+archive with only the corrected source files substituted. Full test discovery
+passed: 1,190 tests, with 29 skipped. No historical freeze was rewritten and no
+new launch bundle was qualified.
+
+All 770 restart artifacts were recovered and the rental was deleted. Its compute
+estimate was about $1.03 excluding storage. No replacement was rented. The
+original model remains selected and the proposed learning comparison remains
+unanswered. Historical failed-run sources and hashes remain unchanged.
+
+[Restart audit receipt](../results/decision-supervision-v1/fixed-startup-failure.json).

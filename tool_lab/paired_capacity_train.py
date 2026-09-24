@@ -12,7 +12,7 @@ from tool_lab.evaluation_budget import EvaluationBudget, PhaseExpired
 from tool_lab.oracle_capacity_completion import require_device
 from tool_lab.paired_capacity_plan import VERSION, DECISION_VERSION, RECIPES, SEED
 from tool_lab.paired_capacity_runtime import (progress, phase_limits, qualify_forward, make_optimizer,
-                                             decision_summary, decision_gates, qualify_calendar)
+                                             decision_summary, decision_gates, qualify_calendar, evaluate_calendar)
 from tool_lab.paired_curriculum import require
 
 
@@ -128,18 +128,10 @@ def train(args):
             require(len(retained) == 622, 'Incomplete general evaluation')
             write_rows(args.output/f'{tag}-retention.jsonl', retained); results['retention'] = macro_metrics(retained)
             if decisions_only:
-                from tool_lab.expanded_pool import Pool
                 from release_lab.pilot_metrics import summarize
-                directory = args.output/f'{tag}-calendar'; directory.mkdir()
-                calendar_pool = Pool(directory, args.worker_python, args.worker_source, backend=args.backend,
-                    workers=args.batch_size, max_seconds=1800, maximum_new_episodes=80, maximum_new_actions=640)
-                try:
-                    _, calendar_traces = calendar_pool.collect(policy, tokenizer, calendar, args.max_tokens, checker, False)
-                    require(len(calendar_traces) == 80, 'Incomplete calendar regression evaluation')
-                    write_rows(args.output/f'{tag}-calendar-trajectories.jsonl', calendar_traces)
-                    results['calendar'] = trajectory_metrics(calendar_traces, calendar)
-                finally:
-                    calendar_pool.close()
+                results['calendar'], calendar_traces = evaluate_calendar(policy, tokenizer, calendar, args,
+                    args.output/f'{tag}-calendar', checker)
+                write_rows(args.output/f'{tag}-calendar-trajectories.jsonl', calendar_traces)
                 retained = []
                 for offset in range(0, len(general), args.batch_size):
                     checker(); retained.extend(evaluate_general(model, general[offset:offset+args.batch_size],
