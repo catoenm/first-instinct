@@ -1,0 +1,393 @@
+{
+  "status": "audited_baseline_and_first_accepted_update",
+  "snapshot_at": 1790229513.196148,
+  "source_revision": "d2875bd88e5f19de957237f1db8b8f313119ef6f",
+  "operation": "decision-supervision-v1-connected",
+  "recipe": "decision-supervision-v1",
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "kind": "qwen3_5",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "parent_adapter_sha256": "882323ebe8a7c33edf89b7dd2938a977b00dfd7cb38551e8d68db4ae36128e1a",
+  "initial_trainable_sha256": "17ad8fa384453fa2758f460bfacb941a8fe843ae01f4facc3053872032986d27",
+  "data_freeze_sha256": "6442ebd89780f7468f76db40b25b555e524d33f25d1c1e135d62cc6f514b929b",
+  "bundle_archive_sha256": "855982f95e326847f84b6232b6da9624c98ff52a469934ce1697c95f366231d6",
+  "bundle_manifest_sha256": "fed3134f24daa351fa3fd0f116c569dc32aac354d20bb3173ac72c12fb37964b",
+  "local_and_remote_startup_tests": 32,
+  "baseline": {
+    "executed_episodes": 128,
+    "completed_task_rate": 0.5277777777777778,
+    "by_mechanism": {
+      "database": {
+        "episodes": 12,
+        "return": 0.06333333333333334,
+        "success_rate": 0.4166666666666667,
+        "incorrect_rate": 0.3333333333333333
+      },
+      "report": {
+        "episodes": 36,
+        "by_structure": {
+          "report": {
+            "n": 36,
+            "reward": -0.03444444444444447,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.034444444444444444
+          }
+        },
+        "reward": -0.03444444444444447,
+        "success_rate": 0.5,
+        "incorrect_rate": 0.5,
+        "mean_cost": 0.034444444444444444,
+        "case_weighted": {
+          "n": 36,
+          "reward": -0.03444444444444447,
+          "success_rate": 0.5,
+          "incorrect_rate": 0.5,
+          "mean_cost": 0.034444444444444444
+        },
+        "by_regime": {
+          "contradictory": {
+            "n": 4,
+            "reward": -0.020000000000000018,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.02
+          },
+          "expensive": {
+            "n": 4,
+            "reward": -0.020000000000000018,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.02
+          },
+          "failed_write": {
+            "n": 4,
+            "reward": -0.050000000000000044,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.05
+          },
+          "fresh": {
+            "n": 4,
+            "reward": -0.020000000000000018,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.02
+          },
+          "hidden": {
+            "n": 4,
+            "reward": -0.020000000000000018,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.02
+          },
+          "offline": {
+            "n": 4,
+            "reward": -0.020000000000000018,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.02
+          },
+          "prerequisite": {
+            "n": 4,
+            "reward": -0.12000000000000005,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.12000000000000001
+          },
+          "redundant": {
+            "n": 4,
+            "reward": -0.020000000000000018,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.02
+          },
+          "stale": {
+            "n": 4,
+            "reward": -0.020000000000000018,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.5,
+            "mean_cost": 0.02
+          }
+        },
+        "forecast": {
+          "n": 308,
+          "macro": {
+            "log_loss": 0.7191808407697632,
+            "excess_log_loss": 0.6291617264113287,
+            "expected_brier": 0.4197922743577616,
+            "excess_brier": 0.3548572094226966,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.6883116883116883
+          },
+          "input_weighted": {
+            "log_loss": 0.7191808407697632,
+            "excess_log_loss": 0.6291617264113287,
+            "expected_brier": 0.4197922743577616,
+            "excess_brier": 0.3548572094226966,
+            "irreducible_brier": 0.06493506493506493,
+            "expected_choice_accuracy": 0.6883116883116883
+          },
+          "by_metric_group": {
+            "report": {
+              "n": 308,
+              "log_loss": 0.7191808407697632,
+              "excess_log_loss": 0.6291617264113287,
+              "expected_brier": 0.4197922743577616,
+              "excess_brier": 0.3548572094226966,
+              "irreducible_brier": 0.06493506493506493,
+              "expected_choice_accuracy": 0.6883116883116883
+            }
+          },
+          "by_family": {
+            "report": {
+              "n": 308,
+              "log_loss": 0.7191808407697632,
+              "excess_log_loss": 0.6291617264113287,
+              "expected_brier": 0.4197922743577616,
+              "excess_brier": 0.3548572094226966,
+              "irreducible_brier": 0.06493506493506493,
+              "expected_choice_accuracy": 0.6883116883116883
+            }
+          },
+          "ambiguous": {
+            "n": 40,
+            "log_loss": 1.2125231783519057,
+            "excess_log_loss": 0.5193759977919605,
+            "expected_brier": 0.7323004373362971,
+            "excess_brier": 0.23230043733629718,
+            "irreducible_brier": 0.5,
+            "expected_choice_accuracy": 0.5
+          },
+          "deterministic": {
+            "n": 268,
+            "log_loss": 0.6455476560560106,
+            "excess_log_loss": 0.6455476560560106,
+            "expected_brier": 0.3731492649579801,
+            "excess_brier": 0.3731492649579801,
+            "irreducible_brier": 0.0,
+            "expected_choice_accuracy": 0.7164179104477612
+          }
+        }
+      },
+      "calendar": {
+        "episodes": 80,
+        "by_structure": {
+          "adjacency": {
+            "n": 20,
+            "reward": 0.6355000000000001,
+            "success_rate": 0.75,
+            "incorrect_rate": 0.0,
+            "mean_cost": 0.1145
+          },
+          "fold_choice": {
+            "n": 40,
+            "reward": 0.25562500000000005,
+            "success_rate": 0.5,
+            "incorrect_rate": 0.125,
+            "mean_cost": 0.11937500000000001
+          },
+          "reschedule": {
+            "n": 20,
+            "reward": 0.46900000000000003,
+            "success_rate": 0.75,
+            "incorrect_rate": 0.25,
+            "mean_cost": 0.031
+          }
+        },
+        "reward": 0.45337500000000003,
+        "success_rate": 0.6666666666666666,
+        "incorrect_rate": 0.125,
+        "mean_cost": 0.08829166666666667,
+        "case_weighted": {
+          "n": 80,
+          "reward": 0.40393750000000006,
+          "success_rate": 0.625,
+          "incorrect_rate": 0.125,
+          "mean_cost": 0.0960625
+        },
+        "by_regime": {
+          "expensive": {
+            "n": 16,
+            "reward": 0.40468750000000003,
+            "success_rate": 0.625,
+            "incorrect_rate": 0.125,
+            "mean_cost": 0.0953125
+          },
+          "failed": {
+            "n": 16,
+            "reward": 0.40750000000000003,
+            "success_rate": 0.625,
+            "incorrect_rate": 0.125,
+            "mean_cost": 0.0925
+          },
+          "fresh": {
+            "n": 16,
+            "reward": 0.4215625,
+            "success_rate": 0.625,
+            "incorrect_rate": 0.125,
+            "mean_cost": 0.0784375
+          },
+          "hidden": {
+            "n": 16,
+            "reward": 0.4065625,
+            "success_rate": 0.625,
+            "incorrect_rate": 0.125,
+            "mean_cost": 0.09343749999999999
+          },
+          "stale": {
+            "n": 16,
+            "reward": 0.379375,
+            "success_rate": 0.625,
+            "incorrect_rate": 0.125,
+            "mean_cost": 0.120625
+          }
+        }
+      }
+    },
+    "general_questions": 3465,
+    "general_macro": {
+      "accuracy": 0.872134857721688,
+      "log_loss": 0.3402949128820327
+    },
+    "retention_questions": 622,
+    "retention": {
+      "n": 622,
+      "macro_accuracy": 0.8683651804670913,
+      "macro_log_loss": 0.3519940140785228
+    }
+  },
+  "learning": {
+    "coverage": {
+      "replay": {
+        "accepted_transactions": {
+          "completed_presentations": 32,
+          "distinct_canonical_questions": 32,
+          "distinct_position_ids": 32,
+          "repeated_position_presentations": 0
+        },
+        "all_completed_backwards": {
+          "completed_presentations": 32,
+          "distinct_canonical_questions": 32,
+          "distinct_position_ids": 32,
+          "repeated_position_presentations": 0
+        },
+        "by_family": {
+          "general": {
+            "completed_presentations": 32,
+            "distinct_canonical_questions": 32,
+            "distinct_position_ids": 32,
+            "repeated_position_presentations": 0
+          }
+        }
+      },
+      "teacher": {
+        "accepted_transactions": {
+          "completed_presentations": 48,
+          "distinct_canonical_questions": 48,
+          "distinct_position_ids": 48,
+          "repeated_position_presentations": 0
+        },
+        "all_completed_backwards": {
+          "completed_presentations": 96,
+          "distinct_canonical_questions": 84,
+          "distinct_position_ids": 96,
+          "repeated_position_presentations": 0
+        },
+        "by_family": {
+          "application_delivery": {
+            "completed_presentations": 12,
+            "distinct_canonical_questions": 12,
+            "distinct_position_ids": 12,
+            "repeated_position_presentations": 0
+          },
+          "config": {
+            "completed_presentations": 12,
+            "distinct_canonical_questions": 12,
+            "distinct_position_ids": 12,
+            "repeated_position_presentations": 0
+          },
+          "filesystem_scope": {
+            "completed_presentations": 12,
+            "distinct_canonical_questions": 12,
+            "distinct_position_ids": 12,
+            "repeated_position_presentations": 0
+          },
+          "retail": {
+            "completed_presentations": 12,
+            "distinct_canonical_questions": 12,
+            "distinct_position_ids": 12,
+            "repeated_position_presentations": 0
+          },
+          "revisioned_database": {
+            "completed_presentations": 36,
+            "distinct_canonical_questions": 24,
+            "distinct_position_ids": 36,
+            "repeated_position_presentations": 0
+          },
+          "sqlite": {
+            "completed_presentations": 12,
+            "distinct_canonical_questions": 12,
+            "distinct_position_ids": 12,
+            "repeated_position_presentations": 0
+          }
+        }
+      }
+    },
+    "note": "Completed backwards include later rollbacks. Distinct positions and canonical questions are not independent worlds.",
+    "transactions": {
+      "accepted_transactions": 1,
+      "attempted_updates_without_closure": [],
+      "components": {
+        "replay": {
+          "completed_backward_presentations": 32,
+          "presentations_awaiting_transaction_outcome": 0,
+          "presentations_in_accepted_transactions": 32,
+          "presentations_in_rejected_transactions": 0,
+          "repeated_presentations": 0,
+          "unique_question_ids": 32
+        },
+        "teacher": {
+          "completed_backward_presentations": 96,
+          "presentations_awaiting_transaction_outcome": 48,
+          "presentations_in_accepted_transactions": 48,
+          "presentations_in_rejected_transactions": 0,
+          "repeated_presentations": 0,
+          "unique_question_ids": 96
+        }
+      },
+      "diagnostic_backwards": {},
+      "note": "Completed presentations remain counted after rollback. Started-only batches may be partial and are not included in completed counts. Gradient diagnostics are separate checks, not optimizer-objective presentations.",
+      "on_policy_checks": {
+        "maximum_absolute_probability_delta": null,
+        "transitions": 0,
+        "updates": 0
+      },
+      "physical_optimizer_attempts": 1,
+      "rejected_transactions": 0,
+      "started_but_unconfirmed_backward_presentations": 2,
+      "started_but_unconfirmed_diagnostic_presentations": 0
+    }
+  },
+  "teacher_pool_canonical_questions": 742,
+  "planned_maximum_updates": 128,
+  "planned_teacher_presentations": 6144,
+  "planned_replay_presentations": 4096,
+  "forecast_training_presentations": 0,
+  "first_candidate_evaluation_update": 32,
+  "selected_update": 0,
+  "measured_candidate_improvement": null,
+  "release_eligible": false,
+  "new_budget_usd": 0,
+  "current_rental_cap_usd": 48,
+  "maximum_hours": 12,
+  "audit": {
+    "baseline_audit_sha256": "0528283f0e27babea7c2a8c26503aed205282ac65d7c318665950bc8cc5e1de8",
+    "accounting_audit_sha256": "8e3d316b8cd6d5c3a75a7d1ca3f914a961e463bc30d26185a60e3a0deb4fbdb5",
+    "learning_snapshot_archive_sha256": "45a9db88d3ba329107bb2dea212beadd8e026f557d1263e6186b736c163aa6ec",
+    "baseline_snapshot_archive_sha256": "892e5d6332f4d45bcaf6df7c97432709bff95f94f42da0b6cff98d385d7ef30c"
+  },
+  "scope": "Baseline and one copied learning snapshot only. Next update partly consumed; partial presentations remain explicit. No trained candidate measurement, final checkpoint recovery, fresh transfer, or release claim."
+}
