@@ -18,10 +18,10 @@ from .native import NativeEpisode, library
 
 
 class Policy(nn.Module):
-    def __init__(self):
+    def __init__(self, obs_size=OBS_SIZE, action_count=len(ACTIONS)):
         super().__init__()
-        self.body=nn.Sequential(nn.Linear(OBS_SIZE,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh())
-        self.actor=nn.Linear(64,len(ACTIONS));self.value=nn.Linear(64,1)
+        self.body=nn.Sequential(nn.Linear(obs_size,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh())
+        self.actor=nn.Linear(64,action_count);self.value=nn.Linear(64,1)
         for layer in self.modules():
             if isinstance(layer,nn.Linear):
                 nn.init.orthogonal_(layer.weight,np.sqrt(2));nn.init.zeros_(layer.bias)
