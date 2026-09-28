@@ -1,0 +1,303 @@
+{
+  "experiment": "evolved-values-v1-dose-diagnostic",
+  "source_revision": "e3f6a12efd109f53e667383c4a50e264133d1e73",
+  "summary": {
+    "status": "complete",
+    "kind": "posthoc_frozen_genome_dose_diagnostic",
+    "protocol_sha256": "c1f86a3a0954053794e7d8991b88b7730283dec77629a4a1b163680b3d33e359",
+    "metrics": {
+      "evolution": {
+        "mean_lifetime": 109.953125,
+        "mean_food": 11.1484375,
+        "horizon_survival": 0.7265625,
+        "lifetime_by_learner_seed": {
+          "17": 114.8125,
+          "29": 105.09375
+        }
+      },
+      "random_search": {
+        "mean_lifetime": 110.0078125,
+        "mean_food": 10.703125,
+        "horizon_survival": 0.7109375,
+        "lifetime_by_learner_seed": {
+          "17": 113.484375,
+          "29": 106.53125
+        }
+      },
+      "survival": {
+        "mean_lifetime": 105.375,
+        "mean_food": 9.40625,
+        "horizon_survival": 0.671875,
+        "lifetime_by_learner_seed": {
+          "17": 105.71875,
+          "29": 105.03125
+        }
+      },
+      "handcrafted": {
+        "mean_lifetime": 110.234375,
+        "mean_food": 11.1953125,
+        "horizon_survival": 0.6796875,
+        "lifetime_by_learner_seed": {
+          "17": 113.03125,
+          "29": 107.4375
+        }
+      }
+    },
+    "learning": [
+      {
+        "learner_seed": 17,
+        "updates": 576,
+        "training_transitions": 589824,
+        "training_worlds_initialized": 6609,
+        "training_world_seeds_actually_stepped": 6609,
+        "completed_training_lifetimes": 6577,
+        "initial_sha256": "c9aba28d22948b45a0cbb9b98341822336f5ff52c3a2e52af30defbb55ab0892",
+        "final_sha256": "777ad3975a7cb1d50a23779568d0e179f1b7579cd9b7b682f765038cb490d032",
+        "final_weights_sha256": "a7ec14405b1331fad44ed7fb900f12728db8da8d00dcdb6e37605e9cf55e20d1",
+        "genome": [
+          0.12088329344987869,
+          0.1677742898464203,
+          0.11295006424188614,
+          0.13189417123794556,
+          0.142048180103302,
+          0.036927688866853714,
+          0.2875222861766815
+        ],
+        "parameters": 9478,
+        "final_training": {
+          "update": 576,
+          "training_transitions": 589824,
+          "completed_lifetimes": 6,
+          "mean_completed_lifetime": 101.33333333333333,
+          "policy_loss": -0.0030022418747345605,
+          "value_loss": 0.22485342373450598,
+          "entropy": 1.0849712193012238
+        },
+        "early_checkpoint_matches_original_candidate": true
+      },
+      {
+        "learner_seed": 29,
+        "updates": 576,
+        "training_transitions": 589824,
+        "training_worlds_initialized": 6648,
+        "training_world_seeds_actually_stepped": 6648,
+        "completed_training_lifetimes": 6616,
+        "initial_sha256": "eba4473e53452b21fe57ee9b12235cf98f1c5d173d1da4fd0560708d6aea92e3",
+        "final_sha256": "f6aa323725185965d3b3774238139b023ab344e613db412d773fb7827c7f972e",
+        "final_weights_sha256": "bbc2ae2a75cbc71c9d72c397f048ff5d45f319f3a17450ab956eb5c4463b81cd",
+        "genome": [
+          0.12088329344987869,
+          0.1677742898464203,
+          0.11295006424188614,
+          0.13189417123794556,
+          0.142048180103302,
+          0.036927688866853714,
+          0.2875222861766815
+        ],
+        "parameters": 9478,
+        "final_training": {
+          "update": 576,
+          "training_transitions": 589824,
+          "completed_lifetimes": 13,
+          "mean_completed_lifetime": 117.07692307692308,
+          "policy_loss": -0.0011631942276532452,
+          "value_loss": 0.4677856018145879,
+          "entropy": 1.1550651689370472
+        },
+        "early_checkpoint_matches_original_candidate": true
+      },
+      {
+        "learner_seed": 17,
+        "updates": 576,
+        "training_transitions": 589824,
+        "training_worlds_initialized": 6673,
+        "training_world_seeds_actually_stepped": 6671,
+        "completed_training_lifetimes": 6641,
+        "initial_sha256": "c9aba28d22948b45a0cbb9b98341822336f5ff52c3a2e52af30defbb55ab0892",
+        "final_sha256": "90729cd4c6d95301410c446a7356453c1d3196d78426592c465c1ef2c9af6673",
+        "final_weights_sha256": "d72721f630b7752e72b5d39d34422845e527316c29be5a769fc9346e7a0bad70",
+        "genome": [
+          0.14678050577640533,
+          0.0014753600116819143,
+          0.1552223563194275,
+          0.07595395296812057,
+          0.06852348148822784,
+          0.029369225725531578,
+          0.522675096988678
+        ],
+        "parameters": 9478,
+        "final_training": {
+          "update": 576,
+          "training_transitions": 589824,
+          "completed_lifetimes": 8,
+          "mean_completed_lifetime": 128.0,
+          "policy_loss": -0.003395226007948319,
+          "value_loss": 0.2635420846442382,
+          "entropy": 1.131012539068858
+        },
+        "early_checkpoint_matches_original_candidate": true
+      },
+      {
+        "learner_seed": 29,
+        "updates": 576,
+        "training_transitions": 589824,
+        "training_worlds_initialized": 6619,
+        "training_world_seeds_actually_stepped": 6619,
+        "completed_training_lifetimes": 6587,
+        "initial_sha256": "eba4473e53452b21fe57ee9b12235cf98f1c5d173d1da4fd0560708d6aea92e3",
+        "final_sha256": "127d9954a67da13e65bbedcf093c9259ef6ac6eaa051641056a809d1a863bbb0",
+        "final_weights_sha256": "4d22ad6b475b69fb421cbe12aa9c952e3faea3676570a03118c8fad14c59cc0f",
+        "genome": [
+          0.14678050577640533,
+          0.0014753600116819143,
+          0.1552223563194275,
+          0.07595395296812057,
+          0.06852348148822784,
+          0.029369225725531578,
+          0.522675096988678
+        ],
+        "parameters": 9478,
+        "final_training": {
+          "update": 576,
+          "training_transitions": 589824,
+          "completed_lifetimes": 5,
+          "mean_completed_lifetime": 108.2,
+          "policy_loss": -0.0037122933038820824,
+          "value_loss": 0.1697243501742681,
+          "entropy": 1.0737500687440236
+        },
+        "early_checkpoint_matches_original_candidate": true
+      }
+    ],
+    "accounting": {
+      "training_transitions": 2359296,
+      "evaluation_transitions": 55753,
+      "optimizer_steps": 27648,
+      "completed_training_lifetimes": 26421,
+      "elapsed_seconds": 37.19761620799545
+    },
+    "original_search_gate_still_failed": true,
+    "new_genomes": 0,
+    "new_genetic_selection": 0,
+    "paid_compute_usd": 0,
+    "interpretation": "Compares frozen reward functions after equal per-agent learning time. It does not turn the failed initial genetic search into a positive result."
+  },
+  "protocol": {
+    "status": "prospective_frozen_genome_dose_diagnostic",
+    "original_summary_sha256": "47c5a062f2fbec20200935f9039adb96e85b32efc59e688b2ce16ff0eec33911",
+    "original_audit_sha256": "a9ae84c2c59194ea154c05960220850857ddbed142b655e8b807dced0d159355",
+    "original_selection_sha256": "155e0db3a65fa9ce53bf369748ff06eb3c88d535ddcd74dc624eaae33aa64de5",
+    "runner_sha256": "807626f1d1b1eb611c7cbc72b72c52afedb41a60ea7414129de1805be6b8588d",
+    "recipe": {
+      "population": 6,
+      "generations": 3,
+      "learner_seeds": [
+        17,
+        29
+      ],
+      "environments": 32,
+      "rollout_steps": 32,
+      "updates": 32,
+      "epochs": 3,
+      "minibatch": 256,
+      "development_worlds": 16,
+      "final_worlds": 64,
+      "max_seconds": 1500,
+      "namespace": "evolved-values-v1"
+    },
+    "updates_per_learner": 576,
+    "additional_training_transitions": 2359296,
+    "new_genomes": 0,
+    "new_genetic_selection": 0,
+    "additional_learner_seeds": 0,
+    "continuation": "Fresh learners, same initial seeds and training world streams; verify the early checkpoint matches the original candidate.",
+    "evaluation_role": "long-dose-diagnostic",
+    "evaluation_worlds": 64,
+    "claim_boundary": "Post-hoc diagnosis only. Original search gate remains failed. No broader-search authorization or transfer claim.",
+    "max_seconds": 240,
+    "paid_compute_usd": 0
+  },
+  "audit": {
+    "status": "passed",
+    "summary_sha256": "cce929bb68967628305cbd7951a0ac464ce331debb8fd6fbef5872de3340cb7d",
+    "protocol_sha256": "c1f86a3a0954053794e7d8991b88b7730283dec77629a4a1b163680b3d33e359",
+    "original_audit_sha256": "a9ae84c2c59194ea154c05960220850857ddbed142b655e8b807dced0d159355",
+    "auditor_sha256": "b9f63e0b272605e3320b4279cde4b0bf10bef5ca4d67fb6e39e598ba371f586f",
+    "scalar_auditor_sha256": "bbf2f605c72d2e12810091a4c4229b349d5fe9d1f4aa007927bbb5405f1e82db",
+    "source_revision": "e3f6a12efd109f53e667383c4a50e264133d1e73",
+    "counts": {
+      "training_transitions": 2359296,
+      "optimizer_steps": 27648,
+      "completed_training_lifetimes": 26421
+    },
+    "new_neural_models": 4,
+    "reused_models": 4,
+    "model_identities": {
+      "evolution-17": {
+        "weights_sha256": "a7ec14405b1331fad44ed7fb900f12728db8da8d00dcdb6e37605e9cf55e20d1",
+        "parameters_sha256": "777ad3975a7cb1d50a23779568d0e179f1b7579cd9b7b682f765038cb490d032",
+        "reused": false
+      },
+      "evolution-29": {
+        "weights_sha256": "bbc2ae2a75cbc71c9d72c397f048ff5d45f319f3a17450ab956eb5c4463b81cd",
+        "parameters_sha256": "f6aa323725185965d3b3774238139b023ab344e613db412d773fb7827c7f972e",
+        "reused": false
+      },
+      "random_search-17": {
+        "weights_sha256": "d72721f630b7752e72b5d39d34422845e527316c29be5a769fc9346e7a0bad70",
+        "parameters_sha256": "90729cd4c6d95301410c446a7356453c1d3196d78426592c465c1ef2c9af6673",
+        "reused": false
+      },
+      "random_search-29": {
+        "weights_sha256": "4d22ad6b475b69fb421cbe12aa9c952e3faea3676570a03118c8fad14c59cc0f",
+        "parameters_sha256": "127d9954a67da13e65bbedcf093c9259ef6ac6eaa051641056a809d1a863bbb0",
+        "reused": false
+      },
+      "survival-17": {
+        "weights_sha256": "661c5f612853b5611199d32ed25030daba5efc5ab3a15e67622da7ef4aa72098",
+        "parameters_sha256": "f0d9a4a114bd75754b53f9bbdab2d2223e1d7f16ae02a949325d21e0ceefe995",
+        "reused": true
+      },
+      "survival-29": {
+        "weights_sha256": "35b38d060831582fe2109a0138a80913c8215b96c56b263d6545a82de15d1081",
+        "parameters_sha256": "11715959befb1ee881bafdda875526b26b9592b913ac7ec4684c50cd45c32a32",
+        "reused": true
+      },
+      "handcrafted-17": {
+        "weights_sha256": "c599274cd53674ac6e961f6a942840092466b5828e62e6d24a9c96152704d393",
+        "parameters_sha256": "b9d23e8d23e8230c842b4b29d9807d8de84e5a7e9d5f8a43e65ac161570af38d",
+        "reused": true
+      },
+      "handcrafted-29": {
+        "weights_sha256": "31a658a019de27bece97ed5111ee28fc9b8a03f0971e1533545311a221213294",
+        "parameters_sha256": "a789adde6c72dd4d9c5a9199a3f0f60114484cb1fd0da2f4046a5b1c187d624c",
+        "reused": true
+      }
+    },
+    "early_checkpoint_matches": 4,
+    "independently_replayed_evaluation_episodes": 512,
+    "independently_replayed_transitions": 55753,
+    "verified_animation_decisions": 1024,
+    "distinct_fresh_evaluation_worlds": 64,
+    "original_search_gate_still_failed": true,
+    "scope": "Saved model identities, unchanged selected genes, matching early checkpoints, learning accounting, scalar dynamics and fitness for every evaluation, and animation/probability checks. No independent gradient replay."
+  },
+  "receipts": {
+    "summary_sha256": "cce929bb68967628305cbd7951a0ac464ce331debb8fd6fbef5872de3340cb7d",
+    "audit_sha256": "6df223dad5876ce5fb2bf713bb34169e0b24b0d7f11e78c31099ffbe78acf863",
+    "protocol_sha256": "c1f86a3a0954053794e7d8991b88b7730283dec77629a4a1b163680b3d33e359"
+  },
+  "runtime": {
+    "guarded_elapsed_seconds": 39.58752529195044,
+    "peak_process_group_resident_bytes": 327860224,
+    "added_swap_bytes": 0,
+    "paid_compute_usd": 0
+  },
+  "accounting_notes": {
+    "training_transitions": "Executed state-action transitions, not unique tasks or texts.",
+    "optimizer_sample_presentations": 7077888,
+    "unique_worlds": "Seeded maps with the same rules; identities are reused across candidates and learner comparisons.",
+    "full_gradient_replay_performed": false
+  },
+  "fixed_controls": "Reuses the original pilot long survival/handcrafted checkpoints. Their original training is not recounted as new training."
+}

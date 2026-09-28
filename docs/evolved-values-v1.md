@@ -1,5 +1,9 @@
 # Evolving values in a game world
 
+**Completed pilot:** [results and learning-dose diagnostic](evolved-values-v1-results.md).
+Learning improves survival; the initial genetic-search improvement gate failed.
+The original protocol and source copies remain frozen with the run receipts.
+
 The user wants a different experiment: a genetic algorithm determines a value
 function, an agent lives and learns in a game world using that function, and
 evolution selects functions that help the agent thrive. The previous database
@@ -9,11 +13,12 @@ no foundation model or rented GPU is required.
 
 ## Two timescales
 
-**Between lifetimes:** a population of inherited functions is selected, combined,
+**Between generations:** a population of inherited functions is selected, combined,
 and mutated according to the success of the agents that learned with them.
 
-**Within a lifetime:** each agent observes the world, acts, and learns a behavior
-policy using its inherited function as part of the learning process.
+**Within a candidate's training:** each agent observes the world, acts, and learns
+a behavior policy using its inherited function. Learning spans multiple episodes;
+death resets the world, while a new candidate starts a fresh neural learner.
 
 An important design choice remains explicit:
 

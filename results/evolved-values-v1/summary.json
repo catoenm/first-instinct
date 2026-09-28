@@ -1,0 +1,917 @@
+{
+  "experiment": "evolved-values-v1-pilot",
+  "source_revision": "e3f6a12efd109f53e667383c4a50e264133d1e73",
+  "summary": {
+    "status": "complete",
+    "recipe": {
+      "population": 6,
+      "generations": 3,
+      "learner_seeds": [
+        17,
+        29
+      ],
+      "environments": 32,
+      "rollout_steps": 32,
+      "updates": 32,
+      "epochs": 3,
+      "minibatch": 256,
+      "development_worlds": 16,
+      "final_worlds": 64,
+      "max_seconds": 1500,
+      "namespace": "evolved-values-v1"
+    },
+    "world": {
+      "size": 12,
+      "horizon": 128,
+      "initial_energy": 24,
+      "max_energy": 40,
+      "food_energy": 14,
+      "regrow_steps": 20,
+      "plants": 8,
+      "walls": 12,
+      "hazards": 8,
+      "hazard_cost": 3
+    },
+    "selection": {
+      "evolution": {
+        "id": "evolution-g01-m03",
+        "weights": [
+          0.12088329344987869,
+          0.1677742898464203,
+          0.11295006424188614,
+          0.13189417123794556,
+          0.142048180103302,
+          0.036927688866853714,
+          0.2875222861766815
+        ],
+        "development_fitness": 36.664231811563724
+      },
+      "random_search": {
+        "id": "random_search-g00-m01",
+        "weights": [
+          0.1467805113371941,
+          0.0014753600006937868,
+          0.15522235301730075,
+          0.07595395061707538,
+          0.06852348351021555,
+          0.029369225697886855,
+          0.5226751158196337
+        ],
+        "development_fitness": 36.559827693791846
+      }
+    },
+    "metrics": {
+      "evolution": {
+        "mean_lifetime": 35.8671875,
+        "mean_food": 1.203125,
+        "horizon_survival": 0.0,
+        "lifetime_by_learner_seed": {
+          "17": 36.8125,
+          "29": 34.921875
+        }
+      },
+      "random_search": {
+        "mean_lifetime": 35.703125,
+        "mean_food": 1.1953125,
+        "horizon_survival": 0.015625,
+        "lifetime_by_learner_seed": {
+          "17": 34.890625,
+          "29": 36.515625
+        }
+      },
+      "survival": {
+        "mean_lifetime": 107.671875,
+        "mean_food": 9.71875,
+        "horizon_survival": 0.6875,
+        "lifetime_by_learner_seed": {
+          "17": 108.28125,
+          "29": 107.0625
+        }
+      },
+      "handcrafted": {
+        "mean_lifetime": 111.3203125,
+        "mean_food": 11.484375,
+        "horizon_survival": 0.7421875,
+        "lifetime_by_learner_seed": {
+          "17": 113.515625,
+          "29": 109.125
+        }
+      },
+      "survival_short": {
+        "mean_lifetime": 31.1015625,
+        "mean_food": 0.828125,
+        "horizon_survival": 0.0,
+        "lifetime_by_learner_seed": {
+          "17": 28.203125,
+          "29": 34.0
+        }
+      },
+      "handcrafted_short": {
+        "mean_lifetime": 33.953125,
+        "mean_food": 1.109375,
+        "horizon_survival": 0.0078125,
+        "lifetime_by_learner_seed": {
+          "17": 34.265625,
+          "29": 33.640625
+        }
+      },
+      "untrained": {
+        "mean_lifetime": 30.1796875,
+        "mean_food": 0.765625,
+        "horizon_survival": 0.0078125,
+        "lifetime_by_learner_seed": {
+          "17": 29.625,
+          "29": 30.734375
+        }
+      },
+      "random": {
+        "mean_lifetime": 30.6171875,
+        "mean_food": 0.796875,
+        "horizon_survival": 0.0078125,
+        "lifetime_by_learner_seed": {
+          "17": 30.640625,
+          "29": 30.59375
+        }
+      },
+      "wait": {
+        "mean_lifetime": 24.0,
+        "mean_food": 0.0,
+        "horizon_survival": 0.0,
+        "lifetime_by_learner_seed": {
+          "17": 24.0,
+          "29": 24.0
+        }
+      }
+    },
+    "gates": {
+      "required_lifetime_gain": 8.0,
+      "gains": {
+        "random_search": 0.1640625,
+        "survival_short": 4.765625,
+        "handcrafted_short": 1.9140625
+      },
+      "no_seed_loss_against_random_search": false,
+      "passed": false
+    },
+    "accounting": {
+      "training_transitions": 4718592,
+      "evaluation_transitions": 92475,
+      "optimizer_steps": 55296,
+      "completed_training_lifetimes": 102937,
+      "elapsed_seconds": 88.81533079093788
+    },
+    "learned_models": 76,
+    "distinct_genomes": 32,
+    "candidate_evaluations": 36,
+    "training_steps_per_candidate_seed": 32768,
+    "matched_training_steps_per_method": 1179648,
+    "paid_compute_usd": 0,
+    "foundation_model_calls": 0,
+    "limitations": "Single evolutionary search seed, two learner seeds, same world rules. Held-out maps only; no new-mechanism transfer or open-ended self-improvement claim."
+  },
+  "protocol": {
+    "recipe": {
+      "population": 6,
+      "generations": 3,
+      "learner_seeds": [
+        17,
+        29
+      ],
+      "environments": 32,
+      "rollout_steps": 32,
+      "updates": 32,
+      "epochs": 3,
+      "minibatch": 256,
+      "development_worlds": 16,
+      "final_worlds": 64,
+      "max_seconds": 1500,
+      "namespace": "evolved-values-v1"
+    },
+    "world": {
+      "size": 12,
+      "horizon": 128,
+      "initial_energy": 24,
+      "max_energy": 40,
+      "food_energy": 14,
+      "regrow_steps": 20,
+      "plants": 8,
+      "walls": 12,
+      "hazards": 8,
+      "hazard_cost": 3
+    },
+    "git_revision": "e3f6a12efd109f53e667383c4a50e264133d1e73",
+    "sources": {
+      "games_lab/foraging.py": "88184fef81eff5dd9c7025f730b16adada40414badf56439d24422c1cebb59fa",
+      "games_lab/evolve_rewards.py": "772bae1ccc17d807b704fd31f0f86ab5a4231c8229390eaf6514b4769fd56622",
+      "puffer_lab/train_small.py": "f44d653e4b5c8ae15bdab0013d767aae4da8f4d6a50bbdb9f8d899f7b7201a31",
+      "general_lab/rl.py": "ff955479d9ad3138252c96c57ffa9c1b09ac83627c5e51ca4e73a2d5aac9618a",
+      "tests/test_evolved_rewards.py": "ece74815c330e9d51448a4536ef6fdbe4bfef0eb826a57aea7f3e7d09fe21fab",
+      "docs/evolved-values-v1.md": "0dc853ccb36ad4b579204483697f676f3c301602f433a2896175c29687eba893"
+    },
+    "torch_version": "2.14.0",
+    "fitness": "survival steps plus mean energy / maximum energy, computed by the world",
+    "success_gate": "Final evolved lifetime exceeds random search and both short fixed-reward controls by at least 8 steps, with no learner-seed loss against random search. Two seeds are a pilot, not definitive evidence.",
+    "genetic_parameters": {
+      "elites": 2,
+      "tournament": 3,
+      "crossover": "convex blend",
+      "log_weight_mutation_std": 0.65
+    },
+    "learning": {
+      "algorithm": "Proximal Policy Optimization",
+      "learning_rate": 0.0003,
+      "clip": 0.2,
+      "entropy": 0.02,
+      "value_coefficient": 0.5,
+      "gamma": 1.0,
+      "advantage_lambda": 0.95,
+      "internal_reward_scale": 0.1
+    },
+    "paid_compute_usd": 0,
+    "inherited_policy_weights": false
+  },
+  "audit": {
+    "status": "passed",
+    "summary_sha256": "47c5a062f2fbec20200935f9039adb96e85b32efc59e688b2ce16ff0eec33911",
+    "protocol_sha256": "e3e2687e57a55f77fe8b16188917f6881cc4c0989829305368f5d3f868fca3ac",
+    "source_revision": "e3f6a12efd109f53e667383c4a50e264133d1e73",
+    "auditor_sha256": "bbf2f605c72d2e12810091a4c4229b349d5fe9d1f4aa007927bbb5405f1e82db",
+    "independently_replayed_evaluation_episodes": 2304,
+    "independently_replayed_transitions": 92475,
+    "verified_neural_models": 76,
+    "optimizer_steps": 55296,
+    "training_transitions": 4718592,
+    "completed_training_lifetime_presentations": 102937,
+    "distinct_training_world_seed_identities": 16902,
+    "distinct_training_world_seed_identities_by_learner_seed": {
+      "17": 8465,
+      "29": 8437
+    },
+    "distinct_development_worlds": 16,
+    "distinct_final_worlds": 64,
+    "scope": "Scalar transition and fitness audit of every recorded evaluation, saved model identities, learning accounting and selection. No independent gradient replay or fresh experimental training."
+  },
+  "receipts": {
+    "summary_sha256": "47c5a062f2fbec20200935f9039adb96e85b32efc59e688b2ce16ff0eec33911",
+    "audit_sha256": "a9ae84c2c59194ea154c05960220850857ddbed142b655e8b807dced0d159355",
+    "protocol_sha256": "e3e2687e57a55f77fe8b16188917f6881cc4c0989829305368f5d3f868fca3ac"
+  },
+  "runtime": {
+    "guarded_elapsed_seconds": 90.63790049997624,
+    "peak_process_group_resident_bytes": 324206592,
+    "added_swap_bytes": 0,
+    "paid_compute_usd": 0
+  },
+  "accounting_notes": {
+    "training_transitions": "Executed state-action transitions, not unique tasks or texts.",
+    "optimizer_sample_presentations": 14155776,
+    "unique_worlds": "Seeded maps with the same rules; identities are reused across candidates and learner comparisons.",
+    "full_gradient_replay_performed": false
+  },
+  "searched_genomes": [
+    {
+      "id": "evolution-g00-m00",
+      "method": "evolution",
+      "generation": 0,
+      "weights": [
+        0.00576832020281772,
+        0.02835663582564745,
+        0.08060162911773183,
+        0.6067878929256763,
+        0.08356186627902316,
+        0.06751826352193205,
+        0.12740539212717142
+      ],
+      "parents": [],
+      "mean_fitness": 35.07816697275488,
+      "mean_lifetime": 34.75
+    },
+    {
+      "id": "evolution-g00-m01",
+      "method": "evolution",
+      "generation": 0,
+      "weights": [
+        0.1928104351095085,
+        0.01618200264560126,
+        0.014676371612350967,
+        0.20929541820488282,
+        0.0006823182174094722,
+        0.3074006249552071,
+        0.25895282925503993
+      ],
+      "parents": [],
+      "mean_fitness": 32.552337519136024,
+      "mean_lifetime": 32.21875
+    },
+    {
+      "id": "evolution-g00-m02",
+      "method": "evolution",
+      "generation": 0,
+      "weights": [
+        0.060679537600373035,
+        0.3493864673019499,
+        0.39370802541717653,
+        3.929556918398276e-05,
+        0.03279942344073971,
+        0.0718536369970535,
+        0.09153361367352325
+      ],
+      "parents": [],
+      "mean_fitness": 28.449336823410917,
+      "mean_lifetime": 28.125
+    },
+    {
+      "id": "evolution-g00-m03",
+      "method": "evolution",
+      "generation": 0,
+      "weights": [
+        0.04925015202250052,
+        0.5480288336779032,
+        2.785605007721652e-05,
+        0.16536334358886864,
+        0.17662823722729984,
+        0.00018360842672034863,
+        0.0605179690066302
+      ],
+      "parents": [],
+      "mean_fitness": 31.88344412492568,
+      "mean_lifetime": 31.5625
+    },
+    {
+      "id": "evolution-g00-m04",
+      "method": "evolution",
+      "generation": 0,
+      "weights": [
+        0.12197678236582546,
+        0.26976690030825257,
+        0.029954846808485827,
+        0.0009804813128145996,
+        0.21133111240535865,
+        0.19077288932237685,
+        0.1752169874768862
+      ],
+      "parents": [],
+      "mean_fitness": 29.38231082728888,
+      "mean_lifetime": 29.0625
+    },
+    {
+      "id": "evolution-g00-m05",
+      "method": "evolution",
+      "generation": 0,
+      "weights": [
+        0.25601046030551217,
+        0.26656720586160654,
+        0.04165470963540859,
+        0.01585181158587603,
+        0.05283710970778184,
+        0.07189899525543153,
+        0.29517970764838336
+      ],
+      "parents": [],
+      "mean_fitness": 32.462342540220185,
+      "mean_lifetime": 32.125
+    },
+    {
+      "id": "evolution-g01-m00",
+      "method": "evolution",
+      "generation": 1,
+      "weights": [
+        0.00576832020281772,
+        0.02835663582564745,
+        0.08060162911773183,
+        0.6067878929256763,
+        0.08356186627902316,
+        0.06751826352193205,
+        0.12740539212717142
+      ],
+      "parents": [
+        "evolution-g00-m00"
+      ],
+      "mean_fitness": 35.07816697275488,
+      "mean_lifetime": 34.75
+    },
+    {
+      "id": "evolution-g01-m01",
+      "method": "evolution",
+      "generation": 1,
+      "weights": [
+        0.1928104351095085,
+        0.01618200264560126,
+        0.014676371612350967,
+        0.20929541820488282,
+        0.0006823182174094722,
+        0.3074006249552071,
+        0.25895282925503993
+      ],
+      "parents": [
+        "evolution-g00-m01"
+      ],
+      "mean_fitness": 32.552337519136024,
+      "mean_lifetime": 32.21875
+    },
+    {
+      "id": "evolution-g01-m02",
+      "method": "evolution",
+      "generation": 1,
+      "weights": [
+        0.13164806365966797,
+        0.4386964440345764,
+        0.01907169073820114,
+        0.10829577594995499,
+        0.14802563190460205,
+        0.025756960734725,
+        0.1285054236650467
+      ],
+      "parents": [
+        "evolution-g00-m03",
+        "evolution-g00-m05"
+      ],
+      "mean_fitness": 31.668534763662052,
+      "mean_lifetime": 31.34375
+    },
+    {
+      "id": "evolution-g01-m03",
+      "method": "evolution",
+      "generation": 1,
+      "weights": [
+        0.12088329344987869,
+        0.1677742898464203,
+        0.11295006424188614,
+        0.13189417123794556,
+        0.142048180103302,
+        0.036927688866853714,
+        0.2875222861766815
+      ],
+      "parents": [
+        "evolution-g00-m05",
+        "evolution-g00-m00"
+      ],
+      "mean_fitness": 36.664231811563724,
+      "mean_lifetime": 36.3125
+    },
+    {
+      "id": "evolution-g01-m04",
+      "method": "evolution",
+      "generation": 1,
+      "weights": [
+        0.007182248402386904,
+        0.01955113187432289,
+        0.09083251655101776,
+        0.618510365486145,
+        0.05537707731127739,
+        0.04946456104516983,
+        0.1590820699930191
+      ],
+      "parents": [
+        "evolution-g00-m00",
+        "evolution-g00-m00"
+      ],
+      "mean_fitness": 33.482853729689296,
+      "mean_lifetime": 33.15625
+    },
+    {
+      "id": "evolution-g01-m05",
+      "method": "evolution",
+      "generation": 1,
+      "weights": [
+        0.07261922210454941,
+        0.11523804813623428,
+        0.052978161722421646,
+        0.4774166941642761,
+        0.12211235612630844,
+        0.027824198827147484,
+        0.13181133568286896
+      ],
+      "parents": [
+        "evolution-g00-m05",
+        "evolution-g00-m00"
+      ],
+      "mean_fitness": 35.394344154556286,
+      "mean_lifetime": 35.0625
+    },
+    {
+      "id": "evolution-g02-m00",
+      "method": "evolution",
+      "generation": 2,
+      "weights": [
+        0.12088329344987869,
+        0.1677742898464203,
+        0.11295006424188614,
+        0.13189417123794556,
+        0.142048180103302,
+        0.036927688866853714,
+        0.2875222861766815
+      ],
+      "parents": [
+        "evolution-g01-m03"
+      ],
+      "mean_fitness": 36.664231811563724,
+      "mean_lifetime": 36.3125
+    },
+    {
+      "id": "evolution-g02-m01",
+      "method": "evolution",
+      "generation": 2,
+      "weights": [
+        0.07261922210454941,
+        0.11523804813623428,
+        0.052978161722421646,
+        0.4774166941642761,
+        0.12211235612630844,
+        0.027824198827147484,
+        0.13181133568286896
+      ],
+      "parents": [
+        "evolution-g01-m05"
+      ],
+      "mean_fitness": 35.394344154556286,
+      "mean_lifetime": 35.0625
+    },
+    {
+      "id": "evolution-g02-m02",
+      "method": "evolution",
+      "generation": 2,
+      "weights": [
+        0.028152743354439735,
+        0.13345055282115936,
+        0.03554811328649521,
+        0.10472968965768814,
+        0.16038328409194946,
+        0.03462359309196472,
+        0.5031120181083679
+      ],
+      "parents": [
+        "evolution-g01-m03",
+        "evolution-g01-m03"
+      ],
+      "mean_fitness": 31.17757732697233,
+      "mean_lifetime": 30.84375
+    },
+    {
+      "id": "evolution-g02-m03",
+      "method": "evolution",
+      "generation": 2,
+      "weights": [
+        0.060989536345005035,
+        0.03707682713866234,
+        0.12134350836277008,
+        0.4438452124595642,
+        0.13994574546813965,
+        0.05643267184495926,
+        0.14036647975444794
+      ],
+      "parents": [
+        "evolution-g01-m05",
+        "evolution-g01-m03"
+      ],
+      "mean_fitness": 30.889961008726388,
+      "mean_lifetime": 30.5625
+    },
+    {
+      "id": "evolution-g02-m04",
+      "method": "evolution",
+      "generation": 2,
+      "weights": [
+        0.09606782346963882,
+        0.09750612825155258,
+        0.1363840103149414,
+        0.22395962476730347,
+        0.07347112894058228,
+        0.016713593155145645,
+        0.3558976948261261
+      ],
+      "parents": [
+        "evolution-g01-m03",
+        "evolution-g01-m03"
+      ],
+      "mean_fitness": 31.49487288638947,
+      "mean_lifetime": 31.15625
+    },
+    {
+      "id": "evolution-g02-m05",
+      "method": "evolution",
+      "generation": 2,
+      "weights": [
+        0.1552906185388565,
+        0.43084579706192017,
+        0.10441239923238754,
+        0.14861740171909332,
+        0.02864975854754448,
+        0.028220629319548607,
+        0.10396339744329453
+      ],
+      "parents": [
+        "evolution-g01-m03",
+        "evolution-g01-m05"
+      ],
+      "mean_fitness": 30.7581461246893,
+      "mean_lifetime": 30.4375
+    },
+    {
+      "id": "random_search-g00-m00",
+      "method": "random_search",
+      "generation": 0,
+      "weights": [
+        0.008683834246817564,
+        0.00014745195860652036,
+        0.4461609541544265,
+        0.41592553675529514,
+        0.016851993471221377,
+        0.004255261327544914,
+        0.10797496808608784
+      ],
+      "parents": [],
+      "mean_fitness": 32.71017739523279,
+      "mean_lifetime": 32.375
+    },
+    {
+      "id": "random_search-g00-m01",
+      "method": "random_search",
+      "generation": 0,
+      "weights": [
+        0.1467805113371941,
+        0.0014753600006937868,
+        0.15522235301730075,
+        0.07595395061707538,
+        0.06852348351021555,
+        0.029369225697886855,
+        0.5226751158196337
+      ],
+      "parents": [],
+      "mean_fitness": 36.559827693791846,
+      "mean_lifetime": 36.21875
+    },
+    {
+      "id": "random_search-g00-m02",
+      "method": "random_search",
+      "generation": 0,
+      "weights": [
+        0.018566576692773732,
+        0.060485439825954786,
+        0.10979764400948247,
+        0.6421619198061738,
+        0.07508542358793255,
+        0.00598881873875602,
+        0.08791417733892645
+      ],
+      "parents": [],
+      "mean_fitness": 31.046452601164866,
+      "mean_lifetime": 30.71875
+    },
+    {
+      "id": "random_search-g00-m03",
+      "method": "random_search",
+      "generation": 0,
+      "weights": [
+        0.20282765924805685,
+        0.16719460516320003,
+        0.06314613714386252,
+        0.23792948643603387,
+        0.22168053786588393,
+        0.025075668785089125,
+        0.08214590535787364
+      ],
+      "parents": [],
+      "mean_fitness": 29.380063343778737,
+      "mean_lifetime": 29.0625
+    },
+    {
+      "id": "random_search-g00-m04",
+      "method": "random_search",
+      "generation": 0,
+      "weights": [
+        0.5280266021925176,
+        0.23848871310740352,
+        0.0005515902187149196,
+        0.026598258475838348,
+        0.011991837229269869,
+        0.1943347321360311,
+        8.266640224543553e-06
+      ],
+      "parents": [],
+      "mean_fitness": 31.076629277498782,
+      "mean_lifetime": 30.75
+    },
+    {
+      "id": "random_search-g00-m05",
+      "method": "random_search",
+      "generation": 0,
+      "weights": [
+        0.21235966159812258,
+        0.012149953550861025,
+        0.33603672992172007,
+        0.0375958341057863,
+        0.016007884298954028,
+        0.04026856713234858,
+        0.34558136939220757
+      ],
+      "parents": [],
+      "mean_fitness": 31.70469508008403,
+      "mean_lifetime": 31.375
+    },
+    {
+      "id": "random_search-g01-m00",
+      "method": "random_search",
+      "generation": 1,
+      "weights": [
+        0.1646653439524844,
+        0.026936043061492287,
+        0.5147130818330319,
+        0.022768288322900506,
+        0.06705108158728039,
+        0.14219988763695096,
+        0.061666273605859794
+      ],
+      "parents": [],
+      "mean_fitness": 32.3901529189006,
+      "mean_lifetime": 32.0625
+    },
+    {
+      "id": "random_search-g01-m01",
+      "method": "random_search",
+      "generation": 1,
+      "weights": [
+        0.05029210429950566,
+        0.08541778200223316,
+        0.3684525573778919,
+        0.27540706666544695,
+        0.06065231313081696,
+        0.105114184529966,
+        0.05466399199413939
+      ],
+      "parents": [],
+      "mean_fitness": 27.37986878495621,
+      "mean_lifetime": 27.0625
+    },
+    {
+      "id": "random_search-g01-m02",
+      "method": "random_search",
+      "generation": 1,
+      "weights": [
+        0.04353446302291842,
+        0.002031429695418259,
+        0.37758010062834685,
+        0.16044727042957646,
+        0.07558648555404174,
+        0.00021718113627625143,
+        0.34060306953342206
+      ],
+      "parents": [],
+      "mean_fitness": 28.542756609212027,
+      "mean_lifetime": 28.21875
+    },
+    {
+      "id": "random_search-g01-m03",
+      "method": "random_search",
+      "generation": 1,
+      "weights": [
+        0.011296883818712102,
+        0.1675489429893798,
+        0.04303027482065222,
+        0.08994148290280014,
+        0.506904577495555,
+        0.17732078146379185,
+        0.003957056509108821
+      ],
+      "parents": [],
+      "mean_fitness": 30.682120439582384,
+      "mean_lifetime": 30.375
+    },
+    {
+      "id": "random_search-g01-m04",
+      "method": "random_search",
+      "generation": 1,
+      "weights": [
+        0.032047695795067284,
+        0.32568850922797826,
+        0.002304580307081637,
+        0.00989824425680222,
+        0.020960452819883943,
+        0.5785994233051204,
+        0.03050109428806609
+      ],
+      "parents": [],
+      "mean_fitness": 27.429855447093,
+      "mean_lifetime": 27.125
+    },
+    {
+      "id": "random_search-g01-m05",
+      "method": "random_search",
+      "generation": 1,
+      "weights": [
+        0.40879254477307053,
+        0.012231317223756595,
+        0.007326761604205296,
+        0.07567366269355465,
+        0.175142245689432,
+        0.04628587202679908,
+        0.27454759598918177
+      ],
+      "parents": [],
+      "mean_fitness": 31.202095135272472,
+      "mean_lifetime": 30.875
+    },
+    {
+      "id": "random_search-g02-m00",
+      "method": "random_search",
+      "generation": 2,
+      "weights": [
+        0.3624307552712391,
+        0.06992420666711406,
+        0.08226138309881934,
+        0.2821843034212954,
+        0.011075586462367434,
+        0.19109038855037078,
+        0.0010333765287938634
+      ],
+      "parents": [],
+      "mean_fitness": 25.435868954657234,
+      "mean_lifetime": 25.125
+    },
+    {
+      "id": "random_search-g02-m01",
+      "method": "random_search",
+      "generation": 2,
+      "weights": [
+        0.09009854246206847,
+        0.6122118067907715,
+        0.01172977708911895,
+        0.016086257479528195,
+        0.018587136359738216,
+        0.10987221880284317,
+        0.14141426101593166
+      ],
+      "parents": [],
+      "mean_fitness": 30.718044659057988,
+      "mean_lifetime": 30.375
+    },
+    {
+      "id": "random_search-g02-m02",
+      "method": "random_search",
+      "generation": 2,
+      "weights": [
+        0.03298696394801071,
+        0.4350018420746358,
+        5.9107540907640085e-05,
+        0.3438956302708605,
+        0.09188386323254526,
+        0.011133065145257724,
+        0.08503952778778226
+      ],
+      "parents": [],
+      "mean_fitness": 33.05153805283799,
+      "mean_lifetime": 32.71875
+    },
+    {
+      "id": "random_search-g02-m03",
+      "method": "random_search",
+      "generation": 2,
+      "weights": [
+        0.08881924693156482,
+        0.0370967952489985,
+        0.026959465457173804,
+        0.004133294349241259,
+        0.11710179734877232,
+        0.19964471387603303,
+        0.5262446867882162
+      ],
+      "parents": [],
+      "mean_fitness": 31.778414501523255,
+      "mean_lifetime": 31.4375
+    },
+    {
+      "id": "random_search-g02-m04",
+      "method": "random_search",
+      "generation": 2,
+      "weights": [
+        0.0005668455345989991,
+        0.21737106252356395,
+        0.3445453928724265,
+        0.027664853225339885,
+        0.0017353010107012024,
+        0.07670624471986387,
+        0.33141030011350553
+      ],
+      "parents": [],
+      "mean_fitness": 27.53453019001399,
+      "mean_lifetime": 27.21875
+    },
+    {
+      "id": "random_search-g02-m05",
+      "method": "random_search",
+      "generation": 2,
+      "weights": [
+        0.1245767481870847,
+        0.47706203911576317,
+        0.022608112338711416,
+        0.0031475354521136754,
+        0.36631359539019437,
+        0.004901859115186867,
+        0.0013901104009459932
+      ],
+      "parents": [],
+      "mean_fitness": 30.346406088495314,
+      "mean_lifetime": 30.03125
+    }
+  ]
+}

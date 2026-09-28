@@ -17,7 +17,7 @@ and their original results remain at their existing paths.
 
 | Question | Read |
 | --- | --- |
-| Can evolution discover useful motivations for a learning agent? | [Evolutionary game-world proposal](evolved-values-v1.md); design stage, no training started |
+| Can evolution discover useful motivations for a learning agent? | [Foraging results](evolved-values-v1-results.md) and [protocol](evolved-values-v1.md); agents learn to survive, but genetic search has not beaten the controls |
 | Can direct decision supervision improve completed tasks? | [Protocol](decision-supervision-v1-protocol.md) and [audited final results](decision-supervision-v1-results.md); question accuracy improved, completion did not, forecast degradation stopped training at update 96 |
 | What happened in the longer training run? | [Audited generalist results](generalist-training-v1-results.md) and [original protocol](generalist-training-v1.md); no replacement qualified |
 | When should a tool selector inspect, act, or stop? | [Identifier-evidence results](identity-evidence-v1-results.md): 160 prepared questions from executed alternatives; no model training yet |
