@@ -32,14 +32,14 @@ class Policy(nn.Module):
         return Categorical(logits=self.actor(features)),self.value(features).squeeze(-1)
 
 
-def advantages(rewards,values,dones,bootstrap):
+def advantages(rewards,values,dones,bootstrap,*,gamma=1.,trace_decay=.95):
     """Episode boundaries stop both bootstrapping and advantage propagation."""
     result=np.zeros_like(rewards);running=np.zeros_like(bootstrap)
     for t in reversed(range(len(rewards))):
         next_value=bootstrap if t==len(rewards)-1 else values[t+1]
         active=1.-dones[t]
-        delta=rewards[t]+active*next_value-values[t]
-        running=delta+.95*active*running
+        delta=rewards[t]+gamma*active*next_value-values[t]
+        running=delta+gamma*trace_decay*active*running
         result[t]=running
     return result,result+values
 

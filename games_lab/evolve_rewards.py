@@ -39,19 +39,19 @@ def write(path, data):
     temporary.replace(path)
 
 
-def validate_genome(weights):
+def validate_genome(weights, size=len(FEATURES)):
     w = np.asarray(weights, dtype=np.float32)
-    if w.shape != (len(FEATURES),) or not np.isfinite(w).all() or np.any(w < 0) or not np.isclose(w.sum(), 1, atol=1e-6):
+    if w.shape != (size,) or not np.isfinite(w).all() or np.any(w < 0) or not np.isclose(w.sum(), 1, atol=1e-6):
         raise ValueError('Require a bounded nonnegative unit-sum reward genome')
     return w
 
 
-def offspring(first, second, rng):
-    a, b = validate_genome(first), validate_genome(second)
+def offspring(first, second, rng, *, size=len(FEATURES)):
+    a, b = validate_genome(first, size), validate_genome(second, size)
     blend = rng.uniform(.25, .75)
-    logits = np.log(np.maximum(blend*a+(1-blend)*b, 1e-5)) + rng.normal(0, .65, len(FEATURES))
+    logits = np.log(np.maximum(blend*a+(1-blend)*b, 1e-5)) + rng.normal(0, .65, size)
     w = np.exp(logits-logits.max())
-    return validate_genome(w/w.sum()).tolist()
+    return validate_genome(w/w.sum(), size).tolist()
 
 
 class Budget:
@@ -73,6 +73,33 @@ class Budget:
 def initialize(seed):
     torch.manual_seed(seed)
     return Policy(OBS_SIZE, len(ACTIONS))
+
+
+def policy_update(policy, optimizer, observations, actions, old_logps, advantage, returns,
+                  permutations, recipe, budget):
+    """Shared clipped actor/critic update; callers supply observed learning signals."""
+    x = torch.from_numpy(observations.reshape(-1, OBS_SIZE))
+    act = torch.from_numpy(actions.ravel()); old = torch.from_numpy(old_logps.ravel())
+    target = torch.from_numpy(returns.ravel()); advantage = torch.from_numpy(advantage.ravel())
+    advantage = (advantage-advantage.mean())/(advantage.std(unbiased=False)+1e-8)
+    diagnostics = []
+    for _ in range(recipe.epochs):
+        order = permutations.permutation(len(x))
+        for start in range(0, len(x), recipe.minibatch):
+            indices = order[start:start+recipe.minibatch]
+            distribution, value = policy(x[indices]); new = distribution.log_prob(act[indices])
+            actor, _ = clipped_policy_loss(new, old[indices], advantage[indices])
+            critic = (value-target[indices]).square().mean()
+            entropy = distribution.entropy().mean()
+            loss = actor + .5*critic - .02*entropy
+            if not torch.isfinite(loss): raise FloatingPointError('Nonfinite learner loss')
+            optimizer.zero_grad(); loss.backward()
+            norm = torch.nn.utils.clip_grad_norm_(policy.parameters(), .5, error_if_nonfinite=True)
+            optimizer.step(); budget.optimizer_steps += 1
+            diagnostics.append((float(actor.detach()), float(critic.detach()), float(entropy.detach()), float(norm)))
+    return dict(policy_loss=float(np.mean([x[0] for x in diagnostics])),
+                value_loss=float(np.mean([x[1] for x in diagnostics])),
+                entropy=float(np.mean([x[2] for x in diagnostics])))
 
 
 def learn(weights, seed, recipe, world, output, budget, *, updates=None, short_checkpoint=False):
@@ -115,30 +142,12 @@ def learn(weights, seed, recipe, world, output, budget, *, updates=None, short_c
                 observation = env.observe()
             with torch.no_grad(): _, bootstrap = policy(torch.from_numpy(observation))
             adv, returns = advantages(rewards, values, dones, bootstrap.numpy())
-            x = torch.from_numpy(observations.reshape(-1, OBS_SIZE))
-            act = torch.from_numpy(actions.ravel()); old = torch.from_numpy(logps.ravel())
-            target = torch.from_numpy(returns.ravel()); advantage = torch.from_numpy(adv.ravel())
-            advantage = (advantage-advantage.mean())/(advantage.std(unbiased=False)+1e-8)
-            diagnostics = []
-            for _ in range(recipe.epochs):
-                order = permutations.permutation(len(x))
-                for start in range(0, len(x), recipe.minibatch):
-                    indices = order[start:start+recipe.minibatch]
-                    distribution, value = policy(x[indices]); new = distribution.log_prob(act[indices])
-                    actor, ratio = clipped_policy_loss(new, old[indices], advantage[indices])
-                    critic = (value-target[indices]).square().mean()
-                    entropy = distribution.entropy().mean()
-                    loss = actor + .5*critic - .02*entropy
-                    if not torch.isfinite(loss): raise FloatingPointError('Nonfinite learner loss')
-                    optimizer.zero_grad(); loss.backward()
-                    norm = torch.nn.utils.clip_grad_norm_(policy.parameters(), .5, error_if_nonfinite=True)
-                    optimizer.step(); budget.optimizer_steps += 1
-                    diagnostics.append((float(actor.detach()), float(critic.detach()), float(entropy.detach()), float(norm)))
+            diagnostics = policy_update(policy, optimizer, observations, actions, logps, adv, returns,
+                                        permutations, recipe, budget)
             budget.completed_training_lifetimes += len(completed)
             row = dict(update=update, training_transitions=update*shape[0]*shape[1],
                        completed_lifetimes=len(completed), mean_completed_lifetime=float(np.mean(completed)) if completed else None,
-                       policy_loss=float(np.mean([x[0] for x in diagnostics])), value_loss=float(np.mean([x[1] for x in diagnostics])),
-                       entropy=float(np.mean([x[2] for x in diagnostics])))
+                       **diagnostics)
             history.append(row); stream.write(json.dumps(row)+'\n'); stream.flush()
             if short_checkpoint and update == recipe.updates:
                 torch.save(policy.state_dict(), output/'short.pt')
