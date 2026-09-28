@@ -1,5 +1,9 @@
 # Curiosity without game rewards
 
+**Completed:** [audited results](curiosity-foraging-v1-results.md). The fixed
+schedule finished; the prediction-improvement gate failed. No extension or
+larger search was launched. The run's original protocol/source copies are preserved.
+
 The user chose **no game scores in training or evolutionary selection, while
 allowing internally generated curiosity**. This replaces survival-based selection
 for the next experiment. The completed [reward-evolution pilot](evolved-values-v1-results.md)

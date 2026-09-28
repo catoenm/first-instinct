@@ -1,0 +1,1895 @@
+{
+  "experiment": "curiosity-foraging-v1",
+  "source_revision": "826983775676e1cf28f95decbe84cbf48aa27979",
+  "status": "complete",
+  "protocol": {
+    "study": {
+      "search_seeds": [
+        4101,
+        9107
+      ],
+      "population": 4,
+      "generations": 3,
+      "learner_seeds": [
+        137,
+        241
+      ],
+      "updates": 256,
+      "adaptation_updates": 64,
+      "probe_steps": 256,
+      "evaluation_worlds": 64,
+      "namespace": "curiosity-foraging-v1",
+      "max_seconds": 1500
+    },
+    "world": {
+      "size": 12,
+      "horizon": 128,
+      "initial_energy": 24,
+      "max_energy": 40,
+      "food_energy": 14,
+      "regrow_steps": 20,
+      "plants": 8,
+      "walls": 12,
+      "hazards": 8,
+      "hazard_cost": 3
+    },
+    "shifted_world": {
+      "size": 12,
+      "horizon": 128,
+      "initial_energy": 24,
+      "max_energy": 40,
+      "food_energy": 14,
+      "regrow_steps": 32,
+      "plants": 4,
+      "walls": 12,
+      "hazards": 16,
+      "hazard_cost": 5
+    },
+    "source_revision": "826983775676e1cf28f95decbe84cbf48aa27979",
+    "sources": {
+      "games_lab/curiosity.py": "1560a500603d804285c77d0c1d73c8ffb8c0634e9ba2b847983971f228711228",
+      "games_lab/foraging.py": "88184fef81eff5dd9c7025f730b16adada40414badf56439d24422c1cebb59fa",
+      "games_lab/evolve_rewards.py": "ad4009f3dea30ef02a18e5a3d7cef80ee5fb568a45848a82c0a17349d0fca9eb",
+      "puffer_lab/train_small.py": "206e38b4287bb44e4284163c20d13e13d0ec4bbe46e8c3682ebedfe838edd1f0",
+      "general_lab/rl.py": "ff955479d9ad3138252c96c57ffa9c1b09ac83627c5e51ca4e73a2d5aac9618a",
+      "tests/test_curiosity.py": "5b0e0aef46ac316e2b088f87637e3e70463eab92ec4a30bb37fe0b4e95ba4e46",
+      "docs/curiosity-foraging-v1.md": "65b2845d06b72356604201a1bf61250c6b43af543b7acd4436b55972748f47f1"
+    },
+    "torch_version": "2.14.0",
+    "selection": "Minimum mean next-observation prediction error on fixed development probes; no task outcomes.",
+    "game_scores_used_in_training": false,
+    "game_scores_used_in_selection": false,
+    "paid_compute_usd": 0,
+    "drive_names": [
+      "observation_novelty",
+      "predictor_disagreement",
+      "prediction_learning_progress"
+    ],
+    "checkpoint_selection": "Fixed final update only; all choices sealed before task evaluation."
+  },
+  "selection": {
+    "selected": {
+      "evolution-4101": {
+        "id": "evolution-4101-g1-m3",
+        "method": "evolution",
+        "search_seed": 4101,
+        "generation": 1,
+        "genome": [
+          0.3067493736743927,
+          0.5120096206665039,
+          0.1812409907579422
+        ],
+        "parents": [
+          "evolution-4101-g0-m1",
+          "evolution-4101-g0-m3"
+        ],
+        "prediction_mse": 0.05625821162377065,
+        "per_learner": [
+          0.05611569935359739,
+          0.056400723893943905
+        ]
+      },
+      "random_search-4101": {
+        "id": "random_search-4101-g1-m3",
+        "method": "random_search",
+        "search_seed": 4101,
+        "generation": 1,
+        "genome": [
+          0.1237464075006585,
+          0.7303761018640826,
+          0.14587749063525884
+        ],
+        "parents": [],
+        "prediction_mse": 0.05655166956833568,
+        "per_learner": [
+          0.056497240226008216,
+          0.05660609891066315
+        ]
+      },
+      "evolution-9107": {
+        "id": "evolution-9107-g1-m3",
+        "method": "evolution",
+        "search_seed": 9107,
+        "generation": 1,
+        "genome": [
+          0.35193610191345215,
+          0.5862410068511963,
+          0.06182289123535156
+        ],
+        "parents": [
+          "evolution-9107-g0-m1",
+          "evolution-9107-g0-m1"
+        ],
+        "prediction_mse": 0.056355981685641154,
+        "per_learner": [
+          0.056162969676393004,
+          0.056548993694889305
+        ]
+      },
+      "random_search-9107": {
+        "id": "random_search-9107-g1-m2",
+        "method": "random_search",
+        "search_seed": 9107,
+        "generation": 1,
+        "genome": [
+          0.3702488173599378,
+          0.6102082784891045,
+          0.019542904150957753
+        ],
+        "parents": [],
+        "prediction_mse": 0.05620082620490052,
+        "per_learner": [
+          0.0561017024621151,
+          0.056299949947685946
+        ]
+      }
+    },
+    "models": {
+      "evolution-4101": "evolution-4101-g1-m3",
+      "random_search-4101": "random_search-4101-g1-m3",
+      "evolution-9107": "evolution-9107-g1-m3",
+      "random_search-9107": "random_search-9107-g1-m2",
+      "novelty": "novelty",
+      "disagreement": "disagreement",
+      "progress": "progress",
+      "equal_mixture": "equal_mixture",
+      "random_actions": "random_actions"
+    },
+    "criterion": "development prediction MSE only",
+    "all_model_choices_frozen": true
+  },
+  "aggregate_metrics": {
+    "evolution-4101": {
+      "prediction_before": 0.05642328122235085,
+      "prediction_after": 0.05569457742569739,
+      "shifted_prediction_before": 0.06567264707936715,
+      "shifted_prediction_after": 0.06354240589575966,
+      "familiar_before": {
+        "mean_lifetime": 32.65625,
+        "mean_food": 0.953125,
+        "horizon_survival": 0.0
+      },
+      "shifted_before": {
+        "mean_lifetime": 18.5703125,
+        "mean_food": 0.265625,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 18.4609375,
+        "mean_food": 0.2578125,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 30.4296875,
+        "mean_food": 0.8203125,
+        "horizon_survival": 0.0
+      }
+    },
+    "random_search-4101": {
+      "prediction_before": 0.0566586209342006,
+      "prediction_after": 0.0563294223197488,
+      "shifted_prediction_before": 0.06582934302372223,
+      "shifted_prediction_after": 0.06398560115610508,
+      "familiar_before": {
+        "mean_lifetime": 32.3828125,
+        "mean_food": 0.875,
+        "horizon_survival": 0.0078125
+      },
+      "shifted_before": {
+        "mean_lifetime": 18.6171875,
+        "mean_food": 0.1953125,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 19.1328125,
+        "mean_food": 0.1875,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 31.71875,
+        "mean_food": 0.859375,
+        "horizon_survival": 0.0078125
+      }
+    },
+    "evolution-9107": {
+      "prediction_before": 0.05645903013697762,
+      "prediction_after": 0.055841853179913414,
+      "shifted_prediction_before": 0.06574839065183369,
+      "shifted_prediction_after": 0.06358270789957032,
+      "familiar_before": {
+        "mean_lifetime": 30.453125,
+        "mean_food": 0.875,
+        "horizon_survival": 0.0
+      },
+      "shifted_before": {
+        "mean_lifetime": 18.96875,
+        "mean_food": 0.21875,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 18.796875,
+        "mean_food": 0.21875,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 29.0,
+        "mean_food": 0.7109375,
+        "horizon_survival": 0.0
+      }
+    },
+    "random_search-9107": {
+      "prediction_before": 0.056246088592274646,
+      "prediction_after": 0.05583818363760429,
+      "shifted_prediction_before": 0.06561043394731314,
+      "shifted_prediction_after": 0.06367646571987962,
+      "familiar_before": {
+        "mean_lifetime": 31.40625,
+        "mean_food": 0.9375,
+        "horizon_survival": 0.0078125
+      },
+      "shifted_before": {
+        "mean_lifetime": 18.5234375,
+        "mean_food": 0.21875,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 18.515625,
+        "mean_food": 0.2421875,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 29.359375,
+        "mean_food": 0.7421875,
+        "horizon_survival": 0.0
+      }
+    },
+    "novelty": {
+      "prediction_before": 0.05846782985321397,
+      "prediction_after": 0.057971845154838775,
+      "shifted_prediction_before": 0.06746965839573704,
+      "shifted_prediction_after": 0.06526010678368266,
+      "familiar_before": {
+        "mean_lifetime": 29.203125,
+        "mean_food": 0.90625,
+        "horizon_survival": 0.0
+      },
+      "shifted_before": {
+        "mean_lifetime": 15.1328125,
+        "mean_food": 0.203125,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 14.40625,
+        "mean_food": 0.2421875,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 26.234375,
+        "mean_food": 0.734375,
+        "horizon_survival": 0.0
+      }
+    },
+    "disagreement": {
+      "prediction_before": 0.056941552320466826,
+      "prediction_after": 0.055944610719052434,
+      "shifted_prediction_before": 0.06587425938519686,
+      "shifted_prediction_after": 0.06364351950384162,
+      "familiar_before": {
+        "mean_lifetime": 30.4765625,
+        "mean_food": 0.7109375,
+        "horizon_survival": 0.0
+      },
+      "shifted_before": {
+        "mean_lifetime": 19.5546875,
+        "mean_food": 0.21875,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 18.7890625,
+        "mean_food": 0.234375,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 30.1640625,
+        "mean_food": 0.6640625,
+        "horizon_survival": 0.0
+      }
+    },
+    "progress": {
+      "prediction_before": 0.05989513149563663,
+      "prediction_after": 0.06035548755366449,
+      "shifted_prediction_before": 0.06810016202521751,
+      "shifted_prediction_after": 0.06757935330495002,
+      "familiar_before": {
+        "mean_lifetime": 29.453125,
+        "mean_food": 0.703125,
+        "horizon_survival": 0.0078125
+      },
+      "shifted_before": {
+        "mean_lifetime": 20.1015625,
+        "mean_food": 0.1953125,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 21.34375,
+        "mean_food": 0.0859375,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 27.7109375,
+        "mean_food": 0.421875,
+        "horizon_survival": 0.0
+      }
+    },
+    "equal_mixture": {
+      "prediction_before": 0.058922202912441435,
+      "prediction_after": 0.05658741338032769,
+      "shifted_prediction_before": 0.0673784034957805,
+      "shifted_prediction_after": 0.06432903742899043,
+      "familiar_before": {
+        "mean_lifetime": 29.5,
+        "mean_food": 0.7109375,
+        "horizon_survival": 0.0
+      },
+      "shifted_before": {
+        "mean_lifetime": 18.6328125,
+        "mean_food": 0.2421875,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 18.515625,
+        "mean_food": 0.2421875,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 31.8984375,
+        "mean_food": 0.984375,
+        "horizon_survival": 0.0
+      }
+    },
+    "random_actions": {
+      "prediction_before": 0.05508024881132201,
+      "prediction_after": 0.054425103622605775,
+      "shifted_prediction_before": 0.06446685218097059,
+      "shifted_prediction_after": 0.0625049606496475,
+      "familiar_before": {
+        "mean_lifetime": 30.0703125,
+        "mean_food": 0.6875,
+        "horizon_survival": 0.0
+      },
+      "shifted_before": {
+        "mean_lifetime": 18.8984375,
+        "mean_food": 0.1796875,
+        "horizon_survival": 0.0
+      },
+      "shifted_after": {
+        "mean_lifetime": 18.8984375,
+        "mean_food": 0.1796875,
+        "horizon_survival": 0.0
+      },
+      "familiar_after": {
+        "mean_lifetime": 30.0703125,
+        "mean_food": 0.6875,
+        "horizon_survival": 0.0
+      }
+    }
+  },
+  "per_learner_metrics": {
+    "evolution-4101": [
+      {
+        "seed": 137,
+        "prediction_before": 0.05622459565438476,
+        "shifted_prediction_before": 0.06578789586473022,
+        "familiar_before": {
+          "mean_lifetime": 33.34375,
+          "mean_food": 1.046875,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 18.1875,
+          "mean_food": 0.203125,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.0634301981946237,
+        "prediction_after": 0.055566119907553,
+        "familiar_after": {
+          "mean_lifetime": 32.5625,
+          "mean_food": 1.03125,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 19.5625,
+          "mean_food": 0.296875,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.05662196679031695,
+        "shifted_prediction_before": 0.06555739829400409,
+        "familiar_before": {
+          "mean_lifetime": 31.96875,
+          "mean_food": 0.859375,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 18.953125,
+          "mean_food": 0.328125,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06365461359689562,
+        "prediction_after": 0.055823034943841776,
+        "familiar_after": {
+          "mean_lifetime": 28.296875,
+          "mean_food": 0.609375,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 17.359375,
+          "mean_food": 0.21875,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "random_search-4101": [
+      {
+        "seed": 137,
+        "prediction_before": 0.05650879328482006,
+        "shifted_prediction_before": 0.0657946115149457,
+        "familiar_before": {
+          "mean_lifetime": 29.34375,
+          "mean_food": 0.65625,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 18.4375,
+          "mean_food": 0.15625,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06342484496008183,
+        "prediction_after": 0.055672180061151266,
+        "familiar_after": {
+          "mean_lifetime": 32.0,
+          "mean_food": 0.890625,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 18.546875,
+          "mean_food": 0.15625,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.05680844858358114,
+        "shifted_prediction_before": 0.06586407453249876,
+        "familiar_before": {
+          "mean_lifetime": 35.421875,
+          "mean_food": 1.09375,
+          "horizon_survival": 0.015625
+        },
+        "shifted_before": {
+          "mean_lifetime": 18.796875,
+          "mean_food": 0.234375,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06454635735212833,
+        "prediction_after": 0.056986664578346335,
+        "familiar_after": {
+          "mean_lifetime": 31.4375,
+          "mean_food": 0.828125,
+          "horizon_survival": 0.015625
+        },
+        "shifted_after": {
+          "mean_lifetime": 19.71875,
+          "mean_food": 0.21875,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "evolution-9107": [
+      {
+        "seed": 137,
+        "prediction_before": 0.056176459636901654,
+        "shifted_prediction_before": 0.06554558439904667,
+        "familiar_before": {
+          "mean_lifetime": 34.078125,
+          "mean_food": 1.171875,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 18.796875,
+          "mean_food": 0.203125,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06345747917850986,
+        "prediction_after": 0.055676883404771615,
+        "familiar_after": {
+          "mean_lifetime": 31.734375,
+          "mean_food": 0.9375,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 18.296875,
+          "mean_food": 0.1875,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.05674160063705358,
+        "shifted_prediction_before": 0.0659511969046207,
+        "familiar_before": {
+          "mean_lifetime": 26.828125,
+          "mean_food": 0.578125,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 19.140625,
+          "mean_food": 0.234375,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06370793662063079,
+        "prediction_after": 0.05600682295505521,
+        "familiar_after": {
+          "mean_lifetime": 26.265625,
+          "mean_food": 0.484375,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 19.296875,
+          "mean_food": 0.25,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "random_search-9107": [
+      {
+        "seed": 137,
+        "prediction_before": 0.056130815083008656,
+        "shifted_prediction_before": 0.06541364364937863,
+        "familiar_before": {
+          "mean_lifetime": 32.203125,
+          "mean_food": 0.96875,
+          "horizon_survival": 0.015625
+        },
+        "shifted_before": {
+          "mean_lifetime": 19.046875,
+          "mean_food": 0.203125,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06353394443510751,
+        "prediction_after": 0.0556162438656429,
+        "familiar_after": {
+          "mean_lifetime": 29.78125,
+          "mean_food": 0.8125,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 17.65625,
+          "mean_food": 0.1875,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.056361362101540635,
+        "shifted_prediction_before": 0.06580722424524765,
+        "familiar_before": {
+          "mean_lifetime": 30.609375,
+          "mean_food": 0.90625,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 18.0,
+          "mean_food": 0.234375,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06381898700465172,
+        "prediction_after": 0.056060123409565676,
+        "familiar_after": {
+          "mean_lifetime": 28.9375,
+          "mean_food": 0.671875,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 19.375,
+          "mean_food": 0.296875,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "novelty": [
+      {
+        "seed": 137,
+        "prediction_before": 0.0580188115785063,
+        "shifted_prediction_before": 0.06706330368376712,
+        "familiar_before": {
+          "mean_lifetime": 29.078125,
+          "mean_food": 0.890625,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 15.796875,
+          "mean_food": 0.171875,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06504356954781088,
+        "prediction_after": 0.05761836786962249,
+        "familiar_after": {
+          "mean_lifetime": 27.296875,
+          "mean_food": 0.75,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 15.203125,
+          "mean_food": 0.21875,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.05891684812792164,
+        "shifted_prediction_before": 0.06787601310770697,
+        "familiar_before": {
+          "mean_lifetime": 29.328125,
+          "mean_food": 0.921875,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 14.46875,
+          "mean_food": 0.234375,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06547664401955444,
+        "prediction_after": 0.05832532244005506,
+        "familiar_after": {
+          "mean_lifetime": 25.171875,
+          "mean_food": 0.71875,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 13.609375,
+          "mean_food": 0.265625,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "disagreement": [
+      {
+        "seed": 137,
+        "prediction_before": 0.056821770792737425,
+        "shifted_prediction_before": 0.0658377722176624,
+        "familiar_before": {
+          "mean_lifetime": 33.28125,
+          "mean_food": 0.921875,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 19.171875,
+          "mean_food": 0.21875,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06359070697806146,
+        "prediction_after": 0.05583013847444818,
+        "familiar_after": {
+          "mean_lifetime": 31.15625,
+          "mean_food": 0.75,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 18.890625,
+          "mean_food": 0.25,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.05706133384819623,
+        "shifted_prediction_before": 0.06591074655273133,
+        "familiar_before": {
+          "mean_lifetime": 27.671875,
+          "mean_food": 0.5,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 19.9375,
+          "mean_food": 0.21875,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06369633202962177,
+        "prediction_after": 0.05605908296365669,
+        "familiar_after": {
+          "mean_lifetime": 29.171875,
+          "mean_food": 0.578125,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 18.6875,
+          "mean_food": 0.21875,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "progress": [
+      {
+        "seed": 137,
+        "prediction_before": 0.05763657803646538,
+        "shifted_prediction_before": 0.06668505631114385,
+        "familiar_before": {
+          "mean_lifetime": 30.0,
+          "mean_food": 0.8125,
+          "horizon_survival": 0.015625
+        },
+        "shifted_before": {
+          "mean_lifetime": 19.953125,
+          "mean_food": 0.140625,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06691618499507967,
+        "prediction_after": 0.05923021151187413,
+        "familiar_after": {
+          "mean_lifetime": 26.515625,
+          "mean_food": 0.3125,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 20.984375,
+          "mean_food": 0.09375,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.062153684954807886,
+        "shifted_prediction_before": 0.06951526773929118,
+        "familiar_before": {
+          "mean_lifetime": 28.90625,
+          "mean_food": 0.59375,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 20.25,
+          "mean_food": 0.25,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06824252161482036,
+        "prediction_after": 0.061480763595454846,
+        "familiar_after": {
+          "mean_lifetime": 28.90625,
+          "mean_food": 0.53125,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 21.703125,
+          "mean_food": 0.078125,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "equal_mixture": [
+      {
+        "seed": 137,
+        "prediction_before": 0.05853013542741792,
+        "shifted_prediction_before": 0.06697924680707956,
+        "familiar_before": {
+          "mean_lifetime": 31.6875,
+          "mean_food": 0.875,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 17.703125,
+          "mean_food": 0.1875,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06411115663365763,
+        "prediction_after": 0.0560605495627442,
+        "familiar_after": {
+          "mean_lifetime": 33.484375,
+          "mean_food": 1.140625,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 18.65625,
+          "mean_food": 0.234375,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.05931427039746495,
+        "shifted_prediction_before": 0.06777756018448144,
+        "familiar_before": {
+          "mean_lifetime": 27.3125,
+          "mean_food": 0.546875,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 19.5625,
+          "mean_food": 0.296875,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06454691822432324,
+        "prediction_after": 0.05711427719791118,
+        "familiar_after": {
+          "mean_lifetime": 30.3125,
+          "mean_food": 0.828125,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 18.375,
+          "mean_food": 0.25,
+          "horizon_survival": 0.0
+        }
+      }
+    ],
+    "random_actions": [
+      {
+        "seed": 137,
+        "prediction_before": 0.05497743797195653,
+        "shifted_prediction_before": 0.06439787872432134,
+        "familiar_before": {
+          "mean_lifetime": 32.5625,
+          "mean_food": 0.890625,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 18.125,
+          "mean_food": 0.15625,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.062453502256573756,
+        "prediction_after": 0.05434630171043864,
+        "familiar_after": {
+          "mean_lifetime": 32.5625,
+          "mean_food": 0.890625,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 18.125,
+          "mean_food": 0.15625,
+          "horizon_survival": 0.0
+        }
+      },
+      {
+        "seed": 241,
+        "prediction_before": 0.05518305965068748,
+        "shifted_prediction_before": 0.06453582563761984,
+        "familiar_before": {
+          "mean_lifetime": 27.578125,
+          "mean_food": 0.484375,
+          "horizon_survival": 0.0
+        },
+        "shifted_before": {
+          "mean_lifetime": 19.671875,
+          "mean_food": 0.203125,
+          "horizon_survival": 0.0
+        },
+        "shifted_prediction_after": 0.06255641904272125,
+        "prediction_after": 0.05450390553477291,
+        "familiar_after": {
+          "mean_lifetime": 27.578125,
+          "mean_food": 0.484375,
+          "horizon_survival": 0.0
+        },
+        "shifted_after": {
+          "mean_lifetime": 19.671875,
+          "mean_food": 0.203125,
+          "horizon_survival": 0.0
+        }
+      }
+    ]
+  },
+  "intrinsic_gate": {
+    "required_relative_prediction_error_reduction": 0.05,
+    "relative_reductions": [
+      -0.024383194339397705,
+      -0.02503222762080541
+    ],
+    "no_learner_seed_loss": false,
+    "passed": false
+  },
+  "counts": {
+    "search_candidate_slots": 48,
+    "distinct_searched_genomes": 32,
+    "distinct_task_mechanisms": 1,
+    "learner_initialization_seeds": [
+      137,
+      241
+    ],
+    "outer_search_seeds": [
+      4101,
+      9107
+    ],
+    "base_trained_states": 106,
+    "continued_trained_states": 18,
+    "training_transitions": 28966912,
+    "probe_transitions": 24576,
+    "game_evaluation_episodes": 4608,
+    "game_evaluation_transitions": 112134,
+    "unique_game_maps": 128,
+    "optimizer_sample_presentations": 84934656,
+    "predictor_bootstrap_sample_presentations": 86900736,
+    "world_seed_identities_by_role": {
+      "adaptation-137": 4067,
+      "adaptation-241": 4277,
+      "train-137": 9074,
+      "train-241": 9013,
+      "development-probes": 292,
+      "final-probes": 290,
+      "shifted-probes": 447,
+      "game-familiar": 64,
+      "game-shifted": 64
+    }
+  },
+  "accounting": {
+    "training_transitions": 28966912,
+    "evaluation_transitions": 112134,
+    "optimizer_steps": 331776,
+    "elapsed_seconds": 1068.044424333959,
+    "predictor_optimizer_steps": 56576,
+    "probe_transitions": 24576
+  },
+  "audit": {
+    "status": "passed",
+    "summary_sha256": "ec1852ece625a56e17444ccee2c969f9ca961f419879913428353cfcf0f8e7c2",
+    "protocol_sha256": "1ad188b49c4dc41a72081daf1153b12e48d17cad5dc681a62ceb94fffe78b276",
+    "selection_sha256": "5cfbe3c472ae161c2937e93a032806e8692ad3729764117ecceaa9e08a433741",
+    "auditor_sha256": "8678a27d90b3d175833c2ec703abd5fa3a00e7f1f108249f8bdfd89303fc64e7",
+    "scalar_evaluation_auditor_sha256": "bbf2f605c72d2e12810091a4c4229b349d5fe9d1f4aa007927bbb5405f1e82db",
+    "source_revision": "826983775676e1cf28f95decbe84cbf48aa27979",
+    "training_transitions": 28966912,
+    "actor_optimizer_steps": 331776,
+    "predictor_optimizer_steps": 56576,
+    "actor_optimizer_sample_presentations": 84934656,
+    "predictor_bootstrap_sample_presentations": 86900736,
+    "verified_trained_states": 124,
+    "independently_replayed_probe_transitions": 24576,
+    "independently_replayed_game_episodes": 4608,
+    "independently_replayed_game_transitions": 112134,
+    "verified_animation_decisions": 1566,
+    "world_seed_identities_by_role": {
+      "adaptation-137": 4067,
+      "adaptation-241": 4277,
+      "train-137": 9074,
+      "train-241": 9013,
+      "development-probes": 292,
+      "final-probes": 290,
+      "shifted-probes": 447,
+      "game-familiar": 64,
+      "game-shifted": 64
+    },
+    "training_world_seed_identities_actually_stepped_by_role": {
+      "adaptation-137": 4066,
+      "adaptation-241": 4274,
+      "train-137": 9073,
+      "train-241": 9013
+    },
+    "repeated_base_training_states_verified_identical": 32,
+    "prediction_references": {
+      "final-probes": {
+        "predict_zeros": 0.11191201962659354,
+        "copy_current_observation": 0.07359062697894869,
+        "untrained_by_seed": {
+          "137": 0.2476631438203185,
+          "241": 0.24780673799796205
+        }
+      },
+      "shifted-probes": {
+        "predict_zeros": 0.11696152637072928,
+        "copy_current_observation": 0.08661080914258555,
+        "untrained_by_seed": {
+          "137": 0.2478417522561358,
+          "241": 0.2481584839297284
+        }
+      }
+    },
+    "distinct_game_maps": 128,
+    "task_blind_gate": {
+      "required_relative_prediction_error_reduction": 0.05,
+      "relative_reductions": [
+        -0.024383194339397705,
+        -0.02503222762080541
+      ],
+      "no_learner_seed_loss": false,
+      "passed": false
+    },
+    "scope": "Frozen source/checkpoint identities, consumed steps, all real probe labels via scalar observation/transition replay, predictive selection, every final game trajectory via scalar dynamics, continued checkpoint lineage, and recorded action probabilities. No independent gradient replay."
+  },
+  "candidates": [
+    {
+      "id": "evolution-4101-g0-m0",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.4604990386227413,
+        0.028720010474238864,
+        0.5107809509030199
+      ],
+      "parents": [],
+      "prediction_mse": 0.05753506036899125,
+      "per_learner": [
+        0.0572932794651706,
+        0.05777684127281191
+      ]
+    },
+    {
+      "id": "evolution-4101-g0-m1",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.7478109286784119,
+        0.07070785700617424,
+        0.1814812143154138
+      ],
+      "parents": [],
+      "prediction_mse": 0.05711113612107965,
+      "per_learner": [
+        0.05699410632286117,
+        0.057228165919298135
+      ]
+    },
+    {
+      "id": "evolution-4101-g0-m2",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.015595020493271846,
+        0.1534704037608938,
+        0.8309345757458343
+      ],
+      "parents": [],
+      "prediction_mse": 0.05909702484683521,
+      "per_learner": [
+        0.05840431707673588,
+        0.05978973261693454
+      ]
+    },
+    {
+      "id": "evolution-4101-g0-m3",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.0005937933975803233,
+        0.6947452177323578,
+        0.3046609888700619
+      ],
+      "parents": [],
+      "prediction_mse": 0.05734850551627346,
+      "per_learner": [
+        0.057847021793179465,
+        0.05684998923936746
+      ]
+    },
+    {
+      "id": "evolution-4101-g1-m0",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.7478109286784119,
+        0.07070785700617424,
+        0.1814812143154138
+      ],
+      "parents": [
+        "evolution-4101-g0-m1"
+      ],
+      "prediction_mse": 0.05711113612107965,
+      "per_learner": [
+        0.05699410632286117,
+        0.057228165919298135
+      ]
+    },
+    {
+      "id": "evolution-4101-g1-m1",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.0005937933975803233,
+        0.6947452177323578,
+        0.3046609888700619
+      ],
+      "parents": [
+        "evolution-4101-g0-m3"
+      ],
+      "prediction_mse": 0.05734850551627346,
+      "per_learner": [
+        0.057847021793179465,
+        0.05684998923936746
+      ]
+    },
+    {
+      "id": "evolution-4101-g1-m2",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.8847345113754272,
+        0.04583064839243889,
+        0.06943482160568237
+      ],
+      "parents": [
+        "evolution-4101-g0-m1",
+        "evolution-4101-g0-m1"
+      ],
+      "prediction_mse": 0.05752066020818347,
+      "per_learner": [
+        0.05740066041641967,
+        0.057640659999947275
+      ]
+    },
+    {
+      "id": "evolution-4101-g1-m3",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.3067493736743927,
+        0.5120096206665039,
+        0.1812409907579422
+      ],
+      "parents": [
+        "evolution-4101-g0-m1",
+        "evolution-4101-g0-m3"
+      ],
+      "prediction_mse": 0.05625821162377065,
+      "per_learner": [
+        0.05611569935359739,
+        0.056400723893943905
+      ]
+    },
+    {
+      "id": "evolution-4101-g2-m0",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.3067493736743927,
+        0.5120096206665039,
+        0.1812409907579422
+      ],
+      "parents": [
+        "evolution-4101-g1-m3"
+      ],
+      "prediction_mse": 0.05625821162377065,
+      "per_learner": [
+        0.05611569935359739,
+        0.056400723893943905
+      ]
+    },
+    {
+      "id": "evolution-4101-g2-m1",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.7478109286784119,
+        0.07070785700617424,
+        0.1814812143154138
+      ],
+      "parents": [
+        "evolution-4101-g1-m0"
+      ],
+      "prediction_mse": 0.05711113612107965,
+      "per_learner": [
+        0.05699410632286117,
+        0.057228165919298135
+      ]
+    },
+    {
+      "id": "evolution-4101-g2-m2",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.30772897601127625,
+        0.19091767072677612,
+        0.50135338306427
+      ],
+      "parents": [
+        "evolution-4101-g1-m0",
+        "evolution-4101-g1-m3"
+      ],
+      "prediction_mse": 0.05734701322896285,
+      "per_learner": [
+        0.05732388922098153,
+        0.057370137236944174
+      ]
+    },
+    {
+      "id": "evolution-4101-g2-m3",
+      "method": "evolution",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.25912606716156006,
+        0.6333501935005188,
+        0.10752372443675995
+      ],
+      "parents": [
+        "evolution-4101-g1-m3",
+        "evolution-4101-g1-m0"
+      ],
+      "prediction_mse": 0.05655423218058786,
+      "per_learner": [
+        0.056736100678790535,
+        0.056372363682385185
+      ]
+    },
+    {
+      "id": "random_search-4101-g0-m0",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.4604990386227413,
+        0.028720010474238864,
+        0.5107809509030199
+      ],
+      "parents": [],
+      "prediction_mse": 0.05753506036899125,
+      "per_learner": [
+        0.0572932794651706,
+        0.05777684127281191
+      ]
+    },
+    {
+      "id": "random_search-4101-g0-m1",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.7478109286784119,
+        0.07070785700617424,
+        0.1814812143154138
+      ],
+      "parents": [],
+      "prediction_mse": 0.05711113612107965,
+      "per_learner": [
+        0.05699410632286117,
+        0.057228165919298135
+      ]
+    },
+    {
+      "id": "random_search-4101-g0-m2",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.015595020493271846,
+        0.1534704037608938,
+        0.8309345757458343
+      ],
+      "parents": [],
+      "prediction_mse": 0.05909702484683521,
+      "per_learner": [
+        0.05840431707673588,
+        0.05978973261693454
+      ]
+    },
+    {
+      "id": "random_search-4101-g0-m3",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 0,
+      "genome": [
+        0.0005937933975803233,
+        0.6947452177323578,
+        0.3046609888700619
+      ],
+      "parents": [],
+      "prediction_mse": 0.05734850551627346,
+      "per_learner": [
+        0.057847021793179465,
+        0.05684998923936746
+      ]
+    },
+    {
+      "id": "random_search-4101-g1-m0",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.05656196714741195,
+        0.2201641827198606,
+        0.7232738501327274
+      ],
+      "parents": [],
+      "prediction_mse": 0.05742425285660602,
+      "per_learner": [
+        0.05742782708006189,
+        0.057420678633150146
+      ]
+    },
+    {
+      "id": "random_search-4101-g1-m1",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.23008743720601138,
+        0.33633734785509095,
+        0.43357521493889756
+      ],
+      "parents": [],
+      "prediction_mse": 0.05702393467234401,
+      "per_learner": [
+        0.057378674824633435,
+        0.05666919452005459
+      ]
+    },
+    {
+      "id": "random_search-4101-g1-m2",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.3980228383251275,
+        0.15033768659491897,
+        0.45163947507995356
+      ],
+      "parents": [],
+      "prediction_mse": 0.057390934603915866,
+      "per_learner": [
+        0.056970564581831695,
+        0.05781130462600004
+      ]
+    },
+    {
+      "id": "random_search-4101-g1-m3",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 1,
+      "genome": [
+        0.1237464075006585,
+        0.7303761018640826,
+        0.14587749063525884
+      ],
+      "parents": [],
+      "prediction_mse": 0.05655166956833568,
+      "per_learner": [
+        0.056497240226008216,
+        0.05660609891066315
+      ]
+    },
+    {
+      "id": "random_search-4101-g2-m0",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.07219691143554269,
+        0.17780382609569872,
+        0.7499992624687586
+      ],
+      "parents": [],
+      "prediction_mse": 0.058251057660555716,
+      "per_learner": [
+        0.05769082544736648,
+        0.058811289873744954
+      ]
+    },
+    {
+      "id": "random_search-4101-g2-m1",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.35064072750647673,
+        0.05727804122817329,
+        0.59208123126535
+      ],
+      "parents": [],
+      "prediction_mse": 0.056940548478195296,
+      "per_learner": [
+        0.05668958339180108,
+        0.05719151356458951
+      ]
+    },
+    {
+      "id": "random_search-4101-g2-m2",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.7206008966581144,
+        0.24282966432701186,
+        0.036569439014873556
+      ],
+      "parents": [],
+      "prediction_mse": 0.05662780527276823,
+      "per_learner": [
+        0.05635548700416848,
+        0.056900123541367975
+      ]
+    },
+    {
+      "id": "random_search-4101-g2-m3",
+      "method": "random_search",
+      "search_seed": 4101,
+      "generation": 2,
+      "genome": [
+        0.17074771217617035,
+        0.44984872607730786,
+        0.3794035617465218
+      ],
+      "parents": [],
+      "prediction_mse": 0.05697855238358329,
+      "per_learner": [
+        0.056765931206143705,
+        0.05719117356102288
+      ]
+    },
+    {
+      "id": "evolution-9107-g0-m0",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.13295031136779484,
+        0.44793692862221646,
+        0.4191127600099886
+      ],
+      "parents": [],
+      "prediction_mse": 0.05840001068315814,
+      "per_learner": [
+        0.05753037052909349,
+        0.0592696508372228
+      ]
+    },
+    {
+      "id": "evolution-9107-g0-m1",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.3844667568158031,
+        0.5777562853301077,
+        0.03777695785408918
+      ],
+      "parents": [],
+      "prediction_mse": 0.05636628962361101,
+      "per_learner": [
+        0.056304972981990886,
+        0.056427606265231134
+      ]
+    },
+    {
+      "id": "evolution-9107-g0-m2",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.2540726462249863,
+        0.43964743992123057,
+        0.3062799138537831
+      ],
+      "parents": [],
+      "prediction_mse": 0.05674247536200028,
+      "per_learner": [
+        0.05677704420060081,
+        0.05670790652339974
+      ]
+    },
+    {
+      "id": "evolution-9107-g0-m3",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.04017766697646766,
+        0.5707219849623897,
+        0.38910034806114285
+      ],
+      "parents": [],
+      "prediction_mse": 0.05751231392395084,
+      "per_learner": [
+        0.05797580785423406,
+        0.05704881999366762
+      ]
+    },
+    {
+      "id": "evolution-9107-g1-m0",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.3844667568158031,
+        0.5777562853301077,
+        0.03777695785408918
+      ],
+      "parents": [
+        "evolution-9107-g0-m1"
+      ],
+      "prediction_mse": 0.05636628962361101,
+      "per_learner": [
+        0.056304972981990886,
+        0.056427606265231134
+      ]
+    },
+    {
+      "id": "evolution-9107-g1-m1",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.2540726462249863,
+        0.43964743992123057,
+        0.3062799138537831
+      ],
+      "parents": [
+        "evolution-9107-g0-m2"
+      ],
+      "prediction_mse": 0.05674247536200028,
+      "per_learner": [
+        0.05677704420060081,
+        0.05670790652339974
+      ]
+    },
+    {
+      "id": "evolution-9107-g1-m2",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.08701694011688232,
+        0.795447587966919,
+        0.11753545701503754
+      ],
+      "parents": [
+        "evolution-9107-g0-m1",
+        "evolution-9107-g0-m2"
+      ],
+      "prediction_mse": 0.057135925597975756,
+      "per_learner": [
+        0.05712138672282663,
+        0.057150464473124885
+      ]
+    },
+    {
+      "id": "evolution-9107-g1-m3",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.35193610191345215,
+        0.5862410068511963,
+        0.06182289123535156
+      ],
+      "parents": [
+        "evolution-9107-g0-m1",
+        "evolution-9107-g0-m1"
+      ],
+      "prediction_mse": 0.056355981685641154,
+      "per_learner": [
+        0.056162969676393004,
+        0.056548993694889305
+      ]
+    },
+    {
+      "id": "evolution-9107-g2-m0",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.35193610191345215,
+        0.5862410068511963,
+        0.06182289123535156
+      ],
+      "parents": [
+        "evolution-9107-g1-m3"
+      ],
+      "prediction_mse": 0.056355981685641154,
+      "per_learner": [
+        0.056162969676393004,
+        0.056548993694889305
+      ]
+    },
+    {
+      "id": "evolution-9107-g2-m1",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.3844667568158031,
+        0.5777562853301077,
+        0.03777695785408918
+      ],
+      "parents": [
+        "evolution-9107-g1-m0"
+      ],
+      "prediction_mse": 0.05636628962361101,
+      "per_learner": [
+        0.056304972981990886,
+        0.056427606265231134
+      ]
+    },
+    {
+      "id": "evolution-9107-g2-m2",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.1568906456232071,
+        0.7969613671302795,
+        0.04614798724651337
+      ],
+      "parents": [
+        "evolution-9107-g1-m3",
+        "evolution-9107-g1-m3"
+      ],
+      "prediction_mse": 0.056360493773723874,
+      "per_learner": [
+        0.056161154949620595,
+        0.05655983259782715
+      ]
+    },
+    {
+      "id": "evolution-9107-g2-m3",
+      "method": "evolution",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.2340822070837021,
+        0.6579740047454834,
+        0.10794377326965332
+      ],
+      "parents": [
+        "evolution-9107-g1-m3",
+        "evolution-9107-g1-m0"
+      ],
+      "prediction_mse": 0.056493561458268005,
+      "per_learner": [
+        0.05670032326099772,
+        0.05628679965553829
+      ]
+    },
+    {
+      "id": "random_search-9107-g0-m0",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.13295031136779484,
+        0.44793692862221646,
+        0.4191127600099886
+      ],
+      "parents": [],
+      "prediction_mse": 0.05840001068315814,
+      "per_learner": [
+        0.05753037052909349,
+        0.0592696508372228
+      ]
+    },
+    {
+      "id": "random_search-9107-g0-m1",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.3844667568158031,
+        0.5777562853301077,
+        0.03777695785408918
+      ],
+      "parents": [],
+      "prediction_mse": 0.05636628962361101,
+      "per_learner": [
+        0.056304972981990886,
+        0.056427606265231134
+      ]
+    },
+    {
+      "id": "random_search-9107-g0-m2",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.2540726462249863,
+        0.43964743992123057,
+        0.3062799138537831
+      ],
+      "parents": [],
+      "prediction_mse": 0.05674247536200028,
+      "per_learner": [
+        0.05677704420060081,
+        0.05670790652339974
+      ]
+    },
+    {
+      "id": "random_search-9107-g0-m3",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 0,
+      "genome": [
+        0.04017766697646766,
+        0.5707219849623897,
+        0.38910034806114285
+      ],
+      "parents": [],
+      "prediction_mse": 0.05751231392395084,
+      "per_learner": [
+        0.05797580785423406,
+        0.05704881999366762
+      ]
+    },
+    {
+      "id": "random_search-9107-g1-m0",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.2243075312424787,
+        0.0026962744440698376,
+        0.7729961943134515
+      ],
+      "parents": [],
+      "prediction_mse": 0.05746142513791597,
+      "per_learner": [
+        0.05690207587684881,
+        0.05802077439898312
+      ]
+    },
+    {
+      "id": "random_search-9107-g1-m1",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.0023776083753068865,
+        0.026864540655609163,
+        0.9707578509690841
+      ],
+      "parents": [],
+      "prediction_mse": 0.05733439591276124,
+      "per_learner": [
+        0.05760524808391665,
+        0.05706354374160583
+      ]
+    },
+    {
+      "id": "random_search-9107-g1-m2",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.3702488173599378,
+        0.6102082784891045,
+        0.019542904150957753
+      ],
+      "parents": [],
+      "prediction_mse": 0.05620082620490052,
+      "per_learner": [
+        0.0561017024621151,
+        0.056299949947685946
+      ]
+    },
+    {
+      "id": "random_search-9107-g1-m3",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 1,
+      "genome": [
+        0.6057291576480559,
+        0.0032265725153194443,
+        0.3910442698366247
+      ],
+      "parents": [],
+      "prediction_mse": 0.05743109158837001,
+      "per_learner": [
+        0.057070996145967,
+        0.05779118703077302
+      ]
+    },
+    {
+      "id": "random_search-9107-g2-m0",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.28184453500236856,
+        0.04780380470978975,
+        0.6703516602878415
+      ],
+      "parents": [],
+      "prediction_mse": 0.05737698753273435,
+      "per_learner": [
+        0.05736584771932485,
+        0.05738812734614385
+      ]
+    },
+    {
+      "id": "random_search-9107-g2-m1",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.260756434159016,
+        0.7277134587209262,
+        0.011530107120057727
+      ],
+      "parents": [],
+      "prediction_mse": 0.05648718762518001,
+      "per_learner": [
+        0.056489931331327625,
+        0.0564844439190324
+      ]
+    },
+    {
+      "id": "random_search-9107-g2-m2",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.48775461841794737,
+        0.015480026443618296,
+        0.49676535513843434
+      ],
+      "parents": [],
+      "prediction_mse": 0.05824542860187876,
+      "per_learner": [
+        0.059067067187129396,
+        0.05742379001662812
+      ]
+    },
+    {
+      "id": "random_search-9107-g2-m3",
+      "method": "random_search",
+      "search_seed": 9107,
+      "generation": 2,
+      "genome": [
+        0.025950849117907737,
+        0.594749152623584,
+        0.3792999982585083
+      ],
+      "parents": [],
+      "prediction_mse": 0.05878537300660014,
+      "per_learner": [
+        0.05838647073829861,
+        0.059184275274901665
+      ]
+    }
+  ],
+  "receipt_hashes": {
+    "summary": "ec1852ece625a56e17444ccee2c969f9ca961f419879913428353cfcf0f8e7c2",
+    "protocol": "1ad188b49c4dc41a72081daf1153b12e48d17cad5dc681a62ceb94fffe78b276",
+    "selection": "5cfbe3c472ae161c2937e93a032806e8692ad3729764117ecceaa9e08a433741",
+    "audit": "79af01bf6d7cc06096d569588ea6f9549ef2f79baa5137fe3a5f8e8442affb40"
+  },
+  "probe_bank_hashes": {
+    "development-probes": "f033a44563b149692078cee6fb824c1d9af3ce2e6123b703b0381ea4caf29f13",
+    "final-probes": "b04af530fa229edb0a40dfc51a0bdca7ceaad1d0ea93ef3fc6420ef7bfacce59",
+    "shifted-probes": "d4bbc708f70a5c989caee3fd3d784e0888e223adc14a538f5599a03f495c8ac0"
+  },
+  "resources": {
+    "guarded_elapsed_seconds": 1070.0088945409516,
+    "peak_resident_bytes": 473006080,
+    "added_swap_bytes": 0,
+    "paid_compute_usd": 0
+  },
+  "limitations": "Authored observation features, one foraging mechanism, two learner seeds; internal rewards and predictive selection remain objectives. No objective-free or open-ended improvement claim."
+}
