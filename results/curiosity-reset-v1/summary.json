@@ -1,0 +1,3249 @@
+{
+  "experiment": "curiosity-reset-v1",
+  "status": "complete",
+  "protocol": {
+    "study": {
+      "namespace": "curiosity-reset-v1",
+      "learner_seeds": [
+        337,
+        541,
+        809
+      ],
+      "updates": 1024,
+      "milestones": [
+        64,
+        256,
+        1024
+      ],
+      "world_period": 256,
+      "probe_steps": 128,
+      "evaluation_worlds": 64,
+      "max_seconds": 1500
+    },
+    "recipe": {
+      "population": 6,
+      "generations": 3,
+      "learner_seeds": [
+        17,
+        29
+      ],
+      "environments": 32,
+      "rollout_steps": 32,
+      "updates": 1024,
+      "epochs": 3,
+      "minibatch": 256,
+      "development_worlds": 16,
+      "final_worlds": 64,
+      "max_seconds": 1500,
+      "namespace": "curiosity-reset-v1"
+    },
+    "world": {
+      "size": 12,
+      "horizon": 128,
+      "initial_energy": 24,
+      "max_energy": 40,
+      "food_energy": 14,
+      "regrow_steps": 20,
+      "plants": 8,
+      "walls": 12,
+      "hazards": 8,
+      "hazard_cost": 3
+    },
+    "source_revision": "fac0956eda9f25e7722a90ef0616e5b2506b95de",
+    "sources": {
+      "games_lab/curiosity.py": "66016685ae1e9b7fedffb2582875c33c399a4c84c8b0504549fc3e1ad395011b",
+      "games_lab/curiosity_diagnostics.py": "3f56cb851d94429adf5fdc810d0ad5f57002ddd60e0cfc44eba369aab20228ac",
+      "games_lab/foraging.py": "88184fef81eff5dd9c7025f730b16adada40414badf56439d24422c1cebb59fa",
+      "games_lab/evolve_rewards.py": "ad4009f3dea30ef02a18e5a3d7cef80ee5fb568a45848a82c0a17349d0fca9eb",
+      "puffer_lab/train_small.py": "206e38b4287bb44e4284163c20d13e13d0ec4bbe46e8c3682ebedfe838edd1f0",
+      "general_lab/rl.py": "ff955479d9ad3138252c96c57ffa9c1b09ac83627c5e51ca4e73a2d5aac9618a",
+      "tests/test_curiosity.py": "5b0e0aef46ac316e2b088f87637e3e70463eab92ec4a30bb37fe0b4e95ba4e46",
+      "tests/test_curiosity_diagnostics.py": "47c778f17f652e54f74b8e7b5d6bf2f5351304bb7745733a90486020403237f5",
+      "docs/curiosity-reset-v1.md": "ce2ff79b29f119709d73eeeb6e15ea8ff145522e7b5f092750fe62e3d9fa9930"
+    },
+    "conditions": [
+      "curiosity_fresh",
+      "curiosity_repeat",
+      "random_fresh",
+      "random_repeat"
+    ],
+    "genome": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "game_scores_used_in_training": false,
+    "game_scores_used_in_selection": false,
+    "selection": "None. All conditions and predeclared milestones measured after training finishes.",
+    "paid_compute_usd": 0,
+    "torch_version": "2.14.0"
+  },
+  "aggregate_metrics": {
+    "curiosity_fresh": {
+      "64": {
+        "game": {
+          "mean_lifetime": 30.541666666666668,
+          "mean_food": 0.6927083333333334,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.09646557364627976,
+            "ordinary": 0.09610319366897647,
+            "respawn": 0.10797766076525052,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.09777134082211585,
+            "ordinary": 0.0974902408720737,
+            "respawn": 0.11014282763440968,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.09822165748846601,
+            "ordinary": 0.09781057287086846,
+            "respawn": 0.11047074274815862,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.09714418987474953,
+            "ordinary": 0.09695513683873029,
+            "respawn": 0.10335481647124961,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "256": {
+        "game": {
+          "mean_lifetime": 30.947916666666668,
+          "mean_food": 0.921875,
+          "horizon_survival": 0.010416666666666666
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.05738770771578553,
+            "ordinary": 0.05573226673859866,
+            "respawn": 0.10997775667905807,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.05776439548033826,
+            "ordinary": 0.056500272222849236,
+            "respawn": 0.11339971027422302,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.059369775619794986,
+            "ordinary": 0.058134215413353445,
+            "respawn": 0.09618575380120735,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.05788107181998233,
+            "ordinary": 0.05688636943467539,
+            "respawn": 0.09055827827944572,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "1024": {
+        "game": {
+          "mean_lifetime": 20.911458333333332,
+          "mean_food": 0.21875,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.05132970331211103,
+            "ordinary": 0.049118639871377705,
+            "respawn": 0.12157076669732729,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.05338467338422485,
+            "ordinary": 0.051794543861703346,
+            "respawn": 0.12336784632596777,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.05367385964891961,
+            "ordinary": 0.05199976467528389,
+            "respawn": 0.10355685499116292,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.05317319893057023,
+            "ordinary": 0.051823457104644,
+            "respawn": 0.09751389114591537,
+            "scheduled_world_change": null
+          }
+        }
+      }
+    },
+    "curiosity_repeat": {
+      "64": {
+        "game": {
+          "mean_lifetime": 29.75,
+          "mean_food": 0.65625,
+          "horizon_survival": 0.005208333333333333
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.09177433156977106,
+            "ordinary": 0.09138450635573499,
+            "respawn": 0.1041582989692688,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.09311801772597998,
+            "ordinary": 0.0927994708150402,
+            "respawn": 0.10713758232283505,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.09393889704385099,
+            "ordinary": 0.09353311301021577,
+            "respawn": 0.1060300408430715,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.0936063268847344,
+            "ordinary": 0.09339097396679519,
+            "respawn": 0.10068093720546438,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "256": {
+        "game": {
+          "mean_lifetime": 32.588541666666664,
+          "mean_food": 1.0052083333333333,
+          "horizon_survival": 0.005208333333333333
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.05810255300669572,
+            "ordinary": 0.05640214700200221,
+            "respawn": 0.11212105096379915,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.05824459566012289,
+            "ordinary": 0.05694343682341324,
+            "respawn": 0.1155098829241026,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.059902446536473995,
+            "ordinary": 0.05862206267001039,
+            "respawn": 0.09805403497854347,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.05812946243876619,
+            "ordinary": 0.057113870279648704,
+            "respawn": 0.09149292386431995,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "1024": {
+        "game": {
+          "mean_lifetime": 31.453125,
+          "mean_food": 1.140625,
+          "horizon_survival": 0.03125
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.05063360822166866,
+            "ordinary": 0.04837952895482198,
+            "respawn": 0.12224119837085405,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.05281583577734258,
+            "ordinary": 0.051193110566587034,
+            "respawn": 0.12423357719575966,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.05315081304773154,
+            "ordinary": 0.05145833785197589,
+            "respawn": 0.10358148373028538,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.0526002052300214,
+            "ordinary": 0.051225782990732875,
+            "respawn": 0.09775167961987173,
+            "scheduled_world_change": null
+          }
+        }
+      }
+    },
+    "random_fresh": {
+      "64": {
+        "game": {
+          "mean_lifetime": 28.21875,
+          "mean_food": 0.5833333333333334,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.07798195303045456,
+            "ordinary": 0.07745096572403302,
+            "respawn": 0.09485035778085392,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.07890789145039889,
+            "ordinary": 0.07852878795252262,
+            "respawn": 0.09559261132945944,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.07949820417888986,
+            "ordinary": 0.0790462502444379,
+            "respawn": 0.09296507216560512,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.08026171467766592,
+            "ordinary": 0.07997054916351597,
+            "respawn": 0.08982686276647671,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "256": {
+        "game": {
+          "mean_lifetime": 28.21875,
+          "mean_food": 0.5833333333333334,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.05574611329457942,
+            "ordinary": 0.053905821861396676,
+            "respawn": 0.11420849154392877,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.05624615348206893,
+            "ordinary": 0.05485206330264831,
+            "respawn": 0.11760144104887715,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.057699188071183016,
+            "ordinary": 0.05633449005214495,
+            "respawn": 0.0983630846835729,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.0559954624305495,
+            "ordinary": 0.05490537936215443,
+            "respawn": 0.09180604256997422,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "1024": {
+        "game": {
+          "mean_lifetime": 28.21875,
+          "mean_food": 0.5833333333333334,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.04695103161000702,
+            "ordinary": 0.04451123975424472,
+            "respawn": 0.1244583392838637,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.04900136774124538,
+            "ordinary": 0.047231550880338063,
+            "respawn": 0.1268927581581004,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.049111666956453824,
+            "ordinary": 0.047234201278725206,
+            "respawn": 0.10505449763945023,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.0481969301820205,
+            "ordinary": 0.04665762016271482,
+            "respawn": 0.09876517255177347,
+            "scheduled_world_change": null
+          }
+        }
+      }
+    },
+    "random_repeat": {
+      "64": {
+        "game": {
+          "mean_lifetime": 28.21875,
+          "mean_food": 0.5833333333333334,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.07899587766132754,
+            "ordinary": 0.07849841298091265,
+            "respawn": 0.09479933562874794,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.08010274343935937,
+            "ordinary": 0.0797427593092843,
+            "respawn": 0.09594600103222406,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.0806973214842704,
+            "ordinary": 0.08027429372292812,
+            "respawn": 0.09330227650832712,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.08151313002387421,
+            "ordinary": 0.08124558248641106,
+            "respawn": 0.09030239830003954,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "256": {
+        "game": {
+          "mean_lifetime": 28.21875,
+          "mean_food": 0.5833333333333334,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.05584069334004956,
+            "ordinary": 0.05399185319231071,
+            "respawn": 0.11457464715341727,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.056401322028591494,
+            "ordinary": 0.055001106259269274,
+            "respawn": 0.11802620286524514,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.05785196146030103,
+            "ordinary": 0.05648300922537248,
+            "respawn": 0.09864262091159297,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.056118062819336956,
+            "ordinary": 0.05502299995585277,
+            "respawn": 0.09209223540073912,
+            "scheduled_world_change": null
+          }
+        }
+      },
+      "1024": {
+        "game": {
+          "mean_lifetime": 28.21875,
+          "mean_food": 0.5833333333333334,
+          "horizon_survival": 0.0
+        },
+        "prediction": {
+          "fresh_random": {
+            "all": 0.047045175920288784,
+            "ordinary": 0.04459743082024107,
+            "respawn": 0.12480514225860435,
+            "scheduled_world_change": null
+          },
+          "fresh_sweep": {
+            "all": 0.04916230903880129,
+            "ordinary": 0.04738594706536899,
+            "respawn": 0.12734175633106914,
+            "scheduled_world_change": null
+          },
+          "repeat_random": {
+            "all": 0.049212269173940136,
+            "ordinary": 0.0473386905561674,
+            "respawn": 0.10503927716065693,
+            "scheduled_world_change": null
+          },
+          "repeat_sweep": {
+            "all": 0.04826638442377392,
+            "ordinary": 0.046726542198210486,
+            "respawn": 0.09885211042885363,
+            "scheduled_world_change": null
+          }
+        }
+      }
+    }
+  },
+  "per_learner_metrics": {
+    "curiosity_fresh": {
+      "337": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.09621191314090538,
+              "ordinary": 0.09585186009614481,
+              "respawn": 0.10765007826685906,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.09760247399663058,
+              "ordinary": 0.09724844910306728,
+              "respawn": 0.11318345969686142,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.09935852902890474,
+              "ordinary": 0.09891444016572294,
+              "respawn": 0.11259104154611889,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.09913797892295406,
+              "ordinary": 0.09889202947511613,
+              "respawn": 0.10721772318043984,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 30.515625,
+            "mean_food": 0.65625,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05736155941292509,
+              "ordinary": 0.055701261630539324,
+              "respawn": 0.11010589936375619,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05785596766202161,
+              "ordinary": 0.056577223875721484,
+              "respawn": 0.11413474638874714,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05938978165750086,
+              "ordinary": 0.058139956467663914,
+              "respawn": 0.09663081344189052,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05797299944140377,
+              "ordinary": 0.05696694294693616,
+              "respawn": 0.09102320246213724,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 32.671875,
+            "mean_food": 1.09375,
+            "horizon_survival": 0.03125
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05114688426607472,
+              "ordinary": 0.04892978404033662,
+              "respawn": 0.1215797242373228,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.052671799614415704,
+              "ordinary": 0.051085412555249794,
+              "respawn": 0.12249026304254165,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.053658791684028984,
+              "ordinary": 0.052026268629648154,
+              "respawn": 0.10230306886080512,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05283941470946729,
+              "ordinary": 0.05149519697247577,
+              "respawn": 0.09699863375526321,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 20.109375,
+            "mean_food": 0.21875,
+            "horizon_survival": 0.0
+          }
+        }
+      },
+      "541": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.0954068953415117,
+              "ordinary": 0.0949933740156284,
+              "respawn": 0.10854364082217216,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.09786088193504838,
+              "ordinary": 0.09759631898258807,
+              "respawn": 0.10950455912849405,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.09694488039576754,
+              "ordinary": 0.09655537145645171,
+              "respawn": 0.10855107533192276,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.09638281945672134,
+              "ordinary": 0.09620873624470624,
+              "respawn": 0.10210166877705204,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 31.90625,
+            "mean_food": 0.78125,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05725564352349011,
+              "ordinary": 0.055592843629368206,
+              "respawn": 0.11007947055995464,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.057481532446331585,
+              "ordinary": 0.05622677087479186,
+              "respawn": 0.11270483018277766,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05921960327486886,
+              "ordinary": 0.0579855522322284,
+              "respawn": 0.09599061291384742,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05765753326772938,
+              "ordinary": 0.05667058427167951,
+              "respawn": 0.09008003127845851,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 28.3125,
+            "mean_food": 0.6875,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05161527089063611,
+              "ordinary": 0.04939583023287472,
+              "respawn": 0.12212246170639991,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05390063231777731,
+              "ordinary": 0.05230150222859709,
+              "respawn": 0.12427992909982964,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05408190118623679,
+              "ordinary": 0.05234799716680859,
+              "respawn": 0.10574702621626675,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05352898292392183,
+              "ordinary": 0.05217783981981049,
+              "respawn": 0.09791570886476966,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 21.171875,
+            "mean_food": 0.21875,
+            "horizon_survival": 0.0
+          }
+        }
+      },
+      "809": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.0977779124564222,
+              "ordinary": 0.0974643468951562,
+              "respawn": 0.10773926320672035,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.09785066653466856,
+              "ordinary": 0.09762595453056577,
+              "respawn": 0.10774046407787355,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.09836156304072574,
+              "ordinary": 0.09796190699043071,
+              "respawn": 0.1102701113664342,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.09591177124457317,
+              "ordinary": 0.09576464479636847,
+              "respawn": 0.10074505745625693,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.203125,
+            "mean_food": 0.640625,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.057545920210941404,
+              "ordinary": 0.055902694955888454,
+              "respawn": 0.1097479001134634,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05795568633266157,
+              "ordinary": 0.05669682191803437,
+              "respawn": 0.11335955425114422,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05949994192701524,
+              "ordinary": 0.058277137540168014,
+              "respawn": 0.0959358350478841,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05801268275081384,
+              "ordinary": 0.05702158108541051,
+              "respawn": 0.0905716010977414,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 31.859375,
+            "mean_food": 0.984375,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05122695477962225,
+              "ordinary": 0.049030305340921766,
+              "respawn": 0.12101011414825916,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.053581588220481535,
+              "ordinary": 0.05199671680126316,
+              "respawn": 0.12333334683553203,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05328088607649306,
+              "ordinary": 0.05162502822939494,
+              "respawn": 0.10262046989641692,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05315119915832156,
+              "ordinary": 0.05179733452164574,
+              "respawn": 0.09762733081771323,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 21.453125,
+            "mean_food": 0.21875,
+            "horizon_survival": 0.0
+          }
+        }
+      }
+    },
+    "curiosity_repeat": {
+      "337": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.08939261518298736,
+              "ordinary": 0.08897213612218043,
+              "respawn": 0.10275039398670197,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.09123410392840015,
+              "ordinary": 0.09083004607057453,
+              "respawn": 0.10901708986896735,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.09305116846735473,
+              "ordinary": 0.0926342811853769,
+              "respawn": 0.1054731556739574,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.094326466354687,
+              "ordinary": 0.09404775825873861,
+              "respawn": 0.10348237281249574,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.859375,
+            "mean_food": 0.5,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.057651724413858574,
+              "ordinary": 0.055974046391177215,
+              "respawn": 0.11094819983839989,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05778084360383673,
+              "ordinary": 0.05649779579903321,
+              "respawn": 0.1142490464416179,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.059633605363160314,
+              "ordinary": 0.058406358021690995,
+              "respawn": 0.096201885169498,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05773044230352298,
+              "ordinary": 0.05670154115489725,
+              "respawn": 0.0915311205331698,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 34.265625,
+            "mean_food": 1.109375,
+            "horizon_survival": 0.015625
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05044431844623887,
+              "ordinary": 0.04817065290881082,
+              "respawn": 0.12267412523925304,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05270269907009606,
+              "ordinary": 0.051083429527705004,
+              "respawn": 0.12396835310609786,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.0528364086134161,
+              "ordinary": 0.05114530206820334,
+              "respawn": 0.10322629762603376,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.052485749641959956,
+              "ordinary": 0.051104583682012074,
+              "respawn": 0.09785876361545452,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 34.296875,
+            "mean_food": 1.296875,
+            "horizon_survival": 0.046875
+          }
+        }
+      },
+      "541": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.09163560929664527,
+              "ordinary": 0.09121430667037028,
+              "respawn": 0.10501955112814904,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.09400779813904592,
+              "ordinary": 0.09372321612221397,
+              "respawn": 0.10653253415456185,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.09318389157351703,
+              "ordinary": 0.09279059226207065,
+              "respawn": 0.10490302819954722,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.09183698849074062,
+              "ordinary": 0.09164753374204321,
+              "respawn": 0.09806081184670945,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 30.75,
+            "mean_food": 0.671875,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05914199172150347,
+              "ordinary": 0.05740629532274766,
+              "respawn": 0.11428159491717815,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05882718427017153,
+              "ordinary": 0.057499654520740184,
+              "respawn": 0.11725308148415534,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.06065494843869601,
+              "ordinary": 0.0593139869204426,
+              "respawn": 0.10061156871567543,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05878535337910762,
+              "ordinary": 0.057766908299669906,
+              "respawn": 0.09224253677385898,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 30.453125,
+            "mean_food": 0.84375,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.050832858618775845,
+              "ordinary": 0.04859241381895245,
+              "respawn": 0.12200730901956558,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.053127375458814186,
+              "ordinary": 0.051518646892004374,
+              "respawn": 0.12392911073434484,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05372666577710561,
+              "ordinary": 0.05204348388379908,
+              "respawn": 0.10388042399645749,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.053143925584095086,
+              "ordinary": 0.051807907159153205,
+              "respawn": 0.09703378706462373,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.40625,
+            "mean_food": 0.96875,
+            "horizon_survival": 0.015625
+          }
+        }
+      },
+      "809": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.09429477022968058,
+              "ordinary": 0.0939670762746543,
+              "respawn": 0.1047049517929554,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.09411215111049387,
+              "ordinary": 0.0938451502523321,
+              "respawn": 0.10586312294497595,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.09558163109068119,
+              "ordinary": 0.09517446558319978,
+              "respawn": 0.10771393865570986,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.09465552580877556,
+              "ordinary": 0.09447762989960376,
+              "respawn": 0.10049962695718796,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 30.640625,
+            "mean_food": 0.796875,
+            "horizon_survival": 0.015625
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05751394288472511,
+              "ordinary": 0.05582609929208175,
+              "respawn": 0.11113335813581944,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05812575910636042,
+              "ordinary": 0.056832860150466326,
+              "respawn": 0.11502752084653456,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.059418785807565655,
+              "ordinary": 0.05814584306789759,
+              "respawn": 0.09734865105045694,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05787259163366798,
+              "ordinary": 0.056873161384378965,
+              "respawn": 0.09070511428593112,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 33.046875,
+            "mean_food": 1.0625,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05062364759999127,
+              "ordinary": 0.04837552013670267,
+              "respawn": 0.12204216085374356,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05261743280311748,
+              "ordinary": 0.05097725528005171,
+              "respawn": 0.12480326774683627,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05288936475267292,
+              "ordinary": 0.051186227603925244,
+              "respawn": 0.10363772956836492,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05217094046400916,
+              "ordinary": 0.050764858131033354,
+              "respawn": 0.0983624881795369,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 30.65625,
+            "mean_food": 1.15625,
+            "horizon_survival": 0.03125
+          }
+        }
+      }
+    },
+    "random_fresh": {
+      "337": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.07791315450776892,
+              "ordinary": 0.07738956985223566,
+              "respawn": 0.09454639184474944,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.07870533024197357,
+              "ordinary": 0.07832842945922329,
+              "respawn": 0.09529310644982936,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.07935197839833563,
+              "ordinary": 0.07891637852418733,
+              "respawn": 0.0923315445731457,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.08052351361038745,
+              "ordinary": 0.08024023063340277,
+              "respawn": 0.0898297105815785,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.75,
+            "mean_food": 0.5,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05577055348578597,
+              "ordinary": 0.05393213338249822,
+              "respawn": 0.11417348332703113,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05623470293039645,
+              "ordinary": 0.0548406411501836,
+              "respawn": 0.1175887406199843,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.057716969918601535,
+              "ordinary": 0.05635574025858909,
+              "respawn": 0.0982775198631829,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.055971692675939266,
+              "ordinary": 0.054877894677268634,
+              "respawn": 0.09190431288020177,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.75,
+            "mean_food": 0.5,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.046976837109042435,
+              "ordinary": 0.0445434420497209,
+              "respawn": 0.12428093135356903,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.04905176777936049,
+              "ordinary": 0.047284762450050886,
+              "respawn": 0.12681941990996456,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.04915096734862345,
+              "ordinary": 0.04727910020828826,
+              "respawn": 0.10492697845500215,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.048258145389638685,
+              "ordinary": 0.046729639718754205,
+              "respawn": 0.0984714515199346,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.75,
+            "mean_food": 0.5,
+            "horizon_survival": 0.0
+          }
+        }
+      },
+      "541": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.07800375427632389,
+              "ordinary": 0.07747694966764392,
+              "respawn": 0.09473928308486938,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.07915876968218072,
+              "ordinary": 0.07878471869747439,
+              "respawn": 0.09562112345964044,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.07967783101958048,
+              "ordinary": 0.07922445903639135,
+              "respawn": 0.09318695259385538,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.08044910007720318,
+              "ordinary": 0.08015720260030819,
+              "respawn": 0.09003829404958023,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.265625,
+            "mean_food": 0.703125,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05569114598529268,
+              "ordinary": 0.05385345621848325,
+              "respawn": 0.11407087449729443,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05625750285810227,
+              "ordinary": 0.0548682883550435,
+              "respawn": 0.11739820708612819,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05765285239760942,
+              "ordinary": 0.056284761931813,
+              "respawn": 0.09841783372055095,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05604126859657299,
+              "ordinary": 0.05495428106718281,
+              "respawn": 0.09175015644224221,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.265625,
+            "mean_food": 0.703125,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.0470130225137666,
+              "ordinary": 0.044577589530402334,
+              "respawn": 0.12438185752928257,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.04901295281882767,
+              "ordinary": 0.04723745659546003,
+              "respawn": 0.12715429759451322,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.04919254723699851,
+              "ordinary": 0.04731495888894807,
+              "respawn": 0.10513903312665179,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.048129163279099885,
+              "ordinary": 0.04657805083799849,
+              "respawn": 0.09908512983594306,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.265625,
+            "mean_food": 0.703125,
+            "horizon_survival": 0.0
+          }
+        }
+      },
+      "809": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.07802895030727086,
+              "ordinary": 0.07748637765221948,
+              "respawn": 0.09526539841294289,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.07885957442704239,
+              "ordinary": 0.07847321570087015,
+              "respawn": 0.09586360407890854,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.07946480311875348,
+              "ordinary": 0.07899791317273504,
+              "respawn": 0.09337671932981427,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.07981253034540714,
+              "ordinary": 0.07951421425683693,
+              "respawn": 0.08961258366827138,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.640625,
+            "mean_food": 0.546875,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05577664041265962,
+              "ordinary": 0.05393187598320856,
+              "respawn": 0.11438111680746078,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05624625465770805,
+              "ordinary": 0.05484726040271784,
+              "respawn": 0.11781737544051893,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05772774189733809,
+              "ordinary": 0.05636296796603276,
+              "respawn": 0.09839390046698482,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05597342601913624,
+              "ordinary": 0.05488396234201185,
+              "respawn": 0.09176365838747871,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.640625,
+            "mean_food": 0.546875,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.04686323520721203,
+              "ordinary": 0.04441268768261094,
+              "respawn": 0.12471222896873951,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.04893938262554798,
+              "ordinary": 0.047172433595503264,
+              "respawn": 0.1267045569698234,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.048991486283739505,
+              "ordinary": 0.04710854473893927,
+              "respawn": 0.1050974813366967,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.04820348187732293,
+              "ordinary": 0.046665169931391734,
+              "respawn": 0.09873893629944275,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.640625,
+            "mean_food": 0.546875,
+            "horizon_survival": 0.0
+          }
+        }
+      }
+    },
+    "random_repeat": {
+      "337": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.07895430710505025,
+              "ordinary": 0.07845926964836107,
+              "respawn": 0.09468065702915192,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.08002335444052733,
+              "ordinary": 0.07968253054180544,
+              "respawn": 0.09502335130185871,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.08034047755700158,
+              "ordinary": 0.07993755279869827,
+              "respawn": 0.09234642355065596,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.08132438450866175,
+              "ordinary": 0.0810678744737832,
+              "respawn": 0.08975105714206853,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.75,
+            "mean_food": 0.5,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05593237125435735,
+              "ordinary": 0.0540944470605808,
+              "respawn": 0.11431954704225063,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.05653949958502835,
+              "ordinary": 0.05515238998885663,
+              "respawn": 0.11758756477917943,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05792428688266682,
+              "ordinary": 0.056550263157765346,
+              "respawn": 0.0988660614825505,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05627919451433172,
+              "ordinary": 0.055189787864380474,
+              "respawn": 0.09206755346934165,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.75,
+            "mean_food": 0.5,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.04706147141561701,
+              "ordinary": 0.044616939096317094,
+              "respawn": 0.1247193741351366,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.049130901137573346,
+              "ordinary": 0.04735422106482991,
+              "respawn": 0.12732434829512795,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.049274195351699746,
+              "ordinary": 0.047405617107848026,
+              "respawn": 0.10495220723428897,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.048357609158500736,
+              "ordinary": 0.046818467355157545,
+              "respawn": 0.09892032542535342,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.75,
+            "mean_food": 0.5,
+            "horizon_survival": 0.0
+          }
+        }
+      },
+      "541": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.07926725834295212,
+              "ordinary": 0.07878417759623405,
+              "respawn": 0.09461376750469208,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.08030219358897739,
+              "ordinary": 0.07994740126973085,
+              "respawn": 0.0959169544525199,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.08087165627603099,
+              "ordinary": 0.08044260756824463,
+              "respawn": 0.09365601739601086,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.08131946240519028,
+              "ordinary": 0.0810568304959708,
+              "respawn": 0.089947246199797,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.265625,
+            "mean_food": 0.703125,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05584122152049531,
+              "ordinary": 0.05401216344910225,
+              "respawn": 0.11394673833251,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.056372954382368334,
+              "ordinary": 0.05498633217229305,
+              "respawn": 0.11739956923238523,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.0578465539708759,
+              "ordinary": 0.05649790348291939,
+              "respawn": 0.09803228242028701,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05618679840324603,
+              "ordinary": 0.055104297619641016,
+              "respawn": 0.09174829108779095,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.265625,
+            "mean_food": 0.703125,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.04718251935125295,
+              "ordinary": 0.044743093729245016,
+              "respawn": 0.12467819251120091,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.04928596631228288,
+              "ordinary": 0.047516555990704035,
+              "respawn": 0.12715946453121993,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.04930346215988379,
+              "ordinary": 0.04742900594362626,
+              "respawn": 0.10515661994205382,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.04824918249983057,
+              "ordinary": 0.04671014606249782,
+              "respawn": 0.09880843736262114,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 29.265625,
+            "mean_food": 0.703125,
+            "horizon_survival": 0.0
+          }
+        }
+      },
+      "809": {
+        "64": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.07876606753598026,
+              "ordinary": 0.07825179169814282,
+              "respawn": 0.09510358235239982,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.07998268228857341,
+              "ordinary": 0.0795983461163166,
+              "respawn": 0.0968976973422936,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.08087983061977866,
+              "ordinary": 0.08044272080184142,
+              "respawn": 0.09390438857831453,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.08189554315777059,
+              "ordinary": 0.08161204248947918,
+              "respawn": 0.09120889155825307,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.640625,
+            "mean_food": 0.546875,
+            "horizon_survival": 0.0
+          }
+        },
+        "256": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.05574848724529602,
+              "ordinary": 0.05386894906724908,
+              "respawn": 0.11545765608549118,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.056291512118377796,
+              "ordinary": 0.05486459661665816,
+              "respawn": 0.11909147458417076,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.05778504352736036,
+              "ordinary": 0.05640086103543271,
+              "respawn": 0.09902951883194142,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.05588819554043312,
+              "ordinary": 0.0547749143835368,
+              "respawn": 0.09246086164508477,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.640625,
+            "mean_food": 0.546875,
+            "horizon_survival": 0.0
+          }
+        },
+        "1024": {
+          "prediction": {
+            "fresh_random": {
+              "all": 0.0468915369939964,
+              "ordinary": 0.04443225963516111,
+              "respawn": 0.1250178601294756,
+              "scheduled_world_change": null
+            },
+            "fresh_sweep": {
+              "all": 0.04907005966654765,
+              "ordinary": 0.04728706414057302,
+              "respawn": 0.12754145616685952,
+              "scheduled_world_change": null
+            },
+            "repeat_random": {
+              "all": 0.04905915001023686,
+              "ordinary": 0.04718144861702792,
+              "respawn": 0.10500900430562801,
+              "scheduled_world_change": null
+            },
+            "repeat_sweep": {
+              "all": 0.04819236161299045,
+              "ordinary": 0.046651013176976085,
+              "respawn": 0.09882756849858633,
+              "scheduled_world_change": null
+            }
+          },
+          "game": {
+            "mean_lifetime": 27.640625,
+            "mean_food": 0.546875,
+            "horizon_survival": 0.0
+          }
+        }
+      }
+    }
+  },
+  "prediction_check": {
+    "required_mean_relative_gain": 0.05,
+    "rows": [
+      {
+        "action_rule": "random",
+        "seed": 337,
+        "fresh": 0.05047802633499239,
+        "repeat": 0.04965797748850708,
+        "random_repeat": 0.04601127810208256,
+        "relative_gain_vs_fresh": 0.016245659864812002,
+        "relative_gain_vs_random": -0.07925664178103899
+      },
+      {
+        "action_rule": "random",
+        "seed": 541,
+        "fresh": 0.050871913699841655,
+        "repeat": 0.05031794885137576,
+        "random_repeat": 0.04608604983643563,
+        "relative_gain_vs_fresh": 0.010889404549127785,
+        "relative_gain_vs_random": -0.09182603043566538
+      },
+      {
+        "action_rule": "random",
+        "seed": 809,
+        "fresh": 0.05032766678515835,
+        "repeat": 0.049780873870313956,
+        "random_repeat": 0.04580685412609452,
+        "relative_gain_vs_fresh": 0.01086465854216078,
+        "relative_gain_vs_random": -0.0867560067163744
+      },
+      {
+        "action_rule": "sweep",
+        "seed": 337,
+        "fresh": 0.05129030476386278,
+        "repeat": 0.051094006604858536,
+        "random_repeat": 0.047086344209993726,
+        "relative_gain_vs_fresh": 0.003827198140233105,
+        "relative_gain_vs_random": -0.0851130505479806
+      },
+      {
+        "action_rule": "sweep",
+        "seed": 541,
+        "fresh": 0.05223967102420379,
+        "repeat": 0.05166327702557879,
+        "random_repeat": 0.04711335102660093,
+        "relative_gain_vs_fresh": 0.011033645260858314,
+        "relative_gain_vs_random": -0.09657402625444544
+      },
+      {
+        "action_rule": "sweep",
+        "seed": 809,
+        "fresh": 0.051897025661454446,
+        "repeat": 0.05087105670554253,
+        "random_repeat": 0.04696903865877455,
+        "relative_gain_vs_fresh": 0.019769320935745526,
+        "relative_gain_vs_random": -0.08307638730091446
+      }
+    ],
+    "means": {
+      "random": {
+        "relative_gain_vs_fresh": 0.01266657431870019,
+        "relative_gain_vs_random": -0.08594622631102626
+      },
+      "sweep": {
+        "relative_gain_vs_fresh": 0.011543388112278981,
+        "relative_gain_vs_random": -0.08825448803444684
+      }
+    },
+    "passed": false
+  },
+  "accounting": {
+    "training_transitions": 12582912,
+    "evaluation_transitions": 66337,
+    "optimizer_steps": 73728,
+    "elapsed_seconds": 452.67289416701533,
+    "predictor_optimizer_steps": 24576,
+    "probe_transitions": 32768
+  },
+  "audit": {
+    "status": "passed",
+    "source_revision": "fac0956eda9f25e7722a90ef0616e5b2506b95de",
+    "summary_sha256": "86f173e78480d63427893b952cfb272eec1aebe0ec4e6474d7a137f74c688749",
+    "protocol_sha256": "408217dc9846c93c122b99db6eb1d32df0f78efbee3a1800146f16085eba1b70",
+    "frozen_sha256": "dd681b539f94cfe1db79e4c6f02af82264e4e48d42fb3b765a3e237d3b91a353",
+    "auditor_sha256": "9230a80dd1c346ae8439f585c43bc43d9f49d803e3c5bee7562120bf3be232f7",
+    "training_transitions": 12582912,
+    "actor_optimizer_steps": 73728,
+    "predictor_optimizer_steps": 24576,
+    "actor_sample_presentations": 18874368,
+    "predictor_sample_presentations": 37748736,
+    "independently_replayed_probe_transitions": 32768,
+    "replayed_training_actions": 12582912,
+    "independent_scalar_training_prefix_actions": 196608,
+    "independently_replayed_evaluation_episodes": 2304,
+    "independently_replayed_evaluation_actions": 66337,
+    "verified_milestone_states": 36,
+    "verified_animation_decisions": 1284,
+    "distinct_initialized_training_worlds": 115747,
+    "distinct_stepped_training_worlds": 115651,
+    "distinct_probe_worlds": 696,
+    "distinct_game_maps": 64,
+    "reset_diagnostics": {
+      "curiosity_fresh": {
+        "337": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63264,
+                "mean_reward": 0.03639499576901493,
+                "mean_signals": [
+                  0.8057334387080662,
+                  0.0005806737724451312,
+                  0.0035619457892342916
+                ]
+              },
+              "respawn": {
+                "count": 2016,
+                "mean_reward": 0.03611084291263805,
+                "mean_signals": [
+                  0.9709664101025001,
+                  0.0005851339140188805,
+                  0.0024730985474196217
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.03225591396767413,
+                "mean_signals": [
+                  0.967227170127444,
+                  0.0005640887031859165,
+                  0.002404529572231695
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0033542545279487967,
+            "mean_heldout_error_reduction": 0.0018051793570824277
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 62795,
+                "mean_reward": 0.016186026737008793,
+                "mean_signals": [
+                  0.7803372142895925,
+                  0.0002617560315228118,
+                  0.00030561159325205784
+                ]
+              },
+              "respawn": {
+                "count": 2485,
+                "mean_reward": 0.018166721889925314,
+                "mean_signals": [
+                  0.8768304326059952,
+                  0.0003275554279603066,
+                  0.0002612482392841901
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.015682280058172182,
+                "mean_signals": [
+                  0.8638074513000902,
+                  0.00026139844112549326,
+                  0.0002023046326939948
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.000205764954444021,
+            "mean_heldout_error_reduction": -3.053285490750568e-05
+          }
+        },
+        "541": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63200,
+                "mean_reward": 0.03635146306948501,
+                "mean_signals": [
+                  0.8135539254197214,
+                  0.0006742037885424342,
+                  0.0035352575332162125
+                ]
+              },
+              "respawn": {
+                "count": 2080,
+                "mean_reward": 0.03643176348727698,
+                "mean_signals": [
+                  0.9775731532404629,
+                  0.0007087144715044885,
+                  0.002496798891717425
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.032091206216136925,
+                "mean_signals": [
+                  0.9741550766630098,
+                  0.0006582814175715157,
+                  0.0023456993367290124
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.003351245541125536,
+            "mean_heldout_error_reduction": 0.001478343598137144
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 62563,
+                "mean_reward": 0.01626164451201792,
+                "mean_signals": [
+                  0.8324298061830713,
+                  0.0003174603129157226,
+                  0.00016834288268511834
+                ]
+              },
+              "respawn": {
+                "count": 2717,
+                "mean_reward": 0.01693862154486839,
+                "mean_signals": [
+                  0.8600199312440582,
+                  0.00039568336068012094,
+                  8.247953825546267e-05
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.015336199910962023,
+                "mean_signals": [
+                  0.8578161117766285,
+                  0.0003313941704163881,
+                  7.956489571370184e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0001249522902071476,
+            "mean_heldout_error_reduction": 3.985505645687226e-05
+          }
+        },
+        "809": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63190,
+                "mean_reward": 0.03647491582532987,
+                "mean_signals": [
+                  0.8172344270964498,
+                  0.000618810291508997,
+                  0.003543426614554788
+                ]
+              },
+              "respawn": {
+                "count": 2090,
+                "mean_reward": 0.03630275210704316,
+                "mean_signals": [
+                  0.976766185070339,
+                  0.0006388204035542195,
+                  0.002535347484551263
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.03225986530924274,
+                "mean_signals": [
+                  0.964904697262682,
+                  0.0006050540538069527,
+                  0.0024474672973155975
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.003312070039100945,
+            "mean_heldout_error_reduction": 0.0008276900759180231
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 62582,
+                "mean_reward": 0.01603933203408138,
+                "mean_signals": [
+                  0.8454535916570085,
+                  0.00034148680727769706,
+                  0.00011508146985526708
+                ]
+              },
+              "respawn": {
+                "count": 2698,
+                "mean_reward": 0.017391038342987258,
+                "mean_signals": [
+                  0.8639380288889578,
+                  0.0004309793079438553,
+                  6.027072612845164e-05
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.015337057282522437,
+                "mean_signals": [
+                  0.8433199365390465,
+                  0.000349534870835555,
+                  6.439790013246238e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 9.262358071282506e-05,
+            "mean_heldout_error_reduction": 1.0566922355792485e-05
+          }
+        }
+      },
+      "curiosity_repeat": {
+        "337": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63111,
+                "mean_reward": 0.03531166403968237,
+                "mean_signals": [
+                  0.7303324926327762,
+                  0.000548576587178617,
+                  0.003357441956068891
+                ]
+              },
+              "respawn": {
+                "count": 2169,
+                "mean_reward": 0.027046170712132205,
+                "mean_signals": [
+                  0.4159204973815607,
+                  0.0005469134835598644,
+                  0.002546541283740982
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.03370031361373549,
+                "mean_signals": [
+                  0.9834449185291305,
+                  0.0005436069567110735,
+                  0.002293525743880309
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.003193507785908878,
+            "mean_heldout_error_reduction": 0.0015022192019387148
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63152,
+                "mean_reward": 0.015718518197841737,
+                "mean_signals": [
+                  0.6718795020453568,
+                  0.00031246067460815154,
+                  0.00017933834548163023
+                ]
+              },
+              "respawn": {
+                "count": 2128,
+                "mean_reward": 0.014923720861609178,
+                "mean_signals": [
+                  0.41294839701622277,
+                  0.0003987506420275906,
+                  0.00015095670845821724
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.016966103721642867,
+                "mean_signals": [
+                  0.8926130981999449,
+                  0.0003169306422705631,
+                  0.00011335169983794913
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.00013228971511125565,
+            "mean_heldout_error_reduction": 7.703304618189577e-06
+          }
+        },
+        "541": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63062,
+                "mean_reward": 0.03598395417569082,
+                "mean_signals": [
+                  0.7260889925025086,
+                  0.000652191154355683,
+                  0.003430079701132554
+                ]
+              },
+              "respawn": {
+                "count": 2218,
+                "mean_reward": 0.02802799480385252,
+                "mean_signals": [
+                  0.41281914498028827,
+                  0.0006704934749946904,
+                  0.0026216131372157254
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.0341845440416364,
+                "mean_signals": [
+                  0.9871581424376927,
+                  0.0006227958778310949,
+                  0.002438733776216395
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.003214313299395144,
+            "mean_heldout_error_reduction": 0.001095765562543723
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 62838,
+                "mean_reward": 0.015298576820728608,
+                "mean_signals": [
+                  0.6277019446929728,
+                  0.0002433073281469668,
+                  0.0002294313974163694
+                ]
+              },
+              "respawn": {
+                "count": 2442,
+                "mean_reward": 0.014182964083185628,
+                "mean_signals": [
+                  0.38925922794738915,
+                  0.00031457383614799314,
+                  0.00017311351402776344
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.01700357368827099,
+                "mean_signals": [
+                  0.8836929713288555,
+                  0.00026130458982720484,
+                  0.0001454011508030817
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.00016776478150859475,
+            "mean_heldout_error_reduction": -6.475486770796124e-06
+          }
+        },
+        "809": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63091,
+                "mean_reward": 0.03519269695660245,
+                "mean_signals": [
+                  0.6993915806473897,
+                  0.0006185931042935064,
+                  0.003268228702923695
+                ]
+              },
+              "respawn": {
+                "count": 2189,
+                "mean_reward": 0.027369922248654276,
+                "mean_signals": [
+                  0.4190643296741688,
+                  0.0006227658408622812,
+                  0.00233004610115886
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.03415940998092992,
+                "mean_signals": [
+                  0.9786805560579523,
+                  0.0006109873745856476,
+                  0.002326780348084867
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.003097246401011944,
+            "mean_heldout_error_reduction": 0.0015251128813057828
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63005,
+                "mean_reward": 0.015318619834597137,
+                "mean_signals": [
+                  0.6851410663398818,
+                  0.00028894160219890486,
+                  0.00015503800825616683
+                ]
+              },
+              "respawn": {
+                "count": 2275,
+                "mean_reward": 0.014692710311366961,
+                "mean_signals": [
+                  0.39609974999676695,
+                  0.00037219686402010496,
+                  0.00015106887689658572
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.016293175916871405,
+                "mean_signals": [
+                  0.8673202585778199,
+                  0.00029102298407224225,
+                  9.303287515649572e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.00011689128587022424,
+            "mean_heldout_error_reduction": -2.1823930183018092e-05
+          }
+        }
+      },
+      "random_fresh": {
+        "337": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63206,
+                "mean_reward": 0.034470986039148624,
+                "mean_signals": [
+                  0.8566023026077697,
+                  0.0005158565180491926,
+                  0.0027867143352669267
+                ]
+              },
+              "respawn": {
+                "count": 2074,
+                "mean_reward": 0.03535886632059427,
+                "mean_signals": [
+                  0.9729748297780896,
+                  0.0005187061717867332,
+                  0.0025711712340322273
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.03129256592546881,
+                "mean_signals": [
+                  0.9681208985275589,
+                  0.0004891896050338573,
+                  0.0024165826762327924
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0027504616882652044,
+            "mean_heldout_error_reduction": 0.0019534978297694274
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63225,
+                "mean_reward": 0.01423104348908425,
+                "mean_signals": [
+                  0.7458359297646888,
+                  0.0002459290243792259,
+                  4.819417386707957e-05
+                ]
+              },
+              "respawn": {
+                "count": 2055,
+                "mean_reward": 0.0172664294008578,
+                "mean_signals": [
+                  0.8724142712869494,
+                  0.0002805330347489433,
+                  7.52310801088955e-05
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.018075095992571732,
+                "mean_signals": [
+                  0.8612659910286311,
+                  0.0002516451887686344,
+                  0.0001245788880623877
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 2.7440430130809546e-05,
+            "mean_heldout_error_reduction": 1.7646257219894323e-06
+          }
+        },
+        "541": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63229,
+                "mean_reward": 0.03479248584991089,
+                "mean_signals": [
+                  0.8596206971589759,
+                  0.000612624058825579,
+                  0.0027822083627507023
+                ]
+              },
+              "respawn": {
+                "count": 2051,
+                "mean_reward": 0.03549631000035554,
+                "mean_signals": [
+                  0.9752058107741922,
+                  0.0006101238972009118,
+                  0.002508242484245691
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.031583253912685905,
+                "mean_signals": [
+                  0.980610495840665,
+                  0.0005736876958053472,
+                  0.002404672632110305
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0027374973287805915,
+            "mean_heldout_error_reduction": 0.0019212552579119802
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63243,
+                "mean_reward": 0.01408509108112905,
+                "mean_signals": [
+                  0.7395571849260886,
+                  0.0002524236600299018,
+                  4.677493641570875e-05
+                ]
+              },
+              "respawn": {
+                "count": 2037,
+                "mean_reward": 0.017116740334067616,
+                "mean_signals": [
+                  0.8701071081592513,
+                  0.0002918785470903032,
+                  6.908557807983695e-05
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.01742067572195083,
+                "mean_signals": [
+                  0.8618148495006608,
+                  0.00027981962055889653,
+                  8.309866825584322e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 2.742710057646036e-05,
+            "mean_heldout_error_reduction": 1.3201945876062382e-05
+          }
+        },
+        "809": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63207,
+                "mean_reward": 0.03471914743172256,
+                "mean_signals": [
+                  0.8557320000650032,
+                  0.0005728252178226642,
+                  0.0027566012128571564
+                ]
+              },
+              "respawn": {
+                "count": 2073,
+                "mean_reward": 0.035351954133452435,
+                "mean_signals": [
+                  0.9758674191770149,
+                  0.0005732854138184281,
+                  0.0024928889137158577
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.0310659845436021,
+                "mean_signals": [
+                  0.9655634728842415,
+                  0.0005284558474727419,
+                  0.0023719011223874986
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0027014397783204913,
+            "mean_heldout_error_reduction": 0.0018027852226320344
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63226,
+                "mean_reward": 0.014074245910311594,
+                "mean_signals": [
+                  0.7404859349930188,
+                  0.00021988291621564398,
+                  4.54649375736148e-05
+                ]
+              },
+              "respawn": {
+                "count": 2054,
+                "mean_reward": 0.017086850254972825,
+                "mean_signals": [
+                  0.8662846828352917,
+                  0.000251156349663852,
+                  7.034329871602625e-05
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.01592867583531188,
+                "mean_signals": [
+                  0.8383859147143085,
+                  0.00022167099187697659,
+                  6.848735938547179e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 2.7773668989539146e-05,
+            "mean_heldout_error_reduction": 5.705228204533341e-06
+          }
+        }
+      },
+      "random_repeat": {
+        "337": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63121,
+                "mean_reward": 0.03445389430158128,
+                "mean_signals": [
+                  0.7706410544331378,
+                  0.0005190697405288089,
+                  0.002868459984893625
+                ]
+              },
+              "respawn": {
+                "count": 2159,
+                "mean_reward": 0.027499349387090838,
+                "mean_signals": [
+                  0.41258196330501173,
+                  0.0005237583103062906,
+                  0.0027417841213425312
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.03355610643666296,
+                "mean_signals": [
+                  0.9762961218366399,
+                  0.0005081905131589792,
+                  0.0024736572813708335
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0028040752513334155,
+            "mean_heldout_error_reduction": 0.0018935118375035624
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63129,
+                "mean_reward": 0.014406263208882206,
+                "mean_signals": [
+                  0.677059440094577,
+                  0.00022334260926003534,
+                  5.835969957088094e-05
+                ]
+              },
+              "respawn": {
+                "count": 2151,
+                "mean_reward": 0.01383423436539588,
+                "mean_signals": [
+                  0.3839071439115849,
+                  0.0002598875560123668,
+                  8.624639606292943e-05
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.016946952894613787,
+                "mean_signals": [
+                  0.8815515306632733,
+                  0.0002328311380850323,
+                  6.856690015411004e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 3.520667087286711e-05,
+            "mean_heldout_error_reduction": 3.038345766981365e-06
+          }
+        },
+        "541": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63108,
+                "mean_reward": 0.03441245216010322,
+                "mean_signals": [
+                  0.7711669917097316,
+                  0.0005990012800410856,
+                  0.0027584839886618845
+                ]
+              },
+              "respawn": {
+                "count": 2172,
+                "mean_reward": 0.027950588059757406,
+                "mean_signals": [
+                  0.4143823144981435,
+                  0.0006195155866050968,
+                  0.0027121676039465223
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.033211374709935626,
+                "mean_signals": [
+                  0.9886514045647345,
+                  0.0005711339956349093,
+                  0.002320276980753988
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0027043932350352407,
+            "mean_heldout_error_reduction": 0.0018740113349243377
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63087,
+                "mean_reward": 0.01421960678267876,
+                "mean_signals": [
+                  0.6645108454560315,
+                  0.0002350000578465047,
+                  5.94594854648652e-05
+                ]
+              },
+              "respawn": {
+                "count": 2193,
+                "mean_reward": 0.013999551439471373,
+                "mean_signals": [
+                  0.37262151114102426,
+                  0.0002730419483601211,
+                  9.651883172760584e-05
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.0171411501160037,
+                "mean_signals": [
+                  0.8794503267417895,
+                  0.00025694811084520097,
+                  7.013914728304371e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 3.714289050549269e-05,
+            "mean_heldout_error_reduction": 1.1980660701738088e-05
+          }
+        },
+        "809": {
+          "first64": {
+            "groups": {
+              "ordinary": {
+                "count": 63132,
+                "mean_reward": 0.03437558705998004,
+                "mean_signals": [
+                  0.7681449711778798,
+                  0.0005685504077932227,
+                  0.0027183421009359973
+                ]
+              },
+              "respawn": {
+                "count": 2148,
+                "mean_reward": 0.027475005026136697,
+                "mean_signals": [
+                  0.4135509058278144,
+                  0.0005673610995816513,
+                  0.0025776928044453236
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.0330584177027049,
+                "mean_signals": [
+                  0.9780133020831272,
+                  0.0005305323067261725,
+                  0.002322760788956657
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 0.0026734971906989813,
+            "mean_heldout_error_reduction": 0.0017612234441912733
+          },
+          "last64": {
+            "groups": {
+              "ordinary": {
+                "count": 63094,
+                "mean_reward": 0.014709555019185167,
+                "mean_signals": [
+                  0.6623744540866879,
+                  0.00022683205356161743,
+                  6.886506087714137e-05
+                ]
+              },
+              "respawn": {
+                "count": 2186,
+                "mean_reward": 0.014816242289556445,
+                "mean_signals": [
+                  0.37820871591683874,
+                  0.00026794639050743317,
+                  0.00011265388100296395
+                ]
+              },
+              "scheduled_world_change": {
+                "count": 256,
+                "mean_reward": 0.01720618271156127,
+                "mean_signals": [
+                  0.866967464753543,
+                  0.00022615502735590098,
+                  8.52770172059536e-05
+                ]
+              }
+            },
+            "mean_in_sample_error_reduction": 4.118605284020305e-05,
+            "mean_heldout_error_reduction": 1.3200973853599862e-05
+          }
+        }
+      }
+    },
+    "training_trace_sha256": {
+      "curiosity_fresh/seed-337": "36ca54f806f4617f93092f42f790eb068d8adfc53d07145952ad22572144b272",
+      "curiosity_fresh/seed-541": "d86c3fe723322aa5f957d065b99840e6bb604ff89e17c683c6f8917f0a202075",
+      "curiosity_fresh/seed-809": "1f77ae2d4eb7215dd9f9e82149dc33e6664769f1708f0d7b4074d834a872a1da",
+      "curiosity_repeat/seed-337": "de304db5ee889630c744368343dc2351ba06e2e214e3c46285a679e766d43b3a",
+      "curiosity_repeat/seed-541": "fa044678ae5a4153cf1b5148552c17c6baf662325e3020c74f4e5e608d549d71",
+      "curiosity_repeat/seed-809": "22b17680375433cf84cae7a478051d9e1d46c5b1e337bf397761a0067f690ba7",
+      "random_fresh/seed-337": "30dd468c1c3621756ccd975d5c1448d65ee79bc586bf2049561e2d2ddb8d6453",
+      "random_fresh/seed-541": "0cf197b3d21dd5f50f2e821a52190ba306536e05dd7357d2d8d2e45a102e34d9",
+      "random_fresh/seed-809": "3783d10ac7858b7a1521ffa47510a2742166fe402173e7cd06babe54b0a3048f",
+      "random_repeat/seed-337": "5fca7c6f3e098628636d24178c3b593cdbda16589b894ee3975aeb5c56a0f269",
+      "random_repeat/seed-541": "f88e25332cdead555eb2dc65ebf74e34792bf53a4f32ec34b3e29a956dc56012",
+      "random_repeat/seed-809": "0343c0e7a85079515e58896ecac222e535292981c2958122c67fe1471495d6ca"
+    },
+    "scope": "Independent scalar replay of all probe/evaluation transitions and first 512 training ticks per lane; full training action replay with recorded implementation; checkpoint/consumption/selection isolation checks. No gradient replay."
+  },
+  "learners": [
+    {
+      "path": "curiosity_fresh/seed-337",
+      "learning_receipt_sha256": "23e3b6cf734700472ca611d2fd72bb5874dacc55eeedd2571acafd8a5cde8d3d",
+      "seed": 337,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": false,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "initial_predictors_sha256": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "policy_before": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "policy_after": "81f19d09154c8b749623715e7c5156b297fffcb5ec05d71f1a24b74be5d8df7e",
+      "predictors_before": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "predictors_after": "fa3418f4daf7e404915a596431858fef1da4e90dd3f83d3fb0e4c453fa8e52f5",
+      "weights_sha256": "fd0253e707632b8faeef113e0ade9de204e3b8bd53b34081f99935aac9857cf1",
+      "state_sha256": "93fbf75622c2204d21769846a8335df2897f3b092f2a26057d11a881fcc52491",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 575922,
+      "world_seed_role": "train-337",
+      "worlds_initialized": 38632,
+      "world_seeds_actually_stepped": 38600,
+      "world_initialization_presentations": 38632,
+      "reset_mode": "fresh",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "d4b4dee60f74e84b0bd44fdd40a41bcaabaaabef65edfaa78b702d84ad817ae8",
+          "state_sha256": "b3b02bf0fb119d32614d36c074a37db61075210670168bad16e92f8a8ea855a7"
+        },
+        "256": {
+          "weights_sha256": "d8fbfd0757cea989fcc82efbc4ea511d9b138e2727220c5129189675e4de99ac",
+          "state_sha256": "618ac952d10bf00bfe36a59d4ab393d09d51a1c9de64f13a05d1554b48202c54"
+        },
+        "1024": {
+          "weights_sha256": "fd0253e707632b8faeef113e0ade9de204e3b8bd53b34081f99935aac9857cf1",
+          "state_sha256": "93fbf75622c2204d21769846a8335df2897f3b092f2a26057d11a881fcc52491"
+        }
+      }
+    },
+    {
+      "path": "curiosity_fresh/seed-541",
+      "learning_receipt_sha256": "ab00f6260a1147d8d27bcb203764ab7603e11a92cecb695aab1ee2e3303f0dcc",
+      "seed": 541,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": false,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "initial_predictors_sha256": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "policy_before": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "policy_after": "7a19e4b67cb648a8913924db931b1f9dfa38b0bbad8f057099058624ecce0681",
+      "predictors_before": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "predictors_after": "aea847a35c2dd92f6b74e37dccfcdbdacbc432fba832cf84d4073170b83bfea0",
+      "weights_sha256": "f15188d478f2439e0218c74bd1549a230e3fcb741d5a4374cb2afd945ffbbc9a",
+      "state_sha256": "738aaf10361d6886b6acac9789304f91f3fb6b9eb6e9cbbfc223611d9e78c2d0",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 600383,
+      "world_seed_role": "train-541",
+      "worlds_initialized": 38795,
+      "world_seeds_actually_stepped": 38763,
+      "world_initialization_presentations": 38795,
+      "reset_mode": "fresh",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "ed4d1d6daafd154c993ddfae6f850125ef371c92383788590e9b03fa76d11cb5",
+          "state_sha256": "31aad3aa5ce3da34be2c1b4e4567b730d0ebf4272a913c2a80d144687e1d99fb"
+        },
+        "256": {
+          "weights_sha256": "306d62dc028b1127029f858ed219a5a4d605d7bca08d62e261cac958443bf5f2",
+          "state_sha256": "fd3a715463dca4583bd6e72f489d1f97036e1ae0ec86a39703c264d8500f93f9"
+        },
+        "1024": {
+          "weights_sha256": "f15188d478f2439e0218c74bd1549a230e3fcb741d5a4374cb2afd945ffbbc9a",
+          "state_sha256": "738aaf10361d6886b6acac9789304f91f3fb6b9eb6e9cbbfc223611d9e78c2d0"
+        }
+      }
+    },
+    {
+      "path": "curiosity_fresh/seed-809",
+      "learning_receipt_sha256": "1ba2e5556bc540da3613beb407a4dcc77d6260ef6cf9b3117a42210c479f7a4f",
+      "seed": 809,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": false,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "initial_predictors_sha256": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "policy_before": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "policy_after": "6a949c31d3aeb2274480613269f953b444aa6f84b296f27d4ffbb81b8e4eb458",
+      "predictors_before": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "predictors_after": "489f0a161c4939f0c86383c5f9e19a9fc8fc4d5576210c4227d08b34b4d06344",
+      "weights_sha256": "46706b3e284426a2e0da3f46b0f6c8cb8092b47278fcdc721ce052f6b0e1da4c",
+      "state_sha256": "426dbbea692960aba418635796d78fcc362432b769f15faa214931869c8e226a",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 585480,
+      "world_seed_role": "train-809",
+      "worlds_initialized": 38320,
+      "world_seeds_actually_stepped": 38288,
+      "world_initialization_presentations": 38320,
+      "reset_mode": "fresh",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "661ce7f8fca4aa73fe283a36cbe4327764ba970c7e15cdf2c139e32517bbc984",
+          "state_sha256": "df16c87214490be0c02590abaab2cb33673cb4dd1db6929cb4da986e19901e7e"
+        },
+        "256": {
+          "weights_sha256": "7c3a2875cb0ac9af3e96bf5ac0a68afadb0b1302a30cc18759f6c70d207a6fea",
+          "state_sha256": "540d02c212805b0c3c16c7f9a37a444ece7776617f2c8fd555a14f496e7ecae7"
+        },
+        "1024": {
+          "weights_sha256": "46706b3e284426a2e0da3f46b0f6c8cb8092b47278fcdc721ce052f6b0e1da4c",
+          "state_sha256": "426dbbea692960aba418635796d78fcc362432b769f15faa214931869c8e226a"
+        }
+      }
+    },
+    {
+      "path": "curiosity_repeat/seed-337",
+      "learning_receipt_sha256": "1a452a84aef752214ad0c7297b997a6812d92b298e9d22800473f3d3a5a38081",
+      "seed": 337,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": false,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "initial_predictors_sha256": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "policy_before": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "policy_after": "94d47f77ef464a8f8ebfee5abfe4ddb2c0d695f7d1a44787bdb7e2e71030052b",
+      "predictors_before": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "predictors_after": "ac1a626d701ad96fd2f6c664bda168b793ff57be1c29ea3b2f2f0ccb3f1154d3",
+      "weights_sha256": "4dc5c630cb033251a6deb8347b39190d9fe2736154fef8184f8429a9f53d0967",
+      "state_sha256": "8bd49481a0b5e11d0870f40c1d74729b10e709ab139d5cbdfb01e84416ff5a69",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 384737,
+      "world_seed_role": "train-337",
+      "worlds_initialized": 4128,
+      "world_seeds_actually_stepped": 4096,
+      "world_initialization_presentations": 36694,
+      "reset_mode": "repeat",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "59c93a8bb741b19b5e346c46bf95c0088dd4956f3472581731d1442946421250",
+          "state_sha256": "5bc973215693a0273c84712324dbc06b71d1a3dbc91314c04209ef0e74bab499"
+        },
+        "256": {
+          "weights_sha256": "eb8302f5ff8b4300b0cbe0c163d6530fb9daf339c02d9388964a2dd35c040d0e",
+          "state_sha256": "7237600be87569826a71ed70b304f1df8793849b530a3a6fbc7354c60f9834f1"
+        },
+        "1024": {
+          "weights_sha256": "4dc5c630cb033251a6deb8347b39190d9fe2736154fef8184f8429a9f53d0967",
+          "state_sha256": "8bd49481a0b5e11d0870f40c1d74729b10e709ab139d5cbdfb01e84416ff5a69"
+        }
+      }
+    },
+    {
+      "path": "curiosity_repeat/seed-541",
+      "learning_receipt_sha256": "fc364f62dfd4ba8d03e39595fe498fd4b58df1967f11bbbfe1f10b0eac4048b4",
+      "seed": 541,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": false,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "initial_predictors_sha256": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "policy_before": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "policy_after": "f3b3dee25ac0f48dd66581d566fc6ea15249433c0f7d355d53e55364fc8246ec",
+      "predictors_before": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "predictors_after": "be1ddf0feab9aee353177955938b83beba465feb7058cb8883a9633399940bbd",
+      "weights_sha256": "010f4a10bda6f380812569fd48a6ddf717c3a226f29d30838e33a3366f02f71f",
+      "state_sha256": "dd528e28037dd09a9bb1c7f107be505eeadd21e3057ca9792a3fd0b07d46d071",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 372394,
+      "world_seed_role": "train-541",
+      "worlds_initialized": 4128,
+      "world_seeds_actually_stepped": 4096,
+      "world_initialization_presentations": 38038,
+      "reset_mode": "repeat",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "63b8d69b741149feb29f4f1887db2c0fd3cf163892750dfce4929c103345ebd6",
+          "state_sha256": "9b92f2b90a807ab2fc5f8a0212f32e27d2e3839d36c45703d10467bba47162c6"
+        },
+        "256": {
+          "weights_sha256": "e51cf3563e88bc6a92433a3a02c11190c3a2d756b1660726ef14e61c1e347645",
+          "state_sha256": "e4605ddabac718246dc2fd3005e640d887e95c6685da5fde3b25fcb4deb60447"
+        },
+        "1024": {
+          "weights_sha256": "010f4a10bda6f380812569fd48a6ddf717c3a226f29d30838e33a3366f02f71f",
+          "state_sha256": "dd528e28037dd09a9bb1c7f107be505eeadd21e3057ca9792a3fd0b07d46d071"
+        }
+      }
+    },
+    {
+      "path": "curiosity_repeat/seed-809",
+      "learning_receipt_sha256": "46800a507c3cb2c55115b2ed78aa5e7a0311204c5a4e7707bb2e5f785d82bb46",
+      "seed": 809,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": false,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "initial_predictors_sha256": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "policy_before": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "policy_after": "9a8689badcee28529f11d5635f41773ba365aa53d05971fd660c2f3d9dc562e1",
+      "predictors_before": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "predictors_after": "83f038cee5d95e11ef0406237adb4ec7e41c4471f8d0dc7b99312a2547c243ea",
+      "weights_sha256": "76fea441bf619a5f92c9479e213d34d264701523662adc622d7bf16d521faaa7",
+      "state_sha256": "954fd0332a351812b9051e979932d9aea69de7ec91e969ee729b4f346e07643d",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 378567,
+      "world_seed_role": "train-809",
+      "worlds_initialized": 4128,
+      "world_seeds_actually_stepped": 4096,
+      "world_initialization_presentations": 35925,
+      "reset_mode": "repeat",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "ac7e3eb49dfaf0561a635c9affb986d583c9e60ca86da43c0eb494a269c8af18",
+          "state_sha256": "858b6405af036ead084d1d1e09cb256d99cf39a92268c84123cfa8f77e4fed68"
+        },
+        "256": {
+          "weights_sha256": "1b384efdea96162dc8def6bca25ba6d239514cfa87df38cbd8a460e8b62caa55",
+          "state_sha256": "ae7b01b70d2addcb5573a75b4716554033a18a812a783ca2dbe07aee4835421c"
+        },
+        "1024": {
+          "weights_sha256": "76fea441bf619a5f92c9479e213d34d264701523662adc622d7bf16d521faaa7",
+          "state_sha256": "954fd0332a351812b9051e979932d9aea69de7ec91e969ee729b4f346e07643d"
+        }
+      }
+    },
+    {
+      "path": "random_fresh/seed-337",
+      "learning_receipt_sha256": "116a94745a9e85b052359723fd0b1141a3753a8351db35eb9a23979bdb1b85a2",
+      "seed": 337,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": true,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "initial_predictors_sha256": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "policy_before": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "policy_after": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "predictors_before": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "predictors_after": "147a1f1462974cde5b2d5fa6497e3df31cafb617ff1ebedcb6fe621444ce1d5b",
+      "weights_sha256": "fce63ec2f0e48200fbae6e950787c4c23d4c3aa640fa039f02583adcf5e27f05",
+      "state_sha256": "a731ac79de37caaf4916be345a81c61642d71976d8dc87aeee94f325c69ff4f7",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 564524,
+      "world_seed_role": "train-337",
+      "worlds_initialized": 37202,
+      "world_seeds_actually_stepped": 37170,
+      "world_initialization_presentations": 37202,
+      "reset_mode": "fresh",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "a9fbb0dcd5265e3aba107adffbc5c4ea55a4cf3380903e96970f176b031ad61b",
+          "state_sha256": "1dfa1fb7c81e147a801b8b832c9d7db65955714655fd85f466c001cb537bebce"
+        },
+        "256": {
+          "weights_sha256": "344144d21433ea587e3e3c6d1176fbdd5e80440a3152443db0823604d9ccfef5",
+          "state_sha256": "40efe6125e03e68a91af9da4ac840a4fbe23841aa694634c5a75777e52f0bfbb"
+        },
+        "1024": {
+          "weights_sha256": "fce63ec2f0e48200fbae6e950787c4c23d4c3aa640fa039f02583adcf5e27f05",
+          "state_sha256": "a731ac79de37caaf4916be345a81c61642d71976d8dc87aeee94f325c69ff4f7"
+        }
+      }
+    },
+    {
+      "path": "random_fresh/seed-541",
+      "learning_receipt_sha256": "34200ca32c71badef59265a67730fff0139652b7a84783d4243ac2330a7ca679",
+      "seed": 541,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": true,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "initial_predictors_sha256": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "policy_before": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "policy_after": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "predictors_before": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "predictors_after": "a53798824d8bc9c5220c92bd43c0aa40fdeb020c2686bc7df17c901b1146900b",
+      "weights_sha256": "6b71b8503f8c91fcf80932f6725753c15bcfbf6ae74d117eeeb0d84478b05f28",
+      "state_sha256": "5c1b3a67cdc3692b48a288e1008f5f27ffb679201a6211014cd22ee29110ba59",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 564480,
+      "world_seed_role": "train-541",
+      "worlds_initialized": 37002,
+      "world_seeds_actually_stepped": 36970,
+      "world_initialization_presentations": 37002,
+      "reset_mode": "fresh",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "dac2600b5134fb4576153c63909a3c7db28c101651d5ffd20f61b12ea6248f7a",
+          "state_sha256": "d46450a3d2db5e8f8f9917fce5e57ccf8384b84dc624d276bd9e62c7138e6219"
+        },
+        "256": {
+          "weights_sha256": "4c31d6b780589b88c864d384961a3ec62a5f76419c59d79a604bcb4cba6633a9",
+          "state_sha256": "faf63d9f2924c374deaa7172dde444c318cfe8bf31674189e42d033aafa9654a"
+        },
+        "1024": {
+          "weights_sha256": "6b71b8503f8c91fcf80932f6725753c15bcfbf6ae74d117eeeb0d84478b05f28",
+          "state_sha256": "5c1b3a67cdc3692b48a288e1008f5f27ffb679201a6211014cd22ee29110ba59"
+        }
+      }
+    },
+    {
+      "path": "random_fresh/seed-809",
+      "learning_receipt_sha256": "e8e1f1f48689e5e7faf1451e5d54a467346aa9986c209aa9f03ef83ef02ec2a2",
+      "seed": 809,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": true,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "initial_predictors_sha256": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "policy_before": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "policy_after": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "predictors_before": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "predictors_after": "160331661ee75624d8415272939db4b60cd58cbb3ae9a52928fff46e7dfb7b06",
+      "weights_sha256": "3c331d10fcf0d9e9458c2526189bb3c79853704dc9ace5b147851ab87c2fedd4",
+      "state_sha256": "70cb44d02d0b4a96440ae2a1a04c51fe0cc466a49d08c8def73b57cf80dad176",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 564017,
+      "world_seed_role": "train-809",
+      "worlds_initialized": 36993,
+      "world_seeds_actually_stepped": 36961,
+      "world_initialization_presentations": 36993,
+      "reset_mode": "fresh",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "28e6b159feafb35bc82be5cf1ee67ef31f4f8bc5fd84b47f595649adec917566",
+          "state_sha256": "73043313332e335b5809bfedcecc9c2edbc7677a66cb99d2a0f2789d31a7eb57"
+        },
+        "256": {
+          "weights_sha256": "14b825d182734ed4bc0987d410e4a6bd922179b1578e2f5bad02c0a98ce3985d",
+          "state_sha256": "ccc5246717fb8bdd17dc7f898479500c889c5be3731216c18a727775125d64d6"
+        },
+        "1024": {
+          "weights_sha256": "3c331d10fcf0d9e9458c2526189bb3c79853704dc9ace5b147851ab87c2fedd4",
+          "state_sha256": "70cb44d02d0b4a96440ae2a1a04c51fe0cc466a49d08c8def73b57cf80dad176"
+        }
+      }
+    },
+    {
+      "path": "random_repeat/seed-337",
+      "learning_receipt_sha256": "9cc852ff00cda70b537925d9264e98a06e34871c055a8268bfc7e005ee52f796",
+      "seed": 337,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": true,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "initial_predictors_sha256": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "policy_before": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "policy_after": "b53fa7311db55d30be0bc9c6ac5cfe47ddeda76c5d958c0eb8269e87b03228d3",
+      "predictors_before": "a2e5476833b069396200df2be9dbb52d9f2ed1355bc66c74963595add68eb5e9",
+      "predictors_after": "48add8a91ef2339cd4567f4c169b8b0b68b632f9c03ff4cea59dad8dddb768f0",
+      "weights_sha256": "4bb070f954295f712e6da8a52f6d91c6adf004f89f0fd436347d23c286981f8e",
+      "state_sha256": "8f81732e2fa1bdf97befd80a36ac1d290fcff7b04dfb46c3f00cd62d3bd44a62",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 410438,
+      "world_seed_role": "train-337",
+      "worlds_initialized": 4128,
+      "world_seeds_actually_stepped": 4096,
+      "world_initialization_presentations": 38676,
+      "reset_mode": "repeat",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "c58b791ea0f868cf41667503a174bb09332bef69a03a3446a123c1a767e1a2c9",
+          "state_sha256": "3c6a26c60c032d27c94ecf8ffdaf352171638cecf3d9e94f972b6076aed4a2e8"
+        },
+        "256": {
+          "weights_sha256": "187f864ea1b47687ceda1912cad30a93a913439465e69d16a4799d0e52f611ee",
+          "state_sha256": "ce51330afd1b2a0099d5ef73b639eca27f9fe60557c2edc95cf944dde57c3537"
+        },
+        "1024": {
+          "weights_sha256": "4bb070f954295f712e6da8a52f6d91c6adf004f89f0fd436347d23c286981f8e",
+          "state_sha256": "8f81732e2fa1bdf97befd80a36ac1d290fcff7b04dfb46c3f00cd62d3bd44a62"
+        }
+      }
+    },
+    {
+      "path": "random_repeat/seed-541",
+      "learning_receipt_sha256": "e379759ecfb2eba39ba446a455bfde3949fc2544878256db66c7b5e19e5e3a3b",
+      "seed": 541,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": true,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "initial_predictors_sha256": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "policy_before": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "policy_after": "41859d0089a43c00311deb0e889de955113cdb914d7b35febb4180dd05dee78b",
+      "predictors_before": "75fc1cc0b3a96934515b329b22141cf142a93f8916b352c8a364fef37bc97fbf",
+      "predictors_after": "2a84df05c80769f2d8ad540a37b7b21197211efd5c53ca98cce724f51ed360e3",
+      "weights_sha256": "95125e231dd3dbf8a68580fd1611c6a4fb50f147b83dd2877f5c33e247fb6a53",
+      "state_sha256": "8b12f84814d29200201c676c2a11f7f896b9f5968d08b01eaefe84301036e2ba",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 404955,
+      "world_seed_role": "train-541",
+      "worlds_initialized": 4128,
+      "world_seeds_actually_stepped": 4096,
+      "world_initialization_presentations": 38995,
+      "reset_mode": "repeat",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "bc962c33eafd6328031af629eaaba0ff34544be661950dede0c04943d34c4225",
+          "state_sha256": "22b5a44de3ab790f0633bccc797a0cd30ff0be7b286de0dfff1055e209d14c93"
+        },
+        "256": {
+          "weights_sha256": "8e9f48bf1109a2b8ab039c0aaf45b03c5a368ab73b34305b73ed79d46e9bcc2e",
+          "state_sha256": "e402f44243409b3e9468dc2da346487527536f4ed394d838b7ab4f9646f5a3c9"
+        },
+        "1024": {
+          "weights_sha256": "95125e231dd3dbf8a68580fd1611c6a4fb50f147b83dd2877f5c33e247fb6a53",
+          "state_sha256": "8b12f84814d29200201c676c2a11f7f896b9f5968d08b01eaefe84301036e2ba"
+        }
+      }
+    },
+    {
+      "path": "random_repeat/seed-809",
+      "learning_receipt_sha256": "cf7a57f4d8ea797cf2866e3a28830ade9baccf5364d141501af0551e73fa2731",
+      "seed": 809,
+      "genome": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "random_actions": true,
+      "updates": 1024,
+      "training_transitions": 1048576,
+      "initial_policy_sha256": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "initial_predictors_sha256": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "policy_before": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "policy_after": "8e345a9794038f37fcdf780afde032790c7a039155fa1f6e879d2f757250399f",
+      "predictors_before": "7d94abf6bd478a6d0c361567765318376ebf0a824eed5d647e24cacb5f5d8a00",
+      "predictors_after": "e9aa301c76d7f24bb77faadd87b5173976e5c78789190eb33a578d7fc85d70af",
+      "weights_sha256": "8b44b5437d1ae17ed31f3b77e0764ad9e1b74dda6bedd23e2ba8f79828f08a6b",
+      "state_sha256": "78ee8f858d287d475ab25c35c985044dabaf899a927f67f2bb55df8c11787583",
+      "policy_parameters": 9478,
+      "predictor_parameters": 30564,
+      "distinct_observation_keys": 404743,
+      "world_seed_role": "train-809",
+      "worlds_initialized": 4128,
+      "world_seeds_actually_stepped": 4096,
+      "world_initialization_presentations": 38735,
+      "reset_mode": "repeat",
+      "world_period": 256,
+      "milestones": {
+        "64": {
+          "weights_sha256": "b99b735946969380644e099871c9f5c60dc04a7fb77ca24c16a51972d3a3c272",
+          "state_sha256": "9d9eb0f8909d4c74e2b0aa298e3cc428ccde345dfbfb2be5c734144649e76baa"
+        },
+        "256": {
+          "weights_sha256": "6f79cb162aa6e24602d16ca364f4aca6919854abe43870581bba8f3b60060a51",
+          "state_sha256": "881b3f1d30792df53c09e353bb4a39b892cd30eb206b79a1435ef7d74e3b6786"
+        },
+        "1024": {
+          "weights_sha256": "8b44b5437d1ae17ed31f3b77e0764ad9e1b74dda6bedd23e2ba8f79828f08a6b",
+          "state_sha256": "78ee8f858d287d475ab25c35c985044dabaf899a927f67f2bb55df8c11787583"
+        }
+      }
+    }
+  ],
+  "resources": {
+    "peak_resident_bytes": 591577088,
+    "added_swap_bytes": 0,
+    "paid_compute_usd": 0
+  },
+  "receipts": {
+    "audit.json": "aa6641c7549f96707de01d36582503ca9d32a24e808cc038bf49710c8dbb58db",
+    "curiosity_fresh-337-1024-game.json": "b7e850c9200b175c7f62a8e140aca7a6829bcb9aca74e191542664a9ffddeff7",
+    "curiosity_fresh-337-256-game.json": "cd9e02ec52dc31d9ead1e5b50bfd177b50df01e2efd7c15d6f31205e2be66fdf",
+    "curiosity_fresh-337-64-game.json": "9c0bcebd438f66ca1a4c80684396b061a5ccd81034420bf3e72b2b0eaa2998e2",
+    "curiosity_fresh-541-1024-game.json": "abc0a71463d045f9dbaad3c26222da5eeae1e648ed38cfe2ee8f93e32ab4cf45",
+    "curiosity_fresh-541-256-game.json": "eb6be69a0f056ba2b12718bae3c4df86918d63535d5c4efee95b265e64073602",
+    "curiosity_fresh-541-64-game.json": "717c9a0de735903ddab16d51ff9a348ecbfb9989f449911e1753f8f37f447bc4",
+    "curiosity_fresh-809-1024-game.json": "6fad32d31f505b7c3e233e5bbe88e67eb42adf45ca337528ec286a0d5bbc284c",
+    "curiosity_fresh-809-256-game.json": "98df154711058c3fd6239827bd65b6700628243a4bc73dc1b59a27af36efe3a8",
+    "curiosity_fresh-809-64-game.json": "15cc2b28bc73c3ab7722bf7e55c55225cbe19ef165089cd30cf4a8c94d360f76",
+    "curiosity_repeat-337-1024-game.json": "e58ba9d7150737b3e4c6dcdde128fb5b6b690406de59d5081eee879ddc13b249",
+    "curiosity_repeat-337-256-game.json": "779870bb84448e647f84e3b7fdad6030cd405dc71024c69b6db0dde1844e8f82",
+    "curiosity_repeat-337-64-game.json": "96b91dfca15c21d90c25b5a19a2efe450674d9c43a73044a864338a289f211c6",
+    "curiosity_repeat-541-1024-game.json": "118c3b13d72d12aeb780a21294948cb0ea97405acde9bb4af98485c282ab5b37",
+    "curiosity_repeat-541-256-game.json": "2a17318edb9ceda24519a839c8a2da029aa54a9dd24eae7331679aaf8e1ffd5f",
+    "curiosity_repeat-541-64-game.json": "09f4abc4d5e676013f82df1e00d36950f0b5dc35b656f00c925988a403fc507c",
+    "curiosity_repeat-809-1024-game.json": "085cac6316e69ba3cc50cf7706958b44c4eea9f6549ce8329a83686897a3b49c",
+    "curiosity_repeat-809-256-game.json": "879f668f578670a5c4a5a3caa919ca474e24a509e0681e80045f8599eb52a05e",
+    "curiosity_repeat-809-64-game.json": "fb279240bf5f2725f2c17cd5b1ddc4e077fc7665752d1696629aaf6b4787bf54",
+    "final-fresh_random.json": "408d2c5a5a7e9a74a18c6b53bd64d7c524e61f8ab831dbc9b11cf3933412ccbe",
+    "final-fresh_sweep.json": "f16ea8349645c978c0dd509eb8c5040aeaf8761dd155284b40a395f43cf48df3",
+    "final-repeat_random.json": "27372073fe64b4f3cbe71b9d68c3b265adab4d68683d40d806cfe320fd1484f2",
+    "final-repeat_sweep.json": "1e1256a4ed840fd0c7629f234fdb5a4aee0c78888b23a45affea91b047fec93f",
+    "frozen.json": "dd681b539f94cfe1db79e4c6f02af82264e4e48d42fb3b765a3e237d3b91a353",
+    "monitor-fresh-random.json": "7083c7a0d05499f5497e5c4071c6db0a3a12ed2b1e495e061ee06d561a06e286",
+    "monitor-fresh-sweep.json": "5ffb782da0e0b9c0660acae90400d405640e4bb38570b697e3d1fc38c9e198f3",
+    "monitor-repeat-random.json": "112a49fcdd7275456892cb3899f628461ecf326515f71aabf8025249046e3a50",
+    "monitor-repeat-sweep.json": "8dd7168c841f7468ac0663907c72814bc476095fba1da55099948504c56b7cb8",
+    "progress.json": "d50ded508b91735e9c3d703ad9b9a7dac057a16dbb1d5550e61acbcc39a7b3a3",
+    "protocol.json": "408217dc9846c93c122b99db6eb1d32df0f78efbee3a1800146f16085eba1b70",
+    "random_fresh-337-1024-game.json": "392487b358a1f83fd8ebc954c579eba930fc646e3e3d2a792f18014565742098",
+    "random_fresh-337-256-game.json": "392487b358a1f83fd8ebc954c579eba930fc646e3e3d2a792f18014565742098",
+    "random_fresh-337-64-game.json": "392487b358a1f83fd8ebc954c579eba930fc646e3e3d2a792f18014565742098",
+    "random_fresh-541-1024-game.json": "43ee91d6ec7dbaa8b3cb07bfbb2fbc070c9584503a1894eae509e6ee95dc58a2",
+    "random_fresh-541-256-game.json": "43ee91d6ec7dbaa8b3cb07bfbb2fbc070c9584503a1894eae509e6ee95dc58a2",
+    "random_fresh-541-64-game.json": "43ee91d6ec7dbaa8b3cb07bfbb2fbc070c9584503a1894eae509e6ee95dc58a2",
+    "random_fresh-809-1024-game.json": "7ea7d12663d390977c32b030dcbdcab0b66d2dec643febbe128ae722b482444e",
+    "random_fresh-809-256-game.json": "7ea7d12663d390977c32b030dcbdcab0b66d2dec643febbe128ae722b482444e",
+    "random_fresh-809-64-game.json": "7ea7d12663d390977c32b030dcbdcab0b66d2dec643febbe128ae722b482444e",
+    "random_repeat-337-1024-game.json": "392487b358a1f83fd8ebc954c579eba930fc646e3e3d2a792f18014565742098",
+    "random_repeat-337-256-game.json": "392487b358a1f83fd8ebc954c579eba930fc646e3e3d2a792f18014565742098",
+    "random_repeat-337-64-game.json": "392487b358a1f83fd8ebc954c579eba930fc646e3e3d2a792f18014565742098",
+    "random_repeat-541-1024-game.json": "43ee91d6ec7dbaa8b3cb07bfbb2fbc070c9584503a1894eae509e6ee95dc58a2",
+    "random_repeat-541-256-game.json": "43ee91d6ec7dbaa8b3cb07bfbb2fbc070c9584503a1894eae509e6ee95dc58a2",
+    "random_repeat-541-64-game.json": "43ee91d6ec7dbaa8b3cb07bfbb2fbc070c9584503a1894eae509e6ee95dc58a2",
+    "random_repeat-809-1024-game.json": "7ea7d12663d390977c32b030dcbdcab0b66d2dec643febbe128ae722b482444e",
+    "random_repeat-809-256-game.json": "7ea7d12663d390977c32b030dcbdcab0b66d2dec643febbe128ae722b482444e",
+    "random_repeat-809-64-game.json": "7ea7d12663d390977c32b030dcbdcab0b66d2dec643febbe128ae722b482444e",
+    "summary.json": "86f173e78480d63427893b952cfb272eec1aebe0ec4e6474d7a137f74c688749"
+  },
+  "probe_bank_sha256": {
+    "final-fresh_random.npz": "68dbea294e5e1d6169751a70212d715c3f4afbdcfc1d3939ffdeb2615e691f37",
+    "final-fresh_sweep.npz": "e41e7fbb7c607ca6857630b0cdc79ad99223b0d9f35b6b90afdc8030f66d2f50",
+    "final-repeat_random.npz": "65e9310e6db9b99b37091849be0a586d055d5028b724f2b6cf9656c767d7b542",
+    "final-repeat_sweep.npz": "1fa098cce39fcb2cf1310c6699f6799943c4aa0f2f164b124b54e06047461c68",
+    "monitor-fresh-random.npz": "1ec7d630c5eec0e4a26fdf0415745575b6cb8ddde5d62ddac81b407d139a98e9",
+    "monitor-fresh-sweep.npz": "d4c52ad28acbbd28e0c71a3b4a5d31adc27fa876941cd430d2da701d0dbaa990",
+    "monitor-repeat-random.npz": "62acd6514d4c3302588692b01b6353dfdf879758705e8d2b5a6c783e4808b8f2",
+    "monitor-repeat-sweep.npz": "3ec20271a648c7eefe84290a4ae17fbb3cecf00d594cf04dc4053b96edf08e57"
+  },
+  "limitation": "One authored world mechanism. Reset repetition changes experience diversity. No new genetic search or automatic extension."
+}

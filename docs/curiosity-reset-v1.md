@@ -1,5 +1,10 @@
 # Curiosity: reset and learning-duration diagnostic
 
+**Completed:** [audited results](curiosity-reset-v1-results.md). Longer learning
+worsened fresh-respawn gameplay; repeated maps prevented much of that decline but
+did not produce competent play. The prediction check failed. No extension or
+cloud rental followed. The original prospective source/protocol copies are preserved.
+
 Prospective follow-up to the [failed curiosity pilot](curiosity-foraging-v1-results.md).
 The user authorized further diagnosis and permits RunPod if useful. This tiny
 experiment is qualified locally first; no new funding allocation is assumed.
