@@ -150,7 +150,7 @@ The audit took 243.22 seconds, peaked below 790 MB, and added no swap.
 Qualified source revision: `fac0956`. Original source copies, probe banks,
 checkpoints, training action/reset traces, and game trajectories remain under
 ignored `output/curiosity-reset-v1/`. Earlier experiments and their hashes are
-preserved. The original budget remains available; this run used no RunPod rental.
+preserved. This local run made no additional draw on the compute budget.
 
 ## Next useful test
 
