@@ -63,11 +63,16 @@ class ObservationStream:
     """
     def __init__(self, namespace, role, count, world):
         self.namespace, self.role, self.count = namespace, role, count
+        self.world = world
         self.world_index = count
         self._env = ForagingBatch([seed_for(namespace, role, i) for i in range(count)], world)
 
     def observe(self):
         return self._env.observe()
+
+    def receipt(self):
+        return dict(worlds_initialized=self.world_index,
+                    world_seeds_actually_stepped=self.world_index-int(np.count_nonzero(self._env.steps == 0)))
 
     def step(self, actions):
         self._env.step(actions)  # Discard all game-authored reward features.
@@ -133,7 +138,7 @@ class Learner:
     def predictions(self, observations, actions):
         return self.predictors(observations, actions)
 
-    def reward_and_predictor_update(self, observations, actions, following, budget):
+    def reward_and_predictor_update(self, observations, actions, following, budget, *, observer=None):
         x = torch.from_numpy(observations); act = torch.from_numpy(actions)
         target = torch.from_numpy(following)
         before = self.predictions(x, act)
@@ -157,20 +162,27 @@ class Learner:
         progress = (before_error-after_error).clamp_min(0).numpy()
         signals = np.stack((self.motivation.novelty(following), disagreement, progress), -1)
         rewards = .1*(self.motivation.normalize(signals) @ self.genome)
+        if observer is not None:
+            observer.rewards_observed(rewards.copy(), signals.copy(), before_error.numpy(), after_error.numpy())
         return rewards, dict(prediction_error_before=float(before_error.mean()),
                              prediction_error_after=float(after_error.mean()),
                              raw_signals_mean=signals.mean(0).tolist(),
                              intrinsic_reward_mean=float(rewards.mean()))
 
-    def train(self, recipe, world, role, updates, output, budget):
+    def train(self, recipe, world, role, updates, output, budget, *, stream=None, milestones=(), observer=None):
+        if any(type(n) is not int or not 1 <= n <= updates for n in milestones):
+            raise ValueError('Milestones must be completed update numbers')
         output.mkdir(parents=True, exist_ok=False)
         policy_before = weight_hash(self.policy); predictor_before = weight_hash(self.predictors)
-        stream = ObservationStream(recipe.namespace, role, recipe.environments, world)
+        stream = stream if stream is not None else ObservationStream(recipe.namespace, role, recipe.environments, world)
+        if stream.count != recipe.environments or stream.world != world:
+            raise ValueError('Observation stream does not match the recipe')
         observation = stream.observe()
         shape = (recipe.rollout_steps, recipe.environments)
         with (output/'training.jsonl').open('x') as log:
             for update in range(1, updates+1):
                 budget.check()
+                if observer is not None: observer.begin_update(update, self)
                 observations = np.empty((*shape, OBS_SIZE), np.float32)
                 following = np.empty_like(observations)
                 actions = np.empty(shape, np.int64); logps = np.empty(shape, np.float32)
@@ -185,9 +197,11 @@ class Learner:
                         logps[t] = distribution.log_prob(torch.from_numpy(action)).numpy()
                         values[t] = value.numpy()
                     observation = stream.step(action); following[t] = observation
+                    if observer is not None: observer.transition_observed(action.copy(), stream)
                     budget.training_transitions += recipe.environments
                 rewards, diagnostics = self.reward_and_predictor_update(
-                    observations.reshape(-1, OBS_SIZE), actions.ravel(), following.reshape(-1, OBS_SIZE), budget)
+                    observations.reshape(-1, OBS_SIZE), actions.ravel(), following.reshape(-1, OBS_SIZE), budget,
+                    observer=observer)
                 if not self.random_actions:
                     with torch.no_grad(): _, bootstrap = self.policy(torch.from_numpy(observation))
                     # A continuing curiosity objective: game death/horizon is not
@@ -196,8 +210,12 @@ class Learner:
                                               bootstrap.numpy(), gamma=.99)
                     diagnostics.update(policy_update(self.policy, self.policy_optimizer, observations, actions,
                                        logps, adv, returns, self.permutations, recipe, budget))
+                if observer is not None: diagnostics['observation_diagnostics'] = observer.end_update(self)
                 row = dict(update=update, training_transitions=update*shape[0]*shape[1], **diagnostics)
                 log.write(json.dumps(row, allow_nan=False)+'\n'); log.flush()
+                if update in milestones:
+                    checkpoint = output/f'update-{update}'; checkpoint.mkdir()
+                    self.save(checkpoint)
         self.save(output)
         result = dict(seed=self.seed, genome=self.genome.tolist(), random_actions=self.random_actions,
             updates=updates, training_transitions=updates*shape[0]*shape[1],
@@ -207,9 +225,10 @@ class Learner:
             weights_sha256=file_hash(output/'weights.pt'), state_sha256=file_hash(output/'state.json'),
             policy_parameters=sum(p.numel() for p in self.policy.parameters()),
             predictor_parameters=sum(p.numel() for p in self.predictors.parameters()),
-            distinct_observation_keys=len(self.motivation.visits), world_seed_role=role,
-            worlds_initialized=stream.world_index,
-            world_seeds_actually_stepped=stream.world_index-int(np.count_nonzero(stream._env.steps == 0)))
+            distinct_observation_keys=len(self.motivation.visits), world_seed_role=role, **stream.receipt())
+        if milestones:
+            result['milestones'] = {str(n): dict(weights_sha256=file_hash(output/f'update-{n}'/'weights.pt'),
+                                               state_sha256=file_hash(output/f'update-{n}'/'state.json')) for n in milestones}
         assert result['predictors_before'] != result['predictors_after']
         assert (result['policy_before'] == result['policy_after']) == self.random_actions
         write(output/'learning.json', result)
